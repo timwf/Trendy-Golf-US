@@ -1,0 +1,378 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/6cc46bbab3ec41d3b2d4b1c238e856b7.mp4",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Sneakerheads and golfers alike have been eagerly awaiting Nike's latest footwear drop for the 2024 US Open. This year, Nike's athletes, including Rory McIlroy, Brooks Koepka, and Tom Kim, will grace the greens of Pinehurst No. 2 in a series of stylish and high-performance golf shoes. Nike has unveiled three new limited-edition models: the Air Zoom Victory Tour 3 NRG, Air Pegasus '89 G NRG, and Air Zoom Infinity Tour NRG. Each shoe is designed to pay homage to Pinehurst No. 2 and North Carolina, featuring plenty of Carolina Blue. Let's dive into the details of each model and what makes them stand out.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "AIR ZOOM VICTORY TOUR 3 NRG",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h4><strong>Design & Features</strong></h4><p>The Air Zoom Victory Tour 3 NRG is crafted with a breathable textile upper, ensuring that golfers' feet stay cool and comfortable throughout their rounds. The shoe features Tour Flex Pro SoftSpikes under the forefoot and Silver Tornado spikes in the lateral and heel areas, providing increased stability and traction. This combination ensures that golfers can maintain their footing on various terrains, which is essential for those critical shots.</p><h4><strong>Performance & Comfort</strong></h4><p>Designed with elite athletes in mind, the Air Zoom Victory Tour 3 NRG offers exceptional performance on the course. The breathable textile helps manage moisture, keeping feet dry even in warmer conditions. The strategic placement of spikes ensures optimal grip and stability, allowing golfers to confidently execute their swings. The classic design, complemented by the sky-blue accents, makes this shoe a stylish choice for any golfer.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_1_273c6c3c-5014-4219-b40d-a63b6e4c0ceb.png",
+            "link": "https://trendygolf.com/products/air-zoom-victory-tour-3-nrg-golf-shoes-white-navy-su24?variant=49071327019292",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_2_acab3c9a-aacd-402c-8006-cce4269d6fe1.png",
+            "link": "https://trendygolf.com/products/air-zoom-victory-tour-3-nrg-golf-shoes-white-navy-su24?variant=49071327019292",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "AIR PEGASUS '89 G NRG",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h4><strong>Design & Features</strong></h4><p>The Air Pegasus '89 G NRG combines the iconic silhouette of the original Air Pegasus '89 with modern golf shoe technology. This model features a hidden air unit in the heel for extra cushioning, a soft terry cloth tongue and collar lining, and a grippy rubber outsole. The sky blue, waterproof exterior is stylish and practical, keeping feet dry in various weather conditions.</p><h4><strong>Performance & Comfort</strong></h4><p>While the Air Pegasus '89 G NRG is designed for casual golfers, it doesn't compromise on performance. The hidden Zoom Air unit in the heel provides responsive cushioning, making each step comfortable. The grippy rubber outsole offers excellent traction, ensuring stability across different surfaces. This shoe is perfect for golfers who appreciate a blend of vintage design and modern functionality.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_2": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/35836aee-10e6-400e-ba00-3f3950dcb9e3.png",
+            "link": "https://trendygolf.com/products/air-pegasus-89-nrg-golf-shoes-armory-blue-su24?variant=49071327641884",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/c5f348a1-e17d-489a-a146-5a57d7f82160.png",
+            "link": "https://trendygolf.com/products/air-pegasus-89-nrg-golf-shoes-armory-blue-su24?variant=49071327641884",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "AIR ZOOM INFINITY TOUR NRG",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h4><strong>Design & Features</strong></h4><p>The Air Zoom Infinity Tour NRG features a breathable textile upper and plenty of lateral support, making it ideal for high-performance play. The Air Zoom unit in the forefoot is designed to move with your feet as you swing, enhancing energy transfer from the ground to your shot. This shoe's design is inspired by previous Nike models like the Air Max 1 and 90 G, known for their performance and style.</p><h4><strong>Performance & Comfort</strong></h4><p>The Air Zoom Infinity Tour NRG is all about optimising energy transfer and providing stability. The forefoot Zoom Air unit ensures that each swing is powered by a responsive energy return, giving golfers an edge in their game. The breathable upper and lateral support make this shoe comfortable for extended wear, whether on the course or the driving range.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_3": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_1_3aadf226-8ac1-45e2-afa6-96d51479e969.png",
+            "link": "https://trendygolf.com/products/air-zoom-infinity-tour-next-nrg-golf-shoes-white-navy-su24",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_2_0c950a58-5e06-4258-bbb1-e5bbefbf1af8.png",
+            "link": "https://trendygolf.com/products/air-zoom-infinity-tour-next-nrg-golf-shoes-white-navy-su24",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Special Edition NRG Theme: \"Accept and Embrace\"",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For the US Open at Pinehurst No. 2, Nike has introduced the \"Accept and Embrace\" theme for the Pegasus '89. This theme draws inspiration from North Carolina, incorporating shades of dark and light blue reminiscent of Michael Jordan's alma mater. The variety of textures used in the design, from hairy and smooth suede to soft terry cloth, adds a rich, tactile dimension to the shoes. The words \"Accept\" and \"Embrace\" are featured on the tongue labels, shoelace ends, and insoles, emphasising the theme.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "collection": "mens-nike-golf-shoes",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Available Now on TRENDYGOLF",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>All these models are now available on <a href=\"https://trendygolf.com/\"><span style=\"text-decoration:underline\">TRENDYGOLF.COM</span></a>, just in time for the US Open Championship 2024. Whether you are an elite athlete or a casual golfer, Nike's new line of NRG golf shoes offers something for everyone. With their blend of performance, comfort, and style, these shoes are set to make a statement on the greens of Pinehurst No. 2.</p><p>In conclusion, Nike's Summer 2024 US Open NRG Golf Shoes are a testament to the brand's commitment to innovation and style. From the high-performance Air Zoom Victory Tour 3 NRG to the vintage-inspired Air Pegasus '89 G NRG, each model offers unique features tailored to different types of golfers. Whether you are drawn to the \"Accept and Embrace\" theme or the advanced technology of the Air Zoom Infinity Tour NEXT%, there is a pair that will meet your needs and elevate your game. Don't miss out on these limited-edition shoes that celebrate the spirit of the US Open and the rich heritage of Pinehurst No. 2.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP NIKE GOLF SHOES",
+            "link": "https://trendygolf.com/collections/mens-nike-golf-shoes?filter.v.availability=1",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "text_2",
+    "promo_1",
+    "text_3",
+    "promo_2",
+    "text_4",
+    "promo_3",
+    "text_5",
+    "products_1",
+    "text_6",
+    "related-articles"
+  ]
+}

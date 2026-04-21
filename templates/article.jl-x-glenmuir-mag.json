@@ -1,0 +1,400 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "shopify://shop_images/HERO_DESKTOP_43d95c66-9008-4045-9742-a22cde9d1454.png",
+            "mobile_image": "shopify://shop_images/HERO_mobile_e3e3f3c2-b892-46e8-87ec-5db6503be7a0.png",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>We're proud to unveil the much-anticipated collaboration between two icons of the golf world: J.Lindeberg and Glenmuir. This capsule collection, available at TRENDYGOLF, unites Glenmuir's enduring heritage with J.Lindeberg's sleek, contemporary aesthetic, delivering a collection of golf apparel that is both rooted in tradition and at the forefront of modern innovation.</em></p><p>In this comprehensive guide, we'll dive into the inspirations behind the collection, examine the unique design features of the men's and women's pieces, and explore how the collaboration captures the spirit of Scotland's storied landscapes. Plus, we'll introduce Todd Clements, the rising star of professional golf and face of the campaign, whose commitment to excellence perfectly embodies the spirit of the J.Lindeberg x Glenmuir collaboration.</p><p></p><h2><strong>A Fusion of Craftsmanship and Innovation</strong></h2><p>The J.Lindeberg x Glenmuir collaboration encapsulates a meeting of two distinct yet harmonious design philosophies. Glenmuir, with a heritage spanning more than 130 years, is known for its rich legacy in the world of golf apparel. Founded in 1891 in the heart of Scotland, Glenmuir's dedication to quality craftsmanship and timeless design has made it a favourite among golfers who value classic elegance on the green.</p><p>J.Lindeberg, on the other hand, has revolutionised the sportswear industry with its fusion of Scandinavian minimalism and high-performance functionality. Since its inception in 1996, J.Lindeberg has been committed to pushing the boundaries of style and technology, creating apparel that is as functional as it is fashionable. This collaboration between J.Lindeberg and Glenmuir blends these two brands' unique strengths, offering golfers a collection that honours the past while embracing the future.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_1_068570d8-aced-4f2d-a9c1-9aed5ccf5a2e.png",
+            "link": "shopify://collections/j-lindeberg-x-glenmuir-golf-collection",
+            "button_label": "J.LINDEBERG X GLENMUIR"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_2_7daaa7d4-627f-49b5-abfa-199c5b19f544.png",
+            "link": "shopify://collections/j-lindeberg-x-glenmuir-golf-collection",
+            "button_label": "J.LINDEBERG X GLENMUIR"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Drawing from Scotland's Majestic Landscapes",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At the heart of this collaboration is a deep appreciation for Scotland's rugged landscapes and rich heritage. The J.Lindeberg x Glenmuir collection takes inspiration from the natural beauty of Scotland's hills, lochs, and coastline, incorporating exclusive prints that pay homage to Glenmuir's roots. This distinctive blend of traditional patterns with J.Lindeberg's modern aesthetic creates a visually striking collection that feels equally at home on the course or in the clubhouse.</p><h2></h2><h2><strong>Men's Collection Highlights: Tradition Meets Technical Innovation</strong></h2><h4><strong>Hybrid Windbreaker Sweater</strong></h4><p>One of the standout pieces in the men's collection is the <a href=\"https://trendygolf.com/products/x-glenmuir-johan-hybrid-windbreak-sweater-moonbeam-ps25?_fid=a8044340e&_pos=6&_ss=c&variant=50396828107036\"><span style=\"text-decoration:underline\">Johan Hybrid Windbreaker Sweater</span></a>. Designed for those who play in all weather conditions, this sweater boasts lightweight, water-repellent, and windproof properties, making it ideal for golf and other outdoor activities. This piece embodies the essence of the collection, combining Glenmuir's appreciation for classic knitwear with J.Lindeberg's focus on technical innovation. Whether facing a brisk morning on the fairway or a gusty afternoon at the clubhouse, this sweater ensures comfort without compromising on style.</p><h4><strong>Luxurious Knitted Sweaters</strong></h4><p>For those seeking a touch of luxury, the collection offers an array of knitted sweaters crafted from premium fabrics. These materials are not only soft and warm but also incredibly durable, allowing players to look their best without sacrificing comfort. Available in solid colours and tartan check jacquard patterns, these sweaters exemplify the collaboration's commitment to quality and style. The tartan checks subtly nod to Glenmuir's Scottish heritage, while the modern fit and cut embody J.Lindeberg's signature style.</p><h4><strong>Knitted Polo with Relaxed Fit</strong></h4><p>No golf wardrobe is complete without a well-designed polo, and the knitted polo in this collection is a perfect example. Available in a relaxed fit, this polo offers a choice between solid colours or a tartan check jacquard pattern. The result is a piece that balances sophistication and comfort, making it an ideal choice for golfers who want to make a statement both on and off the course. The attention to detail, from the quality of the fabric to the sleek design, makes this a standout addition to any golfer's wardrobe.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "J.LINDEBERG X GLENMUIR MENS",
+        "collection": "j-lindeberg-x-glenmuir-men-s-golf-collection",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Women's Collection Highlights: Elegance and Performance in Perfect Harmony",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h4><strong>Performance Polo with Advanced Fabric Technology</strong></h4><p>The women's collection is designed with the modern golfer in mind, balancing style and functionality with ease. The <a href=\"https://trendygolf.com/products/x-glenmuir-womens-alina-polo-moonbeam-ps25?_fid=f05d5c905&_pos=3&_ss=c&variant=50397087891740\"><span style=\"text-decoration:underline\">Women's Alina Polo</span></a>, a standout piece, is crafted from advanced fabric technology that ensures superior comfort and breathability. With a streamlined silhouette and a range of colours to choose from, this polo is designed to support peak performance on the course without compromising on style. It's a piece that every golfer will appreciate.</p><h4><strong>Merino Polo for Timeless Elegance</strong></h4><p>For those looking for something with a touch of timeless elegance, the <a href=\"https://trendygolf.com/collections/j-lindeberg-x-glenmuir-women-s-golf-collection?_pos=3&_psq=glenmuir&_ss=e&_v=1.0&filter.v.availability=1\"><span style=\"text-decoration:underline\">Amandine Polo</span></a> is a must-have. Made from premium fabrics, this polo offers not only the warmth and softness of merino wool but also a refined look that is versatile enough for any golfing occasion. This piece truly captures the essence of the collaboration, combining traditional materials with contemporary design for a look that feels both classic and modern.</p><h4><strong>Playsuits & Dresses for Style and Mobility</strong></h4><p>Designed with the active golfer in mind, the <a href=\"https://trendygolf.com/products/x-glenmuir-womens-kendra-playsuit-navy-ps25?_fid=f05d5c905&_pos=7&_ss=c&variant=50397045981468\"><span style=\"text-decoration:underline\">Women's Kendra Playsuit</span></a> is as functional as it is stylish. Made with a blend of high-performance materials, this playsuit offers unparalleled ease of movement, ensuring that nothing hinders your swing. Available in neutral tones, it's a versatile piece that pairs effortlessly with other items in the collection, making it essential for any female golfer looking to combine style and functionality on the green.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_2": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "J.LINDEBERG X GLENMUIR WOMENS",
+        "collection": "j-lindeberg-x-glenmuir-women-s-golf-collection",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Essence of Scottish Knitwear Meets J.Lindeberg's Cutting-Edge Functionality",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From its luxurious textures to its innovative designs, the J.Lindeberg x Glenmuir collection is a celebration of Scottish knitwear and Scandinavian design. Each piece in the collection is carefully crafted, reflecting the collaboration's dedication to quality, style, and performance. This unique fusion of past and present, tradition and innovation, offers golfers of all levels a wardrobe that is as practical as it is stylish.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "x-glenmuir-cameron-full-zip-hoodie-navy-ps25"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "x-glenmuir-martin-knit-polo-tartan-teal-ps25"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "x-glenmuir-viktor-polo-teal-ps25"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "x-glenmuir-harris-trousers-navy-ps25"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_MEDIA_SHOWCASE_5e9e7708-3fd0-4eec-b72e-eebebe1d6800.png",
+        "title": "",
+        "subtext": "J.Lindeberg x Glenmuir Shop The Look"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Todd Clements: The Perfect Ambassador for the J.Lindeberg x Glenmuir Collaboration",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Every collaboration needs a face that embodies its values, and for the J.Lindeberg x Glenmuir capsule, that face is professional golfer Todd Clements. Turning professional in 2018, Todd has quickly risen through the ranks of professional golf, demonstrating a dedication to his craft that mirrors J.Lindeberg's own commitment to excellence.</p><p>From winning the English Amateur Championship in 2017 to achieving his first European Tour victory at the D+D Real Czech Masters in August 2023, Todd's journey is a testament to the power of perseverance, self-improvement, and a willingness to push the boundaries of the sport. As a J.Lindeberg ambassador since 2022, Todd embodies the spirit of this collection, representing both the timeless elegance of Glenmuir and the modern edge of J.Lindeberg.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLENMUIR_1x15_d14b895c-d543-41ee-b674-dcbc99a47f00.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLENMUIR_1x16_e90095b4-0755-4968-bfea-7a0aa58d3d3e.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLENMUIR_1x111_ed5f17c8-a473-4ca0-b5e3-9469de9cb4cd.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GLENMUIR_1x110_84939cf0-3676-41fd-988b-a32e80c3aca2.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {}
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Elevate Your Game with the J.Lindeberg x Glenmuir Collection at TRENDYGOLF",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Available now on <a href=\"https://trendygolf.com/\"><span style=\"text-decoration:underline\">TRENDYGOLF</span></a>, the J.Lindeberg x Glenmuir collection is more than just golf apparel \u2013 it's a testament to the artistry, craftsmanship, and innovation that define both brands. Whether you're an experienced player looking to elevate your style on the green or a newcomer ready to invest in quality golf apparel, this collection offers something truly special. From technical outerwear to luxurious knitwear, every piece in the collection reflects a commitment to quality and performance, making it the ideal choice for golfers who appreciate the finer things in life.</p><p>Visit TRENDYGOLF to explore the J.Lindeberg x Glenmuir collection today, and discover how this extraordinary collaboration can take your golf wardrobe to new heights.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP J.LINDEBERG X GLENMUIR",
+            "link": "shopify://collections/j-lindeberg-x-glenmuir-golf-collection",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "magazine-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "promo_1",
+    "text_2",
+    "products_1",
+    "text_3",
+    "products_2",
+    "text_4",
+    "shop_the_look_1",
+    "text_5",
+    "media_grid_1",
+    "text_6",
+    "magazine-articles"
+  ]
+}

@@ -1,0 +1,73 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "nyle-merino-zip-cardigan-safari-beige-ss23"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "asher-zip-neck-polo-light-grey-melange-ss23"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "vent-high-vent-pants-high-rise-ss23"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "grandpr-o-am-golf-sneaker-white-2023"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_jordan_new.jpg",
+        "title": "",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "shop_the_look_1", "related-articles"]
+}

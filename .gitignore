@@ -1,0 +1,7 @@
+node_modules/
+.DS_Store
+.claude/
+.env
+_reference/
+_do-not-use/
+_videos/

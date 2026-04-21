@@ -1,0 +1,135 @@
+{% doc %}
+  Rewards panel rendered inside the account dashboard's main column.
+  Source: _reference/repo/app/routes/account.rewards.tsx
+
+  The account page's tab JS is responsible for toggling the `hidden` attribute
+  on `[data-account-panel="rewards"]` when the URL hash is `#rewards`.
+
+  Server-renders tier / points / active rewards from `customer.metafields.upzelo.*`.
+  Client-side JS (customer-rewards.js) fetches the paginated activity feed.
+{% enddoc %}
+
+{%- liquid
+  assign upzelo_app_id = settings.upzelo_app_id
+  assign upzelo_app_url = settings.upzelo_app_url | default: 'https://app.upzelo.com/api'
+
+  assign points = customer.metafields.upzelo.points | default: 0
+  assign tier = customer.metafields.upzelo.tier.value
+  assign tier_title = tier.title | default: 'Bronze'
+
+  if tier_title == 'Bronze'
+    assign tier_text_class = 'text-amber-700'
+  elsif tier_title == 'Gold'
+    assign tier_text_class = 'text-yellow-600'
+  elsif tier_title == 'Black'
+    assign tier_text_class = 'text-taupe-900'
+  else
+    assign tier_text_class = 'text-taupe-700'
+  endif
+
+  assign active_rewards = customer.metafields.upzelo.active_rewards.value
+-%}
+
+<section
+  id="rewards-panel"
+  data-account-panel="rewards"
+  data-customer-rewards
+  data-customer-id="{{ customer.id }}"
+  data-upzelo-app-id="{{ upzelo_app_id }}"
+  data-upzelo-app-url="{{ upzelo_app_url }}"
+  hidden
+>
+  <h1 class="mb-8 text-xl font-bold lg:text-2xl">Rewards</h1>
+
+  <div class="mb-8 flex items-center gap-2 bg-clubhouse-green-600 p-2 text-xs text-white md:p-4 md:text-sm">
+    {% render 'icon', icon: 'trophy', size: 'size-5', class: 'min-w-5 text-white' %}
+    <span class="[&_*]:mb-0">
+      As a <b>TGCC member</b>, you'll earn points & receive
+      <b>exclusive rewards</b>. View our
+      <a href="/pages/rewards" class="underline">Rewards page</a>
+      to learn more.
+    </span>
+  </div>
+
+  {%- comment -%} Tier + points card {%- endcomment -%}
+  <div class="bg-taupe-300 p-6 mb-6">
+    <div class="grid grid-cols-2">
+      <div class="flex flex-col items-center justify-center gap-2">
+        <div class="flex-1 text-center">
+          {%- if tier_title == 'Bronze' -%}
+            {% render 'icon', icon: 'tier-trophy', size: 'size-12', class: tier_text_class | append: ' mx-auto mb-2' %}
+          {%- else -%}
+            {% render 'icon', icon: 'tier-star', size: 'size-12', class: tier_text_class | append: ' mx-auto mb-2' %}
+          {%- endif -%}
+          <span class="text-center text-lg font-bold md:text-xl {{ tier_text_class }}">{{ tier_title }}</span>
+        </div>
+        <span class="text-xs">Current Tier</span>
+      </div>
+      <div class="flex flex-col items-center justify-center">
+        <h3 class="mb-0 flex flex-1 items-center justify-center text-center text-xl font-bold lg:text-2xl">
+          {{ points }} Points
+        </h3>
+        <span class="text-xs">Your Points</span>
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%} Active rewards (server-rendered from metafields) {%- endcomment -%}
+  {%- if active_rewards != blank and active_rewards.size > 0 -%}
+    <div class="mb-6 bg-taupe-300 p-6">
+      <h3 class="mb-2 text-base font-bold lg:text-lg">Active Rewards</h3>
+      <p class="text-sm">Check out your rewards and find your code below to redeem at checkout.</p>
+      <div class="w-full overflow-x-auto">
+        <div class="flex gap-4">
+          {%- for reward in active_rewards -%}
+            {%- unless reward.is_redeemed -%}
+              <button
+                type="button"
+                class="group w-36 flex-shrink-0 cursor-pointer text-left transition-transform md:w-44"
+                data-reward-copy
+                data-reward-code="{{ reward.code | escape }}"
+                title="Click to copy code"
+              >
+                <div class="flex items-center justify-center bg-clubhouse-green-600 px-4 py-6 text-white">
+                  <span class="mb-0 text-base font-bold lg:text-lg">{{ reward.title }}</span>
+                </div>
+                <div class="flex items-center justify-center gap-2 bg-white px-4 py-2 text-sm transition-colors group-hover:bg-gray-100 md:text-base">
+                  <span data-reward-code-label>{{ reward.code }}</span>
+                  {% render 'icon', icon: 'document-duplicate', size: 'size-4' %}
+                </div>
+              </button>
+            {%- endunless -%}
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- comment -%} Activity history — JS-rendered from Upzelo API {%- endcomment -%}
+  <div class="bg-taupe-300 p-6 mb-6" data-rewards-history hidden>
+    <h3 class="mb-4 text-base font-bold lg:text-lg">Rewards History</h3>
+
+    <div class="grid grid-cols-4 text-xs *:py-4 *:pr-4 *:font-bold md:text-sm">
+      <span>Date</span>
+      <span>Action</span>
+      <span>Points</span>
+      <span>Balance After</span>
+    </div>
+    <div data-rewards-history-rows></div>
+
+    <div class="mt-4 flex justify-between" data-rewards-history-pagination hidden>
+      <button type="button" class="border border-taupe-600 px-3 py-2 text-sm uppercase tracking-wide" data-rewards-prev hidden>Newer history</button>
+      <span data-rewards-prev-spacer></span>
+      <button type="button" class="border border-taupe-600 px-3 py-2 text-sm uppercase tracking-wide ml-auto" data-rewards-next hidden>Older history</button>
+    </div>
+  </div>
+
+  <div class="py-8 text-center" data-rewards-loading hidden>
+    <svg class="size-8 animate-spin text-taupe-700 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+    </svg>
+  </div>
+</section>
+
+<script src="{{ 'customer-rewards.js' | asset_url }}" defer></script>

@@ -1,0 +1,121 @@
+{%- liquid
+  assign enable_animation = section.settings.enable_animation
+
+  case section.settings.margin_bottom
+    when 'none'
+      assign margin_class = ''
+    when 'small'
+      assign margin_class = 'mb-8'
+    when 'medium'
+      assign margin_class = 'mb-8 lg:mb-14'
+    when 'large'
+      assign margin_class = 'mb-14 lg:mb-20'
+  endcase
+-%}
+
+<section class="media-grid-section relative {{ margin_class }}" data-media-grid-section id="media-grid-{{ section.id }}">
+  <div class="container-wide">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5">
+      {%- for block in section.blocks -%}
+        {%- if block.settings.image != blank -%}
+          <div class="media-grid__item{% if enable_animation %} opacity-0 translate-y-8 transition-all duration-700 ease{% endif %}"
+               data-inview="false"
+               {{ block.shopify_attributes }}>
+            <img
+              src="{{ block.settings.image | image_url: width: 800 }}"
+              srcset="{{ block.settings.image | image_url: width: 400 }} 400w,
+                      {{ block.settings.image | image_url: width: 600 }} 600w,
+                      {{ block.settings.image | image_url: width: 800 }} 800w,
+                      {{ block.settings.image | image_url: width: 1000 }} 1000w"
+              sizes="(min-width: 768px) 50vw, 100vw"
+              alt="{{ block.settings.image.alt | escape }}"
+              width="{{ block.settings.image.width }}"
+              height="{{ block.settings.image.height }}"
+              loading="lazy"
+              class="w-full block"
+            >
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{%- if enable_animation -%}
+<script>
+  (function () {
+    var section = document.getElementById('media-grid-{{ section.id }}');
+    if (!section) return;
+
+    var items = section.querySelectorAll('[data-inview]');
+    if (!items.length) return;
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.setAttribute('data-inview', 'true');
+            entry.target.classList.remove('opacity-0', 'translate-y-8');
+            entry.target.classList.add('opacity-100', 'translate-y-0');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -10%' }
+    );
+    items.forEach(function (item) {
+      observer.observe(item);
+    });
+  })();
+</script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Media Grid",
+  "tag": "section",
+  "class": "media-grid-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Bottom margin",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_animation",
+      "label": "Enable animation",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Media Grid",
+      "blocks": [
+        { "type": "image" },
+        { "type": "image" }
+      ]
+    }
+  ]
+}
+{% endschema %}

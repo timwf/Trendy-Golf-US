@@ -1,0 +1,431 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "shopify://shop_images/HERO_DESKTOP_4b752de5-860c-496a-9dd0-7f3576c71c77.png",
+            "mobile_image": "shopify://shop_images/HERO_mobile_254a3547-7367-4864-9a4b-998fc3113a0b.png",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As the autumn season approaches, golfers everywhere look forward to refreshing their wardrobes with the latest trends. This year, the Ralph Lauren Golf and RLX AW24 collection stands out as a perfect blend of style, performance, and luxury. Available now on TRENDYGOLF, this collection showcases innovative designs and sophisticated aesthetics that are sure to elevate your golfing experience.</p><p></p><h2><strong>The Essence of RLX AW24</strong></h2><p>Ralph Lauren's RLX line has long been synonymous with top-tier athletic wear, and the AW24 collection is no exception. Designed for both functionality and style, the collection features a range of pieces that are perfect for the modern golfer. From advanced fabric technologies to timeless designs, RLX AW24 ensures you stay at the top of your game while looking effortlessly stylish.</p><p></p><h3><strong>Key Highlights</strong></h3><ol><li><strong>Performance-Driven Fabrics</strong>: The collection incorporates high-performance materials that offer breathability, moisture-wicking properties, and stretch for unrestricted movement.</li><li><strong>Sophisticated Colour Palette</strong>: Earthy tones dominate the collection, with deep navy, forest green, and classic black providing a versatile and refined look.</li><li><strong>Innovative Layering</strong>: Pieces are designed for easy layering, allowing golfers to adapt to varying weather conditions without compromising on style.</li></ol>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Featured Pieces",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>RLX Classic Fit Performance Wool Hybrid Jacket</strong></h3><p>One of the standout pieces in the RLX AW24 collection is the <strong>RLX Classic Fit Performance Wool Hybrid Jacket</strong>. This jacket combines the warmth of wool with the flexibility and breathability of modern performance fabrics. Available in various colourways, this premium mid-layer makes for a versatile addition to any golfer's wardrobe, suitable for both on and off the course.</p><ul><li><strong>Price</strong>: £249.00</li></ul><p><strong>Features</strong>: Windproof, water-resistant, stretch fabric, ergonomic design</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_1_d4cb90a4-b001-445f-b8c4-2bf4306bf7f3.png",
+            "link": "",
+            "button_label": "Navy/Grey"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_2_6e4f8e3e-1846-44fd-b067-03f709bd8486.png",
+            "link": "",
+            "button_label": "Andover heather"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2><strong>RLX Tailored Fit Airflow Jersey Polo</strong></h2><p>The <strong>RLX Tailored Fit Airflow Jersey Polo</strong> is another must-have. This polo is crafted from high-quality airflow jersey fabric, offering superior comfort/breathability and a tailored fit that enhances your silhouette.</p><ul><li><strong>Price</strong>: £99.00</li></ul><p><strong>Features</strong>: Breathable airflow jersey fabric, classic design, tailored fit</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_2": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_11.png",
+            "link": "",
+            "button_label": "Office blue"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_22.png",
+            "link": "",
+            "button_label": "Bath Pink"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Polo Golf Bear Collection",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>No discussion of Ralph Lauren would be complete without mentioning the iconic Bear Collection. This season, the Bear Collection brings a playful yet sophisticated twist to golf fashion, incorporating the beloved bear motif into classic pieces. From sumptuous knitwear to accessories and polo shirts, each piece is stamped with the college cool and sporty aesthetic synonymous with Ralph Lauren. Perfect to add an idiosyncratic note to a classic closet's collection of essentials, this assortment brings under the spotlight the inimitable mix of flair and personality that only Ralph Lauren can provide.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "ralph-lauren-bear-mens-collection",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Elevate Your Golf Wardrobe with Ralph Lauren's AW24 Hoodies & Gilets",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Polo Golf AW24 collection from Ralph Lauren, available on TRENDYGOLF, is redefining golf fashion with its impeccable blend of functionality, comfort, and timeless style. This season's lineup features an array of hoodies, mid-layers, and gilets, each designed to meet the demands of the modern golfer while maintaining the classic sophistication that Ralph Lauren is known for.</p><h3></h3><h3><strong>Polo Golf Hoodies: A Fusion of Comfort and Performance</strong></h3><p>The hoodies in the Polo Golf AW24 collection are more than just a casual layer; they are engineered for performance. Crafted from premium materials, these hoodies offer unparalleled comfort and warmth, making them perfect for those chilly mornings on the green. The design incorporates high-quality fabrics to ensure you stay warm and comfortable throughout your game, while the breathable textile allows for optimal ventilation.</p><p>One standout piece is the <strong>Polo Golf Double Knit Hoodie</strong>, which combines a sleek design with functional features. The hoodie is made from a blend of cotton and technical fibres, providing a soft feel against the skin while ensuring durability and stretch. Its ergonomic design features a kangaroo pocket for additional storage and a drawstring hood for adjustable coverage. Available in classic colours like navy, white, and grey, this hoodie seamlessly transitions from the golf course to casual outings, embodying the versatile elegance of Ralph Lauren.</p><h3></h3><h3><strong>Gilets: Versatile and Stylish Outerwear</strong></h3><p>Gilets are a staple in golf fashion, offering an extra layer of warmth while allowing complete freedom of movement. The Polo Golf AW24 gilets are no exception, combining sophisticated style with practical features that enhance your game. These gilets are designed to provide core warmth, making them ideal for layering over polos or under heavier jackets.</p><p>The Polo Golf Nylon Terra Insulated Gilet is a prime example of Ralph Lauren's commitment to quality and style. This gilet features a quilted design with a lightweight downfill, providing exceptional warmth without added weight. The water-resistant outer shell ensures you stay dry in light rain, while the zippered pockets offer secure storage for essentials. Available in versatile colours such as green, navy, and black, the Quilted Gilet complements any outfit, making it a must-have for the discerning golfer.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_2": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "mens-ralph-lauren",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Polo Shirts: The Epitome of Elegance and Performance</strong></h3><p>Polo shirts are a staple in any golfer's wardrobe, and the AW24 collection from Ralph Lauren takes this classic piece to new heights. The polo shirts are crafted with meticulous attention to detail, ensuring that each piece not only looks impeccable but also enhances your performance on the course.</p><p>One of the standout features of these polo shirts is the use of advanced performance fabrics. Designed to provide optimal breathability and moisture-wicking properties, these materials keep you cool and dry, even during intense play. The incorporation of stretch fibres ensures that you have complete freedom of movement, allowing you to swing with ease and precision.</p><p>One highlight is the <strong>Polo Golf Classic Fit Cotton Polo</strong>, which combines the comfort of cotton with the benefits of performance fabrics. This polo offers a more relaxed fit, making it perfect for those who prefer a bit more room. The classic design is complemented by subtle details such as the embroidered Ralph Lauren logo and stylish collar, ensuring you look polished and professional on the green.</p><p>Each piece in the Polo Golf AW24 collection reflects Ralph Lauren's dedication to creating high-performance golf wear that does not compromise style. The thoughtful design and superior materials ensure that you can focus on your game while looking effortlessly elegant.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_3": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "mens-ralph-lauren-polo-shirts",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "shop_the_look_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "rlx-classic-fit-tech-terry-gilet-refined-navy-aw24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "rlx-tailored-fit-printed-airflow-polo-refined-navy-diamond-aw24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "rlx-player-hat-oxford-blue-aw24"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "rlx-slim-fit-stretch-golf-trousers-sand-beige-ss24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_MEDIA_SHOWCASE_a9ad7490-04d3-4b52-92f9-dff258af1342.png",
+        "title": "SHOP THE LOOK",
+        "subtext": "Ralph Lauren Autumn Look - perfect for in between seasons golf."
+      }
+    },
+    "text_7": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Embracing Sustainability",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ralph Lauren continues to lead in sustainability with the AW24 collection. Each piece is crafted with a focus on reducing environmental impact, from responsibly sourced materials to eco-friendly production processes. This commitment to sustainability ensures that you can enjoy your golf attire with a clear conscience.</p><p>The Ralph Lauren RLX AW24 collection, available on TRENDYGOLF, offers a seamless blend of style, performance, and innovation. Whether you're looking for high-performance jackets, classic polos, or the iconic Bear Collection, this lineup has something for every golfer. Elevate your golf wardrobe this autumn with Ralph Lauren's latest collection, and experience the perfect fusion of sophistication and functionality on the course.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP RALPH LAUREN AW24",
+            "link": "https://trendygolf.com/collections/mens-ralph-lauren",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "magazine-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "text_2",
+    "promo_1",
+    "text_3",
+    "promo_2",
+    "text_4",
+    "products_1",
+    "text_5",
+    "products_2",
+    "text_6",
+    "products_3",
+    "shop_the_look_1",
+    "text_7",
+    "magazine-articles"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "trendygolf-theme",
+  "private": true,
+  "scripts": {
+    "build:css": "tailwindcss -i src/theme.css -o assets/theme.css --minify",
+    "dev:css": "tailwindcss -i src/theme.css -o assets/theme.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4"
+  }
+}

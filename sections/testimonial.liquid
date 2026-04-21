@@ -1,0 +1,119 @@
+{%- liquid
+  assign alignment = section.settings.text_alignment
+  assign max_width = section.settings.max_width
+  assign title = section.settings.title
+  assign text = section.settings.testimonial_text
+  assign credit = section.settings.testimonial_credit
+
+  case alignment
+    when 'left'
+      assign align_class = 'text-left'
+      assign credit_flex = 'justify-start'
+    when 'center'
+      assign align_class = 'text-center'
+      assign credit_flex = 'justify-center'
+    when 'right'
+      assign align_class = 'text-right'
+      assign credit_flex = 'justify-end'
+  endcase
+
+  case section.settings.margin_bottom
+    when 'none'
+      assign margin_class = ''
+    when 'small'
+      assign margin_class = 'mb-8'
+    when 'medium'
+      assign margin_class = 'mb-8 lg:mb-14'
+    when 'large'
+      assign margin_class = 'mb-14 lg:mb-20'
+  endcase
+-%}
+
+{%- if text != blank -%}
+  <section class="testimonial-section relative {{ margin_class }}" id="testimonial-{{ section.id }}">
+    <div class="mx-auto px-4 md:px-6" style="max-width: {{ max_width }}px;">
+      <div class="{{ align_class }}">
+        {%- if title != blank -%}
+          <h2 class="font-serif text-3xl lg:text-4xl mb-6">{{ title }}</h2>
+        {%- endif -%}
+
+        <div class="testimonial__text text-lg lg:text-xl leading-8 tracking-wide font-semibold [&_p]:m-0 [&_p+p]:mt-4">
+          {{ text }}
+        </div>
+
+        {%- if credit != blank -%}
+          <div class="testimonial__credit mt-5 flex items-center gap-5 text-base text-taupe-500 {{ credit_flex }}">
+            <span class="inline-block w-[18px] h-px bg-current"></span>
+            <span>{{ credit }}</span>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Testimonial",
+  "tag": "section",
+  "class": "testimonial-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "richtext",
+      "id": "testimonial_text",
+      "label": "Testimonial text"
+    },
+    {
+      "type": "text",
+      "id": "testimonial_credit",
+      "label": "Credit"
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum width",
+      "min": 300,
+      "max": 1440,
+      "step": 20,
+      "unit": "px",
+      "default": 1440
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Bottom margin",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "medium"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial",
+      "settings": {
+        "testimonial_text": "<p>Add a pull quote here.</p>"
+      }
+    }
+  ]
+}
+{% endschema %}

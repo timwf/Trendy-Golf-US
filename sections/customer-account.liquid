@@ -1,0 +1,235 @@
+{% comment %}
+  Customer account dashboard — sidebar + main content (profile form).
+  Source: _reference/repo/app/routes/account.tsx + account._index.tsx
+{% endcomment %}
+
+{%- if customer -%}
+  <div class="container grid gap-5 py-10 lg:grid-cols-10 lg:gap-10">
+    {% render 'account-sidebar',
+      active: 'account',
+      returns_url: section.settings.returns_url | default: 'https://returns.trendygolf.com'
+    %}
+
+    <main class="col-span-1 lg:col-span-7 2xl:col-span-8">
+      <section data-account-panel="account">
+        <div class="mb-8">
+          <h1 class="mb-4 text-xl font-bold lg:text-2xl">{{ section.settings.heading | default: 'My Account' }}</h1>
+          {%- if section.settings.welcome_text != blank -%}
+            <p class="mb-0 text-xl">{{ section.settings.welcome_text }}</p>
+          {%- endif -%}
+        </div>
+
+        <div class="bg-taupe-300 p-6 mb-6">
+          {%- if section.settings.card_intro != blank -%}
+            <p>{{ section.settings.card_intro }}</p>
+          {%- endif -%}
+
+          {%- form 'customer' -%}
+            {%- if form.posted_successfully? -%}
+              <div class="mb-4 border border-clubhouse-green-600 bg-clubhouse-green-200 p-3 text-sm">
+                Profile updated.
+              </div>
+            {%- endif -%}
+            {%- if form.errors -%}
+              <div class="mb-4 border border-red-600 bg-red-100 p-3 text-sm text-red-700">
+                {{ form.errors | default_errors }}
+              </div>
+            {%- endif -%}
+
+            <div class="grid grid-cols-1 gap-4 lg:grid-cols-2">
+              <div class="col-span-1">
+                {% render 'form-input',
+                  name: 'customer[first_name]',
+                  label: 'First name',
+                  placeholder: 'Enter your name',
+                  value: customer.first_name,
+                  autocomplete: 'given-name'
+                %}
+              </div>
+              <div class="col-span-1">
+                {% render 'form-input',
+                  name: 'customer[last_name]',
+                  label: 'Last name',
+                  placeholder: 'Enter your surname',
+                  value: customer.last_name,
+                  autocomplete: 'family-name'
+                %}
+              </div>
+            </div>
+
+            <div class="mt-6">
+              {% render 'form-button', label: 'Update profile', type: 'submit' %}
+            </div>
+          {%- endform -%}
+        </div>
+      </section>
+
+      <section id="order-history" data-account-panel="order-history" class="scroll-mt-28" hidden>
+        <h1 class="mb-8 text-xl font-bold lg:text-2xl">Order History</h1>
+
+        {%- paginate customer.orders by section.settings.orders_per_page -%}
+          {%- if customer.orders.size > 0 -%}
+            {%- for order in customer.orders -%}
+              <div class="bg-taupe-300 p-6 mb-6">
+                <p>
+                  <b>Order number:</b> {{ order.name }}
+                </p>
+                <div class="mb-4 grid grid-cols-3 gap-2 xl:grid-cols-6">
+                  {%- for line_item in order.line_items -%}
+                    {%- if line_item.image -%}
+                      <img
+                        class="block w-full{% if forloop.index0 > 2 %} hidden xl:block{% endif %}{% if forloop.index0 > 5 %} !hidden{% endif %}"
+                        src="{{ line_item.image | image_url: width: 400 }}"
+                        alt="{{ line_item.image.alt | default: line_item.title | escape }}"
+                        loading="lazy"
+                        width="{{ line_item.image.width }}"
+                        height="{{ line_item.image.height }}"
+                      >
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+                <div class="flex items-end gap-8 md:justify-between">
+                  <div>
+                    <p class="mb-2">
+                      <b>Order date: </b>
+                      {{ order.created_at | date: '%a %b %d %Y' }}
+                    </p>
+                    <p class="mb-4 md:mb-0">
+                      <b>Total cost: </b>
+                      <span>{{ order.total_price | money }}</span>
+                    </p>
+                  </div>
+                  <div class="hidden md:block">
+                    {% render 'form-button',
+                      label: 'View Order',
+                      href: order.customer_url,
+                      uppercase: false
+                    %}
+                  </div>
+                </div>
+                <div class="block md:hidden">
+                  {% render 'form-button',
+                    label: 'View Order',
+                    href: order.customer_url,
+                    uppercase: false,
+                    full_width: true
+                  %}
+                </div>
+              </div>
+            {%- endfor -%}
+
+            {%- if paginate.pages > 1 -%}
+              <nav class="mt-8 flex items-center justify-center gap-2" aria-label="Order history pagination">
+                {%- if paginate.previous -%}
+                  <a href="{{ paginate.previous.url }}#order-history" class="border border-taupe-600 px-3 py-2 text-sm">{{ paginate.previous.title }}</a>
+                {%- endif -%}
+                {%- for part in paginate.parts -%}
+                  {%- if part.is_link -%}
+                    <a href="{{ part.url }}#order-history" class="border border-taupe-600 px-3 py-2 text-sm">{{ part.title }}</a>
+                  {%- else -%}
+                    <span class="border border-taupe-900 bg-taupe-900 px-3 py-2 text-sm text-white">{{ part.title }}</span>
+                  {%- endif -%}
+                {%- endfor -%}
+                {%- if paginate.next -%}
+                  <a href="{{ paginate.next.url }}#order-history" class="border border-taupe-600 px-3 py-2 text-sm">{{ paginate.next.title }}</a>
+                {%- endif -%}
+              </nav>
+            {%- endif -%}
+          {%- else -%}
+            <div class="bg-taupe-300 p-6 mb-6">
+              <p class="mb-0">You haven't placed any orders yet.</p>
+            </div>
+          {%- endif -%}
+        {%- endpaginate -%}
+      </section>
+
+      {% render 'account-rewards-panel' %}
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      var panels = document.querySelectorAll('[data-account-panel]');
+      var tabLinks = document.querySelectorAll('[data-account-tab]');
+      var validTabs = ['account', 'order-history', 'rewards'];
+
+      function currentTab() {
+        var hash = window.location.hash.replace(/^#/, '');
+        return validTabs.indexOf(hash) > -1 ? hash : 'account';
+      }
+
+      function apply() {
+        var tab = currentTab();
+        panels.forEach(function (panel) {
+          panel.hidden = panel.dataset.accountPanel !== tab;
+        });
+        tabLinks.forEach(function (link) {
+          var match = link.dataset.accountTab === tab;
+          link.classList.toggle('text-clubhouse-green-600', match);
+          link.classList.toggle('text-neutral-700', !match);
+        });
+      }
+
+      apply();
+      window.addEventListener('hashchange', apply);
+    })();
+  </script>
+{%- else -%}
+  <div class="container py-10">
+    <p>Please <a href="{{ routes.account_login_url }}" class="underline">sign in</a>.</p>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Customer account",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Sidebar"
+    },
+    {
+      "type": "url",
+      "id": "returns_url",
+      "label": "Returns portal URL",
+      "info": "External returns portal. Defaults to https://returns.trendygolf.com when blank. Override here if the portal URL changes."
+    },
+    {
+      "type": "header",
+      "content": "Main content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "My Account"
+    },
+    {
+      "type": "textarea",
+      "id": "welcome_text",
+      "label": "Welcome text",
+      "default": "Welcome to TRENDYGOLF! Collect rewards, get exclusive benefits, and grab the latest gear."
+    },
+    {
+      "type": "textarea",
+      "id": "card_intro",
+      "label": "Profile card intro",
+      "default": "Don't forget to make sure your details below are added and correct to complete your account setup."
+    },
+    {
+      "type": "header",
+      "content": "Order history"
+    },
+    {
+      "type": "range",
+      "id": "orders_per_page",
+      "label": "Orders per page",
+      "min": 5,
+      "max": 50,
+      "step": 5,
+      "default": 10
+    }
+  ]
+}
+{% endschema %}

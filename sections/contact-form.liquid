@@ -1,0 +1,356 @@
+{%- liquid
+  case section.settings.margin_bottom
+    when 'none'
+      assign margin_class = ''
+    when 'small'
+      assign margin_class = 'mb-8'
+    when 'medium'
+      assign margin_class = 'lg:mb-14 mb-8'
+    when 'large'
+      assign margin_class = 'lg:mb-28 mb-20'
+  endcase
+
+  assign heading_size_class = 'text-3xl lg:text-4xl'
+  if section.settings.heading_size == 'h1'
+    assign heading_size_class = 'text-5xl lg:text-6xl'
+  elsif section.settings.heading_size == 'h2'
+    assign heading_size_class = 'text-4xl lg:text-5xl'
+  endif
+
+  assign heading_font_class = ''
+  if section.settings.heading_font == 'serif'
+    assign heading_font_class = 'font-serif'
+  elsif section.settings.heading_font == 'sans'
+    assign heading_font_class = 'font-sans'
+  endif
+
+  assign initial_inview = 'false'
+  unless section.settings.enable_animation
+    assign initial_inview = 'true'
+  endunless
+-%}
+
+<section
+  id="contact-form-{{ section.id }}"
+  class="page-block relative page-block--form {{ margin_class }} bg-transparent"
+>
+  <div class="relative">
+    <div class="container relative z-1 flex min-h-[60dvh] items-center justify-center py-10 lg:py-20">
+      <div class="mx-auto w-full max-w-2xl bg-taupe-100 p-8 lg:p-14">
+        {%- form 'contact' -%}
+          {%- if form.posted_successfully? -%}
+            <div class="text-center">
+              <h2 class="font-serif text-3xl lg:text-4xl">{{ section.settings.success_heading }}</h2>
+              {%- if section.settings.success_message != blank -%}
+                <p>{{ section.settings.success_message }}</p>
+              {%- endif -%}
+              {%- if section.settings.success_button_label != blank -%}
+                <div class="flex justify-center">
+                  {% render 'form-button',
+                    label: section.settings.success_button_label,
+                    href: section.settings.success_button_link | default: '/'
+                  %}
+                </div>
+              {%- endif -%}
+            </div>
+          {%- else -%}
+            {%- if section.settings.heading != blank or section.settings.subheading != blank -%}
+              <div
+                data-inview="{{ initial_inview }}"
+                class="group-inview group/blocks"
+              >
+                <div class="text-center opacity-0 transition-opacity duration-1000 animation-group group-data-[inview=true]/blocks:opacity-100">
+                  {%- if section.settings.heading != blank -%}
+                    <h2><span class="{{ heading_font_class }}"><span class="{{ heading_size_class }}">{{ section.settings.heading }}</span></span></h2>
+                  {%- endif -%}
+                  {%- if section.settings.subheading != blank -%}
+                    <p>{{ section.settings.subheading }}</p>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
+
+            {%- if form.errors -%}
+              <div class="mb-4 border border-red-400 bg-red-50 px-4 py-3 text-sm text-red-700" role="alert">
+                {{ form.errors | default_errors }}
+              </div>
+            {%- endif -%}
+
+            <div class="mb-5 grid grid-cols-1 gap-4">
+              {% render 'form-input',
+                id: 'contact-name-' | append: section.id,
+                name: 'contact[name]',
+                label: 'Name',
+                type: 'text',
+                placeholder: 'Enter your name',
+                autocomplete: 'name',
+                required: true
+              %}
+
+              {% render 'form-input',
+                id: 'contact-email-' | append: section.id,
+                name: 'contact[email]',
+                label: 'Email',
+                type: 'email',
+                placeholder: 'Enter your email address',
+                autocomplete: 'email',
+                required: true
+              %}
+
+              {%- if section.settings.show_brand -%}
+                {% render 'form-input',
+                  id: 'contact-brand-' | append: section.id,
+                  name: 'contact[company]',
+                  label: 'Brand name',
+                  type: 'text',
+                  placeholder: 'Enter your brand name',
+                  autocomplete: 'organization'
+                %}
+              {%- endif -%}
+
+              {%- if section.settings.show_phone -%}
+                {% render 'form-input',
+                  id: 'contact-phone-' | append: section.id,
+                  name: 'contact[phone]',
+                  label: 'Phone number',
+                  type: 'tel',
+                  placeholder: 'Enter your phone number',
+                  autocomplete: 'off'
+                %}
+              {%- endif -%}
+
+              {%- if section.settings.show_order_number -%}
+                {% render 'form-input',
+                  id: 'contact-order-' | append: section.id,
+                  name: 'contact[order_number]',
+                  label: 'Order number',
+                  type: 'text',
+                  placeholder: 'Enter your order number',
+                  autocomplete: 'off'
+                %}
+              {%- endif -%}
+
+              {%- assign message_id = 'contact-message-' | append: section.id -%}
+              <div>
+                <label for="{{ message_id }}" class="mb-2 block">
+                  Message<span class="text-red-500">*</span>
+                </label>
+                <textarea
+                  id="{{ message_id }}"
+                  name="contact[body]"
+                  placeholder="Enter your message"
+                  required
+                  maxlength="2000"
+                  rows="5"
+                  class="block w-full appearance-none border border-taupe-600 bg-white px-4 py-3 placeholder:text-taupe-600 read-only:cursor-not-allowed read-only:bg-taupe-300 read-only:text-taupe-600 focus:outline-none"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="mt-6 flex justify-center">
+              {% render 'form-button',
+                label: section.settings.submit_label | default: 'Send message',
+                type: 'submit',
+                disabled: true,
+                id: 'contact-submit-' | append: section.id
+              %}
+            </div>
+          {%- endif -%}
+        {%- endform -%}
+      </div>
+    </div>
+    {%- if section.settings.background_image != blank -%}
+      {%- capture bg_img_class -%}absolute left-0 top-0 size-full object-cover{%- endcapture -%}
+      {{
+        section.settings.background_image
+        | image_url: width: 3840
+        | image_tag:
+          loading: 'lazy',
+          class: bg_img_class,
+          alt: section.settings.background_image.alt,
+          widths: '600, 1200, 1800, 2400, 3840',
+          sizes: '100vw'
+      }}
+    {%- endif -%}
+  </div>
+</section>
+
+<script>
+  (function () {
+    var section = document.getElementById('contact-form-{{ section.id }}');
+    if (!section) return;
+
+    var form = section.querySelector('form');
+    if (!form) return;
+
+    var submit = form.querySelector('button[type="submit"]');
+    var name = form.querySelector('[name="contact[name]"]');
+    var email = form.querySelector('[name="contact[email]"]');
+    var body = form.querySelector('[name="contact[body]"]');
+    if (!submit || !name || !email || !body) return;
+
+    function updateSubmitState() {
+      var ready = name.value.trim() && email.value.trim() && body.value.trim();
+      submit.disabled = !ready;
+    }
+
+    [name, email, body].forEach(function (el) {
+      el.addEventListener('input', updateSubmitState);
+      el.addEventListener('blur', updateSubmitState);
+    });
+
+    updateSubmitState();
+
+    {%- if section.settings.enable_animation -%}
+      var wrapper = section.querySelector('[data-inview]');
+      if (wrapper && 'IntersectionObserver' in window) {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.setAttribute('data-inview', 'true');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.15, rootMargin: '0px 0px -10%' });
+        observer.observe(wrapper);
+      } else if (wrapper) {
+        wrapper.setAttribute('data-inview', 'true');
+      }
+    {%- endif -%}
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.contact_form.name",
+  "tag": "section",
+  "class": "page-block--form",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.contact_form.settings.header_content.content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.contact_form.settings.heading.label",
+      "default": "Email Us"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "t:sections.contact_form.settings.heading_size.label",
+      "options": [
+        { "value": "h1", "label": "t:sections.contact_form.settings.heading_size.options.h1" },
+        { "value": "h2", "label": "t:sections.contact_form.settings.heading_size.options.h2" },
+        { "value": "h3", "label": "t:sections.contact_form.settings.heading_size.options.h3" }
+      ],
+      "default": "h3"
+    },
+    {
+      "type": "select",
+      "id": "heading_font",
+      "label": "t:sections.contact_form.settings.heading_font.label",
+      "options": [
+        { "value": "none", "label": "t:sections.contact_form.settings.heading_font.options.none" },
+        { "value": "serif", "label": "t:sections.contact_form.settings.heading_font.options.serif" },
+        { "value": "sans", "label": "t:sections.contact_form.settings.heading_font.options.sans" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "t:sections.contact_form.settings.subheading.label",
+      "default": "If you would like to get in touch, please use the form below."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.contact_form.settings.header_fields.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_brand",
+      "label": "t:sections.contact_form.settings.show_brand.label",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_phone",
+      "label": "t:sections.contact_form.settings.show_phone.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_order_number",
+      "label": "t:sections.contact_form.settings.show_order_number.label",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "submit_label",
+      "label": "t:sections.contact_form.settings.submit_label.label",
+      "default": "Send message"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.contact_form.settings.header_success.content"
+    },
+    {
+      "type": "text",
+      "id": "success_heading",
+      "label": "t:sections.contact_form.settings.success_heading.label",
+      "default": "Thanks for getting in touch!"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "t:sections.contact_form.settings.success_message.label",
+      "default": "We respond swiftly to enquiries Monday to Friday 8.30am - 4.30pm GMT."
+    },
+    {
+      "type": "text",
+      "id": "success_button_label",
+      "label": "t:sections.contact_form.settings.success_button_label.label",
+      "default": "Back to home"
+    },
+    {
+      "type": "url",
+      "id": "success_button_link",
+      "label": "t:sections.contact_form.settings.success_button_link.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.contact_form.settings.header_appearance.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "t:sections.contact_form.settings.background_image.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_animation",
+      "label": "t:sections.contact_form.settings.enable_animation.label",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "t:sections.contact_form.settings.margin_bottom.label",
+      "options": [
+        { "value": "none", "label": "t:sections.contact_form.settings.margin_bottom.options.none" },
+        { "value": "small", "label": "t:sections.contact_form.settings.margin_bottom.options.small" },
+        { "value": "medium", "label": "t:sections.contact_form.settings.margin_bottom.options.medium" },
+        { "value": "large", "label": "t:sections.contact_form.settings.margin_bottom.options.large" }
+      ],
+      "default": "large"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.contact_form.presets.name"
+    }
+  ]
+}
+{% endschema %}

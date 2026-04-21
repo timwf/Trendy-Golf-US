@@ -1,0 +1,141 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "Shop the latest from Manors.",
+            "heading": "Manors",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1167775799",
+            "video_url_mobile": "https://vimeo.com/1168157794",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 16,
+            "button_label": "Shop Now",
+            "button_link": "/collections/mens-manors-golf",
+            "button_style": "white"
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "aria_label": "Hero slideshow",
+        "margin_bottom": "medium"
+      }
+    },
+    "product_carousel_1": {
+      "type": "product-carousel-tabs",
+      "settings": {
+        "title": "New In Manors",
+        "tab_1_label": "Men",
+        "tab_1_products": [
+          "ranger-golf-jacket-pine-green",
+          "tour-mid-layer-dark-olive",
+          "frontier-tailored-shirt-dune",
+          "ranger-golf-jacket-dune",
+          "course-mock-neck-polo-black",
+          "course-mock-neck-polo-dune",
+          "recycled-greenskeeper-shorts-black",
+          "gailes-windbreaker-dune"
+        ],
+        "tab_2_label": "",
+        "tab_2_products": [],
+        "tab_3_label": "",
+        "tab_3_products": []
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {}
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "banner_cards_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "Shop All",
+            "image": "shopify://shop_images/01-shop-all_ad32c7b4-a274-40ab-86cb-c1605051f94e.jpg",
+            "link": "/collections/mens-manors-golf",
+            "button_label": "Shop Now"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "Tops",
+            "image": "shopify://shop_images/02-tops_491d9bae-7425-4cc9-9851-6f25cd4d1096.jpg",
+            "link": "/collections/mens-manors-golf-polo-shirts",
+            "button_label": "Shop Now"
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "heading": "Waterproofs",
+            "image": "shopify://shop_images/03-waterproofs.jpg",
+            "link": "/collections/mens-manors-golf-waterproofs",
+            "button_label": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
+      "settings": {
+        "layout": "grid",
+        "columns": 3,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "small",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    }
+  },
+  "order": [
+    "hero_1",
+    "product_carousel_1",
+    "media_grid_1",
+    "banner_cards_1"
+  ]
+}

@@ -1,0 +1,304 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/9a4e0a5813574a9caea51a28548a5174.mp4",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When we think of iconic golf and legendary style, the first name that comes to mind is The King, Arnold Palmer. Known as much for his charisma, presidential friendships, love of aviation, and tasteful clothes; as his hall-of-fame status, nobody embodies the \"star\" persona more than Arnie himself. To celebrate The King's legacy, PUMA Golf has partnered with the AP brand to create the latest PUMA Golf x Arnold Palmer Collection.</p><p>Designed to celebrate Arnie's massive impact on the game and its style evolution, the new PUMA Golf x Arnold Palmer Collection boasts fresh and sophisticated looks. The collection is \"fashion forward,\" drawing inspiration from the past while redefining the future in a classic but contemporary way.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "x-ap-full-zip-lightweight-jacket-deep-navy-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "x-ap-mattr-iced-tea-polo-blue-skies-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "x-ap-pleated-golf-shorts-deep-navy-ss24"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "x-ap-fusion-classic-golf-shoes-white-navy-ss24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_puma_ap1.jpg",
+        "title": "",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>PUMA Athlete (Rickie Fowler) had a fond relationship with the late Mr Palmer and will compete in the collection at The Arnold Palmer Invitational at Bay Hill to honour The King's legacy. The collection consists of polo shirts, shorts, t-shirts, jackets, and a pair of Fusion Classic Puma Shoes, all adorned with the iconic umbrella logo that symbolises not only Arnold Palmer but also his enduring influence on the sport of golf and its fashion.</p><p>Each piece in the collection pays homage to Palmer's timeless style while incorporating modern design elements that appeal to golfers of all ages. The colours are vibrant yet classic, with pops of Arnie's signature shade of green complemented by bold patterns and sleek silhouettes. From the fairway to the clubhouse - the PUMA Golf x Arnold Palmer Collection exudes confidence and sophistication.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_2_ap_1.jpg",
+            "link": "shopify://collections/mens-puma-golf-x-arnold-palmer-collection",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_2_ap2.jpg",
+            "link": "shopify://collections/mens-puma-golf-x-arnold-palmer-collection",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em><strong>\"We love working with the Arnold Palmer team to develop items for the AP Collection. The goal is always to capture the essence of Mr. Palmer's style with his classic color palette and premium materials. Each item in the new PUMA Golf x Arnold Palmer Collection, including apparel, shoes, and accessories, possess design qualities that we feel Mr. Palmer would be happy to wear himself.\"</strong></em><br/><strong>- Chris MacNeill, Team Head, PLM - Golf Apparel & Accessories, PUMA Golf.</strong></p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "center",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One of the standout pieces in the collection is the Fusion Classic Puma Shoes. These shoes combine the latest in footwear technology with a timeless aesthetic inspired by Arnold Palmer's style. Featuring a comfortable, supportive design with enhanced traction for maximum performance on the course, these shoes are as functional as they are stylish.</p><p>But the collection is not just about looks; it's also about paying tribute to a golfing icon who left an indelible mark on the sport and its culture. Arnold Palmer's legacy extends far beyond his impressive record on the course; he was a true gentleman and ambassador for the game, and his influence continues to be felt today.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "collection": "mens-puma-golf-x-arnold-palmer-collection",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The PUMA Golf x Arnold Palmer 2024 Collection is a fitting tribute to a true legend of the game. With its combination of classic style and modern innovation, this collection is sure to become a favourite among golfers everywhere. So whether you're hitting the links or just want to channel Arnold Palmer's timeless sense of style, be sure to check out this exceptional collection from PUMA Golf. Available now on TRENDYGOLF - this collection has something for all.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "shopify://shop_images/HERO_DESKTOP_90cbbac7-48a3-4f38-8b91-5d89400ad7df.jpg",
+            "mobile_image": "shopify://shop_images/HERO_mobile_f107af88-fb9e-4c18-afb8-36adbd2d89ef.jpg",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "shop_the_look_1",
+    "text_2",
+    "promo_1",
+    "text_3",
+    "text_4",
+    "products_1",
+    "text_5",
+    "hero_2",
+    "related-articles"
+  ]
+}

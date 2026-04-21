@@ -1,0 +1,53 @@
+{% doc %}
+  Renders an autoplay, muted, looping background video.
+  Priority: hosted_video (native picker) > hosted_url (CDN text) > url (YouTube/Vimeo).
+
+  Vimeo/YouTube iframes are emitted as placeholder divs (data-vimeo-src / data-youtube-src)
+  and the hero-carousel JS mounts the real iframe on demand with cover-sizing.
+
+  @param {object} url - Shopify video_url object (YouTube or Vimeo)
+  @param {object} hosted_video - Shopify video object from the native video picker
+  @param {string} [hosted_url] - Direct CDN video URL (.mp4)
+{% enddoc %}
+
+{%- if hosted_video != blank -%}
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    class="pointer-events-none absolute inset-0 size-full object-cover"
+    title="Background video">
+    {%- for source in hosted_video.sources -%}
+      <source src="{{ source.url }}" type="{{ source.mime_type }}">
+    {%- endfor -%}
+  </video>
+{%- elsif hosted_url != blank -%}
+  <video
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="metadata"
+    class="pointer-events-none absolute inset-0 size-full object-cover"
+    title="Background video">
+    <source src="{{ hosted_url }}" type="video/mp4">
+  </video>
+{%- elsif url != blank -%}
+  {%- if url.type == 'youtube' -%}
+    <div
+      class="pointer-events-none absolute inset-0"
+      data-embed-placeholder
+      data-embed-type="youtube"
+      data-embed-id="{{ url.id }}"
+      data-embed-src="https://www.youtube.com/embed/{{ url.id }}?autoplay=1&mute=1&loop=1&playlist={{ url.id }}&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1"></div>
+  {%- elsif url.type == 'vimeo' -%}
+    <div
+      class="pointer-events-none absolute inset-0"
+      data-embed-placeholder
+      data-embed-type="vimeo"
+      data-embed-id="{{ url.id }}"
+      data-embed-src="https://player.vimeo.com/video/{{ url.id }}?autoplay=1&muted=1&loop=1&background=1&playsinline=1&dnt=1"></div>
+  {%- endif -%}
+{%- endif -%}

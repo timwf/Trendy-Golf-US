@@ -1,0 +1,369 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "shopify://shop_images/HERO_DESKTOP_ca1d3e47-541e-4b77-98c0-733b8878fff4.png",
+            "mobile_image": "shopify://shop_images/HERO_mobile_66c15e67-bdc4-4449-b2f1-babfc8f30552.png",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Golf has long been synonymous with tradition, but in recent years, a bold shift has transformed the golf apparel scene, led by brands that blend classic elements with modern flair. Malbon Golf is at the forefront of this movement, and the Tiger Buckets Collection is a prime example of how this brand is redefining golf style. This collection features a range of premium polos, bucket hats, and other apparel pieces, showcasing a unique mix of high-performance materials, streetwear aesthetics, and playful designs inspired by the iconic tiger motif.</p><p>In this post, we delve deep into the Malbon Golf Tiger Buckets Collection available on TRENDYGOLF, examining its key elements, styling options, and why this collection is a must-have for the modern golfer who wants to stand out both on and off the course.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Tiger Buckets Collection: A Glimpse into Malbon's Vision",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At the core of the Tiger Buckets Collection is a celebration of individuality and self-expression on the golf course. Malbon Golf is known for fusing art, culture, and sport, and this collection exemplifies that ethos perfectly. The collection offers a variety of apparel pieces that seamlessly blend performance with style, catering to the modern golfer who values both aesthetics and functionality.</p><p>Key pieces in the collection include:</p><ul><li><strong>Tiger Buckets Polos</strong>: Available in colours like black, natural, and hunter green, these polos are crafted from moisture-wicking fabric to keep you cool during your game. The standout feature is the elegant Tiger Buckets logo, subtly embroidered on the chest.</li><li><strong>Bucket Hats</strong>: The bucket hats, with their laid-back style, not only offer sun protection but also add a playful yet stylish touch to your golf attire. The bold tiger design on the hats reflects Malbon's signature flair for streetwear-inspired golf fashion.</li><li><strong>Hoodies and T-Shirts</strong>: The Tiger Buckets hoodies and t-shirts provide a comfortable yet trendy option for casual days. Made from high-quality fabrics, these pieces transition seamlessly from the golf course to everyday wear.</li></ul>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_1_24de9f1f-64d0-4ba3-9d76-04cfc4bd9c9c.png",
+            "link": "shopify://collections/malbon-golf-mens-tiger-buckets-collection",
+            "button_label": "SHOP TIGER BUCKETS"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_2_9b51d656-6131-4bea-ba1c-c7525d171b71.png",
+            "link": "shopify://collections/malbon-golf-mens-tiger-buckets-collection",
+            "button_label": "SHOP TIGER BUCKETS"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Design and Materials: Where Fashion Meets Function",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Tiger Buckets Collection stands out for its careful attention to detail and use of premium materials. Whether you're wearing a polo or a hoodie, each piece is designed to not only look great but also perform well during your golf rounds.</p><ul><li><strong>Moisture-Wicking Fabrics: </strong>One of the key features of the Tiger Buckets polos is their moisture-wicking technology. This ensures that you remain cool and dry, even during intense games in warm weather. The fabrics are breathable and lightweight, making them ideal for long hours on the course.</li><li><strong>Tailored Fit: </strong>Another hallmark of the collection is its tailored fit. The polos are designed to provide a flattering silhouette without sacrificing comfort. This balance between style and performance is perfect for golfers who want to look sharp without compromising on mobility.</li></ul><p>The combination of moisture-wicking fabrics, sleek designs, and high-quality construction makes the Tiger Buckets Collection a standout option for golfers who prioritise both fashion and performance.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_2": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/malbongolf_1723149820_3430351778460881101_22644725.png",
+            "link": "shopify://collections/malbon-golf-mens-tiger-buckets-collection",
+            "button_label": "SHOP TIGER BUCKETS"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/malbongolf_1723149820_3430351778636951728_22644725.png",
+            "link": "shopify://collections/malbon-golf-mens-tiger-buckets-collection",
+            "button_label": "SHOP TIGER BUCKETS"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Style Guide: How to Wear the Tiger Buckets Collection",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One of the most appealing aspects of the Tiger Buckets Collection is its versatility. The pieces are designed to be mixed and matched, offering endless styling possibilities both on and off the golf course. Here are some tips for creating the perfect look with your Tiger Buckets gear:</p><ul><li><strong>On the Course: </strong>Pair the Tiger Buckets Polo in Hunter Green with neutral-coloured golf trousers and a matching Tiger Buckets bucket hat for a cohesive, stylish look. Complete the outfit with white golf shoes for a clean finish.</li><li><strong>Off the Course: </strong>Transition your look to a casual outing by swapping out your golf trousers for tailored shorts or denim. Throw on a Tiger Buckets hoodie over your polo for an effortlessly cool vibe. The bucket hat adds a touch of streetwear flair, making it ideal for post-game wear.</li></ul><p>With its sleek designs and adaptable pieces, the Tiger Buckets Collection allows golfers to express their style both on the green and beyond.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "tiger-buckets-t-shirt-hunter-green-aw24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "ripstop-nylon-four-panel-hat-onyx-su24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "rattan-chino-trousers-blanc-su24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3"],
+      "settings": {
+        "image": "shopify://shop_images/malbongolf_1693420266_3180962208393556652_22644725.png",
+        "title": "",
+        "subtext": "Malbon Golf Tiger Buckets Casual/Golf Look",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Why the Tiger Buckets Collection is a Must-Have",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Malbon Golf Tiger Buckets Collection is more than just golf apparel - it's a statement. This collection perfectly embodies the intersection of traditional golf wear and contemporary street style, making it ideal for golfers who want to stand out while still maintaining top-notch performance.</p><p>Whether you're a seasoned golfer or a fashion-forward enthusiast looking to make your mark on the course, the Tiger Buckets Collection offers the perfect combination of style, comfort, and functionality. Malbon Golf has once again pushed the boundaries of what golf apparel can be, creating a line that appeals to both athletes and style aficionados alike.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "malbon-golf-mens-tiger-buckets-collection",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "shopify://collections/malbon-golf-mens-tiger-buckets-collection",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Malbon Golf Tiger Buckets Collection is a game-changer in the world of golf fashion. By fusing high-performance materials with bold, artistic designs, Malbon has created a collection that caters to the modern golfer's desire for both style and functionality. Whether you're looking for a statement polo, a cosy hoodie, or a stylish bucket hat, the Tiger Buckets Collection has something for everyone.</p><p>Elevate your golf wardrobe with the Tiger Buckets Collection, and be prepared to turn heads on and off the course. Explore the full range of Malbon Golf apparel on TRENDYGOLF and discover why this collection is a favourite among golfers who refuse to compromise on style or performance.</p><p>By embracing the Malbon ethos of blending street culture with traditional golf, the Tiger Buckets Collection represents a new era in golf apparel - one where the line between sport and fashion is beautifully blurred.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "text_2",
+    "promo_1",
+    "text_3",
+    "promo_2",
+    "text_4",
+    "shop_the_look_1",
+    "text_5",
+    "products_1",
+    "text_6",
+    "related-articles"
+  ]
+}

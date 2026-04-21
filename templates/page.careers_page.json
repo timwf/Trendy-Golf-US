@@ -1,0 +1,346 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "careers-hero": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "At TRENDYGOLF, we believe in combining passion for the game with a love for fashion. If you're driven, innovative, and have an eye for style, you might just be the perfect fit for our team. Explore the opportunities below and find your next career move with us.",
+            "heading_first": true,
+            "heading": "Do you have what it takes to work at TRENDYGOLF?",
+            "heading_size": "h2",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "shopify://shop_images/a5cf415bfcc3a4267412bbcf88e0550763b19b09-3840x2180_1.webp",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 7,
+            "button_label": "",
+            "button_link": "",
+            "button_style": "dark-grey"
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "aria_label": "Careers hero",
+        "margin_bottom": "large"
+      }
+    },
+    "careers-mission": {
+      "type": "content-block",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Our Mission",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "para_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>TRENDYGOLF is dedicated to revolutionising the way golf enthusiasts approach the game. We blend cutting-edge fashion with functionality, offering our customers the best of both worlds. TRENDYGOLF is a community where golf and fashion intersect seamlessly.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "para_1"
+      ],
+      "settings": {
+        "alignment": "center",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "28",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "20",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "careers-apply": {
+      "type": "content-block",
+      "blocks": {
+        "heading_apply": {
+          "type": "heading",
+          "settings": {
+            "text": "How to Apply",
+            "tag": "h2",
+            "size": "h4",
+            "font": "sans"
+          }
+        },
+        "para_apply": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Interested candidates can send their resume and cover letter to ukcareers@trendygolf.com. Please specify the position you are applying for in the subject line.</p>"
+          }
+        },
+        "heading_join": {
+          "type": "heading",
+          "settings": {
+            "text": "Join Our Team",
+            "tag": "h2",
+            "size": "h4",
+            "font": "sans"
+          }
+        },
+        "para_join": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Become a part of TRENDYGOLF and contribute to a dynamic, exciting, and fashionable future in golf. We look forward to seeing what you can bring to our team.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_apply",
+        "para_apply",
+        "heading_join",
+        "para_join"
+      ],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "20",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "14",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "careers-about": {
+      "type": "content-block",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "About Us",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "para_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Since 2004 TRENDYGOLF have been answering the question \"Where can we buy this from?\"</p>"
+          }
+        },
+        "para_2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Inspired by Jesper Parnevik's famous style, our founders scoured the internet to find where they could get their hands on the look. It was then they discovered J.LINDEBERG but found no way to buy it. That's when TRENDYGOLF was born, becoming a one-stop-shop for golfers worldwide to shop the looks of the most famous golfers.</p>"
+          }
+        },
+        "para_3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Since 2004 the company has spread accross the globe, boasting offices in both the UK and USA. But the mission remains the same, provide the latest golf fashion & accessories that the top players are wearing.</p>"
+          }
+        },
+        "para_4": {
+          "type": "text",
+          "settings": {
+            "text": "<p>TRENDYGOLF is not only aimed at the fashionable golfer, but is an institution that brings the latest designs from the most sought after designers to the forefront of fashion, both on and off the course.</p>"
+          }
+        },
+        "para_5": {
+          "type": "text",
+          "settings": {
+            "text": "<p>It's all about confidence and with TRENDYGOLF as your personal stylist, you'll look your best wherever your round takes you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "para_1",
+        "para_2",
+        "para_3",
+        "para_4",
+        "para_5"
+      ],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "28",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "20",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "careers-social-grid": {
+      "type": "social-grid",
+      "blocks": {
+        "grid_item_tUxL8V": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-01-jlindeberg.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_cenMKr": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-02-nike-shoes.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_E3dcqB": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-03-head-headwear.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_mLzqDt": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-04-trendygolf-clothing.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_7aAznG": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-05-trendygolf-clothing.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_gxtkD4": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-06-adidas-originals.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_87Wj6c": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-07-puma.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_aL8Ag3": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-08-trendygolf-clothing.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_Py7rwb": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-09-adidas-womens.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_PmWmY4": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-10-head-womens.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_9xfnTz": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/banner-2col-men-ralph-lauren.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_EW6tDL": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/64fca13f15bb8050d32d3121243801c70cd794a6-1080x1080.webp",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        }
+      },
+      "block_order": [
+        "grid_item_tUxL8V",
+        "grid_item_cenMKr",
+        "grid_item_E3dcqB",
+        "grid_item_mLzqDt",
+        "grid_item_7aAznG",
+        "grid_item_gxtkD4",
+        "grid_item_87Wj6c",
+        "grid_item_aL8Ag3",
+        "grid_item_Py7rwb",
+        "grid_item_PmWmY4",
+        "grid_item_9xfnTz",
+        "grid_item_EW6tDL"
+      ],
+      "name": "t:sections.social_grid.presets.name",
+      "settings": {
+        "heading": "@trendygolf_usa",
+        "subheading": "Wear it your way. Tag us on Instagram for your chance to be featured.",
+        "margin_bottom": "none"
+      }
+    }
+  },
+  "order": [
+    "careers-hero",
+    "careers-mission",
+    "careers-apply",
+    "careers-about",
+    "careers-social-grid"
+  ]
+}

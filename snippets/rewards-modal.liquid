@@ -1,0 +1,126 @@
+{%- comment -%}
+  Rewards (TGCC) modal — opens on `openRewardsModal` window event,
+  triggered from any [data-rewards-modal-open] element (cart drawer, etc.).
+
+  Source markup ref: _reference/repo/app/components/partials/global/rewardsPopup.tsx
+  Layout: 2-col grid at md (image + content), bg-taupe-300, content padding cleared on panel.
+{%- endcomment -%}
+
+{%- liquid
+  assign img = settings.rewards_modal_image
+  assign img_mobile = settings.rewards_modal_mobile_image
+  assign logo = settings.rewards_modal_logo
+  assign content = settings.rewards_modal_content
+-%}
+
+<div
+  data-rewards-modal
+  class="relative inset-0 z-50 hidden"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="rewards-modal-title"
+>
+  {%- comment -%} Backdrop {%- endcomment -%}
+  <div data-rewards-modal-backdrop class="fixed inset-0 bg-black/50 transition-opacity duration-300 ease-out"></div>
+
+  {%- comment -%} Centered scroll wrapper {%- endcomment -%}
+  <div class="fixed inset-0 flex w-screen items-center overflow-y-auto p-4 [&_>_div]:w-full">
+
+    {%- comment -%} Panel — size 2xl, no inner padding (clearContentPadding) {%- endcomment -%}
+    <div
+      data-rewards-modal-panel
+      class="relative mx-auto max-w-5xl bg-taupe-300 transition duration-300 ease-out"
+    >
+      {%- comment -%} Close button {%- endcomment -%}
+      <button
+        type="button"
+        data-rewards-modal-close
+        class="absolute right-0 top-0 z-20 flex size-10 items-center justify-center bg-white text-neutral-900"
+        aria-label="Close rewards info"
+      >
+        {% render 'icon', icon: 'x-mark', size: 'size-6' %}
+      </button>
+
+      <div class="grid grid-cols-1 bg-taupe-300 md:grid-cols-2">
+        {%- comment -%} Image — desktop / mobile {%- endcomment -%}
+        <div class="aspect-square size-full">
+          {%- if img != blank -%}
+            {%- if img_mobile != blank -%}
+              <picture>
+                <source media="(min-width: 768px)" srcset="{{ img | image_url: width: 1200 }}">
+                <img
+                  src="{{ img_mobile | image_url: width: 800 }}"
+                  alt="{{ img.alt | escape }}"
+                  width="{{ img_mobile.width }}"
+                  height="{{ img_mobile.height }}"
+                  loading="lazy"
+                  class="size-full object-cover"
+                >
+              </picture>
+            {%- else -%}
+              <img
+                src="{{ img | image_url: width: 1200 }}"
+                alt="{{ img.alt | escape }}"
+                width="{{ img.width }}"
+                height="{{ img.height }}"
+                loading="lazy"
+                class="size-full object-cover"
+              >
+            {%- endif -%}
+          {%- endif -%}
+        </div>
+
+        {%- comment -%} Content {%- endcomment -%}
+        <div class="flex flex-col gap-5 px-5 py-8 md:px-10 md:py-12">
+          <div class="text-left">
+            {%- if logo != blank -%}
+              <div class="mb-4 w-36">
+                <img
+                  src="{{ logo | image_url: width: 288 }}"
+                  alt="{{ logo.alt | escape }}"
+                  width="{{ logo.width }}"
+                  height="{{ logo.height }}"
+                  loading="lazy"
+                >
+              </div>
+            {%- endif -%}
+
+            {%- if content != blank -%}
+              <div id="rewards-modal-title" class="rte [&_p:first-child]:mb-2 [&_p:first-child]:font-serif [&_p:first-child]:text-2xl md:[&_p:first-child]:text-3xl">
+                {{ content }}
+              </div>
+            {%- endif -%}
+
+            {%- comment -%} Bullets {%- endcomment -%}
+            <div class="mt-5 grid gap-5">
+              {%- for i in (1..3) -%}
+                {%- assign icon_key = 'rewards_modal_bullet_' | append: i | append: '_icon' -%}
+                {%- assign text_key = 'rewards_modal_bullet_' | append: i | append: '_text' -%}
+                {%- assign bullet_icon = settings[icon_key] -%}
+                {%- assign bullet_text = settings[text_key] -%}
+                {%- if bullet_text != blank -%}
+                  <div class="flex gap-4">
+                    {%- if bullet_icon != blank -%}
+                      <div class="w-8 shrink-0">
+                        <img
+                          src="{{ bullet_icon | image_url: width: 64 }}"
+                          alt="{{ bullet_icon.alt | escape }}"
+                          width="32"
+                          height="32"
+                          loading="lazy"
+                        >
+                      </div>
+                    {%- endif -%}
+                    <div class="rte flex items-center [&_*]:mb-0">
+                      {{ bullet_text }}
+                    </div>
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

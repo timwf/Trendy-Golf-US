@@ -1,0 +1,158 @@
+{{ 'splide.min.css' | asset_url | stylesheet_tag }}
+
+<script>
+  window.cartDrawerConfig = {
+    moneyFormat: {{ shop.money_format | json }},
+    rootUrl: {{ routes.root_url | json }}{% if settings.rebuy_api_key != blank %},
+    rebuyApiKey: {{ settings.rebuy_api_key | json }}{% endif %}
+  };
+</script>
+
+{%- comment -%} Drawer panel {%- endcomment -%}
+<div id="cart-drawer"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="cart-drawer-title"
+  class="fixed right-0 top-0 z-40 flex h-dvh w-full max-w-[31rem] flex-col overflow-y-auto bg-taupe-100 transition-all duration-500 ease-in-out translate-x-full shadow-none"
+  data-cart-drawer>
+
+  <span data-cart-drawer-count hidden>{{ cart.item_count }}</span>
+
+  {%- comment -%} Content area {%- endcomment -%}
+  <div class="flex-1 p-8">
+
+    {%- comment -%} Header {%- endcomment -%}
+    <div class="mb-6 flex items-center justify-between">
+      <h2 id="cart-drawer-title" class="mb-0 font-sans font-bold text-lg lg:text-xl">Your Cart</h2>
+      <div>
+        <button type="button" aria-label="close navigation" class="shrink-0" data-cart-close>
+          {% render 'icon', icon: 'x-mark', size: 'size-6' %}
+        </button>
+      </div>
+    </div>
+
+    {%- comment -%} Rewards banner — logged out {%- endcomment -%}
+    {%- unless customer -%}
+      <div class="mb-4 flex items-center gap-2 bg-clubhouse-green-600 p-4 text-sm text-white">
+        {% render 'icon', icon: 'trophy', size: 'size-5', class: 'min-w-5' %}
+        <span class="inline [&_*]:mb-0">
+          <b>Register</b> at checkout to unlock <b>TGCC Rewards</b> with your purchase.
+          <button type="button" class="inline font-bold underline" data-rewards-modal-open>Learn more</button>
+        </span>
+      </div>
+    {%- endunless -%}
+
+    {%- comment -%} Rewards button — logged in {%- endcomment -%}
+    {%- if customer -%}
+      <button type="button" class="mb-4 flex w-full items-center gap-3 border border-taupe-600 p-4 text-left text-sm hover:border-taupe-900" data-upzelo-toggle>
+        {% render 'icon', icon: 'trophy', size: 'size-5', class: 'min-w-5 shrink-0' %}
+        <span><b>TGCC Rewards</b> — View your points & rewards</span>
+      </button>
+    {%- endif -%}
+
+    {%- comment -%} Line items {%- endcomment -%}
+    <div class="mb-8" data-cart-items>
+      {%- if cart.item_count > 0 -%}
+        <ul class="mb-10">
+          {%- for item in cart.items -%}
+            <li class="mb-6 border-b border-taupe-400 pb-6 last:mb-0 last:border-0 last:pb-0">
+              {% render 'cart-line-item', item: item %}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Empty state {%- endcomment -%}
+    <div class="mb-8" data-cart-empty {% if cart.item_count > 0 %}hidden{% endif %}>
+      <p>Your basket is empty.</p>
+    </div>
+
+    {%- comment -%} Upsell carousel {%- endcomment -%}
+    <div data-cart-upsell>
+      <h3 class="mb-6 font-bold text-lg lg:text-xl" data-cart-upsell-heading>
+        {%- if cart.item_count > 0 -%}You might also like{%- else -%}You might like{%- endif -%}
+      </h3>
+      <div class="overflow-hidden">
+        <div class="splide" data-cart-upsell-splide>
+          <div class="splide__arrows flex gap-1 pb-4">
+            <button class="splide__arrow splide__arrow--prev bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50" type="button">
+              {%- render 'icon', icon: 'chevron-left', size: 'size-6' -%}
+            </button>
+            <button class="splide__arrow splide__arrow--next bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50" type="button">
+              {%- render 'icon', icon: 'chevron-right', size: 'size-6' -%}
+            </button>
+          </div>
+          <div class="splide__track">
+            <ul class="splide__list" data-cart-upsell-list>
+              {%- comment -%}
+                Initial render: use curated fallback collection from section settings.
+                JS will replace with Rebuy trending products, falling back to
+                Shopify Recommendations API if Rebuy is unavailable.
+              {%- endcomment -%}
+              {%- if section.settings.fallback_collection != blank -%}
+                {%- for product in section.settings.fallback_collection.products limit: 6 -%}
+                  <li class="splide__slide">
+                    <div class="inline-block h-full w-full">
+                      {% render 'product-card', product: product %}
+                    </div>
+                  </li>
+                {%- endfor -%}
+              {%- endif -%}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  {%- comment -%} Sticky footer {%- endcomment -%}
+  <div class="sticky bottom-0 left-0 z-10 w-full bg-taupe-300 px-8 py-4" data-cart-footer {% if cart.item_count == 0 %}hidden{% endif %}>
+    {%- if cart.requires_shipping -%}
+      <p class="mb-2 text-center text-sm">Shipping &amp; Fees calculated at checkout</p>
+    {%- endif -%}
+
+    <a href="{{ routes.root_url }}checkout"
+      class="flex items-center gap-2 text-center text-sm tracking-wider transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 uppercase justify-center px-4 py-3 lg:px-10 min-w-40 bg-taupe-900 text-white enabled:hover:bg-taupe-600 w-full"
+      data-cart-checkout>
+      <span>Checkout</span>
+      <span>|</span>
+      <span data-cart-total>{{ cart.total_price | money }}</span>
+    </a>
+
+    <a href="{{ routes.cart_url }}"
+      class="flex items-center gap-2 text-center text-sm tracking-wider transition-all uppercase justify-center px-4 py-3 lg:px-10 min-w-40 bg-transparent transition-colors enabled:hover:bg-transparent enabled:hover:text-clubhouse-green-600 w-full">
+      <span class="inline-block font-bold">View cart</span>
+      {% render 'icon', icon: 'chevron-right', size: 'size-5' %}
+    </a>
+  </div>
+
+</div>
+
+{%- comment -%} Backdrop overlay {%- endcomment -%}
+<div class="fixed left-0 top-0 z-[39] h-full w-full overflow-hidden bg-black/50 transition-opacity duration-500 ease-in-out pointer-events-none opacity-0"
+  data-cart-overlay></div>
+
+<script src="{{ 'splide.min.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Cart drawer",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Rebuy API key is configured under Theme settings → Rebuy."
+    },
+    {
+      "type": "collection",
+      "id": "fallback_collection",
+      "label": "Fallback collection",
+      "info": "Shown if Rebuy and Shopify recommendations are both unavailable."
+    }
+  ],
+  "default": {
+    "settings": {}
+  }
+}
+{% endschema %}

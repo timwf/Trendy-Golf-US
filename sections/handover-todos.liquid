@@ -1,0 +1,271 @@
+{%- liquid
+  assign storage_key = 'trendy-handover-todos'
+-%}
+
+<section
+  id="handover-todos-{{ section.id }}"
+  class="page-block bg-transparent lg:mb-28 mb-20"
+  data-handover-todos
+  data-storage-key="{{ storage_key }}"
+>
+  <div class="container-narrow">
+    {%- if section.settings.heading != blank -%}
+      <div class="mb-6 text-center">
+        <h1><span class="font-serif"><span class="text-5xl lg:text-6xl">{{ section.settings.heading }}</span></span></h1>
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.intro != blank -%}
+      <div class="mx-auto mb-10 max-w-2xl text-center text-taupe-700 [&_p:last-of-type]:mb-0">
+        {{ section.settings.intro }}
+      </div>
+    {%- endif -%}
+
+    <div class="mx-auto mb-10 max-w-2xl rounded border border-taupe-300 bg-taupe-100 p-5">
+      <div class="flex items-center justify-between gap-4">
+        <div>
+          <p class="text-sm font-semibold text-clubhouse-green-600">Progress</p>
+          <p class="text-sm text-taupe-700"><span data-handover-progress-done>0</span> of <span data-handover-progress-total>0</span> tasks complete</p>
+        </div>
+        <button
+          type="button"
+          class="text-xs underline text-taupe-700 hover:text-clubhouse-green-600"
+          data-handover-reset
+        >
+          Reset all
+        </button>
+      </div>
+      <div class="mt-3 h-1.5 w-full overflow-hidden rounded bg-taupe-300">
+        <div class="h-full bg-clubhouse-green-600 transition-all" style="width:0%" data-handover-progress-bar></div>
+      </div>
+    </div>
+
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'category' -%}
+        {%- assign cat_slug = block.settings.slug | default: block.settings.title | handleize -%}
+        <div class="mb-14" data-handover-category {{ block.shopify_attributes }}>
+          <h2 class="mb-4 text-3xl lg:text-4xl font-serif">{{ block.settings.title }}</h2>
+
+          {%- if block.settings.loom_id != blank -%}
+            <div class="relative mb-6 aspect-video w-full overflow-hidden rounded border border-taupe-300 bg-taupe-100">
+              <iframe
+                src="https://www.loom.com/embed/{{ block.settings.loom_id }}?hideEmbedTopBar=true"
+                frameborder="0"
+                allow="fullscreen"
+                class="absolute inset-0 h-full w-full"
+                loading="lazy"
+                title="{{ block.settings.title | escape }} walkthrough"
+              ></iframe>
+            </div>
+            <p class="mb-6 text-xs text-taupe-700">
+              Trouble loading? <a href="https://www.loom.com/share/{{ block.settings.loom_id }}" target="_blank" rel="noopener" class="underline hover:text-clubhouse-green-600">Open in Loom</a>
+            </p>
+          {%- endif -%}
+
+          {%- if block.settings.note != blank -%}
+            <div class="mb-6 text-taupe-700 [&_p:last-of-type]:mb-0">
+              {{ block.settings.note }}
+            </div>
+          {%- endif -%}
+
+          {%- if block.settings.action_links != blank -%}
+            {%- assign link_lines = block.settings.action_links | newline_to_br | split: '<br />' -%}
+            <div class="mb-6 flex flex-wrap gap-2">
+              {%- for raw_line in link_lines -%}
+                {%- assign line = raw_line | strip -%}
+                {%- if line != blank and line contains '|' -%}
+                  {%- assign parts = line | split: '|' -%}
+                  {%- assign link_label = parts[0] | strip -%}
+                  {%- assign link_url = parts[1] | strip -%}
+                  {%- if link_label != blank and link_url != blank -%}
+                    <a
+                      href="{{ link_url }}"
+                      target="_blank"
+                      rel="noopener"
+                      class="inline-flex items-center gap-1.5 rounded border border-taupe-400 bg-white px-3 py-1.5 text-xs font-medium text-taupe-900 hover:border-clubhouse-green-600 hover:text-clubhouse-green-600"
+                    >
+                      {{ link_label }}
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="size-3">
+                        <path fill-rule="evenodd" d="M4.25 5.5a.75.75 0 0 0-.75.75v8.5c0 .414.336.75.75.75h8.5a.75.75 0 0 0 .75-.75v-4a.75.75 0 0 1 1.5 0v4A2.25 2.25 0 0 1 12.75 17h-8.5A2.25 2.25 0 0 1 2 14.75v-8.5A2.25 2.25 0 0 1 4.25 4h5a.75.75 0 0 1 0 1.5h-5Z" clip-rule="evenodd"/>
+                        <path fill-rule="evenodd" d="M6.194 12.753a.75.75 0 0 0 1.06.053L16.5 4.44v2.81a.75.75 0 0 0 1.5 0v-4.5a.75.75 0 0 0-.75-.75h-4.5a.75.75 0 0 0 0 1.5h2.553l-9.056 8.194a.75.75 0 0 0-.053 1.06Z" clip-rule="evenodd"/>
+                      </svg>
+                    </a>
+                  {%- endif -%}
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+
+          <ul class="space-y-3">
+            {%- assign tasks = block.settings.tasks | newline_to_br | split: '<br />' -%}
+            {%- for raw_task in tasks -%}
+              {%- assign task = raw_task | strip -%}
+              {%- if task != blank -%}
+                {%- assign task_id = cat_slug | append: '-' | append: forloop.index -%}
+                <li class="flex items-start gap-3">
+                  <input
+                    type="checkbox"
+                    id="task-{{ task_id }}"
+                    data-task-id="{{ task_id }}"
+                    class="mt-1 size-5 flex-none accent-clubhouse-green-600 cursor-pointer"
+                  >
+                  <label for="task-{{ task_id }}" class="cursor-pointer text-base text-taupe-900 data-[checked=true]:text-taupe-500 data-[checked=true]:line-through">
+                    {{ task }}
+                  </label>
+                </li>
+              {%- endif -%}
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</section>
+
+<script>
+  (function () {
+    var section = document.getElementById('handover-todos-{{ section.id }}');
+    if (!section) return;
+
+    var storageKey = section.getAttribute('data-storage-key') || 'trendy-handover-todos';
+    var checkboxes = section.querySelectorAll('input[type="checkbox"][data-task-id]');
+    var doneEl = section.querySelector('[data-handover-progress-done]');
+    var totalEl = section.querySelector('[data-handover-progress-total]');
+    var barEl = section.querySelector('[data-handover-progress-bar]');
+    var resetBtn = section.querySelector('[data-handover-reset]');
+
+    function readState() {
+      try {
+        var raw = window.localStorage.getItem(storageKey);
+        return raw ? JSON.parse(raw) : {};
+      } catch (e) {
+        return {};
+      }
+    }
+
+    function writeState(state) {
+      try {
+        window.localStorage.setItem(storageKey, JSON.stringify(state));
+      } catch (e) {}
+    }
+
+    function updateProgress() {
+      var total = checkboxes.length;
+      var done = 0;
+      checkboxes.forEach(function (cb) { if (cb.checked) done++; });
+      if (doneEl) doneEl.textContent = done;
+      if (totalEl) totalEl.textContent = total;
+      if (barEl) barEl.style.width = total === 0 ? '0%' : Math.round((done / total) * 100) + '%';
+    }
+
+    function syncLabel(cb) {
+      var label = section.querySelector('label[for="' + cb.id + '"]');
+      if (label) label.setAttribute('data-checked', cb.checked ? 'true' : 'false');
+    }
+
+    var state = readState();
+    checkboxes.forEach(function (cb) {
+      var id = cb.getAttribute('data-task-id');
+      if (state[id]) cb.checked = true;
+      syncLabel(cb);
+
+      cb.addEventListener('change', function () {
+        var current = readState();
+        if (cb.checked) {
+          current[id] = true;
+        } else {
+          delete current[id];
+        }
+        writeState(current);
+        syncLabel(cb);
+        updateProgress();
+      });
+    });
+
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () {
+        if (!window.confirm('Clear all ticked tasks? This only affects this browser.')) return;
+        try { window.localStorage.removeItem(storageKey); } catch (e) {}
+        checkboxes.forEach(function (cb) {
+          cb.checked = false;
+          syncLabel(cb);
+        });
+        updateProgress();
+      });
+    }
+
+    updateProgress();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Handover to-dos",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "To Do's"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Intro",
+      "default": "<p>Walk through each Loom, then tick off the tasks below. Ticks are saved in this browser via localStorage — switch browsers or clear site data and progress resets.</p>"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category title",
+          "default": "Category"
+        },
+        {
+          "type": "text",
+          "id": "slug",
+          "label": "Slug (optional)",
+          "info": "Stable ID used for localStorage keys. Defaults to a handle of the title. Change the title freely; change the slug only if you want to reset saved progress for this category."
+        },
+        {
+          "type": "text",
+          "id": "loom_id",
+          "label": "Loom video ID",
+          "info": "The 32-char hex ID from the Loom share URL (e.g. https://www.loom.com/share/THIS_BIT)."
+        },
+        {
+          "type": "richtext",
+          "id": "note",
+          "label": "Context / note"
+        },
+        {
+          "type": "textarea",
+          "id": "action_links",
+          "label": "Admin shortcuts (one per line)",
+          "info": "Format: Label | URL — e.g. 'Pages | https://admin.shopify.com/store/trendy-golf-uk/content/pages'"
+        },
+        {
+          "type": "textarea",
+          "id": "tasks",
+          "label": "Tasks (one per line)",
+          "default": "First task\nSecond task"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Handover to-dos",
+      "blocks": [
+        { "type": "category" }
+      ]
+    }
+  ]
+}
+{% endschema %}

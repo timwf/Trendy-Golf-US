@@ -1,0 +1,90 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "header",
+  "name": "Header group",
+  "sections": {
+    "announcement-bar": {
+      "type": "announcement-bar",
+      "disabled": true,
+      "settings": {
+        "text": "Free UK delivery on orders over £150",
+        "link": "",
+        "link_text": "",
+        "background_color": "#35342f",
+        "text_color": "#ffffff"
+      }
+    },
+    "header": {
+      "type": "header",
+      "blocks": {
+        "mega_menu_image_TyiPwm": {
+          "type": "mega_menu_image",
+          "settings": {
+            "menu_item_title": "Golf Bags & Accessories",
+            "image": "shopify://shop_images/11ce452c-12f8-470e-bf74-5404919a48c0.jpg",
+            "heading": "Golf bags test",
+            "link": "shopify://collections/mens-bags",
+            "link_text": "Shop now"
+          }
+        },
+        "mega_menu_image_wkMG4V": {
+          "type": "mega_menu_image",
+          "settings": {
+            "menu_item_title": "Footwear",
+            "image": "shopify://shop_images/bd99928b-91f7-4d94-88d6-3d6a20a26f0f.jpg",
+            "heading": "",
+            "link": "",
+            "link_text": "Shop now"
+          }
+        },
+        "mega_menu_image_c6yePa": {
+          "type": "mega_menu_image",
+          "settings": {
+            "menu_item_title": "Clothing",
+            "image": "shopify://shop_images/a93bddc8-b651-422c-bf9d-1ae0b9dff95c.jpg",
+            "heading": "",
+            "link": "",
+            "link_text": "Shop now"
+          }
+        },
+        "mega_menu_image_qC4dkC": {
+          "type": "mega_menu_image",
+          "settings": {
+            "menu_item_title": "New In",
+            "image": "shopify://shop_images/770ed1f5-921b-49f1-b4e6-540124c1f744.jpg",
+            "heading": "Heading",
+            "link": "#",
+            "link_text": "Shop now"
+          }
+        }
+      },
+      "block_order": [
+        "mega_menu_image_TyiPwm",
+        "mega_menu_image_wkMG4V",
+        "mega_menu_image_c6yePa",
+        "mega_menu_image_qC4dkC"
+      ],
+      "settings": {
+        "logo": "shopify://shop_images/TRENDYGOLF_2.png",
+        "logo_light": "shopify://shop_images/TRENDYGOLF_UPDATEDLOGO.png",
+        "menu": "main-menu-copy",
+        "transparent_pages": "/, /pages/shoe-finder",
+        "transparent_text_color": "#ffffff",
+        "solid_bg_color": "#f6f5f2",
+        "solid_text_color": "#35342f"
+      }
+    }
+  },
+  "order": [
+    "announcement-bar",
+    "header"
+  ]
+}

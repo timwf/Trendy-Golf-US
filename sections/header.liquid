@@ -1,0 +1,385 @@
+<header
+  class="site-header z-10 h-[64px] lg:h-[74px]"
+  data-header
+>
+  {%- comment -%} Search overlay {%- endcomment -%}
+  <div
+    id="search-overlay"
+    class="absolute left-0 top-0 z-[2] size-full -translate-y-full transition-all duration-500"
+    data-search-overlay
+  >
+    <form class="flex size-full items-center bg-white" action="{{ routes.search_url }}" method="get" role="search">
+      <input type="hidden" name="type" value="product">
+      <div class="container flex items-center justify-between gap-5">
+        <button type="submit" aria-label="{{ 'general.search.submit' | t }}">
+          {% render 'icon', icon: 'magnifying-glass', size: 'size-6' %}
+        </button>
+        <input
+          type="search"
+          name="q"
+          placeholder="{{ 'general.search.placeholder' | t }}"
+          class="flex-1 text-xl focus:outline-none"
+          autocomplete="off"
+          autocorrect="off"
+          autocapitalize="none"
+          spellcheck="false"
+        >
+        <button type="button" data-search-close aria-label="{{ 'general.accessibility.close' | t }}">
+          {% render 'icon', icon: 'x-mark', size: 'size-6' %}
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <div
+    class="header-inner transition-colors h-full duration-300"
+    style="
+      --header-solid-bg: {{ section.settings.solid_bg_color }};
+      --header-solid-text: {{ section.settings.solid_text_color }};
+      --header-transparent-text: {{ section.settings.transparent_text_color }};
+    "
+  >
+    <div class="container-wide mx-auto flex h-full items-center justify-between">
+    {%- comment -%} Left: hamburger + logo {%- endcomment -%}
+    <div class="flex items-center gap-3">
+      <button
+        class="block xl:hidden"
+        data-mobile-nav-open
+        aria-label="{{ 'sections.header.mobile_menu_open' | t }}"
+        aria-expanded="false"
+        aria-controls="mobile-nav"
+      >
+        {% render 'icon', icon: 'bars-3', size: 'size-6 md:size-8' %}
+      </button>
+
+      <a href="{{ routes.root_url }}" class="mr-4 block max-w-[160px] md:max-w-[260px]">
+        {%- if section.settings.logo != blank -%}
+          {%- assign has_light_logo = false -%}
+          {%- if section.settings.logo_light != blank -%}
+            {%- assign has_light_logo = true -%}
+          {%- endif -%}
+          {%- assign dark_logo_class = 'block w-full header-logo--dark' -%}
+          {%- unless has_light_logo -%}
+            {%- assign dark_logo_class = dark_logo_class | append: ' header-logo--force-white' -%}
+          {%- endunless -%}
+          {{ section.settings.logo | image_url: width: 520 | image_tag: class: dark_logo_class, loading: 'lazy', alt: shop.name }}
+          {%- if has_light_logo -%}
+            {{ section.settings.logo_light | image_url: width: 520 | image_tag: class: 'block w-full header-logo--light', loading: 'lazy', alt: shop.name }}
+          {%- endif -%}
+        {%- else -%}
+          <span class="font-serif text-xl font-bold lg:text-2xl">{{ shop.name }}</span>
+        {%- endif -%}
+      </a>
+    </div>
+
+    {%- comment -%} Centre: desktop nav {%- endcomment -%}
+    {%- assign main_menu = section.settings.menu -%}
+    <nav class="hidden items-center justify-between xl:block" aria-label="{{ 'sections.header.main_nav' | t }}">
+      <ul class="flex">
+        {%- for link in main_menu.links -%}
+          {%- assign has_children = false -%}
+          {%- if link.links.size > 0 -%}
+            {%- assign has_children = true -%}
+          {%- endif -%}
+
+          <li class="{% if has_children %}group/grandparent{% endif %}">
+            <a
+              href="{{ link.url }}"
+              class="nav-link transition-colors inline-block border-b border-transparent px-5 py-6 {% if has_children %}group-hover/grandparent:border-clubhouse-green-600 group-hover/grandparent:text-clubhouse-green-600{% else %}hover:text-clubhouse-green-600{% endif %}"
+              {% if link.current %}aria-current="page"{% endif %}
+            >
+              {{ link.title }}
+            </a>
+
+            {%- if has_children -%}
+              {% render 'mega-menu-dropdown', link: link, mega_blocks: section.blocks %}
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+
+    {%- comment -%} Right: utility icons {%- endcomment -%}
+    <div class="flex items-center gap-3 lg:gap-6">
+      <button
+        data-search-open
+        aria-label="{{ 'general.search.title' | t }}"
+        class="hidden md:block"
+      >
+        {% render 'icon', icon: 'magnifying-glass', size: 'size-5' %}
+      </button>
+
+      <a href="/pages/swym-wishlist" aria-label="{{ 'sections.header.wishlist' | t }}" class="block">
+        {% render 'icon', icon: 'heart', size: 'size-5' %}
+      </a>
+
+      <a href="{{ routes.account_url }}" aria-label="{{ 'sections.header.account' | t }}" class="block">
+        {% render 'icon', icon: 'user', size: 'size-5' %}
+      </a>
+
+      <button
+        data-cart-drawer-open
+        aria-label="{{ 'sections.header.cart' | t }}"
+        class="flex items-center gap-1"
+      >
+        {% render 'icon', icon: 'shopping-bag', size: 'size-5' %}
+        <span data-cart-count>{{ cart.item_count }}</span>
+      </button>
+    </div>
+    </div>
+  </div>
+</header>
+
+{%- comment -%} Mobile nav drawer — mirrors `_reference/repo/app/components/sections/offcanvas.tsx` {%- endcomment -%}
+<div
+  class="fixed left-0 top-0 z-50 flex h-[100vh] w-[90%] flex-col overflow-hidden bg-white shadow-md transition-transform duration-500 md:max-w-lg xl:hidden -translate-x-full"
+  aria-label="{{ 'sections.header.mobile_nav' | t }}"
+  data-mobile-nav
+  role="dialog"
+  aria-modal="true"
+>
+  {%- comment -%} Top bar — three mutually exclusive left slots: idle / grandparent-back / parent-back {%- endcomment -%}
+  <div class="h-[64px] w-full shrink-0 border-b border-taupe-300 lg:h-[74px]">
+    <div class="flex h-full items-end items-center justify-between gap-2 px-6">
+      {%- comment -%} Idle slot (empty — FlagSelector deferred per docs/header.md) {%- endcomment -%}
+      <div data-mobile-topbar-idle class="flex-1"></div>
+
+      {%- comment -%} Back to L1 (from an open L2) — JS adds `flex` to show {%- endcomment -%}
+      <button
+        type="button"
+        class="text-clubhouse-green-600 flex-1 items-center hidden"
+        data-mobile-back-grandparent
+        aria-label="{{ 'general.accessibility.back' | t }}"
+      >
+        {% render 'icon', icon: 'chevron-left', size: 'mr-2 size-5 shrink-0' %}
+        <span class="text-left text-lg font-bold" data-mobile-back-grandparent-label></span>
+      </button>
+
+      {%- comment -%} Back to L2 (from an open L3) — JS adds `flex` to show {%- endcomment -%}
+      <button
+        type="button"
+        class="text-clubhouse-green-600 flex-1 items-center hidden"
+        data-mobile-back-parent
+        aria-label="{{ 'general.accessibility.back' | t }}"
+      >
+        {% render 'icon', icon: 'chevron-left', size: 'mr-2 size-5 shrink-0' %}
+        <span class="text-left text-lg font-bold" data-mobile-back-parent-label></span>
+      </button>
+
+      <button
+        type="button"
+        aria-label="{{ 'general.accessibility.close' | t }}"
+        class="shrink-0"
+        data-mobile-nav-close
+      >
+        {% render 'icon', icon: 'x-mark', size: 'size-6' %}
+      </button>
+    </div>
+  </div>
+
+  {%- comment -%} Body {%- endcomment -%}
+  <div class="relative h-full w-full flex-1 bg-white">
+    <ul class="h-full w-full overflow-y-auto py-6 gap-6 flex flex-col">
+      {%- for link in main_menu.links -%}
+        <li>
+          <div class="flex justify-between w-full px-6">
+            <a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>
+              <span><span>{{ link.title }}</span></span>
+            </a>
+            {%- if link.links.size > 0 -%}
+              <button
+                type="button"
+                aria-label="{{ 'sections.header.submenu_open' | t: title: link.title }}"
+                class="flex flex-1 shrink-0 items-center justify-end"
+                data-mobile-open-grandparent="{{ link.title | escape }}"
+              >
+                {% render 'icon', icon: 'chevron-right', size: 'ml-3 size-6' %}
+              </button>
+            {%- endif -%}
+          </div>
+
+          {%- if link.links.size > 0 -%}
+            {%- comment -%} L2 panel — nested inside the L1 <li> {%- endcomment -%}
+            <div
+              class="absolute right-0 top-0 h-full w-[100%] overflow-hidden bg-white transition-transform duration-500 translate-x-full"
+              data-mobile-panel-grandparent="{{ link.title | escape }}"
+            >
+              <ul class="h-full w-full overflow-y-auto py-6 gap-6 flex flex-col">
+                {%- for child_link in link.links -%}
+                  <li>
+                    <div class="flex justify-between w-full px-6">
+                      <a href="{{ child_link.url }}" {% if child_link.current %}aria-current="page"{% endif %}>
+                        <span><span>{{ child_link.title }}</span></span>
+                      </a>
+                      {%- if child_link.links.size > 0 -%}
+                        <button
+                          type="button"
+                          class="flex flex-1 shrink-0 items-center justify-end"
+                          aria-label="{{ 'sections.header.submenu_open' | t: title: child_link.title }}"
+                          data-mobile-open-parent="{{ child_link.title | escape }}"
+                        >
+                          {% render 'icon', icon: 'chevron-right', size: 'ml-3 size-6' %}
+                        </button>
+                      {%- endif -%}
+                    </div>
+
+                    {%- if child_link.links.size > 0 -%}
+                      {%- comment -%} L3 panel — nested inside the L2 <li> {%- endcomment -%}
+                      <div
+                        class="absolute right-0 top-0 h-full w-[100%] overflow-hidden bg-white transition-transform duration-500 translate-x-full"
+                        data-mobile-panel-parent="{{ child_link.title | escape }}"
+                      >
+                        <ul class="h-full w-full overflow-y-auto py-6 gap-6 flex flex-col">
+                          {%- for grandchild_link in child_link.links -%}
+                            <li>
+                              <div class="w-full px-6">
+                                <a href="{{ grandchild_link.url }}" {% if grandchild_link.current %}aria-current="page"{% endif %}>
+                                  <span><span>{{ grandchild_link.title }}</span></span>
+                                </a>
+                              </div>
+                            </li>
+                          {%- endfor -%}
+                        </ul>
+                      </div>
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+
+{%- comment -%} Mobile nav overlay {%- endcomment -%}
+<div
+  class="fixed left-0 top-0 z-[49] h-full w-full overflow-hidden bg-black/50 transition-opacity duration-500 ease-in-out xl:hidden opacity-0 pointer-events-none"
+  data-mobile-nav-overlay
+></div>
+
+{% stylesheet %}
+  /* Default: relative position, solid colors */
+  .site-header { position: relative; }
+  .site-header .header-inner {
+    background-color: var(--header-solid-bg);
+    color: var(--header-solid-text);
+  }
+  .site-header .header-logo--light { display: none; }
+
+  /* Hero page (first section in <main> has [data-hero]) — absolute overlay */
+  body:has(#main-content > .shopify-section:first-child [data-hero]) .site-header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  /* Hero page, not scrolled, not mega-active — transparent state */
+  body:has(#main-content > .shopify-section:first-child [data-hero]) .site-header:not(.header--solid):not(.header--mega-active) .header-inner {
+    background-color: transparent;
+    color: var(--header-transparent-text);
+  }
+
+  /* Hero page transparent — logo swap to light version */
+  body:has(#main-content > .shopify-section:first-child [data-hero]) .site-header:not(.header--solid):not(.header--mega-active) .header-logo--dark:not(.header-logo--force-white) {
+    display: none;
+  }
+  body:has(#main-content > .shopify-section:first-child [data-hero]) .site-header:not(.header--solid):not(.header--mega-active) .header-logo--light {
+    display: block;
+    filter: brightness(0) invert(1);
+  }
+  body:has(#main-content > .shopify-section:first-child [data-hero]) .site-header:not(.header--solid):not(.header--mega-active) .header-logo--dark.header-logo--force-white {
+    filter: brightness(0) invert(1);
+  }
+
+  /* Mega-active nav links match solid text colour */
+  .site-header.header--mega-active .nav-link {
+    color: var(--header-solid-text);
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "class": "header-section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "t:sections.header.settings.logo.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo_light",
+      "label": "Light logo (transparent header)",
+      "info": "White/light version shown on transparent header pages. Falls back to main logo if not set."
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "default": "main-menu",
+      "label": "t:sections.header.settings.menu.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.header_colors.content"
+    },
+    {
+      "type": "color",
+      "id": "transparent_text_color",
+      "default": "#ffffff",
+      "label": "t:sections.header.settings.transparent_text_color.label"
+    },
+    {
+      "type": "color",
+      "id": "solid_bg_color",
+      "default": "#f6f5f2",
+      "label": "t:sections.header.settings.solid_bg_color.label"
+    },
+    {
+      "type": "color",
+      "id": "solid_text_color",
+      "default": "#35342f",
+      "label": "t:sections.header.settings.solid_text_color.label"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "mega_menu_image",
+      "name": "t:sections.header.blocks.mega_menu_image.name",
+      "limit": 10,
+      "settings": [
+        {
+          "type": "text",
+          "id": "menu_item_title",
+          "label": "t:sections.header.blocks.mega_menu_image.settings.menu_item_title.label",
+          "info": "t:sections.header.blocks.mega_menu_image.settings.menu_item_title.info"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.header.blocks.mega_menu_image.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:sections.header.blocks.mega_menu_image.settings.heading.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.header.blocks.mega_menu_image.settings.link.label"
+        },
+        {
+          "type": "text",
+          "id": "link_text",
+          "default": "Shop now",
+          "label": "t:sections.header.blocks.mega_menu_image.settings.link_text.label"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

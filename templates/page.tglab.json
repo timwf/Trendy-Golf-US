@@ -1,0 +1,358 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "tglab-hero": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "Partner with TRENDYGOLF today.",
+            "heading": "TGLAB",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "shopify://shop_images/246fdaffb952618ca81046b371231fafd3daeff1-3840x2160.webp",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 7,
+            "button_label": "",
+            "button_link": "",
+            "button_style": "white"
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "aria_label": "TGLAB hero",
+        "margin_bottom": "large"
+      }
+    },
+    "tglab-intro": {
+      "type": "content-block",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "For over 20 years we have been defining style and fashion in golf",
+            "tag": "h2",
+            "size": "h4",
+            "font": "sans"
+          }
+        },
+        "para_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>TGLab is where brands connect with the team behind TRENDYGOLF. Built as a platform for discovery and collaboration, TGLab invites emerging and established brands to introduce their products to our buying team and explore opportunities to be featured on our site.</p>"
+          }
+        },
+        "para_2": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At TRENDYGOLF, we’re always looking for brands that push golf style and performance forward. From technical apparel and premium footwear to accessories and lifestyle products, we’re interested in partnering with brands that share our passion for modern golf culture, quality design and forward-thinking innovation.</p>"
+          }
+        },
+        "para_3": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Through TGLab, brands can start a conversation with our buyers, showcase their collections and discuss potential retail partnerships. Whether you’re launching something new or expanding into the premium golf market, TGLabs is your gateway to joining the curated selection of brands featured at TRENDYGOLF and reaching a global community of style-conscious golfers.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "para_1",
+        "para_2",
+        "para_3"
+      ],
+      "settings": {
+        "alignment": "center",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "28",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "20",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "tglab-logos": {
+      "type": "logo-marquee",
+      "blocks": {
+        "logo_1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2339386aaef402d3d92ea0c3e5a176da637a0703-250x197.png",
+            "alt_text": "Brand logo",
+            "link": ""
+          }
+        },
+        "logo_2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/d8edcd4db64cd280ad2cbeaf2fc976eca345cfc6-250x197.png",
+            "alt_text": "Brand logo",
+            "link": ""
+          }
+        },
+        "logo_3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/f3b5abf91035c916ce4d79c14356b72840d76ff2-250x197.png",
+            "alt_text": "Brand logo",
+            "link": ""
+          }
+        },
+        "logo_4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ecb05df6180221543032a74ba2eae677195cacbf-250x197.png",
+            "alt_text": "Brand logo",
+            "link": ""
+          }
+        },
+        "logo_9ppWqk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ab6768d7857220c26946bd19931187fb9399a472-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_5": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/f6484db891de92a051c91df38d6f156620e2f2f6-250x197.png",
+            "alt_text": "Brand logo",
+            "link": ""
+          }
+        },
+        "logo_CNMhKC": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/b74dd0281777fe88a5df0d5c937c2ec0e9a41ad3-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_6": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ce84a539967d6286aef22246ac13a86ae4de2836-250x197.png",
+            "alt_text": "Brand logo",
+            "link": ""
+          }
+        },
+        "logo_LGbQnG": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/a7a03645dbc24bcba8a2b03e035d32379771dc37-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_R3C8kt": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/463f6dbcf63a0e24ecb5f7ddfab90f50a5340615-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_KB9pEN": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/b2183877d99ec23dbf9df5854decb80c9f0ec443-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_F4cy8A": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2e8a439018196ba88b60e001b6213d988682a2cb-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_nyqP8i": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/67d0061656688d415c6f616d6cc108e8fa60f3e9-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_kxETxf": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/62765da44c5124eb62154400fa1d02f1e16295f8-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_MmVF3r": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/9499b603f04cfa5f0d2f8f81264a44209cdb3a07-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_NgJEGV": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/4d1c7b3019cb6e16a6b813049be618e19a4550a2-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_NX7zJL": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/8ed63e769c3687292890bdaa2157bb89a6b8c4b3-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_gL67PU": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/57ed57374cff666f3eae132f19d76c0a96eaa81a-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_tpgmR7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/05bd757816a3ee9a116a73f2698170b8e8da0c9d-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_1",
+        "logo_2",
+        "logo_3",
+        "logo_4",
+        "logo_9ppWqk",
+        "logo_5",
+        "logo_CNMhKC",
+        "logo_6",
+        "logo_LGbQnG",
+        "logo_R3C8kt",
+        "logo_KB9pEN",
+        "logo_F4cy8A",
+        "logo_nyqP8i",
+        "logo_kxETxf",
+        "logo_MmVF3r",
+        "logo_NgJEGV",
+        "logo_NX7zJL",
+        "logo_gL67PU",
+        "logo_tpgmR7"
+      ],
+      "settings": {
+        "margin_bottom": "small"
+      }
+    },
+    "tglab-steps": {
+      "type": "icon-grid",
+      "blocks": {
+        "step_1": {
+          "type": "column",
+          "settings": {
+            "icon": "number-01",
+            "title": "Introduce Your Brand",
+            "description": "Share your brand story, product range and vision with the TRENDYGOLF buying team. TGLab helps us discover brands bringing innovation, quality and a fresh perspective to modern golf style.",
+            "link": "",
+            "link_label": "",
+            "show_arrow": false,
+            "show_social_channels": false
+          }
+        },
+        "step_2": {
+          "type": "column",
+          "settings": {
+            "icon": "number-02",
+            "title": "Product & Partnership Review",
+            "description": "Our buying team reviews each submission to assess product quality, design, innovation and overall fit within the TRENDYGOLF brand mix and our audience of style-conscious golfers.",
+            "link": "",
+            "link_label": "",
+            "show_arrow": false,
+            "show_social_channels": false
+          }
+        },
+        "step_3": {
+          "type": "column",
+          "settings": {
+            "icon": "number-03",
+            "title": "Be Part of the Journey",
+            "description": "If there’s strong alignment, we’ll connect to explore listing your products on TRENDYGOLF, giving your brand access to our global audience of golfers looking for premium, modern golf apparel and gear.",
+            "link": "",
+            "link_label": "",
+            "show_arrow": false,
+            "show_social_channels": false
+          }
+        }
+      },
+      "block_order": [
+        "step_1",
+        "step_2",
+        "step_3"
+      ],
+      "settings": {
+        "desktop_columns": "three",
+        "margin_bottom": "none",
+        "enable_animation": true
+      }
+    },
+    "tglab-form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Become A Partner Today",
+        "heading_size": "h3",
+        "heading_font": "serif",
+        "subheading": "Interested in partnering with us? Tell us a little about your brand below and our team will be in touch.",
+        "show_brand": true,
+        "show_phone": true,
+        "show_order_number": false,
+        "submit_label": "Send message",
+        "success_heading": "Thanks for getting in touch!",
+        "success_message": "Our buying team will review your submission and be in touch if there’s a fit.",
+        "success_button_label": "Back to home",
+        "success_button_link": "/",
+        "background_image": "shopify://shop_images/790253f16c6eea100158d252ed49d8948510f6df-3840x2180.webp",
+        "enable_animation": true,
+        "margin_bottom": "none"
+      }
+    }
+  },
+  "order": [
+    "tglab-hero",
+    "tglab-intro",
+    "tglab-logos",
+    "tglab-steps",
+    "tglab-form"
+  ]
+}

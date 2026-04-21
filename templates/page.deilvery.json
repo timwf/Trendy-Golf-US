@@ -1,0 +1,57 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "delivery-body",
+      "settings": {
+        "enable_animation": true
+      }
+    },
+    "help_cta": {
+      "type": "content-block",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "We’re here if you need more help.",
+            "tag": "h2",
+            "size": "h2",
+            "font": "serif"
+          }
+        },
+        "button": {
+          "type": "button",
+          "settings": {
+            "label": "CONTACT US",
+            "link": "/pages/contact",
+            "style": "dark-grey",
+            "has_arrow": true
+          }
+        }
+      },
+      "block_order": ["heading", "button"],
+      "settings": {
+        "alignment": "center",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "14",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "14",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    }
+  },
+  "order": ["main", "help_cta"]
+}

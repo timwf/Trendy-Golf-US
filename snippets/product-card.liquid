@@ -1,0 +1,106 @@
+{% doc %}
+  Renders a product card with image hover swap, colour swatches, and price.
+  Used on collection pages, product carousels, and search results.
+
+  @param {product} product - The product object to display
+  @param {string} [swatches] - Pre-built desktop swatch HTML (from collection template grouping logic)
+  @param {string} [swatches_mobile] - Pre-built mobile swatch HTML (smaller size)
+
+  @example
+  {% render 'product-card', product: product, swatches: swatch_html, swatches_mobile: swatch_mobile_html %}
+{% enddoc %}
+
+{%- liquid
+  assign display_name = product.metafields.custom.product_display_name | default: product.title
+  assign colour_name = product.metafields.custom.color
+  assign primary_image = product.images[0]
+  assign hover_image = product.images[1]
+-%}
+
+<div class="h-full">
+  {%- comment -%} Image container with hover swap and desktop swatches {%- endcomment -%}
+  <div class="group relative mb-4 aspect-[9/12] overflow-hidden md:mb-5">
+    <a class="absolute left-0 top-0 z-[1] block size-full" href="{{ product.url }}">
+      {%- if primary_image -%}
+        {%- if hover_image -%}
+          {%- assign primary_class = 'absolute left-0 top-0 block size-full object-cover md:transition-opacity md:group-hover:opacity-0' -%}
+        {%- else -%}
+          {%- assign primary_class = 'absolute left-0 top-0 block size-full object-cover' -%}
+        {%- endif -%}
+        {{
+          primary_image
+          | image_url: width: 800
+          | image_tag:
+            class: primary_class,
+            sizes: '(min-width: 1680px) 25vw, (min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw',
+            widths: '400, 600, 800',
+            loading: 'lazy',
+            alt: display_name
+        }}
+      {%- endif -%}
+      {%- if hover_image -%}
+        {{
+          hover_image
+          | image_url: width: 800
+          | image_tag:
+            class: 'absolute left-0 top-0 block size-full object-cover',
+            sizes: '(min-width: 1680px) 25vw, (min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw',
+            widths: '400, 600, 800',
+            loading: 'lazy',
+            alt: display_name
+        }}
+      {%- endif -%}
+    </a>
+
+    {%- comment -%} Desktop swatches — slide up on hover {%- endcomment -%}
+    {%- if swatches != blank -%}
+      <div class="absolute bottom-0 left-0 z-[2] hidden w-full translate-y-full flex-wrap justify-center gap-0.5 bg-taupe-300/90 p-2 transition-transform group-hover:translate-y-0 md:flex">
+        {{ swatches }}
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Wishlist button (Swym) {%- endcomment -%}
+    <button
+      class="swym-button swym-add-to-wishlist-view-product product_{{ product.id }}"
+      style="position: absolute !important; right: 14px !important; top: 14px !important; left: auto !important; z-index: 3 !important;"
+      data-swaction="addToWishlist"
+      data-with-epi="true"
+      data-product-id="{{ product.id | json }}"
+      data-variant-id="{{ product.variants.first.id }}"
+      data-product-url="{{ shop.url }}{{ product.url }}"
+      aria-label="Add to wishlist"
+    ></button>
+
+    {%- comment -%} Sold out badge {%- endcomment -%}
+    {%- unless product.available -%}
+      <div class="absolute left-0 top-0 z-[2] bg-taupe-900 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-white">
+        {{ 'products.product.sold_out' | t }}
+      </div>
+    {%- endunless -%}
+  </div>
+
+  {%- comment -%} Product info {%- endcomment -%}
+  <div class="mb-2 flex flex-col gap-1 px-3 text-center">
+    {%- if product.vendor != blank -%}
+      <p class="mb-0 text-xs font-semibold tracking-wider text-taupe-700 md:text-sm">
+        <a href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a>
+      </p>
+    {%- endif -%}
+    <p class="mb-0 text-base">
+      <a href="{{ product.url }}">{{ display_name }}</a>
+    </p>
+    {%- if colour_name != blank -%}
+      <p class="mb-0 text-sm">{{ colour_name }}</p>
+    {%- endif -%}
+  </div>
+
+  {%- comment -%} Mobile swatches — always visible {%- endcomment -%}
+  {%- if swatches_mobile != blank -%}
+    <div class="mb-2 flex flex-wrap items-center justify-center md:hidden">
+      {{ swatches_mobile }}
+    </div>
+  {%- endif -%}
+
+  {%- comment -%} Price {%- endcomment -%}
+  {% render 'price', product: product %}
+</div>

@@ -1,0 +1,276 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/8cbd87d31f2e4b16834cb4745e48dfb5.mp4",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Galvin Green has long been at the forefront of innovative golf apparel, consistently pushing boundaries with cutting-edge technologies and stylish designs that cater to the needs of modern golfers. Their latest release, the Galvin Green PERTEX Collection, marks a significant advancement in waterproof golf clothing, combining style, functionality, and sustainability. In this article, we delve into the standout features of the Galvin Green PERTEX Collection, explore key products available at TRENDYGOLF, and why this collection is a game-changer for golfers seeking performance and protection on the course.</p><h2><strong>Unmatched Waterproof Performance: The PERTEX Advantage</strong></h2><p>The PERTEX fabric technology is the heart of Galvin Green's latest collection, offering unparalleled waterproof performance without compromising breathability or comfort. PERTEX is renowned for its lightweight, durable, and highly water-resistant properties, making it ideal for golf apparel where weather conditions can change in an instant. This fabric is designed to provide:</p><ul><li><strong>Maximum Water Protection</strong>: PERTEX fabrics are engineered to offer exceptional protection from rain and wind, ensuring you stay dry and comfortable, no matter the weather.</li><li><strong>Superior Breathability</strong>: Unlike traditional waterproof materials, PERTEX allows moisture and heat to escape from the inside, preventing overheating and keeping you comfortable during your round.</li><li><strong>Lightweight Design</strong>: The fabric's lightweight nature means you can swing freely without feeling restricted, enhancing your overall performance on the course.</li><li><strong>Eco-Friendly Manufacturing</strong>: Galvin Green's commitment to sustainability is evident in the PERTEX Collection, with materials sourced responsibly and production processes that minimise environmental impact.</li></ul>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_1_81d24272-bd39-4d96-b062-3bde4f8e63c4.png",
+            "link": "shopify://collections/galvin-green-mens-ames",
+            "button_label": "PERTEX COLLECTION"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_2_3f6a5b09-82a1-4f89-a541-e2bcf8a698a6.png",
+            "link": "shopify://collections/galvin-green-mens-ames",
+            "button_label": "PERTEX COLLECTION"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Key Pieces from the Galvin Green PERTEX Collection",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>TRENDYGOLF offers a selection of standout items from the Galvin Green PERTEX Collection, each designed to provide optimal performance and style on the golf course. Below, we highlight some of the must-have pieces from this collection:</p><p><strong>Galvin Green AMES PERTEX Jacket</strong></p><ul><li><strong>Overview</strong>: The AMES PERTEX Jacket is the ultimate blend of style and function. This waterproof and windproof jacket is crafted with PERTEX Shield, offering full protection from the elements while maintaining high breathability.</li><li><strong>Features</strong>:</li><li>Adjustable cuffs and hem for a customised fit.</li><li>Full zip with a storm flap to keep water out.</li><li>Lightweight and packable, perfect for any golfer's bag.</li><li><strong>Why You'll Love It</strong>: With its sleek design and top-tier performance, the AMES PERTEX Jacket keeps you dry and comfortable, allowing you to focus on your game.</li></ul><p><strong>Galvin Green ALAN PERTEX Trousers</strong></p><ul><li><strong>Overview</strong>: Designed to pair perfectly with the AMES Jacket, the ALAN PERTEX Trousers offer unmatched waterproof protection without sacrificing mobility or comfort.</li><li><strong>Features</strong>:</li><li>Elastic waistband with drawstring for a secure fit.</li><li>Articulated knees for improved movement during your swing.</li><li>Zippered leg openings for easy on and off, even with golf shoes.</li><li><strong>Why You'll Love It</strong>: These trousers are ideal for golfers who refuse to let the weather dictate their play. Their lightweight feel and flexibility make them an essential part of any golfer's wardrobe.</li></ul>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "galvin-green-mens-ames",
+        "product_limit": 12,
+        "button_label": "SHOP GALVIN GREEN PERTEX",
+        "button_link": "shopify://collections/galvin-green-mens-ames",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Sustainability at the Core of the PERTEX Collection",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Galvin Green's commitment to sustainability is a key aspect of the PERTEX Collection. Each piece is crafted with eco-friendly materials and processes, aligning with the brand's broader mission to minimise its environmental impact. By using recycled materials and reducing water usage during production, Galvin Green ensures that golfers can look good, feel good, and do good for the planet.</p><h2><strong>Why Choose the Galvin Green PERTEX Collection?</strong></h2><p>Golfers who demand the best in performance and style will find the Galvin Green PERTEX Collection to be an invaluable addition to their golf wardrobe. Here are a few reasons why:</p><ul><li><strong>All-Weather Ready</strong>: With PERTEX technology, you're prepared for anything, from sudden downpours to blustery winds.</li><li><strong>Uncompromising Comfort</strong>: The lightweight, breathable nature of the fabric means you won't feel weighed down, even when fully protected from the elements.</li><li><strong>Stylish Designs</strong>: Galvin Green's sleek, modern aesthetic ensures that you'll look as good as you feel, whether on the course or off.</li><li><strong>Eco-Conscious Choice</strong>: Supporting Galvin Green means supporting sustainable fashion choices, making it easier than ever to play your part in protecting the environment.</li></ul>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/c03ddbb6711448118c38ca507c3db411.mp4",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Final Thoughts: Elevate Your Game with Galvin Green PERTEX",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Galvin Green PERTEX Collection is not just about staying dry; it's about enhancing your overall golfing experience. With superior protection, breathability, and a commitment to sustainability, this collection represents the future of waterproof golf apparel. Explore the full range at TRENDYGOLF to find the perfect PERTEX piece for your game, and experience the difference that top-quality, innovative design can make.</p><p>Embrace the weather with confidence and style—because with Galvin Green, you're always ready to play.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP GALVIN GREEN PERTEX",
+            "link": "shopify://collections/galvin-green-mens-ames",
+            "style": "primary"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_2": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Latest Galvin Green",
+        "collection": "mens-galvin-green",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "promo_1",
+    "text_2",
+    "products_1",
+    "text_3",
+    "hero_2",
+    "text_4",
+    "products_2",
+    "related-articles"
+  ]
+}

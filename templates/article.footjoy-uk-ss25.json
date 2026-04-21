@@ -1,0 +1,475 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "shopify://shop_images/HERO_DESKTOP_7ba0bbe1-ad8a-448c-bb9b-a91383f28009.png",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Golfers, prepare for an exciting fusion of performance and style as FootJoy, the #1 Shoe and Glove in golf, finds a new home at TRENDYGOLF UK. With over a century of innovation, craftsmanship, and a proud heritage unmatched in the golf industry, FootJoy is set to elevate the TRENDYGOLF experience, offering the perfect balance of tradition and modernity.</p><p>Whether you're a seasoned golfer or just beginning your journey, FootJoy's arrival at TRENDYGOLF UK signifies more than just a brand introduction - it's a celebration of history, performance technology, and cutting-edge style for golfers of all ages.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Legacy of FootJoy: Over 100 Years of Excellence",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FootJoy's story began in 1857 when Frederick Packard set out on his own to craft high-quality footwear, departing from his father's boot workshop. However, it wasn't until 1923 that Packard, along with Harvard graduate Perley Flint, laid the foundation for the brand we now know as FootJoy.</p><p>One of the pivotal moments in FootJoy's ascent came in 1927 when Walter Hagen's US Ryder Cup team took to the fairways in FootJoy shoes. The team's success - and the glowing praise from players like Johnny Farrell, who wore the shoes during his 1928 US Open victory - cemented FootJoy's reputation as the premier choice for golfers.</p><p>By 1945, FootJoy had become the #1 Shoe on the PGA Tour, a title it has held unchallenged ever since. This unparalleled dominance reflects the brand's commitment to supporting golfers with footwear that enhances performance, comfort, and style.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-01-17_at_08.59.17.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/SHOP_THE_LOOK_MEDIA_SHOWCASE_a877ac1b-c06b-416b-9379-b63920bea644.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Evolution of Golf Performance Technology",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FootJoy's reputation as a leader in golf-specific technology is rooted in its dedication to helping players maximise their potential on the course. The brand's shoes are meticulously designed to deliver traction, stability, and all-day comfort - essentials for any golfer, whether playing at club level or competing on professional tours.</p><p>FJ's focus on innovation has given rise to iconic footwear franchises such as Classics, DryJoys, DNA, and Pro|SL, all of which have played a key role in the brand's dominance. More recently, lines like Premiere Series and FJ Traditions have won over players who appreciate classic, timeless styles, while athletic designs such as HyperFlex and Quantum cater to modern, performance-driven tastes.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Collaborations That Redefine Golf Style",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One of FootJoy's unique strengths lies in its ability to blend performance technology with trend-setting style. Collaborations with renowned fashion icons such as Jon Buscemi, Todd Snyder, and Garrett Leight have broadened the brand's appeal to a new generation of golfers who value both functionality and aesthetics. Additionally, partnerships with Harris Tweed Hebrides have resulted in limited-edition shoes that pay homage to golf's rich traditions - products as stylish as they are functional, worn by top players at Open Championships.</p><p>These collaborations perfectly complement TRENDYGOLF UK's ethos, which is centred on bringing stylish, fashion-forward golf apparel to players who want to look and feel their best on the course.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/f017391eaddb49bfbcf04d1271d64b77.mp4",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "FootJoy Gloves: A Revolution in Grip and Feel",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FootJoy's contributions to the golf industry extend beyond footwear. Since introducing its first glove in 1979, the brand has set a new standard in performance with its StaSof range, which has been the #1 Glove on Tour since 1983. Designed for superior grip, comfort, and durability, StaSof gloves are trusted by the world's best players.</p><p>FJ's Pure Touch Limited gloves exemplify the brand's commitment to innovation, offering unmatched feel and precision - a hallmark of FootJoy's product philosophy.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_1_24e9631e-e791-4633-a7a4-c2e66c6598a4.png",
+            "link": "shopify://collections/footjoy-mens-golf-gloves",
+            "button_label": "FootJoy Gloves"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/230907_footjoy_wyndham_clark_hamilton_14656.png",
+            "link": "shopify://collections/footjoy-mens-golf-gloves",
+            "button_label": "FootJoy Gloves"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Why FootJoy at TRENDYGOLF UK Is a Game-Changer",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The introduction of FootJoy to TRENDYGOLF UK represents a meeting of two forces that prioritise performance, quality, and style. TRENDYGOLF is renowned for curating premium golf apparel that pushes the boundaries of tradition, appealing to players who want to stand out. Adding FootJoy to its line-up enhances its offering with a brand synonymous with excellence and innovation.</p><p>For golfers, this partnership means access to a carefully curated selection of FootJoy products that combine technical superiority with fashion-forward design. From golf shoes engineered for maximum performance to gloves trusted by professionals, FootJoy's presence at TRENDYGOLF UK will inspire players to bring their best game to the course - both in terms of skill and style.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/20200921_leadership_adam_scott_hamilton_00944.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/GettyImages-1285693303.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_7": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Looking Ahead: A Bright Future for Golf Style and Performance",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>FootJoy's enduring success lies in its ability to balance its rich heritage with forward-thinking innovation. As the brand joins TRENDYGOLF UK, it's clear that both entities are committed to elevating the golf experience for players of all skill levels. Whether you're drawn to FootJoy's storied history, its cutting-edge performance technology, or its stylish collaborations, one thing is certain: FootJoy is here to set a new standard for what golfers can expect on, and off, the course.</p><p>Stay tuned to TRENDYGOLF UK's website and social media channels for product updates. Whether you're looking for timeless classics or modern, trend-driven designs, FootJoy promises to deliver products that inspire confidence and enhance performance.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "collection": "footjoy-mens-golf-shoes-accessories",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "products_2": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "footjoy-mens-golf-gloves",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "products_3": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "shop-premium-footjoy-mens-golf-shoes",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_8": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Perfect Fit for TRENDYGOLF UK",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With its unparalleled legacy, focus on innovation and style that resonates with golfers across generations, FootJoy is a natural fit for TRENDYGOLF UK. As the #1 Shoe and Glove in golf, FootJoy's introduction into the TRENDYGOLF line-up is set to redefine what it means to play and look, your best on the course.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP FOOTJOY",
+            "link": "shopify://collections/footjoy-mens-golf-shoes-accessories",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "text_2",
+    "media_grid_1",
+    "text_3",
+    "text_4",
+    "hero_2",
+    "text_5",
+    "promo_1",
+    "text_6",
+    "media_grid_2",
+    "text_7",
+    "products_1",
+    "products_2",
+    "products_3",
+    "text_8",
+    "related-articles"
+  ]
+}

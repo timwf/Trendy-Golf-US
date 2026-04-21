@@ -1,0 +1,403 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/0ba027b1c76d4eab821ad34d8da6c0d5.mp4",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>It\u2019s time to elevate your wardrobe! Whether you\u2019re hitting the links or simply embracing the casual, cool vibes of the course, the latest Bogey Boys Collection has landed at TRENDYGOLF to offer you top-tier style and performance. Let\u2019s take a deep dive into this fresh, vibrant collection that brings the best of classic golf apparel with a modern twist. From hoodies and polos to the sleekest trousers, this collection is designed for those who want to stand out, both on and off the course.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Essentials Hoodies & Polos: A Stylish Take on Classic Golf Wear",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Hoodies That Redefine Comfort</strong></h3><p>First up, let\u2019s talk hoodies. The Bogey Boys Essentials Hoodies are all about balancing laid-back style with functionality. Constructed with soft, breathable fabrics that keep you cosy without overheating, these hoodies come in dynamic colours like <strong>Bogey Blue</strong> and <strong>Midnight</strong>, making them perfect for those cooler mornings on the green.</p><ul><li><strong>Key Features</strong>:</li><li><em>Material</em>: Blended fabrics for ultimate comfort and breathability</li><li><em>Fit</em>: Tailored for flexibility during your swing, ensuring maximum movement</li><li><em>Colours</em>: Available in bold colours like Bogey Blue and classic neutrals like Midnight and Black</li></ul><p>Pair these hoodies with your favourite golf trousers or even denim for a casual outing after your round. Whether you\u2019re preparing for an early tee time or lounging post-game, these hoodies offer versatility that easily transitions from sporty to streetwear.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_1_e9f15c0a-24c2-4a7d-8784-9195149c7bbb.png",
+            "link": "shopify://collections/mens-bogey-boys-collection",
+            "button_label": "BOGEY BOYS"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_2_5db81f92-0a43-40c6-a269-c79b473ad36f.png",
+            "link": "shopify://collections/mens-bogey-boys-collection",
+            "button_label": "BOGEY BOYS"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Polos Built for Performance</strong></h3><p>Of course, no golf collection is complete without polos, and the Bogey Boys Essentials Polos are a standout. Crafted with a mix of cotton and polyester for moisture-wicking performance, these polos will keep you feeling fresh all day long. The <em>Athletic Polos</em> come in eye-catching hues like <strong>Bogey Blue</strong> and <strong>Eden Green</strong>, ideal for those looking to make a statement while staying cool under pressure.</p><ul><li><strong>Key Features</strong>:</li><li><em>Moisture-wicking technology</em>: Keeps you dry, even on the hottest days</li><li><em>Stretch fabric</em>: Provides the flexibility needed for an unrestricted swing</li><li><em>Design</em>: Vibrant yet sophisticated, perfect for both casual and tournament play</li></ul><p>When you\u2019re looking for that blend of tradition and modern athleticism, these polos should be at the top of your list. The structure and stretch make them a staple for your golf wardrobe, offering functionality without sacrificing style.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_2": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/bogeyboys_1699571260_3232560485937010982_29689336529.png",
+            "link": "shopify://collections/mens-bogey-boys-collection",
+            "button_label": "BOGEY BOYS"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/bogeyboys_1699571260_3232560486062836840_29689336529.png",
+            "link": "shopify://collections/mens-bogey-boys-collection",
+            "button_label": "BOGEY BOYS"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2><strong>The Best Trousers: Versatility for Any Occasion</strong></h2><p>If you\u2019re on the hunt for golf trousers that offer style, comfort, and versatility, look no further than Bogey Boys\u2019 <strong>Best Trousers</strong>. Designed with sleek, clean lines and available in timeless colours like <strong>Midnight</strong> and <strong>Black</strong>, these trousers are your go-to for both the course and everyday wear.</p><p>The Best Trousers are made from a stretchable material that gives you the mobility needed during play, while their sharp aesthetic ensures you\u2019ll look just as good off the course. Whether paired with a polo for a day of golfing or dressed up for an evening out, these trousers are the epitome of versatile golf wear.</p><ul><li><strong>Key Features</strong>:</li><li><em>Stretchable fabric</em>: Maximises comfort and movement</li><li><em>Neutral tones</em>: Easy to pair with any top, making them a wardrobe staple</li><li><em>Multi-use design</em>: Suitable for both golfing and casual settings</li></ul><p>For the golfer who refuses to compromise on style or performance, the Best Trousers are a game-changer. Keep your look crisp while feeling at ease from the first hole to the clubhouse.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "essential-hat-bogey-blue-aw24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "essential-athletic-polo-bogey-blue-aw24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "the-best-trousers-cream-aw24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_MEDIA_SHOWCASE_b25b0bac-20f4-4e2d-beca-bb28bb8da2e9.png",
+        "title": "",
+        "subtext": "Bogey Boys Shop The Look",
+        "btn_text": "BOGEY BOYS SHOP THE LOOK",
+        "btn_link": "shopify://collections/mens-bogey-boys-collection",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2><strong>Script Golf Towels: Where Function Meets Fashion</strong></h2><p>What\u2019s a round of golf without the proper accessories? The <strong>Script Golf Towels</strong> from Bogey Boys are more than just an afterthought \u2013 they\u2019re a statement piece. Made from high-quality materials with excellent absorbency, these towels are perfect for wiping down your clubs, hands, or even your face between swings.</p><p>The bold <strong>Bogey Boys script logo</strong> adds a touch of flair, making these towels the perfect blend of fashion and function. Not only do they perform well, but they also look great hanging from your golf bag.</p><ul><li><strong>Key Features</strong>:</li><li><em>Premium absorbent fabric</em>: Ensures effective moisture control</li><li><em>Logo design</em>: Bold script for a standout look</li><li><em>Practical size</em>: Large enough for utility, but not bulky</li></ul><p>Whether you\u2019re an avid golfer or just appreciate quality accessories, these towels are an essential addition to your gear.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_2": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "script-golf-towel-black-aw24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "script-golf-towel-white-aw24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "stack-logo-driver-head-cover-white-aw24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_MEDIA_SHOWCASE_fcda06f1-8731-4577-ac5d-a2f042bf2bc5.png",
+        "title": "",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2><strong>The BB Range: Golf Apparel with a Retro Flair</strong></h2><p>For those who love to merge performance with style, the <strong>BB Range</strong> from Bogey Boys is the answer. This collection pulls from vintage aesthetics, with designs that echo the 70s and 80s, all while ensuring you stay on top of your game. The range includes everything from retro-inspired polos to stylish outerwear and pants, giving you the confidence to stand out whether you\u2019re on the green or at a social event post-game.</p><ul><li><strong>Key Features</strong>:</li><li><em>Vintage-inspired</em>: Perfect for golfers who love a unique, throwback look</li><li><em>Comprehensive collection</em>: Offers everything from polos and pants to outerwear</li><li><em>Performance-focused</em>: Designed to meet the needs of the modern golfer</li></ul><p>Golfers with a keen sense of fashion will love the BB Range. Not only do the pieces perform well, but they also bring a nostalgic twist to your golf wardrobe.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "collection": "mens-bogey-boys-collection",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_7": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Why Bogey Boys?",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Bogey Boys is not just another golf brand \u2013 it\u2019s a lifestyle. Founded by Macklemore, the brand is known for its blend of bold colours, retro influences, and commitment to high-quality performance fabrics. Whether you\u2019re a seasoned golfer or just starting out, Bogey Boys offers something for everyone.</p><p>From essentials like the <strong>Best Trousers</strong> and <strong>Athletic Polos</strong> to must-have accessories like the <strong>Script Golf Towels</strong>, Bogey Boys is bringing their A-game to the golf fashion scene. Head over to TRENDYGOLF today to explore the full collection and make sure you\u2019re the best-dressed player on and off the course this season.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "text_2",
+    "promo_1",
+    "text_3",
+    "promo_2",
+    "text_4",
+    "shop_the_look_1",
+    "text_5",
+    "shop_the_look_2",
+    "text_6",
+    "products_1",
+    "text_7",
+    "related-articles"
+  ]
+}

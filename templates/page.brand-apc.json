@@ -1,0 +1,97 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "Launching soon…",
+            "heading": "APC",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1165417144",
+            "video_url_mobile": "https://vimeo.com/1164445041",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 20,
+            "button_label": "",
+            "button_link": "",
+            "button_style": "white"
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "aria_label": "Hero slideshow",
+        "margin_bottom": "medium"
+      }
+    },
+    "banner_cards_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/01-card.jpg",
+            "link": "",
+            "button_label": ""
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/02-card.jpg",
+            "link": "",
+            "button_label": ""
+          }
+        },
+        "card_qgjnNQ": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/03-card.jpg",
+            "link": "",
+            "button_label": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_2",
+        "card_3",
+        "card_qgjnNQ"
+      ],
+      "settings": {
+        "layout": "grid",
+        "columns": 3,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "small",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    }
+  },
+  "order": [
+    "hero_1",
+    "banner_cards_1"
+  ]
+}

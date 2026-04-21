@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "handover-todos": {
+      "type": "handover-todos",
+      "blocks": {
+        "cat-brands": {
+          "type": "category",
+          "settings": {
+            "title": "Brands",
+            "slug": "brands",
+            "loom_id": "3626a5e6e5f946dfbd6857143f5cc259",
+            "note": "<p>Covers the brand listing page and individual brand pages (prefixed <em>brand-</em>). Templates have been pre-built — content still needs a review before launch.</p>",
+            "action_links": "Open brand template (customiser) | https://admin.shopify.com/store/trendy-golf-uk/themes/188411871618/editor?template=page.brand-adidas-golf-origina\nPages | https://admin.shopify.com/store/trendy-golf-uk/content/pages\nMeta-objects | https://admin.shopify.com/store/trendy-golf-uk/content/metaobjects",
+            "tasks": "Review all pre-built brand page templates before launch\nVerify existing brand meta-object entries are fully populated (name, alphabet letter, categories, brand image, men's + women's collections, page reference)\nFor each new brand: duplicate an existing brand page template in the customiser (keep the 'brand-' naming convention)\nCreate the new page in Online Store → Pages and assign the new template\nAdd a meta-object entry under 'brand' and reference the new page so it appears on the brands listing"
+          }
+        },
+        "cat-magazine": {
+          "type": "category",
+          "settings": {
+            "title": "Magazine / Blog Posts",
+            "slug": "magazine",
+            "loom_id": "4e8fa52511434e988efe5b660a3030b2",
+            "note": "<p>All blog posts have been migrated from Sanity into Shopify blog post templates. Workflow for publishing new posts is unchanged from the live theme — just styled to match the staging design.</p>",
+            "action_links": "Open article template (customiser) | https://admin.shopify.com/store/trendy-golf-uk/themes/188411871618/editor?template=article.adidas-rolling-links\nBlog posts | https://admin.shopify.com/store/trendy-golf-uk/articles\nBlogs | https://admin.shopify.com/store/trendy-golf-uk/blogs",
+            "tasks": "Review each migrated blog post renders correctly (article template, hero carousel, content blocks, banner cards, feature collection)\nUpdate 'Shop the Look' sections — several reference products that no longer exist on the live site\nVerify tags (brand, clothing, etc.) carried across correctly from the live theme\nConfirm the existing blog author can continue publishing using the same workflow"
+          }
+        },
+        "cat-menu": {
+          "type": "category",
+          "settings": {
+            "title": "Main Menu / Mega Menu",
+            "slug": "menu",
+            "loom_id": "6d72525efb03471ca8b5a27580560ab6",
+            "note": "<p>Using 'Main Menu 2.0' — duplicated from the live site's main menu with Magazine and Shoe Finder added. Mega menu images are matched to parent nav items by title.</p>",
+            "action_links": "Main Menu 2.0 | https://admin.shopify.com/store/trendy-golf-uk/content/menus/310796484994\nAll menus | https://admin.shopify.com/store/trendy-golf-uk/content/menus\nThemes | https://admin.shopify.com/store/trendy-golf-uk/themes",
+            "tasks": "Review Main Menu 2.0 items and nested structure against the live site\nDecide whether the 'Launches' menu item from the staging site should carry through (separate conversation needed)\nReview each mega menu image block — the block title must exactly match the parent nav item title for the image to appear\nAdd headings and links to mega menu images where missing (currently several have no heading / link)"
+          }
+        },
+        "cat-shoe-finder": {
+          "type": "category",
+          "settings": {
+            "title": "Shoe Finder",
+            "slug": "shoe-finder",
+            "loom_id": "b5f3cce669234abd88db90b2c260f525",
+            "note": "<p>Shoe Finder quiz filters a results collection by tag, based on quiz answers. A smart collection can't do OR-across-tags, so the results collection MUST be a manual collection.</p>",
+            "action_links": "Collections | https://admin.shopify.com/store/trendy-golf-uk/collections\nProducts | https://admin.shopify.com/store/trendy-golf-uk/products\nThemes | https://admin.shopify.com/store/trendy-golf-uk/themes",
+            "tasks": "Create a manual collection (e.g. 'Shoe Finder Results') and add every product that can appear as a quiz result\nAssign that collection to the Shoe Finder section → 'Results collection' setting\nSanity-check product tags (men, women, cleated, spikeless, classic, modern) — they were carried from Sanity and should already be correct\nFor each candidate product, ensure the transparent-background PNG metafield is populated (Google Drive URL) so product cards render without a background\nAdd missing images to quiz answer blocks (Q2 spiked / spikeless currently has no images)"
+          }
+        }
+      },
+      "block_order": [
+        "cat-brands",
+        "cat-magazine",
+        "cat-menu",
+        "cat-shoe-finder"
+      ],
+      "settings": {
+        "heading": "To Do's",
+        "intro": "<p>Walk through each Loom, then tick off the tasks below. Ticks are saved in this browser via localStorage — switch browsers or clear site data and progress resets.</p>"
+      }
+    }
+  },
+  "order": [
+    "handover-todos"
+  ]
+}

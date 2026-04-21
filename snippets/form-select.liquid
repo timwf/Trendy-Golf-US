@@ -1,0 +1,48 @@
+{% doc %}
+  Renders a form select with label, chevron, and error handling.
+
+  @param {string} name - Select name attribute (required)
+  @param {string} label - Label text (required)
+  @param {string} options - Pre-rendered <option> tags (e.g. all_country_option_tags)
+  @param {boolean} [required]
+  @param {string} [id] - Defaults to name
+  @param {string} [error]
+  @param {boolean} [hide_label]
+  @param {string} [wrapper_class]
+  @param {string} [select_class] - Additional classes on the select element
+
+  @example
+  {% render 'form-select', name: 'address[country]', label: 'Country', options: all_country_option_tags %}
+{% enddoc %}
+
+{%- liquid
+  assign select_id = id | default: name
+  assign base_select_class = 'block w-full appearance-none border border-taupe-600 bg-taupe-100 px-4 py-3 focus:outline-none'
+  if select_class
+    assign full_select_class = base_select_class | append: ' ' | append: select_class
+  else
+    assign full_select_class = base_select_class
+  endif
+-%}
+
+<div{% if wrapper_class %} class="{{ wrapper_class }}"{% endif %}>
+  <label for="{{ select_id }}" class="mb-2 flex items-end justify-between text-sm{% if hide_label %} sr-only{% endif %}">
+    <span>{{ label }}{% if required %} <span class="text-red-500">*</span>{% endif %}</span>
+  </label>
+  <div class="relative">
+    <select
+      id="{{ select_id }}"
+      name="{{ name }}"
+      class="{{ full_select_class }}"
+      {% if required %}required{% endif %}
+    >
+      {{ options }}
+    </select>
+    <div class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+      {% render 'icon', icon: 'chevron-down', size: 'size-4' %}
+    </div>
+  </div>
+  {% if error %}
+    <p class="mb-0 pt-1 text-xs italic text-red-600">{{ error }}</p>
+  {% endif %}
+</div>

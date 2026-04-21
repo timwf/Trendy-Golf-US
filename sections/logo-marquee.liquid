@@ -1,0 +1,176 @@
+{%- liquid
+  case section.settings.margin_bottom
+    when 'none'
+      assign margin_class = ''
+    when 'small'
+      assign margin_class = 'mb-8'
+    when 'medium'
+      assign margin_class = 'mb-8 lg:mb-14'
+    when 'large'
+      assign margin_class = 'mb-14 lg:mb-20'
+  endcase
+
+  assign block_count = section.blocks.size
+  assign min_items = 10
+  if block_count > 0
+    assign repeat_count = min_items | divided_by: block_count | plus: 1
+  endif
+
+  comment
+    Duration calc: ~300px per logo (image + margins), 80px/s speed
+    duration = (block_count * repeat_count * 300) / 80
+  endcomment
+  assign items_per_set = block_count | times: repeat_count
+  assign total_width = items_per_set | times: 300
+  assign duration = total_width | divided_by: 80
+-%}
+
+{%- if block_count > 0 -%}
+<style>
+  .logo-marquee {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+  }
+  .logo-marquee__track {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    min-width: 100%;
+    animation: logo-marquee-scroll var(--marquee-duration, 30s) linear infinite;
+  }
+  @keyframes logo-marquee-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  .logo-marquee__item {
+    flex: 0 0 auto;
+    display: block;
+    max-width: 10rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  .logo-marquee__img {
+    max-height: 100%;
+    width: auto;
+    display: block;
+  }
+  .logo-marquee__img.placeholder-svg {
+    width: 100%;
+    height: auto;
+  }
+  @media (min-width: 1024px) {
+    .logo-marquee__item {
+      max-width: 250px;
+    }
+  }
+</style>
+<section class="logo-marquee-section relative {{ margin_class }}" id="logo-marquee-{{ section.id }}">
+  <div class="container-wide !px-0">
+    <div class="logo-marquee" style="--marquee-duration: {{ duration }}s;">
+      <div class="logo-marquee__track">
+        {%- for i in (1..repeat_count) -%}
+          {%- for block in section.blocks -%}
+            {%- if block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}" class="logo-marquee__item" {{ block.shopify_attributes }}>
+            {%- else -%}
+              <div class="logo-marquee__item" {{ block.shopify_attributes }}>
+            {%- endif -%}
+
+              {%- if block.settings.image != blank -%}
+                {{ block.settings.image | image_url: width: 250 | image_tag: class: 'logo-marquee__img', loading: 'lazy', alt: block.settings.alt_text }}
+              {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'logo-marquee__img placeholder-svg' }}
+              {%- endif -%}
+
+            {%- if block.settings.link != blank -%}
+              </a>
+            {%- else -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endfor -%}
+      </div>
+      <div class="logo-marquee__track" aria-hidden="true">
+        {%- for i in (1..repeat_count) -%}
+          {%- for block in section.blocks -%}
+            {%- if block.settings.link != blank -%}
+              <a href="{{ block.settings.link }}" class="logo-marquee__item" tabindex="-1">
+            {%- else -%}
+              <div class="logo-marquee__item">
+            {%- endif -%}
+
+              {%- if block.settings.image != blank -%}
+                {{ block.settings.image | image_url: width: 250 | image_tag: class: 'logo-marquee__img', loading: 'lazy', alt: block.settings.alt_text }}
+              {%- else -%}
+                {{ 'image' | placeholder_svg_tag: 'logo-marquee__img placeholder-svg' }}
+              {%- endif -%}
+
+            {%- if block.settings.link != blank -%}
+              </a>
+            {%- else -%}
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Logo Marquee",
+  "settings": [
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Bottom margin",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "small"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Logo image"
+        },
+        {
+          "type": "text",
+          "id": "alt_text",
+          "label": "Alt text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Logo Marquee",
+      "blocks": [
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" },
+        { "type": "logo" }
+      ]
+    }
+  ]
+}
+{% endschema %}

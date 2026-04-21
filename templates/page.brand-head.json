@@ -1,0 +1,128 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "Explore our range from Head.",
+            "heading": "Head",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1163702339",
+            "video_url_mobile": "https://vimeo.com/1164050600",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 5,
+            "button_label": "",
+            "button_link": "",
+            "button_style": "white"
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "aria_label": "Hero slideshow",
+        "margin_bottom": "medium"
+      }
+    },
+    "product_carousel_1": {
+      "type": "product-carousel-tabs",
+      "settings": {
+        "title": "New In Head",
+        "tab_1_label": "Polos",
+        "tab_1_products": [
+          "course-polo-woodland",
+          "lightweight-polo-yellow",
+          "hybrid-fleece-mid-layer-olive",
+          "logo-t-shirt-white",
+          "ranger-shooter-ss-shirt-pine-green"
+        ],
+        "tab_2_label": "Jackets & Mid-Layers",
+        "tab_2_products": [
+          "hybrid-fleece-mid-layer-olive",
+          "course-quarter-zip-mid-layer-sand",
+          "gailes-windbreaker-jacket-dune",
+          "x-reebok-organic-course-pullover-atlantic-blue",
+          "ranger-shooter-ss-shirt-dune"
+        ],
+        "tab_3_label": "Trousers",
+        "tab_3_products": [
+          "track-bottom-greige",
+          "greenskeeper-chino-shorts-olive",
+          "x-reebok-straight-leg-trousers-birch",
+          "flattering-high-waist-trousers-black",
+          "lightweight-course-trousers-green"
+        ]
+      }
+    },
+    "banner_cards_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "Shop All",
+            "image": "shopify://shop_images/01-shop-all_13def5b2-476c-484d-8f3e-4236849c247a.jpg",
+            "link": "/collections/head-clothing-accessories",
+            "button_label": "Shop Now"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "Tops",
+            "image": "shopify://shop_images/02-tops.jpg",
+            "link": "",
+            "button_label": "Shop Now"
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "heading": "Outerwear",
+            "image": "shopify://shop_images/03-outerwear.jpg",
+            "link": "",
+            "button_label": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
+      "settings": {
+        "layout": "grid",
+        "columns": 3,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "small",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    }
+  },
+  "order": [
+    "hero_1",
+    "product_carousel_1",
+    "banner_cards_1"
+  ]
+}

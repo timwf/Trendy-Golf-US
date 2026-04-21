@@ -1,0 +1,141 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "shopify://shop_images/TRENDY_MAG_HERO.jpg",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "From Course to Street: The New Language of Sport Style",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>There was a time when golf attire stayed on the course. When tennis whites belonged solely to the court, and activewear meant post-game comfort. Those rules no longer apply. Today, sport style has evolved into a refined uniform: sharp enough for the street, effortless enough for play, and versatile enough to carry you through both.</p><p>This season's silhouettes prove the point. The pleated skirt, once a strictly athletic staple, is now a statement piece for city dressing. Paired with a striped knit cardigan and sleek trainers, it channels vintage sport heritage with an urban polish. Similarly, the tailored skort, worn with loafers and a shoulder bag, speaks both languages: crisp enough for a round, chic enough for a late-afternoon espresso in SoHo.</p><p>Layering also takes on new meaning. A mesh quarter-zip with striped trim, styled with clean white shorts and loafers, feels nostalgic yet thoroughly modern. Oversized sweatshirts nod to collegiate sport while pairing effortlessly with running shorts or pleated minis, bridging performance and play. Even active sets, whether in animal print or muted earth tones, step confidently into the lifestyle arena when styled with structured bags and oversized sunglasses.</p><p>The effect is quiet confidence. Elevated sport staples that no longer require compartmentalizing—outfits that work as fluidly as your day does. Mornings that begin with movement, afternoons spent crossing cobblestone streets, evenings that end over dinner with friends. The wardrobe stays the same.</p><p>This is the redefinition of performance style: polished, versatile, and unbound by setting. It's less about dressing for an occasion, and more about dressing with ease for every occasion.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4.jpg"
+          }
+        },
+        "image_5": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2.jpg"
+          }
+        },
+        "image_6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3.jpg"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4", "image_5", "image_6"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "NEW ARRIVALS",
+        "collection": "womens-new-in",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/womens-new-in",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "media_grid_1", "products_1", "related-articles"]
+}

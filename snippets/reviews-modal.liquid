@@ -1,0 +1,73 @@
+{%- comment -%}
+  Reviews modal — Lipscore API, custom UI matching reviewsModal.tsx from repo
+  Populated by JS in sections/product-template.liquid
+{%- endcomment -%}
+
+<div
+  data-reviews-modal
+  class="relative inset-0 z-50 hidden"
+  role="dialog"
+  aria-modal="true"
+  aria-label="Product reviews"
+>
+  <div data-reviews-backdrop class="fixed inset-0 bg-black/50 transition-opacity duration-300 ease-out"></div>
+
+  <div class="fixed inset-0 flex w-screen items-center overflow-y-auto p-4 [&_>_div]:w-full">
+    <div data-reviews-panel class="relative mx-auto max-w-4xl bg-taupe-100 p-12 transition duration-300 ease-out">
+      <button
+        type="button"
+        data-reviews-close
+        class="fixed right-0 top-0 z-20 flex size-10 items-center justify-center bg-white text-neutral-900 md:absolute"
+        aria-label="Close reviews"
+      >
+        {%- render 'icon', icon: 'x-mark-solid', icon_class: 'size-6' -%}
+      </button>
+
+      {%- comment -%} Header: stars + count + average {%- endcomment -%}
+      <div class="mb-8">
+        <div class="mb-5 flex items-center justify-center">
+          <div class="flex items-center" data-reviews-header-stars></div>
+          <span class="text-sm">&nbsp;(<span data-reviews-header-count></span>)</span>
+        </div>
+        <h2 class="mb-0 text-center font-serif text-3xl lg:text-4xl"><span data-reviews-header-avg></span> / 5</h2>
+      </div>
+
+      {%- comment -%} Loader {%- endcomment -%}
+      <div data-reviews-loader class="hidden py-10 text-center">
+        <svg class="mx-auto size-8 animate-spin text-taupe-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+        </svg>
+      </div>
+
+      {%- comment -%} Reviews list {%- endcomment -%}
+      <ul data-reviews-list class="hidden flex-col gap-6"></ul>
+
+      {%- comment -%} Empty state — shown when product has ratings but no written reviews {%- endcomment -%}
+      <p data-reviews-empty class="mb-0 hidden text-center text-taupe-700">No written reviews yet — only star ratings. Be the first to leave a review.</p>
+
+      {%- comment -%} Pagination {%- endcomment -%}
+      <div data-reviews-pagination class="mt-4 hidden items-center justify-between text-sm text-taupe-700">
+        <div>Page <span data-reviews-current-page>1</span> of <span data-reviews-total-pages>1</span></div>
+        <div class="flex justify-center gap-2">
+          <button
+            type="button"
+            data-reviews-prev
+            class="bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50"
+            aria-label="Previous page"
+          >
+            {%- render 'icon', icon: 'chevron-left', icon_class: 'size-6' -%}
+          </button>
+          <button
+            type="button"
+            data-reviews-next
+            class="bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50"
+            aria-label="Next page"
+          >
+            {%- render 'icon', icon: 'chevron-right', icon_class: 'size-6' -%}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

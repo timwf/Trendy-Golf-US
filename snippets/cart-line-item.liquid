@@ -1,0 +1,86 @@
+{% doc %}
+  Renders a single cart line item with image, title, variant, quantity picker, price, and remove button.
+
+  @param {line_item} item - The cart line item object
+
+  @example
+  {% render 'cart-line-item', item: line_item %}
+{% enddoc %}
+
+<div class="relative flex gap-4 transition-opacity" data-line-key="{{ item.key }}">
+  {%- comment -%} Loading overlay — shown during AJAX mutations {%- endcomment -%}
+  <div class="absolute left-1/2 top-1/2 z-[1] -translate-x-1/2 -translate-y-1/2 hidden" data-line-spinner="{{ item.key }}">
+    <svg class="animate-spin text-neutral-700 size-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
+  </div>
+
+  {%- comment -%} Product image {%- endcomment -%}
+  <div>
+    <a href="{{ item.product.url }}">
+      {%- if item.image -%}
+        <img src="{{ item.image | image_url: width: 160 }}"
+          alt="{{ item.image.alt | escape }}"
+          class="h-28 w-20 object-cover"
+          width="80"
+          height="112"
+          loading="lazy" />
+      {%- else -%}
+        <div class="h-28 w-20 bg-taupe-300"></div>
+      {%- endif -%}
+    </a>
+  </div>
+
+  {%- comment -%} Content {%- endcomment -%}
+  <div class="flex flex-1 flex-col">
+    {%- comment -%} Title + variant + remove {%- endcomment -%}
+    <div class="flex justify-between gap-2">
+      <div>
+        <p class="mb-1 font-semibold">
+          <a href="{{ item.product.url }}">{{ item.product.title }}</a>
+        </p>
+        {%- unless item.variant.title == 'Default Title' -%}
+          <p class="mb-2 text-xs">{{ item.variant.title }}</p>
+        {%- endunless -%}
+        {%- comment -%} Line item properties (hide private _ prefixed) {%- endcomment -%}
+        {%- unless item.properties == empty -%}
+          {%- for property in item.properties -%}
+            {%- assign first_char = property.first | slice: 0 -%}
+            {%- unless property.last == blank or first_char == '_' -%}
+              <p class="text-xs text-taupe-600">
+                {{ property.first }}:
+                {% if property.last contains '/uploads/' %}
+                  <a href="{{ property.last }}" class="underline">{{ property.last | split: '/' | last }}</a>
+                {% else %}
+                  {{ property.last }}
+                {% endif %}
+              </p>
+            {%- endunless -%}
+          {%- endfor -%}
+        {%- endunless -%}
+      </div>
+      <div>
+        <button type="button" data-line-remove="{{ item.key }}" aria-label="{{ 'cart.general.remove' | t | default: 'Remove' }} {{ item.product.title }}">
+          {% render 'icon', icon: 'trash', size: 'size-4', class: 'text-taupe-900 hover:text-taupe-700' %}
+        </button>
+      </div>
+    </div>
+
+    {%- comment -%} Quantity + price {%- endcomment -%}
+    <div class="mt-auto flex items-end justify-between pt-4">
+      <div>
+        {% render 'quantity-picker', line_key: item.key, quantity: item.quantity %}
+      </div>
+      <div class="flex flex-col items-end justify-end gap-0.5">
+        {%- if item.original_line_price != item.final_line_price -%}
+          <span class="mb-0 text-xs text-taupe-700 line-through">{{ item.original_line_price | money }}</span>
+        {%- endif -%}
+        <span class="mb-0 font-semibold">{{ item.final_line_price | money }}</span>
+        {%- if item.final_price != item.final_line_price -%}
+          <span class="mb-0 text-xs text-taupe-600">{{ item.final_price | money }} each</span>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+</div>

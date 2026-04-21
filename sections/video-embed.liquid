@@ -1,0 +1,156 @@
+{%- liquid
+  assign enable_animation = section.settings.enable_animation
+
+  case section.settings.margin_bottom
+    when 'none'
+      assign margin_class = ''
+    when 'small'
+      assign margin_class = 'mb-8'
+    when 'medium'
+      assign margin_class = 'mb-8 lg:mb-14'
+    when 'large'
+      assign margin_class = 'mb-14 lg:mb-20'
+  endcase
+-%}
+
+<section class="video-embed-section relative {{ margin_class }}" id="video-embed-{{ section.id }}">
+  <div class="container-wide">
+    {%- if section.settings.embed != blank -%}
+      <div class="relative aspect-video overflow-hidden{% if enable_animation %} opacity-0 translate-y-8 transition-all duration-700 ease{% endif %}"
+           data-inview="false"
+           data-video-embed>
+
+        {%- comment -%} Poster image + play button — replaced by iframe on click {%- endcomment -%}
+        {%- if section.settings.image != blank -%}
+          <button type="button" data-video-play class="absolute inset-0 z-10 w-full h-full cursor-pointer border-0 p-0 bg-transparent group">
+            <img
+              src="{{ section.settings.image | image_url: width: 1200 }}"
+              srcset="{{ section.settings.image | image_url: width: 600 }} 600w,
+                      {{ section.settings.image | image_url: width: 900 }} 900w,
+                      {{ section.settings.image | image_url: width: 1200 }} 1200w"
+              sizes="(min-width: 768px) 720px, 100vw"
+              alt="{{ section.settings.image.alt | escape | default: 'Video poster' }}"
+              width="{{ section.settings.image.width }}"
+              height="{{ section.settings.image.height }}"
+              loading="lazy"
+              class="w-full h-full object-cover"
+            >
+            <span class="absolute inset-0 flex items-center justify-center">
+              <span class="flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 bg-white/90 group-hover:bg-white transition-colors">
+                <svg class="w-6 h-6 lg:w-8 lg:h-8 text-taupe-900 ml-1" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </span>
+            </span>
+          </button>
+        {%- endif -%}
+
+        {%- comment -%} Iframe — shown immediately if no poster, or after play click {%- endcomment -%}
+        {%- liquid
+          if section.settings.embed.type == 'youtube'
+            assign video_src = 'https://www.youtube.com/embed/' | append: section.settings.embed.id
+          elsif section.settings.embed.type == 'vimeo'
+            assign video_src = 'https://player.vimeo.com/video/' | append: section.settings.embed.id
+          endif
+        -%}
+        <iframe
+          data-video-iframe
+          src="{{ video_src }}"
+          class="absolute inset-0 w-full h-full{% if section.settings.image != blank %} hidden{% endif %}"
+          frameborder="0"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+          loading="lazy"
+          title="Video"
+        ></iframe>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+<script>
+  (function () {
+    var section = document.getElementById('video-embed-{{ section.id }}');
+    if (!section) return;
+
+    /* Animation */
+    var enableAnimation = {{ enable_animation | json }};
+    if (enableAnimation) {
+      var wrapper = section.querySelector('[data-inview]');
+      if (wrapper) {
+        var observer = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.setAttribute('data-inview', 'true');
+                entry.target.classList.remove('opacity-0', 'translate-y-8');
+                entry.target.classList.add('opacity-100', 'translate-y-0');
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.15, rootMargin: '0px 0px -10%' }
+        );
+        observer.observe(wrapper);
+      }
+    }
+
+    /* Play button — swap poster for iframe with autoplay */
+    var playBtn = section.querySelector('[data-video-play]');
+    var iframe = section.querySelector('[data-video-iframe]');
+    if (playBtn && iframe) {
+      playBtn.addEventListener('click', function () {
+        var src = iframe.getAttribute('src');
+        iframe.setAttribute('src', src + (src.indexOf('?') > -1 ? '&' : '?') + 'autoplay=1');
+        iframe.classList.remove('hidden');
+        playBtn.remove();
+      });
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Video Embed",
+  "tag": "section",
+  "class": "video-embed-section",
+  "settings": [
+    {
+      "type": "video_url",
+      "id": "embed",
+      "label": "Video URL",
+      "accept": ["youtube", "vimeo"],
+      "info": "Paste a YouTube or Vimeo URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Poster image",
+      "info": "Shown before video plays. If empty, the video iframe loads immediately."
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Bottom margin",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_animation",
+      "label": "Enable animation",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video Embed"
+    }
+  ]
+}
+{% endschema %}

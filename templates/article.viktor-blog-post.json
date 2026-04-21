@@ -1,0 +1,128 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The world of golf has witnessed some truly remarkable talents over the years, each leaving their indelible mark on the sport. In recent times, one name that has been making waves is Viktor Hovland. Known for his impeccable skills on the green and his distinctive style, Hovland has managed to achieve something that many golfers can only dream of \u2013 winning back-to-back titles on the prestigious PGA Tour.</p><p><em><strong>Unveiling the Back-to-Back Triumphs</strong></em></p><p>Viktor Hovland's remarkable journey to back-to-back victories on the PGA Tour is a testament to his dedication, skill, and relentless pursuit of excellence. The first win came at the highly competitive BMW Championship, where Hovland's performance left both fans and experts in awe. His flawless technique and unwavering focus allowed him to navigate the challenging course with finesse, ultimately claiming victory by 2 strokes.</p><p>Barely pausing to savour his initial triumph, Hovland then went on to conquer the Tour Championship, securing his second consecutive victory. The victory showcased his mental resilience as he held his nerve through the tense final holes, ultimately finishing at 27 under to claim the title once again. These consecutive wins not only solidified Hovland's position as a force to be reckoned with in the golfing world but also ignited discussions about his potential to become one of the sport's legendary figures.</p><p><em><strong>The Signature Style: J.Lindeberg</strong></em></p><p>While Viktor Hovland's golfing prowess has taken centre stage, his unique style has also caught the attention of fans and fashion enthusiasts alike. Hovland is often seen sporting the sleek and contemporary designs of J.Lindeberg, a brand that perfectly complements his youthful energy and modern approach to the game.</p><p>J.Lindeberg's distinctive aesthetics, characterised by clean lines, bold colours, and innovative materials, align seamlessly with Hovland's persona. Whether he's strolling down the fairway or celebrating a birdie putt, Hovland's attire exudes confidence and sophistication. His choice of J.Lindeberg not only reflects his fashion-forward mindset but also underscores his commitment to excellence in all aspects of his career.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "VIKTOR HOVLAND'S STYLE",
+        "collection": "mens-jlindeberg",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-jlindeberg",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em><strong>Beyond the Green</strong></em></p><p>Viktor Hovland's success story extends far beyond his back-to-back victories and his impeccable style. His journey is a testament to the power of perseverance, hard work, and unwavering determination. From his collegiate years to his rise in the professional circuit, Hovland's dedication to honing his skills has been nothing short of inspiring.</p><p>Hovland's success has also sparked interest among young and aspiring golfers, motivating them to pursue their dreams with unyielding passion. His relatable demeanor and down-to-earth attitude make him an approachable role model for those looking to make their mark in the world of golf.</p><p>Viktor Hovland's back-to-back triumphs on the PGA Tour have etched his name into golfing history. His victories not only highlight his exceptional skill on the course but also underscore his commitment to pushing the boundaries of his potential. With his signature style by J.Lindeberg adding a touch of modernity to the traditional sport, Hovland is redefining what it means to be a successful golfer in the 21st century. As he continues to evolve and make his presence felt, one thing is certain \u2013 Viktor Hovland is a name that will be synonymous with excellence for years to come.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "product_overview_1": {
+      "type": "product-overview",
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_vh_bmw.jpg",
+        "mobile_image": "shopify://shop_images/SHOP_THE_LOOK_vh_bmw.jpg",
+        "title": "Worn By Viktor Hovland",
+        "intro": "<p>The Norwegian golf sensation's apparel takes on a whole new dimension. Hovland's fashion sense is a blend of understated elegance and practicality, reflecting his commitment to both style and performance on the golf course. Known for his preference for classic colours like grey and black, he defies the typical golfer's penchant for vibrant attire. However, what sets Hovland apart is his association with J.Lindeberg, a brand that not only provides him with distinctive clothing but also compensates him for showcasing their designs. This partnership showcases the seamless harmony between athlete and apparel, where function meets fashion, all while delivering a compelling and straightforward narrative that adds to Hovland's aura both on and off the golf course.</p>",
+        "product": "kv-regular-fit-print-polo-death-valley-multicolour-aw23",
+        "button_text": "Shop Now",
+        "button_url": "shopify://collections/mens-jlindeberg",
+        "margin_bottom": "medium"
+      }
+    },
+    "products_2": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Worn by Viktor Hovland",
+        "collection": "j-lindeberg-viktor-hovlands-polo-shirts",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "text_1",
+    "products_1",
+    "text_2",
+    "product_overview_1",
+    "products_2",
+    "related-articles"
+  ]
+}

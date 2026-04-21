@@ -1,0 +1,108 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide-1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "",
+            "heading": "Brands",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1164444995",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 7,
+            "button_label": "",
+            "button_link": "",
+            "button_style": "white"
+          }
+        }
+      },
+      "block_order": [
+        "slide-1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "aria_label": "Brands hero",
+        "margin_bottom": "medium"
+      }
+    },
+    "feature-cards": {
+      "type": "banner-cards",
+      "blocks": {
+        "card-1": {
+          "type": "card",
+          "settings": {
+            "heading": "New In Puma",
+            "image": "shopify://shop_images/trendy-brands-feature-puma.jpg",
+            "link": "shopify://pages/brand-puma",
+            "button_label": "Shop Now"
+          }
+        },
+        "card-2": {
+          "type": "card",
+          "settings": {
+            "heading": "New Nike Golf",
+            "image": "shopify://shop_images/trendy-brands-feature-nike.jpg",
+            "link": "shopify://pages/brand-nike",
+            "button_label": "Shop Now"
+          }
+        },
+        "card-3": {
+          "type": "card",
+          "settings": {
+            "heading": "J.LINDEBERG Collection",
+            "image": "shopify://shop_images/trendy-brands-feature-puma.jpg",
+            "link": "shopify://pages/brand-jlindeberg",
+            "button_label": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "card-1",
+        "card-2",
+        "card-3"
+      ],
+      "settings": {
+        "layout": "grid",
+        "columns": 3,
+        "aspect_ratio": "3:4",
+        "heading_tag": "h3",
+        "heading_size": "small",
+        "margin_bottom": "large",
+        "enable_animation": true
+      }
+    },
+    "brand-listing": {
+      "type": "brand-listing",
+      "settings": {
+        "heading": "All Brands",
+        "description": "<p>Whether you're searching for a new polo shirt, mid-layer, knitwear option or something else, we've got you covered. You'll find pieces worn on tour by some of your favourite athletes as well as the very best fashion pieces which work on and off the course.</p>",
+        "show_alphabet_tabs": true,
+        "show_search": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "feature-cards",
+    "brand-listing"
+  ]
+}

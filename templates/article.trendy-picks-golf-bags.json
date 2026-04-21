@@ -1,0 +1,458 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article_template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/HERO_DESKTOP_98f30285-b454-4ecb-af5a-486edffd848e.jpg",
+            "mobile_image": "shopify://shop_images/HERO_mobile_3053b4e9-6b28-4f09-ab8f-a9e734b32d23.jpg",
+            "media_type": "image",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Are you searching for the perfect golf bag that seamlessly blends style, functionality, and durability? Look no further than TRENDYGOLF, where an array of top brands awaits to elevate your golfing experience. Delve into the latest offerings from some of the most renowned names in the industry, including Jones Golf Bags, G/FORE, J.Lindeberg, and RLX Ralph Lauren.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Jones Golf Bags: Timeless Elegance Meets Modern Innovation",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Original Jones Carry Bag</em></p><p>Step onto the course in style with the iconic Original Jones Carry Bag. Since 1971, Jones has been synonymous with quality and tradition. Crafted from water-resistant nylon and featuring a retro single strap, this bag effortlessly combines classic aesthetics with contemporary materials.</p><p><em>Utility Rover Carry Bag</em></p><p>For golfers seeking versatility and ample storage space, the Utility Rover Carry Bag is the perfect choice. With options for both single and double straps, along with a range of pockets - including an insulated beverage pouch, this bag caters to every golfer\u2019s needs.</p><p><em>Classic Stand Bag</em></p><p>The Classic Stand Bag reimagines the timeless design of the 80s and 90s, blending tradition with modern materials. With its symmetrical pocket layout and sturdy stand system, this bag offers both style and functionality on the course.</p><p><em>Utility Trouper Stand Bag</em></p><p>Environmentally conscious golfers will appreciate the Utility Trouper Stand Bag, crafted from recycled materials. Its rugged yet stylish design, combined with features like a quick-draw cinch closure and spacious apparel pocket, make it a standout choice for the modern player.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP JONES GOLF BAGS",
+            "link": "https://trendygolf.com/collections/mens-nike?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Lightweight+Jackets&filter.p.product_type=Mid+Layers",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "original-jones-single-strap-carry-bag-green-camo-2024"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "utility-rover-bag-navy-herringbone-2023"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "classic-stand-bag-black-pinstripe-2023"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "utility-trouper-r-stand-bag-white-2023"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_jones.jpg",
+        "title": "",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "G/FORE: Where Sophistication Meets Performance",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p><em>Daytona Plus Carry Bag</em></p><p>The Daytona Plus Carry Bag exudes sophistication with its refined detailing and innovative features. Every aspect of this bag is designed for optimal performance and style, from the rotator stand system to the compression-moulded neoprene back panel.</p><p><em>Lightweight Carry Bag</em></p><p>Crafted from durable ripstop nylon, the Lightweight Carry Bag offers both resilience and functionality. With six strategically placed pockets and carbon fibre legs for stability, this bag is ready to accompany you on every round.</p><p><em>Tour Bag</em></p><p>Loaded with 11 pockets and crafted from high abrasion-resistant lightweight PU, the Tour Bag is the ultimate companion for serious golfers. From its velour-lined club protection to its dual-purpose bottle opener and towel ring, every detail is designed with performance in mind.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP G/FORE GOLF BAGS",
+            "link": "https://trendygolf.com/collections/mens-nike?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Hoodies&filter.p.product_type=Sweats",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_2": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "daytona-plus-carry-bag-seaglass-aw23"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "daytona-plus-carry-bag-gecko-aw23"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "bandana-lightweight-carry-bag-monsoon-aw23"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "saffiano-boro-tour-golf-bag-onyx-ss24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_gfore.jpg",
+        "title": "",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/53b9e262e7db4ad08935d04440b6fb25.mp4",
+            "media_type": "video",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "J.Lindeberg: Elevating On-Course Style",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p><em>Staff Tour Golf Bag</em></p><p>Make a statement on the course with the Staff Tour Golf Bag, featuring bold printed aesthetics and ample storage capacity. From its microfibre-lined compartments to its padded strap for comfortable carrying, this bag combines functionality with bold style.</p><p></p><p><em>Sunday Stand Bag</em></p><p>The Play Stand Bag combines eye-catching seasonal prints with lightweight design and stability. With fold-out carbon fibre legs and six-way top dividers, this bag ensures your clubs stay organised and easily accessible throughout your round.</p><p></p><p><em>Play Stand Bag</em></p><p>Offering the ultimate in portability and durability, the Play Stand Bag is designed for golfers who demand both style and performance. With its water-resistant construction and easy-to-clean properties, this bag is built to withstand the rigours of the course.</p><p></p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP J.LINDEBERG GOLF BAGS",
+            "link": "https://trendygolf.com/search?q=J.Lindeberg+Golf+Bags&options%5Bprefix%5D=last",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_3": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "staff-printed-golf-bag-geo-jl-navy-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "sunday-printed-stand-golf-bag-geo-jl-navy-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "play-golf-stand-bag-calypso-oil-green-ss24"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "play-golf-stand-bag-geo-jl-navy-ss24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_jl_bag.jpg",
+        "title": "",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "RLX Ralph Lauren: Iconic Design, Unparalleled Performance",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p><em>RLX Stand Bag</em></p><p>tay organised and stylish on the course with this feature-packed golf bag, complete with a built-in stand and numerous compartments. Equipped with full-length interior dividers and multiple zip pockets, it ensures your gear stays neatly organised throughout your game. The bag features a comfortable four-point shoulder strap that\u2019s padded for extended wear, with the added convenience of a removable hood for extra protection.</p><p>Key Features:</p><ul><li>Removable four-point padded shoulder strap adorned with \u201cRLX\u201d branding for added style</li><li>Spacious 22.9 cm open top with five full-length dividers to keep your clubs organised</li><li>Built-in stand for easy access to your clubs while on the green</li><li>Seven pockets, including two watertight zip pockets, a dedicated cooler pocket, and a webbed towel ring for added convenience</li><li>\u201cRLX Ralph Lauren\u201d branding is printed on the sides, with the signature Pony logo displayed prominently at the front</li><li>The cushioned lining ensures your gear remains protected during transportation</li></ul><p>With its combination of functionality, comfort, and iconic design details, this golf bag is sure to enhance your golfing experience while showcasing your impeccable style on the fairways.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP RLX RALPH LAUREN GOLF BAGS",
+            "link": "https://trendygolf.com/search?q=RLX+Golf+Bag&options%5Bprefix%5D=last",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_4": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "rlx-golf-stand-bag-black-red-ss23"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "rlx-golf-stand-bag-grey-black-ss23"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_rlx.jpg",
+        "title": "",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Whether you\u2019re a traditionalist who cherishes the heritage of the game or a modern player who embraces innovation, TRENDYGOLF\u2019s selection of golf bags has something for everyone. From classic designs with a contemporary twist to eco-conscious options and bold, stylish prints, these bags are not just accessories but essential companions for every round.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP GOLF BAGS",
+            "link": "https://trendygolf.com/collections/mens-golf-bags",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["text_1", "button_1"],
+      "settings": {
+        "alignment": "center",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "magazine_articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article_template",
+    "hero_1",
+    "text_1",
+    "text_2",
+    "shop_the_look_1",
+    "text_3",
+    "shop_the_look_2",
+    "hero_2",
+    "text_4",
+    "shop_the_look_3",
+    "text_5",
+    "shop_the_look_4",
+    "text_6",
+    "magazine_articles"
+  ]
+}

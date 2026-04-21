@@ -1,0 +1,332 @@
+{%- comment -%}
+  Fullscreen image zoom modal — Splide fade carousel with per-slide zoom/pan.
+  Rendered inside sections/product-template.liquid.
+
+  Expects product.media to be available in the parent scope.
+{%- endcomment -%}
+
+<div class="fixed inset-0 z-50 hidden" data-zoom-modal aria-modal="true" role="dialog">
+  {%- comment -%} Backdrop {%- endcomment -%}
+  <div class="fixed inset-0 bg-black/50 transition-opacity duration-300 ease-out opacity-0" data-zoom-backdrop></div>
+
+  {%- comment -%} Scroll wrapper {%- endcomment -%}
+  <div class="fixed inset-0 w-screen h-dvh">
+    {%- comment -%} Panel {%- endcomment -%}
+    <div class="relative mx-auto h-full max-w-full bg-taupe-100 transition duration-300 ease-out -translate-y-8 opacity-0" data-zoom-panel>
+
+      {%- comment -%} Close button (solid x-mark) {%- endcomment -%}
+      <button class="fixed right-0 top-0 z-20 flex size-10 items-center justify-center bg-white text-neutral-900 md:absolute" data-zoom-close aria-label="Close">
+        {%- render 'icon', icon: 'x-mark-solid', size: 'size-6' -%}
+      </button>
+
+      {%- comment -%} Carousel root {%- endcomment -%}
+      <div class="relative h-full" data-pagination-hide="false" data-pagination-dark="true">
+        <div class="splide relative h-full" data-zoom-carousel>
+
+          {%- comment -%} Slide counter {%- endcomment -%}
+          <div class="absolute left-0 top-0 z-10 p-4">
+            <p class="mb-0 text-sm" data-zoom-counter>1 / {{ product.media.size }}</p>
+          </div>
+
+          {%- comment -%} Track {%- endcomment -%}
+          <div class="splide__track h-full">
+            <ul class="splide__list">
+              {%- assign zoom_index = 0 -%}
+              {%- for media in product.media -%}
+                {%- if media.media_type == 'image' -%}
+                  <li class="splide__slide">
+                    <div data-measure class="inline-block h-full w-full">
+                      <div class="flex h-dvh items-center justify-center">
+                        {%- comment -%} Zoomable image wrapper {%- endcomment -%}
+                        <div class="relative size-full px-6 py-10 lg:p-14" data-zoom-slide>
+                          <div
+                            class="mx-auto max-h-full max-w-full bg-center bg-no-repeat"
+                            role="img"
+                            aria-label="{{ media.alt | escape }}"
+                            data-zoom-image
+                            data-image-width="{{ media.width }}"
+                            data-image-height="{{ media.height }}"
+                            style="
+                              width: {{ media.width }}px;
+                              height: {{ media.height }}px;
+                              background-image: url('{{ media | image_url: width: 1800 }}');
+                              background-size: contain;
+                              background-position: center;
+                              cursor: default;
+                            "
+                          ></div>
+                          {%- comment -%} Zoom toggle button {%- endcomment -%}
+                          <button
+                            class="absolute right-4 top-14 z-10 flex items-center gap-2 bg-taupe-900/50 p-4 text-white"
+                            data-zoom-toggle
+                            aria-label="Zoom"
+                          >
+                            <span data-zoom-toggle-icon>
+                              {%- render 'icon', icon: 'magnifying-glass-plus', size: 'size-5' -%}
+                            </span>
+                            <span>Zoom</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  {%- assign zoom_index = zoom_index | plus: 1 -%}
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
+          </div>
+
+          {%- comment -%} Arrow navigation (desktop only, hidden by Splide breakpoint on mobile) {%- endcomment -%}
+          <div class="splide__arrows" data-zoom-arrows>
+            <button class="splide__arrow splide__arrow--prev absolute left-5 top-1/2 z-10 -translate-y-1/2 bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50">
+              {%- render 'icon', icon: 'chevron-left', size: 'size-6' -%}
+            </button>
+            <button class="splide__arrow splide__arrow--next absolute right-5 top-1/2 z-10 -translate-y-1/2 bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50">
+              {%- render 'icon', icon: 'chevron-right', size: 'size-6' -%}
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+(function() {
+  /* ---- DOM refs ---- */
+  var modal     = document.querySelector('[data-zoom-modal]');
+  var backdrop  = document.querySelector('[data-zoom-backdrop]');
+  var panel     = document.querySelector('[data-zoom-panel]');
+  var closeBtn  = document.querySelector('[data-zoom-close]');
+  var counter   = document.querySelector('[data-zoom-counter]');
+  var carouselEl = document.querySelector('[data-zoom-carousel]');
+  if (!modal || !carouselEl) return;
+
+  var splideInstance = null;
+  var zoomedSlideIndex = null;
+  var totalSlides = 0;
+
+  /* ---- Zoom icons SVG (inline to avoid Liquid in JS) ---- */
+  var plusIcon  = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM10.5 7.5v6m3-3h-6"/></svg>';
+  var minusIcon = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607ZM13.5 10.5h-6"/></svg>';
+
+  /* ---- Zoom state per slide ---- */
+  var slides = carouselEl.querySelectorAll('[data-zoom-slide]');
+  var slideState = [];
+  slides.forEach(function(slide, i) {
+    slideState.push({ isZoomed: false, bgX: 50, bgY: 50, lastTouch: null });
+  });
+
+  /* ---- Open / close modal ---- */
+  function openModal(startIndex) {
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+
+    // Animate in
+    requestAnimationFrame(function() {
+      backdrop.classList.remove('opacity-0');
+      backdrop.classList.add('opacity-100');
+      panel.classList.remove('-translate-y-8', 'opacity-0');
+    });
+
+    // Init Splide if not already
+    if (!splideInstance && typeof Splide !== 'undefined') {
+      splideInstance = new Splide(carouselEl, {
+        type: 'fade',
+        arrows: true,
+        pagination: false,
+        drag: true,
+        start: startIndex || 0,
+        speed: 300,
+        breakpoints: {
+          768: {
+            arrows: false,
+            pagination: true
+          }
+        },
+        classes: {
+          pagination: 'splide__pagination splide__pagination--dark'
+        }
+      });
+
+      splideInstance.on('mounted', function() {
+        totalSlides = splideInstance.length;
+        updateCounter(splideInstance.index);
+      });
+
+      splideInstance.on('moved', function(newIndex) {
+        updateCounter(newIndex);
+      });
+
+      splideInstance.mount();
+    } else if (splideInstance) {
+      splideInstance.go(startIndex || 0);
+    }
+
+    // Reset any zoom state
+    resetAllZoom();
+  }
+
+  function closeModal() {
+    // Animate out
+    backdrop.classList.remove('opacity-100');
+    backdrop.classList.add('opacity-0');
+    panel.classList.add('-translate-y-8', 'opacity-0');
+
+    setTimeout(function() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+      resetAllZoom();
+    }, 300);
+  }
+
+  function updateCounter(index) {
+    if (counter) {
+      counter.textContent = (index + 1) + ' / ' + totalSlides;
+    }
+  }
+
+  /* ---- Zoom logic ---- */
+  function resetAllZoom() {
+    slides.forEach(function(slide, i) {
+      var state = slideState[i];
+      if (state.isZoomed) {
+        toggleZoom(slide, i, false);
+      }
+    });
+    zoomedSlideIndex = null;
+    updateDragState();
+    updatePaginationHide();
+  }
+
+  function toggleZoom(slide, index, forceState) {
+    var state = slideState[index];
+    var newZoomed = typeof forceState === 'boolean' ? forceState : !state.isZoomed;
+    state.isZoomed = newZoomed;
+    state.bgX = 50;
+    state.bgY = 50;
+    state.lastTouch = null;
+
+    var imageEl = slide.querySelector('[data-zoom-image]');
+    var toggleIcon = slide.querySelector('[data-zoom-toggle-icon]');
+
+    if (newZoomed) {
+      // Remove padding
+      slide.classList.remove('px-6', 'py-10', 'lg:p-14');
+      // Update image style
+      imageEl.style.width = '100%';
+      imageEl.style.height = '100%';
+      imageEl.style.backgroundSize = 'cover';
+      imageEl.style.backgroundPosition = 'center';
+      imageEl.style.cursor = 'zoom-in';
+      // Update icon
+      if (toggleIcon) toggleIcon.innerHTML = minusIcon;
+      // Set zoomed index
+      zoomedSlideIndex = index;
+    } else {
+      // Restore padding
+      slide.classList.add('px-6', 'py-10', 'lg:p-14');
+      // Restore image style
+      imageEl.style.width = imageEl.dataset.imageWidth + 'px';
+      imageEl.style.height = imageEl.dataset.imageHeight + 'px';
+      imageEl.style.backgroundSize = 'contain';
+      imageEl.style.backgroundPosition = 'center';
+      imageEl.style.cursor = 'default';
+      // Update icon
+      if (toggleIcon) toggleIcon.innerHTML = plusIcon;
+      // Clear zoomed index only if this was the active one
+      if (zoomedSlideIndex === index) zoomedSlideIndex = null;
+    }
+
+    updateDragState();
+    updatePaginationHide();
+  }
+
+  function updateDragState() {
+    if (!splideInstance) return;
+    var zoomActive = zoomedSlideIndex !== null;
+    splideInstance.options = { drag: !zoomActive };
+    splideInstance.refresh();
+  }
+
+  function updatePaginationHide() {
+    var wrapper = carouselEl.closest('[data-pagination-hide]');
+    if (wrapper) {
+      wrapper.dataset.paginationHide = zoomedSlideIndex !== null ? 'true' : 'false';
+    }
+  }
+
+  /* ---- Mouse pan (desktop) ---- */
+  function handleMouseMove(e, slide, index) {
+    var state = slideState[index];
+    if (!state.isZoomed) return;
+    var imageEl = slide.querySelector('[data-zoom-image]');
+    var rect = imageEl.getBoundingClientRect();
+    var relX = ((e.clientX - rect.left) / rect.width) * 100;
+    var relY = ((e.clientY - rect.top) / rect.height) * 100;
+    state.bgX = relX;
+    state.bgY = relY;
+    imageEl.style.backgroundPosition = relX + '% ' + relY + '%';
+  }
+
+  /* ---- Touch pan (mobile) ---- */
+  function handleTouchStart(e, slide, index) {
+    var state = slideState[index];
+    if (!state.isZoomed || e.touches.length === 0) return;
+    var touch = e.touches[0];
+    state.lastTouch = { x: touch.clientX, y: touch.clientY };
+  }
+
+  function handleTouchMove(e, slide, index) {
+    var state = slideState[index];
+    if (!state.isZoomed || e.touches.length === 0 || !state.lastTouch) return;
+    var imageEl = slide.querySelector('[data-zoom-image]');
+    var rect = imageEl.getBoundingClientRect();
+    var touch = e.touches[0];
+
+    var dx = touch.clientX - state.lastTouch.x;
+    var dy = touch.clientY - state.lastTouch.y;
+
+    var newX = Math.max(0, Math.min(100, state.bgX - (dx / rect.width) * 100));
+    var newY = Math.max(0, Math.min(100, state.bgY - (dy / rect.height) * 100));
+
+    state.bgX = newX;
+    state.bgY = newY;
+    state.lastTouch = { x: touch.clientX, y: touch.clientY };
+    imageEl.style.backgroundPosition = newX + '% ' + newY + '%';
+  }
+
+  /* ---- Wire up per-slide events ---- */
+  slides.forEach(function(slide, i) {
+    var imageEl = slide.querySelector('[data-zoom-image]');
+    var toggleBtn = slide.querySelector('[data-zoom-toggle]');
+
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleZoom(slide, i);
+      });
+    }
+
+    if (imageEl) {
+      imageEl.addEventListener('mousemove', function(e) { handleMouseMove(e, slide, i); });
+      imageEl.addEventListener('touchstart', function(e) { handleTouchStart(e, slide, i); }, { passive: true });
+      imageEl.addEventListener('touchmove', function(e) { handleTouchMove(e, slide, i); }, { passive: true });
+    }
+  });
+
+  /* ---- Close handlers ---- */
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (backdrop) backdrop.addEventListener('click', closeModal);
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
+
+  /* ---- Expose open function globally for product template ---- */
+  window.openImageZoomModal = openModal;
+})();
+</script>

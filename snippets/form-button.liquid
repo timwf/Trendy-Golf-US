@@ -1,0 +1,111 @@
+{% doc %}
+  Renders a button matching the source site's button component.
+
+  @param {string} label - Button text (required)
+  @param {string} [style] - dark-grey (default), text, white, transparent, error
+  @param {string} [type] - button (default) or submit
+  @param {string} [href] - If set, renders <a> instead of <button>
+  @param {string} [target] - Link target (e.g. _blank)
+  @param {boolean} [disabled]
+  @param {boolean} [compact] - Smaller padding (px-3 py-2)
+  @param {boolean} [min_width] - min-w-40 + justify-center (default true)
+  @param {boolean} [uppercase] - Uppercase text (default true)
+  @param {boolean} [full_width] - Adds w-full
+  @param {string} [icon] - Optional Heroicon name
+  @param {string} [icon_size] - Size class for icon (default size-5)
+  @param {string} [icon_position] - left (default) or right
+  @param {string} [class] - Additional CSS classes
+  @param {string} [id]
+  @param {string} [name]
+  @param {string} [value]
+  @param {string} [aria_label]
+
+  @example
+  {% render 'form-button', label: 'Sign in', type: 'submit', full_width: true %}
+  {% render 'form-button', label: 'Delete', style: 'text', icon: 'trash', min_width: false, uppercase: false %}
+{% enddoc %}
+
+{%- liquid
+  assign btn_style = style | default: 'dark-grey'
+
+  if min_width == nil
+    assign use_min_width = true
+  else
+    assign use_min_width = min_width
+  endif
+
+  if uppercase == nil
+    assign use_uppercase = true
+  else
+    assign use_uppercase = uppercase
+  endif
+
+  assign base_classes = 'flex items-center gap-2 text-center text-sm tracking-wider transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50'
+
+  case btn_style
+    when 'text'
+      assign style_classes = 'bg-transparent transition-colors enabled:hover:bg-transparent enabled:hover:text-clubhouse-green-600'
+    when 'white'
+      assign style_classes = 'bg-white text-taupe-900 enabled:hover:bg-neutral-100'
+    when 'transparent'
+      assign style_classes = 'bg-transparent enabled:hover:bg-transparent'
+    when 'error'
+      assign style_classes = 'bg-red-300 enabled:hover:bg-red-400'
+    else
+      assign style_classes = 'bg-taupe-900 text-white enabled:hover:bg-taupe-600'
+  endcase
+
+  if compact
+    assign spacing_classes = 'px-3 py-2'
+  else
+    assign spacing_classes = 'px-4 py-3 lg:px-10'
+  endif
+
+  assign extra_classes = ''
+  if use_uppercase
+    assign extra_classes = extra_classes | append: ' uppercase'
+  endif
+  if use_min_width
+    assign extra_classes = extra_classes | append: ' justify-center min-w-40'
+  endif
+  if full_width
+    assign extra_classes = extra_classes | append: ' w-full'
+  endif
+  if class
+    assign extra_classes = extra_classes | append: ' ' | append: class
+  endif
+
+  assign final_classes = base_classes | append: ' ' | append: style_classes | append: ' ' | append: spacing_classes | append: extra_classes
+
+  assign btn_type = type | default: 'button'
+  assign icon_pos = icon_position | default: 'left'
+  assign i_size = icon_size | default: 'size-5'
+-%}
+
+{%- if href -%}
+  <a
+    href="{{ href }}"
+    {% if target %}target="{{ target }}"{% if target == '_blank' %} rel="noopener noreferrer"{% endif %}{% endif %}
+    {% if id %}id="{{ id }}"{% endif %}
+    {% if aria_label %}aria-label="{{ aria_label }}"{% endif %}
+    class="{{ final_classes }}"
+  >
+    {%- if icon and icon_pos == 'left' -%}{% render 'icon', icon: icon, size: i_size %}{%- endif -%}
+    <span>{{ label }}</span>
+    {%- if icon and icon_pos == 'right' -%}{% render 'icon', icon: icon, size: i_size %}{%- endif -%}
+  </a>
+{%- else -%}
+  <button
+    type="{{ btn_type }}"
+    {% if disabled %}disabled{% endif %}
+    {% if id %}id="{{ id }}"{% endif %}
+    {% if name %}name="{{ name }}"{% endif %}
+    {% if value %}value="{{ value }}"{% endif %}
+    {% if aria_label %}aria-label="{{ aria_label }}"{% endif %}
+    class="{{ final_classes }}"
+  >
+    {%- if icon and icon_pos == 'left' -%}{% render 'icon', icon: icon, size: i_size %}{%- endif -%}
+    <span>{{ label }}</span>
+    {%- if icon and icon_pos == 'right' -%}{% render 'icon', icon: icon, size: i_size %}{%- endif -%}
+  </button>
+{%- endif -%}

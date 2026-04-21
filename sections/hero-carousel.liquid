@@ -1,0 +1,796 @@
+{{ 'splide.min.css' | asset_url | stylesheet_tag }}
+
+<link rel="preconnect" href="https://player.vimeo.com" crossorigin>
+<link rel="preconnect" href="https://i.vimeocdn.com" crossorigin>
+<link rel="preconnect" href="https://f.vimeocdn.com" crossorigin>
+<link rel="dns-prefetch" href="https://vimeo.com">
+
+<style>
+  /* Force active slide visible — Splide v4 Web Animations API can override the CSS rule */
+  .page-block .splide__slide.is-active {
+    opacity: 1 !important;
+  }
+  /* Before Splide initialises, show the first slide */
+  .page-block .splide:not(.is-initialized) .splide__slide:first-child {
+    opacity: 1 !important;
+  }
+  /* Video wrapper fades in once the iframe/video reports loaded */
+  [data-video-wrap] {
+    opacity: 0;
+    transition: opacity 600ms ease;
+  }
+  [data-video-wrap][data-loaded="true"] {
+    opacity: 1;
+  }
+  /* Cover-sized iframe — JS sets width/height; we centre it */
+  [data-embed-iframe] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 0;
+  }
+</style>
+
+{%- liquid
+  case section.settings.margin_bottom
+    when 'none'
+      assign margin_class = ''
+    when 'small'
+      assign margin_class = 'mb-8'
+    when 'medium'
+      assign margin_class = 'mb-8 lg:mb-14'
+    when 'large'
+      assign margin_class = 'mb-14 lg:mb-20'
+  endcase
+-%}
+
+<section class="page-block relative {{ margin_class }} bg-transparent" data-hero-carousel-section data-hero id="hero-carousel-{{ section.id }}">
+  <div class="relative" data-pagination-hide="false" data-pagination-dark="false">
+    <div class="splide relative" data-hero-carousel aria-label="{{ section.settings.aria_label | default: 'Hero slideshow' }}">
+
+    {%- comment -%} Progress bars — before track, matching repo ordering {%- endcomment -%}
+    {%- if section.settings.show_progress and section.blocks.size > 1 -%}
+      <div class="absolute inset-x-0 bottom-0 left-0 z-2 flex w-full justify-center gap-3 px-4 pb-6 xl:pb-8" data-progress-container>
+        {%- for block in section.blocks -%}
+          <button
+            type="button"
+            aria-label="Go to slide {{ forloop.index }}"
+            class="h-1 w-20 overflow-hidden bg-white/20 focus:outline-none focus-visible:ring"
+            data-progress-btn="{{ forloop.index0 }}">
+            <span class="block h-full w-0 bg-white" data-progress-bar></span>
+          </button>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    <div class="splide__track">
+      <ul class="splide__list">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign is_video = false
+            if block.settings.media_type == 'video'
+              assign is_video = true
+            endif
+
+            assign vimeo_id = ''
+            if is_video and block.settings.video_url != blank and block.settings.video_url.type == 'vimeo'
+              assign vimeo_id = block.settings.video_url.id
+            endif
+          -%}
+          <li
+            class="splide__slide relative h-svh max-h-screen w-full overflow-hidden bg-black sm:aspect-tablet sm:h-auto lg:aspect-video"
+            data-slide-speed="{{ block.settings.slide_duration | default: 7 }}"
+            data-slide-index="{{ forloop.index0 }}"
+            {{ block.shopify_attributes }}>
+
+            {%- comment -%} Poster layer — always visible beneath video {%- endcomment -%}
+            {%- if block.settings.image != blank -%}
+              <img
+                src="{{ block.settings.image | image_url: width: 1920 }}"
+                srcset="{{ block.settings.image | image_url: width: 750 }} 750w,
+                        {{ block.settings.image | image_url: width: 1080 }} 1080w,
+                        {{ block.settings.image | image_url: width: 1440 }} 1440w,
+                        {{ block.settings.image | image_url: width: 1920 }} 1920w"
+                sizes="100vw"
+                alt="{{ block.settings.heading | escape }}"
+                class="absolute inset-0 size-full object-cover{% if block.settings.mobile_image != blank %} hidden md:block{% endif %}"
+                width="1920"
+                height="1080"
+                loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}">
+            {%- endif -%}
+
+            {%- if block.settings.mobile_image != blank -%}
+              <img
+                src="{{ block.settings.mobile_image | image_url: width: 750 }}"
+                srcset="{{ block.settings.mobile_image | image_url: width: 375 }} 375w,
+                        {{ block.settings.mobile_image | image_url: width: 750 }} 750w"
+                sizes="100vw"
+                alt="{{ block.settings.heading | escape }}"
+                class="absolute inset-0 size-full object-cover md:hidden"
+                width="{{ block.settings.mobile_image.width }}"
+                height="{{ block.settings.mobile_image.height }}"
+                loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}">
+            {%- endif -%}
+
+            {%- comment -%} oEmbed fallback poster — only emitted when no image is set on a Vimeo slide {%- endcomment -%}
+            {%- if is_video and vimeo_id != '' and block.settings.image == blank and block.settings.mobile_image == blank -%}
+              <img
+                data-poster-fallback
+                data-vimeo-id="{{ vimeo_id }}"
+                alt="{{ block.settings.heading | escape }}"
+                class="absolute inset-0 size-full object-cover opacity-0 transition-opacity duration-500"
+                loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+            {%- endif -%}
+
+            {%- comment -%} Video layer — mounted on demand, fades in on load {%- endcomment -%}
+            {%- if is_video -%}
+              <div class="absolute inset-0 overflow-hidden" data-video-wrap data-loaded="false">
+                <div class="hidden lg:block absolute inset-0 overflow-hidden" data-video-layer="desktop">
+                  {%- render 'hero-video', url: block.settings.video_url, hosted_video: block.settings.hosted_video, hosted_url: block.settings.hosted_video_url -%}
+                </div>
+                <div class="lg:hidden absolute inset-0 overflow-hidden" data-video-layer="mobile">
+                  {%- if block.settings.video_url_mobile != blank or block.settings.hosted_video_mobile != blank or block.settings.hosted_video_url_mobile != blank -%}
+                    {%- render 'hero-video', url: block.settings.video_url_mobile, hosted_video: block.settings.hosted_video_mobile, hosted_url: block.settings.hosted_video_url_mobile -%}
+                  {%- else -%}
+                    {%- render 'hero-video', url: block.settings.video_url, hosted_video: block.settings.hosted_video, hosted_url: block.settings.hosted_video_url -%}
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
+
+            {%- comment -%} Gradient overlay — only shown when slide has text/CTA content {%- endcomment -%}
+            {%- if block.settings.heading != blank or block.settings.subheading != blank or block.settings.button_label != blank -%}
+              <div class="absolute bottom-0 left-0 z-1 h-1/3 w-full bg-gradient-to-b from-black/0 to-black/60"></div>
+            {%- endif -%}
+
+            {%- comment -%} Text content {%- endcomment -%}
+            {%- liquid
+              assign heading_size_class = 'text-4xl lg:text-5xl'
+              if block.settings.heading_size == 'h1'
+                assign heading_size_class = 'text-5xl lg:text-6xl'
+              elsif block.settings.heading_size == 'h3'
+                assign heading_size_class = 'text-3xl lg:text-4xl'
+              endif
+
+              assign heading_font_class = 'font-serif'
+              if block.settings.heading_font == 'sans'
+                assign heading_font_class = 'font-sans'
+              endif
+            -%}
+
+            {%- liquid
+              assign align_class = 'justify-end'
+              if block.settings.content_alignment == 'top'
+                assign align_class = 'justify-start'
+              elsif block.settings.content_alignment == 'centre'
+                assign align_class = 'justify-center'
+              endif
+            -%}
+            <div
+              class="absolute left-0 top-0 z-2 flex size-full flex-col items-center py-12 lg:py-14 xl:py-16 3xl:py-28 {{ align_class }}">
+              <div
+                {% if section.settings.enable_animation %}data-inview="false"{% else %}data-inview="true"{% endif %}
+                class="group-inview group/blocks container-narrow text-center text-white">
+
+                <div class="mb-8 opacity-0 -translate-y-14 transition-all duration-1000 ease animation-group group-data-[inview=true]/blocks:opacity-100 group-data-[inview=true]/blocks:translate-y-0">
+                  {%- capture slide_heading -%}
+                    {%- comment -%} Semantic heading tag — independent from visual size {%- endcomment -%}
+                    {%- if block.settings.use_as_page_h1 -%}
+                      <h1>
+                        <span class="{{ heading_font_class }}">
+                          <span class="{{ heading_size_class }}">{{ block.settings.heading }}</span>
+                        </span>
+                      </h1>
+                    {%- else -%}
+                      <h2>
+                        <span class="{{ heading_font_class }}">
+                          <span class="{{ heading_size_class }}">{{ block.settings.heading }}</span>
+                        </span>
+                      </h2>
+                    {%- endif -%}
+                  {%- endcapture -%}
+                  {%- capture slide_subheading -%}
+                    {%- if block.settings.subheading != blank -%}
+                      <p>{{ block.settings.subheading }}</p>
+                    {%- endif -%}
+                  {%- endcapture -%}
+
+                  {%- if block.settings.heading_first -%}
+                    {{ slide_heading }}
+                    {{ slide_subheading }}
+                  {%- else -%}
+                    {{ slide_subheading }}
+                    {{ slide_heading }}
+                  {%- endif -%}
+                </div>
+
+                {%- if block.settings.button_label != blank -%}
+                  {%- liquid
+                    case block.settings.button_style
+                      when 'white'
+                        assign btn_class = 'flex items-center gap-2 text-center text-sm tracking-wider transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 uppercase justify-center px-4 py-3 lg:px-10 min-w-40 bg-white text-taupe-900 enabled:hover:bg-neutral-100'
+                      when 'transparent'
+                        assign btn_class = 'flex items-center gap-2 text-center text-sm tracking-wider transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 uppercase justify-center px-4 py-3 lg:px-10 min-w-40 bg-transparent text-white enabled:hover:bg-transparent enabled:hover:text-clubhouse-green-600 border border-white'
+                      when 'text'
+                        assign btn_class = 'flex items-center gap-2 text-center text-sm tracking-wider transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 uppercase text-white'
+                    endcase
+                  -%}
+                  <div class="flex justify-center delay-300 opacity-0 translate-y-14 transition-all duration-1000 ease animation-group group-data-[inview=true]/blocks:opacity-100 group-data-[inview=true]/blocks:translate-y-0">
+                    <a
+                      href="{{ block.settings.button_link }}"
+                      class="{{ btn_class }}">
+                      <span>{{ block.settings.button_label }}</span>
+                      {%- if block.settings.button_style == 'text' -%}
+                        {%- render 'icon', icon: 'chevron-right', size: 'size-4' -%}
+                      {%- endif -%}
+                    </a>
+                  </div>
+                {%- endif -%}
+              </div>
+            </div>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+
+    </div>
+  </div>
+</section>
+
+{%- comment -%}
+  Early iframe mount for slide 0 — runs at HTML-parse time so the Vimeo player
+  connection starts before Splide boots. Picks the mobile or desktop layer
+  based on viewport so we only load one iframe, not both.
+{%- endcomment -%}
+<script>
+  (function () {
+    var section = document.getElementById('hero-carousel-{{ section.id }}');
+    if (!section) return;
+    var firstSlide = section.querySelector('.splide__slide');
+    if (!firstSlide) return;
+    var isMobile = window.matchMedia('(max-width: 1023px)').matches;
+    var layerSelector = isMobile ? '[data-video-layer="mobile"]' : '[data-video-layer="desktop"]';
+    var placeholder = firstSlide.querySelector(layerSelector + ' [data-embed-placeholder]');
+    if (!placeholder || placeholder.querySelector('[data-embed-iframe]')) return;
+    var src = placeholder.getAttribute('data-embed-src');
+    if (!src) return;
+    var iframe = document.createElement('iframe');
+    iframe.setAttribute('data-embed-iframe', '');
+    iframe.setAttribute('allow', 'autoplay; encrypted-media');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('title', 'Background video');
+    iframe.setAttribute('loading', 'eager');
+    try { iframe.setAttribute('fetchpriority', 'high'); } catch (e) {}
+    iframe.src = src;
+    placeholder.appendChild(iframe);
+    iframe.addEventListener('load', function () {
+      var wrap = firstSlide.querySelector('[data-video-wrap]');
+      if (wrap) wrap.setAttribute('data-loaded', 'true');
+    }, { once: true });
+  })();
+</script>
+
+<script src="{{ 'splide.min.js' | asset_url }}"></script>
+<script>
+  (function () {
+    var section = document.getElementById('hero-carousel-{{ section.id }}');
+    if (!section) return;
+    var el = section.querySelector('[data-hero-carousel]');
+    if (!el) return;
+
+    var slides = el.querySelectorAll('.splide__slide');
+    var progressBars = el.querySelectorAll('[data-progress-bar]');
+    var progressBtns = el.querySelectorAll('[data-progress-btn]');
+    var shouldAutoplay = {{ section.settings.autoplay | json }};
+    var showProgress = {{ section.settings.show_progress | json }};
+    var enableAnimation = {{ section.settings.enable_animation | json }};
+
+    /* Per-slide durations in ms */
+    var durations = [];
+    slides.forEach(function (slide) {
+      durations.push((parseInt(slide.getAttribute('data-slide-speed'), 10) || 7) * 1000);
+    });
+
+    /* --- Vimeo oEmbed (thumbnail + aspect ratio) ------------------------- */
+    /* Single fetch per video ID, cached in sessionStorage. Returns
+       { thumbnail, aspect } — aspect powers the iframe cover-sizing below,
+       thumbnail is used for poster fallback on slides with no manual image. */
+    var vimeoPromises = {};
+    function fetchVimeoData(id) {
+      if (!id) return Promise.resolve(null);
+      if (vimeoPromises[id]) return vimeoPromises[id];
+      var cacheKey = 'vimeo-oembed-' + id;
+      try {
+        var cached = sessionStorage.getItem(cacheKey);
+        if (cached) return (vimeoPromises[id] = Promise.resolve(JSON.parse(cached)));
+      } catch (e) {}
+      vimeoPromises[id] = fetch('https://vimeo.com/api/oembed.json?url=https%3A//vimeo.com/' + encodeURIComponent(id) + '&width=1920')
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (data) {
+          if (!data) return null;
+          var result = {
+            thumbnail: data.thumbnail_url ? data.thumbnail_url.replace(/_\d+x\d+/, '_1920x1080') : null,
+            aspect: (data.width && data.height) ? data.width / data.height : null
+          };
+          try { sessionStorage.setItem(cacheKey, JSON.stringify(result)); } catch (e) {}
+          return result;
+        })
+        .catch(function () { return null; });
+      return vimeoPromises[id];
+    }
+
+    section.querySelectorAll('img[data-poster-fallback]').forEach(function (img) {
+      var id = img.getAttribute('data-vimeo-id');
+      fetchVimeoData(id).then(function (data) {
+        if (!data || !data.thumbnail) return;
+        img.src = data.thumbnail;
+        img.style.opacity = '1';
+      });
+    });
+
+    /* --- Iframe mount + cover-sizing -------------------------------------- */
+    /* We stash the iframe src on a placeholder div; JS creates the iframe only
+       when the slide becomes active (or next-in-line). This avoids loading all
+       Vimeo players up-front. */
+    function buildIframe(placeholder) {
+      /* Slide 0 may already have an iframe from the early-mount script above —
+         reuse it instead of creating a duplicate. */
+      var existing = placeholder.querySelector('[data-embed-iframe]');
+      if (existing) { coverSize(existing); return existing; }
+      var src = placeholder.getAttribute('data-embed-src');
+      if (!src) return null;
+      var iframe = document.createElement('iframe');
+      iframe.setAttribute('data-embed-iframe', '');
+      iframe.setAttribute('allow', 'autoplay; encrypted-media');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('title', 'Background video');
+      iframe.setAttribute('loading', 'eager');
+      iframe.src = src;
+      placeholder.appendChild(iframe);
+      coverSize(iframe);
+
+      /* Pull the real video aspect (not every Vimeo upload is 16:9 — e.g. 2:1
+         promo videos get letterboxed inside a 16:9 iframe). Once resolved,
+         re-run cover sizing so the video fills without bars. */
+      if (placeholder.getAttribute('data-embed-type') === 'vimeo') {
+        var vid = placeholder.getAttribute('data-embed-id');
+        fetchVimeoData(vid).then(function (data) {
+          if (data && data.aspect) {
+            iframe.dataset.videoAspect = data.aspect;
+            coverSize(iframe);
+          }
+        });
+      }
+      return iframe;
+    }
+
+    /* Size iframe so its video area fully covers the slide container.
+       Matches `object-cover` behaviour that native <video> gets for free.
+       Uses per-iframe aspect from dataset (set after Vimeo oEmbed resolves),
+       falling back to 16:9 for the initial render. */
+    function coverSize(iframe) {
+      var slide = iframe.closest('.splide__slide');
+      if (!slide) return;
+      var cw = slide.clientWidth;
+      var ch = slide.clientHeight;
+      if (!cw || !ch) return;
+      var videoAspect = parseFloat(iframe.dataset.videoAspect) || 16 / 9;
+      var containerAspect = cw / ch;
+      if (containerAspect > videoAspect) {
+        iframe.style.width = cw + 'px';
+        iframe.style.height = (cw / videoAspect) + 'px';
+      } else {
+        iframe.style.height = ch + 'px';
+        iframe.style.width = (ch * videoAspect) + 'px';
+      }
+    }
+
+    function mountSlide(index) {
+      var slide = slides[index];
+      if (!slide || slide.getAttribute('data-video-mounted') === 'true') return;
+      slide.setAttribute('data-video-mounted', 'true');
+
+      /* Each slide emits two video layers (desktop + mobile). Only the layer
+         matching the current viewport is ever visible — the other sits inside
+         a display:none wrapper. Browsers still download iframes inside
+         display:none, so previously every slide loaded TWO Vimeo players,
+         doubling bandwidth and starving the slides in the queue. We filter
+         placeholders to the active layer only. */
+      var isMobileView = window.matchMedia('(max-width: 1023px)').matches;
+      var activeLayerSelector = isMobileView ? '[data-video-layer="mobile"]' : '[data-video-layer="desktop"]';
+      var placeholders = slide.querySelectorAll(activeLayerSelector + ' [data-embed-placeholder]');
+      var wrap = slide.querySelector('[data-video-wrap]');
+      var iframes = [];
+      placeholders.forEach(function (p) {
+        var iframe = buildIframe(p);
+        if (iframe) iframes.push(iframe);
+      });
+
+      /* Native <video> elements — already in DOM via Liquid. Just listen for
+         first frame so we can fade the wrapper in. Scoped to the active
+         layer so the hidden layer's <video> isn't counted. */
+      var videos = slide.querySelectorAll(activeLayerSelector + ' video');
+      if (!wrap) return;
+
+      var doneCount = 0;
+      var total = iframes.length + videos.length;
+      if (total === 0) { wrap.setAttribute('data-loaded', 'true'); return; }
+
+      function markLoaded() {
+        doneCount += 1;
+        if (doneCount >= total) wrap.setAttribute('data-loaded', 'true');
+      }
+      iframes.forEach(function (i) { i.addEventListener('load', markLoaded, { once: true }); });
+      videos.forEach(function (v) {
+        if (v.readyState >= 2) { markLoaded(); return; }
+        v.addEventListener('loadeddata', markLoaded, { once: true });
+      });
+
+      /* Safety fallback — fade in after 2.5s even if no event fired */
+      setTimeout(function () { wrap.setAttribute('data-loaded', 'true'); }, 2500);
+    }
+
+    /* Resize observer to re-cover iframes on viewport changes */
+    var resizeTimer = null;
+    window.addEventListener('resize', function () {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(function () {
+        section.querySelectorAll('[data-embed-iframe]').forEach(coverSize);
+      }, 150);
+    });
+
+    /* Init Splide — autoplay disabled, we self-schedule via setTimeout */
+    var splide = new Splide(el, {
+      type: slides.length > 1 ? 'fade' : 'slide',
+      rewind: true,
+      perPage: 1,
+      autoplay: false,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      arrows: false,
+      pagination: false,
+      drag: slides.length > 1,
+      speed: 800,
+    });
+
+    /* --- Progress bar animation (rAF width-based) --- */
+    var rafId = null;
+    var rafStart = null;
+    var autoTimer = null;
+
+    function resetAllBars() {
+      progressBars.forEach(function (bar) { bar.style.width = '0%'; });
+      progressBtns.forEach(function (btn) { btn.style.backgroundColor = ''; });
+    }
+
+    function cancelProgress() {
+      if (rafId != null) { cancelAnimationFrame(rafId); rafId = null; }
+      rafStart = null;
+    }
+
+    function clearTimer() {
+      if (autoTimer != null) { clearTimeout(autoTimer); autoTimer = null; }
+    }
+
+    function startProgress(index, durationMs) {
+      cancelProgress();
+      resetAllBars();
+      var bar = progressBars[index];
+      if (!bar) return;
+      if (progressBtns[index]) progressBtns[index].style.backgroundColor = 'rgba(255,255,255,0.3)';
+      rafStart = null;
+      function tick(t) {
+        if (rafStart == null) rafStart = t;
+        var pct = Math.min(100, ((t - rafStart) / Math.max(1, durationMs)) * 100);
+        bar.style.width = pct + '%';
+        if (pct < 100) { rafId = requestAnimationFrame(tick); }
+        else { rafId = null; }
+      }
+      rafId = requestAnimationFrame(tick);
+    }
+
+    function scheduleNext(index) {
+      clearTimer();
+      if (!shouldAutoplay || slides.length <= 1) return;
+      var dur = durations[index] || 7000;
+      if (showProgress) startProgress(index, dur);
+      autoTimer = setTimeout(function () {
+        splide.go('>');
+      }, dur);
+    }
+
+    /* Clickable progress buttons */
+    progressBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var idx = parseInt(btn.getAttribute('data-progress-btn'), 10);
+        clearTimer();
+        cancelProgress();
+        if (splide.index === idx) {
+          scheduleNext(idx);
+          return;
+        }
+        splide.go(idx);
+      });
+    });
+
+    splide.on('moved', function (newIndex) {
+      /* Mount current + next slide's iframes on demand */
+      mountSlide(newIndex);
+      if (slides.length > 1) mountSlide((newIndex + 1) % slides.length);
+      scheduleNext(newIndex);
+    });
+
+    splide.on('mounted', function () {
+      /* Mount slide 0 immediately; pre-mount slide 1 so next transition is ready */
+      mountSlide(0);
+      if (slides.length > 1) mountSlide(1);
+      scheduleNext(0);
+    });
+
+    splide.mount();
+
+    /* Fade-up animation — flip all data-inview elements when section is visible */
+    if (enableAnimation) {
+      var inviewEls = section.querySelectorAll('[data-inview]');
+      if (inviewEls.length) {
+        function showContent() {
+          inviewEls.forEach(function (el) {
+            el.setAttribute('data-inview', 'true');
+          });
+        }
+        var rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          showContent();
+        } else {
+          var observer = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  showContent();
+                  observer.unobserve(entry.target);
+                }
+              });
+            },
+            { threshold: 0.3 }
+          );
+          observer.observe(section);
+        }
+      }
+    }
+
+    /* Video control — pause inactive slide videos */
+    if (slides.length > 1) {
+      splide.on('moved', function (newIndex) {
+        slides.forEach(function (slide, i) {
+          var iframes = slide.querySelectorAll('iframe');
+          iframes.forEach(function (iframe) {
+            if (!iframe.contentWindow) return;
+            if (i !== newIndex) {
+              iframe.contentWindow.postMessage('{"method":"pause"}', '*');
+              iframe.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*');
+            } else {
+              iframe.contentWindow.postMessage('{"method":"play"}', '*');
+              iframe.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+            }
+          });
+          var videos = slide.querySelectorAll('video');
+          videos.forEach(function (video) {
+            if (i !== newIndex) { video.pause(); } else { video.play(); }
+          });
+        });
+      });
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.hero_carousel.name",
+  "tag": "section",
+  "class": "page-block--bannerCarousel",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "t:sections.hero_carousel.settings.autoplay.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_progress",
+      "label": "t:sections.hero_carousel.settings.show_progress.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_animation",
+      "label": "t:sections.hero_carousel.settings.enable_animation.label",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "aria_label",
+      "label": "t:sections.hero_carousel.settings.aria_label.label",
+      "default": "Hero slideshow"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "t:sections.hero_carousel.settings.margin_bottom.label",
+      "options": [
+        { "value": "none", "label": "t:sections.hero_carousel.settings.margin_bottom.options.none" },
+        { "value": "small", "label": "t:sections.hero_carousel.settings.margin_bottom.options.small" },
+        { "value": "medium", "label": "t:sections.hero_carousel.settings.margin_bottom.options.medium" },
+        { "value": "large", "label": "t:sections.hero_carousel.settings.margin_bottom.options.large" }
+      ],
+      "default": "medium"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "t:sections.hero_carousel.blocks.slide.name",
+      "settings": [
+        {
+          "type": "select",
+          "id": "content_alignment",
+          "label": "Content alignment",
+          "options": [
+            { "value": "top", "label": "Top" },
+            { "value": "centre", "label": "Centre" },
+            { "value": "bottom", "label": "Bottom" }
+          ],
+          "default": "bottom"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "t:sections.hero_carousel.blocks.slide.settings.subheading.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "heading_first",
+          "label": "t:sections.hero_carousel.blocks.slide.settings.heading_first.label",
+          "info": "t:sections.hero_carousel.blocks.slide.settings.heading_first.info",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:sections.hero_carousel.blocks.slide.settings.heading.label",
+          "default": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "heading_size",
+          "label": "t:sections.hero_carousel.blocks.slide.settings.heading_size.label",
+          "options": [
+            { "value": "h1", "label": "t:sections.hero_carousel.blocks.slide.settings.heading_size.options.h1" },
+            { "value": "h2", "label": "t:sections.hero_carousel.blocks.slide.settings.heading_size.options.h2" },
+            { "value": "h3", "label": "t:sections.hero_carousel.blocks.slide.settings.heading_size.options.h3" }
+          ],
+          "default": "h2",
+          "info": "Visual size only — does not affect semantic tag. Use the H1 toggle below for SEO."
+        },
+        {
+          "type": "checkbox",
+          "id": "use_as_page_h1",
+          "label": "Use as page H1 (SEO)",
+          "info": "Enable on ONE slide per page — typically the homepage's first slide. Outputs the heading as <h1> for search engines without changing its appearance.",
+          "default": false
+        },
+        {
+          "type": "select",
+          "id": "heading_font",
+          "label": "t:sections.hero_carousel.blocks.slide.settings.heading_font.label",
+          "options": [
+            { "value": "serif", "label": "t:sections.hero_carousel.blocks.slide.settings.heading_font.options.serif" },
+            { "value": "sans", "label": "t:sections.hero_carousel.blocks.slide.settings.heading_font.options.sans" }
+          ],
+          "default": "serif"
+        },
+        {
+          "type": "select",
+          "id": "media_type",
+          "label": "t:sections.hero_carousel.blocks.slide.settings.media_type.label",
+          "options": [
+            { "value": "image", "label": "t:sections.hero_carousel.blocks.slide.settings.media_type.options.image" },
+            { "value": "video", "label": "t:sections.hero_carousel.blocks.slide.settings.media_type.options.video" }
+          ],
+          "default": "image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.hero_carousel.blocks.slide.settings.image.label",
+          "info": "For video slides: shown instantly while the video loads. If blank, the Vimeo thumbnail is fetched and used as a fallback."
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile image",
+          "info": "Optional. Shown below 768px. Falls back to desktop image if blank."
+        },
+        {
+          "type": "video_url",
+          "id": "video_url",
+          "label": "t:sections.hero_carousel.blocks.slide.settings.video_url.label",
+          "accept": ["youtube", "vimeo"]
+        },
+        {
+          "type": "video_url",
+          "id": "video_url_mobile",
+          "label": "t:sections.hero_carousel.blocks.slide.settings.video_url_mobile.label",
+          "accept": ["youtube", "vimeo"]
+        },
+        {
+          "type": "video",
+          "id": "hosted_video",
+          "label": "Shopify-hosted video",
+          "info": "Select a video from Files. Used instead of YouTube/Vimeo when provided."
+        },
+        {
+          "type": "video",
+          "id": "hosted_video_mobile",
+          "label": "Shopify-hosted video (mobile)",
+          "info": "Optional mobile version. Falls back to desktop if blank."
+        },
+        {
+          "type": "text",
+          "id": "hosted_video_url",
+          "label": "Video URL (CDN)",
+          "info": "Paste a Shopify CDN video URL (.mp4). Used if no video selected above."
+        },
+        {
+          "type": "text",
+          "id": "hosted_video_url_mobile",
+          "label": "Video URL mobile (CDN)",
+          "info": "Optional mobile CDN URL. Falls back to desktop if blank."
+        },
+        {
+          "type": "range",
+          "id": "slide_duration",
+          "label": "t:sections.hero_carousel.blocks.slide.settings.slide_duration.label",
+          "min": 3,
+          "max": 20,
+          "step": 1,
+          "default": 7,
+          "unit": "s"
+        },
+        {
+          "type": "text",
+          "id": "button_label",
+          "label": "t:sections.hero_carousel.blocks.slide.settings.button_label.label"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "t:sections.hero_carousel.blocks.slide.settings.button_link.label"
+        },
+        {
+          "type": "select",
+          "id": "button_style",
+          "label": "t:sections.hero_carousel.blocks.slide.settings.button_style.label",
+          "options": [
+            { "value": "white", "label": "t:sections.hero_carousel.blocks.slide.settings.button_style.options.white" },
+            { "value": "transparent", "label": "t:sections.hero_carousel.blocks.slide.settings.button_style.options.transparent" },
+            { "value": "text", "label": "t:sections.hero_carousel.blocks.slide.settings.button_style.options.text" }
+          ],
+          "default": "white"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.hero_carousel.presets.name",
+      "blocks": [
+        { "type": "slide" }
+      ]
+    }
+  ]
+}
+{% endschema %}

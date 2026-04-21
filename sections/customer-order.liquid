@@ -1,0 +1,246 @@
+{% comment %}
+  Customer order detail — sidebar + main content.
+  Source: _reference/repo/app/routes/account.(orders).$id.tsx
+{% endcomment %}
+
+{%- liquid
+  assign returns_base = section.settings.returns_url | default: 'https://returns.trendygolf.com'
+  assign shipping = order.shipping_address
+
+  assign formatted_name = ''
+  if shipping.first_name != blank
+    assign formatted_name = shipping.first_name
+  endif
+  if shipping.last_name != blank
+    if formatted_name != blank
+      assign formatted_name = formatted_name | append: ' ' | append: shipping.last_name
+    else
+      assign formatted_name = shipping.last_name
+    endif
+  endif
+
+  assign full_address = ''
+  if formatted_name != blank
+    assign full_address = formatted_name
+  endif
+  if shipping.address1 != blank
+    if full_address != blank
+      assign full_address = full_address | append: ', '
+    endif
+    assign full_address = full_address | append: shipping.address1
+  endif
+  if shipping.address2 != blank
+    if full_address != blank
+      assign full_address = full_address | append: ', '
+    endif
+    assign full_address = full_address | append: shipping.address2
+  endif
+  if shipping.city != blank
+    if full_address != blank
+      assign full_address = full_address | append: ', '
+    endif
+    assign full_address = full_address | append: shipping.city
+  endif
+  if shipping.zip != blank
+    if full_address != blank
+      assign full_address = full_address | append: ', '
+    endif
+    assign full_address = full_address | append: shipping.zip
+  endif
+  if shipping.country_code != blank
+    if full_address != blank
+      assign full_address = full_address | append: ', '
+    endif
+    assign full_address = full_address | append: shipping.country_code
+  endif
+
+  assign item_count = order.line_items.size
+-%}
+
+<div class="container grid gap-5 py-10 lg:grid-cols-10 lg:gap-10">
+  {% render 'account-sidebar',
+    active: 'orders',
+    returns_url: returns_base
+  %}
+
+  <main class="col-span-1 lg:col-span-7 2xl:col-span-8">
+    <div class="mb-6 inline-block lg:hidden">
+      {% render 'form-button',
+        label: 'Back',
+        href: routes.account_url,
+        style: 'text',
+        icon: 'chevron-left',
+        icon_size: 'size-4',
+        min_width: false,
+        uppercase: false,
+        class: 'font-bold'
+      %}
+    </div>
+
+    <h1 class="mb-4 text-xl font-bold lg:text-2xl">Order Details</h1>
+
+    {%- if order.name != blank -%}
+      <div class="flex items-center justify-between">
+        <p class="mb-0">
+          <b>Order number: </b>
+          {{ order.name }}
+        </p>
+      </div>
+    {%- endif -%}
+
+    {%- if order.created_at -%}
+      <div class="flex items-center justify-between">
+        <p class="mb-0">
+          <b>Order date: </b>
+          {{ order.created_at | date: '%-m/%-d/%Y' }}
+        </p>
+      </div>
+    {%- endif -%}
+
+    {%- if order.total_price -%}
+      <div class="flex items-center justify-between">
+        <p class="mb-0">
+          <b>Order total: </b>
+          <span>{{ order.total_price | money }}</span>
+        </p>
+      </div>
+    {%- endif -%}
+
+    {%- if full_address != blank -%}
+      <div class="mb-4">
+        <b>Delivery Address: </b>
+        <span>{{ full_address }}</span>
+      </div>
+    {%- endif -%}
+
+    <div class="mb-12 flex">
+      {% render 'form-button',
+        label: 'Start a Return',
+        href: returns_base | append: '/?order=' | append: order.id | append: '&zip=' | append: shipping.zip
+      %}
+    </div>
+
+    <div class="bg-taupe-300 p-6 mb-6">
+      <p class="text-taupe-700">
+        {{ item_count }} item{% if item_count > 1 %}s{% endif %}
+      </p>
+      {%- if item_count > 0 -%}
+        {%- for line_item in order.line_items -%}
+          <div class="flex{% unless forloop.last %} border-b border-taupe-400 pb-4{% endunless %}">
+            {%- if line_item.image -%}
+              <div class="mr-4 mt-2 flex aspect-[3/4] max-w-32 flex-1 items-start justify-center">
+                <img
+                  class="block w-full"
+                  src="{{ line_item.image | image_url: width: 400 }}"
+                  alt="{{ line_item.image.alt | default: line_item.title | escape }}"
+                  loading="lazy"
+                  width="{{ line_item.image.width }}"
+                  height="{{ line_item.image.height }}"
+                >
+              </div>
+            {%- endif -%}
+
+            <div class="flex-[2]">
+              {%- if line_item.product.title != blank -%}
+                <p class="mb-1">{{ line_item.product.title }}</p>
+              {%- endif -%}
+              {%- if line_item.variant.title != blank and line_item.variant.title != 'Default Title' -%}
+                <p class="mb-1">
+                  <span>Size: {{ line_item.variant.title }}</span>
+                </p>
+              {%- endif -%}
+              {%- if line_item.quantity -%}
+                <p class="mb-1">
+                  <span>Qty: {{ line_item.quantity }}</span>
+                </p>
+              {%- endif -%}
+              {%- if line_item.final_line_price -%}
+                <p class="mb-0 font-bold">
+                  {%- if line_item.line_level_total_discount > 0 -%}
+                    <span>{{ line_item.final_line_price | money }}</span>
+                    <s class="ml-2 font-normal text-taupe-700">{{ line_item.original_line_price | money }}</s>
+                  {%- else -%}
+                    <span>{{ line_item.final_line_price | money }}</span>
+                  {%- endif -%}
+                </p>
+              {%- endif -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      {%- else -%}
+        <p class="text-red-600">[No products found]</p>
+      {%- endif -%}
+    </div>
+
+    <div class="bg-taupe-300 p-6 mb-6">
+      <p>
+        <b>Payment Details:</b>
+      </p>
+      <table class="w-full">
+        <tr class="flex justify-between">
+          <td>
+            Subtotal ({{ item_count }} item{% if item_count > 1 %}s{% endif %}):
+          </td>
+          <td>
+            <span>{{ order.subtotal_price | money }}</span>
+          </td>
+        </tr>
+        {%- if order.total_discounts > 0 -%}
+          <tr class="flex justify-between">
+            <td>Discount</td>
+            <td>
+              <span>{{ order.total_discounts | money }}</span>
+            </td>
+          </tr>
+        {%- else -%}
+          <tr class="flex justify-between">
+            <td>Discount</td>
+            <td>
+              <span>-</span>
+            </td>
+          </tr>
+        {%- endif -%}
+        {%- if order.shipping_price > 0 -%}
+          <tr class="flex justify-between">
+            <td>Shipping</td>
+            <td>
+              <span>{{ order.shipping_price | money }}</span>
+            </td>
+          </tr>
+        {%- endif -%}
+      </table>
+
+      <hr class="my-4 border-taupe-400">
+
+      <table class="w-full">
+        <tr class="flex justify-between">
+          <td>Total</td>
+          <td>
+            {%- if order.total_price > 0 -%}
+              {{ order.total_price | money }}
+            {%- endif -%}
+          </td>
+        </tr>
+      </table>
+    </div>
+  </main>
+</div>
+
+{% schema %}
+{
+  "name": "Customer order",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Sidebar"
+    },
+    {
+      "type": "url",
+      "id": "returns_url",
+      "label": "Returns portal URL",
+      "info": "External returns portal. Defaults to https://returns.trendygolf.com when blank. The 'Start a Return' button appends ?order=<id>&zip=<shipping zip> to this URL."
+    }
+  ]
+}
+{% endschema %}

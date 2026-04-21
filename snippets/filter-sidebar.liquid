@@ -1,0 +1,276 @@
+{% doc %}
+  Renders an offcanvas filter sidebar using Shopify native filter arrays.
+  Exact match to staging accordion, typography, and layout.
+
+  @param {object} [collection] - Collection object (used when `filters`/`action_url` not provided).
+  @param {object} [filters] - Override filter array (e.g. `search.filters`).
+  @param {string} [action_url] - Override form action URL (e.g. `routes.search_url`).
+  @param {string} [form_id] - DOM id for the filter form (default `CollectionFiltersForm`).
+  @param {string} [search_terms] - When set, renders hidden `q` and `type=product` inputs so the form preserves the search query.
+
+  @example
+  {% render 'filter-sidebar', collection: collection %}
+  {% render 'filter-sidebar', filters: search.filters, action_url: routes.search_url, search_terms: search.terms %}
+{% enddoc %}
+
+{%- liquid
+  assign sidebar_filters = filters | default: collection.filters
+  assign sidebar_action = action_url | default: collection.url
+  assign sidebar_form_id = form_id | default: 'CollectionFiltersForm'
+-%}
+
+{%- comment -%} Backdrop overlay {%- endcomment -%}
+<div
+  data-filter-backdrop
+  data-filter-open="false"
+  class="fixed left-0 top-0 z-[39] h-full w-full overflow-hidden bg-black/50 opacity-0 pointer-events-none transition-opacity duration-500 ease-in-out data-[filter-open=true]:opacity-100 data-[filter-open=true]:pointer-events-auto"
+></div>
+
+{%- comment -%} Sidebar panel {%- endcomment -%}
+<div
+  data-filter-sidebar
+  data-filter-open="false"
+  class="fixed right-0 top-0 z-40 h-dvh w-full max-w-[31rem] translate-x-full bg-white shadow-none transition-all duration-500 ease-in-out data-[filter-open=true]:translate-x-0 data-[filter-open=true]:shadow-xl"
+>
+  <div class="h-dvh overflow-y-auto px-5 pb-24 pt-5">
+
+    {%- comment -%} Header {%- endcomment -%}
+    <div class="mb-5 flex items-center justify-between">
+      <div>
+        <h3 class="font-sans font-bold">{{ 'sections.collection.filter' | t }}</h3>
+      </div>
+      <button type="button" data-filter-close-btn aria-label="{{ 'general.accessibility.close' | t }}">
+        {%- render 'icon', icon: 'x-mark', size: 'size-6' -%}
+      </button>
+    </div>
+
+    {%- comment -%} Active filter pills {%- endcomment -%}
+    {%- assign has_active_filters = false -%}
+    {%- for filter in sidebar_filters -%}
+      {%- if filter.active_values.size > 0 -%}
+        {%- assign has_active_filters = true -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- if has_active_filters -%}
+      <ul class="mb-5 flex flex-wrap gap-2">
+        {%- for filter in sidebar_filters -%}
+          {%- for value in filter.active_values -%}
+            <li>
+              <a href="{{ value.url_to_remove }}" data-filter-pill class="flex items-center gap-1 border border-taupe-900 px-2 py-1 text-xs">
+                {%- render 'icon', icon: 'x-mark', size: 'size-4', class: 'text-taupe-700' -%}
+                {{ value.label }}
+              </a>
+            </li>
+          {%- endfor -%}
+        {%- endfor -%}
+      </ul>
+    {%- endif -%}
+
+    {%- comment -%} Filter form {%- endcomment -%}
+    <form id="{{ sidebar_form_id }}" data-filter-form action="{{ sidebar_action }}">
+      {%- if search_terms -%}
+        <input type="hidden" name="q" value="{{ search_terms | escape }}">
+        <input type="hidden" name="type" value="product">
+      {%- endif -%}
+      {%- for filter in sidebar_filters -%}
+        <div data-filter-section>
+          <button
+            type="button"
+            data-filter-toggle
+            class="flex w-full items-center justify-between border-b border-taupe-400 py-3 text-left transition-all"
+          >
+            <span class="flex-1 pr-3">
+              {{ filter.label }}
+              {%- if filter.active_values.size > 0 -%}
+                <span class="ml-1 text-clubhouse-green-600">({{ filter.active_values.size }})</span>
+              {%- endif -%}
+            </span>
+            <span class="flex-none transition-transform" data-filter-chevron>
+              {%- render 'icon', icon: 'chevron-down', size: 'size-4' -%}
+            </span>
+          </button>
+
+          <div data-filter-content class="hidden border-b border-taupe-400 py-6">
+            {%- case filter.type -%}
+              {%- when 'list' -%}
+                {%- liquid
+                  assign is_colour = false
+                  if filter.param_name contains 'color'
+                    assign is_colour = true
+                  endif
+                  if filter.param_name contains 'colour'
+                    assign is_colour = true
+                  endif
+                  assign is_size = false
+                  if filter.param_name contains 'size'
+                    assign is_size = true
+                  endif
+                -%}
+                <ul class="grid {% if is_size %}grid-cols-3{% else %}grid-cols-2{% endif %} gap-3">
+                  {%- for value in filter.values -%}
+                    {%- if value.count == 0 -%}
+                      {%- continue -%}
+                    {%- endif -%}
+                    <li>
+                      {%- if is_colour -%}
+                        <div class="relative">
+                          <input
+                            type="checkbox"
+                            id="filter-{{ filter.param_name }}-{{ forloop.index }}"
+                            name="{{ value.param_name }}"
+                            value="{{ value.value }}"
+                            {% if value.active %}checked{% endif %}
+                            class="peer invisible absolute left-0 top-0 hidden size-full cursor-pointer opacity-0"
+                            data-filter-checkbox
+                          >
+                          <label
+                            for="filter-{{ filter.param_name }}-{{ forloop.index }}"
+                            class="flex w-full cursor-pointer items-center justify-center gap-2 border border-taupe-400 p-3 text-center peer-checked:border-taupe-900 peer-checked:bg-taupe-300 peer-hover:border-taupe-900"
+                          >
+                            <span class="size-5 rounded-full border border-taupe-300" style="background-color: {{ value.value }};"></span>
+                            <span>{{ value.label }}</span>
+                          </label>
+                        </div>
+                      {%- else -%}
+                        <div class="relative">
+                          <input
+                            type="checkbox"
+                            id="filter-{{ filter.param_name }}-{{ forloop.index }}"
+                            name="{{ value.param_name }}"
+                            value="{{ value.value }}"
+                            {% if value.active %}checked{% endif %}
+                            class="peer absolute left-0 top-0 hidden size-full cursor-pointer opacity-0"
+                            data-filter-checkbox
+                          >
+                          <label
+                            for="filter-{{ filter.param_name }}-{{ forloop.index }}"
+                            class="block w-full cursor-pointer border border-taupe-400 p-3 text-center peer-checked:border-taupe-900 peer-checked:bg-taupe-300 peer-hover:border-taupe-900"
+                          >
+                            {{ value.label }}
+                          </label>
+                        </div>
+                      {%- endif -%}
+                    </li>
+                  {%- endfor -%}
+                </ul>
+
+              {%- when 'price_range' -%}
+                <div class="mb-2 grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-2">
+                  <div class="flex flex-col">
+                    <label for="filter-price-min-{{ filter.param_name }}" class="text-sm">{{ 'sections.collection.price_min' | t }}</label>
+                    <input
+                      id="filter-price-min-{{ filter.param_name }}"
+                      type="number"
+                      name="{{ filter.min_value.param_name }}"
+                      placeholder="{{ 'sections.collection.price_min' | t }}"
+                      value="{{ filter.min_value.value }}"
+                      min="0"
+                      class="block h-8 w-full border border-neutral-300 text-center text-sm disabled:opacity-50"
+                    >
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="filter-price-max-{{ filter.param_name }}" class="text-sm">{{ 'sections.collection.price_max' | t }}</label>
+                    <input
+                      id="filter-price-max-{{ filter.param_name }}"
+                      type="number"
+                      name="{{ filter.max_value.param_name }}"
+                      placeholder="{{ 'sections.collection.price_max' | t }}"
+                      value="{{ filter.max_value.value }}"
+                      class="block h-8 w-full border border-neutral-300 text-center text-sm disabled:opacity-50"
+                    >
+                  </div>
+                </div>
+                <div class="flex gap-2">
+                  <div class="flex-1">
+                    <button type="submit" class="w-full bg-taupe-900 py-3 text-sm tracking-wider text-white transition-colors hover:bg-taupe-600">
+                      {{ 'sections.collection.price_apply' | t }}
+                    </button>
+                  </div>
+                </div>
+
+              {%- when 'boolean' -%}
+                <div class="relative">
+                  <input
+                    type="checkbox"
+                    id="filter-{{ filter.param_name }}"
+                    name="{{ filter.param_name }}"
+                    value="{{ filter.true_value.value }}"
+                    {% if filter.true_value.active %}checked{% endif %}
+                    class="peer absolute left-0 top-0 hidden size-full cursor-pointer opacity-0"
+                    data-filter-checkbox
+                  >
+                  <label
+                    for="filter-{{ filter.param_name }}"
+                    class="block w-full cursor-pointer border border-taupe-400 p-3 text-center text-sm peer-checked:border-taupe-900 peer-checked:bg-taupe-300 peer-hover:border-taupe-900"
+                  >
+                    {{ filter.true_value.label }}
+                  </label>
+                </div>
+            {%- endcase -%}
+          </div>
+        </div>
+      {%- endfor -%}
+    </form>
+  </div>
+
+  {%- comment -%} Bottom buttons (fixed to bottom of offcanvas) {%- endcomment -%}
+  <div data-filter-actions class="fixed bottom-0 left-0 grid w-full grid-cols-2 gap-4 bg-taupe-300 p-4">
+    <div>
+      <button
+        type="button"
+        data-filter-view-btn
+        class="w-full bg-taupe-900 py-3 text-center text-sm tracking-wider text-white transition-colors hover:bg-taupe-600"
+      >
+        {{ 'sections.collection.view_products' | t }}
+      </button>
+    </div>
+    <div>
+      <button
+        type="button"
+        data-filter-clear-btn
+        class="w-full border border-taupe-900 bg-white py-3 text-center text-sm tracking-wider transition-colors hover:bg-taupe-300 disabled:opacity-50"
+        {% unless has_active_filters %}disabled{% endunless %}
+      >
+        {{ 'sections.collection.clear_all' | t }}
+      </button>
+    </div>
+  </div>
+</div>
+
+{% javascript %}
+  (function() {
+    /* Accordion: single-open toggle via event delegation (survives AJAX replacements) */
+    document.addEventListener('click', function(e) {
+      var toggle = e.target.closest('[data-filter-toggle]');
+      if (!toggle) return;
+
+      var section = toggle.closest('[data-filter-section]');
+      if (!section) return;
+
+      var content = section.querySelector('[data-filter-content]');
+      var chevron = section.querySelector('[data-filter-chevron]');
+      if (!content) return;
+
+      var isOpen = !content.classList.contains('hidden');
+
+      /* Close all sections first (scope to the toggle's own form) */
+      var form = toggle.closest('form');
+      if (form) {
+        form.querySelectorAll('[data-filter-content]').forEach(function(c) {
+          c.classList.add('hidden');
+        });
+        form.querySelectorAll('[data-filter-chevron]').forEach(function(ch) {
+          ch.classList.remove('rotate-180');
+        });
+      }
+
+      /* Toggle this section (if it was closed, open it) */
+      if (!isOpen) {
+        content.classList.remove('hidden');
+        if (chevron) chevron.classList.add('rotate-180');
+      }
+    });
+  })();
+{% endjavascript %}

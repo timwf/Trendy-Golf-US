@@ -1,0 +1,59 @@
+{%- comment -%}
+  Individual brand card: logo (or name fallback) + CTAs.
+  CTAs slide up from below on hover on desktop, always visible on mobile.
+
+  @param {metaobject} brand - Brand metaobject entry
+{%- endcomment -%}
+
+{%- liquid
+  assign mens_url = brand.mens_collection.value.url
+  assign womens_url = brand.womens_collection.value.url
+  assign brand_page = brand.brand_page_shopify.value.url
+-%}
+
+{%- if brand.brand_image != blank -%}
+  <div class="my-3">
+    <img
+      class="mx-auto h-auto w-full object-contain"
+      src="{{ brand.brand_image | image_url: width: 400 }}"
+      srcset="{{ brand.brand_image | image_url: width: 200 }} 200w,
+              {{ brand.brand_image | image_url: width: 400 }} 400w,
+              {{ brand.brand_image | image_url: width: 600 }} 600w"
+      sizes="(min-width: 1280px) 16vw, (min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+      alt="{{ brand.brand_image.alt | default: brand.brand_name | append: ' logo' | escape }}"
+      loading="lazy"
+      width="400"
+      height="200"
+    >
+  </div>
+{%- else -%}
+  <p class="mb-2 text-center text-lg font-bold">{{ brand.brand_name }}</p>
+{%- endif -%}
+
+<div class="grid w-full grid-cols-2 gap-2 md:gap-4 lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2 lg:translate-y-full lg:px-2 lg:transition-transform lg:duration-300 group-hover:lg:translate-y-0">
+  {%- if brand_page != blank -%}
+    <a
+      href="{{ brand_page }}"
+      class="col-span-2 flex items-center justify-center whitespace-nowrap border border-clubhouse-green-800 bg-clubhouse-green-800 px-4 py-2 text-center text-xs font-medium tracking-wider text-white transition-colors hover:underline"
+    >
+      {{ 'sections.brand_listing.the_brand' | t }}
+    </a>
+  {%- else -%}
+    {%- if mens_url != blank -%}
+      <a
+        href="{{ mens_url }}"
+        class="flex items-center justify-center whitespace-nowrap border border-clubhouse-green-800 bg-clubhouse-green-800 px-4 py-2 text-center text-xs font-medium tracking-wider text-white transition-colors hover:underline{% if womens_url == blank %} col-span-2{% endif %}"
+      >
+        {{ 'sections.brand_listing.mens' | t }}
+      </a>
+    {%- endif -%}
+    {%- if womens_url != blank -%}
+      <a
+        href="{{ womens_url }}"
+        class="flex items-center justify-center whitespace-nowrap border border-clubhouse-green-800 bg-clubhouse-green-800 px-4 py-2 text-center text-xs font-medium tracking-wider text-white transition-colors hover:underline{% if mens_url == blank %} col-span-2{% endif %}"
+      >
+        {{ 'sections.brand_listing.womens' | t }}
+      </a>
+    {%- endif -%}
+  {%- endif -%}
+</div>

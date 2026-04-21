@@ -1,0 +1,76 @@
+{% doc %}
+  Renders social media icon links from global theme settings.
+  Uses custom SVGs matching the source site style (square framed icons).
+
+  @param {string} [class] - Additional CSS classes for the wrapper ul
+
+  @example
+  {% render 'social-links' %}
+  {% render 'social-links', class: 'justify-center' %}
+{% enddoc %}
+
+{%- liquid
+  assign wrapper_class = 'flex items-center gap-2'
+  if class
+    assign wrapper_class = wrapper_class | append: ' ' | append: class
+  endif
+-%}
+
+{%- if settings.social_instagram != blank or settings.social_facebook != blank or settings.social_twitter != blank or settings.social_tiktok != blank or settings.social_youtube != blank -%}
+  <ul class="{{ wrapper_class }}">
+    {%- if settings.social_instagram != blank -%}
+      <li>
+        <a href="{{ settings.social_instagram }}" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none" class="size-8" aria-hidden="true">
+            <path d="M16.3277 20.6553C18.9939 20.6553 21.1553 18.4939 21.1553 15.8277C21.1553 13.1614 18.9939 11 16.3277 11C13.6614 11 11.5 13.1614 11.5 15.8277C11.5 18.4939 13.6614 20.6553 16.3277 20.6553Z" stroke="currentColor" stroke-miterlimit="10"/>
+            <path d="M22.5344 10.5688C23.1057 10.5688 23.5688 10.1057 23.5688 9.53438C23.5688 8.96311 23.1057 8.5 22.5344 8.5C21.9631 8.5 21.5 8.96311 21.5 9.53438C21.5 10.1057 21.9631 10.5688 22.5344 10.5688Z" fill="currentColor"/>
+            <rect x="6.5" y="6" width="20" height="20" rx="2" stroke="currentColor"/>
+          </svg>
+        </a>
+      </li>
+    {%- endif -%}
+
+    {%- if settings.social_facebook != blank -%}
+      <li>
+        <a href="{{ settings.social_facebook }}" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none" class="size-8" aria-hidden="true">
+            <path d="M16.4996 25.9999V13.0675C16.4996 12.3399 16.7886 11.6422 17.303 11.1277C17.8175 10.6132 18.5153 10.3242 19.2428 10.3242C20.5931 10.3242 21.4358 10.7242 22.0136 11.4718M14.1758 15.615H19.6623" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="6.5" y="6" width="20" height="20" rx="2" stroke="currentColor"/>
+          </svg>
+        </a>
+      </li>
+    {%- endif -%}
+
+    {%- if settings.social_twitter != blank -%}
+      <li>
+        <a href="{{ settings.social_twitter }}" target="_blank" rel="noopener noreferrer" aria-label="X">
+          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none" class="size-8" aria-hidden="true">
+            <path d="M15.068 16.9269L7.11886 25.9989M24.3937 6.00114L17.3251 14.3257M6.5 6L22.18 26H26.5L10.8206 6H6.5Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </li>
+    {%- endif -%}
+
+    {%- if settings.social_tiktok != blank -%}
+      <li>
+        <a href="{{ settings.social_tiktok }}" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none" class="size-8" aria-hidden="true">
+            <rect x="6.5" y="6" width="20" height="20" rx="2" stroke="currentColor"/>
+            <path d="M20.5 13.5C20.5 13.5 21.5 15 23.5 15M20.5 13.5V21C20.5 22.933 18.933 24.5 17 24.5C15.067 24.5 13.5 22.933 13.5 21C13.5 19.067 15.067 17.5 17 17.5M20.5 13.5V9.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </li>
+    {%- endif -%}
+
+    {%- if settings.social_youtube != blank -%}
+      <li>
+        <a href="{{ settings.social_youtube }}" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none" class="size-8" aria-hidden="true">
+            <rect x="6.5" y="6" width="20" height="20" rx="2" stroke="currentColor"/>
+            <path d="M14.5 13L21.5 16L14.5 19V13Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </li>
+    {%- endif -%}
+  </ul>
+{%- endif -%}

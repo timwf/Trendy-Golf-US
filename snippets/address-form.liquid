@@ -1,0 +1,141 @@
+{% doc %}
+  Renders the customer address form (create or edit).
+  Source: _reference/repo/app/components/forms/address.tsx
+
+  @param {object} address - Shopify customer_address object. Use customer.new_address for new addresses.
+  @param {boolean} [is_new] - True for create, false for edit. Controls submit button label + icon.
+  @param {string} form_id - Unique form id prefix (used for per-field ids). Required.
+{% enddoc %}
+
+{%- form 'customer_address', address -%}
+  {%- if form.errors -%}
+    <div class="mb-4 border border-red-600 bg-red-100 p-3 text-sm text-red-700">
+      {{ form.errors | default_errors }}
+    </div>
+  {%- endif -%}
+
+  <div class="mb-6 grid grid-cols-1 gap-4 lg:grid-cols-2">
+    <div class="col-span-1">
+      {% render 'form-input',
+        name: 'address[first_name]',
+        id: form_id | append: '_first_name',
+        label: 'First name',
+        placeholder: 'Enter your first name',
+        value: address.first_name,
+        autocomplete: 'given-name',
+        required: true
+      %}
+    </div>
+    <div class="col-span-1">
+      {% render 'form-input',
+        name: 'address[last_name]',
+        id: form_id | append: '_last_name',
+        label: 'Last name',
+        placeholder: 'Enter your surname',
+        value: address.last_name,
+        autocomplete: 'family-name',
+        required: true
+      %}
+    </div>
+    <div class="col-span-1">
+      {% render 'form-input',
+        name: 'address[address1]',
+        id: form_id | append: '_address1',
+        label: 'Address line 1',
+        placeholder: 'Enter address line',
+        value: address.address1,
+        autocomplete: 'address-line1',
+        required: true
+      %}
+    </div>
+    <div class="col-span-1">
+      {% render 'form-input',
+        name: 'address[address2]',
+        id: form_id | append: '_address2',
+        label: 'Address line 2',
+        placeholder: 'Enter address line',
+        value: address.address2,
+        autocomplete: 'address-line2'
+      %}
+    </div>
+    <div class="col-span-1">
+      {% render 'form-input',
+        name: 'address[city]',
+        id: form_id | append: '_city',
+        label: 'Town / City',
+        placeholder: 'Enter town/city',
+        value: address.city,
+        autocomplete: 'address-level2',
+        required: true
+      %}
+    </div>
+    <div class="col-span-1">
+      {% render 'form-input',
+        name: 'address[zip]',
+        id: form_id | append: '_zip',
+        label: 'Zip / Postcode',
+        placeholder: 'Enter postal code',
+        value: address.zip,
+        autocomplete: 'postal-code',
+        required: true
+      %}
+    </div>
+    <div class="col-span-1">
+      <label for="{{ form_id }}_country" class="mb-2 flex items-end justify-between text-sm">
+        <span>Country <span class="text-red-500">*</span></span>
+      </label>
+      <div class="relative">
+        <select
+          id="{{ form_id }}_country"
+          name="address[country]"
+          class="block w-full appearance-none border border-taupe-600 bg-taupe-100 px-4 py-3 focus:outline-none"
+          data-address-country
+          data-address-form="{{ form_id }}"
+          required
+        >
+          {{ country_option_tags }}
+        </select>
+        <div class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+          {% render 'icon', icon: 'chevron-down', size: 'size-4' %}
+        </div>
+      </div>
+    </div>
+    <div class="col-span-1" data-address-province-wrapper="{{ form_id }}" hidden>
+      <label for="{{ form_id }}_province" class="mb-2 flex items-end justify-between text-sm">
+        <span>Province</span>
+      </label>
+      <div class="relative">
+        <select
+          id="{{ form_id }}_province"
+          name="address[province]"
+          class="block w-full appearance-none border border-taupe-600 bg-taupe-100 px-4 py-3 focus:outline-none"
+          data-address-province="{{ form_id }}"
+          data-default="{{ address.province }}"
+        ></select>
+        <div class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2">
+          {% render 'icon', icon: 'chevron-down', size: 'size-4' %}
+        </div>
+      </div>
+    </div>
+    <div class="col-span-1">
+      {% render 'form-input',
+        name: 'address[phone]',
+        id: form_id | append: '_phone',
+        label: 'Phone number',
+        type: 'tel',
+        placeholder: 'Enter your phone number',
+        value: address.phone,
+        autocomplete: 'tel',
+        required: true
+      %}
+    </div>
+  </div>
+
+  <div>
+    {%- if is_new -%}
+      {% render 'form-button', label: 'Add address', type: 'submit' %}
+    {%- else -%}
+      {% render 'form-button', label: 'Save address', type: 'submit', icon: 'arrow-down-tray' %}
+    {%- endif -%}
+  </div>
+{%- endform -%}

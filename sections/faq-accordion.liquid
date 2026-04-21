@@ -1,0 +1,340 @@
+{%- liquid
+  case section.settings.margin_bottom
+    when 'none'
+      assign margin_class = ''
+    when 'small'
+      assign margin_class = 'mb-8'
+    when 'medium'
+      assign margin_class = 'lg:mb-14 mb-8'
+    when 'large'
+      assign margin_class = 'lg:mb-28 mb-20'
+  endcase
+
+  assign heading_size_class = 'text-4xl lg:text-5xl'
+  if section.settings.heading_size == 'h1'
+    assign heading_size_class = 'text-5xl lg:text-6xl'
+  elsif section.settings.heading_size == 'h3'
+    assign heading_size_class = 'text-3xl lg:text-4xl'
+  endif
+
+  assign heading_font_class = 'font-serif'
+  if section.settings.heading_font == 'sans'
+    assign heading_font_class = 'font-sans'
+  endif
+
+  comment
+    Collect category block titles in order (used as filter tabs + group order).
+  endcomment
+  assign category_titles_raw = ''
+  for block in section.blocks
+    if block.type == 'category' and block.settings.title != blank
+      assign category_titles_raw = category_titles_raw | append: block.settings.title | append: '|||'
+    endif
+  endfor
+  assign category_list = category_titles_raw | split: '|||' | uniq
+-%}
+
+<section
+  id="faq-accordion-{{ section.id }}"
+  class="page-block relative page-block--faqsBlock {{ margin_class }} bg-transparent"
+  data-faq-section
+>
+  <div class="container-narrow">
+    {%- if section.settings.heading != blank -%}
+      <div class="mb-10 text-center">
+        {%- if section.settings.heading_tag == 'h2' -%}
+          <h2><span class="{{ heading_font_class }}"><span class="{{ heading_size_class }}">{{ section.settings.heading }}</span></span></h2>
+        {%- else -%}
+          <h1><span class="{{ heading_font_class }}"><span class="{{ heading_size_class }}">{{ section.settings.heading }}</span></span></h1>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- unless section.settings.hide_filters -%}
+      {%- if category_list.size > 0 -%}
+        <div class="mb-6 overflow-x-auto pb-2">
+          <div class="mx-auto inline-flex flex-nowrap justify-center md:mb-10 md:flex xl:w-3/4">
+            <div>
+              <button
+                type="button"
+                data-faq-tab=""
+                data-active="true"
+                class="whitespace-nowrap border-b px-6 py-3 focus:outline-none lg:px-10 lg:py-4 lg:text-lg border-clubhouse-green-600 text-clubhouse-green-600"
+              >
+                All
+              </button>
+            </div>
+            {%- for cat in category_list -%}
+              {%- assign cat_slug = cat | handleize -%}
+              <div>
+                <button
+                  type="button"
+                  data-faq-tab="{{ cat_slug }}"
+                  data-active="false"
+                  class="whitespace-nowrap border-b px-6 py-3 focus:outline-none lg:px-10 lg:py-4 lg:text-lg border-taupe-400 text-taupe-700"
+                >
+                  {{ cat }}
+                </button>
+              </div>
+            {%- endfor -%}
+          </div>
+        </div>
+      {%- endif -%}
+    {%- endunless -%}
+
+    {%- if section.settings.hide_filters -%}
+      {%- comment -%} Flat accordion — all faq blocks in order {%- endcomment -%}
+      <div>
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'faq' and block.settings.question != blank -%}
+            <div data-accordion {{ block.shopify_attributes }}>
+              <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
+                <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ block.settings.question }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="size-6 flex-none transition-transform" data-accordion-icon>
+                  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
+                </svg>
+              </button>
+              <div class="overflow-hidden" style="height:0" data-accordion-panel>
+                <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
+                  {{ block.settings.answer }}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    {%- else -%}
+      {%- comment -%} Grouped by category block title; match faq blocks by category_title {%- endcomment -%}
+      {%- for cat in category_list -%}
+        {%- assign cat_slug = cat | handleize -%}
+        <div class="mb-8" data-faq-group="{{ cat_slug }}">
+          <h4 class="text-xl lg:text-2xl font-semibold text-center">{{ cat }}</h4>
+          {%- for block in section.blocks -%}
+            {%- if block.type == 'faq' and block.settings.question != blank and block.settings.category_title == cat -%}
+              <div data-accordion {{ block.shopify_attributes }}>
+                <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
+                  <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ block.settings.question }}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="size-6 flex-none transition-transform" data-accordion-icon>
+                    <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+                <div class="overflow-hidden" style="height:0" data-accordion-panel>
+                  <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
+                    {{ block.settings.answer }}
+                  </div>
+                </div>
+              </div>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endfor -%}
+    {%- endif -%}
+  </div>
+</section>
+
+<script>
+  (function () {
+    var section = document.getElementById('faq-accordion-{{ section.id }}');
+    if (!section) return;
+
+    var accordions = section.querySelectorAll('[data-accordion]');
+
+    function closeAccordion(accordion) {
+      var panel = accordion.querySelector('[data-accordion-panel]');
+      var icon = accordion.querySelector('[data-accordion-icon]');
+      var title = accordion.querySelector('[data-accordion-title]');
+      if (!panel || panel.style.height === '0px' || panel.style.height === '0') return;
+      panel.style.height = panel.scrollHeight + 'px';
+      requestAnimationFrame(function () {
+        panel.style.transition = 'height 0.3s ease';
+        panel.style.height = '0';
+      });
+      if (icon) icon.style.transform = '';
+      if (title) title.classList.remove('text-clubhouse-green-600');
+    }
+
+    accordions.forEach(function (accordion) {
+      var btn = accordion.querySelector('[data-accordion-btn]');
+      var panel = accordion.querySelector('[data-accordion-panel]');
+      var icon = accordion.querySelector('[data-accordion-icon]');
+      var title = accordion.querySelector('[data-accordion-title]');
+      if (!btn || !panel) return;
+
+      btn.addEventListener('click', function () {
+        var isOpen = panel.style.height !== '0px' && panel.style.height !== '0';
+
+        accordions.forEach(function (other) {
+          if (other !== accordion) closeAccordion(other);
+        });
+
+        if (isOpen) {
+          panel.style.height = panel.scrollHeight + 'px';
+          requestAnimationFrame(function () {
+            panel.style.transition = 'height 0.3s ease';
+            panel.style.height = '0';
+          });
+          if (icon) icon.style.transform = '';
+          if (title) title.classList.remove('text-clubhouse-green-600');
+        } else {
+          panel.style.transition = 'height 0.3s ease';
+          panel.style.height = panel.scrollHeight + 'px';
+          if (icon) icon.style.transform = 'rotate(180deg)';
+          if (title) title.classList.add('text-clubhouse-green-600');
+          panel.addEventListener('transitionend', function handler() {
+            panel.style.height = 'auto';
+            panel.removeEventListener('transitionend', handler);
+          });
+        }
+      });
+    });
+
+    var tabs = section.querySelectorAll('[data-faq-tab]');
+    var groups = section.querySelectorAll('[data-faq-group]');
+
+    var activeClasses = ['border-clubhouse-green-600', 'text-clubhouse-green-600'];
+    var inactiveClasses = ['border-taupe-400', 'text-taupe-700'];
+
+    function setTabState(tab, active) {
+      tab.setAttribute('data-active', active ? 'true' : 'false');
+      if (active) {
+        inactiveClasses.forEach(function (c) { tab.classList.remove(c); });
+        activeClasses.forEach(function (c) { tab.classList.add(c); });
+      } else {
+        activeClasses.forEach(function (c) { tab.classList.remove(c); });
+        inactiveClasses.forEach(function (c) { tab.classList.add(c); });
+      }
+    }
+
+    function applyFilter(slug) {
+      groups.forEach(function (group) {
+        if (!slug || group.getAttribute('data-faq-group') === slug) {
+          group.style.display = '';
+        } else {
+          group.style.display = 'none';
+        }
+      });
+      accordions.forEach(closeAccordion);
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var slug = tab.getAttribute('data-faq-tab');
+        tabs.forEach(function (t) { setTabState(t, t === tab); });
+        applyFilter(slug);
+      });
+    });
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.faq_accordion.name",
+  "tag": "section",
+  "class": "page-block--faqsBlock",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.faq_accordion.settings.heading.label",
+      "default": "FAQs"
+    },
+    {
+      "type": "select",
+      "id": "heading_tag",
+      "label": "t:sections.faq_accordion.settings.heading_tag.label",
+      "options": [
+        { "value": "h1", "label": "t:sections.faq_accordion.settings.heading_tag.options.h1" },
+        { "value": "h2", "label": "t:sections.faq_accordion.settings.heading_tag.options.h2" }
+      ],
+      "default": "h1"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "label": "t:sections.faq_accordion.settings.heading_size.label",
+      "options": [
+        { "value": "h1", "label": "t:sections.faq_accordion.settings.heading_size.options.h1" },
+        { "value": "h2", "label": "t:sections.faq_accordion.settings.heading_size.options.h2" },
+        { "value": "h3", "label": "t:sections.faq_accordion.settings.heading_size.options.h3" }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "select",
+      "id": "heading_font",
+      "label": "t:sections.faq_accordion.settings.heading_font.label",
+      "options": [
+        { "value": "serif", "label": "t:sections.faq_accordion.settings.heading_font.options.serif" },
+        { "value": "sans", "label": "t:sections.faq_accordion.settings.heading_font.options.sans" }
+      ],
+      "default": "serif"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_filters",
+      "label": "t:sections.faq_accordion.settings.hide_filters.label",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "t:sections.faq_accordion.settings.margin_bottom.label",
+      "options": [
+        { "value": "none", "label": "t:sections.faq_accordion.settings.margin_bottom.options.none" },
+        { "value": "small", "label": "t:sections.faq_accordion.settings.margin_bottom.options.small" },
+        { "value": "medium", "label": "t:sections.faq_accordion.settings.margin_bottom.options.medium" },
+        { "value": "large", "label": "t:sections.faq_accordion.settings.margin_bottom.options.large" }
+      ],
+      "default": "large"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "t:sections.faq_accordion.blocks.category.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "t:sections.faq_accordion.blocks.category.settings.title.label",
+          "default": "Category"
+        }
+      ]
+    },
+    {
+      "type": "faq",
+      "name": "t:sections.faq_accordion.blocks.faq.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category_title",
+          "label": "t:sections.faq_accordion.blocks.faq.settings.category_title.label",
+          "info": "t:sections.faq_accordion.blocks.faq.settings.category_title.info"
+        },
+        {
+          "type": "text",
+          "id": "question",
+          "label": "t:sections.faq_accordion.blocks.faq.settings.question.label",
+          "default": "Question?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "t:sections.faq_accordion.blocks.faq.settings.answer.label",
+          "default": "<p>Answer content.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.faq_accordion.presets.name",
+      "blocks": [
+        { "type": "category" },
+        { "type": "faq" },
+        { "type": "faq" }
+      ]
+    }
+  ]
+}
+{% endschema %}

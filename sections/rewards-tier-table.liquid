@@ -1,0 +1,305 @@
+{%- liquid
+  assign columns = section.blocks | where: 'type', 'column'
+  assign rows = section.blocks | where: 'type', 'row'
+  assign col_count = columns | size
+  assign tier_col_count = col_count | minus: 1
+
+  capture grid_cols
+    echo '1.5fr'
+    for i in (1..tier_col_count)
+      echo ' 1fr'
+    endfor
+  endcapture
+
+  case section.settings.margin_bottom
+    when 'none'
+      assign margin_class = ''
+    when 'small'
+      assign margin_class = 'mb-8'
+    when 'medium'
+      assign margin_class = 'lg:mb-14 mb-8'
+    when 'large'
+      assign margin_class = 'lg:mb-20 mb-14'
+  endcase
+
+  case section.settings.cta_style
+    when 'dark-grey'
+      assign btn_style_class = 'bg-taupe-900 text-white enabled:hover:bg-taupe-600'
+    when 'white'
+      assign btn_style_class = 'bg-white text-taupe-900 enabled:hover:bg-neutral-100'
+    when 'transparent'
+      assign btn_style_class = 'bg-transparent transition-colors enabled:hover:bg-transparent enabled:hover:text-clubhouse-green-600'
+  endcase
+-%}
+
+<section
+  id="rewards-tier-table-{{ section.id }}"
+  class="page-block page-block--rewardsTierTable {{ margin_class }} bg-transparent"
+>
+  <div class="m-auto max-w-screen-xl">
+    {%- if section.settings.top_content != blank -%}
+      <div class="container mb-12 max-w-3xl text-center">
+        <div class="rte">
+          {{ section.settings.top_content }}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if col_count > 0 -%}
+      <div class="overflow-x-scroll px-6 md:overflow-auto 2xl:container">
+        <div class="min-w-[720px] bg-taupe-300 px-6 py-10 lg:min-w-full">
+          <div class="grid" style="grid-template-columns: {{ grid_cols | strip }}">
+            {%- for col in columns -%}
+              {%- liquid
+                case col.settings.text_colour
+                  when 'bronze'
+                    assign tier_colour_class = 'text-amber-700'
+                  when 'silver'
+                    assign tier_colour_class = 'text-taupe-700'
+                  when 'gold'
+                    assign tier_colour_class = 'text-yellow-600'
+                  when 'black'
+                    assign tier_colour_class = 'text-taupe-900'
+                  when 'green'
+                    assign tier_colour_class = 'text-clubhouse-green-600'
+                  else
+                    assign tier_colour_class = ''
+                endcase
+
+                assign tier_icon_name = blank
+                if col.settings.show_icon
+                  if col.settings.icon == 'star'
+                    assign tier_icon_name = 'tier-star'
+                  elsif col.settings.icon == 'trophy'
+                    assign tier_icon_name = 'tier-trophy'
+                  endif
+                endif
+              -%}
+              <div class="flex flex-col items-center justify-end first-of-type:items-start"
+                   {{ col.shopify_attributes }}>
+                {%- if tier_icon_name != blank -%}
+                  {% render 'icon', icon: tier_icon_name, size: 'size-12', class: tier_colour_class %}
+                {%- endif -%}
+                <div class="text-center text-lg font-bold md:text-xl {{ tier_colour_class }}">
+                  {{ col.settings.header }}
+                </div>
+              </div>
+            {%- endfor -%}
+          </div>
+
+          <div class="my-4 border-b border-taupe-600"></div>
+
+          <div class="grid gap-4">
+            {%- for row in rows -%}
+              <div class="grid min-h-12" style="grid-template-columns: {{ grid_cols | strip }}" {{ row.shopify_attributes }}>
+                <div class="flex items-center font-bold">
+                  <span>{{ row.settings.label }}</span>
+                </div>
+                {%- for n in (1..4) -%}
+                  {%- if n <= tier_col_count -%}
+                    {%- assign check_key = 'tier_' | append: n -%}
+                    {%- assign is_checked = row.settings[check_key] -%}
+                    <div class="flex items-center justify-center">
+                      {%- if is_checked -%}
+                        {% render 'icon', icon: 'rewards-check', size: 'size-6', class: 'text-clubhouse-green-600' %}
+                      {%- else -%}
+                        {% render 'icon', icon: 'rewards-cross', size: 'size-6', class: 'text-taupe-700' %}
+                      {%- endif -%}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+            {%- endfor -%}
+          </div>
+
+          {%- assign has_footer = false -%}
+          {%- for col in columns -%}
+            {%- if col.settings.footer_text != blank -%}
+              {%- assign has_footer = true -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+
+          {%- if has_footer -%}
+            <div class="grid pt-8" style="grid-template-columns: {{ grid_cols | strip }}">
+              {%- for col in columns -%}
+                <span class="text-center text-xs text-taupe-700 first-of-type:text-left first-of-type:font-bold">
+                  {{ col.settings.footer_text }}
+                </span>
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.cta_label != blank -%}
+      <div class="flex justify-center pt-10">
+        <a href="{{ section.settings.cta_link | default: '/account' }}"
+           class="flex items-center justify-center gap-2 px-4 py-3 lg:px-10 min-w-40 text-center text-sm tracking-wider transition-all {{ btn_style_class }}">
+          <span>{{ section.settings.cta_label }}</span>
+        </a>
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Rewards Tier Table",
+  "tag": "section",
+  "class": "page-block--rewardsTierTable",
+  "settings": [
+    {
+      "type": "richtext",
+      "id": "top_content",
+      "label": "Top content",
+      "info": "Heading + intro paragraph shown above the table."
+    },
+    {
+      "type": "header",
+      "content": "Call to action"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Button label",
+      "default": "Join Now"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "cta_style",
+      "label": "Button style",
+      "options": [
+        { "value": "dark-grey", "label": "Dark grey" },
+        { "value": "white", "label": "White" },
+        { "value": "transparent", "label": "Transparent" }
+      ],
+      "default": "dark-grey"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Margin bottom",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "medium"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Tier column",
+      "limit": 5,
+      "settings": [
+        {
+          "type": "text",
+          "id": "header",
+          "label": "Header text",
+          "info": "First column is the reward label column (e.g. \"Reward\"). Subsequent columns are tier names (e.g. \"Bronze\", \"Silver\"). Add the label column first, then tier columns in order.",
+          "default": "Tier"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_icon",
+          "label": "Show icon",
+          "default": true
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "none", "label": "None" },
+            { "value": "star", "label": "Star" },
+            { "value": "trophy", "label": "Trophy" }
+          ],
+          "default": "star"
+        },
+        {
+          "type": "select",
+          "id": "text_colour",
+          "label": "Text colour",
+          "options": [
+            { "value": "default", "label": "Default" },
+            { "value": "bronze", "label": "Bronze" },
+            { "value": "silver", "label": "Silver" },
+            { "value": "gold", "label": "Gold" },
+            { "value": "black", "label": "Black" },
+            { "value": "green", "label": "Green" }
+          ],
+          "default": "default"
+        },
+        {
+          "type": "text",
+          "id": "footer_text",
+          "label": "Footer text",
+          "info": "Shown below the rows (e.g. \"Points Required\", \"Spend £250\"). Leave blank on all columns to hide the footer row."
+        }
+      ]
+    },
+    {
+      "type": "row",
+      "name": "Reward row",
+      "limit": 20,
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Reward label",
+          "default": "Reward name"
+        },
+        {
+          "type": "checkbox",
+          "id": "tier_1",
+          "label": "Tier column 1 — included",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "tier_2",
+          "label": "Tier column 2 — included",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "tier_3",
+          "label": "Tier column 3 — included",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "tier_4",
+          "label": "Tier column 4 — included",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Rewards Tier Table",
+      "blocks": [
+        { "type": "column", "settings": { "header": "Reward", "show_icon": false, "icon": "none", "text_colour": "default", "footer_text": "Points Required" } },
+        { "type": "column", "settings": { "header": "Bronze", "icon": "star", "text_colour": "bronze", "footer_text": "Join TGCC" } },
+        { "type": "column", "settings": { "header": "Silver", "icon": "star", "text_colour": "silver", "footer_text": "Spend £250" } },
+        { "type": "column", "settings": { "header": "Gold", "icon": "star", "text_colour": "gold", "footer_text": "Spend £500" } },
+        { "type": "column", "settings": { "header": "Black", "icon": "trophy", "text_colour": "black", "footer_text": "Spend £3,000" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

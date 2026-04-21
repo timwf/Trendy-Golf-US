@@ -1,0 +1,119 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "Explore our range",
+            "heading": "Nike",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1166084931",
+            "video_url_mobile": "https://vimeo.com/1166084801",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 5,
+            "button_label": "Shop Now",
+            "button_link": "/collections/mens-nike",
+            "button_style": "white"
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "aria_label": "Hero slideshow",
+        "margin_bottom": "medium"
+      }
+    },
+    "product_carousel_1": {
+      "type": "product-carousel-tabs",
+      "settings": {
+        "title": "New In Nike",
+        "tab_1_label": "Men",
+        "tab_1_products": [
+          "dri-fit-fairway-fresh-loose-polo-mineral-slate-limestone",
+          "dri-fit-fairway-fresh-wind-vest-black-limestone",
+          "victory-tour-4-spiked-golf-shoes-summit-white-metallic-silver-court-blue",
+          "dri-fit-victory-blocked-polo-smokey-blue-obsidian-white",
+          "therma-fit-par-5-crew-neck-black-white",
+          "air-max-95-spikeless-golf-shoes-white-black-light-graphite",
+          "dri-fit-fairway-fresh-wind-vest-sail-limestone",
+          "dri-fit-par-5-solid-polo-white-black"
+        ],
+        "tab_2_label": "",
+        "tab_2_products": [],
+        "tab_3_label": "",
+        "tab_3_products": []
+      }
+    },
+    "banner_cards_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "Shop All",
+            "image": "shopify://shop_images/01-shop-all_a9a320f4-3e6e-49d8-be6e-becf220ece45.jpg",
+            "link": "/collections/mens-nike",
+            "button_label": "Shop Now"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "Trousers",
+            "image": "shopify://shop_images/02-trousers_59010520-9f2c-4b06-ade2-25a68bebb140.jpg",
+            "link": "/collections/men-nike-trousers",
+            "button_label": "Shop Now"
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "heading": "Footwear",
+            "image": "shopify://shop_images/03-footwear_f974ce25-2830-435c-bfed-d5ec2716efd1.jpg",
+            "link": "/collections/mens-nike-golf-shoes",
+            "button_label": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
+      "settings": {
+        "layout": "grid",
+        "columns": 3,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "small",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    }
+  },
+  "order": [
+    "hero_1",
+    "product_carousel_1",
+    "banner_cards_1"
+  ]
+}

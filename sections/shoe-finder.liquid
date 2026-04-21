@@ -1,0 +1,671 @@
+{%- liquid
+  assign total_questions = section.blocks.size
+-%}
+
+{%- comment -%} Pre-load Splide for shoe detail modal {%- endcomment -%}
+{{ 'splide.min.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'splide.min.js' | asset_url }}" defer></script>
+
+<div class="relative h-dvh overflow-hidden" data-sf-root data-hero>
+  {%- comment -%} Slide 0 — Intro {%- endcomment -%}
+  <div class="absolute inset-0 z-1 flex min-h-dvh items-center justify-center text-center text-white transition-all duration-500 ease-in-out translate-y-2 opacity-0 pointer-events-none" data-sf-slide="intro">
+    <div class="container">
+      <div class="mb-10">
+        <h1><span class="font-serif"><span class="text-4xl lg:text-5xl">{{ section.settings.heading }}</span></span></h1>
+      </div>
+      {%- if section.settings.cta_label != blank -%}
+        <button class="flex items-center gap-2 text-center text-sm tracking-wider transition-all uppercase justify-center px-4 py-3 lg:px-10 min-w-40 bg-white text-taupe-900 enabled:hover:bg-neutral-100 mx-auto" data-sf-start>
+          <span>{{ section.settings.cta_label }}</span>
+          {%- render 'icon', icon: 'chevron-right', size: 'size-4' -%}
+        </button>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- comment -%} Slides 1–N — Questions {%- endcomment -%}
+  {%- for block in section.blocks -%}
+    {%- liquid
+      assign has_answer_3 = false
+      if block.settings.answer_3_tag != blank
+        assign has_answer_3 = true
+      endif
+      assign container_max = 'max-w-3xl'
+      if has_answer_3
+        assign container_max = 'max-w-6xl'
+      endif
+      assign grid_cols = 'grid-cols-2'
+      if has_answer_3
+        assign grid_cols = 'grid-cols-2 md:grid-cols-3'
+      endif
+    -%}
+    <div class="absolute inset-0 z-1 flex min-h-dvh items-center justify-center text-center text-white transition-all duration-500 ease-in-out translate-y-2 opacity-0 pointer-events-none" data-sf-slide="question" data-sf-index="{{ forloop.index }}" {{ block.shopify_attributes }}>
+      <div class="container {{ container_max }}">
+        <p>{{ forloop.index }}/{{ total_questions }}</p>
+
+        <div class="mb-10">
+          <h2 class="mb-10 font-serif text-3xl lg:text-4xl">{{ block.settings.question }}</h2>
+
+          <div class="mb-5 grid gap-5 {{ grid_cols }}">
+            {%- comment -%} Answer 1 {%- endcomment -%}
+            <button class="group relative block aspect-square" data-sf-answer data-sf-tag="{{ block.settings.answer_1_tag }}">
+              <div class="relative z-2 flex size-full flex-col justify-end p-3 text-white md:p-5">
+                <p class="mb-0 font-semibold md:text-lg">{{ block.settings.answer_1_label }}</p>
+              </div>
+              <div class="absolute left-0 top-0 z-1 size-full bg-gradient-to-b from-black/10 to-black/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+              <div class="absolute bottom-0 left-0 z-1 h-1/3 w-full bg-gradient-to-b from-black/0 to-black/60"></div>
+              {%- if block.settings.answer_1_image != blank -%}
+                <img class="absolute left-0 top-0 size-full object-cover" src="{{ block.settings.answer_1_image | image_url: width: 1080 }}" alt="{{ block.settings.answer_1_label | escape }}" loading="eager" width="1080" height="1080">
+              {%- endif -%}
+            </button>
+
+            {%- comment -%} Answer 2 {%- endcomment -%}
+            <button class="group relative block aspect-square" data-sf-answer data-sf-tag="{{ block.settings.answer_2_tag }}">
+              <div class="relative z-2 flex size-full flex-col justify-end p-3 text-white md:p-5">
+                <p class="mb-0 font-semibold md:text-lg">{{ block.settings.answer_2_label }}</p>
+              </div>
+              <div class="absolute left-0 top-0 z-1 size-full bg-gradient-to-b from-black/10 to-black/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+              <div class="absolute bottom-0 left-0 z-1 h-1/3 w-full bg-gradient-to-b from-black/0 to-black/60"></div>
+              {%- if block.settings.answer_2_image != blank -%}
+                <img class="absolute left-0 top-0 size-full object-cover" src="{{ block.settings.answer_2_image | image_url: width: 1080 }}" alt="{{ block.settings.answer_2_label | escape }}" loading="eager" width="1080" height="1080">
+              {%- endif -%}
+            </button>
+
+            {%- comment -%} Answer 3 (optional) {%- endcomment -%}
+            {%- if has_answer_3 -%}
+              <button class="group relative block aspect-square" data-sf-answer data-sf-tag="{{ block.settings.answer_3_tag }}">
+                <div class="relative z-2 flex size-full flex-col justify-end p-3 text-white md:p-5">
+                  <p class="mb-0 font-semibold md:text-lg">{{ block.settings.answer_3_label }}</p>
+                </div>
+                <div class="absolute left-0 top-0 z-1 size-full bg-gradient-to-b from-black/10 to-black/30 opacity-0 transition-opacity duration-500 group-hover:opacity-100"></div>
+                <div class="absolute bottom-0 left-0 z-1 h-1/3 w-full bg-gradient-to-b from-black/0 to-black/60"></div>
+                {%- if block.settings.answer_3_image != blank -%}
+                  <img class="absolute left-0 top-0 size-full object-cover" src="{{ block.settings.answer_3_image | image_url: width: 1080 }}" alt="{{ block.settings.answer_3_label | escape }}" loading="eager" width="1080" height="1080">
+                {%- endif -%}
+              </button>
+            {%- endif -%}
+          </div>
+
+          {%- if block.settings.skip_label != blank -%}
+            <div>
+              <button class="flex items-center gap-2 text-center text-sm tracking-wider transition-all uppercase justify-center px-4 py-3 lg:px-10 min-w-40 bg-white text-taupe-900 enabled:hover:bg-neutral-100 w-full" data-sf-skip>
+                <span>{{ block.settings.skip_label }}</span>
+                {%- render 'icon', icon: 'chevron-right', size: 'size-4' -%}
+              </button>
+            </div>
+          {%- endif -%}
+        </div>
+
+        <div class="flex justify-center">
+          <button class="flex items-center gap-2 text-center text-sm tracking-wider transition-all uppercase justify-center min-w-40 text-white" data-sf-skip-all>
+            <span>Skip to footwear wall</span>
+            {%- render 'icon', icon: 'chevron-right', size: 'size-4' -%}
+          </button>
+        </div>
+      </div>
+    </div>
+  {%- endfor -%}
+
+  {%- comment -%} Slide N+1 — Outro {%- endcomment -%}
+  <div class="absolute inset-0 z-1 flex min-h-dvh items-center justify-center text-center text-white transition-opacity duration-500 ease-in-out opacity-0 pointer-events-none" data-sf-slide="outro">
+    <div class="container max-w-3xl">
+      <div class="text-center text-white">
+        <h2><span class="font-serif"><span class="text-4xl lg:text-5xl">{{ section.settings.outro_heading }}</span></span></h2>
+        {%- if section.settings.outro_text != blank -%}
+          <p>{{ section.settings.outro_text }}</p>
+        {%- endif -%}
+      </div>
+    </div>
+  </div>
+
+  {%- comment -%} Background image {%- endcomment -%}
+  {%- if section.settings.background_image != blank -%}
+    <img class="absolute left-0 top-0 size-full object-cover" src="{{ section.settings.background_image | image_url: width: 3024 }}" alt="{{ section.settings.background_image.alt | default: 'Shoe finder background' | escape }}" loading="eager" width="{{ section.settings.background_image.width }}" height="{{ section.settings.background_image.height }}">
+  {%- endif -%}
+</div>
+
+{%- comment -%} Results Grid — hidden by default, revealed by JS after quiz completes {%- endcomment -%}
+<div class="hidden" data-sf-results>
+  <main>
+    <div class="bg-cover bg-center bg-fixed py-32"
+      {%- if section.settings.background_image != blank %}
+        style="background-image:url({{ section.settings.background_image | image_url: width: 3024 }})"
+      {%- endif %}>
+      <div class="container-wide relative z-1">
+        <div class="mb-10 text-center text-white">
+          <button class="flex items-center gap-2 text-center text-sm tracking-wider transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 uppercase justify-center min-w-40 mb-6 mx-auto" data-sf-back>
+            {%- render 'icon', icon: 'chevron-left', size: 'size-4' -%}
+            Back to Shoe Finder
+          </button>
+          <h1 class="font-serif text-4xl lg:text-5xl" data-sf-results-heading>{{ section.settings.results_heading_all | default: 'All golf shoes' }}</h1>
+        </div>
+
+        {%- if section.settings.results_collection != blank -%}
+          <div class="mb-6 grid grid-cols-2 gap-5 md:grid-cols-2 xl:grid-cols-3 3xl:grid-cols-4" data-sf-grid>
+            {%- for product in section.settings.results_collection.products -%}
+              {%- liquid
+                assign product_tags = product.tags | join: ',' | downcase
+              -%}
+              <div class="relative" data-sf-card data-tags="{{ product_tags }}">
+                <a href="{{ product.url }}" class="group relative flex aspect-square items-center justify-center p-5" data-sf-product-link data-product-handle="{{ product.handle }}">
+                  <div class="absolute inset-0 z-10 grid place-items-center" data-sf-spinner>
+                    <span class="size-8 animate-spin rounded-full border-2 border-white/20 border-t-white/60"></span>
+                  </div>
+                  {%- liquid
+                    assign shoe_image = product.metafields.custom.png_image
+                    if shoe_image != blank
+                      assign drive_id = shoe_image | split: 'id=' | last | split: '&' | first
+                      assign img_src = 'https://lh3.googleusercontent.com/d/' | append: drive_id
+                    else
+                      assign img_src = product.featured_image | image_url: width: 800
+                    endif
+                  -%}
+                  <img
+                    src="{{ img_src }}"
+                    alt="{{ product.title | escape }}"
+                    loading="lazy"
+                    width="800"
+                    height="800"
+                    referrerpolicy="no-referrer"
+                    class="h-full w-full transition-opacity duration-300 opacity-0"
+                    onload="this.classList.replace('opacity-0','opacity-100');var s=this.parentElement.querySelector('[data-sf-spinner]');if(s)s.style.display='none'"
+                    onerror="this.classList.replace('opacity-0','opacity-100');var s=this.parentElement.querySelector('[data-sf-spinner]');if(s)s.style.display='none'"
+                  >
+                </a>
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  </main>
+</div>
+
+{%- comment -%} Modal overlay — shoe detail loaded via section rendering API {%- endcomment -%}
+<div class="fixed inset-0 z-40 hidden overflow-y-auto bg-white" data-sf-modal>
+  <div class="flex min-h-dvh items-center justify-center" data-sf-modal-loading>
+    <span class="size-8 animate-spin rounded-full border-2 border-taupe-400 border-t-taupe-900"></span>
+  </div>
+  <div data-sf-modal-content></div>
+</div>
+
+<script>
+  (function () {
+    const INTRO_DELAY = 500;
+    const INTRO_SHOW = 2000;
+    const FADE = 500;
+    const OUTRO_SHOW = 1000;
+    const HEADING_FILTERED = {{ section.settings.results_heading | default: 'Your footwear lineup' | json }};
+    const HEADING_ALL = {{ section.settings.results_heading_all | default: 'All golf shoes' | json }};
+
+    const root = document.querySelector('[data-sf-root]');
+    const resultsContainer = document.querySelector('[data-sf-results]');
+    if (!root || !resultsContainer) return;
+
+    const introSlide = root.querySelector('[data-sf-slide="intro"]');
+    const questionSlides = Array.from(root.querySelectorAll('[data-sf-slide="question"]'));
+    const outroSlide = root.querySelector('[data-sf-slide="outro"]');
+    const totalQuestions = questionSlides.length;
+    const cards = Array.from(resultsContainer.querySelectorAll('[data-sf-card]'));
+    const headingEl = resultsContainer.querySelector('[data-sf-results-heading]');
+
+    let currentIndex = 0;
+    let tags = [];
+    let isAdvancing = false;
+
+    function showSlide(el) {
+      el.classList.remove('translate-y-2', 'opacity-0', 'pointer-events-none');
+      el.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+    }
+
+    function hideSlide(el, exit) {
+      el.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+      el.classList.add('pointer-events-none');
+      if (exit) {
+        el.classList.add('translate-y-6', 'opacity-0');
+      } else {
+        el.classList.add('translate-y-2', 'opacity-0');
+      }
+    }
+
+    function showOutro() {
+      outroSlide.classList.remove('opacity-0', 'pointer-events-none');
+      outroSlide.classList.add('opacity-100', 'pointer-events-auto');
+    }
+
+    function filterAndShowResults() {
+      var filterTags = tags
+        .filter(function (t) { return t; })
+        .map(function (t) { return t.toLowerCase(); });
+      var hasFilters = filterTags.length > 0;
+
+      if (headingEl) {
+        headingEl.textContent = hasFilters ? HEADING_FILTERED : HEADING_ALL;
+      }
+
+      cards.forEach(function (card) {
+        if (!hasFilters) {
+          card.style.display = '';
+          return;
+        }
+        var cardTags = (card.getAttribute('data-tags') || '').split(',');
+        var matches = filterTags.every(function (ft) {
+          return cardTags.indexOf(ft) !== -1;
+        });
+        card.style.display = matches ? '' : 'none';
+      });
+    }
+
+    function showResults() {
+      root.classList.add('hidden');
+      resultsContainer.classList.remove('hidden');
+      filterAndShowResults();
+      window.scrollTo(0, 0);
+    }
+
+    function resetQuiz() {
+      resultsContainer.classList.add('hidden');
+      root.classList.remove('hidden');
+
+      currentIndex = 0;
+      tags = [];
+      isAdvancing = false;
+
+      // Reset all slides to initial hidden state
+      [introSlide, outroSlide].concat(questionSlides).forEach(function (el) {
+        el.classList.remove('translate-y-0', 'translate-y-6', 'opacity-100', 'pointer-events-auto');
+        el.classList.add('translate-y-2', 'opacity-0', 'pointer-events-none');
+      });
+      // Outro uses opacity only (no translate-y-2)
+      outroSlide.classList.remove('translate-y-2');
+
+      // Show all cards again
+      cards.forEach(function (card) { card.style.display = ''; });
+
+      // Re-run intro sequence
+      setTimeout(function () {
+        showSlide(introSlide);
+        setTimeout(function () {
+          hideSlide(introSlide, false);
+          setTimeout(function () {
+            advanceToQuestion(0);
+          }, FADE);
+        }, INTRO_SHOW);
+      }, INTRO_DELAY);
+    }
+
+    function finish() {
+      showResults();
+    }
+
+    function advanceToQuestion(index) {
+      if (index >= totalQuestions) {
+        requestAnimationFrame(function () {
+          showOutro();
+          setTimeout(finish, OUTRO_SHOW);
+        });
+        return;
+      }
+      var slide = questionSlides[index];
+      requestAnimationFrame(function () {
+        showSlide(slide);
+      });
+    }
+
+    function handleAnswer(tag) {
+      if (isAdvancing) return;
+      isAdvancing = true;
+
+      if (tag) {
+        tags.push(tag);
+      }
+
+      var currentSlide = questionSlides[currentIndex];
+      hideSlide(currentSlide, true);
+
+      setTimeout(function () {
+        currentIndex++;
+        advanceToQuestion(currentIndex);
+        isAdvancing = false;
+      }, FADE);
+    }
+
+    // Event delegation — quiz
+    root.addEventListener('click', function (e) {
+      var answer = e.target.closest('[data-sf-answer]');
+      if (answer) {
+        handleAnswer(answer.getAttribute('data-sf-tag'));
+        return;
+      }
+
+      var skip = e.target.closest('[data-sf-skip]');
+      if (skip) {
+        handleAnswer(null);
+        return;
+      }
+
+      var skipAll = e.target.closest('[data-sf-skip-all]');
+      if (skipAll) {
+        tags = [];
+        finish();
+        return;
+      }
+
+      var start = e.target.closest('[data-sf-start]');
+      if (start) {
+        hideSlide(introSlide, false);
+        setTimeout(function () {
+          advanceToQuestion(0);
+        }, FADE);
+        return;
+      }
+    });
+
+    // Event delegation — results
+    resultsContainer.addEventListener('click', function (e) {
+      var back = e.target.closest('[data-sf-back]');
+      if (back) {
+        resetQuiz();
+        return;
+      }
+
+      // Intercept product card clicks → open modal
+      var productLink = e.target.closest('[data-sf-product-link]');
+      if (productLink) {
+        e.preventDefault();
+        var handle = productLink.getAttribute('data-product-handle');
+        if (handle) openShoeModal(handle);
+      }
+    });
+
+    /* ======== Shoe Detail Modal ======== */
+    var modal = document.querySelector('[data-sf-modal]');
+    var modalLoading = modal ? modal.querySelector('[data-sf-modal-loading]') : null;
+    var modalContent = modal ? modal.querySelector('[data-sf-modal-content]') : null;
+    var savedOverflow = '';
+
+    function openShoeModal(handle) {
+      if (!modal) return;
+
+      // Show modal with loading spinner
+      modal.classList.remove('hidden');
+      modalLoading.style.display = '';
+      modalContent.innerHTML = '';
+      savedOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+
+      // Fetch section HTML via section rendering API
+      fetch('/products/' + handle + '?section_id=shoe-detail')
+        .then(function (res) { return res.text(); })
+        .then(function (html) {
+          modalLoading.style.display = 'none';
+          modalContent.innerHTML = html;
+
+          // innerHTML doesn't execute script tags — activate them
+          var scriptTag = 'scr' + 'ipt';
+          var scripts = modalContent.querySelectorAll(scriptTag);
+          scripts.forEach(function (oldScript) {
+            // Skip JSON data blocks — they don't need execution
+            if (oldScript.type && oldScript.type !== 'text/javascript') return;
+
+            var newScript = document.createElement(scriptTag);
+            if (oldScript.src) {
+              newScript.src = oldScript.src;
+            } else {
+              newScript.textContent = oldScript.textContent;
+            }
+            oldScript.parentNode.replaceChild(newScript, oldScript);
+          });
+
+          // Focus the close button for accessibility
+          var closeBtn = modalContent.querySelector('[data-shoe-detail-close]');
+          if (closeBtn) closeBtn.focus();
+        })
+        .catch(function () {
+          modalLoading.style.display = 'none';
+          modalContent.innerHTML = '<div class="flex min-h-dvh items-center justify-center"><p class="text-taupe-700">Unable to load product. Please try again.</p></div>';
+        });
+    }
+
+    function closeShoeModal() {
+      if (!modal) return;
+      modal.classList.add('hidden');
+      modalContent.innerHTML = '';
+      document.body.style.overflow = savedOverflow;
+    }
+
+    // Listen for close event dispatched by shoe-detail.liquid
+    if (modal) {
+      modal.addEventListener('shoe-detail:close', function () {
+        closeShoeModal();
+      });
+
+      // Escape key closes modal
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          closeShoeModal();
+        }
+      });
+
+      // Focus trap — keep tab cycling within modal
+      modal.addEventListener('keydown', function (e) {
+        if (e.key !== 'Tab') return;
+        var focusable = modal.querySelectorAll('a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])');
+        if (!focusable.length) return;
+        var first = focusable[0];
+        var last = focusable[focusable.length - 1];
+        if (e.shiftKey) {
+          if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+        } else {
+          if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+        }
+      });
+    }
+
+    // Auto-start intro sequence
+    setTimeout(function () {
+      showSlide(introSlide);
+      setTimeout(function () {
+        hideSlide(introSlide, false);
+        setTimeout(function () {
+          advanceToQuestion(0);
+        }, FADE);
+      }, INTRO_SHOW);
+    }, INTRO_DELAY);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Shoe Finder",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Intro heading",
+      "default": "Find your perfect golf shoe."
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Get Started button label",
+      "info": "Accessibility fallback — quiz auto-advances. Leave blank to hide."
+    },
+    {
+      "type": "collection",
+      "id": "results_collection",
+      "label": "Results collection",
+      "info": "Select the golf shoes collection. All products will be rendered for JS filtering."
+    },
+{
+      "type": "text",
+      "id": "results_heading",
+      "label": "Results heading (filtered)",
+      "default": "Your footwear lineup"
+    },
+    {
+      "type": "text",
+      "id": "results_heading_all",
+      "label": "Results heading (all)",
+      "default": "All golf shoes"
+    },
+    {
+      "type": "text",
+      "id": "outro_heading",
+      "label": "Outro heading",
+      "default": "Nice find!"
+    },
+    {
+      "type": "text",
+      "id": "outro_text",
+      "label": "Outro text",
+      "default": "We've pulled together a fresh lineup of footwear just for you"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "quiz_step",
+      "name": "Quiz Step",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "header",
+          "content": "Answer 1"
+        },
+        {
+          "type": "text",
+          "id": "answer_1_label",
+          "label": "Label"
+        },
+        {
+          "type": "image_picker",
+          "id": "answer_1_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "answer_1_tag",
+          "label": "Tag"
+        },
+        {
+          "type": "header",
+          "content": "Answer 2"
+        },
+        {
+          "type": "text",
+          "id": "answer_2_label",
+          "label": "Label"
+        },
+        {
+          "type": "image_picker",
+          "id": "answer_2_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "answer_2_tag",
+          "label": "Tag"
+        },
+        {
+          "type": "header",
+          "content": "Answer 3 (optional)"
+        },
+        {
+          "type": "text",
+          "id": "answer_3_label",
+          "label": "Label"
+        },
+        {
+          "type": "image_picker",
+          "id": "answer_3_image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "answer_3_tag",
+          "label": "Tag"
+        },
+        {
+          "type": "header",
+          "content": "Skip button"
+        },
+        {
+          "type": "text",
+          "id": "skip_label",
+          "label": "Skip button label",
+          "info": "e.g. \"A mix of both\". Leave blank to hide."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shoe Finder",
+      "settings": {
+        "heading": "Find your perfect golf shoe.",
+        "cta_label": "",
+        "results_heading": "Your footwear lineup",
+        "results_heading_all": "All golf shoes",
+        "outro_heading": "Nice find!",
+        "outro_text": "We've pulled together a fresh lineup of footwear just for you"
+      },
+      "blocks": [
+        {
+          "type": "quiz_step",
+          "settings": {
+            "question": "What type of golf shoe are you looking for?",
+            "answer_1_label": "Mens",
+            "answer_1_tag": "men",
+            "answer_2_label": "Womens",
+            "answer_2_tag": "women",
+            "skip_label": ""
+          }
+        },
+        {
+          "type": "quiz_step",
+          "settings": {
+            "question": "What type of course do you usually play on?",
+            "answer_1_label": "Dry, firm course",
+            "answer_1_tag": "dry-course",
+            "answer_2_label": "Wet or soft turf course",
+            "answer_2_tag": "soft-course",
+            "skip_label": "A mix of both"
+          }
+        },
+        {
+          "type": "quiz_step",
+          "settings": {
+            "question": "Do you prefer spiked or spikeless shoes?",
+            "answer_1_label": "Spiked, for maximum traction",
+            "answer_1_tag": "spiked",
+            "answer_2_label": "Normal, for softer courses",
+            "answer_2_tag": "flat",
+            "skip_label": "A mix of both"
+          }
+        },
+        {
+          "type": "quiz_step",
+          "settings": {
+            "question": "Which shoe style appeals to you most?",
+            "answer_1_label": "Classic, traditional leather",
+            "answer_1_tag": "traditional-leather",
+            "answer_2_label": "Modern, athletic sneaker style",
+            "answer_2_tag": "modern-style",
+            "skip_label": "Versatile (golf + casual wear)"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

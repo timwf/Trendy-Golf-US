@@ -1,0 +1,329 @@
+{%- liquid
+  case section.settings.margin_bottom
+    when 'none'
+      assign margin_class = ''
+    when 'small'
+      assign margin_class = 'mb-8'
+    when 'medium'
+      assign margin_class = 'lg:mb-14 mb-8'
+    when 'large'
+      assign margin_class = 'lg:mb-20 mb-14'
+  endcase
+
+  comment
+    Sort brands by name, collect unique alphabet letters (sorted), group brands by letter.
+  endcomment
+  assign brands = metaobjects.brand.values | sort: 'brand_name'
+  assign letters_raw = ''
+  for brand in brands
+    assign letter = brand.alphabet_reference | upcase
+    if letter == blank
+      assign letter = 'Other'
+    endif
+    assign letters_raw = letters_raw | append: letter | append: '|||'
+  endfor
+  assign letters = letters_raw | split: '|||' | uniq
+
+  comment
+    Split "Other" out, sort letters alphabetically, append "Other" last if present.
+  endcomment
+  assign has_other = false
+  assign letters_clean = ''
+  for letter in letters
+    if letter == 'Other'
+      assign has_other = true
+    elsif letter != blank
+      assign letters_clean = letters_clean | append: letter | append: '|||'
+    endif
+  endfor
+  assign alphabet = letters_clean | split: '|||' | sort
+  if has_other
+    assign other_array = 'Other' | split: '|||'
+    assign alphabet = alphabet | concat: other_array
+  endif
+-%}
+
+<section
+  id="brand-listing-{{ section.id }}"
+  class="page-block relative page-block--brands {{ margin_class }} bg-transparent"
+  data-brand-listing
+>
+  <div class="container-wide">
+
+    {%- if section.settings.heading != blank or section.settings.description != blank -%}
+      <div class="mx-auto mb-10 max-w-screen-lg text-center">
+        {%- if section.settings.heading != blank -%}
+          <h3 class="font-serif text-3xl lg:text-4xl">{{ section.settings.heading }}</h3>
+        {%- endif -%}
+        {%- if section.settings.description != blank -%}
+          <div class="mt-4 [&_p:last-of-type]:mb-0">{{ section.settings.description }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.show_alphabet_tabs and alphabet.size > 0 -%}
+      <div
+        class="mb-6 flex flex-wrap justify-center gap-2 overflow-x-auto pb-2 md:flex-nowrap"
+        role="tablist"
+        aria-label="{{ 'sections.brand_listing.filter_by_letter' | t }}"
+        data-brand-tabs
+      >
+        {%- for letter in alphabet -%}
+          <button
+            type="button"
+            role="tab"
+            aria-selected="false"
+            aria-pressed="false"
+            data-letter="{{ letter }}"
+            data-active="false"
+            class="w-16 cursor-pointer whitespace-nowrap border border-taupe-400 p-2 text-center text-sm font-medium transition-colors focus:outline-none focus-visible:ring lg:w-20 lg:text-base data-[active=true]:border-clubhouse-green-800 data-[active=true]:bg-clubhouse-green-800 data-[active=true]:text-white"
+          >
+            {{ letter }}
+          </button>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.show_search -%}
+      <div class="mx-auto mb-6 flex w-full max-w-md items-center rounded border border-gray-300 bg-transparent px-4 transition-all focus-within:border-clubhouse-green-600">
+        {% render 'icon', icon: 'magnifying-glass', class: 'text-gray-400', size: 'size-6' %}
+        <label for="brand-search-{{ section.id }}" class="sr-only">
+          {{ 'sections.brand_listing.find_a_brand' | t }}
+        </label>
+        <input
+          id="brand-search-{{ section.id }}"
+          type="text"
+          placeholder="{{ 'sections.brand_listing.find_a_brand' | t }}"
+          autocomplete="off"
+          spellcheck="false"
+          inputmode="search"
+          class="w-full bg-transparent p-3 focus:outline-none"
+          data-brand-search
+        >
+      </div>
+    {%- endif -%}
+
+    <div class="space-y-8" data-brand-groups>
+      {%- for letter in alphabet -%}
+        <section
+          aria-labelledby="brand-group-{{ section.id }}-{{ letter | handleize }}"
+          data-brand-group="{{ letter }}"
+        >
+          <p
+            id="brand-group-{{ section.id }}-{{ letter | handleize }}"
+            class="pt-4 text-center text-xl font-bold capitalize xl:text-2xl {% unless forloop.first %}border-t border-taupe-400{% endunless %}"
+          >
+            {%- if letter == 'Other' -%}
+              {{ 'sections.brand_listing.other_brands' | t }}
+            {%- else -%}
+              {{ letter }}
+            {%- endif -%}
+          </p>
+
+          <div class="mx-auto flex max-w-screen-xl flex-wrap justify-center">
+            {%- for brand in brands -%}
+              {%- assign brand_letter = brand.alphabet_reference | upcase -%}
+              {%- if brand_letter == blank -%}
+                {%- assign brand_letter = 'Other' -%}
+              {%- endif -%}
+              {%- if brand_letter == letter -%}
+                <div
+                  class="group relative flex basis-1/2 flex-col justify-center overflow-hidden p-2 md:basis-1/3 lg:basis-1/4 xl:basis-1/6"
+                  data-brand-item
+                  data-brand-name="{{ brand.brand_name | downcase | escape }}"
+                >
+                  {% render 'brand-card', brand: brand %}
+                </div>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </section>
+      {%- endfor -%}
+    </div>
+
+    <div class="py-8 text-center" data-brand-empty hidden>
+      <p class="text-gray-500" data-brand-empty-message>
+        {{ 'sections.brand_listing.no_brands' | t }}
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  (function () {
+    var section = document.getElementById('brand-listing-{{ section.id }}');
+    if (!section) return;
+
+    var tabs = section.querySelectorAll('[data-letter]');
+    var groups = section.querySelectorAll('[data-brand-group]');
+    var items = section.querySelectorAll('[data-brand-item]');
+    var searchInput = section.querySelector('[data-brand-search]');
+    var emptyState = section.querySelector('[data-brand-empty]');
+    var emptyMessage = section.querySelector('[data-brand-empty-message]');
+
+    var selectedLetter = null;
+    var searchQuery = '';
+    var searchTimer = null;
+
+    var messages = {
+      noBrands: {{ 'sections.brand_listing.no_brands' | t | json }},
+      noMatchLetter: {{ 'sections.brand_listing.no_brands_for_letter_html' | t: letter: '__LETTER__' | json }},
+      noMatchSearch: {{ 'sections.brand_listing.no_brands_matching_html' | t: query: '__QUERY__' | json }}
+    };
+
+    function escapeHtml(str) {
+      var div = document.createElement('div');
+      div.textContent = str;
+      return div.innerHTML;
+    }
+
+    function setTabState(tab, active) {
+      tab.setAttribute('data-active', active ? 'true' : 'false');
+      tab.setAttribute('aria-selected', active ? 'true' : 'false');
+      tab.setAttribute('aria-pressed', active ? 'true' : 'false');
+    }
+
+    function applyFilters() {
+      var query = searchQuery.trim().toLowerCase();
+      var anyVisibleItem = false;
+      var firstGroupVisible = true;
+
+      groups.forEach(function (group) {
+        var groupLetter = group.getAttribute('data-brand-group');
+
+        if (selectedLetter && groupLetter !== selectedLetter) {
+          group.hidden = true;
+          return;
+        }
+
+        var groupItems = group.querySelectorAll('[data-brand-item]');
+        var anyVisibleInGroup = false;
+
+        groupItems.forEach(function (item) {
+          var name = item.getAttribute('data-brand-name') || '';
+          var matches = !query || name.indexOf(query) !== -1;
+          item.hidden = !matches;
+          if (matches) {
+            anyVisibleInGroup = true;
+            anyVisibleItem = true;
+          }
+        });
+
+        if (!anyVisibleInGroup) {
+          group.hidden = true;
+        } else {
+          group.hidden = false;
+          var heading = group.querySelector('p[id^="brand-group-"]');
+          if (heading) {
+            if (firstGroupVisible) {
+              heading.classList.remove('border-t', 'border-taupe-400');
+              firstGroupVisible = false;
+            } else {
+              heading.classList.add('border-t', 'border-taupe-400');
+            }
+          }
+        }
+      });
+
+      if (anyVisibleItem) {
+        emptyState.hidden = true;
+      } else {
+        emptyState.hidden = false;
+        if (emptyMessage) {
+          if (selectedLetter) {
+            emptyMessage.innerHTML = messages.noMatchLetter.replace('__LETTER__', escapeHtml(selectedLetter));
+          } else if (query) {
+            emptyMessage.innerHTML = messages.noMatchSearch.replace('__QUERY__', escapeHtml(query));
+          } else {
+            emptyMessage.textContent = messages.noBrands;
+          }
+        }
+      }
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var letter = tab.getAttribute('data-letter');
+        var isSame = selectedLetter === letter;
+        selectedLetter = isSame ? null : letter;
+
+        tabs.forEach(function (t) {
+          setTabState(t, !isSame && t === tab);
+        });
+
+        if (searchInput) searchInput.value = '';
+        searchQuery = '';
+
+        applyFilters();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', function (e) {
+        var value = e.target.value;
+        clearTimeout(searchTimer);
+        searchTimer = setTimeout(function () {
+          searchQuery = value;
+
+          if (value) {
+            selectedLetter = null;
+            tabs.forEach(function (t) { setTabState(t, false); });
+          }
+
+          applyFilters();
+        }, 150);
+      });
+    }
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.brand_listing.name",
+  "tag": "section",
+  "class": "page-block--brands",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.brand_listing.settings.heading.label",
+      "default": "All Brands"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "t:sections.brand_listing.settings.description.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_alphabet_tabs",
+      "label": "t:sections.brand_listing.settings.show_alphabet_tabs.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_search",
+      "label": "t:sections.brand_listing.settings.show_search.label",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "t:sections.brand_listing.settings.margin_bottom.label",
+      "options": [
+        { "value": "none", "label": "t:sections.brand_listing.settings.margin_bottom.options.none" },
+        { "value": "small", "label": "t:sections.brand_listing.settings.margin_bottom.options.small" },
+        { "value": "medium", "label": "t:sections.brand_listing.settings.margin_bottom.options.medium" },
+        { "value": "large", "label": "t:sections.brand_listing.settings.margin_bottom.options.large" }
+      ],
+      "default": "large"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.brand_listing.name"
+    }
+  ]
+}
+{% endschema %}

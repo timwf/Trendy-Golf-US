@@ -1,0 +1,286 @@
+{%- comment -%}
+  Blog listing section — hero, category filter tabs, article grid, load more pagination.
+  Used in templates/blog.json only.
+{%- endcomment -%}
+
+{% paginate blog.articles by section.settings.articles_per_page %}
+
+<section class="page-block relative page-block--magazineLister lg:mb-14 lg:pt-14 mb-8 pt-8 bg-transparent"
+         data-section-id="{{ section.id }}">
+
+  {%- comment -%} Hero {%- endcomment -%}
+  <div class="container-wide">
+    <div class="mb-10 grid grid-cols-1 lg:grid-cols-6">
+      <div class="lg:col-span-4">
+        <h1>
+          <span class="font-serif">
+            <span class="text-4xl lg:text-5xl">{{ section.settings.heading }}</span>
+          </span>
+        </h1>
+      </div>
+      {%- if section.settings.description != blank -%}
+        <div class="lg:col-span-2">
+          {{ section.settings.description }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- comment -%} Category filter tabs {%- endcomment -%}
+  {%- if section.settings.show_tags and blog.all_tags.size > 0 -%}
+    <div class="container-wide overflow-hidden">
+      <div class="mb-10 overflow-x-auto pb-2">
+        <div class="mx-auto inline-flex flex-nowrap justify-center md:mb-10 md:flex xl:w-3/4">
+          {%- comment -%} "All" tab {%- endcomment -%}
+          <div>
+            <a href="{{ blog.url }}"
+               class="whitespace-nowrap border-b px-6 py-3 focus:outline-none lg:px-10 lg:py-4 lg:text-lg
+                      {% if current_tags == blank %}border-clubhouse-green-600 text-clubhouse-green-600{% else %}border-taupe-400 text-taupe-700{% endif %}"
+               {% if current_tags == blank %}aria-current="true"{% endif %}>
+              All
+            </a>
+          </div>
+
+          {%- comment -%} Tag tabs {%- endcomment -%}
+          {%- assign sorted_tags = blog.all_tags | sort_natural -%}
+          {%- for tag in sorted_tags -%}
+            <div>
+              <a href="{{ blog.url }}/tagged/{{ tag | handleize }}"
+                 class="whitespace-nowrap capitalize border-b px-6 py-3 focus:outline-none lg:px-10 lg:py-4 lg:text-lg
+                        {% if current_tags contains tag %}border-clubhouse-green-600 text-clubhouse-green-600{% else %}border-taupe-400 text-taupe-700{% endif %}"
+                 {% if current_tags contains tag %}aria-current="true"{% endif %}>
+                {{ tag }}
+              </a>
+            </div>
+          {%- endfor -%}
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+
+  {%- comment -%} Article grid {%- endcomment -%}
+  <div class="container-wide">
+    {%- if blog.articles.size > 0 -%}
+      <div id="blog-grid" class="mb-14 grid grid-cols-1 gap-5 md:grid-cols-3 5xl:grid-cols-4" aria-busy="false">
+        {%- for article in blog.articles -%}
+          {%- assign col = forloop.index0 | modulo: 3 -%}
+          <div data-inview="false" class="group-inview group/blocks mb-5">
+            <div class="{% if section.settings.enable_animation %}opacity-0 scale-75 transition-all duration-1000 animation-group group-data-[inview=true]/blocks:opacity-100 group-data-[inview=true]/blocks:scale-100{% if col == 1 %} md:delay-100{% elsif col == 2 %} md:delay-200{% endif %}{% endif %}">
+              {%- render 'magazine-card', article: article, show_category: section.settings.show_category -%}
+            </div>
+          </div>
+        {%- endfor -%}
+      </div>
+
+      {%- comment -%} Load more + count {%- endcomment -%}
+      <div id="blog-pagination" class="text-center">
+        {%- if paginate.next -%}
+          <div class="mb-4 flex justify-center">
+            <button id="blog-load-more"
+                    class="flex items-center gap-2 text-center text-sm tracking-wider transition-all uppercase justify-center px-4 py-3 lg:px-10 min-w-40 bg-taupe-900 text-white enabled:hover:bg-taupe-600 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50"
+                    aria-label="Load more articles"
+                    data-next-page="2">
+              Load more
+            </button>
+          </div>
+        {%- endif -%}
+        <p class="text-xs text-neutral-500" aria-live="polite">
+          Showing <span id="blog-showing-count">{{ blog.articles.size }}</span> of <span id="blog-total-count">{{ paginate.items }}</span> entries
+        </p>
+      </div>
+    {%- else -%}
+      <p class="pt-8 text-center text-2xl">No posts found</p>
+    {%- endif -%}
+  </div>
+</section>
+
+<script>
+  (function () {
+    const section = document.querySelector('[data-section-id="{{ section.id }}"]');
+    if (!section) return;
+
+    const sectionId = '{{ section.id }}';
+    let grid = section.querySelector('#blog-grid');
+    const paginationWrap = section.querySelector('#blog-pagination');
+
+    /* ── InView observer ── */
+    {% if section.settings.enable_animation %}
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.setAttribute('data-inview', 'true');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: '0px 0px 0px', threshold: 0 }
+    );
+
+    function observeInView() {
+      section.querySelectorAll('[data-inview="false"]').forEach((el) => observer.observe(el));
+    }
+
+    observeInView();
+    {% endif %}
+
+    /* ── Load more (event delegation) ── */
+    function handleLoadMore(e) {
+      const btn = e.target.closest('#blog-load-more');
+      if (!btn) return;
+
+      const nextPage = parseInt(btn.dataset.nextPage, 10);
+      btn.disabled = true;
+      if (grid) grid.setAttribute('aria-busy', 'true');
+
+      fetch(`${window.location.pathname}?section_id=${sectionId}&page=${nextPage}`)
+        .then((res) => {
+          if (!res.ok) throw new Error(res.statusText);
+          return res.text();
+        })
+        .then((html) => {
+          const doc = new DOMParser().parseFromString(html, 'text/html');
+          const newGrid = doc.querySelector('#blog-grid');
+
+          if (newGrid && grid) {
+            Array.from(newGrid.children).forEach((child) => grid.appendChild(child));
+            {% if section.settings.enable_animation %}
+            observeInView();
+            {% endif %}
+          }
+
+          /* Update showing count */
+          const showingEl = section.querySelector('#blog-showing-count');
+          if (showingEl && grid) showingEl.textContent = grid.children.length;
+
+          /* Check if there are more pages */
+          const newLoadMore = doc.querySelector('#blog-load-more');
+          if (newLoadMore) {
+            btn.dataset.nextPage = nextPage + 1;
+            btn.disabled = false;
+          } else {
+            btn.remove();
+          }
+        })
+        .catch((e) => {
+          console.error('Load more failed:', e);
+          btn.disabled = false;
+        })
+        .finally(() => {
+          if (grid) grid.setAttribute('aria-busy', 'false');
+        });
+    }
+
+    if (paginationWrap) {
+      paginationWrap.addEventListener('click', handleLoadMore);
+    }
+
+    /* ── Category filter tabs (progressive enhancement) ── */
+    const filterLinks = section.querySelectorAll('.container-wide.overflow-hidden a[href]');
+    filterLinks.forEach((link) => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+
+        /* Update active state */
+        filterLinks.forEach((l) => {
+          l.classList.remove('border-clubhouse-green-600', 'text-clubhouse-green-600');
+          l.classList.add('border-taupe-400', 'text-taupe-700');
+          l.removeAttribute('aria-current');
+        });
+        this.classList.remove('border-taupe-400', 'text-taupe-700');
+        this.classList.add('border-clubhouse-green-600', 'text-clubhouse-green-600');
+        this.setAttribute('aria-current', 'true');
+
+        if (grid) grid.setAttribute('aria-busy', 'true');
+
+        fetch(`${href}?section_id=${sectionId}`)
+          .then((res) => {
+            if (!res.ok) throw new Error(res.statusText);
+            return res.text();
+          })
+          .then((html) => {
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            const newGrid = doc.querySelector('#blog-grid');
+            const newPagination = doc.querySelector('#blog-pagination');
+
+            /* Replace grid content */
+            if (grid && newGrid) {
+              grid.innerHTML = newGrid.innerHTML;
+            } else if (grid && !newGrid) {
+              grid.innerHTML = '<p class="pt-8 text-center text-2xl col-span-full">No posts found</p>';
+            }
+
+            /* Replace pagination — event delegation means load more just works */
+            if (paginationWrap && newPagination) {
+              paginationWrap.innerHTML = newPagination.innerHTML;
+            }
+
+            /* Update URL without reload */
+            window.history.pushState({}, '', href);
+
+            {% if section.settings.enable_animation %}
+            observeInView();
+            {% endif %}
+          })
+          .catch((err) => {
+            console.error('Filter failed:', err);
+            window.location.href = href;
+          })
+          .finally(() => {
+            if (grid) grid.setAttribute('aria-busy', 'false');
+          });
+      });
+    });
+  })();
+</script>
+
+{% endpaginate %}
+
+{% schema %}
+{
+  "name": "Blog listing",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Inside The Magazine"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Keep in the know with the latest product releases, brand collections and news from the sporting fashion world. Featuring regular updates on upcoming trends, and where to look for that new sporting style, our magazine will keep you one step ahead of the game.</p>"
+    },
+    {
+      "type": "range",
+      "id": "articles_per_page",
+      "label": "Articles per page",
+      "min": 3,
+      "max": 24,
+      "step": 3,
+      "default": 9
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tags",
+      "label": "Show category filter tabs",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_category",
+      "label": "Show category on cards",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_animation",
+      "label": "Enable animation",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

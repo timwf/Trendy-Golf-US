@@ -1,0 +1,57 @@
+{% doc %}
+  Renders a form input with label and error handling.
+
+  @param {string} name - Input name attribute (required)
+  @param {string} label - Label text (required)
+  @param {string} [type] - Input type (default: text)
+  @param {string} [value]
+  @param {string} [placeholder]
+  @param {boolean} [required]
+  @param {boolean} [readonly]
+  @param {boolean} [autofocus]
+  @param {string} [autocomplete]
+  @param {string} [id] - Defaults to name
+  @param {string} [error] - Error message to display
+  @param {boolean} [hide_label] - Add sr-only to label
+  @param {string} [wrapper_class] - Classes for outer wrapper
+  @param {string} [input_class] - Additional classes on the input element
+
+  @example
+  {% render 'form-input',
+    name: 'customer[first_name]',
+    label: 'First name',
+    placeholder: 'Enter your name',
+    required: true %}
+{% enddoc %}
+
+{%- liquid
+  assign input_id = id | default: name
+  assign input_type = type | default: 'text'
+  assign base_input_class = 'block w-full appearance-none border border-taupe-600 bg-white px-4 py-3 read-only:cursor-not-allowed read-only:bg-taupe-300 read-only:text-taupe-600 focus:outline-none placeholder:text-taupe-600'
+  if input_class
+    assign full_input_class = base_input_class | append: ' ' | append: input_class
+  else
+    assign full_input_class = base_input_class
+  endif
+-%}
+
+<div{% if wrapper_class %} class="{{ wrapper_class }}"{% endif %}>
+  <label for="{{ input_id }}" class="mb-2 block{% if hide_label %} sr-only{% endif %}">
+    {{ label }}{% if required %} <span class="text-red-500">*</span>{% endif %}
+  </label>
+  <input
+    type="{{ input_type }}"
+    id="{{ input_id }}"
+    name="{{ name }}"
+    {% if value != blank %}value="{{ value | escape }}"{% endif %}
+    {% if placeholder %}placeholder="{{ placeholder | escape }}"{% endif %}
+    {% if required %}required{% endif %}
+    {% if readonly %}readonly{% endif %}
+    {% if autofocus %}autofocus{% endif %}
+    {% if autocomplete %}autocomplete="{{ autocomplete }}"{% endif %}
+    class="{{ full_input_class }}"
+  >
+  {% if error %}
+    <p class="mb-0 pt-1 text-xs italic text-red-600 empty:hidden">{{ error }}</p>
+  {% endif %}
+</div>

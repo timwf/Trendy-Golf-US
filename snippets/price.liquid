@@ -1,0 +1,23 @@
+{% doc %}
+  Renders a product price display with support for sale and sold-out states.
+
+  @param {product} product - The product object to display pricing for
+
+  @example
+  {% render 'price', product: product %}
+{% enddoc %}
+
+<div class="px-3 text-center">
+  {%- if product.available == false -%}
+    <span class="mb-0 text-sm text-taupe-700">{{ 'products.product.sold_out' | t }}</span>
+  {%- elsif product.compare_at_price > product.price -%}
+    <span class="mb-0 text-base">
+      <s class="text-taupe-700">{{ product.compare_at_price | money }}</s>
+      <span class="font-semibold text-red-600">{{ product.price | money }}</span>
+    </span>
+  {%- else -%}
+    <span class="mb-0 text-base">
+      <span class="font-semibold">{{ product.price | money }}</span>
+    </span>
+  {%- endif -%}
+</div>

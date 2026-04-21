@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "blog-template": {
+      "type": "blog-template",
+      "settings": {
+        "heading": "Inside The Magazine",
+        "description": "<p>Keep in the know with the latest product releases, brand collections and news from the sporting fashion world. Featuring regular updates on upcoming trends, and where to look for that new sporting style, our magazine will keep you one step ahead of the game.<\/p>",
+        "articles_per_page": 9,
+        "show_tags": true,
+        "show_category": true,
+        "enable_animation": true
+      }
+    }
+  },
+  "order": ["blog-template"]
+}

@@ -1,0 +1,144 @@
+{%- liquid
+  assign title = section.settings.title
+  assign collection = section.settings.collection
+  assign limit = section.settings.product_limit
+  assign btn_text = section.settings.button_label
+  assign btn_link = section.settings.button_link
+
+  case section.settings.margin_bottom
+    when 'none'
+      assign margin_class = ''
+    when 'small'
+      assign margin_class = 'mb-8'
+    when 'medium'
+      assign margin_class = 'mb-8 lg:mb-14'
+    when 'large'
+      assign margin_class = 'mb-14 lg:mb-20'
+  endcase
+-%}
+
+{%- if collection != blank and collection.products.size > 0 -%}
+  <section class="page-block relative {{ margin_class }} overflow-hidden" data-featured-collection id="featured-collection-{{ section.id }}">
+    <div class="container-wide">
+
+      {%- if title != blank -%}
+        <div class="mb-6 text-center">
+          <p><span class="font-serif"><span class="text-4xl lg:text-5xl">{{ title }}</span></span></p>
+        </div>
+      {%- endif -%}
+
+      <div class="relative" data-collection-splide>
+        <div class="splide" data-splide-el>
+          <div class="splide__track overflow-visible xl:overflow-hidden xl:py-1">
+            <ul class="splide__list">
+              {%- for product in collection.products limit: limit -%}
+                <li class="splide__slide">
+                  <div data-measure class="inline-block w-full h-full">
+                    {%- render 'product-card', product: product -%}
+                  </div>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </div>
+
+          <div class="splide__arrows flex justify-center pt-6">
+            <button class="splide__arrow splide__arrow--prev bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50" type="button">
+              {%- render 'icon', icon: 'chevron-left', size: 'size-6' -%}
+            </button>
+            <button class="splide__arrow splide__arrow--next bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50" type="button">
+              {%- render 'icon', icon: 'chevron-right', size: 'size-6' -%}
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {%- if btn_text != blank and btn_link != blank -%}
+        <div class="mt-8 flex justify-center">
+          <a href="{{ btn_link }}" class="flex items-center gap-2 text-center text-sm tracking-wider transition-all uppercase justify-center px-4 py-3 lg:px-10 min-w-40 bg-taupe-900 text-white enabled:hover:bg-taupe-600">
+            <span>{{ btn_text }}</span>
+          </a>
+        </div>
+      {%- endif -%}
+
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var section = document.getElementById('featured-collection-{{ section.id }}');
+      if (!section) return;
+      var el = section.querySelector('[data-splide-el]');
+      if (!el || typeof Splide === 'undefined') return;
+
+      new Splide(el, {
+        type: 'slide',
+        perPage: 4,
+        gap: 10,
+        arrows: true,
+        pagination: false,
+        drag: true,
+        breakpoints: {
+          480: { perPage: 1, arrows: false, padding: { left: 0, right: '35%' } },
+          768: { perPage: 2, arrows: false, padding: { left: 0, right: '20%' } },
+          1280: { perPage: 3, padding: { left: 0, right: '10%' } }
+        }
+      }).mount();
+    })();
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "tag": "section",
+  "class": "featured-collection-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "product_limit",
+      "label": "Product limit",
+      "min": 4,
+      "max": 25,
+      "step": 1,
+      "default": 12
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "label": "Button label"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Bottom margin",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "medium"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection"
+    }
+  ]
+}
+{% endschema %}

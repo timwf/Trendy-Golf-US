@@ -1,0 +1,256 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "TrendyGolf UK",
+    "theme_author": "TrendyGolf",
+    "theme_version": "0.1.0",
+    "theme_documentation_url": "https://github.com/trendygolf",
+    "theme_support_url": "https://github.com/trendygolf"
+  },
+  {
+    "name": "Colours",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Primary colours"
+      },
+      {
+        "type": "color",
+        "id": "color_primary",
+        "label": "Primary (taupe 900)",
+        "default": "#2C2C2C"
+      },
+      {
+        "type": "color",
+        "id": "color_background",
+        "label": "Background (taupe 100)",
+        "default": "#F5F0EB"
+      },
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Accent (clubhouse green)",
+        "default": "#4A7C59"
+      }
+    ]
+  },
+  {
+    "name": "Typography",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Fonts"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_heading",
+        "label": "Heading font",
+        "default": "playfair_display_n4"
+      },
+      {
+        "type": "font_picker",
+        "id": "font_body",
+        "label": "Body font",
+        "default": "assistant_n4"
+      }
+    ]
+  },
+  {
+    "name": "Social media",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Social accounts"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram",
+        "label": "Instagram URL"
+      },
+      {
+        "type": "text",
+        "id": "social_facebook",
+        "label": "Facebook URL"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter",
+        "label": "X (Twitter) URL"
+      },
+      {
+        "type": "text",
+        "id": "social_tiktok",
+        "label": "TikTok URL"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube",
+        "label": "YouTube URL"
+      }
+    ]
+  },
+  {
+    "name": "Analytics",
+    "settings": [
+      {
+        "type": "text",
+        "id": "gtm_id",
+        "label": "Google Tag Manager ID",
+        "default": "GTM-5G4N4PSK",
+        "info": "Format: GTM-XXXXXXX"
+      }
+    ]
+  },
+  {
+    "name": "SEO",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "social_share_image",
+        "label": "Default social share image",
+        "info": "1200×630px recommended. Used when a page has no product or article image (Facebook, LinkedIn, iMessage previews). Also used as the logo in homepage Organization structured data."
+      }
+    ]
+  },
+  {
+    "name": "Favicon",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "Favicon",
+        "info": "96×96px PNG recommended"
+      }
+    ]
+  },
+  {
+    "name": "Rebuy",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Used by the cart drawer upsells and the product page 'Explore More' carousel. Without a key, cart drawer falls back to Shopify recommendations and Explore More hides."
+      },
+      {
+        "type": "text",
+        "id": "rebuy_api_key",
+        "label": "Rebuy API key",
+        "info": "Public storefront key from the Rebuy dashboard. Used client-side."
+      }
+    ]
+  },
+  {
+    "name": "Rewards (TGCC / Upzelo)",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Upzelo integration"
+      },
+      {
+        "type": "text",
+        "id": "upzelo_app_id",
+        "label": "Upzelo App ID",
+        "default": "upz_app_10195ba3dcfd",
+        "info": "From the Upzelo dashboard. Used by the activity-feed fetch on /account/rewards."
+      },
+      {
+        "type": "header",
+        "content": "Rewards modal"
+      },
+      {
+        "type": "paragraph",
+        "content": "Shown when the customer clicks 'Learn more' in the cart drawer or any [data-rewards-modal-open] trigger."
+      },
+      {
+        "type": "image_picker",
+        "id": "rewards_modal_image",
+        "label": "Modal image (desktop)"
+      },
+      {
+        "type": "image_picker",
+        "id": "rewards_modal_mobile_image",
+        "label": "Modal image (mobile)",
+        "info": "Optional. Falls back to desktop image."
+      },
+      {
+        "type": "image_picker",
+        "id": "rewards_modal_logo",
+        "label": "Logo",
+        "info": "Optional TGCC logo shown above the heading."
+      },
+      {
+        "type": "richtext",
+        "id": "rewards_modal_content",
+        "label": "Heading + intro",
+        "default": "<p>Rewards That Hit Different</p><p>Register now and begin your journey with TRENDYGOLF Country Club.</p>"
+      },
+      {
+        "type": "header",
+        "content": "Modal bullets"
+      },
+      {
+        "type": "image_picker",
+        "id": "rewards_modal_bullet_1_icon",
+        "label": "Bullet 1 icon"
+      },
+      {
+        "type": "richtext",
+        "id": "rewards_modal_bullet_1_text",
+        "label": "Bullet 1 text",
+        "default": "<p>Access to <strong>exclusive benefits & rewards</strong></p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "rewards_modal_bullet_2_icon",
+        "label": "Bullet 2 icon"
+      },
+      {
+        "type": "richtext",
+        "id": "rewards_modal_bullet_2_text",
+        "label": "Bullet 2 text",
+        "default": "<p>Earn points & <strong>unlock tier perks</strong></p>"
+      },
+      {
+        "type": "image_picker",
+        "id": "rewards_modal_bullet_3_icon",
+        "label": "Bullet 3 icon"
+      },
+      {
+        "type": "richtext",
+        "id": "rewards_modal_bullet_3_text",
+        "label": "Bullet 3 text",
+        "default": "<p><strong>Be the first</strong> to know about the <strong>latest drops</strong>.</p>"
+      }
+    ]
+  },
+  {
+    "name": "Password overlay",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "password_overlay_enabled",
+        "label": "Enable password overlay",
+        "default": true,
+        "info": "Shows a password screen to visitors. Disable when the site is ready to go live."
+      },
+      {
+        "type": "text",
+        "id": "password_overlay_password",
+        "label": "Password",
+        "default": "trendy2026",
+        "info": "The password visitors must enter to view the site"
+      },
+      {
+        "type": "text",
+        "id": "password_overlay_heading",
+        "label": "Heading",
+        "default": "Coming Soon"
+      },
+      {
+        "type": "textarea",
+        "id": "password_overlay_message",
+        "label": "Message",
+        "default": "We're working on something new. Enter the password to preview."
+      }
+    ]
+  }
+]

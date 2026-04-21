@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>
+    {%- if page_title -%}
+      {{ page_title }}
+      {%- if current_page != 1 %} &ndash; {{ 'general.meta.page' | t: page: current_page }}{% endif -%}
+      &ndash; {{ shop.name }}
+    {%- else -%}
+      {{ shop.name }}
+    {%- endif -%}
+  </title>
+
+  {%- if page_description -%}
+    <meta name="description" content="{{ page_description | escape }}">
+  {%- endif -%}
+
+  {%- if template.name == 'search' -%}
+    <meta name="robots" content="noindex, nofollow">
+  {%- endif -%}
+
+  <link rel="canonical" href="{{ canonical_url }}">
+
+  {%- comment -%} Open Graph + Twitter Card — social sharing previews {%- endcomment -%}
+  {%- liquid
+    assign og_title = page_title | default: shop.name
+    assign og_description = page_description | default: shop.description
+    if template contains 'product'
+      assign og_type = 'product'
+      if product.featured_image
+        assign og_image = product.featured_image | image_url: width: 1200
+      endif
+    elsif template contains 'article'
+      assign og_type = 'article'
+      if article.image
+        assign og_image = article.image | image_url: width: 1200
+      endif
+    else
+      assign og_type = 'website'
+    endif
+    if og_image == blank and settings.social_share_image != blank
+      assign og_image = settings.social_share_image | image_url: width: 1200
+    endif
+  -%}
+  <meta property="og:site_name" content="{{ shop.name }}">
+  <meta property="og:url" content="{{ canonical_url }}">
+  <meta property="og:title" content="{{ og_title | escape }}">
+  {%- if og_description != blank -%}
+    <meta property="og:description" content="{{ og_description | escape }}">
+  {%- endif -%}
+  <meta property="og:type" content="{{ og_type }}">
+  {%- if og_image != blank -%}
+    <meta property="og:image" content="{{ og_image }}">
+    <meta name="twitter:card" content="summary_large_image">
+  {%- else -%}
+    <meta name="twitter:card" content="summary">
+  {%- endif -%}
+  <meta name="twitter:title" content="{{ og_title | escape }}">
+  {%- if og_description != blank -%}
+    <meta name="twitter:description" content="{{ og_description | escape }}">
+  {%- endif -%}
+
+  {%- comment -%} Organization + WebSite JSON-LD — homepage only (Google knowledge panel + sitelinks searchbox) {%- endcomment -%}
+  {%- if template.name == 'index' -%}
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": {{ shop.name | json }},
+      "url": {{ shop.url | append: '/' | json }}
+      {%- if settings.social_share_image != blank -%}
+      ,"logo": {{ settings.social_share_image | image_url: width: 600 | prepend: 'https:' | json }}
+      {%- endif -%}
+      {%- assign social_profiles = '' -%}
+      {%- if settings.social_instagram != blank -%}{%- assign social_profiles = social_profiles | append: '|' | append: settings.social_instagram -%}{%- endif -%}
+      {%- if settings.social_facebook != blank -%}{%- assign social_profiles = social_profiles | append: '|' | append: settings.social_facebook -%}{%- endif -%}
+      {%- if settings.social_twitter != blank -%}{%- assign social_profiles = social_profiles | append: '|' | append: settings.social_twitter -%}{%- endif -%}
+      {%- if settings.social_tiktok != blank -%}{%- assign social_profiles = social_profiles | append: '|' | append: settings.social_tiktok -%}{%- endif -%}
+      {%- if settings.social_youtube != blank -%}{%- assign social_profiles = social_profiles | append: '|' | append: settings.social_youtube -%}{%- endif -%}
+      {%- if social_profiles != blank -%}
+      ,"sameAs": {{ social_profiles | remove_first: '|' | split: '|' | json }}
+      {%- endif -%}
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "url": {{ shop.url | append: '/' | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{{ shop.url }}/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+  {%- endif -%}
+
+  {%- if settings.favicon != blank -%}
+    <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+  {%- endif -%}
+
+  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  {%- capture google_fonts_href -%}https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap{%- endcapture -%}
+  <link rel="preload" href="{{ google_fonts_href }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="{{ google_fonts_href }}"></noscript>
+
+  {{ content_for_header }}
+
+  {{ 'theme.css' | asset_url | stylesheet_tag }}
+
+  {%- comment -%}
+    Rebuy Smart Cart override — TEMPORARY.
+    Hide Rebuy's injected cart UI + defeat its scroll-lock CSS.
+    Rebuy ships `.rebuy-cart-visible { overflow: hidden !important }` (and
+    filter/modal/bundle-builder variants) as specificity (0,1,0). We beat it
+    with `html.*-visible` (0,1,1) + !important + later cascade order.
+    Remove once the client disables Smart Cart in the Rebuy dashboard.
+  {%- endcomment -%}
+  <style>
+    #rebuy-cart,
+    .rebuy-cart,
+    .rebuy-smartcart,
+    [data-rebuy-cart],
+    [data-rebuy-type="cart"],
+    .rebuy-cart__background,
+    .rebuy-smartcart-overlay {
+      display: none !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+    }
+    html.rebuy-filter-flyout-visible,
+    html.rebuy-modal-visible,
+    html.rebuy-cart-visible,
+    html.rebuy-bundle-builder-container-visible,
+    body.rebuy-filter-flyout-visible,
+    body.rebuy-modal-visible,
+    body.rebuy-cart-visible,
+    body.rebuy-bundle-builder-container-visible {
+      overflow: auto !important;
+    }
+  </style>
+
+  {%- if settings.gtm_id != blank -%}
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','{{ settings.gtm_id }}');
+    </script>
+  {%- endif -%}
+
+  {%- comment -%}
+    Logged-in customers visiting the rewards marketing page are redirected
+    to their account dashboard with the rewards tab anchored.
+    Account-side toggle is owned by the accounts work in a separate branch.
+  {%- endcomment -%}
+  {%- if customer and template.name == 'page' and page.handle == 'rewards' -%}
+    <script>window.location.replace({{ routes.account_url | append: '#rewards' | json }});</script>
+  {%- endif -%}
+</head>
+
+<body>
+  {%- if settings.gtm_id != blank -%}
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id={{ settings.gtm_id }}" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+  {%- endif -%}
+
+  {%- if settings.password_overlay_enabled -%}
+    <div id="password-overlay" style="display:none;position:fixed;inset:0;z-index:99999;background:{{ settings.color_background | default: '#F5F0EB' }};display:flex;align-items:center;justify-content:center;font-family:'Oxygen',sans-serif;">
+      <div style="text-align:center;max-width:400px;padding:2rem;">
+        <h1 style="font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:0.5rem;color:{{ settings.color_primary | default: '#2C2C2C' }};">{{ settings.password_overlay_heading }}</h1>
+        <p style="margin-bottom:1.5rem;color:{{ settings.color_primary | default: '#2C2C2C' }};opacity:0.7;font-size:0.95rem;">{{ settings.password_overlay_message }}</p>
+        <form id="password-form" style="display:flex;flex-direction:column;gap:0.75rem;">
+          <input
+            id="password-input"
+            type="password"
+            placeholder="Enter password"
+            autocomplete="off"
+            style="padding:0.75rem 1rem;border:1px solid {{ settings.color_primary | default: '#2C2C2C' }};background:transparent;font-size:1rem;text-align:center;outline:none;"
+          >
+          <button type="submit" style="padding:0.75rem 1rem;background:{{ settings.color_primary | default: '#2C2C2C' }};color:{{ settings.color_background | default: '#F5F0EB' }};border:none;font-size:0.875rem;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;">Enter</button>
+          <p id="password-error" style="color:#c00;font-size:0.85rem;display:none;">Incorrect password</p>
+        </form>
+      </div>
+    </div>
+    <script>
+      (function() {
+        var KEY = 'tg_preview_auth';
+        var PASS = {{ settings.password_overlay_password | json }};
+        var overlay = document.getElementById('password-overlay');
+
+        if (sessionStorage.getItem(KEY) === 'true') {
+          overlay.remove();
+          return;
+        }
+
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+
+        document.getElementById('password-form').addEventListener('submit', function(e) {
+          e.preventDefault();
+          var val = document.getElementById('password-input').value;
+          if (val === PASS) {
+            sessionStorage.setItem(KEY, 'true');
+            overlay.remove();
+            document.body.style.overflow = '';
+          } else {
+            document.getElementById('password-error').style.display = 'block';
+            document.getElementById('password-input').value = '';
+          }
+        });
+      })();
+    </script>
+  {%- endif -%}
+
+  {% sections 'header-group' %}
+
+  <main id="main-content" role="main" class="min-h-[50vh]">
+    {{ content_for_layout }}
+  </main>
+
+  {% sections 'footer-group' %}
+
+  {%- comment -%} Toast notification — slides in from right, auto-dismisses {%- endcomment -%}
+  <div id="toast-notification"
+    class="fixed right-0 top-20 z-[99999] flex max-w-80 gap-3 p-4 text-white shadow-md transition-transform duration-1000 translate-x-full"
+    aria-live="polite"
+    role="status">
+    <span data-toast-icon></span>
+    <span class="-mt-0.5 inline-block" data-toast-text></span>
+  </div>
+
+  {% section 'cart-drawer' %}
+
+  {% render 'rewards-modal' %}
+
+  <script src="{{ 'theme.js' | asset_url }}" defer></script>
+</body>
+</html>

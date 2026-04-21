@@ -1,0 +1,350 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "general": {
+    "meta": {
+      "page": "Page {{ page }}"
+    },
+    "accessibility": {
+      "skip_to_content": "Skip to content",
+      "close": "Close",
+      "back": "Back"
+    },
+    "search": {
+      "title": "Search",
+      "placeholder": "Search products...",
+      "submit": "Submit search"
+    }
+  },
+  "products": {
+    "product": {
+      "sold_out": "Sold out"
+    }
+  },
+  "sections": {
+    "announcement_bar": {
+      "name": "Announcement bar",
+      "label": "Announcement",
+      "settings": {
+        "text": {
+          "label": "Text"
+        },
+        "link": {
+          "label": "Link"
+        },
+        "link_text": {
+          "label": "Link text"
+        },
+        "background_color": {
+          "label": "Background colour"
+        },
+        "text_color": {
+          "label": "Text colour"
+        }
+      }
+    },
+    "footer": {
+      "name": "Footer",
+      "contact_heading": "Contact us",
+      "payment_methods": "Accepted payment methods",
+      "legal_nav": "Legal"
+    },
+    "collection": {
+      "name": "Collection",
+      "product_count": "{{ count }} products",
+      "filter": "Filter",
+      "show_filters": "Show filters",
+      "clear_all": "Clear all",
+      "view_products": "View products",
+      "sort_by": "Sort by",
+      "load_more": "Load more",
+      "no_products": "No products found",
+      "active_filters": "Active filters",
+      "remove_filter": "Remove {{ filter }}",
+      "price_min": "Min",
+      "price_max": "Max",
+      "price_apply": "Apply",
+      "price_clear": "Clear",
+      "settings": {
+        "layout": {
+          "content": "Layout"
+        },
+        "products_per_page": {
+          "label": "Products per page"
+        },
+        "enable_filtering": {
+          "label": "Enable filtering"
+        },
+        "enable_sorting": {
+          "label": "Enable sorting"
+        }
+      }
+    },
+    "search": {
+      "name": "Search results",
+      "title": "Search results for:",
+      "title_empty": "Search products",
+      "no_results": "No products found for your selection",
+      "previous": "Previous page",
+      "next": "Next page"
+    },
+    "product": {
+      "name": "Product",
+      "colour_label": "Colour:",
+      "size_label": "Size",
+      "size_guide": "Size guide",
+      "add_to_basket": "Add to basket",
+      "sold_out": "Sold out",
+      "rewards_banner": "Register at checkout to unlock <b>TGCC Rewards</b> — earn points with every purchase.",
+      "delivery_estimate": "Get it by <span class=\"font-bold\">tomorrow</span>",
+      "description_heading": "Description",
+      "features_heading": "Features & Benefits",
+      "delivery_heading": "Delivery & Returns",
+      "delivery_returns_content": "<p>Free UK standard delivery on orders over £100.</p><p>Express delivery available. See our full delivery and returns policy for details.</p>",
+      "settings": {
+        "layout": {
+          "content": "Layout"
+        },
+        "enable_size_guide": {
+          "label": "Enable size guide",
+          "info": "Show size guide button on product pages"
+        },
+        "delivery": {
+          "content": "Delivery"
+        },
+        "enable_delivery_estimate": {
+          "label": "Enable delivery estimate",
+          "info": "Show estimated delivery date on product pages"
+        },
+        "delivery_region": {
+          "label": "Delivery region",
+          "options": {
+            "uk": "United Kingdom",
+            "us": "United States"
+          },
+          "info": "Region used for delivery estimate calculation"
+        },
+        "delivery_cutoff_hour": {
+          "label": "Delivery cutoff hour",
+          "info": "Orders placed before this hour qualify for next-day delivery"
+        },
+        "delivery_returns_content": {
+          "label": "Delivery & returns content"
+        }
+      }
+    },
+    "hero_carousel": {
+      "name": "Hero carousel",
+      "presets": {
+        "name": "Hero carousel"
+      },
+      "settings": {
+        "full_height": {
+          "label": "Full height"
+        },
+        "autoplay": {
+          "label": "Enable autoplay"
+        },
+        "show_progress": {
+          "label": "Show progress bars"
+        },
+        "enable_animation": {
+          "label": "Enable fade-up animation"
+        },
+        "aria_label": {
+          "label": "Accessible label"
+        },
+        "margin_bottom": {
+          "label": "Bottom margin"
+        }
+      },
+      "blocks": {
+        "slide": {
+          "name": "Slide",
+          "settings": {
+            "subheading": {
+              "label": "Subheading"
+            },
+            "heading": {
+              "label": "Heading"
+            },
+            "heading_size": {
+              "label": "Heading size",
+              "options": {
+                "h1": "Large",
+                "h2": "Medium",
+                "h3": "Small"
+              }
+            },
+            "heading_font": {
+              "label": "Heading font",
+              "options": {
+                "serif": "Serif (Playfair Display)",
+                "sans": "Sans-serif (Oxygen)"
+              }
+            },
+            "media_type": {
+              "label": "Media type",
+              "options": {
+                "image": "Image",
+                "video": "Video"
+              }
+            },
+            "image": {
+              "label": "Image"
+            },
+            "video_url": {
+              "label": "Video URL (desktop)"
+            },
+            "video_url_mobile": {
+              "label": "Video URL (mobile)"
+            },
+            "slide_duration": {
+              "label": "Slide duration"
+            },
+            "button_label": {
+              "label": "Button label"
+            },
+            "button_link": {
+              "label": "Button link"
+            },
+            "button_style": {
+              "label": "Button style",
+              "options": {
+                "white": "White (solid)",
+                "transparent": "Transparent (outlined)",
+                "text": "Text link"
+              }
+            }
+          }
+        }
+      }
+    },
+    "banner_cards": {
+      "name": "Banner cards",
+      "presets": {
+        "name": "Banner cards"
+      },
+      "settings": {
+        "layout": {
+          "label": "Layout"
+        },
+        "columns": {
+          "label": "Columns"
+        },
+        "aspect_ratio": {
+          "label": "Aspect ratio"
+        },
+        "heading_tag": {
+          "label": "Heading tag"
+        },
+        "heading_size": {
+          "label": "Heading size"
+        },
+        "margin_bottom": {
+          "label": "Bottom margin"
+        },
+        "enable_animation": {
+          "label": "Enable fade-up animation"
+        }
+      },
+      "blocks": {
+        "card": {
+          "name": "Card",
+          "settings": {
+            "heading": {
+              "label": "Heading"
+            },
+            "image": {
+              "label": "Image"
+            },
+            "link": {
+              "label": "Link"
+            },
+            "button_label": {
+              "label": "Button label"
+            }
+          }
+        }
+      }
+    },
+    "brand_listing": {
+      "name": "Brand A–Z listing",
+      "find_a_brand": "Find a brand",
+      "filter_by_letter": "Filter brands by first letter",
+      "the_brand": "The Brand",
+      "mens": "Mens",
+      "womens": "Womens",
+      "other_brands": "Other Brands",
+      "no_brands": "No brands available",
+      "no_brands_for_letter_html": "No brands found for letter \"<strong>{{ letter }}</strong>\"",
+      "no_brands_matching_html": "No brands found matching \"<strong>{{ query }}</strong>\""
+    },
+    "header": {
+      "name": "Header",
+      "main_nav": "Main navigation",
+      "mobile_nav": "Mobile navigation",
+      "mobile_menu_open": "Open menu",
+      "account": "Account",
+      "wishlist": "Wishlist",
+      "cart": "Cart",
+      "submenu_open": "Open {{ title }} submenu",
+      "settings": {
+        "logo": {
+          "label": "Logo"
+        },
+        "logo_width": {
+          "label": "Logo width"
+        },
+        "menu": {
+          "label": "Menu"
+        },
+        "header_colors": {
+          "content": "Colours"
+        },
+        "enable_transparent_header": {
+          "label": "Enable transparent header"
+        },
+        "transparent_text_color": {
+          "label": "Transparent text colour"
+        },
+        "solid_bg_color": {
+          "label": "Solid background colour"
+        },
+        "solid_text_color": {
+          "label": "Solid text colour"
+        }
+      },
+      "blocks": {
+        "mega_menu_image": {
+          "name": "Mega menu image",
+          "settings": {
+            "menu_item_title": {
+              "label": "Menu item title",
+              "info": "Must match a top-level menu item title exactly"
+            },
+            "image": {
+              "label": "Image"
+            },
+            "heading": {
+              "label": "Heading"
+            },
+            "link": {
+              "label": "Link"
+            },
+            "link_text": {
+              "label": "Link text"
+            }
+          }
+        }
+      }
+    }
+  }
+}

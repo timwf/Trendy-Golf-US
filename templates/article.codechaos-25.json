@@ -1,0 +1,300 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": false,
+        "show_excerpt": false,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/3d32d2d46d0e4b88954c1236697c7ad3.mp4",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>adidas has once again set the stage for innovation in the world of golf footwear with the reveal of their latest masterpiece, the CODECHAOS '25 spikeless golf shoes. Announced alongside brand ambassador and football star Gareth Bale on July 31st, this newest iteration of the CODECHAOS series promises to redefine what golfers can expect from their shoes, both in terms of performance and style. Available from August 1st, the CODECHAOS '25 is poised to make a significant impact in the golfing community.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "A Legacy of Innovation: The CODECHAOS Series",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The CODECHAOS line, first introduced in 2019, was born out of a desire to challenge the status quo of spikeless golf shoes. With each iteration, adidas has pushed the boundaries of design and functionality, and the CODECHAOS '25 is no exception. This third generation of the series builds on the success of its predecessors, bringing new technologies and refined aesthetics to the forefront.</p><p></p><h2><strong>What's New in CODECHAOS '25?</strong></h2><ol><li><strong>3D Torsion Plate in the Outsole</strong>: One of the standout features of the new CODECHAOS '25 is the redesigned 3D Torsion Plate. This innovation provides high-level stability throughout the swing and while walking, ensuring that golfers have the support they need from tee to green. The plate also enhances the overall fit, reducing midfoot bend and preventing internal heel slip.</li><li><strong>Updated TwistGrip Outsole</strong>: The TwistGrip outsole, a hallmark of the CODECHAOS line, has been revamped with a new lug shape that covers a larger surface area. This update results in a 40% increase in traction elements compared to previous models, giving golfers unmatched grip and stability on various terrains.</li><li><strong>Durable, Multi-layer Knit Upper</strong>: The upper of the CODECHAOS '25 is made from a durable, multi-layer knit designed to provide flexibility and support. The bottom layer features a soft, moisture-wicking material for added comfort, while the middle jacquard layer offers adaptability to different lies. The outer layer of sporty mesh enhances the structural integrity of the shoe.</li></ol><p><strong>BOA Model with PerformFit Wrap</strong>: For golfers seeking a more customised fit, the new BOA model with PerformFit Wrap is a game-changer. This technology, developed in collaboration with BOA engineers, ensures a locked-in feel and additional stability, covered by a protective zipper shroud.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_1_76b3c2d7-85cb-40ee-bad1-94403fbd6bef.png",
+            "link": "shopify://products/codechaos-25-boa-golf-shoes-white-black-aw24",
+            "button_label": "CODECHAOS '25 BOA WHITE"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_2_d86a62ee-fb21-4d96-bbf9-d9326882aed0.png",
+            "link": "shopify://products/codechaos-25-boa-golf-shoes-white-black-aw24",
+            "button_label": "CODECHAOS '25 BOA WHITE"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Performance Meets Style",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>While the technical specifications of the CODECHAOS '25 are impressive, adidas has not overlooked the importance of style. The shoe's silhouette and vibrant colour options are designed to catch the eye, making a statement on the course. However, it's the performance enhancements that truly set the CODECHAOS '25 apart.</p><h2><strong>The Impact of Innovation</strong></h2><p><em>\"Nearly 5 years ago, we made the bold move to introduce CODECHAOS when traditional spikeless models were saturating the market,\"</em> said Masun Denison, global footwear director at adidas Golf. </p><p>\"<em>The impact this footwear had then and continues to have now is another proof point for us that golfers are continuing to look for spikeless performance in athletic and non-traditional silhouettes. CODECHAOS '25 represents a milestone for us on how we've made this shoe better over the past 5 years, especially during a time where golf has seen such tremendous growth and participation.\"</em></p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_2": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/20240404_ADIDAS_00535.png",
+            "link": "shopify://products/codechaos-25-golf-shoes-white-black-aw24",
+            "button_label": "CODECHAOS '25 WHITE/BLACK"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/20240404_ADIDAS_00600.png",
+            "link": "shopify://products/codechaos-25-golf-shoes-white-black-aw24",
+            "button_label": "CODECHAOS '25 WHITE/BLACK"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Enhanced Comfort and Stability",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Knowing that comfort is crucial for golfers, adidas has incorporated a new hybrid midsole that features both BOOST and LIGHTSTRIKE technologies. BOOST technology focuses on energy return and cradling the foot, while LIGHTSTRIKE adds stability and comfort around the rim of the midsole. This combination is ideal for golfers who need both support and cushioning during their rounds.</p><h2><strong>Materials and Design</strong></h2><p>The upper's multi-layer construction is not just about aesthetics. The bottom layer's moisture-wicking material ensures comfort, the middle dynamic jacquard layer provides flexibility, and the outer sporty mesh adds durability. Additionally, a transparent PU film gives a peek into the unique upper construction while offering waterproof protection.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Availability and Models",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The CODECHAOS '25 will be available in both men's and women's silhouettes, with options for traditional laces or the innovative BOA system. Starting August 1st, golfers worldwide can experience the latest in spikeless shoe technology.</p><p>The adidas CODECHAOS '25 golf shoe marks a significant milestone in the evolution of golf footwear. By combining cutting-edge technology, enhanced performance features, and striking design, adidas has once again set a new standard. Whether you are a professional golfer or an enthusiastic amateur, the CODECHAOS '25 promises to deliver the comfort, stability, and style you need to elevate your game. With its release, adidas continues to lead the way in redefining what a golf shoe can be.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "ADIDAS GOLF SHOES",
+        "collection": "mens-adidas-golf-shoes",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "text_2",
+    "promo_1",
+    "text_3",
+    "promo_2",
+    "text_4",
+    "text_5",
+    "products_1",
+    "related-articles"
+  ]
+}

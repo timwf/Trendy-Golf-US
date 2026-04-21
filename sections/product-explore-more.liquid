@@ -1,0 +1,72 @@
+{%- comment -%}
+  Explore More — Rebuy similar-products carousel, loaded client-side.
+  Mirrors `productSingle.tsx` (lines 158-199) + `useSimilarProducts.ts` + `productCarousel.tsx`.
+  Product cards fetched per handle via the Section Rendering API so they use
+  `snippets/product-card.liquid` (real Shopify product data).
+{%- endcomment -%}
+
+{%- liquid
+  assign is_gift_card = false
+  if product.type == 'Gift Card' or product.template_suffix == 'giftcard'
+    assign is_gift_card = true
+  endif
+-%}
+
+<script>
+  window.exploreMoreConfig = {
+    productId: {{ product.id | json }},
+    rebuyApiKey: {{ settings.rebuy_api_key | json }},
+    isGiftCard: {{ is_gift_card | json }},
+    countryCode: {{ localization.country.iso_code | default: 'GB' | json }},
+    rootUrl: {{ routes.root_url | json }}
+  };
+</script>
+
+<div
+  id="explore-more"
+  class="mb-14 overflow-hidden"
+  data-explore-more
+  {% if is_gift_card %}data-gift-card="true"{% endif %}>
+  <div class="container">
+    <h2 class="mb-8 text-center font-serif text-3xl lg:text-4xl">Explore More</h2>
+
+    {%- comment -%} Loading skeleton — replaced by JS once Rebuy + card fetches resolve {%- endcomment -%}
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-4" data-explore-skeleton>
+      <div class="h-48 animate-pulse bg-black/10"></div>
+      <div class="h-48 animate-pulse bg-black/10"></div>
+      <div class="h-48 animate-pulse bg-black/10 hidden md:block"></div>
+      <div class="h-48 animate-pulse bg-black/10 hidden md:block"></div>
+    </div>
+
+    {%- comment -%} Loaded state — hidden until populated {%- endcomment -%}
+    <div data-explore-loaded hidden>
+      <div data-inview="false" class="group/blocks">
+        <div class="splide relative" data-explore-splide>
+          <div class="splide__track overflow-visible xl:overflow-hidden xl:py-1">
+            <ul class="splide__list" data-explore-list></ul>
+          </div>
+          <div class="splide__arrows flex justify-center pt-6 md:absolute md:right-0 md:top-0 md:-translate-y-full md:pb-3 md:pt-0">
+            <button type="button" aria-label="Previous" class="splide__arrow splide__arrow--prev bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50">
+              {% render 'icon', icon: 'chevron-left', size: 'size-6' %}
+            </button>
+            <button type="button" aria-label="Next" class="splide__arrow splide__arrow--next bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50">
+              {% render 'icon', icon: 'chevron-right', size: 'size-6' %}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Explore More",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Pulls similar products from Rebuy and renders them in a carousel below the product accordions. API key is configured under Theme settings → Rebuy."
+    }
+  ]
+}
+{% endschema %}

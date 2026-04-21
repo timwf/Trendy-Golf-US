@@ -1,0 +1,558 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_carousel": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "",
+            "heading_first": false,
+            "heading": "Probably the best golf apparel and footwear in the world",
+            "heading_size": "h1",
+            "use_as_page_h1": true,
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1167321685",
+            "video_url_mobile": "",
+            "hosted_video_mobile": "shopify://files/videos/slide1-mobile.mp4",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 7,
+            "button_label": "Shop now",
+            "button_link": "/collections/mens-golf-apparel",
+            "button_style": "white"
+          }
+        },
+        "slide_AHd3Kz": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "Shop the latest",
+            "heading_first": false,
+            "heading": "Manors",
+            "heading_size": "h1",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1167775799",
+            "video_url_mobile": "",
+            "hosted_video_mobile": "shopify://files/videos/slide2-manors-mobile.mp4",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 16,
+            "button_label": "Shop now",
+            "button_link": "shopify://pages/brand-manors",
+            "button_style": "white"
+          }
+        },
+        "slide_9zfFgL": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "New In",
+            "heading_first": false,
+            "heading": "adidas Golf Originals",
+            "heading_size": "h1",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video": "shopify://files/videos/adidas Golf_Orignals_JO_101525_4-1 Dual_Cutdown_R1_FINAL.mp4",
+            "hosted_video_mobile": "shopify://files/videos/adidas Golf_Orignals_JO_110125_4-1 Dual_Cutdown_1x1 - (1x1).mp4",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 5,
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/adidas-golf-originals",
+            "button_style": "white"
+          }
+        },
+        "slide_GMzGQj": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "Shop the latest",
+            "heading_first": false,
+            "heading": "RLX Ralph Lauren",
+            "heading_size": "h1",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1165392387",
+            "video_url_mobile": "https://vimeo.com/1168551962",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 12,
+            "button_label": "Shop now",
+            "button_link": "shopify://pages/brand-ralph-lauren",
+            "button_style": "white"
+          }
+        },
+        "slide_8fQxQp": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "Shop the latest",
+            "heading_first": false,
+            "heading": "G/FORE",
+            "heading_size": "h1",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1166096687",
+            "video_url_mobile": "https://vimeo.com/1166096720",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 10,
+            "button_label": "Shop now",
+            "button_link": "shopify://pages/brand-g-fore",
+            "button_style": "white"
+          }
+        }
+      },
+      "block_order": [
+        "slide_1",
+        "slide_AHd3Kz",
+        "slide_9zfFgL",
+        "slide_GMzGQj",
+        "slide_8fQxQp"
+      ],
+      "settings": {
+        "autoplay": true,
+        "show_progress": true,
+        "enable_animation": true,
+        "aria_label": "Hero slideshow",
+        "margin_bottom": "medium"
+      }
+    },
+    "banner_cards_Kx8Dxd": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_hTRff9": {
+          "type": "card",
+          "settings": {
+            "heading": "Men",
+            "image": "shopify://shop_images/banner-2col-men-ralph-lauren.jpg",
+            "link": "shopify://collections/mens-golf-apparel",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_pqCANz": {
+          "type": "card",
+          "settings": {
+            "heading": "Women",
+            "image": "shopify://shop_images/banner-2col-women-ralph-lauren.jpg",
+            "link": "shopify://collections/womens-clothing-selection",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": [
+        "card_hTRff9",
+        "card_pqCANz"
+      ],
+      "name": "t:sections.banner_cards.presets.name",
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "square",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "product_carousel_tabs_yxrJ4K": {
+      "type": "product-carousel-tabs",
+      "name": "t:sections.product_carousel_tabs.presets.name",
+      "settings": {
+        "title": "This Seasons Highlights",
+        "tab_1_label": "Men",
+        "tab_1_products": [
+          "rlx-tailored-fit-kinetic-tech-jersey-moss-agate",
+          "excursionist-flex-herringbone-knit-polo-truffle",
+          "silas-stripe-ls-knit-polo-jl-navy",
+          "dri-fit-fairway-fresh-wind-vest-sail-limestone"
+        ],
+        "tab_2_label": "Women",
+        "tab_2_products": [
+          "sophie-cardigan-stripe-burgundy",
+          "training-pleated-skort-black",
+          "performance-texture-full-zip-jacket-black",
+          "freesoft-high-rise-25-inch-leggings-prairie-sand-cheetah"
+        ],
+        "tab_3_label": "",
+        "tab_3_products": []
+      }
+    },
+    "hero_carousel_Bd6yy6": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_g8ngc3": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "",
+            "heading_first": false,
+            "heading": "APC",
+            "heading_size": "h1",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1164444995",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 7,
+            "button_label": "Shop Now",
+            "button_link": "shopify://collections/mens-a-p-c-golf-apparel",
+            "button_style": "transparent"
+          }
+        }
+      },
+      "block_order": [
+        "slide_g8ngc3"
+      ],
+      "name": "t:sections.hero_carousel.presets.name",
+      "settings": {
+        "autoplay": true,
+        "show_progress": true,
+        "enable_animation": true,
+        "aria_label": "Hero slideshow",
+        "margin_bottom": "medium"
+      }
+    },
+    "banner_cards_cCmMtf": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_iNKbBY": {
+          "type": "card",
+          "settings": {
+            "heading": "APC",
+            "image": "shopify://shop_images/banner-3col-shop-all-apc.jpg",
+            "link": "shopify://pages/brand-apc",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_AezUzF": {
+          "type": "card",
+          "settings": {
+            "heading": "J.Lindeberg",
+            "image": "shopify://shop_images/02-brand-card-jlindeberg.jpg",
+            "link": "shopify://pages/brand-j-lindeberg",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_WiQfLQ": {
+          "type": "card",
+          "settings": {
+            "heading": "Manors",
+            "image": "shopify://shop_images/02-brand-card-manors.jpg",
+            "link": "shopify://pages/brand-manors",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": [
+        "card_iNKbBY",
+        "card_AezUzF",
+        "card_WiQfLQ"
+      ],
+      "name": "t:sections.banner_cards.presets.name",
+      "settings": {
+        "layout": "carousel",
+        "columns": 3,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "small",
+        "enable_animation": true
+      }
+    },
+    "hero_carousel_riXp9M": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_HnbrWa": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "The best shoes for every player, course, and condition featuring the latest styles from all the top footwear brands.",
+            "heading_first": false,
+            "heading": "Find your perfect golf shoe.",
+            "heading_size": "h2",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1164709356",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 9,
+            "button_label": "Shop Now",
+            "button_link": "shopify://pages/shoe-finder",
+            "button_style": "text"
+          }
+        }
+      },
+      "block_order": [
+        "slide_HnbrWa"
+      ],
+      "name": "t:sections.hero_carousel.presets.name",
+      "settings": {
+        "autoplay": true,
+        "show_progress": true,
+        "enable_animation": true,
+        "aria_label": "Hero slideshow",
+        "margin_bottom": "none"
+      }
+    },
+    "hero_carousel_FjYm4C": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_7GU4Qk": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "The world’s leading online golf club. Join TGCC today and experience rewards that truly hit different.",
+            "heading_first": false,
+            "heading": "",
+            "heading_size": "h2",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "shopify://shop_images/hero-tgcc-desktop.jpg",
+            "mobile_image": "shopify://shop_images/hero-tgcc-mobile.jpg",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 7,
+            "button_label": "Learn more",
+            "button_link": "shopify://pages/rewards",
+            "button_style": "text"
+          }
+        }
+      },
+      "block_order": [
+        "slide_7GU4Qk"
+      ],
+      "name": "t:sections.hero_carousel.presets.name",
+      "settings": {
+        "autoplay": true,
+        "show_progress": true,
+        "enable_animation": true,
+        "aria_label": "Hero slideshow",
+        "margin_bottom": "medium"
+      }
+    },
+    "magazine_articles_wQRhf7": {
+      "type": "magazine-articles",
+      "name": "Magazine articles",
+      "settings": {
+        "blog": "magazine",
+        "article_count": 3,
+        "heading": "The Magazine",
+        "subheading": "<p>Keep in the know with the latest product releases, brand collections and news from the sporting fashion world</p>",
+        "show_category": true,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "large",
+        "enable_animation": true
+      }
+    },
+    "hero_carousel_flagship": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_flagship": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "",
+            "heading_first": false,
+            "heading": "Flagship stores",
+            "heading_size": "h2",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1166029899",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 13,
+            "button_label": "View now",
+            "button_link": "shopify://pages/trendygolf-stores",
+            "button_style": "text"
+          }
+        }
+      },
+      "block_order": [
+        "slide_flagship"
+      ],
+      "name": "t:sections.hero_carousel.presets.name",
+      "settings": {
+        "autoplay": true,
+        "show_progress": true,
+        "enable_animation": true,
+        "aria_label": "Hero slideshow",
+        "margin_bottom": "medium"
+      }
+    },
+    "social_grid_zxnDFz": {
+      "type": "social-grid",
+      "blocks": {
+        "grid_item_tUxL8V": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-01-jlindeberg.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_cenMKr": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-02-nike-shoes.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_E3dcqB": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-03-head-headwear.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_mLzqDt": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-04-trendygolf-clothing.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_7aAznG": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-05-trendygolf-clothing.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_gxtkD4": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-06-adidas-originals.jpg",
+            "image_alt": "",
+            "link": "https://www.instagram.com/trendygolf/reel/DTifiXfER-f/",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_87Wj6c": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-07-puma.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_aL8Ag3": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-08-trendygolf-clothing.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_Py7rwb": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-09-adidas-womens.jpg",
+            "image_alt": "",
+            "link": "https://www.instagram.com/trendygolf/p/DTu2KVJiklV/",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_PmWmY4": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/social-10-head-womens.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_9xfnTz": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/06-social-11-manors.jpg",
+            "image_alt": "",
+            "link": "",
+            "link_icon": "instagram"
+          }
+        },
+        "grid_item_EW6tDL": {
+          "type": "grid_item",
+          "settings": {
+            "image": "shopify://shop_images/64fca13f15bb8050d32d3121243801c70cd794a6-1080x1080.webp",
+            "image_alt": "",
+            "link": "https://www.instagram.com/trendygolf/p/DT2TZ9sikIq/",
+            "link_icon": "instagram"
+          }
+        }
+      },
+      "block_order": [
+        "grid_item_tUxL8V",
+        "grid_item_cenMKr",
+        "grid_item_E3dcqB",
+        "grid_item_mLzqDt",
+        "grid_item_7aAznG",
+        "grid_item_gxtkD4",
+        "grid_item_87Wj6c",
+        "grid_item_aL8Ag3",
+        "grid_item_Py7rwb",
+        "grid_item_PmWmY4",
+        "grid_item_9xfnTz",
+        "grid_item_EW6tDL"
+      ],
+      "name": "t:sections.social_grid.presets.name",
+      "settings": {
+        "heading": "@trendygolf",
+        "subheading": "Wear it your way. Tag us on Instagram for your chance to be featured.",
+        "margin_bottom": "none"
+      }
+    }
+  },
+  "order": [
+    "hero_carousel",
+    "banner_cards_Kx8Dxd",
+    "product_carousel_tabs_yxrJ4K",
+    "hero_carousel_Bd6yy6",
+    "banner_cards_cCmMtf",
+    "hero_carousel_riXp9M",
+    "hero_carousel_FjYm4C",
+    "magazine_articles_wQRhf7",
+    "hero_carousel_flagship",
+    "social_grid_zxnDFz"
+  ]
+}

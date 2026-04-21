@@ -1,0 +1,586 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/943790a550654c969871268662b09934.mp4",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The anticipation of hitting the golf course heats up as the winter chill gives way to the vibrant blooms of spring. However, with the change in seasons comes unpredictable weather, and there's nothing worse for a golfer than being caught unprepared in a sudden downpour. But fear not, as KJUS, the pioneers of high-performance golf apparel, have unveiled their latest collection, designed to keep you dry, comfortable, and stylish on the course regardless of the forecast.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Pro 3L 3.0 Jacket: Mastering the Art of Mobility and Protection",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Pro 3L 3.0 Jacket, is a testament to KJUS's relentless pursuit of innovation and excellence. This next-generation rainwear redefines the standards of breathability, stretch, and lightweight performance, offering golfers unparalleled freedom of movement without compromising on protection from the elements.</p><p>Picture yourself on the tee box, ready to unleash a powerful drive down the fairway. With the Pro 3L 3.0 Jacket, you can swing with confidence, thanks to its full stretch body and strategically placed Hyper 3D Stretch panels. These inserts are ingeniously designed to reinforce your natural range of motion during the golf swing, ensuring that not even the rain can dampen your game.</p><p>But it's not just about mobility \u2013 KJUS has thoughtfully integrated cutting-edge technologies to enhance comfort and performance. The KJUS Rain Gutter System ingeniously directs water away during extreme downpours, while the Drawcord Waist System ensures the jacket stays out of the way during crucial shots around the green.</p><p>Moreover, the jacket boasts an array of thoughtful features, including volcanic material lined pockets to keep your hands dry and warm, an ergonomic stand-up collar with a chin guard for added protection, and a new membrane that makes it the most breathable waterproof in the range. From the first hole to the last, the Pro 3L 3.0 Jacket is your ultimate companion against the elements.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "pro-3l-3-0-jacket-atlanta-blue-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "pro-3l-3-0-jacket-black-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "pro-3l-3-0-jacket-steel-blue-ss24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3"],
+      "settings": {
+        "image": "shopify://shop_images/KJUS_SS24_Golf_410.png",
+        "title": "",
+        "subtext": ""
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Pro 3L 3.0 Pant: Seamless Integration of Performance and Style",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Complementing the Pro 3L 3.0 Jacket is its counterpart, the Pro 3L 3.0 Pant. Crafted with the same commitment to excellence, these trousers offer golfers a seamless blend of breathability, stretch, and lightweight protection, allowing you to move freely and perform at your best regardless of the weather conditions.</p><p>Imagine striding down the fairway, confidently tackling each shot with precision and finesse. With the Pro 3L 3.0 Pant, you can do just that, thanks to its four-way stretch technology and fully seam-sealed construction. Whether you're bending to read a putt or executing a flawless iron shot, these trousers move with you, ensuring unrestricted movement and maximum comfort throughout your round.</p><p>But the Pro 3L 3.0 Pant is more than just a functional piece of apparel \u2013 it's a stylish statement on the golf course. Featuring a snap closure waistband, back pocket with magnetic button closure, and high-side seam zips for ventilation, these trousers marry performance with style in perfect harmony. With the magnetically hidden shoe flap to prevent rain intrusion through your shoelaces, you can focus on your game without worrying about wet feet.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_2": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "pro-3l-3-0-pants-atlanta-blue-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "pro-3l-3-0-pants-black-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "pro-3l-2-0-pants-black-2023"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3"],
+      "settings": {
+        "image": "shopify://shop_images/KJUS_SS24_Golf_378.png",
+        "title": "",
+        "subtext": ""
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/9de1c03cccf849ae9434bf324748b035.mp4",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Rain Rescue Jacket: Compact, Lightweight, and Ready for Anything",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For those unpredictable days when a sudden shower catches you off guard, the Rain Rescue Jacket is your go-to solution. Packable into its own pocket, this jacket is the epitome of versatility, making it the perfect companion for stowing away in your bag for a rainy day on the course.</p><p>Crafted with extra lightweight breathable fabric that is windproof, waterproof, and eco-friendly, the Rain Rescue Jacket offers golfers peace of mind without adding unnecessary bulk or weight to your bag. Whether you're carrying a full set of clubs or opting for a lightweight pencil bag, this jacket is lighter than a sleeve of golf balls, ensuring you stay prepared without sacrificing performance.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_3": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "rain-rescue-2-5l-jacket-mykonos-atlanta-blue-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "bothy-2l-regular-fit-waterproof-jacket-atlanta-blue-aw23"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "insulated-regular-fit-waterproof-jacket-atlanta-blue-aw23"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3"],
+      "settings": {
+        "image": "shopify://shop_images/KJUS_SS24_Golf_399.png",
+        "title": "",
+        "subtext": ""
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Breton Waterproof Pant: Performance Meets Style",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gone are the days when intermittent rain during a round leaves golfers uncertain about their attire. Enter the Breton Waterproof Pant, a tailored masterpiece that looks smart and performs even in the worst conditions.</p><p>With the Breton Waterproof Pant, you can stride confidently down the fairway, knowing that you're protected from the elements without compromising on style. Waterproof, breathable, windproof, and stretchable, these trousers offer golfers the perfect blend of performance and elegance, ensuring you look and feel your best regardless of the weather.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_4": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "breton-waterproof-pants-atlanta-blue-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "breton-waterproof-pants-steel-grey-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "bothy-2l-regular-fit-waterproof-trousers-atlanta-blue-aw23"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3"],
+      "settings": {
+        "image": "shopify://shop_images/KJUS_SS24_Golf_193.png",
+        "title": "",
+        "subtext": ""
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Cool Recovery Mid-layer: Enhancing Performance, Promoting Recovery",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In the heat of competition, every advantage counts. That's why KJUS has developed the Cool Recovery Mid-layer, a technical marvel that not only enhances your performance on the course but also promotes faster muscle recovery post-activity.</p><p>Featuring Mineral Circulation technology, this mid-layer increases blood flow and oxygen levels to your muscles, ensuring you perform at your peak throughout your round. Additionally, cooling technology is strategically placed to help aid the body's natural ability to cool down on hot days, keeping you comfortable and focused from the first tee to the final putt.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_5": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "cool-recovery-hz-mid-layer-mykonos-atlanta-blue-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "cool-recovery-hz-mid-layer-blue-fog-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "ashton-regular-fit-half-zip-mid-layer-atlanta-blue-white-aw23"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3"],
+      "settings": {
+        "image": "shopify://shop_images/KJUS_SS24_Golf_154.png",
+        "title": "",
+        "subtext": ""
+      }
+    },
+    "text_7": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Stephen Half Zip Jacket: Where Performance Meets Elegance",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Crafted with precision and style in mind, the Stephen Half Zip Jacket strikes the perfect balance between casual elegance and sophisticated performance on the course. Lightweight, ultra-stretchable, and quick-drying, this technical masterpiece guarantees unrestricted movement and maximum comfort throughout your round.</p><p>Whether you're navigating the fairways or enjoying post-game camaraderie, the Stephen Half Zip Jacket keeps you as fresh as you look, ensuring you make a stylish statement on and off the course.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_6": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "stephen-half-zip-jacket-steel-blue-atlanta-blue-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "stephen-half-zip-jacket-white-alloy-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "reach-jacket-atlanta-blue-ss23"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3"],
+      "settings": {
+        "image": "shopify://shop_images/KJUS_SS24_Golf_109.png",
+        "title": "",
+        "subtext": ""
+      }
+    },
+    "text_8": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Soren Stripe Polo: Breathable, Quick-Drying, and Stylish",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Elevate your golf wardrobe with the Soren Stripe Polo, a technical marvel designed for the modern golfer. Crafted with precision, this polo boasts a unique tight-knit fabric that ensures breathability and quick-drying properties, keeping you cool and comfortable throughout your round.</p><p>Equipped with a streamlined gusset and cooling mesh collar construction, the Soren Stripe Polo offers ample room for unrestricted movement during every swing, allowing you to unleash your full potential on the course. With UV 50+ protection and an antibacterial finish, this polo not only performs on the course but also keeps you looking sharp from the first tee to the final putt.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "collection": "mens-kjus",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_9": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The latest offerings from KJUS are a testament to the brand's commitment to excellence, innovation, and performance. From the Pro 3L 3.0 Jacket to the Iver Shorts, each piece is meticulously crafted to provide golfers with the perfect blend of style, comfort, and functionality on the course.</p><p>With KJUS you can embrace the elements with confidence, knowing that you're equipped with the finest golf apparel, equipped for anything the course throws at you. Whether you're battling a sudden shower or soaking up the sun on a glorious spring day, this guide has you covered, ensuring you look and perform your best from the first tee to the final putt.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP KJUS",
+            "link": "https://trendygolf.com/collections/mens-kjus",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["text_1", "button_1"],
+      "settings": {
+        "alignment": "center",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "magazine-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "text_2",
+    "shop_the_look_1",
+    "text_3",
+    "shop_the_look_2",
+    "hero_2",
+    "text_4",
+    "shop_the_look_3",
+    "text_5",
+    "shop_the_look_4",
+    "text_6",
+    "shop_the_look_5",
+    "text_7",
+    "shop_the_look_6",
+    "text_8",
+    "products_1",
+    "text_9",
+    "magazine-articles"
+  ]
+}

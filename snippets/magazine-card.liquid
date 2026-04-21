@@ -1,0 +1,55 @@
+{%- doc -%}
+  Renders a single magazine article card — image with hover overlay, category tag, title, and read more link.
+
+  @param {article} article - The Shopify article object
+  @param {boolean} show_category - Whether to display the first tag as a category label
+{%- enddoc -%}
+
+<a href="{{ article.url }}"
+   class="group relative block h-max animate-fade-in opacity-0 transition-opacity duration-500">
+
+  {%- comment -%} Image {%- endcomment -%}
+  <div class="relative mb-5">
+    {%- comment -%} Hover overlay — invisible by default, fades in on hover {%- endcomment -%}
+    <div class="absolute left-0 top-0 z-1 size-full
+                bg-gradient-to-b from-black/10 to-black/30
+                opacity-0 transition-opacity duration-500
+                group-hover:opacity-100"></div>
+
+    {%- if article.image != blank -%}
+      <img
+        src="{{ article.image | image_url: width: 800 }}"
+        srcset="{{ article.image | image_url: width: 400 }} 400w,
+                {{ article.image | image_url: width: 600 }} 600w,
+                {{ article.image | image_url: width: 800 }} 800w"
+        sizes="(max-width: 480px) 100vw, (max-width: 768px) 50vw, 33vw"
+        alt="{{ article.title | escape }}"
+        class="w-full"
+        width="800"
+        height="600"
+        loading="lazy">
+    {%- else -%}
+      <div class="aspect-[4/3] w-full bg-taupe-300"></div>
+    {%- endif -%}
+  </div>
+
+  {%- comment -%} Text content {%- endcomment -%}
+  <div class="flex flex-col">
+    {%- if show_category and article.tags.size > 0 -%}
+      <p class="mb-1 text-xs tracking-wider text-taupe-700">
+        {{ article.tags.first }}
+      </p>
+    {%- endif -%}
+
+    <div class="mb-2">
+      <h4 class="font-bold text-lg lg:text-xl mb-2">
+        {{ article.title }}
+      </h4>
+    </div>
+
+    <p class="mb-0 flex items-center gap-1 text-sm tracking-wide">
+      Read more
+      {%- render 'icon', icon: 'chevron-right', size: 'size-4' -%}
+    </p>
+  </div>
+</a>

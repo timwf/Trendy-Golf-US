@@ -1,0 +1,349 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/e37d84654cf24c0eb96d253a73e679ef.mp4",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At the crossroads of sport and fashion lies Greyson Clothiers, a brand that has redefined the very essence of golf apparel. Born from the vision of uniting fashion and sport, Greyson has become synonymous with functionality, innovation, and creativity. With the principles of the wolf at the helm, Founder and CEO Charlie Schaefer built a team founded on camaraderie, loyalty, strength, and community. By crafting products that can perform at the highest level through superior tailoring and construction, Greyson has shattered the idea that sport, tailored fashion, and functionality cannot coexist. In the pursuit to redefine modern menswear, Greyson welcomes all those who strive for greatness to run along with the Pack.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Pack: More Than Just a Clothing Brand",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Pack calls on all individuals who know when to lead the Pack, when to be a team player, and carry the passion and desire to stand up for what they believe in – built on equal parts individuality and togetherness. The juxtaposition of technical performance and refined sophistication lies at the core of the brand DNA. Through the individuality of personal expression, the singularity of the sport, and the camaraderie that it forges, Greyson strives to engage with each individual who is as passionate about what they put on as much as they are passionate about what they use it for. Greyson breaks through the traditional rulebook of golf and tennis fashion; it is a brand that extends far beyond sport. Through clothing, Greyson has found a platform to impact communities, address adversity, and create space for all people to dream.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP GREYSON",
+            "link": "shopify://collections/mens-greyson",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "floral-wolf-jungle-polo-iz-su24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "cayuse-polo-maltese-su24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "floral-wolf-jungle-polo-sea-turtle-su24"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "octopaisley-polo-taro-su24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_6347a68c-72dd-45fb-929d-13f8df0bca7f.png",
+        "title": "",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Greyson Clothiers: A Legacy of Passion and Family",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Greyson Clothiers was born out of founder Charlie Schaefer's deep desire to create a brand of clothing that he would wear. Taking 13 years of design experience and the inspiration of a newly formed family of his own, Charlie set out to create a brand that would become a legacy to his children. Greyson, his first-born daughter, and Scarlett, his second-born daughter, are the inspirations for a brand that stands for something more, which can influence and change the future. Greyson is also worn by multiple PGA Tour athletes including Justin Thomas, Luke Donald, Erik Van Rooyen, Thorbjorn Olesen, Akshay Bhatia, Luke List & Sam Ryder.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em><strong>\"I HAVE A LIFE OFF THE COURSE. FASHION AND LOOKING GOOD IS PART OF THAT…THIS IS WHY GREYSON SEPARATES ITSELF FROM OTHER GOLF BRANDS.\"</strong></em></p><p><em><strong>- Luke Donald, European Ryder Cup 2023 Captain</strong></em></p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "center",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_1_932d2981-14b9-474b-ad01-f62846c186a5.png",
+            "link": "shopify://collections/mens-greyson",
+            "button_label": "SHOP GREYSON"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_2_aaffe701-be8e-438f-94f3-3138f7968784.png",
+            "link": "shopify://collections/mens-greyson",
+            "button_label": "SHOP GREYSON"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Latest Collection: Where Innovation Meets Style",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The latest Greyson collection offers bold printed/premium fabric polo shirts, cashmere hoodies, tailored shorts, as well as quarter zips/mid-layers, offering something for any occasion on the course with the best fabrics and unique prints. Each piece in the collection is crafted with the utmost attention to detail, ensuring both style and performance on the green.</p><p>• Polo Shirts: The bold printed/premium fabric polo shirts are designed to make a statement on and off the course. These polo shirts are more than just sportswear; they are a symbol of personal expression and individuality.</p><p>• Cashmere Hoodies: Luxurious and comfortable, the cashmere hoodies from Greyson Clothiers provide the perfect balance between style and functionality. Whether you're on the course or relaxing afterwards, these hoodies are a must-have in any golfer's wardrobe.</p><p>• Tailored Shorts: Greyson's tailored shorts are designed for the modern golfer. Made with the finest materials and crafted with precision, these shorts offer both style and functionality, allowing you to move freely and comfortably on the course.</p><p>• Quarter Zips/Mid-layers: The quarter zips/mid-layers from Greyson Clothiers are the perfect layering pieces for any golfer. Whether you need an extra layer of warmth on a cool day or simply want to add a touch of style to your outfit, these quarter zips/mid-layers have you covered.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "collection": "mens-greyson",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Greyson Clothiers is more than just a clothing brand; it's a lifestyle. With a commitment to functionality, innovation, and creativity, Greyson has redefined what it means to be a modern golfer. From concept to design to the final product, Greyson is dedicated to creating timeless styles that honour the prestige of fashion and tailoring while mindfully creating a community devoted to camaraderie, inclusivity, loyalty, and passion. Embrace the spirit of the wolf and join the Pack today with Greyson Clothiers.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP GREYSON",
+            "link": "shopify://collections/mens-greyson",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["text_1", "button_1"],
+      "settings": {
+        "alignment": "center",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "text_2",
+    "shop_the_look_1",
+    "text_3",
+    "text_4",
+    "promo_1",
+    "text_5",
+    "products_1",
+    "text_6",
+    "related-articles"
+  ]
+}

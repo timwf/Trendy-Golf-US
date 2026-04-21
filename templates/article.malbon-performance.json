@@ -1,0 +1,360 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/4a861335dc23477cbb1d0c7dd9fd21a8.mp4",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Introduction to Malbon Golf",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Malbon Golf has long been a brand synonymous with the fusion of fashion and function on the fairways. With the launch of the Malbon Golf Performance Collection, they have yet again raised the bar, introducing a range that balances technical innovation with classic style, designed to meet the needs of the modern golfer. This collection, which will soon be available at TRENDYGOLF, is an exciting blend of meticulously crafted apparel, promising to redefine performance and comfort in the golfing world.</p><p></p><h2><strong>The Collection Overview</strong></h2><p>The Malbon Golf Performance Collection is a curated selection of garments designed to enhance the golfing experience while maintaining a sharp, contemporary aesthetic. The collection includes a range of polos, mid-layers, and outerwear, each crafted with high-performance fabrics that ensure comfort and ease of movement on the course.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/malbongolf_1716394245_3373681906528146664_22644725.png",
+            "link": "shopify://collections/mens-malbon-golf",
+            "button_label": "MALBON GOLF"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/malbongolf_1716649178_3375820442106628705_22644725.png",
+            "link": "shopify://collections/mens-malbon-golf",
+            "button_label": "MALBON GOLF"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Key Pieces Include:",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><ul><li><strong>Malbon Golf Performance Pique Polo</strong> in Black, Forest, and White: A classic polo with a modern twist, featuring moisture-wicking fabric to keep you cool and dry.</li><li><strong>Malbon Golf Performance Blade Collar Polo</strong> in Black, Forest, and Slate: A sleek alternative to the traditional collar, offering a streamlined silhouette.</li><li><strong>Malbon Golf Performance Raglan Quarter Zip Mid Layer</strong> in Black and Forest: Ideal for layering, this piece provides warmth without sacrificing mobility.</li><li><strong>Malbon Golf Performance Full Zip Shell Jacket</strong> in Black, Forest, and Slate: A versatile outer layer that offers protection against the elements, perfect for unpredictable weather conditions on the course.</li></ul>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "malbon-performance-mens-capsule",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Focus on Fabric and Functionality",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One of the standout features of the Malbon Golf Performance Collection is its emphasis on high-performance fabrics. Each item in the collection is designed with moisture-wicking properties, ensuring that you stay comfortable and dry, even during the most intense rounds. The materials used are lightweight yet durable, providing both comfort and longevity.</p><p>Moreover, the collection has been designed with the golfer's needs in mind, incorporating features like UV protection, stretch for unrestricted movement, and breathability to enhance overall performance. Whether you're teeing off under the summer sun or navigating a windy course, the Malbon Golf Performance Collection ensures you're equipped for the conditions.</p><h2><strong>Style Meets Performance</strong></h2><p>The Malbon Golf Performance Collection is not just about functionality; it also makes a strong style statement. The pieces are designed with a modern, athletic fit, offering a sleek, tailored look without compromising on comfort. The colour palette is versatile and sophisticated, with timeless shades like black, forest green, and slate, allowing for easy mix-and-match with your existing golf wardrobe.</p><p>The design elements of the collection reflect Malbon's signature style, combining minimalist aesthetics with subtle branding. This approach ensures that each piece is not only practical for performance but also stylish enough for post-round activities.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "performance-full-zip-shell-jacket-black-aw24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "performance-raglan-quarter-zip-mid-layer-forest-aw24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "performance-pique-polo-white-aw24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_MEDIA_SHOWCASE_626dd9d5-2e93-4445-b08c-0996e35c9845.png",
+        "title": "",
+        "subtext": ""
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Versatility on and off the Course",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One of the key strengths of the Malbon Golf Performance Collection is its versatility. While each piece is designed with golf in mind, the sleek designs and high-quality materials make them suitable for a variety of occasions. Whether you're heading to the clubhouse, or enjoying a casual evening out, the pieces from this collection transition seamlessly from the course to everyday life.</p><h2><strong>Sustainable Practices and Quality Craftsmanship</strong></h2><p>Malbon Golf is committed to sustainability and ethical manufacturing practices. The Performance Collection is a testament to this commitment, with each piece crafted using environmentally friendly methods and materials. The durability of the fabrics ensures that these garments are long-lasting, reducing the need for frequent replacements and contributing to a more sustainable wardrobe.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_2": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "LATEST FROM MALBON GOLF",
+        "collection": "mens-malbon-golf-t-shirts",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/f88e5bf35acd448d9b8777f623794dde.mp4",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Why Choose Malbon Golf Performance Collection?",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For those who demand both style and substance, the Malbon Golf Performance Collection offers the perfect blend of both. Each piece is meticulously designed to meet the demands of modern golfers who appreciate the finer details in both their game and their attire. The collection's focus on performance-enhancing features, combined with its sophisticated aesthetic, makes it a must-have for any serious golfer.</p><p>The Malbon Golf Performance Collection is set to be a game-changer in the world of golf apparel. With its combination of technical innovation, stylish design, and commitment to sustainability, this collection is poised to become a staple in the wardrobes of discerning golfers. Whether you're a seasoned pro or a weekend warrior, these pieces will ensure that you not only play your best but look your best as well.</p><p>Make sure to visit TRENDYGOLF to explore the full range of the Malbon Golf Performance Collection and elevate your golfing experience with the perfect blend of style, comfort, and performance.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP MALBON GOLF",
+            "link": "shopify://collections/mens-malbon-golf",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "magazine-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "promo_1",
+    "text_2",
+    "products_1",
+    "text_3",
+    "shop_the_look_1",
+    "text_4",
+    "products_2",
+    "hero_2",
+    "text_5",
+    "magazine-articles"
+  ]
+}

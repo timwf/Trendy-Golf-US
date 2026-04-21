@@ -1,0 +1,45 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "customer-login",
+      "blocks": {
+        "b1": {
+          "type": "bullet",
+          "settings": {
+            "icon": "gift",
+            "text": "<p>Access to <strong>exclusive benefits & rewards</strong></p>"
+          }
+        },
+        "b2": {
+          "type": "bullet",
+          "settings": {
+            "icon": "chart-bar-square",
+            "text": "<p>Earn points & <strong>unlock tier perks</strong></p>"
+          }
+        },
+        "b3": {
+          "type": "bullet",
+          "settings": {
+            "icon": "star",
+            "text": "<p><strong>Be the first</strong> to know about the <strong>latest drops</strong>.</p>"
+          }
+        }
+      },
+      "block_order": ["b1", "b2", "b3"],
+      "settings": {
+        "rewards_heading": "Register now and begin your journey with TRENDYGOLF Country Club.",
+        "promo_banner": "<p>Hurry, new customers are currently receiving <strong>exclusive benefits & rewards</strong> points!</p>"
+      }
+    }
+  },
+  "order": ["main"]
+}

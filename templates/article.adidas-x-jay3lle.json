@@ -1,0 +1,371 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/b7207e5f5e9944d0904f98e1af3e9540.mp4",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fashion and sport collide in the latest adidas collaboration, blending street style with high performance. The new <strong>adidas x JAY3LLE capsule</strong> has arrived to redefine women\u2019s golf fashion, making a bold statement both on and off the course. Designed by <strong>Johan Lindeberg</strong>, co-founder of the luxury fashion label JAY3LLE, in partnership with his daughter <strong>Blue Lindeberg</strong>, this collection aims to empower women golfers with powerful, fashion-forward silhouettes.</p><p></p><h1><strong>The Vision Behind adidas x JAY3LLE</strong></h1><h2><strong>A Creative Collaboration Rooted in Passion</strong></h2><p>Johan Lindeberg, a fashion visionary who revolutionised golf fashion in the late 1990s with his brand J.Lindeberg, has always believed in the power of blending style with sport. Teaming up with adidas, he seeks to once again redefine the golf apparel landscape by offering women golfers bold, dynamic designs that embrace both performance and fashion.</p><p><em>\u201cMy daughter Blue and I are excited to create this special collaboration with adidas,\u201d</em> Lindeberg says. <em>\u201cThis capsule speaks to the energy and inclusive community that\u2019s steadily growing in the sport, especially among women.\u201d</em></p><p>The collaboration draws on both Lindeberg\u2019s long-standing love for golf and his pioneering approach to design. With the rise of women in sports and the increasing desire for fashionable sportswear, the adidas x JAY3LLE capsule arrives at a crucial moment in the evolution of women\u2019s golf fashion.</p><h3><strong>Empowering Women on the Course</strong></h3><p>At the heart of the adidas x JAY3LLE capsule is the drive to empower women golfers to feel confident and stylish. The collection embraces modern sports apparel silhouettes through the lens of streetwear and high fashion, catering to a new generation of players who are challenging the traditional aesthetics of golf. It\u2019s a collection designed to inspire, energise, and push women to step out of their comfort zone on the course.</p><p><em>\u201cMore women are picking up the sport than ever before, and we want to be part of that driving force,\u201d</em> says Jennie Ko - adidas\u2019 global apparel design director.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_1_29126414-0bf6-4350-9efc-882fa90540ac.png",
+            "link": "https://trendygolf.com/collections/adidas-x-jay3lle-womens-collection?filter.v.availability=1",
+            "button_label": "ADIDAS X JAY3LLE"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Promotion_Tiles_2_35ea54db-e6cb-4851-93ab-8f40d8b68458.png",
+            "link": "https://trendygolf.com/collections/adidas-x-jay3lle-womens-collection?filter.v.availability=1",
+            "button_label": "ADIDAS X JAY3LLE"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "A Collection Defined by Bold Statements",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The adidas x JAY3LLE capsule is more than just apparel - it\u2019s a powerful expression of the modern woman in sport. With a colour palette that features deep blacks, pure whites, and vibrant hues of purple, red, and pink, this collection offers a wide array of pieces, from performance-ready to fashion-forward.</p><h3><strong>Signature Pieces: Standout Designs in the Collection</strong></h3><p>The collection includes a range of apparel, footwear, and accessories that deliver style without compromising performance. Key pieces from the line include:</p><ul><li><strong>Bomber Jacket</strong>: A sleek layering piece with a full-zip design, 3-stripe accents, and an attached hood. The jacket also features subtle branding on the chest and a large embroidered adidas x JAY3LLE graphic across the back, combining sporty elegance with modern style.</li><li><strong>Pleated Skort</strong>: Combining elegance and functionality, this skort features adidas\u2019 performance materials and a chic removable pouch belt, giving it a unique and polished aesthetic. It\u2019s the perfect fusion of form and function for the modern golfer.</li><li><strong>CODECHAOS JAY3LLE High-Top Golf Shoe</strong>: The crown jewel of the collection, this ultra-high-top performance shoe breaks away from traditional golf footwear. Built on adidas\u2019 CODECHAOS platform, the shoe features a futuristic design with perforated leather detailing, a buckle and tee holder, BOOST cushioning, and a waterproof upper. It\u2019s a bold statement that challenges the very concept of golf footwear.</li></ul><h3><strong>Additional Collection Highlights</strong></h3><p>The capsule features a wide range of other pieces designed to complete the look, including:</p><ul><li><strong>PRIMEKNIT Sweatshirt</strong>: A fashionable yet functional crew neck with branding that bridges the gap between sport and streetwear.</li><li><strong>Long-Sleeve Form-Fitting Mock Neck Layer</strong>: A stylish layering piece with 3-Stripes detailing along the arms.</li><li><strong>Full-Zip Wind Gilet</strong>: An elegant yet sporty gilet designed to keep players comfortable in changing conditions.</li></ul><p>Accessories such as hats, headbands, and socks complete the capsule, ensuring that every aspect of a golfer\u2019s wardrobe is covered.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "adidas-x-jay3lle-womens-collection",
+        "product_limit": 12,
+        "button_label": "",
+        "button_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Driving Force: Women in Golf",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The adidas x JAY3LLE capsule isn\u2019t just about fashion; it\u2019s about a movement that reflects the growing influence of women in golf. With more women taking up the sport, there is a shift in the culture of golf - one that embraces inclusivity, style, and performance.</p><p><strong>Linn Grant</strong>, a rising star in women\u2019s golf and an adidas athlete, has been pivotal in bringing this collection to life. She will debut select pieces from the adidas x JAY3LLE collection at the prestigious <strong>AIG Women\u2019s Open at St. Andrews</strong>. Her involvement highlights the collection\u2019s focus on high performance and showcases how fashion and sport can blend seamlessly on the biggest stages in golf.</p><p><em>\u201cI\u2019ve always taken a personal interest in fashion outside of the course, so this capsule is one I\u2019m really excited about,\u201d</em> Grant says. <em>\u201cThese silhouettes will inspire a lot of women to wear something that will provide them with energy and positivity whenever they play.\u201d</em></p><h2><strong>A Deeper Connection: The JAY3LLE Brand</strong></h2><p>JAY3LLE is a creative extension of Johan and Blue Lindeberg\u2019s belief in cross-generational creativity and fashion\u2019s power to unite people. The father-daughter duo founded JAY3LLE to create a lifestyle community that spans generations and borders, connecting people through their shared love for sport, fashion, and creativity.</p><p>Johan Lindeberg explains, <em>\u201cWe believe that now, more than ever, it\u2019s time to combine fashion and sports. JAY3LLE is a new lifestyle community where we combine our two personalities and networks.\u201d</em></p><p>The capsule represents more than just a collection; it\u2019s a fusion of creativity, culture, and sport that encourages a new generation of golfers to express themselves on the course.</p><h2><strong>The Future of Golf Fashion</strong></h2><p>The adidas x JAY3LLE capsule is not just about creating stylish golf apparel. It\u2019s about pushing the boundaries of what golf fashion can be. This collaboration represents the evolution of golf style, bringing in influences from streetwear and high fashion while staying true to the performance needs of athletes.</p><p>For Johan and Blue Lindeberg, this collection is a continuation of a lifelong passion for fashion and sport. It\u2019s a step toward a future where golf is embraced not just as a sport, but as a culture - one that celebrates individuality, creativity, and community.</p><p><em>\u201cThe new generation loves golf and enjoys dressing individually on the golf course,\u201d</em> Johan Lindeberg says. <em>\u201cWith JAY3LLE, we want to be part of the new movement and the new generation in golf.\u201d</em></p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "womens-jay3lle-mock-neck-base-layer-black-aw24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "womens-jay3lle-skort-black-aw24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "womens-codechaos-jay3lle-white-black-aw24"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "womens-jay3lle-hooded-bomber-jacket-black-aw24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/Adidas_Golf_x_JL1139_full.png",
+        "title": "",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/HERO_DESKTOP_b75e5bca-08dc-4218-88f2-8320cff1fda4.png",
+            "mobile_image": "shopify://shop_images/HERO_mobile_48477ce1-fb2b-4fb5-8ced-a171ba734a54.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "EXCLUSIVE TRENDYGOLF INTERVIEW WITH JOHAN LINDEBERG",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>TRENDYGOLF: Tell us about your history in the golf and fashion industries.</strong></p><p><strong>Johan Lindeberg:</strong> I started playing golf when I was in high school. My girlfriend, who was not only the most beautiful woman in school but also a fashion designer, photographer, and club champion in golf, became very influential in my life and inspired my career. I always saw golf as a reflection of the search process in life\u2014to find sync and balance. I was also inspired by \u201970s stars like Ballesteros and Johnny Miller, among others. I thought Arnold Palmer was especially cool, flying his own plane. I stopped playing golf when I started working for the jeans company Diesel in the early 90s. Golf at that time was not really part of the Diesel lifestyle. However, after a few years of success at Diesel, where I held the roles of International Marketing Director and CEO of Diesel USA, I started playing golf again. Being an influential part of the Diesel movement, I came up with the idea of combining fashion and golf\u2014a lifestyle that mirrored how I wanted to live. I decided to leave Diesel and launch a new brand that combined both. In 1996, I launched J.Lindeberg in both NYC and Stockholm, with both a fashion and golf collection. In the first press release, it said, \u201cI can inspire the game of golf; I can inspire the world.\u201d It was a hard and ambitious challenge, but we really pulled it off.</p><p><strong>TRENDYGOLF</strong>: <strong>Can you tell us a bit about the inspiration behind your new brand JAY3LLE?</strong></p><p><strong>Johan Lindeberg: </strong>My daughter Blue and I are best friends. We\u2019ve done road trips through Africa, been to Nepal together after the earthquake, and partied until 5 a.m. during Paris Fashion Week. We are both New Yorkers with a strong Swedish influence. During COVID, Blue came to Stockholm for 1.5 years, and we created a podcast together. During the 10-episode podcast, the idea to create a new project beyond generations and borders organically came to life. I felt I wasn\u2019t done as a brand and community builder and was really inspired by the energy of the new generation. Blue, who is studying psychology and grew up in design studios, was excited to do something together and connect our communities around the world. We always heard that people were inspired by our combined energy. We decided to call our connection JAY3LLE. We believe that now, more than ever, it\u2019s time to combine fashion and sports. It feels so natural and organic today compared to when I launched J.Lindeberg almost 30 years ago. JAY3LLE is a new lifestyle community where we combine our two personalities and networks.</p><p><strong>TRENDYGOLF</strong>: <strong>Tell us about the inspiration behind your collaboration with adidas?</strong></p><p><strong>Johan Lindeberg:</strong> I have always been an adidas fan, and Blue feels the same. adidas Originals has always been at the forefront of connecting with the new generation, making it a great partner. Around the same time, I met Swedish golfer Linn Grant after she won the Scandinavian Mixed by 9 strokes. I was really inspired by her, and it felt like Linn could be a muse, just as Jesper Parnevik and Camilo Villegas inspired me during my J. Lindeberg days. So, I called adidas Golf in Carlsbad and connected with Dylan Moore, the Creative Director for adidas Golf. Blue and I were excited, and this time it felt right to start with only women\u2019s apparel and a look that would inspire the new generation to start playing golf.</p><p><strong>TRENDYGOLF</strong>: <strong>How does your experience in the fashion industry influence your approach to designing golf apparel?</strong></p><p><strong>Johan Lindeberg: </strong>I believe I have a great advantage in coming into golf from fashion. It has always been my strength, compared to sports or hardware companies trying to bring golf into fashion. I have always been part of creating trends and have stayed close to influential fashion and street communities around the world. Blue is the same; she lives in downtown NYC and is very connected to the influential art and creative communities. It feels natural for us to take inspiration and dress our friends around the world.</p><p><strong>TRENDYGOLF: What unique features can golfers expect from this collaboration?</strong></p><p><strong>Johan Lindeberg: </strong>adidas x JAY3LLE reflects the trend happening around the world. I\u2019ve always believed it\u2019s not about age but about community energy. We are truly inspired by women\u2019s sports, which have gained real energy and power over the last two years. I love our pleated skirts, bomber jackets, and the iconic high-top women\u2019s golf shoe\u2014it feels so innovative and powerful. It\u2019s exciting that the new generation is really endorsing golf. In places like Los Angeles and Seoul, it feels like golf is the new skateboarding.</p><p><strong>TRENDYGOLF:</strong> <strong>Can you describe the design process for this collaboration?</strong></p><p><strong>Johan Lindeberg:</strong> I gathered my team at my barn in the south of Sweden, where I have my design studios. I usually start by creating ideas and mood boards on the walls, then we discuss as a team and start designing together. We flew to Carlsbad, where adidas Golf is located, and had an immediate connection with the team there. We worked together on the design ideas and selected fabrics and materials. We returned twice and also met in NYC with Blue. Today, many collaborations involve small adjustments to existing products, but adidas x JAY3LLE was created from scratch\u2014except for the golf shoe, where we used an existing sole but designed the top. I am really proud of the high-top women\u2019s golf shoe; it\u2019s truly unique and symbolises this collection.</p><p><strong>TRENDYGOLF</strong>: <strong>Are there any plans to collaborate with professional golfers or other influencers in the golf community?</strong></p><p><strong>Johan Lindeberg:</strong> The plan is for Linn Grant to debut adidas x JAY3LLE at St Andrews. I just hope it won\u2019t be too cold in Scotland to wear all the great pieces. It\u2019s inspiring to present this collaboration at St Andrews, which is holy ground for men\u2019s golf, and to do so at the first-ever women\u2019s Open held there. Both Blue and I will be there; I\u2019ll play in the Pro-Am, and Blue will be part of the adidas x JAY3LLE fashion show.</p><p><strong>TRENDYGOLF</strong>:<strong> How do you balance aesthetics and functionality in your golf apparel designs?</strong></p><p><strong>Johan Lindeberg: </strong>Personally, I don\u2019t think too much when I design or photograph; I just follow my intuition. It\u2019s always easier to have a muse in mind, like Linn Grant, Blue Lindeberg, Troy Mullins, or Lua Bealieu, who is Blue\u2019s best friend. Function and trend naturally come together.</p><p><strong>TRENDYGOLF:</strong> <strong>What inspires the colour palettes and patterns in this collection?</strong></p><p><strong>Johan Lindeberg:</strong> I was really inspired by a photo from the film <em>Paris, Texas</em> with Natassja Kinski wearing a pink sweater. We also had images of muscle cars like the \u201971 Charger in purple, with a woman stepping into the car wearing red boots. I also thought of deserts and mountains and how to combine the fairways of St Andrews with the streets of NYC.</p><p><strong>TRENDYGOLF:</strong> <strong>How do you see the intersection of golf and fashion evolving, and how does JAY3LLE fit into that vision?</strong></p><p><strong>Johan Lindeberg</strong>: I\u2019ve always emphasised that we are fashion and golf, not golf and fashion. Our strength is coming from the streets and fashion into golf. Today, I want to push the style further. When I created J.Lindeberg, I aimed to create a modern style that would be accepted in the more corporate golf community. We didn\u2019t create a protest but rather inspired golf style in a new direction. My goal was to dress the more modern part of the establishment and make it more progressive\u2014to create the Apple of apparel. Now, golf has become one of the coolest sports in the world. The new generation is discovering golf as a metaphor for personal development. I really want JAY3LLE to drive this new community in golf. That\u2019s why it\u2019s so inspiring to have Blue as part of JAY3LLE. The challenge 20 years ago was to combine fashion and golf\u2014fashion people didn\u2019t understand golf, and golfers didn\u2019t like fashion. In that sense, I was unique and portrayed the life I wanted to live: to be conscious of fashion and trends but also to dress modern on the golf course. Today, the dynamic is different. The new generation loves golf and enjoys dressing individually on the golf course. There is a much bigger generational gap today, and with JAY3LLE, we want to be part of the new movement and the new generation in golf, not the established part. It\u2019s an inspiring cross-cultural energy that I see in golf today.</p><p><strong>TRENDYGOLF</strong>: <strong>What impact do you hope JAY3LLE will have on the future of golf fashion?</strong></p><p><strong>Johan Lindeberg</strong>: I am so inspired by connecting all the contacts that Blue and I have around the world. It\u2019s about connecting people beyond borders through creativity, fashion, and sports. Today, musicians, artists, producers, and designers are discovering golf as an incredible metaphor for personal development. I love hitting golf balls for hours - it really makes me connect with the present moment.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "promo_2": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Adidas_Golf_x_JL0910_full.png",
+            "link": "https://trendygolf.com/collections/adidas-x-jay3lle-womens-collection?filter.v.availability=1",
+            "button_label": "ADIDAS X JAY3LLE"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/adidas_x_jl_20296_full_crop.png",
+            "link": "https://trendygolf.com/collections/adidas-x-jay3lle-womens-collection?filter.v.availability=1",
+            "button_label": "ADIDAS X JAY3LLE"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "large",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "AVAILABLE NOW ON TRENDYGOLF",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The adidas x JAY3LLE capsule is available now in limited quantities on <a href=\"https://trendygolf.com/\" title=\"https://trendygolf.com/\"><strong>TRENDYGOLF</strong></a>. This capsule represents more than just a new line of apparel; it is a testament to the power of collaboration between sport and fashion. With adidas and JAY3LLE leading the charge, women\u2019s golf fashion is set to evolve in bold, exciting ways. Don\u2019t miss your chance to be part of this groundbreaking movement in women\u2019s golf fashion.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP adidas x JAY3LLE",
+            "link": "shopify://collections/adidas-x-jay3lle-womens-collection",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "promo_1",
+    "text_2",
+    "products_1",
+    "text_3",
+    "shop_the_look_1",
+    "hero_2",
+    "text_4",
+    "promo_2",
+    "text_5",
+    "related-articles"
+  ]
+}

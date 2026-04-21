@@ -1,0 +1,112 @@
+{%- liquid
+  assign enable_animation = section.settings.enable_animation
+-%}
+
+<section class="page-block relative page-block--content lg:mb-14 mb-8 bg-transparent{% unless enable_animation %} [&_.group-inview_.animation-group]:!translate-x-0 [&_.group-inview_.animation-group]:!translate-y-0 [&_.group-inview_.animation-group]:!scale-100 [&_.group-inview_.animation-group]:!opacity-100 [&_.group-inview_.animation-group]:!transition-none [&_.group-inview_.animation-group]:!duration-0{% endunless %}"
+  id="returns-body-{{ section.id }}">
+  <div data-inview="false" class="group-inview group/blocks">
+    <div class="container-narrow text-left">
+      <div class="opacity-0 -translate-y-14 transition-all duration-1000 ease animation-group group-data-[inview=true]/blocks:opacity-100 group-data-[inview=true]/blocks:translate-y-0">
+        <p><span class="font-serif"><span class="text-4xl lg:text-5xl"><br>Returns &amp; exchanges<br><br></span></span></p>
+        <p><span class="text-3xl lg:text-4xl"><span class="font-bold">United Kingdom returns</span></span></p>
+        <p><br>Conditions for Return:</p>
+        <ul class="mb-6 ml-5 list-disc">
+          <li>Items must be in original, unworn condition with all tags and packaging intact</li>
+          <li>Proof of purchase must be retained to facilitate your return</li>
+          <li>This policy applies to orders placed within the eligible return period. Items purchased outside this window are subject to our standard returns policy</li>
+          <li>TRENDYGOLF reserves the right to refuse any returns that do not meet these conditions</li>
+          <li>The goods must be returned to us within 21 days</li>
+        </ul>
+        <p></p>
+        <h3><br><span class="text-xl lg:text-2xl"><span class="font-bold">Start Your Return</span></span><br></h3>
+        <p>All UK returns must be initiated through our Returns Portal: <a href="https://returns.trendygolf.com/" target="_blank" rel="noreferrer" class="text-clubhouse-green-600 underline">https://returns.trendygolf.com/</a><br>You can also scan the QR code included in your delivery paperwork to access the portal directly.<br><br><span class="font-bold">Once in the portal, you will be able to:</span></p>
+        <ul class="mb-6 ml-5 list-disc">
+          <li>Select your return items</li>
+          <li>Choose a return method</li>
+          <li>Generate a Royal Mail return label or a QR code (for printer-free drop-off at the Post Office)</li>
+        </ul>
+        <h3><span class="font-serif"><span class="text-3xl lg:text-4xl"><span class="text-xl lg:text-2xl">Free returns for orders £100 and over</span></span></span></h3>
+        <p><br><span class="font-bold">For UK mainland orders of £100 or more:</span></p>
+        <ul class="mb-6 ml-5 list-disc">
+          <li>You are eligible for a free Royal Mail Tracked 24 return</li>
+          <li>You can choose either a downloadable label or a QR code via the portal</li>
+          <li>Drop your parcel at your local Post Office and retain your proof of postage</li>
+        </ul>
+        <p><br><span class="font-bold">Free Returns on All UK Footwear</span></p>
+        <ul class="mb-6 ml-5 list-disc">
+          <li>All footwear returns within the UK are eligible for free returns, regardless of the order value.</li>
+          <li>Orders Under £100<br>If your order total is under £100 (excluding shoes), you have two options:<br></li>
+          <li>Purchase a subsidised Royal Mail return label or QR code through the returns portal</li>
+          <li>Or return the item using your own courier to the address provided during the returns process We recommend using a tracked service for your peace of mind.</li>
+        </ul>
+        <p><br>Please note: Items remain the responsibility of the sender until received by the TRENDYGOLF returns department. Always obtain a proof of postage or use a tracked service. Make sure your name and order number are included inside the return package.</p>
+        <p><br>We highly recommend using a tracked delivery service for all international returns.</p>
+        <p><br>If your order total is under £100 (excluding shoes), you have two options:<br></p>
+        <ul class="mb-6 ml-5 list-disc">
+          <li>Purchase a subsidised Royal Mail return label or QR code through the returns portal</li>
+          <li>Or return the item using your own courier to the address provided during the returns process We recommend using a tracked service for your peace of mind.</li>
+        </ul>
+        <p><br>Please note: Items remain the responsibility of the sender until received by the TRENDYGOLF returns department. Always obtain a proof of postage or use a tracked service. Make sure your name and order number are included inside the return package.</p>
+        <p></p>
+        <h3><span class="text-3xl lg:text-4xl"><span class="font-bold">International returns</span></span></h3>
+        <p><br>If you're returning from outside the UK, please use our<a href="https://trendygolf-uk.loopreturns.com/" target="_blank" rel="noreferrer" class="text-clubhouse-green-600 underline"> Returns Portal</a> to begin the process.<br></p>
+        <ul class="mb-6 ml-5 list-disc">
+          <li>Choose to return your items using your own courier at your own cost.</li>
+        </ul>
+        <p>We highly recommend using a tracked delivery service for all international returns.Make sure your name and order number are included inside the return package. All items must be returned with the polythene bag and all tags attached as per our terms and conditions of sale. If an item is returned in a state that cannot be resold, then the product maybe refused and will be returned to the customer accordingly.</p>
+        <h2><span class="text-3xl lg:text-4xl"><span class="font-bold">Exchanging</span></span></h2>
+        <p><br>Need a different size? We've got you.<br><br>You can now request an exchange directly through our <a href="https://trendygolf-uk.loopreturns.com/" target="_blank" rel="noreferrer" class="text-clubhouse-green-600 underline">Exchanges &amp; Returns Portal</a>. Just select the item you want to exchange and choose your preferred size — if it's in stock, we'll reserve it and ship it to you as soon as we receive your original item.<br></p>
+        <p>Here's how it works:<br></p>
+        <ol class="mb-6 ml-5 list-decimal">
+          <li>Head to the portal and select "Exchange" for the item you'd like to swap</li>
+          <li>Choose your preferred size or variant</li>
+          <li>Send your original item back using the label or QR code provided. Or you preferred tacked service.</li>
+          <li>*Once received and approved, we'll ship your exchange out to you</li>
+        </ol>
+        <p>*If the item you want isn't available at the time of processing, don't worry — we'll issue you a refund instead so you can reorder or choose something else.<br><br>Telephone: 01243 373 251 Monday - Friday 8.00am - 4.30pm GMT<br>Email: <a href="mailto:info@trendygolf.com" class="text-clubhouse-green-600 underline">info@trendygolf.com</a><br><br>Please enclose a note with the reason for your return, your order number, and the items you wish to return and what you would like to do, i.e. return for a store credit, an exchange or full refund. Items must be returned in original packaging with all tags. We will only accept returned items unworn / un-damaged.<br><br>Please send all returns to the following address:<br>TRENDYGOLF Ltd, Returns Department, Unit 7, Spring Business Park, Stanbridge Road, Havant, Hampshire, PO9 2GJ United Kingdom<br><br>All items must be returned with the polythene bag and all tags attached as per our terms and conditions of sale. If an item is returned in a state that cannot be resold, then the product maybe refused and will be returned to the customer accordingly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var section = document.getElementById('returns-body-{{ section.id }}');
+    if (!section) return;
+
+    var enableAnimation = {{ enable_animation | json }};
+    if (!enableAnimation) return;
+
+    var wrapper = section.querySelector('[data-inview]');
+    if (!wrapper) return;
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.setAttribute('data-inview', 'true');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: '0px 0px -20%' }
+    );
+    observer.observe(wrapper);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Returns page body",
+  "tag": "section",
+  "class": "returns-body-section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_animation",
+      "label": "Enable scroll-in animation",
+      "default": false
+    }
+  ]
+}
+{% endschema %}

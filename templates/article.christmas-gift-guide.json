@@ -1,0 +1,127 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "revive-three-pack-soft-touch-stretch-boxer-shorts-black-w23"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "knitted-wool-scarf-beanie-hat-set-black-w23"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "calis-signature-stripe-belt-open-miscellaneous-w23"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "sevile-six-panel-cotton-twill-cap-black-w23"
+          }
+        }
+      },
+      "block_order": [
+        "product_1",
+        "product_2",
+        "product_3",
+        "product_4"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_a0bac512-6252-4808-8210-f54c73ec68be.jpg",
+        "title": "BOSS GIFT GUIDE",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "shopify://collections/mens-boss",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This Christmas, wrap up the perfect golfing experience with gifts that cater to every aspect of the game. Our Christmas Gift Guide brings together the best in golf fashion and accessories, ensuring that every swing is complemented by style and sophistication. So, if you're struggling for gift ideas this festive season, this carefully curated gift guide has something for all.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "article_count": 3,
+        "heading": "Latest Articles",
+        "show_category": true,
+        "margin_bottom": "large",
+        "enable_animation": true
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "text_1",
+    "shop_the_look_1",
+    "text_2",
+    "related-articles"
+  ]
+}

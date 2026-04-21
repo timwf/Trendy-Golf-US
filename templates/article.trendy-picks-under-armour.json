@@ -1,0 +1,390 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "article_template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/HERO_DESKTOP_ash1.jpg",
+            "mobile_image": "shopify://shop_images/HERO_mobile_ash1.jpg",
+            "media_type": "image",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As spring golf season swings into full gear, it\u2019s time to revamp your wardrobe with the latest and greatest from Under Armour Golf. Elevate your game and style with our handpicked selection of top picks for the Spring/Summer 2024 season. From lightweight jackets to stylish polos and innovative footwear, we\u2019ve got you covered from head to toe.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p><strong>Lightweight Jackets:</strong></p><p><em>Storm Windstrike Half Zip Lightweight Jacket Navy:</em></p><p>Stay ahead of the elements with the Under Armour Storm Windstrike Half Zip Lightweight Jacket. Engineered with UA Storm technology, this jacket offers windproof protection while remaining breathable, allowing you to focus on your game no matter the weather. With its durable stretch-woven fabric and updated back design for improved mobility, this jacket is a must-have addition to your golf wardrobe.</p><p><br/></p><p><strong>Gilets:</strong></p><p><em>Storm Daytona Full Zip Gilet Midnight Navy:</em></p><p>Experience unmatched versatility with the Under Armour Storm Daytona Full Zip Gilet. Featuring UA Storm technology and a lightweight, stretchy design, this gilet provides water repellency and mobility where you need it most. Whether you\u2019re on or off the course, this gilet delivers style and performance in equal measure.</p><p><br/></p><p><strong>Hoodies:</strong></p><p><em>Essential Fleece Patron Hoodie Grey:</em></p><p>Stay warm and stylish with the Essential Fleece Patron Hoodie. Crafted from ultra-soft brushed fleece, this hoodie offers both comfort and warmth on chilly days. With its sleek design and front kangaroo pocket, it\u2019s the perfect choice for layering up on and off the golf course.</p><p><em>Playoff Hoodie Silt Brown:</em></p><p>Unleash ultimate comfort with the Playoff Hoodie from Under Armour. Made from soft, quick-drying fabric with four-way stretch, this hoodie provides warmth and flexibility for all-day wear. Whether you\u2019re hitting the links or running errands, this hoodie has you covered in style.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "storm-windstrike-half-zip-lightweight-jacket-navy-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "storm-daytona-full-zip-gilet-midnight-navy-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "essential-fleece-patron-hoodie-grey-ss24"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "playoff-hoodie-silt-brown-ss24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_ash1.jpg",
+        "title": "",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Mid Layers:</strong></p><p><em>Storm Half Zip Mid Layer Red Solstice:</em></p><p>Elevate your layering game with the Under Armour Storm Half Zip Mid Layer. Featuring UA Storm technology and hollow fibres for lightweight warmth, this mid-layer offers unbeatable comfort and style. With its four-way stretch material and generous half-zip front, it\u2019s the perfect choice for added warmth on cooler days.</p><p><em>Playoff Quarter Zip Mid Layer Steel Grey:</em></p><p>Make a statement with the Men\u2019s UA Playoff Quarter Zip Mid Layer. Crafted for both style and performance, this mid-layer offers anti-pick, anti-pill fabric and UPF 50+ protection for all-day comfort on the course. With its sleek design and performance fit, it\u2019s sure to become a staple in your golf wardrobe.</p><p><strong>Polo Shirts:</strong></p><p><em>Playoff 3.0 Stripe Polo Navy/Orange:</em></p><p>Step onto the fairways in style with the Under Armour Playoff 3.0 Stripe Polo. Crafted for comfort and performance, this polo features anti-pick, anti-pill fabric and UPF 40 protection for all-day wear. With its classic stripe design and performance fit, it\u2019s a must-have addition to your golf wardrobe.</p><p><em>Playoff 3.0 Printed Polo Photon Blue:</em></p><p>Refine your golf style with the Playoff 3.0 Printed Polo. Featuring soft, breathable fabric with four-way stretch and UPF 40 protection, this polo offers both comfort and performance on the course. With its eye-catching print and modern design, it\u2019s the perfect choice for making a statement on the fairways.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_2": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "storm-half-zip-mid-layer-red-solstice-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "playoff-quarter-zip-mid-layer-steel-grey-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "playoff-3-0-stripe-polo-navy-orange-ss24"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "playoff-3-0-printed-polo-photon-blue-ss24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_ash4.jpg",
+        "title": "",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Trousers & Shorts:</strong></p><p><em>Drive Tapered Fit Golf Trousers:</em></p><p>Experience unparalleled comfort and style with the Men\u2019s UA Drive Tapered Pants. Featuring UA Storm technology and a stretch waistband for optimal mobility, these trousers are a must-have for any golfer looking to elevate their game.</p><p><em>Driver Golf Jogger Trousers: </em></p><p>Discover optimal comfort and style on the golf course with Under Armour\u2019s Drive Golf Jogger Trousers. Crafted for performance, these joggers effortlessly merge style and functionality, offering golfers an ideal balance of flexibility and sophistication. Enhance your golf wardrobe today and elevate your on-course experience.</p><p><em>Drive Tapered Fit Golf Shorts:</em></p><p>Stay cool and comfortable on the course with Under Armour\u2019s Drive Tapered Fit Golf Shorts. Made from lightweight, stretch-woven twill fabric with UA Storm technology, these shorts offer both style and functionality for the modern golfer.</p><p></p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_3": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "drive-tapered-fit-golf-trousers-navy-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "drive-golf-jogger-trousers-black-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "drive-tapered-fit-golf-shorts-blue-ss24"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "drive-tapered-fit-golf-shorts-grey-ss24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_ash3.jpg",
+        "title": "",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Shoes:</strong></p><p><em>Drive Pro Wide Spiked Golf Shoes Patrons Edition White:</em></p><p>Unlock the power of your natural swing with the UA Drive Pro golf shoes. Featuring UA Swing Support System (S3) technology and energy-returning UA HOVR foam, these shoes provide unparalleled traction and support for maximum performance on the course.</p><p><em>Phantom Spikeless Golf Shoes Limited Edition White:</em></p><p>Transition seamlessly from the green to the clubhouse with the Phantom Spikeless Golf Shoes. Made from a lightweight, breathable knit with a waterproof membrane and UA HOV\u2122 cushioning, these shoes offer comfort and style for the modern golfer.</p><p><br/></p><p><strong>Caps/Bucket Hats:</strong></p><p><em>Iso-Chill Driver Mesh Cap Navy:</em></p><p>Keep cool and comfortable on the course with the Men\u2019s UA Iso-Chill Driver Mesh Cap. Featuring Iso-Chill technology and a stretch-fit design, this cap offers unbeatable comfort and ventilation for all-day wear.</p><p><em>Driver Golf Bucket Hat White:</em></p><p>Stay shaded and stylish with the Driver Golf Bucket Hat. Made from cotton-twill fabric with UPF 50+ protection, this hat offers both comfort and sun protection on the course.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "shop_the_look_4": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "drive-pro-wide-spiked-patrons-edition-golf-shoes-white-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "phantom-spikeless-golf-shoes-limited-edition-white-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "iso-chill-driver-mesh-cap-navy-ss24"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "driver-golf-bucket-hat-white-ss24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/SHOP_THE_LOOK_ash2.jpg",
+        "title": "",
+        "subtext": "",
+        "btn_text": "",
+        "btn_link": "",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>With our Spring/Summer 2024 top picks, you\u2019ll be ready to take on the fairways in style. Shop now on TRENDYGOLF.COM and gear up for success with Under Armour.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/HERO_DESKTOP_ash2.jpg",
+            "mobile_image": "shopify://shop_images/HERO_mobile_ash2.jpg",
+            "media_type": "image",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false
+      }
+    },
+    "magazine_articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article_template",
+    "hero_1",
+    "text_1",
+    "text_2",
+    "shop_the_look_1",
+    "text_3",
+    "shop_the_look_2",
+    "text_4",
+    "shop_the_look_3",
+    "text_5",
+    "shop_the_look_4",
+    "text_6",
+    "hero_2",
+    "magazine_articles"
+  ]
+}

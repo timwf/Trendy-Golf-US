@@ -1,0 +1,13 @@
+_reference/
+_do-not-use/
+docs/
+BUILD.md
+PROJECT.md
+.env
+.gitignore
+.shopifyignore
+.claude/
+node_modules/
+tailwind.config.js
+package.json
+package-lock.json

@@ -1,0 +1,34 @@
+{% doc %}
+  Renders a single colour swatch dot with optional dual-colour split.
+  Wraps in an anchor tag linking to the sibling product.
+
+  @param {string} url - Product URL for this colour variant
+  @param {string} colour - Primary hex colour (e.g. "#000000")
+  @param {string} [colour_secondary] - Optional secondary hex for split swatch
+  @param {string} [name] - Colour name for accessibility (sr-only label)
+  @param {boolean} [active] - Whether this swatch is the currently displayed product
+  @param {boolean} [small] - Render smaller size (mobile)
+
+  @example
+  {% render 'colour-swatch', url: product.url, colour: '#000000', name: 'Black', active: true %}
+{% enddoc %}
+
+<a href="{{ url }}" class="inline-block">
+  <div class="flex items-center justify-center rounded-full border {% if active %}border-taupe-900{% else %}border-transparent{% endif %} {% if small %}size-5{% else %}size-7{% endif %}">
+    <div class="relative overflow-hidden rounded-full {% if small %}size-4{% else %}size-5{% endif %}">
+      {%- if colour != blank -%}
+        <div
+          class="absolute left-0 top-0 z-[1] size-full {% if colour_secondary != blank %}-translate-x-1/3 -translate-y-1/3 rotate-45{% endif %}"
+          style="background-color: {{ colour }};"
+        ></div>
+      {%- endif -%}
+      {%- if colour_secondary != blank -%}
+        <div
+          class="absolute right-0 top-0 size-full translate-x-1/3 translate-y-1/3 -rotate-45"
+          style="background-color: {{ colour_secondary }};"
+        ></div>
+      {%- endif -%}
+    </div>
+  </div>
+  <span class="sr-only">{{ name }}</span>
+</a>

@@ -1,0 +1,367 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "",
+            "heading": "Spinningfields | Manchester",
+            "heading_size": "h2",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "shopify://shop_images/01-hero_c94011ed-6c1e-4597-90ce-b71c2e0a292f.jpg",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 7,
+            "button_label": "",
+            "button_link": "",
+            "button_style": "white"
+          }
+        }
+      },
+      "block_order": [
+        "slide"
+      ],
+      "settings": {
+        "autoplay": true,
+        "show_progress": true,
+        "enable_animation": true,
+        "aria_label": "Hero slideshow",
+        "margin_bottom": "medium"
+      }
+    },
+    "contact-details": {
+      "type": "icon-grid",
+      "blocks": {
+        "visit": {
+          "type": "column",
+          "settings": {
+            "icon": "map-pin",
+            "title": "Visit Us",
+            "description": "TRENDYGOLF, Manchester,\n2 Goods Yard St,\nManchester M3 3BG",
+            "link": "https://maps.app.goo.gl/azztNRKmeXxg8yeR7",
+            "link_label": "Google Maps",
+            "show_arrow": true,
+            "show_social_channels": false
+          }
+        },
+        "contact": {
+          "type": "column",
+          "settings": {
+            "icon": "phone",
+            "title": "Contact Us",
+            "description": "7 days a week\nOpening times Mon–Sat 11–7 Sun 12–6",
+            "link": "tel:+447706333483",
+            "link_label": "07706 333 483",
+            "show_arrow": true,
+            "show_social_channels": false
+          }
+        },
+        "email": {
+          "type": "column",
+          "settings": {
+            "icon": "envelope",
+            "title": "Email Us",
+            "description": "Want to learn more? Send us an email.",
+            "link": "mailto:Manchester@trendygolf.com",
+            "link_label": "Manchester@trendygolf.com",
+            "show_arrow": true,
+            "show_social_channels": false
+          }
+        }
+      },
+      "block_order": [
+        "visit",
+        "contact",
+        "email"
+      ],
+      "settings": {
+        "desktop_columns": "three",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "here-you-can-find": {
+      "type": "content-block",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Here you can find",
+            "tag": "h2",
+            "size": "h2",
+            "font": "serif"
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "settings": {
+        "alignment": "center",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "none",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "none",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "logo-marquee": {
+      "type": "logo-marquee",
+      "blocks": {
+        "logo_1": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2339386aaef402d3d92ea0c3e5a176da637a0703-250x197.png",
+            "alt_text": "Manors",
+            "link": ""
+          }
+        },
+        "logo_2": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/d8edcd4db64cd280ad2cbeaf2fc976eca345cfc6-250x197.png",
+            "alt_text": "GOATLANE",
+            "link": ""
+          }
+        },
+        "logo_3": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/f3b5abf91035c916ce4d79c14356b72840d76ff2-250x197.png",
+            "alt_text": "BOSS",
+            "link": ""
+          }
+        },
+        "logo_4": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ecb05df6180221543032a74ba2eae677195cacbf-250x197.png",
+            "alt_text": "FootJoy",
+            "link": ""
+          }
+        },
+        "logo_9ppWqk": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ab6768d7857220c26946bd19931187fb9399a472-250x197.png",
+            "alt_text": "Puma",
+            "link": ""
+          }
+        },
+        "logo_5": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/f6484db891de92a051c91df38d6f156620e2f2f6-250x197.png",
+            "alt_text": "Nike",
+            "link": ""
+          }
+        },
+        "logo_CNMhKC": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/b74dd0281777fe88a5df0d5c937c2ec0e9a41ad3-250x197.png",
+            "alt_text": "Peter Millar",
+            "link": ""
+          }
+        },
+        "logo_6": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ce84a539967d6286aef22246ac13a86ae4de2836-250x197.png",
+            "alt_text": "Jordan",
+            "link": ""
+          }
+        },
+        "logo_LGbQnG": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/a7a03645dbc24bcba8a2b03e035d32379771dc37-250x197.png",
+            "alt_text": "adidas",
+            "link": ""
+          }
+        },
+        "logo_R3C8kt": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/463f6dbcf63a0e24ecb5f7ddfab90f50a5340615-250x197.png",
+            "alt_text": "KJUS",
+            "link": ""
+          }
+        },
+        "logo_KB9pEN": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/b2183877d99ec23dbf9df5854decb80c9f0ec443-250x197.png",
+            "alt_text": "G/FORE",
+            "link": ""
+          }
+        },
+        "logo_F4cy8A": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/2e8a439018196ba88b60e001b6213d988682a2cb-250x197.png",
+            "alt_text": "J.Lindeberg",
+            "link": ""
+          }
+        },
+        "logo_nyqP8i": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/67d0061656688d415c6f616d6cc108e8fa60f3e9-250x197.png",
+            "alt_text": "Wolsey",
+            "link": ""
+          }
+        },
+        "logo_kxETxf": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/62765da44c5124eb62154400fa1d02f1e16295f8-250x197.png",
+            "alt_text": "RLX",
+            "link": ""
+          }
+        },
+        "logo_MmVF3r": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/9499b603f04cfa5f0d2f8f81264a44209cdb3a07-250x197.png",
+            "alt_text": "Malbon",
+            "link": ""
+          }
+        },
+        "logo_NgJEGV": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/4d1c7b3019cb6e16a6b813049be618e19a4550a2-250x197.png",
+            "alt_text": "Vessel",
+            "link": ""
+          }
+        },
+        "logo_NX7zJL": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/8ed63e769c3687292890bdaa2157bb89a6b8c4b3-250x197.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_gL67PU": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/57ed57374cff666f3eae132f19d76c0a96eaa81a-250x197.png",
+            "alt_text": "Walker Golf Things",
+            "link": ""
+          }
+        },
+        "logo_tpgmR7": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/05bd757816a3ee9a116a73f2698170b8e8da0c9d-250x197.png",
+            "alt_text": "3 Putt Round",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_1",
+        "logo_2",
+        "logo_3",
+        "logo_4",
+        "logo_9ppWqk",
+        "logo_5",
+        "logo_CNMhKC",
+        "logo_6",
+        "logo_LGbQnG",
+        "logo_R3C8kt",
+        "logo_KB9pEN",
+        "logo_F4cy8A",
+        "logo_nyqP8i",
+        "logo_kxETxf",
+        "logo_MmVF3r",
+        "logo_NgJEGV",
+        "logo_NX7zJL",
+        "logo_gL67PU",
+        "logo_tpgmR7"
+      ],
+      "settings": {
+        "margin_bottom": "small"
+      }
+    },
+    "fifty-fifty-space": {
+      "type": "fifty-fifty",
+      "settings": {
+        "image": "shopify://shop_images/02-space-designed_b50953b2-5a3d-448b-a239-65f9ccf88155.jpg",
+        "image_alt": "Inside the TRENDYGOLF Manchester store",
+        "heading": "A Space Designed for Golf & Style",
+        "body": "<p>Located in the heart of Manchester, our latest TRENDYGOLF store offers a refined space for golf enthusiasts and style-conscious players alike. Explore the latest collections and exclusive pieces from the most sought-after brands in modern golf fashion.</p><p><strong>Apparel & Accessories:</strong><br/>J.Lindeberg, Malbon, G/FORE, Manors, Kjus, Peter Millar, RLX Ralph Lauren, adidas, and more — carefully curated for both on-course performance and off-course style.</p><p><strong>Footwear & Fittings:</strong><br/>Discover premium golf footwear and accessories, alongside expert guidance to help you find your fit and refine your look.</p>",
+        "layout": "image-left",
+        "cta_label": "",
+        "cta_link": "",
+        "cta_style": "dark-grey",
+        "cta_has_arrow": true,
+        "background_color": "transparent",
+        "enable_animation": true,
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none"
+      }
+    },
+    "fifty-fifty-bespoke": {
+      "type": "fifty-fifty",
+      "settings": {
+        "image": "shopify://shop_images/03-bespoke_ce28e8ac-2ef3-4462-9177-b3ed66ec1942.jpg",
+        "image_alt": "Bespoke shopping experience at TRENDYGOLF Manchester",
+        "heading": "A Bespoke Shopping Experience",
+        "body": "<p>At TRENDYGOLF Manchester we go beyond retail—we offer a truly personalised shopping experience, ensuring you have access to the best products and services:</p><p>✔ Personal Shopping – Available in-store or by appointment outside regular hours</p><p>✔ One-on-One Fitting & Styling – Expert advice tailored to your needs</p><p>✔ Virtual Shopping – Connect with us remotely for product recommendations</p><p>✔ In-Office & In-Home Shopping – Bringing the boutique experience to you</p>",
+        "layout": "image-right",
+        "cta_label": "",
+        "cta_link": "",
+        "cta_style": "dark-grey",
+        "cta_has_arrow": true,
+        "background_color": "transparent",
+        "enable_animation": true,
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "contact-details",
+    "here-you-can-find",
+    "logo-marquee",
+    "fifty-fifty-space",
+    "fifty-fifty-bespoke"
+  ]
+}

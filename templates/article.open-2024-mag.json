@@ -1,0 +1,281 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/aa2dafa049b7450ca6ead85bce35a879.mp4",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Open Championship, the oldest major golf tournament, is not just a showcase of the best golfers but also a platform for the latest in golf apparel and footwear. This year, top brands have released exclusive collections that blend tradition with modern innovation. Let's dive into the standout collections from BOSS, PUMA, and Nike, each bringing a unique flair to the golfing world.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "BOSS - THE OPEN CHAMPIONSHIP CAPSULE COLLECTION",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Elevate your golf wardrobe with The Boss Open Championship Collection. This exclusive range combines sophisticated style with performance-ready materials, perfect for any golfer. Featuring elegant polos, durable trousers, and stylish outerwear, each piece is designed to enhance your game and keep you looking sharp on and off the course. Experience Boss' premium quality and timeless design, tailored for the modern golfer.</p><h3><strong>Key Pieces:</strong></h3><ol><li><strong>Pariq Cotton Polos</strong>: These polos offer comfort and breathability, which are ideal for long hours on the course. The premium cotton fabric ensures you stay cool and dry, while the stylish design keeps you looking sharp. Available in various colours, these polos can easily transition from the fairway to casual outings.</li><li><strong>Cotton Quarter Zip Mid Layers</strong>: Perfect for layering, these mid-layers provide warmth without sacrificing style. The quarter zip allows for adjustable ventilation, making it versatile for changing weather conditions. The soft cotton material ensures maximum comfort.</li><li><strong>Skaz Full Zip Lightweight Jackets</strong>: These jackets are a must-have for unpredictable weather. Lightweight yet durable, they offer protection from wind and rain without weighing you down. The sleek design and practical features make them a great addition to any golfer's wardrobe.</li></ol>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "boss-the-open-championship-capsule-collection",
+        "product_limit": 12,
+        "button_label": "SHOP BOSS OPEN COLLECTION",
+        "button_link": "shopify://collections/boss-the-open-championship-capsule-collection",
+        "margin_bottom": "medium"
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "shopify://shop_images/DESKTOP_bbc0b195-ef8a-48c4-a125-914956b7af6b.png",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "PUMA Fair Isle Collection",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Just off the northern coast of Scotland lies Fair Isle, renowned for its unique knitting style. Inspired by this tradition, PUMA has released a limited edition collection of golf apparel, shoes, and accessories. The PUMA Fair Isle Collection blends old-school aesthetics with modern performance upgrades, celebrating The Open Championship with a touch of Scottish heritage.</p><h3><strong>Key Pieces:</strong></h3><ol><li><strong>PHANTOMCAT NITRO Golf Shoes</strong>: Headlining the collection, these shoes feature a wingtip design that combines classic style with modern technology. The NITRO foam provides exceptional comfort and support, making them perfect for a full day on the course.</li><li><strong>Fair Isle Hoodies</strong>: These hoodies are both stylish and functional, offering warmth and comfort. The intricate Fair Isle pattern adds a touch of tradition, while the modern cut ensures a perfect fit.</li><li><strong>Fair Isle Print Polos</strong>: These polos bring a splash of colour and pattern to your golf attire. The vibrant designs are complemented by high-performance fabrics that wick away moisture and provide UV protection.</li></ol><p><strong>Fair Isle Micro Print & Trim Polos</strong>: For those who prefer a subtler look, the Micro Print Polo offers a more understated take on the Fair Isle pattern. The lightweight fabric and comfortable fit make it a great choice for any golfer.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_2": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "puma-fair-isle-collection",
+        "product_limit": 12,
+        "button_label": "SHOP PUMA FAIR ISLE COLLECTION",
+        "button_link": "shopify://collections/puma-fair-isle-collection",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "NIKE Open Championship 2024 Collection",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As the final men's Major of 2024 hones into view, Nike has produced a special edition collection celebrating the oldest tournament in professional golf. The Nike Open Championship 2024 Collection features three of their best golf shoes, redesigned with a nod to Scotland and the challenging conditions of links courses.</p><h3><strong>Key Pieces:</strong></h3><ol><li><strong>Air Zoom Infinity Tour NXT% II NRG Golf Shoes</strong>: These shoes are built for performance, offering exceptional traction and stability. The tartan print at the heel and the minimalist design make them both functional and stylish.</li><li><strong>Air Pegasus '89 NRG Golf Shoes</strong>: Combining the comfort of running shoes with the functionality needed for golf, these shoes feature a retro design with modern updates. The tartan details and wind-spitting cloud graphics add a unique touch.</li><li><strong>Air Zoom Victory Tour III NRG Golf Shoes</strong>: Designed for the serious golfer, these shoes provide maximum comfort and support. The tartan accents and homage to the Scottish wind make them a standout choice for The Open Championship.</li><li><strong>Dri-FIT Tour Icon Print Polos</strong>: These polos feature Nike's Dri-FIT technology, ensuring you stay dry and comfortable throughout your round. The unique prints and high-performance fabric make them a great addition to any golfing wardrobe.</li></ol>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_3": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "nike-open-24",
+        "product_limit": 12,
+        "button_label": "SHOP NIKE OPEN COLLECTION",
+        "button_link": "shopify://collections/nike-open-24",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "AVAILABLE NOW ON TRENDYGOLF",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Open 2024 Championship apparel and footwear collections from BOSS, PUMA, and Nike offer something for every golfer. Whether you prefer the sophisticated style of BOSS, the traditional yet vibrant designs of PUMA, or the high-performance innovations from Nike, these collections will elevate your game and style. Embrace the heritage of The Open Championship with these premium pieces, designed to keep you looking and playing your best. Shop now and gear up for the ultimate golf experience.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "text_2",
+    "products_1",
+    "hero_2",
+    "text_3",
+    "products_2",
+    "text_4",
+    "products_3",
+    "text_5",
+    "related-articles"
+  ]
+}

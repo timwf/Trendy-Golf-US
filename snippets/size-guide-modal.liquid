@@ -1,0 +1,55 @@
+{%- comment -%}
+  Size guide modal — Kiwi Sizing iframe
+  Matches repo: modal.tsx (size="xl", center) + sizeGuide.tsx
+{%- endcomment -%}
+
+<div
+  data-size-guide-modal
+  class="relative inset-0 z-50 hidden"
+  role="dialog"
+  aria-modal="true"
+  aria-label="{{ 'sections.product.size_guide' | t }}"
+>
+  {%- comment -%} Backdrop {%- endcomment -%}
+  <div data-size-guide-backdrop class="fixed inset-0 bg-black/50 transition-opacity duration-300 ease-out"></div>
+
+  {%- comment -%} Centered scroll wrapper {%- endcomment -%}
+  <div class="fixed inset-0 flex w-screen items-center overflow-y-auto p-4 [&_>_div]:w-full">
+
+    {%- comment -%} Panel — size xl = max-w-4xl, centered, bg-taupe-100, p-12 {%- endcomment -%}
+    <div
+      data-size-guide-panel
+      class="relative mx-auto max-w-4xl bg-taupe-100 p-12 transition duration-300 ease-out"
+    >
+      {%- comment -%} Close button {%- endcomment -%}
+      <button
+        type="button"
+        data-size-guide-close
+        class="fixed right-0 top-0 z-20 flex size-10 items-center justify-center bg-white text-neutral-900 md:absolute"
+        aria-label="Close size guide"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/>
+        </svg>
+      </button>
+
+      {%- comment -%} Content — loader behind iframe {%- endcomment -%}
+      <div class="relative">
+        <div class="absolute z-0 mt-1 flex w-full justify-center">
+          <svg class="size-8 animate-spin text-taupe-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" aria-hidden="true">
+            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"></path>
+          </svg>
+        </div>
+        <div class="relative z-[1] h-[75vh]">
+          <iframe
+            data-size-guide-iframe
+            title="KiwiSizing Fit Guide"
+            class="h-full w-full border-0"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

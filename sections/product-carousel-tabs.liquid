@@ -1,0 +1,286 @@
+{%- liquid
+  assign title = section.settings.title
+
+  comment
+    Build an array of populated tabs (label + products present).
+    Liquid doesn't have push, so we build comma-delimited index strings.
+  endcomment
+  assign tab_indexes = ''
+
+  if section.settings.tab_1_products.count > 0 and section.settings.tab_1_label != blank
+    assign tab_indexes = tab_indexes | append: '1'
+  endif
+  if section.settings.tab_2_products.count > 0 and section.settings.tab_2_label != blank
+    if tab_indexes != ''
+      assign tab_indexes = tab_indexes | append: ','
+    endif
+    assign tab_indexes = tab_indexes | append: '2'
+  endif
+  if section.settings.tab_3_products.count > 0 and section.settings.tab_3_label != blank
+    if tab_indexes != ''
+      assign tab_indexes = tab_indexes | append: ','
+    endif
+    assign tab_indexes = tab_indexes | append: '3'
+  endif
+
+  assign tabs = tab_indexes | split: ','
+  assign tab_count = tabs.size
+-%}
+
+{%- if tab_count > 0 -%}
+  {{ 'splide.min.css' | asset_url | stylesheet_tag }}
+  <script src="{{ 'splide.min.js' | asset_url }}" defer></script>
+
+  <section class="page-block relative lg:mb-20 mb-14 overflow-hidden" data-product-carousel-tabs id="product-carousel-tabs-{{ section.id }}">
+    <div class="container-wide">
+
+      {%- if title != blank -%}
+        <div class="mb-6 text-center">
+          <p><span class="font-serif"><span class="text-4xl lg:text-5xl">{{ title }}</span></span></p>
+        </div>
+      {%- endif -%}
+
+      {%- if tab_count > 1 -%}
+        <div class="mb-10 flex items-center justify-center" role="tablist" aria-orientation="horizontal">
+          {%- for tab_index in tabs -%}
+            {%- liquid
+              case tab_index
+                when '1'
+                  assign tab_label = section.settings.tab_1_label
+                when '2'
+                  assign tab_label = section.settings.tab_2_label
+                when '3'
+                  assign tab_label = section.settings.tab_3_label
+              endcase
+            -%}
+            <button
+              type="button"
+              class="border-b px-6 py-3 focus:outline-none lg:px-10 lg:py-4 lg:text-lg{% if forloop.first %} border-clubhouse-green-600 font-bold text-clubhouse-green-600{% else %} border-taupe-300{% endif %}"
+              role="tab"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+              data-tab-button="{{ forloop.index0 }}"
+              tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
+            >
+              {{- tab_label -}}
+            </button>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- for tab_index in tabs -%}
+        {%- liquid
+          case tab_index
+            when '1'
+              assign products = section.settings.tab_1_products
+            when '2'
+              assign products = section.settings.tab_2_products
+            when '3'
+              assign products = section.settings.tab_3_products
+          endcase
+        -%}
+        <div
+          role="tabpanel"
+          data-tab-panel="{{ forloop.index0 }}"
+          {% unless forloop.first %}hidden{% endunless %}
+        >
+          <div class="relative" data-product-splide="{{ forloop.index0 }}">
+            <div class="splide" data-splide-el>
+              <div class="splide__track overflow-visible xl:overflow-hidden xl:py-1">
+                <ul class="splide__list">
+                  {%- for product in products -%}
+                    <li class="splide__slide">
+                      <div data-measure class="inline-block w-full h-full">
+                        {%- render 'product-card', product: product -%}
+                      </div>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+
+              <div class="splide__arrows flex justify-center pt-6 md:absolute md:right-0 md:top-0 md:-translate-y-full md:pb-3 md:pt-0">
+                <button class="splide__arrow splide__arrow--prev bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50" type="button">
+                  {%- render 'icon', icon: 'chevron-left', size: 'size-6' -%}
+                </button>
+                <button class="splide__arrow splide__arrow--next bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50" type="button">
+                  {%- render 'icon', icon: 'chevron-right', size: 'size-6' -%}
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+
+    </div>
+  </section>
+
+  <script>
+    (function init() {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+        return;
+      }
+
+      var section = document.getElementById('product-carousel-tabs-{{ section.id }}');
+      if (!section) return;
+
+      /* ── Tab switching ── */
+      var tabButtons = section.querySelectorAll('[data-tab-button]');
+      var tabPanels = section.querySelectorAll('[data-tab-panel]');
+      var splideInstances = {};
+
+      tabButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var idx = btn.getAttribute('data-tab-button');
+
+          tabButtons.forEach(function (b) {
+            var isActive = b.getAttribute('data-tab-button') === idx;
+            b.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            b.setAttribute('tabindex', isActive ? '0' : '-1');
+
+            /* Swap classes to match repo exactly */
+            b.className = 'border-b px-6 py-3 focus:outline-none lg:px-10 lg:py-4 lg:text-lg'
+              + (isActive
+                ? ' border-clubhouse-green-600 font-bold text-clubhouse-green-600'
+                : ' border-taupe-300');
+          });
+
+          tabPanels.forEach(function (panel) {
+            if (panel.getAttribute('data-tab-panel') === idx) {
+              panel.removeAttribute('hidden');
+            } else {
+              panel.setAttribute('hidden', '');
+            }
+          });
+
+          /* Defer to next frames so iOS Safari can flush layout for the
+             freshly-visible panel before Splide measures its track width. */
+          requestAnimationFrame(function () {
+            requestAnimationFrame(function () {
+              initSplide(parseInt(idx, 10));
+              if (splideInstances[idx]) {
+                splideInstances[idx].refresh();
+              }
+            });
+          });
+        });
+      });
+
+      /* ── Splide initialisation ── */
+      var splideOptions = {
+        type: 'slide',
+        perPage: 4,
+        gap: 10,
+        arrows: true,
+        pagination: false,
+        drag: true,
+        breakpoints: {
+          480: { perPage: 1, arrows: false, padding: { left: 0, right: '35%' } },
+          768: { perPage: 2, arrows: false, padding: { left: 0, right: '20%' } },
+          1280: { perPage: 3, padding: { left: 0, right: '10%' } }
+        }
+      };
+
+      function initSplide(panelIndex) {
+        if (splideInstances[panelIndex]) return;
+        var wrapper = section.querySelector('[data-product-splide="' + panelIndex + '"]');
+        if (!wrapper) return;
+        var el = wrapper.querySelector('[data-splide-el]');
+        if (!el || typeof Splide === 'undefined') return;
+        splideInstances[panelIndex] = new Splide(el, splideOptions).mount();
+      }
+
+      /* Init first tab after layout settles (iOS-safe). */
+      function initFirstTab() {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            initSplide(0);
+          });
+        });
+      }
+      if (typeof Splide === 'undefined') {
+        /* Deferred splide.min.js may not be ready yet — wait for window load. */
+        window.addEventListener('load', initFirstTab, { once: true });
+      } else {
+        initFirstTab();
+      }
+
+      /* ── Keyboard navigation for tabs (arrow keys) ── */
+      var tabList = section.querySelector('[role="tablist"]');
+      if (tabList) {
+        tabList.addEventListener('keydown', function (e) {
+          var idx = Array.prototype.indexOf.call(tabButtons, document.activeElement);
+          if (idx < 0) return;
+
+          var next = -1;
+          if (e.key === 'ArrowRight') {
+            next = (idx + 1) % tabButtons.length;
+          } else if (e.key === 'ArrowLeft') {
+            next = (idx - 1 + tabButtons.length) % tabButtons.length;
+          }
+
+          if (next >= 0) {
+            e.preventDefault();
+            tabButtons[next].focus();
+            tabButtons[next].click();
+          }
+        });
+      }
+    })();
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.product_carousel_tabs.name",
+  "tag": "section",
+  "class": "product-carousel-tabs-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.product_carousel_tabs.settings.title.label",
+      "default": "This Seasons Highlights"
+    },
+    {
+      "type": "text",
+      "id": "tab_1_label",
+      "label": "t:sections.product_carousel_tabs.settings.tab_1_label.label",
+      "default": "Men"
+    },
+    {
+      "type": "product_list",
+      "id": "tab_1_products",
+      "label": "t:sections.product_carousel_tabs.settings.tab_1_products.label",
+      "limit": 25
+    },
+    {
+      "type": "text",
+      "id": "tab_2_label",
+      "label": "t:sections.product_carousel_tabs.settings.tab_2_label.label",
+      "default": "Women"
+    },
+    {
+      "type": "product_list",
+      "id": "tab_2_products",
+      "label": "t:sections.product_carousel_tabs.settings.tab_2_products.label",
+      "limit": 25
+    },
+    {
+      "type": "text",
+      "id": "tab_3_label",
+      "label": "t:sections.product_carousel_tabs.settings.tab_3_label.label"
+    },
+    {
+      "type": "product_list",
+      "id": "tab_3_products",
+      "label": "t:sections.product_carousel_tabs.settings.tab_3_products.label",
+      "limit": 25
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.product_carousel_tabs.presets.name"
+    }
+  ]
+}
+{% endschema %}

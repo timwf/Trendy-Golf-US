@@ -1,0 +1,439 @@
+{%- liquid
+  assign alignment = section.settings.alignment
+  assign bg_color = section.settings.background_color
+  assign enable_animation = section.settings.enable_animation
+
+  case alignment
+    when 'left'
+      assign alignment_class = 'text-left'
+      assign justify_class = 'justify-start'
+    when 'center'
+      assign alignment_class = 'text-center'
+      assign justify_class = 'justify-center'
+    when 'right'
+      assign alignment_class = 'text-right'
+      assign justify_class = 'justify-end'
+  endcase
+
+  case bg_color
+    when 'transparent'
+      assign bg_class = 'bg-transparent'
+    when 'white'
+      assign bg_class = 'bg-white'
+    when 'light-grey'
+      assign bg_class = 'bg-taupe-100'
+    when 'medium-grey'
+      assign bg_class = 'bg-taupe-400'
+    when 'dark-grey'
+      assign bg_class = 'bg-taupe-900'
+  endcase
+
+  assign spacing_classes = ''
+
+  if section.settings.margin_top_desktop != 'none'
+    assign spacing_classes = spacing_classes | append: ' lg:mt-' | append: section.settings.margin_top_desktop
+  endif
+  if section.settings.margin_bottom_desktop != 'none'
+    assign spacing_classes = spacing_classes | append: ' lg:mb-' | append: section.settings.margin_bottom_desktop
+  endif
+  if section.settings.padding_top_desktop != 'none'
+    assign spacing_classes = spacing_classes | append: ' lg:pt-' | append: section.settings.padding_top_desktop
+  endif
+  if section.settings.padding_bottom_desktop != 'none'
+    assign spacing_classes = spacing_classes | append: ' lg:pb-' | append: section.settings.padding_bottom_desktop
+  endif
+  if section.settings.margin_top_mobile != 'none'
+    assign spacing_classes = spacing_classes | append: ' mt-' | append: section.settings.margin_top_mobile
+  endif
+  if section.settings.margin_bottom_mobile != 'none'
+    assign spacing_classes = spacing_classes | append: ' mb-' | append: section.settings.margin_bottom_mobile
+  endif
+  if section.settings.padding_top_mobile != 'none'
+    assign spacing_classes = spacing_classes | append: ' pt-' | append: section.settings.padding_top_mobile
+  endif
+  if section.settings.padding_bottom_mobile != 'none'
+    assign spacing_classes = spacing_classes | append: ' pb-' | append: section.settings.padding_bottom_mobile
+  endif
+
+  assign has_button = false
+  for block in section.blocks
+    if block.type == 'button' and block.settings.label != blank
+      assign has_button = true
+      break
+    endif
+  endfor
+-%}
+
+<section class="page-block relative page-block--content{{ spacing_classes }} {{ bg_class }}{% unless enable_animation %} [&_.group-inview_.animation-group]:!translate-x-0 [&_.group-inview_.animation-group]:!translate-y-0 [&_.group-inview_.animation-group]:!scale-100 [&_.group-inview_.animation-group]:!opacity-100 [&_.group-inview_.animation-group]:!transition-none [&_.group-inview_.animation-group]:!duration-0{% endunless %}"
+  data-content-block-section id="content-block-{{ section.id }}">
+  <div data-inview="false" class="group-inview group/blocks">
+    <div class="container-narrow {{ alignment_class }}">
+
+      {%- comment -%} Content blocks (heading + text) — animateTranslateToBottom {%- endcomment -%}
+      <div class="opacity-0 -translate-y-14 transition-all duration-1000 ease animation-group group-data-[inview=true]/blocks:opacity-100 group-data-[inview=true]/blocks:translate-y-0">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+
+            {%- when 'heading' -%}
+              {%- liquid
+                assign heading_tag = block.settings.tag
+                assign heading_font = block.settings.font
+
+                case block.settings.size
+                  when 'h1'
+                    assign size_class = 'text-5xl lg:text-6xl'
+                  when 'h2'
+                    assign size_class = 'text-4xl lg:text-5xl'
+                  when 'h3'
+                    assign size_class = 'text-3xl lg:text-4xl'
+                  when 'h4'
+                    assign size_class = 'text-xl lg:text-2xl'
+                  when 'h5'
+                    assign size_class = 'text-lg lg:text-xl'
+                  when 'h6'
+                    assign size_class = 'text-base lg:text-lg'
+                endcase
+              -%}
+              <{{ heading_tag }} {{ block.shopify_attributes }}>
+                {%- if heading_font == 'serif' -%}
+                  <span class="font-serif"><span class="{{ size_class }}">{{ block.settings.text }}</span></span>
+                {%- else -%}
+                  <span class="{{ size_class }}">{{ block.settings.text }}</span>
+                {%- endif -%}
+              </{{ heading_tag }}>
+
+            {%- when 'text' -%}
+              <div class="rte" {{ block.shopify_attributes }}>
+                {{ block.settings.text }}
+              </div>
+
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+
+      {%- comment -%} Button blocks — animateTranslateToTop {%- endcomment -%}
+      {%- if has_button -%}
+        {%- for block in section.blocks -%}
+          {%- if block.type == 'button' and block.settings.label != blank -%}
+            {%- liquid
+              case block.settings.style
+                when 'dark-grey'
+                  assign btn_style_class = 'bg-taupe-900 text-white enabled:hover:bg-taupe-600'
+                when 'white'
+                  assign btn_style_class = 'bg-white text-taupe-900 enabled:hover:bg-neutral-100'
+                when 'transparent'
+                  assign btn_style_class = 'bg-transparent transition-colors enabled:hover:bg-transparent enabled:hover:text-clubhouse-green-600'
+                when 'text'
+                  assign btn_style_class = ''
+              endcase
+
+              assign is_text_style = false
+              if block.settings.style == 'text'
+                assign is_text_style = true
+              endif
+            -%}
+            <div class="flex opacity-0 translate-y-14 transition-all duration-1000 ease animation-group group-data-[inview=true]/blocks:opacity-100 group-data-[inview=true]/blocks:translate-y-0 {{ justify_class }}"
+                 {{ block.shopify_attributes }}>
+              <a href="{{ block.settings.link }}"
+                 class="flex items-center gap-2 text-center text-sm tracking-wider transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 uppercase{% unless is_text_style %} justify-center px-4 py-3 lg:px-10 min-w-40{% endunless %} {{ btn_style_class }}">
+                <span>{{ block.settings.label }}</span>
+                {%- if block.settings.has_arrow -%}
+                  {%- render 'icon', icon: 'chevron-right', size: 'size-4' -%}
+                {%- endif -%}
+              </a>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var section = document.getElementById('content-block-{{ section.id }}');
+    if (!section) return;
+
+    var enableAnimation = {{ enable_animation | json }};
+    if (!enableAnimation) return;
+
+    var wrapper = section.querySelector('[data-inview]');
+    if (!wrapper) return;
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.setAttribute('data-inview', 'true');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: '0px 0px -20%' }
+    );
+    observer.observe(wrapper);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.content_block.name",
+  "tag": "section",
+  "class": "content-block-section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "alignment",
+      "label": "t:sections.content_block.settings.alignment.label",
+      "options": [
+        { "value": "left", "label": "t:sections.content_block.settings.alignment.options.left" },
+        { "value": "center", "label": "t:sections.content_block.settings.alignment.options.center" },
+        { "value": "right", "label": "t:sections.content_block.settings.alignment.options.right" }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "t:sections.content_block.settings.background_color.label",
+      "options": [
+        { "value": "transparent", "label": "t:sections.content_block.settings.background_color.options.transparent" },
+        { "value": "white", "label": "t:sections.content_block.settings.background_color.options.white" },
+        { "value": "light-grey", "label": "t:sections.content_block.settings.background_color.options.light_grey" },
+        { "value": "medium-grey", "label": "t:sections.content_block.settings.background_color.options.medium_grey" },
+        { "value": "dark-grey", "label": "t:sections.content_block.settings.background_color.options.dark_grey" }
+      ],
+      "default": "transparent"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.content_block.settings.spacing_desktop.content"
+    },
+    {
+      "type": "select",
+      "id": "margin_top_desktop",
+      "label": "t:sections.content_block.settings.margin_top_desktop.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" },
+        { "value": "36", "label": "36" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom_desktop",
+      "label": "t:sections.content_block.settings.margin_bottom_desktop.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" },
+        { "value": "36", "label": "36" }
+      ],
+      "default": "14"
+    },
+    {
+      "type": "select",
+      "id": "padding_top_desktop",
+      "label": "t:sections.content_block.settings.padding_top_desktop.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom_desktop",
+      "label": "t:sections.content_block.settings.padding_bottom_desktop.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.content_block.settings.spacing_mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "margin_top_mobile",
+      "label": "t:sections.content_block.settings.margin_top_mobile.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom_mobile",
+      "label": "t:sections.content_block.settings.margin_bottom_mobile.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" }
+      ],
+      "default": "8"
+    },
+    {
+      "type": "select",
+      "id": "padding_top_mobile",
+      "label": "t:sections.content_block.settings.padding_top_mobile.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom_mobile",
+      "label": "t:sections.content_block.settings.padding_bottom_mobile.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_animation",
+      "label": "t:sections.content_block.settings.enable_animation.label",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.content_block.blocks.heading.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:sections.content_block.blocks.heading.settings.text.label",
+          "default": "Heading"
+        },
+        {
+          "type": "select",
+          "id": "tag",
+          "label": "t:sections.content_block.blocks.heading.settings.tag.label",
+          "options": [
+            { "value": "h1", "label": "H1" },
+            { "value": "h2", "label": "H2" },
+            { "value": "h3", "label": "H3" },
+            { "value": "h4", "label": "H4" },
+            { "value": "h5", "label": "H5" },
+            { "value": "h6", "label": "H6" },
+            { "value": "p", "label": "Paragraph" }
+          ],
+          "default": "h2"
+        },
+        {
+          "type": "select",
+          "id": "size",
+          "label": "t:sections.content_block.blocks.heading.settings.size.label",
+          "options": [
+            { "value": "h1", "label": "H1 (text-5xl / text-6xl)" },
+            { "value": "h2", "label": "H2 (text-4xl / text-5xl)" },
+            { "value": "h3", "label": "H3 (text-3xl / text-4xl)" },
+            { "value": "h4", "label": "H4 (text-xl / text-2xl)" },
+            { "value": "h5", "label": "H5 (text-lg / text-xl)" },
+            { "value": "h6", "label": "H6 (text-base / text-lg)" }
+          ],
+          "default": "h2"
+        },
+        {
+          "type": "select",
+          "id": "font",
+          "label": "t:sections.content_block.blocks.heading.settings.font.label",
+          "options": [
+            { "value": "serif", "label": "t:sections.content_block.blocks.heading.settings.font.options.serif" },
+            { "value": "sans", "label": "t:sections.content_block.blocks.heading.settings.font.options.sans" }
+          ],
+          "default": "serif"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.content_block.blocks.text.name",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "t:sections.content_block.blocks.text.settings.text.label",
+          "default": "<p>Add your content here.</p>"
+        }
+      ]
+    },
+    {
+      "type": "button",
+      "name": "t:sections.content_block.blocks.button.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "t:sections.content_block.blocks.button.settings.label.label",
+          "default": "LEARN MORE"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.content_block.blocks.button.settings.link.label"
+        },
+        {
+          "type": "select",
+          "id": "style",
+          "label": "t:sections.content_block.blocks.button.settings.style.label",
+          "options": [
+            { "value": "dark-grey", "label": "t:sections.content_block.blocks.button.settings.style.options.dark_grey" },
+            { "value": "white", "label": "t:sections.content_block.blocks.button.settings.style.options.white" },
+            { "value": "transparent", "label": "t:sections.content_block.blocks.button.settings.style.options.transparent" },
+            { "value": "text", "label": "t:sections.content_block.blocks.button.settings.style.options.text" }
+          ],
+          "default": "dark-grey"
+        },
+        {
+          "type": "checkbox",
+          "id": "has_arrow",
+          "label": "t:sections.content_block.blocks.button.settings.has_arrow.label",
+          "default": false
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.content_block.presets.name",
+      "blocks": [
+        { "type": "heading" }
+      ]
+    }
+  ]
+}
+{% endschema %}

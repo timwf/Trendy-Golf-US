@@ -1,0 +1,456 @@
+{%- liquid
+  assign products_per_page = section.settings.products_per_page | default: 24
+  assign enable_filtering = section.settings.enable_filtering
+  assign enable_sorting = section.settings.enable_sorting
+-%}
+
+{%- paginate collection.products by products_per_page -%}
+<main class="py-10" id="collection-section" data-section-id="{{ section.id }}" data-collection-url="{{ collection.url }}">
+  <div class="container-wide">
+
+    {%- comment -%} Title + description {%- endcomment -%}
+    <div class="mb-10 grid grid-cols-1 lg:grid-cols-6">
+      <div class="lg:col-span-4">
+        <h1 class="font-serif text-4xl lg:text-5xl">{{ collection.title }}</h1>
+      </div>
+      {%- if collection.description != blank -%}
+        <div class="lg:col-span-2">
+          {%- comment -%}
+            Collection descriptions on the live store contain legacy markup
+            (h5 "Shop By Style" headings, .size-button links, inline <style> blocks).
+            Only output the first <p>…</p> to match the source design.
+          {%- endcomment -%}
+          {%- assign desc_parts = collection.description | split: '</p>' -%}
+          {%- if desc_parts.size > 0 -%}
+            <p>{{ desc_parts[0] | remove: '<p>' | strip_html | strip }}</p>
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Quick links (subcategory pills) {%- endcomment -%}
+    {%- assign quick_links = collection.metafields.custom.collections_links.value -%}
+    {%- if quick_links != blank -%}
+      <div class="mb-10 overflow-hidden">
+        <div class="flex flex-nowrap gap-2 overflow-x-auto pb-3 md:flex-wrap md:gap-4 md:pb-0">
+          {%- for ql_item in quick_links -%}
+            {%- assign ql_collection = ql_item.collection.value -%}
+            <a href="{{ ql_collection.url }}"
+              class="inline-block whitespace-nowrap border-0 bg-taupe-300 px-5 py-3 text-sm tracking-wider transition-all hover:bg-taupe-400 md:text-base"
+            >
+              {{ ql_item.title }}
+            </a>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Controls bar (filter + sort) {%- endcomment -%}
+    <div class="mb-6 flex justify-between">
+      {%- if enable_filtering -%}
+        <button
+          type="button"
+          data-filter-open-btn
+          class="group flex cursor-pointer items-center gap-3"
+          aria-label="{{ 'sections.collection.show_filters' | t }}"
+        >
+          <span class="bg-taupe-300 p-3 transition-all group-hover:bg-taupe-400">
+            {%- render 'icon', icon: 'adjustments-horizontal', size: 'size-6' -%}
+          </span>
+          <span class="text-sm tracking-wider">Show <span class="hidden md:inline">filters</span></span>
+        </button>
+      {%- else -%}
+        <div></div>
+      {%- endif -%}
+
+      {%- if enable_sorting -%}
+        {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+        <div class="flex items-center gap-2">
+          <label for="sort-by" class="text-sm tracking-wider text-taupe-700">{{ 'sections.collection.sort_by' | t }}</label>
+          <select id="sort-by" data-collection-sort class="w-auto appearance-none border-0 bg-transparent p-3 text-sm font-semibold focus:ring-0">
+            {%- for option in collection.sort_options -%}
+              <option value="{{ option.value }}" {% if option.value == sort_by %}selected{% endif %}>
+                {{ option.name }}
+              </option>
+            {%- endfor -%}
+          </select>
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Product grid with colour grouping {%- endcomment -%}
+    {%- assign seen_display_names = '' -%}
+    <div id="collection-product-grid" class="mb-6 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+      {%- for product in collection.products -%}
+        {%- assign display_name = product.metafields.custom.product_display_name | default: product.title -%}
+
+        {%- comment -%} Skip if we already rendered a card for this display name {%- endcomment -%}
+        {%- if seen_display_names contains display_name -%}
+          {%- continue -%}
+        {%- endif -%}
+        {%- assign seen_display_names = seen_display_names | append: '|||' | append: display_name -%}
+
+        {%- comment -%} Build swatch HTML for all siblings {%- endcomment -%}
+        {%- capture swatch_html -%}
+          {%- for sibling in collection.products -%}
+            {%- assign sibling_name = sibling.metafields.custom.product_display_name | default: sibling.title -%}
+            {%- if sibling_name == display_name -%}
+              {%- assign is_active = false -%}
+              {%- if sibling.id == product.id -%}
+                {%- assign is_active = true -%}
+              {%- endif -%}
+              {%- render 'colour-swatch',
+                url: sibling.url,
+                colour: sibling.metafields.custom.swatch_colour,
+                colour_secondary: sibling.metafields.custom.swatch_colour_secondary,
+                name: sibling.metafields.custom.color,
+                active: is_active
+              -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endcapture -%}
+
+        {%- capture swatch_mobile_html -%}
+          {%- for sibling in collection.products -%}
+            {%- assign sibling_name = sibling.metafields.custom.product_display_name | default: sibling.title -%}
+            {%- if sibling_name == display_name -%}
+              {%- assign is_active = false -%}
+              {%- if sibling.id == product.id -%}
+                {%- assign is_active = true -%}
+              {%- endif -%}
+              {%- render 'colour-swatch',
+                url: sibling.url,
+                colour: sibling.metafields.custom.swatch_colour,
+                colour_secondary: sibling.metafields.custom.swatch_colour_secondary,
+                name: sibling.metafields.custom.color,
+                active: is_active,
+                small: true
+              -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endcapture -%}
+
+        {%- comment -%} Only pass swatches if there are multiple siblings {%- endcomment -%}
+        {%- assign swatch_count = 0 -%}
+        {%- for sibling in collection.products -%}
+          {%- assign sibling_name = sibling.metafields.custom.product_display_name | default: sibling.title -%}
+          {%- if sibling_name == display_name -%}
+            {%- assign swatch_count = swatch_count | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if swatch_count > 1 -%}
+          {%- render 'product-card', product: product, swatches: swatch_html, swatches_mobile: swatch_mobile_html -%}
+        {%- else -%}
+          {%- render 'product-card', product: product -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- comment -%} Empty state {%- endcomment -%}
+    {%- if collection.products.size == 0 -%}
+      <p data-collection-empty class="py-16 text-center text-lg text-taupe-700">{{ 'sections.collection.no_products' | t }}</p>
+    {%- endif -%}
+
+    {%- comment -%} Load more pagination {%- endcomment -%}
+    {%- if paginate.next -%}
+      <div id="load-more-container" class="mt-8 flex justify-center">
+        <button
+          id="load-more-btn"
+          type="button"
+          data-next-url="{{ paginate.next.url }}"
+          data-label="{{ 'sections.collection.load_more' | t }}"
+          class="bg-taupe-900 px-8 py-3 text-sm tracking-wider text-white transition-all hover:bg-taupe-600"
+        >
+          {{ 'sections.collection.load_more' | t }}
+        </button>
+      </div>
+    {%- endif -%}
+    <noscript>{{ paginate | default_pagination }}</noscript>
+
+  </div>
+</main>
+
+{%- comment -%} Filter sidebar {%- endcomment -%}
+{%- if enable_filtering -%}
+  {%- render 'filter-sidebar', collection: collection -%}
+{%- endif -%}
+
+{%- comment -%} Breadcrumb structured data — Home > Collection {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": {{ shop.url | append: '/' | json }} },
+    { "@type": "ListItem", "position": 2, "name": {{ collection.title | json }} }
+  ]
+}
+</script>
+
+{%- endpaginate -%}
+
+{% javascript %}
+  (function() {
+    var section = document.getElementById('collection-section');
+    if (!section) return;
+    var sectionId = section.dataset.sectionId;
+    var collectionUrl = section.dataset.collectionUrl;
+
+    /* ---- Swym wishlist button init ---- */
+    function reinitSwym() {
+      document.dispatchEvent(new CustomEvent('swym:collections-loaded'));
+    }
+
+    if (!window.SwymCallbacks) { window.SwymCallbacks = []; }
+    window.SwymCallbacks.push(function(swat) {
+      document.addEventListener('swym:collections-loaded', function() {
+        swat.initializeActionButtons('#collection-product-grid');
+      });
+      swat.initializeActionButtons('#collection-product-grid');
+    });
+
+    /* ---- Section Rendering API fetch ---- */
+    function fetchSection(url) {
+      var grid = document.getElementById('collection-product-grid');
+      if (grid) grid.style.opacity = '0.5';
+
+      var separator = url.indexOf('?') !== -1 ? '&' : '?';
+      return fetch(url + separator + 'sections=' + sectionId)
+        .then(function(r) { return r.json(); })
+        .then(function(json) {
+          var html = json[sectionId];
+          if (!html) return;
+
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+
+          /* Replace product grid */
+          var newGrid = doc.getElementById('collection-product-grid');
+          var curGrid = document.getElementById('collection-product-grid');
+          if (newGrid && curGrid) {
+            curGrid.innerHTML = newGrid.innerHTML;
+            curGrid.style.opacity = '';
+          }
+
+          /* Replace load-more container */
+          var newLM = doc.getElementById('load-more-container');
+          var curLM = document.getElementById('load-more-container');
+          if (newLM) {
+            if (curLM) { curLM.replaceWith(newLM); }
+            else if (curGrid) { curGrid.insertAdjacentElement('afterend', newLM); }
+          } else if (curLM) {
+            curLM.remove();
+          }
+
+          /* Replace empty state */
+          var newEmpty = doc.querySelector('[data-collection-empty]');
+          var curEmpty = document.querySelector('[data-collection-empty]');
+          if (newEmpty && !curEmpty && curGrid) {
+            curGrid.insertAdjacentElement('afterend', newEmpty);
+          } else if (!newEmpty && curEmpty) {
+            curEmpty.remove();
+          } else if (newEmpty && curEmpty) {
+            curEmpty.replaceWith(newEmpty);
+          }
+
+          /* Replace filter sidebar inner content (keeps outer shell for animation) */
+          var curSidebar = document.querySelector('[data-filter-sidebar]');
+          var newSidebar = doc.querySelector('[data-filter-sidebar]');
+          if (curSidebar && newSidebar) {
+            curSidebar.innerHTML = newSidebar.innerHTML;
+          }
+
+          /* Replace bottom action buttons (clear disabled state etc.) */
+          var curActions = document.querySelector('[data-filter-actions]');
+          var newActions = doc.querySelector('[data-filter-actions]');
+          if (curActions && newActions) {
+            curActions.innerHTML = newActions.innerHTML;
+          }
+
+          /* Update URL without reload */
+          history.pushState(null, '', url);
+
+          /* Scroll to top of grid on filter/sort change */
+          if (grid) window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
+
+          reinitSwym();
+        })
+        .catch(function() {
+          if (grid) grid.style.opacity = '';
+        });
+    }
+
+    /* ---- Build filter URL from form ---- */
+    function getFilterUrl() {
+      var form = document.getElementById('CollectionFiltersForm');
+      if (!form) return collectionUrl;
+      var params = new URLSearchParams(new FormData(form));
+      /* Preserve sort_by if set */
+      var current = new URL(window.location.href);
+      var sortBy = current.searchParams.get('sort_by');
+      if (sortBy) params.set('sort_by', sortBy);
+      /* Remove empty params */
+      var clean = new URLSearchParams();
+      params.forEach(function(v, k) { if (v !== '') clean.append(k, v); });
+      var qs = clean.toString();
+      return qs ? collectionUrl + '?' + qs : collectionUrl;
+    }
+
+    /* ---- Event delegation: change ---- */
+    document.addEventListener('change', function(e) {
+      if (e.target.matches('[data-collection-sort]')) {
+        var url = new URL(window.location.href);
+        url.searchParams.set('sort_by', e.target.value);
+        fetchSection(url.toString());
+        return;
+      }
+      if (e.target.matches('[data-filter-checkbox]')) {
+        fetchSection(getFilterUrl());
+        return;
+      }
+    });
+
+    /* ---- Event delegation: form submit (price range) ---- */
+    document.addEventListener('submit', function(e) {
+      if (e.target.matches('#CollectionFiltersForm')) {
+        e.preventDefault();
+        fetchSection(getFilterUrl());
+      }
+    });
+
+    /* ---- Event delegation: click ---- */
+    document.addEventListener('click', function(e) {
+      /* Active filter pill remove */
+      var pill = e.target.closest('[data-filter-pill]');
+      if (pill) {
+        e.preventDefault();
+        fetchSection(pill.getAttribute('href'));
+        return;
+      }
+
+      /* Clear all filters */
+      var clearBtn = e.target.closest('[data-filter-clear-btn]');
+      if (clearBtn && !clearBtn.disabled) {
+        var current = new URL(window.location.href);
+        var sortBy = current.searchParams.get('sort_by');
+        var url = collectionUrl;
+        if (sortBy) url += '?sort_by=' + sortBy;
+        fetchSection(url);
+        return;
+      }
+
+      /* Load more */
+      var loadBtn = e.target.closest('#load-more-btn');
+      if (loadBtn) {
+        handleLoadMore(loadBtn);
+        return;
+      }
+
+      /* Filter sidebar open/close/view */
+      if (e.target.closest('[data-filter-open-btn]')) { openFilters(); return; }
+      if (e.target.closest('[data-filter-close-btn]')) { closeFilters(); return; }
+      if (e.target.closest('[data-filter-view-btn]')) { closeFilters(); return; }
+      if (e.target.matches('[data-filter-backdrop]')) { closeFilters(); return; }
+    });
+
+    /* ---- Filter sidebar open / close ---- */
+    function openFilters() {
+      var sidebar = document.querySelector('[data-filter-sidebar]');
+      var backdrop = document.querySelector('[data-filter-backdrop]');
+      if (sidebar) sidebar.setAttribute('data-filter-open', 'true');
+      if (backdrop) backdrop.setAttribute('data-filter-open', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeFilters() {
+      var sidebar = document.querySelector('[data-filter-sidebar]');
+      var backdrop = document.querySelector('[data-filter-backdrop]');
+      if (sidebar) sidebar.setAttribute('data-filter-open', 'false');
+      if (backdrop) backdrop.setAttribute('data-filter-open', 'false');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeFilters();
+    });
+
+    /* ---- Load more (append, don't replace) ---- */
+    function handleLoadMore(btn) {
+      var nextUrl = btn.dataset.nextUrl;
+      if (!nextUrl) return;
+      btn.textContent = 'Loading...';
+      btn.disabled = true;
+
+      var separator = nextUrl.indexOf('?') !== -1 ? '&' : '?';
+      fetch(nextUrl + separator + 'sections=' + sectionId)
+        .then(function(r) { return r.json(); })
+        .then(function(json) {
+          var html = json[sectionId];
+          if (!html) return;
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+          var newGrid = doc.getElementById('collection-product-grid');
+          var curGrid = document.getElementById('collection-product-grid');
+
+          if (newGrid && curGrid) {
+            while (newGrid.firstChild) {
+              curGrid.appendChild(newGrid.firstChild);
+            }
+          }
+
+          var newBtn = doc.getElementById('load-more-btn');
+          if (newBtn && newBtn.dataset.nextUrl) {
+            btn.dataset.nextUrl = newBtn.dataset.nextUrl;
+            btn.textContent = btn.dataset.label || 'Load more';
+            btn.disabled = false;
+          } else {
+            btn.parentElement.remove();
+          }
+
+          history.replaceState(null, '', nextUrl);
+          reinitSwym();
+        })
+        .catch(function() {
+          btn.textContent = btn.dataset.label || 'Load more';
+          btn.disabled = false;
+        });
+    }
+
+    /* ---- Browser back/forward ---- */
+    window.addEventListener('popstate', function() {
+      fetchSection(window.location.href);
+    });
+  })();
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "t:sections.collection.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.collection.settings.layout.content"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "label": "t:sections.collection.settings.products_per_page.label",
+      "min": 12,
+      "max": 48,
+      "step": 4,
+      "default": 24
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "label": "t:sections.collection.settings.enable_filtering.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "label": "t:sections.collection.settings.enable_sorting.label",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

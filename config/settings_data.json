@@ -1,0 +1,110 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "current": {
+    "color_primary": "#2C2C2C",
+    "color_background": "#F5F0EB",
+    "color_accent": "#4A7C59",
+    "social_instagram": "https://www.instagram.com/trendygolf/",
+    "social_facebook": "https://www.facebook.com/trendygolf/",
+    "social_twitter": "https://twitter.com/TRENDYGOLF",
+    "gtm_id": "GTM-5G4N4PSK",
+    "rebuy_api_key": "5e2cd85271b6bdfa21deb252d37a9e19e2865844",
+    "sections": {
+      "cart-drawer": {
+        "type": "cart-drawer",
+        "settings": {
+          "fallback_collection": ""
+        }
+      }
+    },
+    "content_for_index": [],
+    "blocks": {
+      "8762395311160415272": {
+        "type": "shopify://apps/upzelo-loyalty-wallet-passes/blocks/upzelo-head/6e6f3d16-0ab4-487a-9734-d0d311de1a59",
+        "disabled": false,
+        "settings": {}
+      },
+      "17428600031447253342": {
+        "type": "shopify://apps/attentive/blocks/attn-tag/8df62c72-8fe4-407e-a5b3-72132be30a0d",
+        "disabled": false,
+        "settings": {}
+      },
+      "10641372206048101839": {
+        "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-global-embed/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+        "disabled": false,
+        "settings": {}
+      },
+      "5946647744298494267": {
+        "type": "shopify://apps/wishlist-plus/blocks/wishlist-app-embed/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+        "disabled": false,
+        "settings": {
+          "show_ui": true,
+          "storefront_layout_enabled": false,
+          "storefront_layout_primary_bg_color": "#000000",
+          "storefront_layout_primary_text_color": "#ffffff",
+          "storefront_layout_secondary_bg_color": "#F4F8FE",
+          "storefront_layout_secondary_text_color": "#333333",
+          "storefront_layout_ui_border_radius": 6,
+          "storefront_layout_notification_position": "left",
+          "storefront_layout_action_popup_position": "left",
+          "storefront_layout_drawer_position": "left",
+          "storefront_layout_as_section_page": ""
+        }
+      },
+      "10274264662263595587": {
+        "type": "shopify://apps/wishlist-plus/blocks/wishlist-collections-embed/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+        "disabled": false,
+        "settings": {
+          "swym_collections_icon_type": "heart",
+          "swym_collections_icon_thickness": 1.7,
+          "swym_collections_position": "top-right",
+          "swym_collections_vertical_offset": 0,
+          "swym_collections_horizontal_offset": 0,
+          "swym_collections_button_size": 25,
+          "swym_collections_icon_color": "#000000",
+          "swym_collections_product_link_selector": "-",
+          "swym_collections_product_tile_selector": "-",
+          "enable_variant_selector": false,
+          "swym_add_to_wishlist_title_color": "#333",
+          "swym_variant_selector_font_size_1": 14,
+          "swym_variant_selector_popup_bg_color": "#fff",
+          "swym_variant_selector_section_heading_color": "#000",
+          "swym_variant_selector_section_heading_font_size_2": 12,
+          "swym_variant_selector_choose_create_text": "Choose or Create new Wishlist",
+          "swym_variant_selector_wishlist_btn_bg_color": "#292929",
+          "swym_variant_selector_wishlist_btn_color": "#fff",
+          "swym_variant_selector_product_detail_font_color": "#fff",
+          "swym_variant_selector_create_list_placeholder_text": "Enter wishlist name",
+          "swym_variant_selector_create_list_title": "Name Your Wishlist"
+        }
+      },
+      "9215962420185474525": {
+        "type": "shopify://apps/lipscore-reviews/blocks/lipscore-init/e89bfb0c-cc26-450f-9297-cec873403986",
+        "disabled": false,
+        "settings": {
+          "init_repeat": true,
+          "init_repeat_delay": 1
+        }
+      }
+    }
+  },
+  "presets": {
+    "Default": {
+      "color_primary": "#2C2C2C",
+      "color_background": "#F5F0EB",
+      "color_accent": "#4A7C59",
+      "gtm_id": "GTM-5G4N4PSK",
+      "social_instagram": "https://www.instagram.com/trendygolf/",
+      "social_facebook": "https://www.facebook.com/trendygolf/",
+      "social_twitter": "https://twitter.com/TRENDYGOLF"
+    }
+  }
+}

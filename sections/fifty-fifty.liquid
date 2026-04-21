@@ -1,0 +1,384 @@
+{%- liquid
+  assign flip = false
+  if section.settings.layout == 'image-right'
+    assign flip = true
+  endif
+
+  assign bg_color = section.settings.background_color
+  assign enable_animation = section.settings.enable_animation
+
+  case bg_color
+    when 'transparent'
+      assign bg_class = 'bg-transparent'
+    when 'white'
+      assign bg_class = 'bg-white'
+    when 'light-grey'
+      assign bg_class = 'bg-taupe-100'
+    when 'medium-grey'
+      assign bg_class = 'bg-taupe-400'
+    when 'dark-grey'
+      assign bg_class = 'bg-taupe-900'
+  endcase
+
+  assign spacing_classes = ''
+  if section.settings.margin_top_desktop != 'none'
+    assign spacing_classes = spacing_classes | append: ' lg:mt-' | append: section.settings.margin_top_desktop
+  endif
+  if section.settings.margin_bottom_desktop != 'none'
+    assign spacing_classes = spacing_classes | append: ' lg:mb-' | append: section.settings.margin_bottom_desktop
+  endif
+  if section.settings.padding_top_desktop != 'none'
+    assign spacing_classes = spacing_classes | append: ' lg:pt-' | append: section.settings.padding_top_desktop
+  endif
+  if section.settings.padding_bottom_desktop != 'none'
+    assign spacing_classes = spacing_classes | append: ' lg:pb-' | append: section.settings.padding_bottom_desktop
+  endif
+  if section.settings.margin_top_mobile != 'none'
+    assign spacing_classes = spacing_classes | append: ' mt-' | append: section.settings.margin_top_mobile
+  endif
+  if section.settings.margin_bottom_mobile != 'none'
+    assign spacing_classes = spacing_classes | append: ' mb-' | append: section.settings.margin_bottom_mobile
+  endif
+  if section.settings.padding_top_mobile != 'none'
+    assign spacing_classes = spacing_classes | append: ' pt-' | append: section.settings.padding_top_mobile
+  endif
+  if section.settings.padding_bottom_mobile != 'none'
+    assign spacing_classes = spacing_classes | append: ' pb-' | append: section.settings.padding_bottom_mobile
+  endif
+
+  case section.settings.cta_style
+    when 'dark-grey'
+      assign cta_style_class = 'bg-taupe-900 text-white enabled:hover:bg-taupe-600'
+    when 'white'
+      assign cta_style_class = 'bg-white text-taupe-900 enabled:hover:bg-neutral-100'
+    when 'transparent'
+      assign cta_style_class = 'bg-transparent transition-colors enabled:hover:bg-transparent enabled:hover:text-clubhouse-green-600'
+    when 'text'
+      assign cta_style_class = ''
+  endcase
+
+  assign is_text_style = false
+  if section.settings.cta_style == 'text'
+    assign is_text_style = true
+  endif
+
+  assign image_alt = section.settings.image_alt
+  if image_alt == blank and section.settings.image != blank
+    assign image_alt = section.settings.image.alt
+  endif
+-%}
+
+<section
+  id="fifty-fifty-{{ section.id }}"
+  class="page-block relative page-block--fiftyFifty{{ spacing_classes }} {{ bg_class }}{% unless enable_animation %} [&_.group-inview_.animation-group]:!translate-x-0 [&_.group-inview_.animation-group]:!translate-y-0 [&_.group-inview_.animation-group]:!scale-100 [&_.group-inview_.animation-group]:!opacity-100 [&_.group-inview_.animation-group]:!transition-none [&_.group-inview_.animation-group]:!duration-0{% endunless %}"
+  data-fifty-fifty-section
+>
+  <div data-inview="false" class="group-inview group/blocks">
+    <div class="container-narrow grid grid-cols-1 gap-5 md:gap-10 lg:grid-cols-2 xl:gap-14">
+
+      {%- comment -%} Media column {%- endcomment -%}
+      <div class="opacity-0 translate-y-14 transition-all duration-1000 ease animation-group group-data-[inview=true]/blocks:opacity-100 group-data-[inview=true]/blocks:translate-y-0{% if flip %} lg:order-2{% endif %}">
+        {%- if section.settings.image != blank -%}
+          {{
+            section.settings.image
+            | image_url: width: 1638
+            | image_tag:
+              loading: 'lazy',
+              widths: '540,720,900,1080,1280,1638',
+              sizes: '(min-width: 1024px) 50vw, 100vw',
+              alt: image_alt,
+              class: 'w-full lg:size-full lg:object-cover'
+          }}
+        {%- else -%}
+          <div class="w-full aspect-[4/5] bg-taupe-100 flex items-center justify-center text-taupe-600">
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'w-full h-full' }}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- comment -%} Text column {%- endcomment -%}
+      <div class="opacity-0 -translate-y-14 transition-all duration-1000 ease animation-group group-data-[inview=true]/blocks:opacity-100 group-data-[inview=true]/blocks:translate-y-0{% if flip %} lg:order-1{% endif %}">
+        {%- if section.settings.heading != blank -%}
+          <h2 class="mb-6">
+            <span class="font-serif">
+              <span class="text-4xl lg:text-5xl">{{ section.settings.heading }}</span>
+            </span>
+          </h2>
+        {%- endif -%}
+
+        {%- if section.settings.body != blank -%}
+          <div class="rte">
+            {{ section.settings.body }}
+          </div>
+        {%- endif -%}
+
+        {%- if section.settings.cta_label != blank and section.settings.cta_link != blank -%}
+          <div class="mt-6 inline-block">
+            <a
+              href="{{ section.settings.cta_link }}"
+              class="flex items-center gap-2 text-center text-sm tracking-wider transition-all uppercase{% unless is_text_style %} justify-center px-4 py-3 lg:px-10 min-w-40{% endunless %} {{ cta_style_class }}"
+            >
+              <span>{{ section.settings.cta_label }}</span>
+              {%- if section.settings.cta_has_arrow -%}
+                {%- render 'icon', icon: 'chevron-right', size: 'size-4' -%}
+              {%- endif -%}
+            </a>
+          </div>
+        {%- endif -%}
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  (function () {
+    var section = document.getElementById('fifty-fifty-{{ section.id }}');
+    if (!section) return;
+
+    var enableAnimation = {{ enable_animation | json }};
+    if (!enableAnimation) return;
+
+    var wrapper = section.querySelector('[data-inview]');
+    if (!wrapper) return;
+
+    if (!('IntersectionObserver' in window)) {
+      wrapper.setAttribute('data-inview', 'true');
+      return;
+    }
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.setAttribute('data-inview', 'true');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3, rootMargin: '0px 0px -20%' }
+    );
+    observer.observe(wrapper);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.fifty_fifty.name",
+  "tag": "section",
+  "class": "fifty-fifty-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.fifty_fifty.settings.content.content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.fifty_fifty.settings.image.label"
+    },
+    {
+      "type": "text",
+      "id": "image_alt",
+      "label": "t:sections.fifty_fifty.settings.image_alt.label",
+      "info": "t:sections.fifty_fifty.settings.image_alt.info"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.fifty_fifty.settings.heading.label",
+      "default": "Section heading"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "t:sections.fifty_fifty.settings.body.label",
+      "default": "<p>Add your content here.</p>"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "t:sections.fifty_fifty.settings.layout.label",
+      "options": [
+        { "value": "image-left", "label": "t:sections.fifty_fifty.settings.layout.options.image_left" },
+        { "value": "image-right", "label": "t:sections.fifty_fifty.settings.layout.options.image_right" }
+      ],
+      "default": "image-left"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.fifty_fifty.settings.cta.content"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "t:sections.fifty_fifty.settings.cta_label.label"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "t:sections.fifty_fifty.settings.cta_link.label"
+    },
+    {
+      "type": "select",
+      "id": "cta_style",
+      "label": "t:sections.fifty_fifty.settings.cta_style.label",
+      "options": [
+        { "value": "dark-grey", "label": "t:sections.fifty_fifty.settings.cta_style.options.dark_grey" },
+        { "value": "white", "label": "t:sections.fifty_fifty.settings.cta_style.options.white" },
+        { "value": "transparent", "label": "t:sections.fifty_fifty.settings.cta_style.options.transparent" },
+        { "value": "text", "label": "t:sections.fifty_fifty.settings.cta_style.options.text" }
+      ],
+      "default": "dark-grey"
+    },
+    {
+      "type": "checkbox",
+      "id": "cta_has_arrow",
+      "label": "t:sections.fifty_fifty.settings.cta_has_arrow.label",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.fifty_fifty.settings.appearance.content"
+    },
+    {
+      "type": "select",
+      "id": "background_color",
+      "label": "t:sections.fifty_fifty.settings.background_color.label",
+      "options": [
+        { "value": "transparent", "label": "t:sections.fifty_fifty.settings.background_color.options.transparent" },
+        { "value": "white", "label": "t:sections.fifty_fifty.settings.background_color.options.white" },
+        { "value": "light-grey", "label": "t:sections.fifty_fifty.settings.background_color.options.light_grey" },
+        { "value": "medium-grey", "label": "t:sections.fifty_fifty.settings.background_color.options.medium_grey" },
+        { "value": "dark-grey", "label": "t:sections.fifty_fifty.settings.background_color.options.dark_grey" }
+      ],
+      "default": "transparent"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_animation",
+      "label": "t:sections.fifty_fifty.settings.enable_animation.label",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.fifty_fifty.settings.spacing_desktop.content"
+    },
+    {
+      "type": "select",
+      "id": "margin_top_desktop",
+      "label": "t:sections.fifty_fifty.settings.margin_top_desktop.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" },
+        { "value": "36", "label": "36" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom_desktop",
+      "label": "t:sections.fifty_fifty.settings.margin_bottom_desktop.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" },
+        { "value": "36", "label": "36" }
+      ],
+      "default": "14"
+    },
+    {
+      "type": "select",
+      "id": "padding_top_desktop",
+      "label": "t:sections.fifty_fifty.settings.padding_top_desktop.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom_desktop",
+      "label": "t:sections.fifty_fifty.settings.padding_bottom_desktop.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.fifty_fifty.settings.spacing_mobile.content"
+    },
+    {
+      "type": "select",
+      "id": "margin_top_mobile",
+      "label": "t:sections.fifty_fifty.settings.margin_top_mobile.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom_mobile",
+      "label": "t:sections.fifty_fifty.settings.margin_bottom_mobile.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" }
+      ],
+      "default": "8"
+    },
+    {
+      "type": "select",
+      "id": "padding_top_mobile",
+      "label": "t:sections.fifty_fifty.settings.padding_top_mobile.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" }
+      ],
+      "default": "none"
+    },
+    {
+      "type": "select",
+      "id": "padding_bottom_mobile",
+      "label": "t:sections.fifty_fifty.settings.padding_bottom_mobile.label",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "8", "label": "8" },
+        { "value": "14", "label": "14" },
+        { "value": "20", "label": "20" },
+        { "value": "28", "label": "28" }
+      ],
+      "default": "none"
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.fifty_fifty.presets.name"
+    }
+  ]
+}
+{% endschema %}

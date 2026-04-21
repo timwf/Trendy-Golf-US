@@ -1,0 +1,13 @@
+{%- comment -%}
+  Thin wrapper used exclusively by the Section Rendering API to render a
+  single product card for a given product URL. Fetched client-side by the
+  Explore More carousel via `/products/{handle}?section_id=product-card-renderer`.
+{%- endcomment -%}
+{% render 'product-card', product: product %}
+
+{% schema %}
+{
+  "name": "Product card renderer",
+  "settings": []
+}
+{% endschema %}

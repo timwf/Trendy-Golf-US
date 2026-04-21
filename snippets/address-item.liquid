@@ -1,0 +1,33 @@
+{% doc %}
+  Renders a customer address in read-only view.
+  Source: _reference/repo/app/components/partials/ecommerce/address.tsx
+
+  @param {object} address - Shopify customer_address object (required)
+{% enddoc %}
+
+<div class="flex flex-col">
+  {%- if address.first_name != blank or address.last_name != blank -%}
+    <p class="mb-0 font-bold">{{ address.first_name }}&nbsp;{{ address.last_name }}</p>
+  {%- endif -%}
+  {%- if address.address1 != blank -%}
+    <p class="mb-0">{{ address.address1 }}</p>
+  {%- endif -%}
+  {%- if address.address2 != blank -%}
+    <p class="mb-0">{{ address.address2 }}</p>
+  {%- endif -%}
+  {%- if address.city != blank -%}
+    <p class="mb-0">{{ address.city }}</p>
+  {%- endif -%}
+  {%- if address.zip != blank -%}
+    <p class="mb-0">{{ address.zip }}</p>
+  {%- endif -%}
+  {%- if address.country_code != blank -%}
+    <p class="mb-0">{{ address.country_code }}</p>
+  {%- endif -%}
+  {%- if address.province_code != blank -%}
+    <p class="mb-0">{{ address.province_code }}</p>
+  {%- endif -%}
+  {%- if address.phone != blank -%}
+    <p class="mb-0">{{ address.phone }}</p>
+  {%- endif -%}
+</div>

@@ -1,0 +1,1023 @@
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign display_name = product.metafields.custom.product_display_name | default: product.title
+-%}
+
+{{ 'splide.min.css' | asset_url | stylesheet_tag }}
+
+<main>
+  {%- comment -%} ====== 2-column product grid ====== {%- endcomment -%}
+  <div class="mb-14 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-14">
+
+    {%- comment -%} ---- LEFT: Image gallery ---- {%- endcomment -%}
+    <div>
+      {%- comment -%} Mobile: Splide carousel {%- endcomment -%}
+      <div class="block md:hidden">
+        <div class="relative w-full">
+          <div data-pagination-hide="false" data-pagination-dark="true">
+            <div class="splide relative h-full" data-product-carousel>
+              <div class="absolute left-0 top-0 z-10 p-4">
+                <p class="mb-0 text-sm" data-slide-counter>1 / {{ product.media.size }}</p>
+              </div>
+              <div class="splide__track">
+                <ul class="splide__list">
+                  {%- assign mobile_img_idx = 0 -%}
+                  {%- for media in product.media -%}
+                    {%- if media.media_type == 'image' -%}
+                      <li class="splide__slide">
+                        <div data-measure="true" class="inline-block w-full">
+                          <img
+                            src="{{ media | image_url: width: 800 }}"
+                            alt="{{ media.alt | escape }}"
+                            width="{{ media.width }}"
+                            height="{{ media.height }}"
+                            class="block h-auto w-full cursor-zoom-in"
+                            loading="lazy"
+                            data-image-index="{{ mobile_img_idx }}"
+                          />
+                        </div>
+                      </li>
+                      {%- assign mobile_img_idx = mobile_img_idx | plus: 1 -%}
+                    {%- endif -%}
+                  {%- endfor -%}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {%- comment -%} Desktop: Static image grid (full, half+half repeating) {%- endcomment -%}
+      <div class="hidden grid-cols-2 gap-4 md:grid" data-image-grid>
+        {%- assign image_index = 0 -%}
+        {%- for media in product.media -%}
+          {%- if media.media_type == 'image' -%}
+            {%- assign position_in_group = image_index | modulo: 3 -%}
+            {%- if image_index > 6 or position_in_group == 0 -%}
+              {%- assign col_class = 'col-span-2' -%}
+            {%- else -%}
+              {%- assign col_class = 'col-span-1' -%}
+            {%- endif -%}
+            <div class="{{ col_class }} cursor-zoom-in" data-image-index="{{ image_index }}">
+              <img
+                src="{{ media | image_url: width: 1200 }}"
+                alt="{{ media.alt | escape }}"
+                width="{{ media.width }}"
+                height="{{ media.height }}"
+                class="block h-auto w-full"
+                loading="{% if image_index < 3 %}eager{% else %}lazy{% endif %}"
+              />
+            </div>
+            {%- assign image_index = image_index | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+      </div>
+    </div>
+
+    {%- comment -%} ---- RIGHT: Product info (sticky on desktop) ---- {%- endcomment -%}
+    <div class="max-w-xl px-6">
+      <div class="md:sticky md:top-0 md:flex md:h-[calc(100vh-64px)] md:flex-col md:justify-center">
+
+        {%- comment -%} Brand name {%- endcomment -%}
+        {%- if product.vendor != blank -%}
+          <p class="mb-5 text-sm uppercase text-taupe-700">{{ product.vendor }}</p>
+        {%- endif -%}
+
+        {%- comment -%} Product title {%- endcomment -%}
+        <h1 class="mb-3 font-sans text-xl lg:text-2xl">{{ display_name }}</h1>
+
+        {%- comment -%} Price {%- endcomment -%}
+        <div class="mb-6" data-product-price>
+          {%- if current_variant.compare_at_price > current_variant.price -%}
+            <span class="mb-0 text-xl">
+              <span class="font-semibold text-red-600">{{ current_variant.price | money }}</span>
+              <s class="ml-2 text-base text-taupe-700">{{ current_variant.compare_at_price | money }}</s>
+            </span>
+          {%- else -%}
+            <span class="mb-0 text-xl"><span class="font-semibold">{{ current_variant.price | money }}</span></span>
+          {%- endif -%}
+        </div>
+
+        {%- comment -%} Reviews rating — custom Lipscore API client (hidden until data loads) {%- endcomment -%}
+        <div class="mb-6 hidden" data-reviews-rating>
+          <button type="button" class="flex items-center justify-center gap-2" data-reviews-open aria-label="Open reviews">
+            {%- render 'icon', icon: 'star-solid', icon_class: 'size-5' -%}
+            <span class="pt-0.5 text-sm"><span data-reviews-avg></span> <span class="text-taupe-700">(<span data-reviews-count></span>)</span></span>
+          </button>
+        </div>
+
+        {%- comment -%} Content flex reorder: selectors first on mobile, description first on desktop {%- endcomment -%}
+        <div class="flex flex-col">
+
+          {%- comment -%} === Selectors + button (order-2 on desktop) === {%- endcomment -%}
+          <div class="mb-6 md:order-2">
+
+            {%- comment -%} Colour label + swatches {%- endcomment -%}
+            {%- assign colour_name = product.metafields.custom.color -%}
+            {%- if colour_name != blank -%}
+              <div class="mb-5">
+                <p class="mb-2 text-xs lg:text-sm"><span class="text-taupe-700">{{ 'sections.product.colour_label' | t }}</span> {{ colour_name }}</p>
+                <div class="flex gap-2">
+                  {%- assign first_collection = product.collections.first -%}
+                  {%- if first_collection -%}
+                    {%- for sibling in first_collection.products -%}
+                      {%- assign sibling_name = sibling.metafields.custom.product_display_name | default: sibling.title -%}
+                      {%- if sibling_name == display_name -%}
+                        {%- assign is_active = false -%}
+                        {%- if sibling.id == product.id -%}
+                          {%- assign is_active = true -%}
+                        {%- endif -%}
+                        {%- render 'colour-swatch',
+                          url: sibling.url,
+                          colour: sibling.metafields.custom.swatch_colour,
+                          colour_secondary: sibling.metafields.custom.swatch_colour_secondary,
+                          name: sibling.metafields.custom.color,
+                          active: is_active
+                        -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- endif -%}
+
+            {%- comment -%} Product form {%- endcomment -%}
+            {%- form 'product', product, id: 'product-form', data-product-form: '' -%}
+              <input type="hidden" name="id" value="{{ current_variant.id }}" data-variant-id>
+
+              {%- comment -%} Size selector {%- endcomment -%}
+              {%- if product.has_only_default_variant == false -%}
+                <div class="mb-5">
+                  <label class="mb-2 flex items-end justify-between text-sm">
+                    <span>{{ 'sections.product.size_label' | t }}</span>
+                    {%- if section.settings.enable_size_guide -%}
+                      <button type="button" class="text-sm font-bold text-taupe-900 hover:text-taupe-700" data-size-guide-btn>
+                        {{ 'sections.product.size_guide' | t }}
+                      </button>
+                    {%- endif -%}
+                  </label>
+                  <div class="relative">
+                    <select
+                      data-variant-select
+                      class="block w-full appearance-none border border-taupe-600 bg-taupe-100 px-4 py-3 focus:outline-none"
+                    >
+                      {%- for variant in product.variants -%}
+                        <option
+                          value="{{ variant.id }}"
+                          data-price="{{ variant.price | money }}"
+                          data-compare-price="{{ variant.compare_at_price | money }}"
+                          data-has-compare="{{ variant.compare_at_price | default: 0 }}"
+                          data-available="{{ variant.available }}"
+                          data-option-value="{{ variant.title | escape }}"
+                          {% if variant == current_variant %}selected{% endif %}
+                          {% unless variant.available %}disabled{% endunless %}
+                        >
+                          {{ variant.title }}{% unless variant.available %} — {{ 'sections.product.sold_out' | t }}{% endunless %}
+                        </option>
+                      {%- endfor -%}
+                    </select>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                    </svg>
+                  </div>
+                </div>
+              {%- endif -%}
+
+              {%- comment -%} Add to basket button + wishlist {%- endcomment -%}
+              <div class="mb-5 flex w-full gap-4">
+                <div class="flex-1">
+                  <button
+                    type="submit"
+                    data-add-to-cart
+                    class="flex w-full items-center justify-center gap-2 bg-taupe-900 px-4 py-3 text-center text-sm uppercase tracking-wider text-white transition-all enabled:hover:bg-taupe-600 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 lg:px-10"
+                    {% unless current_variant.available %}disabled{% endunless %}
+                  >
+                    {%- if current_variant.available -%}
+                      {{ 'sections.product.add_to_basket' | t }}
+                    {%- else -%}
+                      {{ 'sections.product.sold_out' | t }}
+                    {%- endif -%}
+                  </button>
+                </div>
+                <button
+                  type="button"
+                  class="swym-button swym-add-to-wishlist-view-product product_{{ product.id }} flex items-center justify-center px-5 py-3"
+                  style="border: 1px solid #b9b5aa !important; width: 42px;"
+                  data-swaction="addToWishlist"
+                  data-with-epi="true"
+                  data-product-id="{{ product.id | json }}"
+                  data-variant-id="{{ current_variant.id }}"
+                  data-product-url="{{ shop.url }}{{ product.url }}"
+                  aria-label="Add to wishlist"
+                ></button>
+              </div>
+            {%- endform -%}
+
+            {%- comment -%} TGCC rewards banner {%- endcomment -%}
+            <div class="mb-4 flex items-center gap-2 bg-clubhouse-green-600 p-4 text-sm text-white">
+              {%- render 'icon', icon: 'trophy', size: 'size-5' -%}
+              <p class="mb-0">Register at checkout to unlock <b>TGCC Rewards</b> — earn points with every purchase.</p>
+            </div>
+
+            {%- comment -%} Delivery estimate (dynamic countdown) {%- endcomment -%}
+            {%- if section.settings.enable_delivery_estimate -%}
+              <div class="flex gap-2 hidden" data-delivery-estimate>
+                {%- render 'icon', icon: 'truck', size: 'size-5', class: 'flex-none text-taupe-700' -%}
+                <p class="mb-0 text-sm" aria-live="polite">Get it by <span class="font-bold">tomorrow</span> if you order within&nbsp;<span class="font-bold text-clubhouse-green-600" data-delivery-countdown></span></p>
+              </div>
+            {%- endif -%}
+
+          </div>
+
+          {%- comment -%} === Description excerpt (order-1 on desktop) === {%- endcomment -%}
+          <div class="md:order-1">
+            <div class="mb-4">
+              {%- if product.description != blank -%}
+                <p class="mb-2 text-sm">{{ product.description | strip_html | truncatewords: 30 }}</p>
+              {%- endif -%}
+              <button type="button" class="hidden cursor-pointer items-center hover:text-taupe-700 md:flex" data-scroll-to-features>
+                {{ 'sections.product.features_heading' | t }}
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+        {%- comment -%} Scroll progress indicator (desktop only) {%- endcomment -%}
+        <div class="hidden h-32 w-1 lg:block absolute left-0 top-1/2 -translate-x-10 -translate-y-1/2" data-scroll-indicator>
+          <div class="transition-height absolute left-1/2 top-0 z-[1] w-full -translate-x-1/2 overflow-hidden bg-taupe-900" data-scroll-fill></div>
+          <div class="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-taupe-400"></div>
+          <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full pt-1">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="size-4 text-taupe-900">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 5.25 7.5 7.5 7.5-7.5m-15 6 7.5 7.5 7.5-7.5"></path>
+            </svg>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  {%- comment -%} ====== Accordion section ====== {%- endcomment -%}
+  {%- comment -%}
+    Scrape wraps accordions + Explore More in `mb-14 flex flex-col gap-10`.
+    Our Explore More lives in a separate section, so we replicate that spacing
+    by matching `gap-10` here (mb-10 → 40px to Explore More) and putting
+    `mb-14` on the Explore More section root (56px below the carousel).
+  {%- endcomment -%}
+  <div class="mb-10">
+  <div class="container-narrow" id="product-accordions">
+    {%- comment -%} Description accordion {%- endcomment -%}
+    {%- if product.description != blank -%}
+      <div data-accordion>
+        <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
+          <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ 'sections.product.description_heading' | t }}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 flex-none transition-transform" data-accordion-icon aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+          </svg>
+        </button>
+        <div class="overflow-hidden" style="height:0" data-accordion-panel>
+          <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
+            {{ product.description }}
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Features & Benefits accordion {%- endcomment -%}
+    {%- if product.metafields.custom.features_and_benefits != blank -%}
+      <div data-accordion id="features-accordion">
+        <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
+          <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ 'sections.product.features_heading' | t }}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 flex-none transition-transform" data-accordion-icon aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+          </svg>
+        </button>
+        <div class="overflow-hidden" style="height:0" data-accordion-panel>
+          <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
+            {%- assign features_raw = product.metafields.custom.features_and_benefits | split: '*' -%}
+            {%- for feature in features_raw -%}
+              {%- assign feature_trimmed = feature | strip -%}
+              {%- if feature_trimmed != blank -%}
+                {%- assign parts = feature_trimmed | split: '–' -%}
+                <p>
+                  <span class="font-bold">{{ parts[0] | strip }}</span>
+                  {%- if parts.size > 1 -%}
+                    <br>
+                    {%- for part in parts -%}
+                      {%- if forloop.first -%}{%- continue -%}{%- endif -%}
+                      {%- unless forloop.index == 1 -%}–{% endunless %}{{ part | strip }}
+                    {%- endfor -%}
+                  {%- endif -%}
+                </p>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Delivery & Returns accordion {%- endcomment -%}
+    <div data-accordion>
+      <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
+        <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ 'sections.product.delivery_heading' | t }}</span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 flex-none transition-transform" data-accordion-icon aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+        </svg>
+      </button>
+      <div class="overflow-hidden" style="height:0" data-accordion-panel>
+        <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
+          {%- if section.settings.delivery_returns_content != blank -%}
+            {{ section.settings.delivery_returns_content }}
+          {%- else -%}
+            {{ 'sections.product.delivery_returns_content' | t }}
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  {%- comment -%} Size guide modal {%- endcomment -%}
+  {%- if section.settings.enable_size_guide -%}
+    {%- render 'size-guide-modal' -%}
+  {%- endif -%}
+
+  {%- comment -%} Image zoom modal {%- endcomment -%}
+  {%- render 'image-zoom-modal' -%}
+
+  {%- comment -%} Reviews modal {%- endcomment -%}
+  {%- render 'reviews-modal' -%}
+
+  {%- comment -%} Variant data for JS {%- endcomment -%}
+  <script data-product-json type="application/json">
+    {{ product.variants | json }}
+  </script>
+
+  {%- comment -%} Kiwi Sizing URL data for JS {%- endcomment -%}
+  <script data-kiwi-json type="application/json">
+    {
+      "shop": "trendy-golf-uk.myshopify.com",
+      "source": "trendygolf",
+      "productId": "{{ product.id | remove: 'gid://shopify/Product/' }}",
+      "vendor": {{ product.vendor | json }},
+      "type": {{ product.type | json }},
+      "tags": {{ product.tags | json }}
+    }
+  </script>
+
+  {%- comment -%} Delivery region for JS {%- endcomment -%}
+  <script data-delivery-region type="application/json">{{ section.settings.delivery_region | json }}</script>
+
+  {%- comment -%} Product structured data — Google rich results {%- endcomment -%}
+  <script type="application/ld+json">{{ product | structured_data }}</script>
+
+  {%- comment -%} Breadcrumb structured data — Home > [first collection] > Product {%- endcomment -%}
+  {%- assign product_collection = product.collections.first -%}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": {{ shop.url | append: '/' | json }} }
+      {%- if product_collection -%}
+      ,{ "@type": "ListItem", "position": 2, "name": {{ product_collection.title | json }}, "item": {{ shop.url | append: product_collection.url | json }} }
+      ,{ "@type": "ListItem", "position": 3, "name": {{ product.title | json }} }
+      {%- else -%}
+      ,{ "@type": "ListItem", "position": 2, "name": {{ product.title | json }} }
+      {%- endif -%}
+    ]
+  }
+  </script>
+</main>
+
+<script src="{{ 'splide.min.js' | asset_url }}" defer></script>
+<script>
+  (function init() {
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+      return;
+    }
+    var carousel = document.querySelector('[data-product-carousel]');
+    if (carousel && typeof Splide !== 'undefined' && carousel.offsetParent !== null) {
+      var counter = document.querySelector('[data-slide-counter]');
+      var splide = new Splide(carousel, {
+        type: 'slide',
+        perPage: 1,
+        pagination: true,
+        arrows: false,
+        classes: {
+          pagination: 'splide__pagination splide__pagination--dark'
+        }
+      });
+      if (counter) {
+        splide.on('moved', function(newIndex) {
+          counter.textContent = (newIndex + 1) + ' / ' + splide.length;
+        });
+      }
+      splide.mount();
+    }
+
+    var select = document.querySelector('[data-variant-select]');
+    var priceEl = document.querySelector('[data-product-price]');
+    var addBtn = document.querySelector('[data-add-to-cart]');
+    var variantInput = document.querySelector('[data-variant-id]');
+    var productForm = document.querySelector('[data-product-form]');
+
+    if (select) {
+      var params = new URLSearchParams(window.location.search);
+      var sizeParam = params.get('option|Size');
+      if (sizeParam) {
+        var options = select.querySelectorAll('option');
+        for (var i = 0; i < options.length; i++) {
+          if (options[i].dataset.optionValue === sizeParam && options[i].dataset.available === 'true') {
+            select.value = options[i].value;
+            break;
+          }
+        }
+      }
+
+      function updateVariantUI() {
+        var opt = select.options[select.selectedIndex];
+        if (!opt) return;
+
+        var price = opt.dataset.price;
+        var comparePrice = opt.dataset.comparePrice;
+        var hasCompare = parseInt(opt.dataset.hasCompare, 10);
+        var available = opt.dataset.available === 'true';
+
+        if (priceEl) {
+          if (hasCompare > 0 && hasCompare > parseInt(opt.value, 10)) {
+            priceEl.innerHTML = '<span class="mb-0 text-xl"><span class="font-semibold text-red-600">' + price + '</span><s class="ml-2 text-base text-taupe-700">' + comparePrice + '</s></span>';
+          } else {
+            priceEl.innerHTML = '<span class="mb-0 text-xl"><span class="font-semibold">' + price + '</span></span>';
+          }
+        }
+
+        if (variantInput) {
+          variantInput.value = opt.value;
+        }
+
+        if (addBtn) {
+          addBtn.disabled = !available;
+          addBtn.textContent = available ? 'Add to basket' : 'Sold out';
+        }
+
+        var url = new URL(window.location.href);
+        url.searchParams.set('option|Size', opt.dataset.optionValue);
+        history.replaceState(null, '', url.toString());
+      }
+
+      select.addEventListener('change', updateVariantUI);
+      if (sizeParam) updateVariantUI();
+    }
+
+    var accordions = document.querySelectorAll('[data-accordion]');
+
+    function closeAccordion(accordion) {
+      var panel = accordion.querySelector('[data-accordion-panel]');
+      var icon = accordion.querySelector('[data-accordion-icon]');
+      var title = accordion.querySelector('[data-accordion-title]');
+      if (!panel || (panel.style.height === '0px' || panel.style.height === '0')) return;
+      panel.style.height = panel.scrollHeight + 'px';
+      requestAnimationFrame(function() {
+        panel.style.transition = 'height 0.3s ease';
+        panel.style.height = '0';
+      });
+      if (icon) icon.style.transform = '';
+      if (title) title.classList.remove('text-clubhouse-green-600');
+    }
+
+    accordions.forEach(function(accordion) {
+      var btn = accordion.querySelector('[data-accordion-btn]');
+      var panel = accordion.querySelector('[data-accordion-panel]');
+      var icon = accordion.querySelector('[data-accordion-icon]');
+      if (!btn || !panel) return;
+
+      var title = accordion.querySelector('[data-accordion-title]');
+
+      btn.addEventListener('click', function() {
+        var isOpen = panel.style.height !== '0px' && panel.style.height !== '0';
+
+        // Close all other accordions
+        accordions.forEach(function(other) {
+          if (other !== accordion) closeAccordion(other);
+        });
+
+        if (isOpen) {
+          panel.style.height = panel.scrollHeight + 'px';
+          requestAnimationFrame(function() {
+            panel.style.transition = 'height 0.3s ease';
+            panel.style.height = '0';
+          });
+          if (icon) icon.style.transform = '';
+          if (title) title.classList.remove('text-clubhouse-green-600');
+        } else {
+          panel.style.transition = 'height 0.3s ease';
+          panel.style.height = panel.scrollHeight + 'px';
+          if (icon) icon.style.transform = 'rotate(180deg)';
+          if (title) title.classList.add('text-clubhouse-green-600');
+          panel.addEventListener('transitionend', function handler() {
+            panel.style.height = 'auto';
+            panel.removeEventListener('transitionend', handler);
+          });
+        }
+      });
+    });
+
+    var scrollBtn = document.querySelector('[data-scroll-to-features]');
+    if (scrollBtn) {
+      scrollBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var target = document.getElementById('features-accordion');
+        var container = document.getElementById('product-accordions');
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          var panel = target.querySelector('[data-accordion-panel]');
+          if (panel && (panel.style.height === '0px' || panel.style.height === '0')) {
+            target.querySelector('[data-accordion-btn]').click();
+          }
+        } else if (container) {
+          container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    }
+
+    // AJAX add to cart
+    if (productForm) {
+      productForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var formData = new FormData(productForm);
+        addBtn.disabled = true;
+        addBtn.textContent = 'Adding...';
+
+        fetch('/cart/add.js', {
+          method: 'POST',
+          body: formData
+        })
+        .then(function(res) { return res.json(); })
+        .then(function(data) {
+          if (data.status) {
+            addBtn.textContent = 'Error';
+            if (window.toast) window.toast.show(data.description || 'Unable to add product due to limited availability', 'error');
+            setTimeout(function() {
+              addBtn.disabled = false;
+              addBtn.textContent = 'Add to basket';
+            }, 2000);
+            return;
+          }
+          addBtn.textContent = 'Added!';
+          if (window.toast) window.toast.show('Product added to basket', 'success');
+          if (window.cartDrawer) window.cartDrawer.refreshDrawer();
+          setTimeout(function() {
+            addBtn.disabled = false;
+            addBtn.textContent = 'Add to basket';
+          }, 2000);
+        })
+        .catch(function() {
+          addBtn.disabled = false;
+          addBtn.textContent = 'Add to basket';
+          if (window.toast) window.toast.show('Something went wrong. Please try again.', 'error');
+        });
+      });
+    }
+
+    // Size guide modal
+    (function() {
+      var modal = document.querySelector('[data-size-guide-modal]');
+      var backdrop = document.querySelector('[data-size-guide-backdrop]');
+      var panel = document.querySelector('[data-size-guide-panel]');
+      var iframe = document.querySelector('[data-size-guide-iframe]');
+      var openBtn = document.querySelector('[data-size-guide-btn]');
+      var closeBtn = document.querySelector('[data-size-guide-close]');
+      if (!modal || !openBtn) return;
+
+      var kiwiData = JSON.parse(document.querySelector('[data-kiwi-json]').textContent);
+      var params = new URLSearchParams({
+        shop: kiwiData.shop,
+        product: kiwiData.productId,
+        vendor: kiwiData.vendor.trim(),
+        type: kiwiData.type.trim(),
+        source: kiwiData.source
+      });
+      if (kiwiData.tags && kiwiData.tags.length) {
+        params.set('tags', kiwiData.tags.map(encodeURIComponent).join(','));
+      }
+      var kiwiUrl = 'https://app.kiwisizing.com/size?' + params.toString();
+
+      function openModal() {
+        if (iframe && !iframe.src) iframe.src = kiwiUrl;
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      openBtn.addEventListener('click', openModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (backdrop) backdrop.addEventListener('click', closeModal);
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+      });
+    })();
+
+    // Image zoom modal — click handlers on product images
+    (function() {
+      // Mobile carousel images
+      var mobileCarousel = document.querySelector('[data-product-carousel]');
+      if (mobileCarousel) {
+        mobileCarousel.addEventListener('click', function(e) {
+          var img = e.target.closest('[data-image-index]');
+          if (img && typeof window.openImageZoomModal === 'function') {
+            window.openImageZoomModal(parseInt(img.dataset.imageIndex, 10));
+          }
+        });
+      }
+
+      // Desktop grid images
+      var desktopGrid = document.querySelector('[data-image-grid]');
+      if (desktopGrid) {
+        desktopGrid.addEventListener('click', function(e) {
+          var wrapper = e.target.closest('[data-image-index]');
+          if (wrapper && typeof window.openImageZoomModal === 'function') {
+            window.openImageZoomModal(parseInt(wrapper.dataset.imageIndex, 10));
+          }
+        });
+      }
+    })();
+
+    // Scroll progress indicator
+    (function() {
+      var fill = document.querySelector('[data-scroll-fill]');
+      var grid = document.querySelector('[data-image-grid]');
+      if (!fill || !grid) return;
+      function update() {
+        var rect = grid.getBoundingClientRect();
+        var gridH = grid.offsetHeight;
+        var winH = window.innerHeight;
+        var scrollable = gridH - winH;
+        if (scrollable <= 0) { fill.style.height = '100%'; return; }
+        var progress = Math.max(0, Math.min(1, -rect.top / scrollable));
+        fill.style.height = (progress * 100) + '%';
+      }
+      window.addEventListener('scroll', update, { passive: true });
+      window.addEventListener('resize', update, { passive: true });
+      update();
+    })();
+
+    // Delivery estimate countdown
+    (function() {
+      var wrapper = document.querySelector('[data-delivery-estimate]');
+      var countdownEl = document.querySelector('[data-delivery-countdown]');
+      var regionEl = document.querySelector('[data-delivery-region]');
+      if (!wrapper || !countdownEl || !regionEl) return;
+
+      var region = JSON.parse(regionEl.textContent);
+      var SETTINGS = {
+        UK: { timeZone: 'Europe/London', cutoffHour: {{ section.settings.delivery_cutoff_hour | default: 16 }}, cutoffMinute: 0, workingDays: [1, 2, 3, 4, 5] },
+        US: { timeZone: 'America/New_York', cutoffHour: {{ section.settings.delivery_cutoff_hour | default: 16 | plus: 1 }}, cutoffMinute: 0, workingDays: [1, 2, 3, 4, 5] }
+      };
+      var cfg = SETTINGS[region] || SETTINGS.UK;
+
+      function getZonedParts(d, tz) {
+        var parts = new Intl.DateTimeFormat('en-GB', {
+          timeZone: tz, hour12: false,
+          year: 'numeric', month: '2-digit', day: '2-digit',
+          hour: '2-digit', minute: '2-digit', second: '2-digit'
+        }).formatToParts(d);
+        function get(t) {
+          for (var i = 0; i < parts.length; i++) { if (parts[i].type === t) return Number(parts[i].value); }
+          return 0;
+        }
+        return { year: get('year'), month: get('month'), day: get('day'), hour: get('hour'), minute: get('minute'), second: get('second') };
+      }
+
+      function zonedTimeToUTC(y, m, d, h, mi, s, tz) {
+        var guess = new Date(Date.UTC(y, m - 1, d, h, mi, s));
+        var p = getZonedParts(guess, tz);
+        var asIfUTC = Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute, p.second);
+        var offset = asIfUTC - guess.getTime();
+        return new Date(guess.getTime() - offset);
+      }
+
+      function getDayOfWeek(dateUTC, tz) {
+        var short = dateUTC.toLocaleString('en-GB', { timeZone: tz, weekday: 'short' });
+        var map = { Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6, Sun: 7 };
+        return map[short] || 1;
+      }
+
+      function getNextCutoffUTC(fromUTC) {
+        var p = getZonedParts(fromUTC, cfg.timeZone);
+        var todayCutoff = zonedTimeToUTC(p.year, p.month, p.day, cfg.cutoffHour, cfg.cutoffMinute, 0, cfg.timeZone);
+        var dow = getDayOfWeek(fromUTC, cfg.timeZone);
+
+        if (cfg.workingDays.indexOf(dow) !== -1 && fromUTC < todayCutoff) {
+          return todayCutoff;
+        }
+
+        var addDays = 1;
+        while (true) {
+          var candidate = new Date(fromUTC.getTime() + addDays * 86400000);
+          var cp = getZonedParts(candidate, cfg.timeZone);
+          var cdow = getDayOfWeek(candidate, cfg.timeZone);
+          if (cfg.workingDays.indexOf(cdow) !== -1) {
+            return zonedTimeToUTC(cp.year, cp.month, cp.day, cfg.cutoffHour, cfg.cutoffMinute, 0, cfg.timeZone);
+          }
+          addDays++;
+        }
+      }
+
+      function tick() {
+        var now = new Date();
+        var cutoff = getNextCutoffUTC(now);
+        var msLeft = Math.max(0, cutoff.getTime() - now.getTime());
+        var totalSec = Math.floor(msLeft / 1000);
+        var hours = Math.floor(totalSec / 3600);
+        var minutes = Math.floor((totalSec % 3600) / 60);
+        var seconds = totalSec % 60;
+
+        if (hours >= 16) {
+          wrapper.classList.add('hidden');
+          return;
+        }
+
+        var label;
+        if (hours >= 1) {
+          label = hours + 'hrs ' + String(minutes).padStart(2, '0') + 'mins';
+        } else if (minutes >= 1) {
+          label = minutes + 'mins';
+        } else {
+          label = seconds + 's';
+        }
+
+        countdownEl.textContent = label;
+        wrapper.classList.remove('hidden');
+      }
+
+      tick();
+      setInterval(tick, 60000);
+    })();
+
+    // Reviews — Lipscore API client + modal
+    (function() {
+      var API_KEY = '42635f2f546fb8b0f2f54f73';
+      var SECRET = '128517e0951cc7a7b801a5e57b78b646';
+      var SHOPIFY_ID = '{{ product.id }}';
+      var lipscoreId = null;
+      var ratingAvg = 0;
+      var ratingCount = 0;
+      var currentPage = 1;
+      var totalPages = 1;
+      var loading = false;
+
+      var ratingWrap = document.querySelector('[data-reviews-rating]');
+      var avgEl = document.querySelector('[data-reviews-avg]');
+      var countEl = document.querySelector('[data-reviews-count]');
+      var modal = document.querySelector('[data-reviews-modal]');
+      var openBtn = document.querySelector('[data-reviews-open]');
+      var closeBtn = document.querySelector('[data-reviews-close]');
+      var backdrop = document.querySelector('[data-reviews-backdrop]');
+      var prevBtn = document.querySelector('[data-reviews-prev]');
+      var nextBtn = document.querySelector('[data-reviews-next]');
+      var listEl = document.querySelector('[data-reviews-list]');
+      var loaderEl = document.querySelector('[data-reviews-loader]');
+      var emptyEl = document.querySelector('[data-reviews-empty]');
+      var pagEl = document.querySelector('[data-reviews-pagination]');
+      var headerStars = document.querySelector('[data-reviews-header-stars]');
+      var headerCount = document.querySelector('[data-reviews-header-count]');
+      var headerAvg = document.querySelector('[data-reviews-header-avg]');
+      var currentPageEl = document.querySelector('[data-reviews-current-page]');
+      var totalPagesEl = document.querySelector('[data-reviews-total-pages]');
+
+      if (!ratingWrap || !modal) return;
+
+      var headers = { 'Accept': 'application/json', 'X-Authorization': SECRET };
+
+      var STAR_SOLID = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-5" aria-hidden="true"><path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd"/></svg>';
+      var STAR_OUTLINE = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z"/></svg>';
+
+      function escapeHtml(s) {
+        if (s == null) return '';
+        return String(s).replace(/[&<>"']/g, function(c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+        });
+      }
+
+      function starsHtml(rating) {
+        var filled = Math.floor(rating || 0);
+        var html = '';
+        for (var i = 0; i < 5; i++) html += i < filled ? STAR_SOLID : STAR_OUTLINE;
+        return html;
+      }
+
+      function parseQuality(v) {
+        if (typeof v !== 'string') return null;
+        switch (v.toLowerCase()) {
+          case 'poor': return 1;
+          case 'ok': return 2;
+          case 'fantastic': return 4;
+          default: return null;
+        }
+      }
+
+      function parseSize(v) {
+        if (typeof v !== 'string') return null;
+        switch (v.toLowerCase()) {
+          case 'small': return 0;
+          case 'true to size': return 2;
+          case 'large': return 4;
+          default: return null;
+        }
+      }
+
+      function progressBar(value, max, labels, variant) {
+        var pct = Math.max(0, Math.min(100, (value / max) * 100));
+        var track, fill;
+        if (variant === 'dot') {
+          track = '<div class="relative h-2"><div class="absolute left-0 right-0 top-1/2 h-px -translate-y-1/2 bg-taupe-400"></div><div class="absolute top-1/2 size-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-taupe-900" style="left: ' + pct + '%"></div></div>';
+        } else {
+          track = '<div class="relative h-2 bg-taupe-400"><div class="absolute inset-y-0 left-0 bg-taupe-900" style="width: ' + pct + '%"></div></div>';
+        }
+        var labelRow = '';
+        if (labels && labels.length) {
+          labelRow = '<div class="mt-1 flex justify-between text-xs text-taupe-700">' + labels.map(function(l) { return '<span>' + escapeHtml(l) + '</span>'; }).join('') + '</div>';
+        }
+        return track + labelRow;
+      }
+
+      function renderReview(r) {
+        var quality = parseQuality(r.internal_attr_3);
+        var size = parseSize(r.internal_attr_4);
+        var name = r.displayed_name || (r.user && r.user.short_name) || 'Anonymous';
+        var html = '<li class="bg-taupe-300 p-5"><div class="flex flex-col gap-4">';
+        html += '<div class="flex items-center justify-between">';
+        html += '<div class="flex items-center">' + starsHtml(r.rating) + '</div>';
+        html += '<p class="mb-0 text-sm">' + escapeHtml(name) + '</p>';
+        html += '</div>';
+        if (r.text) html += '<p class="mb-0">' + escapeHtml(r.text) + '</p>';
+        if (r.internal_attr_1) html += '<p class="mb-0 flex justify-between text-sm"><span class="uppercase"><strong>Size</strong></span><span>' + escapeHtml(r.internal_attr_1) + '</span></p>';
+        if (r.internal_attr_2) html += '<p class="mb-0 flex justify-between text-sm"><span class="uppercase"><strong>Colour</strong></span><span>' + escapeHtml(r.internal_attr_2) + '</span></p>';
+        if (quality !== null) html += '<div class="flex flex-col"><p class="mb-2 text-sm font-bold">Product Quality</p>' + progressBar(quality, 4, ['Poor', 'Ok', 'Fantastic'], 'bar') + '</div>';
+        if (size !== null) html += '<div class="flex flex-col"><p class="mb-2 text-sm font-bold">Perceived Size</p>' + progressBar(size, 4, ['Small', 'True to size', 'Large'], 'dot') + '</div>';
+        html += '</div></li>';
+        return html;
+      }
+
+      // 1. Fetch rating summary via internal_id search (Lipscore account uses Lipscore-side ids for path params)
+      fetch('https://api.lipscore.com/products?api_key=' + API_KEY + '&internal_id=' + encodeURIComponent(SHOPIFY_ID) + '&fields=id,rating,votes,review_count', { headers: headers })
+        .then(function(r) { return r.ok ? r.json() : []; })
+        .then(function(arr) {
+          if (!arr || !arr.length) return;
+          var p = arr[0];
+          lipscoreId = p.id;
+          ratingAvg = parseFloat(p.rating) || 0;
+          ratingCount = parseInt(p.votes != null ? p.votes : p.review_count, 10) || 0;
+          if (ratingCount > 0) {
+            avgEl.textContent = ratingAvg.toFixed(1);
+            countEl.textContent = ratingCount;
+            ratingWrap.classList.remove('hidden');
+          }
+        })
+        .catch(function() { /* silent */ });
+
+      function loadPage(page) {
+        if (!lipscoreId || loading) return;
+        loading = true;
+        listEl.classList.add('hidden');
+        listEl.classList.remove('flex');
+        emptyEl.classList.add('hidden');
+        pagEl.classList.add('hidden');
+        pagEl.classList.remove('flex');
+        loaderEl.classList.remove('hidden');
+        fetch('https://api.lipscore.com/products/' + lipscoreId + '/reviews?api_key=' + API_KEY + '&page=' + page + '&per_page=10', { headers: headers })
+          .then(function(r) {
+            var ph = r.headers.get('X-Pagination');
+            if (ph) {
+              try {
+                var p = JSON.parse(ph);
+                currentPage = p.current_page || page;
+                totalPages = p.total_pages || 1;
+              } catch (e) { currentPage = page; }
+            } else {
+              currentPage = page;
+            }
+            return r.json();
+          })
+          .then(function(reviews) {
+            loading = false;
+            loaderEl.classList.add('hidden');
+            if (!reviews || !reviews.length) {
+              emptyEl.classList.remove('hidden');
+              return;
+            }
+            listEl.innerHTML = reviews.map(renderReview).join('');
+            listEl.classList.remove('hidden');
+            listEl.classList.add('flex');
+            if (totalPages > 1) {
+              currentPageEl.textContent = currentPage;
+              totalPagesEl.textContent = totalPages;
+              prevBtn.disabled = currentPage < 2;
+              nextBtn.disabled = currentPage >= totalPages;
+              pagEl.classList.remove('hidden');
+              pagEl.classList.add('flex');
+            }
+          })
+          .catch(function() {
+            loading = false;
+            loaderEl.classList.add('hidden');
+            emptyEl.classList.remove('hidden');
+          });
+      }
+
+      function openModal() {
+        headerStars.innerHTML = starsHtml(ratingAvg);
+        headerCount.textContent = ratingCount;
+        headerAvg.textContent = ratingAvg.toFixed(1);
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        loadPage(1);
+      }
+
+      function closeModal() {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      openBtn.addEventListener('click', openModal);
+      if (closeBtn) closeBtn.addEventListener('click', closeModal);
+      if (backdrop) backdrop.addEventListener('click', closeModal);
+      prevBtn.addEventListener('click', function() { if (currentPage > 1) loadPage(currentPage - 1); });
+      nextBtn.addEventListener('click', function() { if (currentPage < totalPages) loadPage(currentPage + 1); });
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+      });
+    })();
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "t:sections.product.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.product.settings.layout.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_size_guide",
+      "label": "t:sections.product.settings.enable_size_guide.label",
+      "info": "t:sections.product.settings.enable_size_guide.info",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "t:sections.product.settings.delivery.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_delivery_estimate",
+      "label": "t:sections.product.settings.enable_delivery_estimate.label",
+      "info": "t:sections.product.settings.enable_delivery_estimate.info",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "delivery_region",
+      "label": "t:sections.product.settings.delivery_region.label",
+      "options": [
+        {
+          "value": "UK",
+          "label": "t:sections.product.settings.delivery_region.options.uk"
+        },
+        {
+          "value": "US",
+          "label": "t:sections.product.settings.delivery_region.options.us"
+        }
+      ],
+      "default": "UK",
+      "info": "t:sections.product.settings.delivery_region.info"
+    },
+    {
+      "type": "range",
+      "id": "delivery_cutoff_hour",
+      "label": "t:sections.product.settings.delivery_cutoff_hour.label",
+      "info": "t:sections.product.settings.delivery_cutoff_hour.info",
+      "min": 10,
+      "max": 20,
+      "step": 1,
+      "default": 16,
+      "unit": "h"
+    },
+    {
+      "type": "richtext",
+      "id": "delivery_returns_content",
+      "label": "t:sections.product.settings.delivery_returns_content.label"
+    }
+  ]
+}
+{% endschema %}

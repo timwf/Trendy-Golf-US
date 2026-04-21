@@ -1,0 +1,37 @@
+{% doc %}
+  Reusable quantity picker with minus/input/plus buttons.
+
+  @param {string} line_key - The line item key for AJAX updates
+  @param {number} quantity - Current quantity value
+  @param {number} [min] - Minimum quantity (default: 1)
+
+  @example
+  {% render 'quantity-picker', line_key: item.key, quantity: item.quantity %}
+{% enddoc %}
+
+{%- assign qty_min = min | default: 1 -%}
+
+<div class="flex items-center border border-taupe-400" data-quantity-picker>
+  <button type="button"
+    class="flex h-10 w-6 items-center justify-center bg-transparent text-taupe-900 hover:text-taupe-700 disabled:cursor-not-allowed"
+    data-quantity-minus
+    data-line-key="{{ line_key }}"
+    {% if quantity <= qty_min %}disabled{% endif %}
+    aria-label="{{ 'cart.general.decrease_quantity' | t | default: 'Decrease quantity' }}">
+    {% render 'icon', icon: 'minus', size: 'size-4' %}
+  </button>
+  <input type="text" inputmode="numeric" pattern="[0-9]*" name="quantity"
+    class="h-10 w-12 bg-transparent text-center text-sm focus:outline-none disabled:opacity-50"
+    value="{{ quantity }}"
+    min="{{ qty_min }}"
+    data-quantity-input
+    data-line-key="{{ line_key }}"
+    aria-label="{{ 'cart.general.quantity' | t | default: 'Quantity' }}" />
+  <button type="button"
+    class="flex h-10 w-6 items-center justify-center bg-transparent text-taupe-900 hover:text-taupe-700 disabled:cursor-not-allowed"
+    data-quantity-plus
+    data-line-key="{{ line_key }}"
+    aria-label="{{ 'cart.general.increase_quantity' | t | default: 'Increase quantity' }}">
+    {% render 'icon', icon: 'plus', size: 'size-4' %}
+  </button>
+</div>

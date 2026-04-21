@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --sb-thumb: #3D7250;
+    --sb-thumb-hover: #3D7250;
+    --sb-thumb-active: #234A31;
+    --sb-track: #E4EEE8;
+  }
+
+  html,
+  body {
+    @apply bg-taupe-100 font-sans text-taupe-900;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body.no-scroll {
+    overflow: hidden;
+    padding-right: 12px;
+  }
+
+  main {
+    min-height: 50dvh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    @apply mb-5;
+  }
+
+  p {
+    @apply mb-5;
+  }
+
+  b, strong {
+    @apply font-bold;
+  }
+
+  /* Rich text content (articles, content blocks, pages) */
+  .rte,
+  .rte-article,
+  .page-content {
+    h1 { @apply text-5xl lg:text-6xl font-bold mb-5; }
+    h2 { @apply text-4xl lg:text-5xl font-bold mb-5; }
+    h3 { @apply text-3xl lg:text-4xl font-bold mb-5; }
+    h4 { @apply text-xl lg:text-2xl font-bold mb-5; }
+    h5 { @apply text-lg lg:text-xl font-bold mb-5; }
+    h6 { @apply text-base lg:text-lg font-bold mb-5; }
+
+    ul { @apply mb-6 ml-5 list-disc; }
+    ol { @apply mb-6 ml-5 list-decimal; }
+
+    blockquote {
+      @apply relative mb-4 pl-4 text-lg italic border-l-2 border-clubhouse-green-600;
+    }
+
+    a { @apply text-clubhouse-green-600 underline; }
+
+    img { @apply w-full; }
+  }
+
+  /* Standard pages (disclaimers, terms, delivery, etc.) */
+  .page-content {
+    @apply max-w-6xl mx-auto px-4 py-8 text-sm;
+
+    h2 { @apply mb-0 font-sans font-bold text-lg lg:text-xl; }
+    h3 { @apply font-bold text-base lg:text-lg; }
+    p { @apply mb-2 text-sm; }
+    li { @apply text-sm; }
+  }
+
+  /* Custom scrollbar — clubhouse green branding */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--sb-thumb) var(--sb-track);
+  }
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--sb-track);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--sb-thumb);
+    border-radius: 0;
+    border: 2px solid var(--sb-track);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--sb-thumb-hover);
+  }
+  ::-webkit-scrollbar-thumb:active {
+    background-color: var(--sb-thumb-active);
+  }
+
+  #rebuy-smart-search-results-dropdown {
+    display: none !important;
+  }
+}

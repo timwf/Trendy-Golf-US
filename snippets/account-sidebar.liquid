@@ -1,0 +1,72 @@
+{% doc %}
+  Renders the customer account sidebar (greeting + nav).
+  Used on the account dashboard, order history, order detail, and address book.
+
+  @param {string} [active] - Active link key: 'account', 'orders', 'rewards', 'addresses'
+  @param {string} [returns_url] - Returns portal URL (optional; hides Returns link if blank)
+{% enddoc %}
+
+<aside class="col-span-1 lg:col-span-3 2xl:col-span-2">
+  <div class="bg-taupe-300 p-6 mb-6">
+    {%- if customer.first_name != blank -%}
+      <h2 class="text-lg lg:text-xl font-bold">Hi, {{ customer.first_name }}</h2>
+    {%- endif -%}
+
+    <nav class="border-t border-taupe-400">
+      <a
+        href="{{ routes.account_url }}"
+        data-account-tab="account"
+        class="block flex gap-3 border-b border-taupe-400 py-3 {% if active == 'account' %}text-clubhouse-green-600{% else %}text-neutral-700{% endif %}"
+      >
+        {% render 'icon', icon: 'user', size: 'size-5' %}
+        <span>Account Details</span>
+      </a>
+
+      <a
+        href="{{ routes.account_url }}#order-history"
+        data-account-tab="order-history"
+        class="block flex gap-3 border-b border-taupe-400 py-3 {% if active == 'orders' %}text-clubhouse-green-600{% else %}text-neutral-700{% endif %}"
+      >
+        {% render 'icon', icon: 'archive-box', size: 'size-5' %}
+        <span>Order History</span>
+      </a>
+
+      <a
+        href="{{ routes.account_url }}#rewards"
+        data-account-tab="rewards"
+        class="block flex gap-3 border-b border-taupe-400 py-3 {% if active == 'rewards' %}text-clubhouse-green-600{% else %}text-neutral-700{% endif %}"
+      >
+        {% render 'icon', icon: 'trophy', size: 'size-5' %}
+        <span>Rewards</span>
+      </a>
+
+      <a
+        href="{{ routes.account_addresses_url }}"
+        class="block flex gap-3 border-b border-taupe-400 py-3 {% if active == 'addresses' %}text-clubhouse-green-600{% else %}text-neutral-700{% endif %}"
+      >
+        {% render 'icon', icon: 'book-open', size: 'size-5' %}
+        <span>Address Book</span>
+      </a>
+
+      {%- if returns_url != blank -%}
+        <a
+          href="{{ returns_url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block flex w-full cursor-pointer gap-3 border-b border-taupe-400 py-3 text-left text-neutral-700"
+        >
+          {% render 'icon', icon: 'arrow-uturn-left', size: 'size-5' %}
+          <span>Returns</span>
+        </a>
+      {%- endif -%}
+
+      <a
+        href="{{ routes.account_logout_url }}"
+        class="block flex w-full cursor-pointer gap-3 border-b border-taupe-400 py-3 text-left text-neutral-700"
+      >
+        {% render 'icon', icon: 'arrow-right-end-on-rectangle', size: 'size-5' %}
+        <span>Logout</span>
+      </a>
+    </nav>
+  </div>
+</aside>

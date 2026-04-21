@@ -1,0 +1,97 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "Explore our range",
+            "heading": "Ralph Lauren",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1165392387",
+            "video_url_mobile": "https://vimeo.com/1168551962",
+            "slide_duration": 12,
+            "button_label": "Shop Now",
+            "button_link": "/collections/ralph-lauren-clothing-accessories",
+            "button_style": "white"
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "product_carousel_1": {
+      "type": "product-carousel-tabs",
+      "settings": {
+        "title": "New In Ralph Lauren",
+        "tab_1_label": "Men",
+        "tab_1_products": [
+          "rlx-tailored-fit-kinetic-tech-jersey-moss-agate",
+          "rlx-big-fit-performance-argyle-sweater-vest-argyle-multi",
+          "rlx-packable-ss-half-zip-pullover-jacket-polo-black",
+          "rlx-tailored-fit-airflow-polo-refined-navy-skull-and-clubs"
+        ],
+        "tab_2_label": "",
+        "tab_3_label": ""
+      }
+    },
+    "banner_cards_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "Polo Shirts",
+            "link": "/collections/mens-ralph-lauren-polo-shirts",
+            "button_label": "Shop Now"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "Shop All",
+            "link": "/collections/mens-ralph-lauren",
+            "button_label": "Shop Now"
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "heading": "Outerwear",
+            "link": "/collections/ralph-lauren-jackets",
+            "button_label": "Shop Now"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2", "card_3"],
+      "settings": {
+        "layout": "grid",
+        "columns": 3,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "small",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    }
+  },
+  "order": ["hero_1", "product_carousel_1", "banner_cards_1"]
+}

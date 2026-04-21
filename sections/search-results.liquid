@@ -1,0 +1,378 @@
+{%- liquid
+  assign products_per_page = section.settings.products_per_page | default: 24
+  assign enable_filtering = section.settings.enable_filtering
+  assign enable_sorting = section.settings.enable_sorting
+  assign search_terms = search.terms | default: ''
+-%}
+
+{%- paginate search.results by products_per_page -%}
+<main
+  class="py-10"
+  id="search-section"
+  data-section-id="{{ section.id }}"
+  data-search-url="{{ routes.search_url }}"
+  data-search-terms="{{ search_terms | escape }}"
+>
+  <div class="container-wide">
+
+    {%- comment -%} Title {%- endcomment -%}
+    <div class="mb-10 grid grid-cols-1 lg:grid-cols-6">
+      <div class="lg:col-span-4">
+        <h1 class="font-serif text-4xl lg:text-5xl">
+          {%- if search.performed and search_terms != blank -%}
+            {{ 'sections.search.title' | t }} <span class="font-bold">{{ search_terms }}</span>
+          {%- else -%}
+            {{ 'sections.search.title_empty' | t }}
+          {%- endif -%}
+        </h1>
+      </div>
+    </div>
+
+    {%- comment -%} Controls bar (filter + sort) {%- endcomment -%}
+    <div class="mb-6 flex justify-between">
+      {%- if enable_filtering and search.filters.size > 0 -%}
+        <button
+          type="button"
+          data-filter-open-btn
+          class="group flex cursor-pointer items-center gap-3"
+          aria-label="{{ 'sections.collection.show_filters' | t }}"
+        >
+          <span class="bg-taupe-300 p-3 transition-all group-hover:bg-taupe-400">
+            {%- render 'icon', icon: 'adjustments-horizontal', size: 'size-6' -%}
+          </span>
+          <span class="text-sm tracking-wider">Show <span class="hidden md:inline">filters</span></span>
+        </button>
+      {%- else -%}
+        <div></div>
+      {%- endif -%}
+
+      {%- if enable_sorting and search.sort_options.size > 0 -%}
+        {%- assign sort_by = search.sort_by | default: search.default_sort_by -%}
+        <div class="flex items-center gap-2">
+          <label for="sort-by" class="text-sm tracking-wider text-taupe-700">{{ 'sections.collection.sort_by' | t }}</label>
+          <select id="sort-by" data-search-sort class="w-auto appearance-none border-0 bg-transparent p-3 text-sm font-semibold focus:ring-0">
+            {%- for option in search.sort_options -%}
+              <option value="{{ option.value }}" {% if option.value == sort_by %}selected{% endif %}>
+                {{ option.name }}
+              </option>
+            {%- endfor -%}
+          </select>
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Product grid with colour grouping (mirrors collection) {%- endcomment -%}
+    {%- assign seen_display_names = '' -%}
+    <div id="search-product-grid" class="mb-6 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+      {%- for product in search.results -%}
+        {%- assign display_name = product.metafields.custom.product_display_name | default: product.title -%}
+
+        {%- if seen_display_names contains display_name -%}
+          {%- continue -%}
+        {%- endif -%}
+        {%- assign seen_display_names = seen_display_names | append: '|||' | append: display_name -%}
+
+        {%- capture swatch_html -%}
+          {%- for sibling in search.results -%}
+            {%- assign sibling_name = sibling.metafields.custom.product_display_name | default: sibling.title -%}
+            {%- if sibling_name == display_name -%}
+              {%- assign is_active = false -%}
+              {%- if sibling.id == product.id -%}
+                {%- assign is_active = true -%}
+              {%- endif -%}
+              {%- render 'colour-swatch',
+                url: sibling.url,
+                colour: sibling.metafields.custom.swatch_colour,
+                colour_secondary: sibling.metafields.custom.swatch_colour_secondary,
+                name: sibling.metafields.custom.color,
+                active: is_active
+              -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endcapture -%}
+
+        {%- capture swatch_mobile_html -%}
+          {%- for sibling in search.results -%}
+            {%- assign sibling_name = sibling.metafields.custom.product_display_name | default: sibling.title -%}
+            {%- if sibling_name == display_name -%}
+              {%- assign is_active = false -%}
+              {%- if sibling.id == product.id -%}
+                {%- assign is_active = true -%}
+              {%- endif -%}
+              {%- render 'colour-swatch',
+                url: sibling.url,
+                colour: sibling.metafields.custom.swatch_colour,
+                colour_secondary: sibling.metafields.custom.swatch_colour_secondary,
+                name: sibling.metafields.custom.color,
+                active: is_active,
+                small: true
+              -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endcapture -%}
+
+        {%- assign swatch_count = 0 -%}
+        {%- for sibling in search.results -%}
+          {%- assign sibling_name = sibling.metafields.custom.product_display_name | default: sibling.title -%}
+          {%- if sibling_name == display_name -%}
+            {%- assign swatch_count = swatch_count | plus: 1 -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- if swatch_count > 1 -%}
+          {%- render 'product-card', product: product, swatches: swatch_html, swatches_mobile: swatch_mobile_html -%}
+        {%- else -%}
+          {%- render 'product-card', product: product -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    {%- comment -%} Empty state {%- endcomment -%}
+    {%- if search.performed and search.results_count == 0 -%}
+      <p data-search-empty class="py-16 text-center text-lg text-taupe-700">{{ 'sections.search.no_results' | t }}</p>
+    {%- endif -%}
+
+    {%- comment -%} Chevron pagination (prev / next) — matches source site {%- endcomment -%}
+    {%- if paginate.pages > 1 -%}
+      <div id="search-pagination" class="mt-8 flex justify-center gap-2">
+        <a
+          href="{% if paginate.previous %}{{ paginate.previous.url }}{% else %}#{% endif %}"
+          class="bg-taupe-300 p-3 transition-all hover:bg-taupe-400 {% unless paginate.previous %}pointer-events-none bg-transparent opacity-50{% endunless %}"
+          aria-label="{{ 'sections.search.previous' | t }}"
+          {% unless paginate.previous %}aria-disabled="true"{% endunless %}
+        >
+          {%- render 'icon', icon: 'chevron-left', size: 'size-5' -%}
+        </a>
+        <a
+          href="{% if paginate.next %}{{ paginate.next.url }}{% else %}#{% endif %}"
+          class="bg-taupe-300 p-3 transition-all hover:bg-taupe-400 {% unless paginate.next %}pointer-events-none bg-transparent opacity-50{% endunless %}"
+          aria-label="{{ 'sections.search.next' | t }}"
+          {% unless paginate.next %}aria-disabled="true"{% endunless %}
+        >
+          {%- render 'icon', icon: 'chevron-right', size: 'size-5' -%}
+        </a>
+      </div>
+    {%- endif -%}
+    <noscript>{{ paginate | default_pagination }}</noscript>
+
+  </div>
+</main>
+
+{%- comment -%} Filter sidebar (reuses collection snippet, with search filters + preserved q/type) {%- endcomment -%}
+{%- if enable_filtering and search.filters.size > 0 -%}
+  {%- render 'filter-sidebar',
+    filters: search.filters,
+    action_url: routes.search_url,
+    form_id: 'SearchFiltersForm',
+    search_terms: search_terms
+  -%}
+{%- endif -%}
+
+{%- endpaginate -%}
+
+{% javascript %}
+  (function() {
+    var section = document.getElementById('search-section');
+    if (!section) return;
+    var sectionId = section.dataset.sectionId;
+    var searchUrl = section.dataset.searchUrl;
+    var searchTerms = section.dataset.searchTerms;
+
+    function buildBaseUrl() {
+      var u = new URL(searchUrl, window.location.origin);
+      u.searchParams.set('q', searchTerms);
+      u.searchParams.set('type', 'product');
+      return u;
+    }
+
+    /* ---- Section Rendering API fetch ---- */
+    function fetchSection(url) {
+      var grid = document.getElementById('search-product-grid');
+      if (grid) grid.style.opacity = '0.5';
+
+      var separator = url.indexOf('?') !== -1 ? '&' : '?';
+      return fetch(url + separator + 'sections=' + sectionId)
+        .then(function(r) { return r.json(); })
+        .then(function(json) {
+          var html = json[sectionId];
+          if (!html) return;
+
+          var doc = new DOMParser().parseFromString(html, 'text/html');
+
+          var newGrid = doc.getElementById('search-product-grid');
+          var curGrid = document.getElementById('search-product-grid');
+          if (newGrid && curGrid) {
+            curGrid.innerHTML = newGrid.innerHTML;
+            curGrid.style.opacity = '';
+          }
+
+          var newPag = doc.getElementById('search-pagination');
+          var curPag = document.getElementById('search-pagination');
+          if (newPag) {
+            if (curPag) { curPag.replaceWith(newPag); }
+            else if (curGrid) { curGrid.insertAdjacentElement('afterend', newPag); }
+          } else if (curPag) {
+            curPag.remove();
+          }
+
+          var newEmpty = doc.querySelector('[data-search-empty]');
+          var curEmpty = document.querySelector('[data-search-empty]');
+          if (newEmpty && !curEmpty && curGrid) {
+            curGrid.insertAdjacentElement('afterend', newEmpty);
+          } else if (!newEmpty && curEmpty) {
+            curEmpty.remove();
+          } else if (newEmpty && curEmpty) {
+            curEmpty.replaceWith(newEmpty);
+          }
+
+          var curSidebar = document.querySelector('[data-filter-sidebar]');
+          var newSidebar = doc.querySelector('[data-filter-sidebar]');
+          if (curSidebar && newSidebar) {
+            curSidebar.innerHTML = newSidebar.innerHTML;
+          }
+
+          var curActions = document.querySelector('[data-filter-actions]');
+          var newActions = doc.querySelector('[data-filter-actions]');
+          if (curActions && newActions) {
+            curActions.innerHTML = newActions.innerHTML;
+          }
+
+          history.pushState(null, '', url);
+          if (grid) window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
+        })
+        .catch(function() {
+          if (grid) grid.style.opacity = '';
+        });
+    }
+
+    /* ---- Build filter URL from form (preserves q / type / sort_by) ---- */
+    function getFilterUrl() {
+      var form = document.getElementById('SearchFiltersForm');
+      var base = buildBaseUrl();
+      if (!form) return base.toString();
+
+      var formData = new FormData(form);
+      var clean = new URLSearchParams();
+      /* q and type come from hidden inputs in the form */
+      formData.forEach(function(v, k) { if (v !== '') clean.append(k, v); });
+
+      var current = new URL(window.location.href);
+      var sortBy = current.searchParams.get('sort_by');
+      if (sortBy) clean.set('sort_by', sortBy);
+
+      return searchUrl + '?' + clean.toString();
+    }
+
+    /* ---- Change events ---- */
+    document.addEventListener('change', function(e) {
+      if (e.target.matches('[data-search-sort]')) {
+        var url = new URL(window.location.href);
+        url.searchParams.set('sort_by', e.target.value);
+        fetchSection(url.toString());
+        return;
+      }
+      if (section.contains(e.target) || document.querySelector('[data-filter-sidebar]').contains(e.target)) {
+        if (e.target.matches('[data-filter-checkbox]')) {
+          fetchSection(getFilterUrl());
+        }
+      }
+    });
+
+    /* ---- Form submit (price range) ---- */
+    document.addEventListener('submit', function(e) {
+      if (e.target.matches('#SearchFiltersForm')) {
+        e.preventDefault();
+        fetchSection(getFilterUrl());
+      }
+    });
+
+    /* ---- Click events ---- */
+    document.addEventListener('click', function(e) {
+      var pill = e.target.closest('[data-filter-pill]');
+      if (pill && document.querySelector('[data-filter-sidebar]').contains(pill)) {
+        e.preventDefault();
+        fetchSection(pill.getAttribute('href'));
+        return;
+      }
+
+      var clearBtn = e.target.closest('[data-filter-clear-btn]');
+      if (clearBtn && !clearBtn.disabled && document.getElementById('SearchFiltersForm')) {
+        var base = buildBaseUrl();
+        var current = new URL(window.location.href);
+        var sortBy = current.searchParams.get('sort_by');
+        if (sortBy) base.searchParams.set('sort_by', sortBy);
+        fetchSection(base.toString());
+        return;
+      }
+
+      var pagLink = e.target.closest('#search-pagination a');
+      if (pagLink && pagLink.getAttribute('href') !== '#') {
+        e.preventDefault();
+        fetchSection(pagLink.getAttribute('href'));
+        return;
+      }
+
+      if (e.target.closest('[data-filter-open-btn]')) { openFilters(); return; }
+      if (e.target.closest('[data-filter-close-btn]')) { closeFilters(); return; }
+      if (e.target.closest('[data-filter-view-btn]')) { closeFilters(); return; }
+      if (e.target.matches('[data-filter-backdrop]')) { closeFilters(); return; }
+    });
+
+    function openFilters() {
+      var sidebar = document.querySelector('[data-filter-sidebar]');
+      var backdrop = document.querySelector('[data-filter-backdrop]');
+      if (sidebar) sidebar.setAttribute('data-filter-open', 'true');
+      if (backdrop) backdrop.setAttribute('data-filter-open', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeFilters() {
+      var sidebar = document.querySelector('[data-filter-sidebar]');
+      var backdrop = document.querySelector('[data-filter-backdrop]');
+      if (sidebar) sidebar.setAttribute('data-filter-open', 'false');
+      if (backdrop) backdrop.setAttribute('data-filter-open', 'false');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeFilters();
+    });
+
+    window.addEventListener('popstate', function() {
+      fetchSection(window.location.href);
+    });
+  })();
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "t:sections.search.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.collection.settings.layout.content"
+    },
+    {
+      "type": "range",
+      "id": "products_per_page",
+      "label": "t:sections.collection.settings.products_per_page.label",
+      "min": 12,
+      "max": 48,
+      "step": 4,
+      "default": 24
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_filtering",
+      "label": "t:sections.collection.settings.enable_filtering.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_sorting",
+      "label": "t:sections.collection.settings.enable_sorting.label",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

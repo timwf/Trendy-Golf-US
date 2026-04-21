@@ -1,0 +1,82 @@
+{% doc %}
+  Renders a full-width mega menu dropdown panel for desktop navigation.
+  Left side: multi-column link groups (level 2 headings + level 3 links).
+  Right side: optional featured promo image from a mega_menu_image block.
+
+  @param {link} link - The top-level linklist link object (must have .links children)
+  @param {object} mega_blocks - The mega_menu_image blocks from the header section
+
+  @example
+  {% render 'mega-menu-dropdown', link: link, mega_blocks: section.blocks %}
+{% enddoc %}
+
+<div class="mega-menu absolute left-0 top-full z-10 hidden w-full border-t border-taupe-400 bg-taupe-100 shadow-md group-hover/grandparent:block">
+  <div class="mx-auto grid h-[33rem] w-full max-w-[1680px] grid-cols-[minmax(0,4fr)_minmax(0,2fr)] overflow-hidden">
+    {%- comment -%} Left panel: link columns {%- endcomment -%}
+    <div class="flex h-full flex-wrap content-start gap-5 overflow-y-auto border-r border-taupe-400 py-8 pl-10 pr-5">
+      {%- for child_link in link.links -%}
+        <div class="w-[calc(20%-1rem)]">
+          <a
+            href="{{ child_link.url }}"
+            class="mb-2 block text-sm font-semibold text-taupe-900 hover:text-clubhouse-green-600"
+          >
+            {{ child_link.title }}
+          </a>
+          {%- if child_link.links.size > 0 -%}
+            <ul>
+              {%- for grandchild_link in child_link.links -%}
+                <li>
+                  <a
+                    href="{{ grandchild_link.url }}"
+                    class="block py-1 text-sm text-taupe-900/80 hover:text-clubhouse-green-600"
+                  >
+                    {{ grandchild_link.title }}
+                  </a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    {%- comment -%} Right panel: featured promo image {%- endcomment -%}
+    <div class="relative h-full overflow-hidden">
+      {%- assign mega_block = nil -%}
+      {%- for block in mega_blocks -%}
+        {%- if block.type == 'mega_menu_image' -%}
+          {%- if block.settings.menu_item_title == link.title -%}
+            {%- assign mega_block = block -%}
+            {%- break -%}
+          {%- endif -%}
+        {%- endif -%}
+      {%- endfor -%}
+
+      {%- if mega_block != nil -%}
+        {%- if mega_block.settings.image != blank -%}
+          <div class="absolute inset-0">
+            {{ mega_block.settings.image | image_url: width: 800 | image_tag: class: 'size-full object-cover', loading: 'lazy' }}
+          </div>
+        {%- endif -%}
+        <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-8">
+          {%- if mega_block.settings.heading != blank -%}
+            <p class="mb-3 font-serif text-2xl text-white">{{ mega_block.settings.heading }}</p>
+          {%- endif -%}
+          {%- if mega_block.settings.link != blank -%}
+            <a
+              href="{{ mega_block.settings.link }}"
+              class="inline-flex items-center gap-2 text-sm font-medium text-white hover:underline"
+            >
+              {{ mega_block.settings.link_text | default: 'Shop now' }}
+              {% render 'icon', icon: 'arrow-right', size: 'size-4' %}
+            </a>
+          {%- endif -%}
+        </div>
+      {%- else -%}
+        <div class="flex size-full items-center justify-center bg-taupe-300/50">
+          {{ 'collection-1' | placeholder_svg_tag: 'size-48 text-taupe-400' }}
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>

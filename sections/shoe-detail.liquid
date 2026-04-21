@@ -1,0 +1,708 @@
+{%- comment -%}
+  Shoe Detail Section — rendered via section rendering API into a modal.
+  Fetched by JS: /products/{handle}?section_id=shoe-detail
+  Matches: _reference/repo/app/components/pages/shoeSingle.tsx
+{%- endcomment -%}
+
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign display_name = product.metafields.custom.product_display_name | default: product.title
+  assign png_image_raw = product.metafields.custom.png_image
+  if png_image_raw != blank
+    assign drive_id = png_image_raw | split: 'id=' | last | split: '&' | first
+    assign transparent_image = 'https://lh3.googleusercontent.com/d/' | append: drive_id
+  else
+    assign transparent_image = blank
+  endif
+-%}
+
+{{ 'splide.min.css' | asset_url | stylesheet_tag }}
+
+<article class="bg-white" data-shoe-detail>
+
+  {%- comment -%} ====== Close button ====== {%- endcomment -%}
+  <button
+    type="button"
+    class="fixed right-5 top-5 z-50 border border-taupe-900 bg-white p-2"
+    data-shoe-detail-close
+    aria-label="Close"
+  >
+    {%- render 'icon', icon: 'x-mark', size: 'size-8' -%}
+  </button>
+
+  {%- comment -%} ====== Hero section ====== {%- endcomment -%}
+  <section class="relative min-h-[100svh]">
+    <div class="container">
+      <div class="pt-20 text-center">
+        <h1 class="font-serif text-4xl lg:text-5xl">{{ product.title }}</h1>
+      </div>
+    </div>
+    <div class="absolute left-1/2 top-1/2 w-full -translate-x-1/2 -translate-y-1/2 px-4 md:max-w-[80%] md:px-0 lg:max-w-[40%]">
+      <div class="relative aspect-square">
+        {%- if transparent_image != blank -%}
+          <img
+            src="{{ transparent_image }}"
+            alt="{{ product.title | escape }}"
+            class="relative z-10 h-full w-full"
+            referrerpolicy="no-referrer"
+            style="view-transition-name: shoe-image;"
+          />
+        {%- elsif product.featured_image -%}
+          <img
+            src="{{ product.featured_image | image_url: width: 1200 }}"
+            alt="{{ product.title | escape }}"
+            class="relative z-10 h-full w-full"
+            width="{{ product.featured_image.width }}"
+            height="{{ product.featured_image.height }}"
+            style="view-transition-name: shoe-image;"
+          />
+        {%- endif -%}
+        <div class="absolute left-1/2 top-1/2 size-[60%] -translate-x-1/2 -translate-y-1/2 rounded-full bg-taupe-100"></div>
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} ====== Features carousel ====== {%- endcomment -%}
+  {%- liquid
+    assign feature_1_image = product.metafields.custom.feature_image_one
+    assign feature_1_desc = product.metafields.custom.feature_description_one
+    assign feature_2_image = product.metafields.custom.feature_image_two
+    assign feature_2_desc = product.metafields.custom.feature_description_two
+    assign feature_3_image = product.metafields.custom.feature_image_three
+    assign feature_3_desc = product.metafields.custom.feature_description_three
+    assign has_features = false
+    if feature_1_image != blank or feature_2_image != blank or feature_3_image != blank
+      assign has_features = true
+    endif
+  -%}
+
+  <div class="container max-w-4xl">
+    {%- if has_features -%}
+      <div class="mb-10">
+        <h2 class="mb-8 text-center font-serif text-3xl lg:text-4xl">Product Features</h2>
+        <div class="splide" data-shoe-features-carousel>
+          <div class="splide__track">
+            <ul class="splide__list">
+              {%- if feature_1_image != blank -%}
+                {%- assign f1_alt = feature_1_desc | split: '–' | first | split: '*' | first | strip | default: product.title -%}
+                <li class="splide__slide">
+                  <div class="text-center">
+                    <img
+                      src="{{ feature_1_image }}"
+                      alt="{{ f1_alt | escape }}"
+                      class="mb-4 aspect-[3/4] object-cover"
+                      loading="lazy"
+                    />
+                    {%- if feature_1_desc != blank -%}
+                      {%- assign f1_parts = feature_1_desc | split: '–' -%}
+                      {%- if f1_parts.size > 1 -%}
+                        <h4 class="mb-3 font-sans font-bold text-lg lg:text-xl">{{ f1_parts[0] | strip }}</h4>
+                        <p>{{ f1_parts[1] | strip }}</p>
+                      {%- else -%}
+                        {%- assign f1_parts_star = feature_1_desc | split: '*' -%}
+                        {%- if f1_parts_star.size > 1 -%}
+                          <h4 class="mb-3 font-sans font-bold text-lg lg:text-xl">{{ f1_parts_star[0] | strip }}</h4>
+                          <p>{{ f1_parts_star[1] | strip }}</p>
+                        {%- else -%}
+                          <p>{{ feature_1_desc }}</p>
+                        {%- endif -%}
+                      {%- endif -%}
+                    {%- endif -%}
+                  </div>
+                </li>
+              {%- endif -%}
+              {%- if feature_2_image != blank -%}
+                {%- assign f2_alt = feature_2_desc | split: '–' | first | split: '*' | first | strip | default: product.title -%}
+                <li class="splide__slide">
+                  <div class="text-center">
+                    <img
+                      src="{{ feature_2_image }}"
+                      alt="{{ f2_alt | escape }}"
+                      class="mb-4 aspect-[3/4] object-cover"
+                      loading="lazy"
+                    />
+                    {%- if feature_2_desc != blank -%}
+                      {%- assign f2_parts = feature_2_desc | split: '–' -%}
+                      {%- if f2_parts.size > 1 -%}
+                        <h4 class="mb-3 font-sans font-bold text-lg lg:text-xl">{{ f2_parts[0] | strip }}</h4>
+                        <p>{{ f2_parts[1] | strip }}</p>
+                      {%- else -%}
+                        {%- assign f2_parts_star = feature_2_desc | split: '*' -%}
+                        {%- if f2_parts_star.size > 1 -%}
+                          <h4 class="mb-3 font-sans font-bold text-lg lg:text-xl">{{ f2_parts_star[0] | strip }}</h4>
+                          <p>{{ f2_parts_star[1] | strip }}</p>
+                        {%- else -%}
+                          <p>{{ feature_2_desc }}</p>
+                        {%- endif -%}
+                      {%- endif -%}
+                    {%- endif -%}
+                  </div>
+                </li>
+              {%- endif -%}
+              {%- if feature_3_image != blank -%}
+                {%- assign f3_alt = feature_3_desc | split: '–' | first | split: '*' | first | strip | default: product.title -%}
+                <li class="splide__slide">
+                  <div class="text-center">
+                    <img
+                      src="{{ feature_3_image }}"
+                      alt="{{ f3_alt | escape }}"
+                      class="mb-4 aspect-[3/4] object-cover"
+                      loading="lazy"
+                    />
+                    {%- if feature_3_desc != blank -%}
+                      {%- assign f3_parts = feature_3_desc | split: '–' -%}
+                      {%- if f3_parts.size > 1 -%}
+                        <h4 class="mb-3 font-sans font-bold text-lg lg:text-xl">{{ f3_parts[0] | strip }}</h4>
+                        <p>{{ f3_parts[1] | strip }}</p>
+                      {%- else -%}
+                        {%- assign f3_parts_star = feature_3_desc | split: '*' -%}
+                        {%- if f3_parts_star.size > 1 -%}
+                          <h4 class="mb-3 font-sans font-bold text-lg lg:text-xl">{{ f3_parts_star[0] | strip }}</h4>
+                          <p>{{ f3_parts_star[1] | strip }}</p>
+                        {%- else -%}
+                          <p>{{ feature_3_desc }}</p>
+                        {%- endif -%}
+                      {%- endif -%}
+                    {%- endif -%}
+                  </div>
+                </li>
+              {%- endif -%}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} ====== Product images ====== {%- endcomment -%}
+
+    {%- comment -%} Mobile: Splide carousel {%- endcomment -%}
+    <div class="block md:hidden">
+      <div class="relative w-full">
+        <div data-pagination-hide="false" data-pagination-dark="true">
+          <div class="splide relative h-full" data-shoe-image-carousel>
+            <div class="absolute left-0 top-0 z-10 p-4">
+              <p class="mb-0 text-sm" data-shoe-slide-counter>1 / {{ product.media.size }}</p>
+            </div>
+            <div class="splide__track">
+              <ul class="splide__list">
+                {%- assign mobile_img_idx = 0 -%}
+                {%- for media in product.media -%}
+                  {%- if media.media_type == 'image' -%}
+                    <li class="splide__slide">
+                      <div data-measure="true" class="inline-block w-full">
+                        <img
+                          src="{{ media | image_url: width: 800 }}"
+                          alt="{{ media.alt | escape }}"
+                          width="{{ media.width }}"
+                          height="{{ media.height }}"
+                          class="block h-auto w-full cursor-zoom-in"
+                          loading="lazy"
+                          data-shoe-image-index="{{ mobile_img_idx }}"
+                        />
+                      </div>
+                    </li>
+                    {%- assign mobile_img_idx = mobile_img_idx | plus: 1 -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {%- comment -%} Desktop: Static image grid (full, half+half repeating) {%- endcomment -%}
+    <div class="hidden grid-cols-2 gap-4 md:grid" data-shoe-image-grid>
+      {%- assign image_index = 0 -%}
+      {%- for media in product.media -%}
+        {%- if media.media_type == 'image' -%}
+          {%- assign position_in_group = image_index | modulo: 3 -%}
+          {%- if image_index > 6 or position_in_group == 0 -%}
+            {%- assign col_class = 'col-span-2' -%}
+          {%- else -%}
+            {%- assign col_class = 'col-span-1' -%}
+          {%- endif -%}
+          <div class="{{ col_class }} cursor-zoom-in" data-shoe-image-index="{{ image_index }}">
+            <img
+              src="{{ media | image_url: width: 1200 }}"
+              alt="{{ media.alt | escape }}"
+              width="{{ media.width }}"
+              height="{{ media.height }}"
+              class="block h-auto w-full"
+              loading="{% if image_index < 3 %}eager{% else %}lazy{% endif %}"
+            />
+          </div>
+          {%- assign image_index = image_index | plus: 1 -%}
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  </div>
+
+  {%- comment -%} ====== Purchase section ====== {%- endcomment -%}
+  <div class="container max-w-xl pt-10 text-center" data-shoe-purchase>
+
+    {%- comment -%} Brand name {%- endcomment -%}
+    {%- if product.vendor != blank -%}
+      <h4 class="mb-5 text-sm uppercase text-taupe-700">{{ product.vendor }}</h4>
+    {%- endif -%}
+
+    {%- comment -%} Product title {%- endcomment -%}
+    <h2 class="mb-3 font-sans text-xl lg:text-2xl">{{ display_name }}</h2>
+
+    {%- comment -%} Price {%- endcomment -%}
+    <div class="mb-6" data-shoe-product-price>
+      {%- if current_variant.compare_at_price > current_variant.price -%}
+        <span class="mb-0 text-xl">
+          <span class="font-semibold text-red-600">{{ current_variant.price | money }}</span>
+          <s class="ml-2 text-base text-taupe-700">{{ current_variant.compare_at_price | money }}</s>
+        </span>
+      {%- else -%}
+        <span class="mb-0 text-xl"><span class="font-semibold">{{ current_variant.price | money }}</span></span>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Reviews rating {%- endcomment -%}
+    {%- assign rating_value = product.metafields.reviews.rating.value -%}
+    {%- assign rating_count = product.metafields.reviews.rating_count.value -%}
+    {%- if rating_value != blank and rating_count != blank and rating_count > 0 -%}
+      <div class="mb-6">
+        <button class="flex items-center justify-center gap-2" aria-label="Rated {{ rating_value }} out of 5 from {{ rating_count }} reviews">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="size-5">
+            <path fill-rule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clip-rule="evenodd"/>
+          </svg>
+          <span class="pt-0.5 text-sm">{{ rating_value }} <span class="text-taupe-700">({{ rating_count }})</span></span>
+        </button>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Colour swatches {%- endcomment -%}
+    {%- assign colour_name = product.metafields.custom.color -%}
+    {%- if colour_name != blank -%}
+      <div class="mb-5">
+        <p class="mb-2 text-xs lg:text-sm"><span class="text-taupe-700">Colour:</span> {{ colour_name }}</p>
+        <div class="flex justify-center gap-2">
+          {%- assign first_collection = product.collections.first -%}
+          {%- if first_collection -%}
+            {%- for sibling in first_collection.products -%}
+              {%- assign sibling_name = sibling.metafields.custom.product_display_name | default: sibling.title -%}
+              {%- if sibling_name == display_name -%}
+                {%- assign is_active = false -%}
+                {%- if sibling.id == product.id -%}
+                  {%- assign is_active = true -%}
+                {%- endif -%}
+                {%- render 'colour-swatch',
+                  url: sibling.url,
+                  colour: sibling.metafields.custom.swatch_colour,
+                  colour_secondary: sibling.metafields.custom.swatch_colour_secondary,
+                  name: sibling.metafields.custom.color,
+                  active: is_active
+                -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} Product form {%- endcomment -%}
+    {%- form 'product', product, id: 'shoe-detail-form', data-shoe-product-form: '' -%}
+      <input type="hidden" name="id" value="{{ current_variant.id }}" data-shoe-variant-id>
+
+      {%- comment -%} Size selector {%- endcomment -%}
+      {%- if product.has_only_default_variant == false -%}
+        <div class="mb-5">
+          <label class="mb-2 flex items-end justify-between text-sm">
+            <span>Size</span>
+            <button type="button" class="text-sm font-bold text-taupe-900 hover:text-taupe-700" data-shoe-size-guide-btn>
+              Size guide
+            </button>
+          </label>
+          <div class="relative">
+            <select
+              data-shoe-variant-select
+              class="block w-full appearance-none border border-taupe-600 bg-taupe-100 px-4 py-3 focus:outline-none"
+            >
+              {%- for variant in product.variants -%}
+                <option
+                  value="{{ variant.id }}"
+                  data-price="{{ variant.price | money }}"
+                  data-compare-price="{{ variant.compare_at_price | money }}"
+                  data-has-compare="{{ variant.compare_at_price | default: 0 }}"
+                  data-available="{{ variant.available }}"
+                  data-option-value="{{ variant.title | escape }}"
+                  {% if variant == current_variant %}selected{% endif %}
+                  {% unless variant.available %}disabled{% endunless %}
+                >
+                  {{ variant.title }}{% unless variant.available %} — Sold out{% endunless %}
+                </option>
+              {%- endfor -%}
+            </select>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+            </svg>
+          </div>
+        </div>
+      {%- endif -%}
+
+      {%- comment -%} Add to basket button {%- endcomment -%}
+      <div class="mb-5 flex w-full gap-4">
+        <div class="flex-1">
+          <button
+            type="submit"
+            data-shoe-add-to-cart
+            class="flex w-full items-center justify-center gap-2 bg-taupe-900 px-4 py-3 text-center text-sm uppercase tracking-wider text-white transition-all enabled:hover:bg-taupe-600 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 lg:px-10"
+            {% unless current_variant.available %}disabled{% endunless %}
+          >
+            {%- if current_variant.available -%}
+              Add to basket
+            {%- else -%}
+              Sold out
+            {%- endif -%}
+          </button>
+        </div>
+      </div>
+    {%- endform -%}
+
+    {%- comment -%} TGCC rewards banner {%- endcomment -%}
+    <div class="mb-4 flex items-center gap-2 bg-clubhouse-green-600 p-4 text-sm text-white">
+      {%- render 'icon', icon: 'trophy', size: 'size-5' -%}
+      <p class="mb-0">Register at checkout to unlock <b>TGCC Rewards</b> — earn points with every purchase.</p>
+    </div>
+
+  </div>
+
+  {%- comment -%} ====== Scroll progress indicator (desktop only) ====== {%- endcomment -%}
+  <div class="fixed right-5 top-1/2 -translate-y-1/2 hidden h-32 w-1 lg:block" data-shoe-scroll-indicator>
+    <div class="transition-height absolute left-1/2 top-0 z-[1] w-full -translate-x-1/2 overflow-hidden bg-taupe-900" data-shoe-scroll-fill></div>
+    <div class="absolute left-1/2 top-0 h-full w-0.5 -translate-x-1/2 bg-taupe-400"></div>
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full pt-1">
+      {%- render 'icon', icon: 'chevron-double-down', size: 'size-4', class: 'text-taupe-900' -%}
+    </div>
+  </div>
+
+  {%- comment -%} ====== Sticky buy bar ====== {%- endcomment -%}
+  <div
+    class="fixed bottom-0 left-0 z-3 flex w-full justify-center bg-white/80 transition-transform translate-y-full"
+    data-shoe-sticky-bar
+  >
+    <div class="flex flex-col gap-2 p-5">
+      <button
+        type="button"
+        class="flex items-center justify-center gap-2 bg-taupe-900 px-4 py-3 text-center text-sm uppercase tracking-wider text-white transition-all enabled:hover:bg-taupe-600 min-w-40 lg:px-10"
+        data-shoe-sticky-buy
+      >
+        Buy now
+      </button>
+      <button
+        type="button"
+        class="flex items-center justify-center gap-2 bg-transparent px-4 py-3 text-center text-sm uppercase tracking-wider transition-colors enabled:hover:bg-transparent enabled:hover:text-clubhouse-green-600 font-bold"
+        data-shoe-sticky-back
+      >
+        {%- render 'icon', icon: 'chevron-left', size: 'size-4' -%}
+        Back to Shoe Finder
+      </button>
+    </div>
+  </div>
+
+</article>
+
+{%- comment -%} Size guide modal {%- endcomment -%}
+{%- render 'size-guide-modal' -%}
+
+{%- comment -%} Image zoom modal {%- endcomment -%}
+{%- render 'image-zoom-modal' -%}
+
+{%- comment -%} Variant data for JS {%- endcomment -%}
+<script data-shoe-product-json type="application/json">
+  {{ product.variants | json }}
+</script>
+
+{%- comment -%} Kiwi Sizing data for JS {%- endcomment -%}
+<script data-shoe-kiwi-json type="application/json">
+  {
+    "shop": "trendy-golf-uk.myshopify.com",
+    "source": "trendygolf",
+    "productId": "{{ product.id | remove: 'gid://shopify/Product/' }}",
+    "vendor": {{ product.vendor | json }},
+    "type": {{ product.type | json }},
+    "tags": {{ product.tags | json }}
+  }
+</script>
+
+<script src="{{ 'splide.min.js' | asset_url }}" defer></script>
+<script>
+(function shoeDetailInit() {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', shoeDetailInit);
+    return;
+  }
+
+  /* When loaded via section rendering API into a modal, multiple [data-shoe-detail]
+     elements may exist briefly. Pick the last one (the freshly injected one). */
+  var all = document.querySelectorAll('[data-shoe-detail]');
+  var root = all[all.length - 1];
+  if (!root) return;
+
+  /* ---- Features carousel (Splide) ---- */
+  var featuresEl = root.querySelector('[data-shoe-features-carousel]');
+  if (featuresEl && typeof Splide !== 'undefined') {
+    new Splide(featuresEl, {
+      perPage: 3,
+      gap: '1.25rem',
+      arrows: false,
+      pagination: false,
+      breakpoints: {
+        480: { perPage: 1, padding: { left: 0, right: '15%' } },
+        768: { perPage: 2, padding: { left: 0, right: '10%' } },
+        1280: { perPage: 2, padding: { left: 0, right: '15%' } }
+      }
+    }).mount();
+  }
+
+  /* ---- Mobile image carousel (Splide) ---- */
+  var imageCarouselEl = root.querySelector('[data-shoe-image-carousel]');
+  if (imageCarouselEl && typeof Splide !== 'undefined' && imageCarouselEl.offsetParent !== null) {
+    var counter = root.querySelector('[data-shoe-slide-counter]');
+    var imgSplide = new Splide(imageCarouselEl, {
+      type: 'slide',
+      perPage: 1,
+      pagination: true,
+      arrows: false,
+      classes: {
+        pagination: 'splide__pagination splide__pagination--dark'
+      }
+    });
+    if (counter) {
+      imgSplide.on('moved', function(newIndex) {
+        counter.textContent = (newIndex + 1) + ' / ' + imgSplide.length;
+      });
+    }
+    imgSplide.mount();
+  }
+
+  /* ---- Variant selector ---- */
+  var select = root.querySelector('[data-shoe-variant-select]');
+  var priceEl = root.querySelector('[data-shoe-product-price]');
+  var addBtn = root.querySelector('[data-shoe-add-to-cart]');
+  var variantInput = root.querySelector('[data-shoe-variant-id]');
+  var productForm = root.querySelector('[data-shoe-product-form]');
+
+  if (select) {
+    function updateVariantUI() {
+      var opt = select.options[select.selectedIndex];
+      if (!opt) return;
+
+      var price = opt.dataset.price;
+      var comparePrice = opt.dataset.comparePrice;
+      var hasCompare = parseInt(opt.dataset.hasCompare, 10);
+      var available = opt.dataset.available === 'true';
+
+      if (priceEl) {
+        if (hasCompare > 0 && hasCompare > parseInt(opt.value, 10)) {
+          priceEl.innerHTML = '<span class="mb-0 text-xl"><span class="font-semibold text-red-600">' + price + '</span><s class="ml-2 text-base text-taupe-700">' + comparePrice + '</s></span>';
+        } else {
+          priceEl.innerHTML = '<span class="mb-0 text-xl"><span class="font-semibold">' + price + '</span></span>';
+        }
+      }
+
+      if (variantInput) variantInput.value = opt.value;
+
+      if (addBtn) {
+        addBtn.disabled = !available;
+        addBtn.textContent = available ? 'Add to basket' : 'Sold out';
+      }
+    }
+
+    select.addEventListener('change', updateVariantUI);
+  }
+
+  /* ---- AJAX add to cart ---- */
+  if (productForm) {
+    productForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      var formData = new FormData(productForm);
+      addBtn.disabled = true;
+      addBtn.textContent = 'Adding...';
+
+      fetch('/cart/add.js', {
+        method: 'POST',
+        body: formData
+      })
+      .then(function(res) { return res.json(); })
+      .then(function(data) {
+        if (data.status) {
+          addBtn.textContent = 'Error';
+          if (window.toast) window.toast.show(data.description || 'Unable to add product due to limited availability', 'error');
+          setTimeout(function() {
+            addBtn.disabled = false;
+            addBtn.textContent = 'Add to basket';
+          }, 2000);
+          return;
+        }
+        addBtn.textContent = 'Added!';
+        if (window.toast) window.toast.show('Product added to basket', 'success');
+        if (window.cartDrawer) window.cartDrawer.refreshDrawer();
+        setTimeout(function() {
+          addBtn.disabled = false;
+          addBtn.textContent = 'Add to basket';
+        }, 2000);
+      })
+      .catch(function() {
+        addBtn.disabled = false;
+        addBtn.textContent = 'Add to basket';
+        if (window.toast) window.toast.show('Something went wrong. Please try again.', 'error');
+      });
+    });
+  }
+
+  /* ---- Size guide modal ---- */
+  (function() {
+    var modal = root.parentElement.querySelector('[data-size-guide-modal]');
+    var backdrop = root.parentElement.querySelector('[data-size-guide-backdrop]');
+    var openBtn = root.querySelector('[data-shoe-size-guide-btn]');
+    var closeBtn = root.parentElement.querySelector('[data-size-guide-close]');
+    var iframe = root.parentElement.querySelector('[data-size-guide-iframe]');
+    if (!modal || !openBtn) return;
+
+    var kiwiData = JSON.parse(root.parentElement.querySelector('[data-shoe-kiwi-json]').textContent);
+    var params = new URLSearchParams({
+      shop: kiwiData.shop,
+      product: kiwiData.productId,
+      vendor: kiwiData.vendor.trim(),
+      type: kiwiData.type.trim(),
+      source: kiwiData.source
+    });
+    if (kiwiData.tags && kiwiData.tags.length) {
+      params.set('tags', kiwiData.tags.map(encodeURIComponent).join(','));
+    }
+    var kiwiUrl = 'https://app.kiwisizing.com/size?' + params.toString();
+
+    function openModal() {
+      if (iframe && !iframe.src) iframe.src = kiwiUrl;
+      modal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    openBtn.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal();
+    });
+  })();
+
+  /* ---- Image zoom — click handlers ---- */
+  (function() {
+    var mobileCarousel = root.querySelector('[data-shoe-image-carousel]');
+    if (mobileCarousel) {
+      mobileCarousel.addEventListener('click', function(e) {
+        var img = e.target.closest('[data-shoe-image-index]');
+        if (img && typeof window.openImageZoomModal === 'function') {
+          window.openImageZoomModal(parseInt(img.dataset.shoeImageIndex, 10));
+        }
+      });
+    }
+
+    var desktopGrid = root.querySelector('[data-shoe-image-grid]');
+    if (desktopGrid) {
+      desktopGrid.addEventListener('click', function(e) {
+        var wrapper = e.target.closest('[data-shoe-image-index]');
+        if (wrapper && typeof window.openImageZoomModal === 'function') {
+          window.openImageZoomModal(parseInt(wrapper.dataset.shoeImageIndex, 10));
+        }
+      });
+    }
+  })();
+
+  /* ---- Scroll progress indicator ---- */
+  (function() {
+    var fill = root.querySelector('[data-shoe-scroll-fill]');
+    if (!fill) return;
+
+    function update() {
+      var rect = root.getBoundingClientRect();
+      var viewportHeight = window.innerHeight;
+      var sourceHeight = root.offsetHeight;
+      var scrollEnd = rect.bottom;
+
+      var totalScrollableDistance = sourceHeight + viewportHeight;
+      var amountScrolled = Math.min(
+        Math.max(totalScrollableDistance - scrollEnd, 0),
+        totalScrollableDistance
+      );
+
+      var progress = amountScrolled / totalScrollableDistance;
+      fill.style.height = (progress * 100) + '%';
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+    update();
+  })();
+
+  /* ---- Sticky buy bar (IntersectionObserver) ---- */
+  (function() {
+    var purchaseSection = root.querySelector('[data-shoe-purchase]');
+    var stickyBar = root.querySelector('[data-shoe-sticky-bar]');
+    var buyBtn = root.querySelector('[data-shoe-sticky-buy]');
+    var backBtn = root.querySelector('[data-shoe-sticky-back]');
+    if (!purchaseSection || !stickyBar) return;
+
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          stickyBar.classList.add('translate-y-full');
+          stickyBar.classList.remove('translate-y-0');
+        } else {
+          stickyBar.classList.remove('translate-y-full');
+          stickyBar.classList.add('translate-y-0');
+        }
+      });
+    });
+
+    observer.observe(purchaseSection);
+
+    if (buyBtn) {
+      buyBtn.addEventListener('click', function() {
+        purchaseSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+
+    if (backBtn) {
+      backBtn.addEventListener('click', function() {
+        /* Close the modal — dispatches custom event for shoe-finder.liquid to handle */
+        var closeBtn = root.querySelector('[data-shoe-detail-close]');
+        if (closeBtn) closeBtn.click();
+      });
+    }
+  })();
+
+  /* ---- Close button ---- */
+  var closeBtn = root.querySelector('[data-shoe-detail-close]');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function() {
+      root.dispatchEvent(new CustomEvent('shoe-detail:close', { bubbles: true }));
+    });
+  }
+
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Shoe Detail",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_features",
+      "label": "Show features carousel",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

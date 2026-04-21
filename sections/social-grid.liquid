@@ -1,0 +1,210 @@
+{%- liquid
+  case section.settings.margin_bottom
+    when 'none'
+      assign margin_class = ''
+    when 'small'
+      assign margin_class = 'mb-8'
+    when 'medium'
+      assign margin_class = 'mb-8 lg:mb-14'
+    when 'large'
+      assign margin_class = 'mb-14 lg:mb-20'
+  endcase
+-%}
+
+<div class="{{ margin_class }}" id="social-grid-{{ section.id }}">
+
+  {%- if section.settings.heading != blank or section.settings.subheading != blank -%}
+    <div class="container mb-10 text-center">
+      <div class="mb-6">
+        {%- if section.settings.heading != blank -%}
+          <h2>
+            <span class="font-serif">
+              <span class="text-3xl lg:text-4xl">{{ section.settings.heading | escape }}</span>
+            </span>
+          </h2>
+        {%- endif -%}
+        {%- if section.settings.subheading != blank -%}
+          <p>{{ section.settings.subheading | escape }}</p>
+        {%- endif -%}
+      </div>
+
+      {%- if settings.social_instagram != blank or settings.social_facebook != blank or settings.social_twitter != blank -%}
+        <ul class="flex items-center gap-2 justify-center">
+          {%- if settings.social_instagram != blank -%}
+            <li>
+              <a href="{{ settings.social_instagram }}" target="_blank" rel="noopener noreferrer" class="text-sm hover:underline">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                  <path d="M16.3277 20.6553C18.9939 20.6553 21.1553 18.4939 21.1553 15.8277C21.1553 13.1614 18.9939 11 16.3277 11C13.6614 11 11.5 13.1614 11.5 15.8277C11.5 18.4939 13.6614 20.6553 16.3277 20.6553Z" stroke="#35342F" stroke-miterlimit="10"/>
+                  <path d="M22.5344 10.5688C23.1057 10.5688 23.5688 10.1057 23.5688 9.53438C23.5688 8.96311 23.1057 8.5 22.5344 8.5C21.9631 8.5 21.5 8.96311 21.5 9.53438C21.5 10.1057 21.9631 10.5688 22.5344 10.5688Z" fill="#35342F"/>
+                  <rect x="6.5" y="6" width="20" height="20" rx="2" stroke="#35342F"/>
+                </svg>
+                <span class="sr-only">Instagram</span>
+              </a>
+            </li>
+          {%- endif -%}
+          {%- if settings.social_facebook != blank -%}
+            <li>
+              <a href="{{ settings.social_facebook }}" target="_blank" rel="noopener noreferrer" class="text-sm hover:underline">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                  <path d="M16.4996 25.9999V13.0675C16.4996 12.3399 16.7886 11.6422 17.303 11.1277C17.8175 10.6132 18.5153 10.3242 19.2428 10.3242C20.5931 10.3242 21.4358 10.7242 22.0136 11.4718M14.1758 15.615H19.6623" stroke="#35342F" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="6.5" y="6" width="20" height="20" rx="2" stroke="#35342F"/>
+                </svg>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li>
+          {%- endif -%}
+          {%- if settings.social_twitter != blank -%}
+            <li>
+              <a href="{{ settings.social_twitter }}" target="_blank" rel="noopener noreferrer" class="text-sm hover:underline">
+                <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                  <path d="M15.068 16.9269L7.11886 25.9989M24.3937 6.00114L17.3251 14.3257M6.5 6L22.18 26H26.5L10.8206 6H6.5Z" stroke="#35342F" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="sr-only">X</span>
+              </a>
+            </li>
+          {%- endif -%}
+        </ul>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
+
+  {%- if section.blocks.size > 0 -%}
+    <div class="container-wide grid grid-cols-2 px-0 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
+      {%- for block in section.blocks -%}
+        <div class="group relative aspect-square{% if forloop.index > 6 %} hidden lg:block{% endif %}" {{ block.shopify_attributes }}>
+          {%- if block.settings.link != blank and block.settings.link_icon != 'none' -%}
+            <a href="{{ block.settings.link }}" target="_blank" rel="noopener noreferrer" class="absolute left-0 top-0 z-1 block flex size-full items-center justify-center bg-black/50 text-white opacity-0 duration-500 group-hover:opacity-100">
+              {%- case block.settings.link_icon -%}
+                {%- when 'instagram' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                    <path d="M16.3277 20.6553C18.9939 20.6553 21.1553 18.4939 21.1553 15.8277C21.1553 13.1614 18.9939 11 16.3277 11C13.6614 11 11.5 13.1614 11.5 15.8277C11.5 18.4939 13.6614 20.6553 16.3277 20.6553Z" stroke="#FFFFFF" stroke-miterlimit="10"/>
+                    <path d="M22.5344 10.5688C23.1057 10.5688 23.5688 10.1057 23.5688 9.53438C23.5688 8.96311 23.1057 8.5 22.5344 8.5C21.9631 8.5 21.5 8.96311 21.5 9.53438C21.5 10.1057 21.9631 10.5688 22.5344 10.5688Z" fill="#FFFFFF"/>
+                    <rect x="6.5" y="6" width="20" height="20" rx="2" stroke="#FFFFFF"/>
+                  </svg>
+                {%- when 'facebook' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                    <path d="M16.4996 25.9999V13.0675C16.4996 12.3399 16.7886 11.6422 17.303 11.1277C17.8175 10.6132 18.5153 10.3242 19.2428 10.3242C20.5931 10.3242 21.4358 10.7242 22.0136 11.4718M14.1758 15.615H19.6623" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <rect x="6.5" y="6" width="20" height="20" rx="2" stroke="#FFFFFF"/>
+                  </svg>
+                {%- when 'x' -%}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="33" height="32" viewBox="0 0 33 32" fill="none">
+                    <path d="M15.068 16.9269L7.11886 25.9989M24.3937 6.00114L17.3251 14.3257M6.5 6L22.18 26H26.5L10.8206 6H6.5Z" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              {%- endcase -%}
+              <span class="sr-only">{{ block.settings.image_alt | default: block.settings.link }}</span>
+            </a>
+          {%- endif -%}
+          {%- if block.settings.image != blank -%}
+            {{ block.settings.image | image_url: width: 756 | image_tag:
+              class: 'absolute left-0 top-0 size-full object-cover',
+              loading: 'lazy',
+              alt: block.settings.image_alt,
+              widths: '378,756,1024',
+              sizes: '(min-width: 1280px) 16.67vw, (min-width: 1024px) 25vw, (min-width: 768px) 33.33vw, 50vw'
+            }}
+          {%- else -%}
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'absolute left-0 top-0 size-full object-cover' }}
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.social_grid.name",
+  "tag": "section",
+  "class": "social-grid-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.social_grid.settings.heading_header.content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.social_grid.settings.heading.label",
+      "default": "@trendygolf"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "t:sections.social_grid.settings.subheading.label",
+      "default": "Wear it your way. Tag us on Instagram for your chance to be featured."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.social_grid.settings.layout_header.content"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "t:sections.social_grid.settings.margin_bottom.label",
+      "options": [
+        { "value": "none", "label": "t:sections.social_grid.settings.margin_bottom.options.none" },
+        { "value": "small", "label": "t:sections.social_grid.settings.margin_bottom.options.small" },
+        { "value": "medium", "label": "t:sections.social_grid.settings.margin_bottom.options.medium" },
+        { "value": "large", "label": "t:sections.social_grid.settings.margin_bottom.options.large" }
+      ],
+      "default": "none"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "grid_item",
+      "name": "t:sections.social_grid.blocks.grid_item.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.social_grid.blocks.grid_item.settings.image.label"
+        },
+        {
+          "type": "text",
+          "id": "image_alt",
+          "label": "t:sections.social_grid.blocks.grid_item.settings.image_alt.label"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.social_grid.blocks.grid_item.settings.link.label"
+        },
+        {
+          "type": "select",
+          "id": "link_icon",
+          "label": "t:sections.social_grid.blocks.grid_item.settings.link_icon.label",
+          "options": [
+            { "value": "instagram", "label": "t:sections.social_grid.blocks.grid_item.settings.link_icon.options.instagram" },
+            { "value": "facebook", "label": "t:sections.social_grid.blocks.grid_item.settings.link_icon.options.facebook" },
+            { "value": "x", "label": "t:sections.social_grid.blocks.grid_item.settings.link_icon.options.x" },
+            { "value": "none", "label": "t:sections.social_grid.blocks.grid_item.settings.link_icon.options.none" }
+          ],
+          "default": "instagram"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 12,
+  "presets": [
+    {
+      "name": "t:sections.social_grid.presets.name",
+      "blocks": [
+        { "type": "grid_item" },
+        { "type": "grid_item" },
+        { "type": "grid_item" },
+        { "type": "grid_item" },
+        { "type": "grid_item" },
+        { "type": "grid_item" },
+        { "type": "grid_item" },
+        { "type": "grid_item" },
+        { "type": "grid_item" },
+        { "type": "grid_item" },
+        { "type": "grid_item" },
+        { "type": "grid_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

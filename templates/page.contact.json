@@ -1,0 +1,147 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "intro": {
+      "type": "content-block",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Contact Us",
+            "tag": "h1",
+            "size": "h2",
+            "font": "serif"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you’d like to get in touch, please use the contact details provided or simply fill out the form below.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text"
+      ],
+      "settings": {
+        "alignment": "center",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "14",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "8",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "contact-details": {
+      "type": "icon-grid",
+      "blocks": {
+        "call-us": {
+          "type": "column",
+          "settings": {
+            "icon": "phone",
+            "title": "Call Us",
+            "description": "Monday - Friday\n08:30 AM - 04:30 PM\nGMT",
+            "link": "tel:+441243373251",
+            "link_label": "+44 (0) 1243 373 251",
+            "show_arrow": true
+          }
+        },
+        "email-us": {
+          "type": "column",
+          "settings": {
+            "icon": "envelope",
+            "title": "Email Us",
+            "description": "",
+            "link": "mailto:info@trendygolf.com",
+            "link_label": "info@trendygolf.com",
+            "show_arrow": true
+          }
+        },
+        "find-us": {
+          "type": "column",
+          "settings": {
+            "icon": "map-pin",
+            "title": "Find Us At",
+            "description": "The Old Flour,\nMill Queen Street,\nEmsworth, Hampshire,\nPO10 7BT, United Kingdom",
+            "link": "",
+            "link_label": "",
+            "show_arrow": true
+          }
+        },
+        "connect": {
+          "type": "column",
+          "settings": {
+            "icon": "device-phone-mobile",
+            "title": "Connect With Us",
+            "description": "",
+            "link": "",
+            "link_label": "",
+            "show_arrow": true,
+            "show_social_channels": true
+          }
+        },
+        "hours": {
+          "type": "column",
+          "settings": {
+            "icon": "clock",
+            "title": "Office Opening Hours",
+            "description": "Monday - Friday\n08:30 AM - 04:30 PM\nGMT",
+            "link": "",
+            "link_label": "",
+            "show_arrow": true
+          }
+        }
+      },
+      "block_order": [
+        "call-us",
+        "email-us",
+        "find-us",
+        "connect",
+        "hours"
+      ],
+      "settings": {
+        "desktop_columns": "three",
+        "margin_bottom": "none",
+        "enable_animation": true
+      }
+    },
+    "contact-form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Email Us",
+        "heading_size": "h3",
+        "heading_font": "none",
+        "subheading": "If you would like to get in touch, please use the form below.",
+        "show_phone": true,
+        "show_order_number": true,
+        "submit_label": "Send message",
+        "success_heading": "Thanks for getting in touch!",
+        "success_message": "We respond swiftly to enquiries Monday to Friday 8.30am - 4.30pm GMT.",
+        "success_button_label": "Back to home",
+        "success_button_link": "/",
+        "background_image": "shopify://shop_images/790253f16c6eea100158d252ed49d8948510f6df-3840x2180.webp",
+        "enable_animation": true,
+        "margin_bottom": "none"
+      }
+    }
+  },
+  "order": [
+    "intro",
+    "contact-details",
+    "contact-form"
+  ]
+}

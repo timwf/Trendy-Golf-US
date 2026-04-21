@@ -1,0 +1,246 @@
+<footer class="bg-taupe-300 py-10" role="contentinfo">
+  <div class="container mb-14">
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
+
+      {%- comment -%} Contact column {%- endcomment -%}
+      <div class="text-center">
+        <h3 class="font-bold">{{ 'sections.footer.contact_heading' | t }}</h3>
+        <ul class="flex flex-col gap-1.5">
+          {%- if section.settings.email != blank -%}
+            <li>
+              <a href="mailto:{{ section.settings.email }}" class="text-sm hover:underline">
+                {{ section.settings.email }}
+              </a>
+            </li>
+          {%- endif -%}
+
+          {%- if section.settings.phone != blank -%}
+            <li>
+              <a href="tel:{{ section.settings.phone | remove: ' ' | remove: '(' | remove: ')' }}" class="text-sm hover:underline">
+                {{ section.settings.phone }}
+              </a>
+            </li>
+          {%- endif -%}
+
+          <li>
+            {% render 'social-links', class: 'justify-center' %}
+          </li>
+        </ul>
+      </div>
+
+      {%- comment -%} Navigation columns {%- endcomment -%}
+      {%- if section.settings.menu_1 != blank -%}
+        <div class="text-center">
+          <h3 class="font-bold">
+            {%- if section.settings.menu_1_heading != blank -%}
+              {{ section.settings.menu_1_heading }}
+            {%- else -%}
+              {{ section.settings.menu_1.title }}
+            {%- endif -%}
+          </h3>
+          <nav aria-label="{{ section.settings.menu_1.title }}">
+            <ul class="flex flex-col gap-1.5">
+              {%- for link in section.settings.menu_1.links -%}
+                <li>
+                  <a href="{{ link.url }}" class="hover:underline">{{ link.title }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </nav>
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.menu_2 != blank -%}
+        <div class="text-center">
+          <h3 class="font-bold">
+            {%- if section.settings.menu_2_heading != blank -%}
+              {{ section.settings.menu_2_heading }}
+            {%- else -%}
+              {{ section.settings.menu_2.title }}
+            {%- endif -%}
+          </h3>
+          <nav aria-label="{{ section.settings.menu_2.title }}">
+            <ul class="flex flex-col gap-1.5">
+              {%- for link in section.settings.menu_2.links -%}
+                <li>
+                  <a href="{{ link.url }}" class="hover:underline">{{ link.title }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </nav>
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.menu_3 != blank -%}
+        <div class="text-center">
+          <h3 class="font-bold">
+            {%- if section.settings.menu_3_heading != blank -%}
+              {{ section.settings.menu_3_heading }}
+            {%- else -%}
+              {{ section.settings.menu_3.title }}
+            {%- endif -%}
+          </h3>
+          <nav aria-label="{{ section.settings.menu_3.title }}">
+            <ul class="flex flex-col gap-1.5">
+              {%- for link in section.settings.menu_3.links -%}
+                <li>
+                  <a href="{{ link.url }}" class="hover:underline">{{ link.title }}</a>
+                </li>
+              {%- endfor -%}
+            </ul>
+          </nav>
+        </div>
+      {%- endif -%}
+
+    </div>
+  </div>
+
+  {%- comment -%} Brand wordmark {%- endcomment -%}
+  {%- if section.settings.show_logo -%}
+    <div class="container-wide mb-14">
+      <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1465 159" fill="none" aria-label="{{ shop.name }}">
+        <g clip-path="url(#footer-logo-clip)">
+          <path d="M45.7009 41.415H0.5V3.94678H134.897V41.415H89.4548V155.645H45.7009V41.415Z" fill="#234A31"/>
+          <path d="M205.453 102.301H187.435V155.645H143.681V3.94678H206.487C246.244 3.94678 275.976 13.5893 275.976 52.7105C275.976 74.4751 264.676 87.4581 248.966 94.5523L284.968 155.645H235.771L205.418 102.301H205.453ZM187.435 39.3143V69.2406H211.516C224.298 69.2406 230.362 62.9729 230.362 54.398C230.362 45.823 224.298 39.3143 211.516 39.3143H187.435Z" fill="#234A31"/>
+          <path d="M293.345 3.94678H413.513V41.415H337.099V60.6656H409.551V98.3404H337.099V118.004H414.34V155.645H293.345V3.94678Z" fill="#234A31"/>
+          <path d="M510.147 155.645L463.672 58.9782V155.645H423.26V3.94678H477.074L523.756 100.407V3.94678H564.134V155.645H510.147Z" fill="#234A31"/>
+          <path d="M625.28 3.94678C674.064 3.94678 712.788 21.9577 712.788 79.6752C712.788 137.393 674.064 155.645 625.28 155.645H572.947V3.94678H625.28ZM625.9 39.3143H616.701V120.312H625.9C649.982 120.312 667.139 114.457 667.139 79.7096C667.139 44.962 649.982 39.3143 625.9 39.3143Z" fill="#234A31"/>
+          <path d="M743.246 3.94678L771.738 56.9119L800.608 3.94678H851.701L792.857 97.0662V155.645H749.103V96.653L691.981 3.94678H743.246Z" fill="#234A31"/>
+          <path d="M876.675 78.8833C876.675 104.402 887.562 121.793 909.749 121.793C929.008 121.793 937.793 110.497 937.793 102.335V102.129H904.926V69.0686H980.272V155.714H946.165L945.958 139.597C936.759 152.58 920.843 158.434 902.204 158.434C858.657 158.434 831.026 127.268 831.026 78.9178C831.026 30.5673 860.758 0.399902 908.474 0.399902C942.375 0.399902 970.867 16.1035 979.445 52.2975H936.518C933.796 43.7225 925.218 37.0416 909.094 37.0416C889.009 37.0416 876.641 52.7451 876.641 78.8833" fill="#234A31"/>
+          <path d="M1068.64 158.365C1022.17 158.365 989.093 129.472 989.093 79.4688C989.093 29.4653 1022.17 0.399902 1068.64 0.399902C1115.12 0.399902 1148.19 29.4997 1148.19 79.5032C1148.19 129.507 1115.12 158.4 1068.64 158.4M1068.64 121.758C1086.21 121.758 1102.75 109.43 1102.75 79.5032C1102.75 49.5769 1086.21 37.0416 1068.64 37.0416C1051.07 37.0416 1034.53 49.5769 1034.53 79.5032C1034.53 109.43 1051.07 121.758 1068.64 121.758Z" fill="#234A31"/>
+          <path d="M1200.74 118.004H1271.47V155.645H1156.98V3.94678H1200.74V118.004Z" fill="#234A31"/>
+          <path d="M1280.25 3.94678H1390.36V41.415H1324V60.6656H1386.4V98.3404H1324V155.645H1280.25V3.94678Z" fill="#234A31"/>
+          <path d="M1437.21 0.399902C1452.3 0.399902 1464.5 11.6266 1464.5 27.8812C1464.5 44.1357 1452.3 55.1558 1437.21 55.1558C1422.12 55.1558 1409.86 44.0669 1409.86 27.8812C1409.86 11.6955 1422.02 0.399902 1437.21 0.399902ZM1437.21 49.7146C1449.41 49.7146 1458.44 40.8297 1458.44 27.9156C1458.44 15.0015 1449.37 5.94437 1437.21 5.94437C1425.05 5.94437 1415.89 14.7604 1415.89 27.9156C1415.89 41.0708 1425.22 49.7146 1437.21 49.7146ZM1432.53 41.4496H1424.64V12.2809H1436.32C1444.07 12.2809 1449.89 14.2438 1449.89 21.8201C1449.89 26.1937 1447.69 28.6043 1444.55 29.8441L1451.61 41.4496H1442.86L1436.73 31.015H1432.49V41.4496H1432.53Z" fill="#234A31"/>
+        </g>
+        <defs>
+          <clipPath id="footer-logo-clip">
+            <rect width="1464" height="158" fill="white" transform="translate(0.5 0.399902)"/>
+          </clipPath>
+        </defs>
+      </svg>
+    </div>
+  {%- endif -%}
+
+  {%- comment -%} Legal / copyright bar {%- endcomment -%}
+  <div class="container">
+    {%- if section.settings.menu_legal != blank -%}
+      <nav class="mb-10" aria-label="{{ 'sections.footer.legal_nav' | t }}">
+        <ul class="flex flex-col gap-1.5 text-center md:flex-row md:items-center md:justify-center md:gap-8">
+          <li class="text-sm">
+            {%- if section.settings.copyright_text != blank -%}
+              {{ section.settings.copyright_text }}
+            {%- else -%}
+              &copy; {{ 'now' | date: '%Y' }} {{ shop.name }}
+            {%- endif -%}
+          </li>
+
+          {%- for link in section.settings.menu_legal.links -%}
+            <li>
+              <a href="{{ link.url }}" class="hover:underline">{{ link.title }}</a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </nav>
+    {%- endif -%}
+
+    {%- comment -%} Payment icons {%- endcomment -%}
+    {%- if section.settings.show_payment_icons -%}
+      {%- unless shop.enabled_payment_types == empty -%}
+        <ul class="flex flex-wrap items-center justify-center gap-2" role="list" aria-label="{{ 'sections.footer.payment_methods' | t }}">
+          {%- for type in shop.enabled_payment_types -%}
+            <li>{{ type | payment_type_svg_tag }}</li>
+          {%- endfor -%}
+        </ul>
+      {%- endunless -%}
+    {%- endif -%}
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "t:sections.footer.name",
+  "settings": [
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.contact_heading.content"
+    },
+    {
+      "type": "text",
+      "id": "email",
+      "label": "t:sections.footer.settings.email.label",
+      "default": "info@trendygolf.com"
+    },
+    {
+      "type": "text",
+      "id": "phone",
+      "label": "t:sections.footer.settings.phone.label",
+      "default": "+44 (0)1243 373251"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.navigation_heading.content"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_1",
+      "label": "t:sections.footer.settings.menu_1.label",
+      "default": "footer"
+    },
+    {
+      "type": "text",
+      "id": "menu_1_heading",
+      "label": "t:sections.footer.settings.menu_1_heading.label",
+      "info": "t:sections.footer.settings.menu_heading_info.info"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_2",
+      "label": "t:sections.footer.settings.menu_2.label"
+    },
+    {
+      "type": "text",
+      "id": "menu_2_heading",
+      "label": "t:sections.footer.settings.menu_2_heading.label",
+      "info": "t:sections.footer.settings.menu_heading_info.info"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_3",
+      "label": "t:sections.footer.settings.menu_3.label"
+    },
+    {
+      "type": "text",
+      "id": "menu_3_heading",
+      "label": "t:sections.footer.settings.menu_3_heading.label",
+      "info": "t:sections.footer.settings.menu_heading_info.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.bottom_heading.content"
+    },
+    {
+      "type": "link_list",
+      "id": "menu_legal",
+      "label": "t:sections.footer.settings.menu_legal.label"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "label": "t:sections.footer.settings.copyright_text.label",
+      "info": "t:sections.footer.settings.copyright_text.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_logo",
+      "label": "t:sections.footer.settings.show_logo.label",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payment_icons",
+      "label": "t:sections.footer.settings.show_payment_icons.label",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

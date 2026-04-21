@@ -1,0 +1,312 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "heading": "",
+            "heading_size": "h2",
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "shopify://shop_images/HERO_DESKTOP_7ff2aa43-91da-48a5-9e1a-af4894a72b13.png",
+            "slide_duration": 7
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_intro": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The festive season is upon us, and finding the perfect gift for the golfer in your life has never been easier. Whether you're shopping for a budget-friendly surprise or looking to indulge in something extraordinary, TRENDYGOLF has curated a fantastic range of Christmas gifts that suit every style and budget. From thoughtful tokens to luxury statement pieces, this guide will help you pick the perfect present for anyone on your list.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "text_under50": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Gifts Under £50: Affordable Surprises for Every Golfer",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p>If you're looking to spread holiday cheer without stretching your wallet, TRENDYGOLF's selection of gifts under £50 offers a range of stylish and practical options. These budget-friendly items make great stocking fillers and are ideal for golf enthusiasts of any skill level.</p><h4><strong>Top Picks:</strong></h4><ul><li><strong>Golf Accessories:</strong> Upgrade their gear with sleek accessories like premium golf gloves, towels or ball markers. These essentials are not only functional but also add a touch of elegance to every golf bag.</li><li><strong>Caps and Beanies:</strong> Keep your loved ones warm and stylish on the course with trendy hats that blend practicality with fashion.</li><li><strong>Socks with a Twist:</strong> High-performance golf socks are a small but meaningful gift that golfers truly appreciate – and these are designed to last game after game.</li></ul><h4><strong>Why Choose Gifts Under £50?</strong></h4><p>Affordable and thoughtful, these gifts are perfect for Secret Santa exchanges or as a small gesture to show appreciation for the golfers in your life.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_under50": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "gifting-under-50",
+        "product_limit": 12,
+        "button_label": "Explore Gifts Under £50",
+        "button_link": "https://trendygolf.com/collections/gifting-under-50",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_under150": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Gifts Under £150: Striking the Balance Between Style and Functionality",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p>For those looking to spend a little more on a gift that stands out, the Gifts Under £150 range is packed with impressive options that combine utility and style. These items are perfect for the golfer who loves looking sharp both on and off the course.</p><h4><strong>Top Picks:</strong></h4><ul><li><strong>Polo Shirts:</strong> A high-quality polo shirt is a wardrobe staple for any golfer. Look for brands that offer technical fabrics, moisture-wicking technology, and timeless designs.</li><li><strong>Mid-Layers and Knitwear:</strong> Versatile pieces like lightweight mid-layers or cosy jumpers are ideal for keeping warm during winter rounds without compromising on style.</li></ul><h4><strong>Why Choose Gifts Under £150?</strong></h4><p>This budget range offers gifts that are both functional and luxurious, making them perfect for close friends or family members who take their game seriously.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_under150": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "gifting-under-150",
+        "product_limit": 12,
+        "button_label": "Explore Gifts Under £150",
+        "button_link": "https://trendygolf.com/collections/gifting-under-150",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_under250": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Gifts Under £250: Premium Quality for the Serious Golfer",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p>When you're ready to spoil the golf lover in your life, the Gifts Under £250 range has something for everyone, from cutting-edge gear to high-performance apparel. This range strikes the perfect balance between practicality and indulgence, ensuring your gift will be treasured for years to come.</p><h4><strong>Top Picks:</strong></h4><ul><li><strong>Performance Jackets:</strong> Help them brave the elements with a top-notch performance jacket that combines weather resistance with superior comfort and mobility.</li><li><strong>Designer Golf Trousers:</strong> Trendy yet functional, these trousers offer the perfect fit and performance for players who want to stay stylish on the course.</li><li><strong>High-End Accessories:</strong> Luxury headcovers, stylish belts, or premium golf bags are excellent options for adding a touch of sophistication to their golf routine.</li></ul><h4><strong>Why Choose Gifts Under £250?</strong></h4><p>This range is ideal for showing your appreciation to someone special while ensuring they enjoy top-tier quality and performance.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_under250": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "gifting-under-250",
+        "product_limit": 12,
+        "button_label": "Explore Gifts Under £250",
+        "button_link": "https://trendygolf.com/collections/gifting-under-250",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_premium": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Premium Gifts: The Ultimate Indulgence for Dreamers",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><p>For those looking to truly dazzle this Christmas, the Premium Gifts collection at TRENDYGOLF features exquisite pieces that combine cutting-edge technology, exceptional craftsmanship, and timeless design. These gifts are perfect for the discerning golfer who deserves the very best.</p><h4><strong>Top Picks:</strong></h4><ul><li><strong>Luxury Outerwear:</strong> Think top-of-the-line jackets from iconic brands, designed to offer unparalleled comfort and protection in all weather conditions.</li><li><strong>Limited Edition Collections:</strong> Exclusive golf wear and accessories that make a bold statement, ideal for trendsetters on and off the course.</li><li><strong>High-Tech Gear:</strong> From innovative golf bags with ergonomic designs to the latest gadgets that enhance gameplay, these gifts take golf to the next level.</li></ul><h4><strong>Why Choose Premium Gifts?</strong></h4><p>These are gifts for when only the best will do. They are designed to impress and deliver a once-in-a-lifetime experience for someone who's passionate about golf.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "products_premium": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "",
+        "collection": "gifting-dream-tickets",
+        "product_limit": 12,
+        "button_label": "Explore Premium Gifts",
+        "button_link": "https://trendygolf.com/collections/gifting-dream-tickets",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_closing": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Why Shop with TRENDYGOLF This Christmas?",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>TRENDYGOLF is your one-stop shop for premium golf apparel, accessories, and gifts that cater to all tastes and budgets. Here's why they stand out:</p><ul><li><strong>Curated Collections:</strong> TRENDYGOLF carefully selects its inventory to ensure a perfect balance of style, functionality, and quality.</li><li><strong>Exclusive Brands:</strong> Discover premium items from world-renowned brands, many of which are hard to find elsewhere.</li><li><strong>Hassle-Free Shopping:</strong> With easy online ordering and fast delivery, you can tick off your Christmas shopping list in no time.</li></ul><p>This Christmas, give the gift of style, performance, and sophistication with TRENDYGOLF. Whether you're shopping for a casual player or a dedicated pro, these collections offer something for everyone. Browse the<a href=\"https://trendygolf.com/collections/gifting-under-50\"> <span style=\"text-decoration:underline\">Gifts Under £50</span></a>,<a href=\"https://trendygolf.com/collections/gifting-under-150\"> <span style=\"text-decoration:underline\">Gifts Under £150</span></a>,<a href=\"https://trendygolf.com/collections/gifting-under-250\"> <span style=\"text-decoration:underline\">Gifts Under £250</span></a>, and<a href=\"https://trendygolf.com/collections/gifting-dream-tickets\"> <span style=\"text-decoration:underline\">Premium Gifts</span></a> today to find the perfect present that will make this holiday season unforgettable.</p><p>Happy gifting and merry golfing!</p><p></p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP NEW THIS WEEK",
+            "link": "https://trendygolf.com/collections/mens-new-in?filter.v.availability=1",
+            "style": "dark-grey",
+            "has_arrow": false
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_intro",
+    "text_under50",
+    "products_under50",
+    "text_under150",
+    "products_under150",
+    "text_under250",
+    "products_under250",
+    "text_premium",
+    "products_premium",
+    "text_closing",
+    "related-articles"
+  ]
+}

@@ -1,0 +1,35 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "settings": {
+        "email": "info@trendygolf.com",
+        "phone": "+44 (0)1243 373251",
+        "menu_1": "footer-2-0-1",
+        "menu_1_heading": "Customer service",
+        "menu_2": "footer-2-0-2",
+        "menu_2_heading": "TGCC",
+        "menu_3": "footer-2-0-3",
+        "menu_3_heading": "About",
+        "menu_legal": "",
+        "copyright_text": "",
+        "show_logo": true,
+        "show_payment_icons": true
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
