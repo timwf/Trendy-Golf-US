@@ -29,7 +29,6 @@
           "type": "mega_menu_image",
           "settings": {
             "menu_item_title": "Golf Bags & Accessories",
-            "image": "shopify://shop_images/11ce452c-12f8-470e-bf74-5404919a48c0.jpg",
             "heading": "Golf bags test",
             "link": "shopify://collections/mens-bags",
             "link_text": "Shop now"
@@ -39,7 +38,6 @@
           "type": "mega_menu_image",
           "settings": {
             "menu_item_title": "Footwear",
-            "image": "shopify://shop_images/bd99928b-91f7-4d94-88d6-3d6a20a26f0f.jpg",
             "heading": "",
             "link": "",
             "link_text": "Shop now"
@@ -49,7 +47,6 @@
           "type": "mega_menu_image",
           "settings": {
             "menu_item_title": "Clothing",
-            "image": "shopify://shop_images/a93bddc8-b651-422c-bf9d-1ae0b9dff95c.jpg",
             "heading": "",
             "link": "",
             "link_text": "Shop now"
@@ -59,7 +56,6 @@
           "type": "mega_menu_image",
           "settings": {
             "menu_item_title": "New In",
-            "image": "shopify://shop_images/770ed1f5-921b-49f1-b4e6-540124c1f744.jpg",
             "heading": "Heading",
             "link": "#",
             "link_text": "Shop now"
@@ -74,9 +70,7 @@
       ],
       "settings": {
         "logo": "shopify://shop_images/TRENDYGOLF_2.png",
-        "logo_light": "shopify://shop_images/TRENDYGOLF_UPDATEDLOGO.png",
-        "menu": "main-menu-copy",
-        "transparent_pages": "/, /pages/shoe-finder",
+        "menu": "main-menu-2-0",
         "transparent_text_color": "#ffffff",
         "solid_bg_color": "#f6f5f2",
         "solid_text_color": "#35342f"
