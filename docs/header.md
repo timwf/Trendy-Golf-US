@@ -13,7 +13,7 @@
 - **Search overlay** — child div, slides down from top (`-translate-y-full` → `translate-y-0`), contains search input + submit/close buttons
 - **Left group:** hamburger button (mobile only, `xl:hidden`) + logo (`<a>` wrapping `<img>`, `max-w-[160px] md:max-w-[260px]`)
 - **Centre:** desktop `<nav>` (`hidden xl:block`) with `<ul>` of top-level items
-- **Right group:** country flag (skip for now), search button, wishlist (heart icon → `/account/saved`), account (user icon → `/account`), cart button (shopping bag + item count)
+- **Right group:** region flag selector (`hidden lg:block`), search button, wishlist (heart icon → `/account/saved`), account (user icon → `/account`), cart button (shopping bag + item count)
 - All icon/text colours are `text-white` when header is transparent
 
 **Desktop mega menu dropdown (Men, Women, Footwear have children):**
@@ -27,7 +27,7 @@
 **Mobile nav drawer:**
 - `fixed left-0 top-0 z-50 w-[90%] md:max-w-lg xl:hidden`, `bg-white shadow-md`
 - Slide in/out: `-translate-x-full` (hidden) → `translate-x-0` (visible), `duration-500`
-- Top bar: country flag selector + close (X) button, same height as header (`h-[64px] lg:h-[74px]`)
+- Top bar: region flag selector (idle slot) + close (X) button, same height as header (`h-[64px] lg:h-[74px]`)
 - Level 1: `<ul>` with each top-level item as text + chevron-right button
 - Level 2+: nested `<div>` with `absolute right-0 top-0 h-full w-[100%]`, slides in via `translate-x-full` → `translate-x-0`
 - Back button needed for each sub-level
@@ -49,6 +49,8 @@
   - `transparent_text_color` (color, default white)
   - `solid_bg_color` (color, default white)
   - `solid_text_color` (color, default taupe-900)
+  - `current_region` (select `UK|US`, default `US` on this theme) — flag shown on the selector button
+  - `other_region_url` (url, paste `https://trendygolf.com` in the theme editor) — destination when a shopper picks the other flag
 - Blocks (type `mega_menu_image`, limit 10):
   - `menu_item_title` (text) — must match a top-level menu item title exactly (e.g. "Men")
   - `image` (image_picker) — featured promo image
@@ -72,6 +74,18 @@
 - Accepts: `icon` (string name), `size` (string, default "size-6")
 - Renders inline SVG for: `bars-3`, `x-mark`, `magnifying-glass`, `heart`, `user`, `shopping-bag`, `chevron-right`, `chevron-down`, `chevron-left`, `arrow-right`
 - Source: Heroicons outline set (matches source site)
+
+**`snippets/icon-flag.liquid`:**
+- Accepts: `name` (string) — `'UK'` or `'US'`
+- Renders the inline SVG flag (19×14) exactly as authored in source site — see `_reference/repo/app/components/assets/ukFlag.tsx` / `usFlag.tsx`
+- Baked-in brand colours (Union Jack blue/red, Stars & Stripes blue/red) are independent of header transparent/solid state
+
+**`snippets/flag-selector.liquid`:**
+- Accepts: `current_region` (`'UK' | 'US'`), `other_region_url` (string)
+- Mirrors `_reference/repo/app/components/partials/global/flagSelector.tsx`
+- Button shows the current region's flag + chevron-down; clicking opens a dropdown panel containing the *other* region's flag as an `<a>` linking to `other_region_url`
+- Self-contained popover: `[data-flag-selector]` wrapper, `[data-flag-toggle]` button, `[data-flag-panel]` panel — JS handles toggle, outside-click and Escape in `assets/theme.js`
+- Rendered twice per header: once in the desktop right group (`hidden lg:block`, before search) and once in the mobile drawer top-bar idle slot
 
 **`layout/theme.liquid` changes:**
 - Section group (`sections/header-group.json`) renders announcement-bar + header with theme editor eye toggle support

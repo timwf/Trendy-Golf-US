@@ -1,0 +1,43 @@
+{%- comment -%}
+  Region flag selector.
+  Mirrors `_reference/repo/app/components/partials/global/flagSelector.tsx`.
+  Button = current region's flag + chevron. Panel opens on click, revealing
+  the other region's flag as an anchor to the other store.
+  Accepts:
+    current_region    — 'UK' or 'US'
+    other_region_url  — absolute URL to the other region's store
+{%- endcomment -%}
+
+{%- liquid
+  assign region = current_region | default: 'US'
+  if region == 'UK'
+    assign other_region = 'US'
+  else
+    assign other_region = 'UK'
+  endif
+  assign href = other_region_url | default: '#'
+-%}
+
+<div class="relative" data-flag-selector>
+  <button
+    type="button"
+    class="flex cursor-pointer items-center gap-1 focus:outline-none"
+    aria-haspopup="true"
+    aria-expanded="false"
+    data-flag-toggle
+  >
+    {% render 'icon-flag', name: region %}
+    {% render 'icon', icon: 'chevron-down', size: 'size-4 transition-color' %}
+    <span class="sr-only">{{ 'sections.header.region_current' | t: region: region }}</span>
+  </button>
+
+  <div
+    class="absolute left-0 top-full z-[60] -mx-3 mt-3 hidden flex flex-col gap-4 p-3 shadow-lg bg-white"
+    data-flag-panel
+  >
+    <a href="{{ href }}" class="inline-block">
+      {% render 'icon-flag', name: other_region %}
+      <span class="sr-only">{{ 'sections.header.region_switch' | t: region: other_region }}</span>
+    </a>
+  </div>
+</div>

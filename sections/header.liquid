@@ -101,6 +101,15 @@
 
     {%- comment -%} Right: utility icons {%- endcomment -%}
     <div class="flex items-center gap-3 lg:gap-6">
+      {%- if section.settings.other_region_url != blank -%}
+        <div class="hidden lg:block">
+          {% render 'flag-selector',
+            current_region: section.settings.current_region,
+            other_region_url: section.settings.other_region_url
+          %}
+        </div>
+      {%- endif -%}
+
       <button
         data-search-open
         aria-label="{{ 'general.search.title' | t }}"
@@ -141,8 +150,15 @@
   {%- comment -%} Top bar — three mutually exclusive left slots: idle / grandparent-back / parent-back {%- endcomment -%}
   <div class="h-[64px] w-full shrink-0 border-b border-taupe-300 lg:h-[74px]">
     <div class="flex h-full items-end items-center justify-between gap-2 px-6">
-      {%- comment -%} Idle slot (empty — FlagSelector deferred per docs/header.md) {%- endcomment -%}
-      <div data-mobile-topbar-idle class="flex-1"></div>
+      {%- comment -%} Idle slot — region flag selector (see docs/header.md) {%- endcomment -%}
+      <div data-mobile-topbar-idle class="flex-1">
+        {%- if section.settings.other_region_url != blank -%}
+          {% render 'flag-selector',
+            current_region: section.settings.current_region,
+            other_region_url: section.settings.other_region_url
+          %}
+        {%- endif -%}
+      </div>
 
       {%- comment -%} Back to L1 (from an open L2) — JS adds `flex` to show {%- endcomment -%}
       <button
@@ -343,6 +359,27 @@
       "id": "solid_text_color",
       "default": "#35342f",
       "label": "t:sections.header.settings.solid_text_color.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.header.settings.region.content"
+    },
+    {
+      "type": "select",
+      "id": "current_region",
+      "default": "US",
+      "label": "t:sections.header.settings.current_region.label",
+      "info": "t:sections.header.settings.current_region.info",
+      "options": [
+        { "value": "UK", "label": "t:sections.header.settings.current_region.options.uk" },
+        { "value": "US", "label": "t:sections.header.settings.current_region.options.us" }
+      ]
+    },
+    {
+      "type": "url",
+      "id": "other_region_url",
+      "label": "t:sections.header.settings.other_region_url.label",
+      "info": "t:sections.header.settings.other_region_url.info"
     }
   ],
   "blocks": [

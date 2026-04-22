@@ -164,6 +164,38 @@
   });
 
   /* ------------------------------------------------
+   * Region flag selector (popover)
+   * Mirrors Headless UI Popover behaviour from
+   * `_reference/repo/app/components/partials/global/flagSelector.tsx`.
+   * ---------------------------------------------- */
+  function closeAllFlagPanels() {
+    document.querySelectorAll('[data-flag-panel]').forEach(function (p) { p.classList.add('hidden'); });
+    document.querySelectorAll('[data-flag-toggle]').forEach(function (t) {
+      t.setAttribute('aria-expanded', 'false');
+    });
+  }
+
+  document.addEventListener('click', function (e) {
+    var toggle = e.target.closest('[data-flag-toggle]');
+    if (toggle) {
+      var selector = toggle.closest('[data-flag-selector]');
+      if (!selector) return;
+      var panel = selector.querySelector('[data-flag-panel]');
+      if (!panel) return;
+      var willOpen = panel.classList.contains('hidden');
+      closeAllFlagPanels();
+      panel.classList.toggle('hidden', !willOpen);
+      toggle.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+      return;
+    }
+    if (!e.target.closest('[data-flag-selector]')) closeAllFlagPanels();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeAllFlagPanels();
+  });
+
+  /* ------------------------------------------------
    * Header scroll — transparent → solid
    * Only runs when the first section in <main> is a hero.
    * ---------------------------------------------- */

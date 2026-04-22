@@ -177,6 +177,11 @@ Slide-out cart with line items, upsells. AJAX add/remove/update via Shopify Cart
 ### 1F — Shared JS & Icons `[ ]` *(deferred — build after 1E)*
 Unified `Drawer` class (focus trap, escape, overlay, scroll lock). Wire cart drawer + mobile nav.
 
+### 1G — Region Flag Selector `[x]`
+→ [docs/header.md](docs/header.md)
+
+Two-region popover selector matching `_reference/repo/app/components/partials/global/flagSelector.tsx`. Desktop: right group of header (`hidden lg:block`). Mobile: idle slot of nav drawer top-bar. New snippets `icon-flag.liquid` (UK/US inline SVGs) + `flag-selector.liquid` (popover shell). Header schema gains `current_region` (select UK/US, default `US` on this theme) + `other_region_url` (url — paste `https://trendygolf.com` in the theme editor to enable). Same snippet shipped from the UK theme.
+
 ---
 
 ## Phase 2 — Collection & Product (Revenue-critical)

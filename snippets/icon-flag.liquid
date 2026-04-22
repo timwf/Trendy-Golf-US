@@ -1,0 +1,23 @@
+{%- comment -%}
+  Inline SVG flag icon.
+  Accepts:
+    name — 'UK' or 'US'
+  Source: `_reference/repo/app/components/assets/ukFlag.tsx` / `usFlag.tsx`
+{%- endcomment -%}
+
+{%- case name -%}
+  {%- when 'UK' -%}
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none" aria-hidden="true">
+      <path d="M0.166504 0H18.8332V14H0.166504V0Z" fill="#012169"/>
+      <path d="M2.354 0L9.47067 5.27917L16.5582 0H18.8332V1.80833L11.8332 7.02917L18.8332 12.2208V14H16.4998L9.49984 8.77917L2.529 14H0.166504V12.25L7.13734 7.05833L0.166504 1.86667V0H2.354Z" fill="white"/>
+      <path d="M12.5332 8.19583L18.8332 12.8333V14L10.929 8.19583H12.5332ZM7.1665 8.77917L7.3415 9.8L1.7415 14H0.166504L7.1665 8.77917ZM18.8332 0V0.0875L11.5707 5.57083L11.629 4.2875L17.3748 0H18.8332ZM0.166504 0L7.13734 5.13333H5.38734L0.166504 1.225V0Z" fill="#C8102E"/>
+      <path d="M7.19567 0V14H11.8623V0H7.19567ZM0.166504 4.66667V9.33333H18.8332V4.66667H0.166504Z" fill="white"/>
+      <path d="M0.166504 5.62917V8.42917H18.8332V5.62917H0.166504ZM8.129 0V14H10.929V0H8.129Z" fill="#C8102E"/>
+    </svg>
+  {%- when 'US' -%}
+    <svg xmlns="http://www.w3.org/2000/svg" width="19" height="14" viewBox="0 0 19 14" fill="none" aria-hidden="true">
+      <path d="M0 0H18.6667V14H0" fill="#C8102E"/>
+      <path d="M0 1.61292H18.6667M0 3.7625H18.6667M0 5.92083H18.6667M0 8.07916H18.6667M0 10.2375H18.6667M0 12.3958H18.6667" stroke="white" stroke-width="1.07917"/>
+      <path d="M0 0H10.64V7.53958H0" fill="#012169"/>
+    </svg>
+{%- endcase -%}

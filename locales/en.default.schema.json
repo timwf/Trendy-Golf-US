@@ -943,6 +943,21 @@
         },
         "solid_text_color": {
           "label": "Solid text colour"
+        },
+        "region": {
+          "content": "Region selector"
+        },
+        "current_region": {
+          "label": "Current region",
+          "info": "Flag shown on this theme's selector button. Set to the region this store serves.",
+          "options": {
+            "uk": "United Kingdom",
+            "us": "United States"
+          }
+        },
+        "other_region_url": {
+          "label": "Other region URL",
+          "info": "External URL shoppers are sent to when they click the other flag (e.g. https://trendygolf.com on the US theme). Leave blank to hide the selector."
         }
       },
       "blocks": {
