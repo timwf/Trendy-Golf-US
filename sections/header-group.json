@@ -73,7 +73,9 @@
         "menu": "main-menu-2-0",
         "transparent_text_color": "#ffffff",
         "solid_bg_color": "#f6f5f2",
-        "solid_text_color": "#35342f"
+        "solid_text_color": "#35342f",
+        "current_region": "US",
+        "other_region_url": "#"
       }
     }
   },
