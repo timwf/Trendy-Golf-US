@@ -16,15 +16,15 @@
           "type": "slide",
           "settings": {
             "content_alignment": "bottom",
-            "subheading": "At TRENDYGOLF we offer a full custom golf apparel service to support your events and trips. Select top quality golf apparel from our global brands and have it customised to reflect the style of your business, brand and trip. From logos to names, numbers, symbols and slogans all can be professionally applied to create a unique style and look. Whatever your golf event, occasion or trip we will ensure you look great and are on trend.",
+            "subheading": "At TRENDYGOLF we offer a full custom golf apparel service to support your events and trips. Select top quality golf apparel from our global brands and have it customised to reflect the style of your business, brand and trip. From logos to names, numbers, symbols and slogans all can be professionally applied to create a unique style and look. Whatever your golf event, occasion and trip we will ensure you look great and are on trend.",
             "heading_first": true,
             "heading": "Custom Golf Apparel for Your Business",
             "heading_size": "h2",
             "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "image",
-            "image": "shopify://shop_images/01-hero-desktop.jpg",
-            "mobile_image": "shopify://shop_images/02-hero-mobile.jpg",
+            "image": "",
+            "mobile_image": "",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
@@ -53,7 +53,7 @@
         "column_WrGyWA": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/01-premium-brands.jpg",
+            "image": "",
             "image_alt": "",
             "title": "Premium Brands Like No Members",
             "description": "Stylish, high-performance apparel for work and leisure."
@@ -62,7 +62,7 @@
         "column_t3ieYt": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/02-custom-logo-application.jpg",
+            "image": "",
             "image_alt": "",
             "title": "Custom Logo Application",
             "description": "Discreet and professional branding options."
@@ -71,7 +71,7 @@
         "column_cdLEfM": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/03-embroidery-printing.jpg",
+            "image": "",
             "image_alt": "",
             "title": "Embroidery & Printing",
             "description": "Quality craftsmanship tailored to your needs."
@@ -80,7 +80,7 @@
         "column_DYEqYc": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/04-flexible-order-sizes.jpg",
+            "image": "",
             "image_alt": "",
             "title": "Flexible Order Sizes",
             "description": "Suitable for small teams and large corporate orders."
@@ -89,7 +89,7 @@
         "column_TYzytf": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/05-fast-turnaround-times.jpg",
+            "image": "",
             "image_alt": "",
             "title": "Fast Turnaround Times",
             "description": "Quick and reliable service."
@@ -98,7 +98,7 @@
         "column_Vy44Ah": {
           "type": "column",
           "settings": {
-            "image": "shopify://shop_images/06-dedicated-support.jpg",
+            "image": "",
             "image_alt": "",
             "title": "Dedicated Support",
             "description": "A team to assist with product selection and customisation."
@@ -117,6 +117,36 @@
       "settings": {
         "heading": "What we offer",
         "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "how-it-works-heading": {
+      "type": "content-block",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "How it Works",
+            "tag": "h2",
+            "size": "h3",
+            "font": "sans"
+          }
+        }
+      },
+      "block_order": [
+        "heading"
+      ],
+      "settings": {
+        "alignment": "center",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "none",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "none",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -190,7 +220,7 @@
         "heading": "Get in Touch",
         "heading_size": "h3",
         "heading_font": "serif",
-        "subheading": "For pricing, product options, and more details, contact our Corporate Orders Team at corporate@trendygolf.com or use the form below.",
+        "subheading": "For pricing, product options, and more details, contact our Corporate Orders Team: corporate@trendygolf.com or use the form below.",
         "show_brand": false,
         "show_phone": true,
         "show_order_number": false,
@@ -199,7 +229,7 @@
         "success_message": "Our Corporate Orders Team will be in touch soon.",
         "success_button_label": "Back to home",
         "success_button_link": "/",
-        "background_image": "shopify://shop_images/01-contact-background.jpg",
+        "background_image": "",
         "enable_animation": true,
         "margin_bottom": "none"
       }
@@ -208,6 +238,7 @@
   "order": [
     "hero",
     "content_columns_j89djM",
+    "how-it-works-heading",
     "how-it-works",
     "enquiry-form"
   ]

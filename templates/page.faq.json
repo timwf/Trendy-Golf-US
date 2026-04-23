@@ -21,7 +21,8 @@
             "heading_size": "h2",
             "heading_font": "serif",
             "media_type": "image",
-            "image": "shopify://shop_images/cbc551c30371f0f3cb5da2fc793507e1.webp",
+            "image": "",
+            "mobile_image": "",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
@@ -113,20 +114,20 @@
             "title": "General"
           }
         },
-        "faq-general-1": {
+        "faq-general-brands": {
           "type": "faq",
           "settings": {
             "category_title": "General",
             "question": "What brands does TRENDYGOLF carry?",
-            "answer": "<p>We carry a wide range of designer golf brands for both Men and Women. Brands we carry include Nike, Adidas, J.LINDEBERG, Ralph Lauren, Manors, Peter Millar and many more! Please visit our BRANDS tab to see a full list.</p>"
+            "answer": "<p>We carry a wide range of designer golf brands for both Men and Women. Brands we carry include Nike, Adidas, J.LINDEBERG, Ralph Lauren, Under Armour and many more! Please visit our BRANDS tab to see a full list.</p>"
           }
         },
-        "faq-general-2": {
+        "faq-general-contact": {
           "type": "faq",
           "settings": {
             "category_title": "General",
             "question": "Where can I contact you?",
-            "answer": "<p>Visit our <a href=\"#\">Contact Us</a> page to get in touch today.</p>"
+            "answer": "<p>Visit our <a href=\"/pages/contact\">Contact Us</a> page to get in touch today.</p>"
           }
         },
         "cat-order-shipping": {
@@ -135,15 +136,15 @@
             "title": "Order & Shipping"
           }
         },
-        "faq-order-shipping-3": {
+        "faq-order-shipping-tracking": {
           "type": "faq",
           "settings": {
             "category_title": "Order & Shipping",
-            "question": "Do I have to pay to return an item?",
-            "answer": "<p>If your order was over £100 you can return your order for free. Within your parcel is a Royal Mail Track 24 label. This is a pre-paid returns label to send your items back to us.</p>"
+            "question": "How can I track my order?",
+            "answer": "<p>Once your order has been shipped an email will be sent to the email address that you have provided with all relevant tracking information for you to track the progress of your parcel. If you do not receive this email then please contact our customer service team who can assist you.</p>"
           }
         },
-        "faq-order-shipping-4": {
+        "faq-order-shipping-changes": {
           "type": "faq",
           "settings": {
             "category_title": "Order & Shipping",
@@ -151,12 +152,12 @@
             "answer": "<p>It is the customer’s responsibility to ensure the shipping address is correct when the order is placed.</p><p>If you do need to make any changes to your order then please contact our customer service team as soon as possible. If your order has not yet been dispatched then our team will be happy to assist you with making changes. Once your order has been dispatched then making changes is more difficult, but our customer service team will be happy to talk through your options.</p>"
           }
         },
-        "faq-order-shipping-5": {
+        "faq-order-shipping-return-pay": {
           "type": "faq",
           "settings": {
             "category_title": "Order & Shipping",
-            "question": "How can I track my order?",
-            "answer": "<p>Once your order has been shipped an email will be sent to the email address that you have provided with all relevant tracking information for you to track the progress of your parcel. If you do not receive this email then please contact our customer service team who can assist you.</p>"
+            "question": "Do I have to pay to return an item?",
+            "answer": "<p>If your order was over £100 you can return your order for free. Within your parcel is a Royal Mail Track 24 label. This is a pre-paid returns label to send your items back to us.</p>"
           }
         },
         "cat-returns": {
@@ -165,15 +166,7 @@
             "title": "Returns"
           }
         },
-        "faq-returns-6": {
-          "type": "faq",
-          "settings": {
-            "category_title": "Returns",
-            "question": "Do you offer free shipping?",
-            "answer": "<p>ALL UK ORDERS</p><p>DPD two-day delivery £2.99 for orders under £100 and FREE for orders over £100</p><p>ORDERS OUTSIDE OF THE UK</p><p>Prices will be displayed at checkout and are dependent on carrier costs.</p><p>Please note that shipping supplements will be incurred for overseas delivery on heavy items such as golf bags, travel bags and other oversize items. This charge will be added to your shipping cost upon checkout.</p>"
-          }
-        },
-        "faq-returns-7": {
+        "faq-returns-how-to": {
           "type": "faq",
           "settings": {
             "category_title": "Returns",
@@ -181,7 +174,15 @@
             "answer": "<p>UK Customers</p><p>Order over £100?</p><p>If your order was over £100 you can return your order for free. Within your parcel is a Royal Mail Track 24 label. This is a pre-paid returns label to send your items back to us. To make your return please:</p><p>1. Package your items up ensuring all tags are attached and the items are in their original condition</p><p>2. Complete the Returns Form which is within your parcel and include this within the package</p><p>3. Stick the Royal Mail Track 24 label to the front of your package</p><p>4. Take this to your local Post Office and obtain proof of posting at the time of sending - please keep hold of the proof of posting until your return has been processed</p>"
           }
         },
-        "faq-returns-8": {
+        "faq-returns-free-shipping": {
+          "type": "faq",
+          "settings": {
+            "category_title": "Returns",
+            "question": "Do you offer free shipping?",
+            "answer": "<p>ALL UK ORDERS</p><p>DPD two-day delivery £2.99 for orders under £100 and FREE for orders over £100</p><p>ORDERS OUTSIDE OF THE UK</p><p>Prices will be displayed at checkout and are dependent on carrier costs.</p><p>Please note that shipping supplements will be incurred for overseas delivery on heavy items such as golf bags, travel bags and other oversize items. This charge will be added to your shipping cost upon checkout.</p>"
+          }
+        },
+        "faq-returns-no-confirmation": {
           "type": "faq",
           "settings": {
             "category_title": "Returns",
@@ -192,20 +193,20 @@
       },
       "block_order": [
         "cat-general",
-        "faq-general-1",
-        "faq-general-2",
+        "faq-general-brands",
+        "faq-general-contact",
         "cat-order-shipping",
-        "faq-order-shipping-3",
-        "faq-order-shipping-4",
-        "faq-order-shipping-5",
+        "faq-order-shipping-tracking",
+        "faq-order-shipping-changes",
+        "faq-order-shipping-return-pay",
         "cat-returns",
-        "faq-returns-6",
-        "faq-returns-7",
-        "faq-returns-8"
+        "faq-returns-how-to",
+        "faq-returns-free-shipping",
+        "faq-returns-no-confirmation"
       ],
       "settings": {
         "heading": "FAQs",
-        "heading_tag": "h1",
+        "heading_tag": "h2",
         "heading_size": "h2",
         "heading_font": "serif",
         "hide_filters": false,
@@ -223,10 +224,10 @@
         "show_order_number": true,
         "submit_label": "Send message",
         "success_heading": "Thanks for getting in touch!",
-        "success_message": "We respond swiftly to enquiries Monday to Friday 8.30am - 4.30pm GMT.",
+        "success_message": "We respond swiftly to inquiries Monday to Friday 8:00am - 4:30pm PDT.",
         "success_button_label": "Back to home",
         "success_button_link": "/",
-        "background_image": "shopify://shop_images/790253f16c6eea100158d252ed49d8948510f6df-3840x2180.webp",
+        "background_image": "",
         "enable_animation": true,
         "margin_bottom": "none"
       }

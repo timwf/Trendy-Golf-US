@@ -45,11 +45,11 @@ Create a new repo (e.g. `trendy-golf-us`) as a **copy** of the UK theme repo at 
 
 ### 1. Repo Setup
 
-- [ ] Create new repo `trendy-golf-us` (or agreed name)
-- [ ] Copy UK theme codebase at a stable commit
-- [ ] Pull US live theme from `trendygolfusa` into `_do-not-use/`
-- [ ] Connect repo to `trendygolfusa` via Shopify GitHub integration
-- [ ] Verify theme appears in Shopify admin and can be previewed
+- [x] Create new repo `trendy-golf-us` (or agreed name)
+- [x] Copy UK theme codebase at a stable commit
+- [x] Pull US live theme from `trendygolfusa` into `_do-not-use/`
+- [x] Connect repo to `trendygolfusa` via Shopify GitHub integration
+- [x] Verify theme appears in Shopify admin and can be previewed
 
 ### 2. US Staging Site Audit
 
@@ -65,12 +65,9 @@ Scrape / audit `trendygolfus.tdrstaging.co.uk` to catalogue:
 
 ### 3. Blog / Article Migration
 
-Same process as UK (see `docs/article-migration.md`):
+See **`docs/us-article-migration.md`** for the full US plan — 70 custom templates, per-template section tally, build order, and the two new sections that need building (`media-text`, `featured-collections`). UK reference at `docs/article-migration.md`.
 
-- Pull US live theme article templates from `_do-not-use/`
-- Map sections to our equivalents
-- Port content into `article.*.json` templates
-- May be a subset of the UK's 50 — or could have US-specific articles
+Current state: all 50 UK custom article templates removed from `templates/`; `article.json` default retained.
 
 ### 4. Brand Page Migration
 

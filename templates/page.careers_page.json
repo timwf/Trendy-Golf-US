@@ -23,7 +23,8 @@
             "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "image",
-            "image": "shopify://shop_images/a5cf415bfcc3a4267412bbcf88e0550763b19b09-3840x2180_1.webp",
+            "image": "",
+            "mobile_image": "",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
@@ -61,7 +62,7 @@
         "para_1": {
           "type": "text",
           "settings": {
-            "text": "<p>TRENDYGOLF is dedicated to revolutionising the way golf enthusiasts approach the game. We blend cutting-edge fashion with functionality, offering our customers the best of both worlds. TRENDYGOLF is a community where golf and fashion intersect seamlessly.</p>"
+            "text": "<p>TRENDYGOLF is dedicated to revolutionising the way golf enthusiasts approach the game. We blend cutting-edge fashion with functionality, offering our customers the best of both worlds. Our mission is to create a community where golf and fashion intersect seamlessly.</p>"
           }
         }
       },
@@ -113,7 +114,7 @@
         "para_join": {
           "type": "text",
           "settings": {
-            "text": "<p>Become a part of TRENDYGOLF and contribute to a dynamic, exciting, and fashionable future in golf. We look forward to seeing what you can bring to our team.</p>"
+            "text": "<p>Become a part of TrendyGolf and contribute to a dynamic, exciting, and fashionable future in golf. We look forward to seeing what you can bring to our team.</p>"
           }
         }
       },
@@ -152,31 +153,31 @@
         "para_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Since 2004 TRENDYGOLF have been answering the question \"Where can we buy this from?\"</p>"
+            "text": "<p>TRENDYGOLF started in January 2004 when two self-confessed golf connoisseurs (Ian and Ben) noticed a new style hitting the fairways on the PGA and European Tour. After a long time searching the internet they finally identified the brand as J.Lindeberg, at the time being famously worn by Swedish golfer and style icon Jesper Parnevik, it then raised the question of “Where can we buy this from?”</p>"
           }
         },
         "para_2": {
           "type": "text",
           "settings": {
-            "text": "<p>Inspired by Jesper Parnevik's famous style, our founders scoured the internet to find where they could get their hands on the look. It was then they discovered J.LINDEBERG but found no way to buy it. That's when TRENDYGOLF was born, becoming a one-stop-shop for golfers worldwide to shop the looks of the most famous golfers.</p>"
+            "text": "<p>After great difficulty and no luck trying to buy the clothing, Ian and Ben decided to create what we now know as TRENDYGOLF, the concept of which was to be a one-stop-shop for all the most fashionable clothing seen on professional golfers worldwide.</p>"
           }
         },
         "para_3": {
           "type": "text",
           "settings": {
-            "text": "<p>Since 2004 the company has spread accross the globe, boasting offices in both the UK and USA. But the mission remains the same, provide the latest golf fashion & accessories that the top players are wearing.</p>"
+            "text": "<p>Since 2004 the company has spread worldwide and now boasts offices both in the UK and USA. But the mantra remains the same, provide the latest fashion and the products that the top players are modelling.</p>"
           }
         },
         "para_4": {
           "type": "text",
           "settings": {
-            "text": "<p>TRENDYGOLF is not only aimed at the fashionable golfer, but is an institution that brings the latest designs from the most sought after designers to the forefront of fashion, both on and off the course.</p>"
+            "text": "<p>TRENDYGOLF is not just aimed at the fashionable golfer; it is an institution that wants to bring the latest designs from the trendiest designers around the world to the forefront of fashion, both on and off course.</p>"
           }
         },
         "para_5": {
           "type": "text",
           "settings": {
-            "text": "<p>It's all about confidence and with TRENDYGOLF as your personal stylist, you'll look your best wherever your round takes you.</p>"
+            "text": "<p>It's all about confidence and with <a href=\"https://trendygolf.com/\">TRENDYGOLF</a> as your personal tailor, you'll at least look good whilst on the course.</p>"
           }
         }
       },
@@ -205,128 +206,128 @@
     "careers-social-grid": {
       "type": "social-grid",
       "blocks": {
-        "grid_item_tUxL8V": {
+        "grid_item_01": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-01-jlindeberg.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "J.Lindeberg Clothing",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_cenMKr": {
+        "grid_item_02": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-02-nike-shoes.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "Nike Golf Shoes",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_E3dcqB": {
+        "grid_item_03": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-03-head-headwear.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "Head Golf Headwear",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_mLzqDt": {
+        "grid_item_04": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-04-trendygolf-clothing.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "TRENDYGOLF Clothing",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_7aAznG": {
+        "grid_item_05": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-05-trendygolf-clothing.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "TRENDYGOLF Clothing",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_gxtkD4": {
+        "grid_item_06": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-06-adidas-originals.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "adidas Golf Originals",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_87Wj6c": {
+        "grid_item_07": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-07-puma.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "Puma Golf Clothing",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_aL8Ag3": {
+        "grid_item_08": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-08-trendygolf-clothing.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "TRENDYGOLF Clothing",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_Py7rwb": {
+        "grid_item_09": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-09-adidas-womens.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "adidas Golf Clothing Women",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_PmWmY4": {
+        "grid_item_10": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-10-head-womens.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "Head Golf Clothing Women",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_9xfnTz": {
+        "grid_item_11": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/banner-2col-men-ralph-lauren.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "Manors Golf Clothing",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_EW6tDL": {
+        "grid_item_12": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/64fca13f15bb8050d32d3121243801c70cd794a6-1080x1080.webp",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "TRENDYGOLF Shoes",
             "link": "",
             "link_icon": "instagram"
           }
         }
       },
       "block_order": [
-        "grid_item_tUxL8V",
-        "grid_item_cenMKr",
-        "grid_item_E3dcqB",
-        "grid_item_mLzqDt",
-        "grid_item_7aAznG",
-        "grid_item_gxtkD4",
-        "grid_item_87Wj6c",
-        "grid_item_aL8Ag3",
-        "grid_item_Py7rwb",
-        "grid_item_PmWmY4",
-        "grid_item_9xfnTz",
-        "grid_item_EW6tDL"
+        "grid_item_01",
+        "grid_item_02",
+        "grid_item_03",
+        "grid_item_04",
+        "grid_item_05",
+        "grid_item_06",
+        "grid_item_07",
+        "grid_item_08",
+        "grid_item_09",
+        "grid_item_10",
+        "grid_item_11",
+        "grid_item_12"
       ],
       "name": "t:sections.social_grid.presets.name",
       "settings": {

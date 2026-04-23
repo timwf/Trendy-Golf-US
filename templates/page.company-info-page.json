@@ -16,14 +16,15 @@
           "type": "slide",
           "settings": {
             "content_alignment": "bottom",
-            "subheading": "TRENDYGOLF is revolutionising the way golf enthusiasts approach the game. Blending cutting-edge fashion with functionality, we're offering our customers the best of both worlds. We're creating a community where golf and fashion intersect seamlessly.",
+            "subheading": "TRENDYGOLF is dedicated to revolutionising the way golf enthusiasts approach the game. We blend cutting-edge fashion with functionality, offering our customers the best of both worlds. Our mission is to create a community where golf and fashion intersect seamlessly.",
             "heading_first": false,
             "heading": "About us",
             "heading_size": "h2",
             "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "image",
-            "image": "shopify://shop_images/9b0e9e6ee32933a268fe90af683da15ebcd7b627-3840x2180.webp",
+            "image": "",
+            "mobile_image": "",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
@@ -97,36 +98,6 @@
         "enable_animation": true
       }
     },
-    "about-stores-heading": {
-      "type": "content-block",
-      "blocks": {
-        "heading": {
-          "type": "heading",
-          "settings": {
-            "text": "Stores",
-            "tag": "h2",
-            "size": "h2",
-            "font": "serif"
-          }
-        }
-      },
-      "block_order": [
-        "heading"
-      ],
-      "settings": {
-        "alignment": "center",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "8",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
-        "enable_animation": true
-      }
-    },
     "about-stores": {
       "type": "banner-cards",
       "blocks": {
@@ -134,8 +105,8 @@
           "type": "card",
           "settings": {
             "heading": "Canary Wharf",
-            "image": "shopify://shop_images/98d5fd630f8d10bdffe173581724260c4bbb01eb-720x720.webp",
-            "link": "shopify://pages/trendygolf-canary-wharf-store-premium-golf-store",
+            "image": "",
+            "link": "/flagship-stores/canary-wharf",
             "button_label": "EXPLORE"
           }
         },
@@ -143,8 +114,8 @@
           "type": "card",
           "settings": {
             "heading": "Manchester",
-            "image": "shopify://shop_images/74472bffae5502d4f1dc507986d928e7cc29957e-720x720.webp",
-            "link": "shopify://pages/trendygolf-manchester",
+            "image": "",
+            "link": "/flagship-stores/manchester",
             "button_label": "EXPLORE"
           }
         }
@@ -166,128 +137,128 @@
     "about-social-grid": {
       "type": "social-grid",
       "blocks": {
-        "grid_item_tUxL8V": {
+        "grid_item_01": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-01-jlindeberg.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "J. Lindeberg Clothing",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_cenMKr": {
+        "grid_item_02": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-02-nike-shoes.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "Nike Golf Shoes",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_E3dcqB": {
+        "grid_item_03": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-03-head-headwear.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "Head Golf Headwear",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_mLzqDt": {
+        "grid_item_04": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-04-trendygolf-clothing.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "TRENDYGOLF Clothing",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_7aAznG": {
+        "grid_item_05": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-05-trendygolf-clothing.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "TRENDYGOLF Clothing",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_gxtkD4": {
+        "grid_item_06": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-06-adidas-originals.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "adidas Golf Originals",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_87Wj6c": {
+        "grid_item_07": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-07-puma.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "Puma Golf Clothing",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_aL8Ag3": {
+        "grid_item_08": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-08-trendygolf-clothing.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "TRENDYGOLF Clothing",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_Py7rwb": {
+        "grid_item_09": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-09-adidas-womens.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "adidas Golf Clothing Women",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_PmWmY4": {
+        "grid_item_10": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-10-head-womens.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "Head Golf Clothing Women",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_9xfnTz": {
+        "grid_item_11": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/banner-2col-men-ralph-lauren.jpg",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "Manors Golf Clothing",
             "link": "",
             "link_icon": "instagram"
           }
         },
-        "grid_item_EW6tDL": {
+        "grid_item_12": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/64fca13f15bb8050d32d3121243801c70cd794a6-1080x1080.webp",
-            "image_alt": "",
+            "image": "",
+            "image_alt": "TRENDYGOLF Shoes",
             "link": "",
             "link_icon": "instagram"
           }
         }
       },
       "block_order": [
-        "grid_item_tUxL8V",
-        "grid_item_cenMKr",
-        "grid_item_E3dcqB",
-        "grid_item_mLzqDt",
-        "grid_item_7aAznG",
-        "grid_item_gxtkD4",
-        "grid_item_87Wj6c",
-        "grid_item_aL8Ag3",
-        "grid_item_Py7rwb",
-        "grid_item_PmWmY4",
-        "grid_item_9xfnTz",
-        "grid_item_EW6tDL"
+        "grid_item_01",
+        "grid_item_02",
+        "grid_item_03",
+        "grid_item_04",
+        "grid_item_05",
+        "grid_item_06",
+        "grid_item_07",
+        "grid_item_08",
+        "grid_item_09",
+        "grid_item_10",
+        "grid_item_11",
+        "grid_item_12"
       ],
       "name": "t:sections.social_grid.presets.name",
       "settings": {
@@ -300,7 +271,6 @@
   "order": [
     "about-hero",
     "about-copy",
-    "about-stores-heading",
     "about-stores",
     "about-social-grid"
   ]

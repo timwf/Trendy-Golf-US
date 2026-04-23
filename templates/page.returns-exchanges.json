@@ -12,6 +12,7 @@
     "main": {
       "type": "returns-body",
       "settings": {
+        "body_content": "<h1>Returns &amp; exchanges</h1><h2>Returns</h2><p><strong>RETURNS – United States Customers</strong></p><p>Try your purchase on in the comfort of your own home and let us know right away if you're unhappy for any reason.</p><p><strong>Return Instructions for Domestic Orders</strong><br>Visit: <a href=\"https://returns.trendygolfusa.com/\" target=\"_blank\" rel=\"noreferrer\"><strong>returns.trendygolfusa.com</strong></a></p><p>You have <strong>30 days</strong> from receiving your order to return items.</p><p>To be eligible for a return:<br>unworn, unwashed, and in brand-new condition<br><br>original tags and packaging (including branded polybags) must be included free of lint, hair, and odour, and folded appropriately</p><p>Returns that arrive in used condition or without packaging may be subject to a <strong>$10 cleaning fee</strong> or <strong>denied entirely</strong></p><h3>How to Start Your Return</h3><p>Visit: <a href=\"https://returns.trendygolfusa.com/\" target=\"_blank\" rel=\"noreferrer\"><strong>returns.trendygolfusa.com</strong></a></p><p>From there, you can:<br>FedEx return label (or use your own courier)<br><br>QR code for printer-free drop-off at FedEx</p><p>Don't forget to include a note with your <strong>order number</strong>, the <strong>items returned</strong>, and your <strong>return preference</strong> (refund or store credit).</p><h3>Return Shipping</h3><p>Qualify for a <strong>free FedEx return label</strong> customer's expense</p><p>TRENDYGOLF is not responsible for returned items until they are received. Always retain proof of postage.</p><h2>International Returns</h2><p>If you're returning from outside the USA, please use our <a href=\"https://returns.trendygolfusa.com/#/\" target=\"_blank\" rel=\"noreferrer\">Returns Portal</a> to begin the process.</p><ul><li>You can also choose to return your items using your own courier at your own cost.</li></ul><p>We highly recommend using a <strong>tracked delivery service</strong> for all international returns. Make sure your name and order number are included inside the return package.</p><p>All items must be returned with the polythene bag and all tags attached as per our terms and conditions of sale. If an item is returned in a state that cannot be resold, then the product maybe refused and will be returned to the customer accordingly.</p><p>International orders can be returned at the financial responsibility of the customer. Items should be marked \"Returns of no commercial value\" for entry to the USA. Returns will not be accepted by TRENDYGOLF if shipped COD (cash on delivery). It is recommended that packages are shipped insured and with a signature required as the package is the responsibility of the customer until it reaches our returns department.</p><p>Please be sure all items being sent back to TRENDYGOLF are new, unworn, and with tags attached in original packaging.</p><p>Credit will not be issued on any shipping or duty fees incurred for either the outgoing shipment or incoming shipment. This is the financial responsibility of the customer.</p><h2>Exchanging</h2><h3>Need a different size?</h3><p>You can now request an exchange directly through our <a href=\"https://returns.trendygolfusa.com/#/\" target=\"_blank\" rel=\"noreferrer\">Exchanges &amp; Returns Portal</a>. Just select the item you want to exchange and choose your preferred size — if it's in stock, we'll reserve it and ship it to you as soon as we receive your original item.</p><h3>Here's how it works:</h3><ol><li>Head to the portal and select <strong>\"Exchange\"</strong> for the item you'd like to swap</li><li>Choose your preferred size or variant</li><li>Send your original item back using the label or QR code provided. Or you preferred tacked service.</li><li>*Once received and approved, we'll ship your exchange out to you</li></ol><p>*If the item you want isn't available at the time of processing, don't worry — we'll issue you a refund instead so you can reorder or choose something else.</p><p>Telephone: 424-290-3101<br>Monday - Friday 8.00am - 4.30pm PST</p><p>Email: <a href=\"mailto:hello@trendygolf.com\">hello@trendygolf.com</a></p><p>Please enclose a note with the reason for your return, your order number, and the items you wish to return and what you would like to do, i.e. return for a store credit, an exchange or full refund. Items must be returned in original packaging with all tags. We will only accept returned items unworn / un-damaged.</p><p>Please send all returns to the following address:</p><p>TRENDYGOLF Ltd, Returns Department,<br>120 Standard St.<br>El Segundo, CA 90245<br>United States</p><p>All items must be returned with the polythene bag and all tags attached as per our terms and conditions of sale. If an item is returned in a state that cannot be resold, then the product maybe refused and will be returned to the customer accordingly.</p>",
         "enable_animation": false
       }
     },
@@ -37,7 +38,10 @@
           }
         }
       },
-      "block_order": ["heading", "button"],
+      "block_order": [
+        "heading",
+        "button"
+      ],
       "settings": {
         "alignment": "center",
         "background_color": "transparent",
@@ -53,5 +57,8 @@
       }
     }
   },
-  "order": ["main", "help_cta"]
+  "order": [
+    "main",
+    "help_cta"
+  ]
 }

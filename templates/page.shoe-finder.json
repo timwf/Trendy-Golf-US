@@ -17,10 +17,10 @@
           "settings": {
             "question": "What type of golf shoe are you looking for?",
             "answer_1_label": "Mens",
-            "answer_1_image": "shopify://shop_images/57d6b6cbfb4e5be2461cce9bef7d88c725f32ef9-1080x1080.webp",
+            "answer_1_image": "",
             "answer_1_tag": "Men",
             "answer_2_label": "Womens",
-            "answer_2_image": "shopify://shop_images/7ed8f9bb5f8b45a4a6923fa6a77ee92e05806040-1080x1080.webp",
+            "answer_2_image": "",
             "answer_2_tag": "Women",
             "answer_3_label": "",
             "answer_3_tag": "",
@@ -32,10 +32,10 @@
           "settings": {
             "question": "Do you prefer spiked or spikeless shoes?",
             "answer_1_label": "Spiked, for maximum traction",
-            "answer_1_image": "shopify://shop_images/b087eecc43b813b27eb9a0dbc0de19943006c6de-1080x1080.webp",
+            "answer_1_image": "",
             "answer_1_tag": "Cleated",
             "answer_2_label": "Normal, for softer courses",
-            "answer_2_image": "shopify://shop_images/6153d49ba071f48ddeb2a651344d7fef1bc3bc07-1024x1024.webp",
+            "answer_2_image": "",
             "answer_2_tag": "Spikeless",
             "answer_3_label": "",
             "answer_3_tag": "",
@@ -47,10 +47,10 @@
           "settings": {
             "question": "Which shoe style appeals to you most?",
             "answer_1_label": "Classic, traditional leather",
-            "answer_1_image": "shopify://shop_images/64fca13f15bb8050d32d3121243801c70cd794a6-1080x1080.webp",
+            "answer_1_image": "",
             "answer_1_tag": "Classic",
             "answer_2_label": "Modern, athletic sneaker style",
-            "answer_2_image": "shopify://shop_images/c60e65e618ba328164dbed2852c3e2513cf6552e-1080x1080.webp",
+            "answer_2_image": "",
             "answer_2_tag": "Modern",
             "answer_3_label": "",
             "answer_3_tag": "",
@@ -62,13 +62,13 @@
           "settings": {
             "question": "Do you have a colour preference?",
             "answer_1_label": "Black",
-            "answer_1_image": "shopify://shop_images/07-shoefinder-q4-black.png",
+            "answer_1_image": "",
             "answer_1_tag": "Black",
             "answer_2_label": "White",
-            "answer_2_image": "shopify://shop_images/07-shoefinder-q4-white.png",
+            "answer_2_image": "",
             "answer_2_tag": "White",
             "answer_3_label": "Other",
-            "answer_3_image": "shopify://shop_images/07-shoefinder-q4-other.png",
+            "answer_3_image": "",
             "answer_3_tag": "Other",
             "skip_label": "Any colour"
           }
@@ -81,10 +81,10 @@
         "q4"
       ],
       "settings": {
-        "background_image": "shopify://shop_images/8d95a6243147f06318f19ae09f73b56e5c2a80f4-3024x1964.webp",
+        "background_image": "",
         "heading": "Find your perfect golf shoe.",
         "cta_label": "",
-        "results_collection": "mens-spikeless-golf-shoes",
+        "results_collection": "mens-golf-shoes",
         "results_heading": "Your footwear lineup",
         "results_heading_all": "All golf shoes",
         "outro_heading": "Nice find!",

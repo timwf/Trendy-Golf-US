@@ -21,7 +21,7 @@
             "heading_size": "h2",
             "heading_font": "serif",
             "media_type": "image",
-            "image": "shopify://shop_images/246fdaffb952618ca81046b371231fafd3daeff1-3840x2160.webp",
+            "image": "",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
@@ -50,7 +50,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "text": "For over 20 years we have been defining style and fashion in golf",
+            "text": "For over 20 years we have been defining style and fashion in golf.",
             "tag": "h2",
             "size": "h4",
             "font": "sans"
@@ -98,179 +98,188 @@
     "tglab-logos": {
       "type": "logo-marquee",
       "blocks": {
-        "logo_1": {
+        "logo_rlx": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/2339386aaef402d3d92ea0c3e5a176da637a0703-250x197.png",
-            "alt_text": "Brand logo",
+            "image": "",
+            "alt_text": "RLX",
             "link": ""
           }
         },
-        "logo_2": {
+        "logo_manors": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/d8edcd4db64cd280ad2cbeaf2fc976eca345cfc6-250x197.png",
-            "alt_text": "Brand logo",
+            "image": "",
+            "alt_text": "Manors",
             "link": ""
           }
         },
-        "logo_3": {
+        "logo_adidas": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/f3b5abf91035c916ce4d79c14356b72840d76ff2-250x197.png",
-            "alt_text": "Brand logo",
+            "image": "",
+            "alt_text": "Adidas",
             "link": ""
           }
         },
-        "logo_4": {
+        "logo_malbon": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/ecb05df6180221543032a74ba2eae677195cacbf-250x197.png",
-            "alt_text": "Brand logo",
+            "image": "",
+            "alt_text": "Malbon",
             "link": ""
           }
         },
-        "logo_9ppWqk": {
+        "logo_jlindeberg": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/ab6768d7857220c26946bd19931187fb9399a472-250x197.png",
-            "alt_text": "",
+            "image": "",
+            "alt_text": "J.Lindeberg",
             "link": ""
           }
         },
-        "logo_5": {
+        "logo_boss": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/f6484db891de92a051c91df38d6f156620e2f2f6-250x197.png",
-            "alt_text": "Brand logo",
+            "image": "",
+            "alt_text": "BOSS",
             "link": ""
           }
         },
-        "logo_CNMhKC": {
+        "logo_footjoy": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/b74dd0281777fe88a5df0d5c937c2ec0e9a41ad3-250x197.png",
-            "alt_text": "",
+            "image": "",
+            "alt_text": "FootJoy",
             "link": ""
           }
         },
-        "logo_6": {
+        "logo_gfore": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/ce84a539967d6286aef22246ac13a86ae4de2836-250x197.png",
-            "alt_text": "Brand logo",
+            "image": "",
+            "alt_text": "G/FORE",
             "link": ""
           }
         },
-        "logo_LGbQnG": {
+        "logo_goatlane": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/a7a03645dbc24bcba8a2b03e035d32379771dc37-250x197.png",
-            "alt_text": "",
+            "image": "",
+            "alt_text": "GOATLANE",
             "link": ""
           }
         },
-        "logo_R3C8kt": {
+        "logo_jordan": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/463f6dbcf63a0e24ecb5f7ddfab90f50a5340615-250x197.png",
-            "alt_text": "",
+            "image": "",
+            "alt_text": "Jordan",
             "link": ""
           }
         },
-        "logo_KB9pEN": {
+        "logo_kjus": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/b2183877d99ec23dbf9df5854decb80c9f0ec443-250x197.png",
-            "alt_text": "",
+            "image": "",
+            "alt_text": "KJUS",
             "link": ""
           }
         },
-        "logo_F4cy8A": {
+        "logo_nike": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/2e8a439018196ba88b60e001b6213d988682a2cb-250x197.png",
-            "alt_text": "",
+            "image": "",
+            "alt_text": "Nike",
             "link": ""
           }
         },
-        "logo_nyqP8i": {
+        "logo_3puttround": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/67d0061656688d415c6f616d6cc108e8fa60f3e9-250x197.png",
-            "alt_text": "",
+            "image": "",
+            "alt_text": "3 Putt Round",
             "link": ""
           }
         },
-        "logo_kxETxf": {
+        "logo_petermillar": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/62765da44c5124eb62154400fa1d02f1e16295f8-250x197.png",
-            "alt_text": "",
+            "image": "",
+            "alt_text": "Peter Millar",
             "link": ""
           }
         },
-        "logo_MmVF3r": {
+        "logo_puma": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/9499b603f04cfa5f0d2f8f81264a44209cdb3a07-250x197.png",
-            "alt_text": "",
+            "image": "",
+            "alt_text": "Puma",
             "link": ""
           }
         },
-        "logo_NgJEGV": {
+        "logo_vessel": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/4d1c7b3019cb6e16a6b813049be618e19a4550a2-250x197.png",
-            "alt_text": "",
+            "image": "",
+            "alt_text": "Vessel",
             "link": ""
           }
         },
-        "logo_NX7zJL": {
+        "logo_walkergolf": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/8ed63e769c3687292890bdaa2157bb89a6b8c4b3-250x197.png",
-            "alt_text": "",
+            "image": "",
+            "alt_text": "Walker Golf Things",
             "link": ""
           }
         },
-        "logo_gL67PU": {
+        "logo_wolsey": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/57ed57374cff666f3eae132f19d76c0a96eaa81a-250x197.png",
-            "alt_text": "",
+            "image": "",
+            "alt_text": "Wolsey",
             "link": ""
           }
         },
-        "logo_tpgmR7": {
+        "logo_apc": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/05bd757816a3ee9a116a73f2698170b8e8da0c9d-250x197.png",
-            "alt_text": "",
+            "image": "",
+            "alt_text": "A.P.C.",
+            "link": ""
+          }
+        },
+        "logo_head": {
+          "type": "logo",
+          "settings": {
+            "image": "",
+            "alt_text": "Head",
             "link": ""
           }
         }
       },
       "block_order": [
-        "logo_1",
-        "logo_2",
-        "logo_3",
-        "logo_4",
-        "logo_9ppWqk",
-        "logo_5",
-        "logo_CNMhKC",
-        "logo_6",
-        "logo_LGbQnG",
-        "logo_R3C8kt",
-        "logo_KB9pEN",
-        "logo_F4cy8A",
-        "logo_nyqP8i",
-        "logo_kxETxf",
-        "logo_MmVF3r",
-        "logo_NgJEGV",
-        "logo_NX7zJL",
-        "logo_gL67PU",
-        "logo_tpgmR7"
+        "logo_rlx",
+        "logo_manors",
+        "logo_adidas",
+        "logo_malbon",
+        "logo_jlindeberg",
+        "logo_boss",
+        "logo_footjoy",
+        "logo_gfore",
+        "logo_goatlane",
+        "logo_jordan",
+        "logo_kjus",
+        "logo_nike",
+        "logo_3puttround",
+        "logo_petermillar",
+        "logo_puma",
+        "logo_vessel",
+        "logo_walkergolf",
+        "logo_wolsey",
+        "logo_apc",
+        "logo_head"
       ],
       "settings": {
         "margin_bottom": "small"
@@ -342,7 +351,7 @@
         "success_message": "Our buying team will review your submission and be in touch if there’s a fit.",
         "success_button_label": "Back to home",
         "success_button_link": "/",
-        "background_image": "shopify://shop_images/790253f16c6eea100158d252ed49d8948510f6df-3840x2180.webp",
+        "background_image": "",
         "enable_animation": true,
         "margin_bottom": "none"
       }

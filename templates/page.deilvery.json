@@ -12,6 +12,7 @@
     "main": {
       "type": "delivery-body",
       "settings": {
+        "body_content": "<h1>Delivery</h1><h2>US delivery</h2><p>Free FedEx Delivery on all orders $150.00 and over to the United States (Mainland) *Additional charges may apply for shoes and bags<br><br>All orders within the US placed by 1200 hrs PST time will be shipped the same day. Orders under $150.00 will incur a delivery charge between $14.99 and $19.99, depending on the order value and service selected. <strong>*Additional charges may apply for shoes and bags</strong>. Standard delivery within 2-3 business days using the FedEx Express delivery service.</p><p>Unfortunately, we are <strong>unable to deliver to PO boxes</strong> due to FedEx regulations. Please make sure your address provided includes a residential or commercial street address.</p><p>Please note that surcharges may be incurred on <strong>heavy items such as shoes, travel bags, and other oversized items</strong>. This charge will be added to your shipping cost upon checkout.</p><p>Delivery/Rates<br>*DOMESTIC Orders<br>FedEx Ground (Over $150) -- FREE SHIPPING<br>FedEx 2-Day Express (Standard) -- $14.99<br>FedEx 2-Day Express (Heavyweight) -- $24.99<br>FedEx Ground (Under $150) -- $8.99<br>FedEx Overnight - calculated at checkout based on your delivery location.<br>*INTERNATIONAL shipping costs will be calculated at the time of checkout and will reflect live updated rates<br>provided by FedEx</p><p>Upgrades on delivery options will be shown on our checkout pages and will ship using express mail options provided by FedEx. All orders over $500.00 will require an indirect or direct signature upon delivery. Please contact us either by phone or email if you would like to waive the signature option. We recommend shipping to a location where someone may be present.</p><p>TRENDYGOLF Orders are the recipient's responsibility once a package is <strong>delivered</strong> and or <strong>signed</strong> for. However, we will help assist with any delivery inquiries once a package is shipped. Please provide your order number when needing assistance.</p><h2>International Delivery</h2><p>Orders outside the US will be dispatched using the FedEx international economy service the day of ordering and can take 5-10 business days depending on where the package is being shipped. Tracking information will be emailed to you once your order has been dispatched.</p><p><strong>Shipping costs</strong> will be calculated at the time of checkout and will reflect live updated rates<br>provided by FedEx</p><p>Please note that surcharges may be incurred on <strong>heavy items such as shoes, travel bags, and other oversized items</strong>. This charge will be added to your shipping cost upon checkout.</p><p>January 1, 2020, <strong>Nike will not permit international shipping</strong> (defined as shipping outside of our trading territory) of Nike products to consumers. Shipping to consumers internationally is in violation of Nike Terms &amp; Conditions of Sale.</p><h2>Custom Charges</h2><p>TRENDYGOLF is not responsible for brokerage fees, import taxes or duties applied when the package enters the destination country. Customers should consult the customs legislation of their country. Returns and exchanges are the responsibility of the recipient.</p><p>If orders are refused by customers at the point of delivery or if there is a chargeback to TRENDYGOLF for return shipping or duties, the customer is financially responsible and it will be deducted from their credit.</p>",
         "enable_animation": true
       }
     },
@@ -37,7 +38,10 @@
           }
         }
       },
-      "block_order": ["heading", "button"],
+      "block_order": [
+        "heading",
+        "button"
+      ],
       "settings": {
         "alignment": "center",
         "background_color": "transparent",
@@ -53,5 +57,8 @@
       }
     }
   },
-  "order": ["main", "help_cta"]
+  "order": [
+    "main",
+    "help_cta"
+  ]
 }

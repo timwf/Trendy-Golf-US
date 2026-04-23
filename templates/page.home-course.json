@@ -1,0 +1,365 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "homecourse-hero": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "Where Golf and Culture combine for a innovative retail experience",
+            "heading_first": true,
+            "heading": "TRENDYGOLF HOME COURSE",
+            "heading_size": "h2",
+            "use_as_page_h1": true,
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "",
+            "mobile_image": "",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 7,
+            "button_label": "",
+            "button_link": "",
+            "button_style": "dark-grey"
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "aria_label": "TRENDYGOLF Home Course hero",
+        "margin_bottom": "large"
+      }
+    },
+    "homecourse-intro": {
+      "type": "content-block",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "text": "A Personalized Shopping Experience",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "para_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At The Home Course, golf style meets lifestyle. Our location is in a premium barbershop in Solana Beach. Here, modern retail combines with relaxed California culture. You can explore a handpicked selection of golf apparel and accessories. We offer expert styling advice and a personal approach that goes well beyond just browsing the racks.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "para_1"
+      ],
+      "settings": {
+        "alignment": "center",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "28",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "20",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
+      }
+    },
+    "homecourse-contact": {
+      "type": "icon-grid",
+      "blocks": {
+        "contact_visit": {
+          "type": "column",
+          "settings": {
+            "icon": "map-pin",
+            "title": "Visit Us",
+            "description": "344 S Cedros Ave\nSolana Beach\nCA 92075\nUnited States",
+            "link": "https://www.google.co.uk/maps/place/Home+Course/@32.9904212,-117.2767086,14.61z/data=!4m6!3m5!1s0x80dc0f6ef8a58f2d:0xd5a91ddab76880bf!8m2!3d32.9882074!4d-117.2692644!16s%2Fg%2F11y8h9lnvm",
+            "link_label": "Google Maps",
+            "show_arrow": true,
+            "show_social_channels": false
+          }
+        },
+        "contact_call": {
+          "type": "column",
+          "settings": {
+            "icon": "device-phone-mobile",
+            "title": "Call Us",
+            "description": "Our lines are open 08:00 - 16:30, Monday to Friday.",
+            "link": "tel:424-290-3101",
+            "link_label": "424-290-3101",
+            "show_arrow": true,
+            "show_social_channels": false
+          }
+        },
+        "contact_email": {
+          "type": "column",
+          "settings": {
+            "icon": "envelope",
+            "title": "Email Us",
+            "description": "Want to learn more? Send us an email.",
+            "link": "mailto:hello@trendygolf.com",
+            "link_label": "HomeCourse@TrendyGolf.com",
+            "show_arrow": true,
+            "show_social_channels": false
+          }
+        }
+      },
+      "block_order": [
+        "contact_visit",
+        "contact_call",
+        "contact_email"
+      ],
+      "settings": {
+        "desktop_columns": "three",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "homecourse-logos": {
+      "type": "logo-marquee",
+      "blocks": {
+        "logo_rlx": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "RLX", "link": "" }
+        },
+        "logo_manors": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Manors", "link": "" }
+        },
+        "logo_adidas": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Adidas", "link": "" }
+        },
+        "logo_malbon": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Malbon", "link": "" }
+        },
+        "logo_jlindeberg": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "J.Lindeberg", "link": "" }
+        },
+        "logo_adidas_originals": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "adidas Golf Originals", "link": "" }
+        },
+        "logo_bogey_boys": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Bogey Boys", "link": "" }
+        },
+        "logo_blue_tees": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Blue Tees Golf", "link": "" }
+        },
+        "logo_boss": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "BOSS", "link": "" }
+        },
+        "logo_cole_hann": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Cole Haan", "link": "" }
+        },
+        "logo_extracurricular": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Extracurricular", "link": "" }
+        },
+        "logo_footjoy": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "FootJoy", "link": "" }
+        },
+        "logo_gfore": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "G/FORE", "link": "" }
+        },
+        "logo_galvin_green": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Galvin Green", "link": "" }
+        },
+        "logo_goatlane": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "GOATLANE", "link": "" }
+        },
+        "logo_greyson": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Greyson", "link": "" }
+        },
+        "logo_jones_bags": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Jones Golf Bags", "link": "" }
+        },
+        "logo_jordan": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Jordan", "link": "" }
+        },
+        "logo_kjus": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "KJUS", "link": "" }
+        },
+        "logo_new_balance": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "New Balance", "link": "" }
+        },
+        "logo_nike": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Nike", "link": "" }
+        },
+        "logo_no_member": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "No Member", "link": "" }
+        },
+        "logo_3puttround": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "3 Putt Round", "link": "" }
+        },
+        "logo_peter_millar": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Peter Millar", "link": "" }
+        },
+        "logo_puma": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Puma", "link": "" }
+        },
+        "logo_reflo": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Reflo", "link": "" }
+        },
+        "logo_solex": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Solex", "link": "" }
+        },
+        "logo_sounders": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Sounders Golf", "link": "" }
+        },
+        "logo_under_armour": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Under Armour", "link": "" }
+        },
+        "logo_vessel": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Vessel", "link": "" }
+        },
+        "logo_walkergolf": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Walker Golf Things", "link": "" }
+        },
+        "logo_wolsey": {
+          "type": "logo",
+          "settings": { "image": "", "alt_text": "Wolsey", "link": "" }
+        }
+      },
+      "block_order": [
+        "logo_rlx",
+        "logo_manors",
+        "logo_adidas",
+        "logo_malbon",
+        "logo_jlindeberg",
+        "logo_adidas_originals",
+        "logo_bogey_boys",
+        "logo_blue_tees",
+        "logo_boss",
+        "logo_cole_hann",
+        "logo_extracurricular",
+        "logo_footjoy",
+        "logo_gfore",
+        "logo_galvin_green",
+        "logo_goatlane",
+        "logo_greyson",
+        "logo_jones_bags",
+        "logo_jordan",
+        "logo_kjus",
+        "logo_new_balance",
+        "logo_nike",
+        "logo_no_member",
+        "logo_3puttround",
+        "logo_peter_millar",
+        "logo_puma",
+        "logo_reflo",
+        "logo_solex",
+        "logo_sounders",
+        "logo_under_armour",
+        "logo_vessel",
+        "logo_walkergolf",
+        "logo_wolsey"
+      ],
+      "settings": {
+        "margin_bottom": "medium"
+      }
+    },
+    "homecourse-space": {
+      "type": "fifty-fifty",
+      "settings": {
+        "image": "",
+        "image_alt": "The Home Course interior",
+        "heading": "A Space Designed for Golf, Style & Community",
+        "body": "<p>Located inside a premium barbershop in Solana Beach, The Home Course is more than a retail space — it’s a community hub for golf culture, lifestyle, and design. Discover the latest collections and collaborations from leading brands shaping the modern game:</p><p><strong>Apparel & Accessories:</strong><br>Malbon, G/FORE, J.Lindeberg, Kjus, Peter Millar, adidas, and more — curated to blend performance with everyday wear.</p><p><strong>Lifestyle & Atmosphere:</strong><br>Shop, connect, and unwind in a unique environment that fuses golf retail with the relaxed California spirit.</p>",
+        "layout": "image-left",
+        "cta_label": "",
+        "cta_link": "",
+        "cta_style": "dark-grey",
+        "cta_has_arrow": true,
+        "background_color": "transparent",
+        "enable_animation": true,
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "28",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "20",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none"
+      }
+    },
+    "homecourse-personalized": {
+      "type": "fifty-fifty",
+      "settings": {
+        "image": "",
+        "image_alt": "Personalized shopping at The Home Course",
+        "heading": "A Personalized Shopping Experience",
+        "body": "<p>At TRENDYGOLF Home Course we go beyond retail—we offer a truly personalized shopping experience, ensuring you have access to the best products and services:</p><ul><li>✔ <strong>Personal Shopping</strong> – Available in-store or by appointment outside regular hours</li><li>✔ <strong>One-on-One Fitting & Styling</strong> – Expert advice tailored to your needs</li><li>✔ <strong>Virtual Shopping</strong> – Connect with us remotely for product recommendations</li><li>✔ <strong>In-Office & In-Home Shopping</strong> – Bringing the boutique experience to you</li></ul>",
+        "layout": "image-right",
+        "cta_label": "",
+        "cta_link": "",
+        "cta_style": "dark-grey",
+        "cta_has_arrow": true,
+        "background_color": "transparent",
+        "enable_animation": true,
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "28",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "20",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none"
+      }
+    }
+  },
+  "order": [
+    "homecourse-hero",
+    "homecourse-intro",
+    "homecourse-contact",
+    "homecourse-logos",
+    "homecourse-space",
+    "homecourse-personalized"
+  ]
+}
