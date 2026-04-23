@@ -6,18 +6,8 @@
   id="delivery-body-{{ section.id }}">
   <div data-inview="false" class="group-inview group/blocks">
     <div class="container-narrow text-left">
-      <div class="opacity-0 -translate-y-14 transition-all duration-1000 ease animation-group group-data-[inview=true]/blocks:opacity-100 group-data-[inview=true]/blocks:translate-y-0">
-        <h1><span class="font-serif"><span class="text-4xl lg:text-5xl">Delivery</span></span></h1>
-        <p></p>
-        <h2><span class="text-xl lg:text-2xl"><span class="font-bold">UK delivery</span></span></h2>
-        <p>UK orders will be sent using one of the many services provided by our courier partners <a href="https://www.dpd.co.uk/content/products_services/uk_services.jsp" target="_blank" rel="noreferrer" class="text-clubhouse-green-600 underline">DPD</a> , and we will endeavour to have your parcel with you within 48 hours, when an order is placed before 4pm BST Monday - Friday.<br><br>All orders after 4pm BST will be despatched the following day on the service you have selected and multiple options will be offered to you by text and email once your parcel has been despatched if you wish to change any information.<br>Take a look at the short video below of how DPD are improving the way we ship parcels to you; </p>
-        <p>Please note: There are some postcodes that the UK DPD TWO DAY Delivery Service is the fastest delivery service that we can offer. Next Day shipping will be unavailable for some select postcodes. For a full list of these postcodes please email:<a href="mailto:info@trendygolf.com" class="text-clubhouse-green-600 underline">info@trendygolf.com</a></p>
-        <h2><span class="text-3xl lg:text-4xl"><span class="text-xl lg:text-2xl"><span class="font-bold">UK - Same day delivery</span></span></span></h2>
-        <p>We can offer a same day delivery service through Royal Mail Same Day delivery, please <a href="/pages/contact" class="text-clubhouse-green-600 underline">contact us</a> by 12pm BST on the day of ordering, and we will be able to give you a price within one hour, for a same day delivery. Prices are based on mileage from our warehouse on the south coast and are subject to availability.</p>
-        <h2><span class="text-3xl lg:text-4xl"><span class="text-xl lg:text-2xl"><span class="font-bold">European and International delivery</span></span></span></h2>
-        <p>All orders outside of the UK will be dispatched on the day of ordering using DHL Express Delivery service, delivery times can vary but with extensive tracking information provided by DHL Express , you will be able to monitor the progress of your parcel, tracking information will be emailed to you once the order has been dispatched.<br><br>Please note that Shipping supplements will be incurred for overseas delivery on heavy items such as Golf club bags, Travel Bags and other over size items. This charge will be added to your shipping cost upon checkout.</p>
-        <p><span class="text-3xl lg:text-4xl"><span class="text-xl lg:text-2xl"><span class="font-bold">General delivery policies</span></span></span></p>
-        <p>Delivery times are based on orders placed before 4pm BST on a working day (Monday - Friday), these will be processed and shipped the same day providing that your payment has been accepted and your items are in stock.<br><br>Orders placed after 4pm BST will be dispatched on the next working day, (Monday - Friday). Orders placed on weekends or bank holidays will be dispatched on the next working day.<br><br>Please Note: A person must be present at the address to collect the parcel(s). If nobody is present then a card will be left with information on how to collect your order.<br><br>Please note: There are some postcodes that the DPD Standard Two Day Delivery Service is the fastest delivery service that we can offer. Next Day shipping will be unavailable for some select postcodes. For a full list of these postcodes please email <a href="mailto:info@trendygolf.com" class="text-clubhouse-green-600 underline">info@trendygolf.com</a>.</p>
+      <div class="rte opacity-0 -translate-y-14 transition-all duration-1000 ease animation-group group-data-[inview=true]/blocks:opacity-100 group-data-[inview=true]/blocks:translate-y-0 [&_h1]:!font-serif [&_h1]:!text-4xl lg:[&_h1]:!text-5xl [&_h2]:!text-xl lg:[&_h2]:!text-2xl [&_p]:mb-4 [&_strong]:font-bold">
+        {{ section.settings.body_content }}
       </div>
     </div>
   </div>
@@ -55,6 +45,12 @@
   "tag": "section",
   "class": "delivery-body-section",
   "settings": [
+    {
+      "type": "richtext",
+      "id": "body_content",
+      "label": "Content",
+      "default": "<h1>Delivery</h1>"
+    },
     {
       "type": "checkbox",
       "id": "enable_animation",

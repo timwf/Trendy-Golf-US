@@ -1,0 +1,191 @@
+{%- liquid
+  assign enable_animation = section.settings.enable_animation
+
+  case section.settings.margin_bottom
+    when 'none'
+      assign margin_class = ''
+    when 'small'
+      assign margin_class = 'mb-8'
+    when 'medium'
+      assign margin_class = 'mb-8 lg:mb-14'
+    when 'large'
+      assign margin_class = 'mb-14 lg:mb-20'
+  endcase
+-%}
+
+<section class="featured-collections-section relative {{ margin_class }}" id="featured-collections-{{ section.id }}">
+  <div class="container-wide">
+    {%- if section.settings.title != blank or section.settings.btn_text != blank -%}
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6 lg:mb-10">
+        {%- if section.settings.title != blank -%}
+          <h2 class="font-serif text-3xl lg:text-4xl">{{ section.settings.title | escape }}</h2>
+        {%- endif -%}
+
+        {%- if section.settings.btn_text != blank and section.settings.btn_link != blank -%}
+          <a href="{{ section.settings.btn_link }}"
+             class="hidden md:inline-block border border-taupe-900 text-taupe-900 px-8 py-3 text-sm uppercase tracking-wider transition-colors hover:bg-taupe-900 hover:text-white self-start md:self-auto">
+            {{ section.settings.btn_text | escape }}
+          </a>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.blocks.size > 0 -%}
+      <div class="grid grid-cols-2 gap-4 md:gap-6 lg:gap-8{% if section.blocks.size >= 4 %} lg:grid-cols-4{% elsif section.blocks.size == 3 %} lg:grid-cols-3{% else %} md:grid-cols-2{% endif %}{% if enable_animation %} opacity-0 translate-y-8 transition-all duration-700 ease{% endif %}"
+           data-inview="false">
+        {%- for block in section.blocks -%}
+          {%- liquid
+            assign col = collections[block.settings.collection]
+            assign tile_image = block.settings.collection_image
+            if tile_image == blank and col.featured_image != blank
+              assign tile_image = col.featured_image
+            endif
+            assign tile_title = block.settings.collection_title
+            if tile_title == blank
+              assign tile_title = col.title
+            endif
+            assign tile_url = col.url
+          -%}
+
+          <a href="{{ tile_url | default: '#' }}"
+             class="group block relative overflow-hidden bg-taupe-300"
+             {{ block.shopify_attributes }}>
+            {%- if tile_image != blank -%}
+              <img
+                src="{{ tile_image | image_url: width: 400 }}"
+                srcset="{{ tile_image | image_url: width: 400 }} 400w,
+                        {{ tile_image | image_url: width: 600 }} 600w,
+                        {{ tile_image | image_url: width: 900 }} 900w"
+                sizes="(min-width: 1024px) 25vw, (min-width: 768px) 33vw, 50vw"
+                alt="{{ tile_image.alt | escape | default: tile_title | escape }}"
+                width="{{ tile_image.width }}"
+                height="{{ tile_image.height }}"
+                loading="lazy"
+                class="block w-full h-auto aspect-[2/3] object-cover transition-transform duration-500 group-hover:scale-[1.03]">
+            {%- else -%}
+              <div class="w-full aspect-[2/3] bg-taupe-300"></div>
+            {%- endif -%}
+
+            <div class="flex items-baseline justify-between mt-3 px-1">
+              <span class="font-serif text-base lg:text-lg">{{ tile_title | escape }}</span>
+              <span class="text-xs uppercase tracking-wider underline underline-offset-4">Shop now</span>
+            </div>
+          </a>
+        {%- endfor -%}
+      </div>
+
+      {%- if section.settings.btn_text != blank and section.settings.btn_link != blank -%}
+        <div class="md:hidden mt-6">
+          <a href="{{ section.settings.btn_link }}"
+             class="inline-block border border-taupe-900 text-taupe-900 px-8 py-3 text-sm uppercase tracking-wider transition-colors hover:bg-taupe-900 hover:text-white">
+            {{ section.settings.btn_text | escape }}
+          </a>
+        </div>
+      {%- endif -%}
+    {%- endif -%}
+  </div>
+</section>
+
+{%- if enable_animation -%}
+  <script>
+    (function () {
+      var section = document.getElementById('featured-collections-{{ section.id }}');
+      if (!section) return;
+      var wrapper = section.querySelector('[data-inview]');
+      if (!wrapper) return;
+      var observer = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.setAttribute('data-inview', 'true');
+              entry.target.classList.remove('opacity-0', 'translate-y-8');
+              entry.target.classList.add('opacity-100', 'translate-y-0');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: '0px 0px -10%' }
+      );
+      observer.observe(wrapper);
+    })();
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Featured Collections",
+  "tag": "section",
+  "class": "featured-collections-section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Shop by collection"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button text"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button link"
+    },
+    {
+      "type": "select",
+      "id": "margin_bottom",
+      "label": "Bottom margin",
+      "options": [
+        { "value": "none", "label": "None" },
+        { "value": "small", "label": "Small" },
+        { "value": "medium", "label": "Medium" },
+        { "value": "large", "label": "Large" }
+      ],
+      "default": "medium"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_animation",
+      "label": "Enable scroll animation",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Collection",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "image_picker",
+          "id": "collection_image",
+          "label": "Collection image",
+          "info": "Falls back to the collection's own featured image if left blank"
+        },
+        {
+          "type": "text",
+          "id": "collection_title",
+          "label": "Collection title",
+          "info": "Falls back to the collection's own title if left blank"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collections",
+      "blocks": [
+        { "type": "collection" },
+        { "type": "collection" }
+      ]
+    }
+  ]
+}
+{% endschema %}

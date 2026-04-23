@@ -149,8 +149,8 @@
         "type": "text",
         "id": "upzelo_app_id",
         "label": "Upzelo App ID",
-        "default": "upz_app_10195ba3dcfd",
-        "info": "From the Upzelo dashboard. Used by the activity-feed fetch on /account/rewards."
+        "default": "upz_app_4e56995676a5",
+        "info": "From the Upzelo dashboard (Setup → Integrations → API). Used by the activity-feed fetch on /account/rewards."
       },
       {
         "type": "header",
