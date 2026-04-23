@@ -23,7 +23,7 @@
     <a class="absolute left-0 top-0 z-[1] block size-full" href="{{ product.url }}">
       {%- if primary_image -%}
         {%- if hover_image -%}
-          {%- assign primary_class = 'absolute left-0 top-0 block size-full object-cover md:transition-opacity md:group-hover:opacity-0' -%}
+          {%- assign primary_class = 'absolute left-0 top-0 z-1 block size-full object-cover md:transition-opacity md:group-hover:opacity-0' -%}
         {%- else -%}
           {%- assign primary_class = 'absolute left-0 top-0 block size-full object-cover' -%}
         {%- endif -%}
