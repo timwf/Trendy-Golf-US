@@ -1,0 +1,115 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_3.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Jason Day Makes a Bold Fashion Statement at the Masters with Malbon Golf Vest",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When Jason Day stepped onto Augusta National for the 2024 Masters, his sartorial choices were nothing short of head-turning. On Friday, Day made waves by sporting a distinctive Malbon Golf vest, a piece that quickly became the talk of the tournament. Known for his traditional approach to golf attire, Day surprised fans and commentators alike with his bold, hip-hop inspired ensemble.</p><p>Day's partnership with Malbon Golf, a trendy fashion brand known for pushing the envelope, took center stage as he paired the eye-catching vest with slacks reminiscent of the 1990s hip-hop scene. The vest, emblazoned with a giant \"MALBON CHAMPIONSHIP GOLF\" logo, drew both admiration and jest from the golfing community. Commentators and fans noted that his outfit was a departure from the usual understated elegance seen at the Masters, with some jokingly comparing his baggy pants to MC Hammer's iconic parachute pants.</p><p>Despite the mixed reactions, one thing was clear: Day's outfit generated significant buzz. CBS' Verne Lundquist remarked that Day seemed determined to make a fashion statement, while GOLF DIGEST's Stephen Hennessey noted the veteran golfer's commitment to ramping up his style game. Day's choice to wear nostalgic baggy pants and a statement vest not only paid homage to the 90s hip-hop era but also positioned Malbon Golf at the forefront of trendy golf fashion.</p><p>The Malbon vest, which Day wore, became an instant sensation, even though it was a Masters special not readily available on Malbon's website. However, for those inspired by Day's daring look, we are excited to announce that the vest is now available to shop. Embrace the bold, modern style that Jason Day showcased at the Masters and make your own statement on the course.</p><p>Jason Day's fashion-forward approach at the Masters reminds us that golf attire can be as dynamic and expressive as the game itself. His partnership with Malbon Golf underscores the brand's dedication to innovation and trendsetting in golf fashion. So why not take a leaf out of Day's book and elevate your golf wardrobe with pieces that blend tradition with modern flair?</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "stl_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "championship-vest-tofu-su24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "wyatt-hat-black-su24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "lattice-nylon-quarter-zip-jacket-bistro-green-su24"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "championship-tee-tofu-su24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_91.jpg",
+        "margin_bottom": "medium"
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Malbon Golf",
+        "collection": "mens-malbon-golf",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-malbon-golf",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "stl_1", "products_1", "related-articles"]
+}

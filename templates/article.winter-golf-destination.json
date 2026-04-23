@@ -1,0 +1,314 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Untitled_design_19.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Winter Golf: Top Destinations in the USA",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Escape the winter chill and embrace the allure of exceptional golfing at some of the finest destinations across the United States. From the tropical paradise of Hawaii to the sun-drenched fairways of Florida, the rugged beauty of Arizona, and the captivating courses of Southern California, these winter havens offer more than just golf; they promise an immersive experience amid breathtaking landscapes.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Top Winter Golf Destinations:",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>1. Mauna Kea Golf Course, Hawaii</strong></p><p>Set amidst the Big Island's splendor, this course boasts stunning ocean vistas and challenges on volcanic terrain. Each hole offers a unique view, and the signature 3rd hole is celebrated for its beauty and difficulty.</p><p><strong>2. TPC Sawgrass, Florida</strong></p><p>Home to the iconic Players Championship, this Florida gem features challenging holes, including the famed island-green 17th at the Stadium Course. The Stadium Course's finishing holes are a test for any golfer, making it a bucket-list course.</p><p><strong>3. Troon North Golf Club, Arizona</strong></p><p>Offering two award-winning courses amid Arizona's Sonoran Desert, showcasing breathtaking desert panoramas. The Pinnacle Course's rugged beauty and the Monument Course's unique layout offer an unforgettable experience.</p><p><strong>4. Torrey Pines Golf Course, Southern California</strong></p><p>Overlooking the Pacific Ocean, this course in La Jolla offers majestic views and a challenging yet rewarding experience. The South Course, hosting the U.S. Open, features cliffside holes and panoramic vistas.</p><p><strong>5. Kapalua Plantation Course, Hawaii</strong></p><p>Known for its dramatic setting on Maui, featuring elevation changes and stunning vistas of the Pacific. The course's signature hole, the par-5 18th, offers sweeping views of the coastline.</p><p><strong>6. Streamsong Resort, Florida</strong></p><p>A unique Florida gem with undulating terrain and stunning vistas across the expansive landscape. The Red and Blue courses, designed by renowned architects, present an unmatched golfing experience.</p><p><strong>7. Grayhawk Golf Club, Arizona</strong></p><p>Known for its dynamic desert setting and two championship courses challenging golfers of all levels. The Talon and Raptor courses offer diverse challenges amidst the desert landscape.</p><p><strong>8. Pelican Hill Golf Club, Southern California</strong></p><p>With awe-inspiring coastal panoramas, this Newport Beach gem offers golfers a luxurious and scenic experience. The Ocean North and Ocean South courses blend stunning views with a challenging layout.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_text_1": {
+      "type": "media-text",
+      "settings": {
+        "media_first_desktop": true,
+        "media_first_mobile": true,
+        "media_type": "image",
+        "image": "shopify://shop_images/1_c86c89a9-2462-472a-a0d9-0e8e99c1300e.jpg",
+        "title": "TORREY PINES GOLF COURSE, SOUTHERN CALIFORNIA",
+        "subtitle": "JUST DOWN THE COAST FROM OUR OFFICE",
+        "copy": "<p>Perched atop the stunning cliffs of La Jolla, Torrey Pines Golf Course offers golfers an experience unlike any other in Southern California. Overlooking the majestic Pacific Ocean, this course combines natural beauty with a challenging layout, beckoning enthusiasts to its fairways. The South Course, famously home to the U.S. Open, presents players with cliffside holes that demand strategic play and offer breathtaking views of the coastline. With its undulating terrain and coastal breezes, Torrey Pines embodies the essence of California golf, attracting players seeking a memorable and invigorating round amidst a spectacular setting.</p>",
+        "max_width": 1440,
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "STREAMSONG",
+            "image": "shopify://shop_images/1_225fd2b4-c225-4cf4-8bd8-bbc6a9f48d33.jpg",
+            "link": "https://www.streamsongresort.com/",
+            "button_label": "BOOK YOUR TRIP"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "Mauna Kea",
+            "image": "shopify://shop_images/2_448c446b-70ad-416d-8ea4-5788d3f93dc3.jpg",
+            "button_label": "BOOK YOUR TRIP"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Premier Winter Golf Destinations Around the Globe",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you're seeking to venture beyond the borders of the United States this winter, we've curated a captivating list of international golf destinations to fulfill your quest for the perfect golfing escape. Embrace the allure of warmer climates and picturesque landscapes as we journey across the globe, unveiling premier golf courses that beckon enthusiasts with their scenic beauty and challenging layouts. From the sun-kissed Caribbean shores to the tranquil paradises of the Bahamas and the Dominican Republic, prepare for an international golfing odyssey that promises unforgettable rounds in breathtaking settings.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/LAUNCHES_MAIN_HERO_LARGE_IMAGE_4.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_casa": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "CASA DE CAMPO",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nestled on the southeastern coast of the Dominican Republic, Casa de Campo stands as an unparalleled golf destination, renowned for its luxurious offerings and exceptional golfing experiences. Home to the world-famous Teeth of the Dog course, designed by legendary architect Pete Dye, Casa de Campo boasts an extraordinary ensemble of golf courses that combine natural beauty with challenging play. The Teeth of the Dog, aptly named for its dramatic seaside holes that often require precise shot-making, offers an unrivaled experience along the Caribbean Sea, with seven holes directly overlooking the ocean.</p><p>Moreover, the resort's other courses, such as the Links and Dye Fore, complement the Teeth of the Dog, showcasing diverse terrains, elevation changes, and strategic designs. The Links Course, with its undulating fairways and picturesque views, provides a traditional links-style experience. On the other hand, Dye Fore offers sweeping panoramas of the Chavón River, Dominican mountains, and the Caribbean Sea, ensuring a challenging yet visually stunning round for golfers of all levels. Beyond golf, Casa de Campo pampers guests with luxurious accommodations, world-class amenities, and a myriad of recreational activities, making it a premier destination for both golf enthusiasts and luxury travelers alike.</p><p>Casa de Campo stands as an epitome of luxury and golfing excellence, offering a range of championship courses, stunning landscapes, and lavish amenities, making it a sought-after destination for travelers seeking a refined and memorable golfing retreat in the Caribbean.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Global Winter Golf Escapes",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>1. The Abaco Club, Bahamas</strong></p><p>Nestled within the Bahamas' tranquil Abaco Islands, this seaside gem offers stunning ocean views and challenging holes amidst a tropical paradise. The prevailing trade winds provide a delightful challenge, while the rolling fairways invite players to experience golfing bliss in a serene and picturesque setting. After a round, golfers can unwind in the club's luxurious amenities overlooking the pristine beaches.</p><p><strong>2. Casa de Campo, Dominican Republic</strong></p><p>A Caribbean haven with multiple courses, including the famous Teeth of the Dog, boasting oceanfront holes and lush greenery. The course's iconic design, carved from the rugged coastline, provides an unforgettable golfing experience. Golfers are treated to dramatic seaside views while navigating strategic challenges that require precise shot-making skills.</p><p><strong>3. Sandy Lane Resort, Barbados</strong></p><p>The country's premier golf destination featuring the Green Monkey and Country Club courses, offering world-class golfing amid Caribbean elegance. The Green Monkey, carved from an old limestone quarry, offers a visually stunning layout with dramatic elevation changes, making it a must-play for golf enthusiasts seeking a unique and challenging round.</p><p><strong>4. Royal Westmoreland Golf Club, Barbados</strong></p><p>Set amidst lush greenery, this course offers captivating vistas and challenging terrain, inviting golfers to experience Caribbean golf at its finest. The course's layout presents strategic bunkering and undulating fairways, testing both accuracy and skill while treating players to breathtaking views of the surrounding landscape.</p><p><strong>5. Four Seasons Resort Nevis, St. Kitts & Nevis</strong></p><p>With views of Nevis Peak, this course boasts a serene setting and captivating challenges, creating a memorable golfing experience in the Caribbean. The layout meanders through verdant landscapes and presents an enjoyable mix of holes, inviting golfers to enjoy the island's tranquility while perfecting their game.</p><p><strong>6. Tierra del Sol Golf Course, Aruba</strong></p><p>Offering breathtaking ocean views and desert-style golfing, this course in Aruba presents a fusion of natural beauty and challenging play. Golfers can expect to navigate holes amidst the island's unique desert terrain, with stunning views of the Caribbean Sea and challenging winds adding an exhilarating dimension to the game.</p><p><strong>7. Mahogany Run Golf Course, U.S. Virgin Islands</strong></p><p>Located in St. Thomas, this course features the famous \"Devil's Triangle,\" offering golfers stunning views and an unforgettable Caribbean golf experience. The course's signature holes, carved into the island's rocky terrain, demand precision, making it an adventurous yet rewarding course for players of all levels.</p><p><strong>8. Aurora International Golf Club, Anguilla</strong></p><p>Designed by Greg Norman, the Aurora International Golf Club on Anguilla stands as a top-tier destination for golf enthusiasts. This prestigious course harmonizes strategic challenges with breathtaking Caribbean vistas, offering players an unforgettable golfing experience amidst the island's serene beauty.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_text_2": {
+      "type": "media-text",
+      "settings": {
+        "media_first_desktop": true,
+        "media_first_mobile": true,
+        "media_type": "image",
+        "image": "shopify://shop_images/LAUNCH_PAGE_SHOWCASE_ITEM_1.jpg",
+        "title": "AURORA INTERNATIONAL GOLF CLUB, ANGUILLA",
+        "subtitle": "On our bucket list",
+        "copy": "<p>Set on the serene island of Anguilla, the Aurora International Golf Club stands as a testament to golfing excellence. Designed by renowned golfer Greg Norman, this top-ranked course captures the essence of Caribbean beauty while offering a challenging and captivating golfing experience. Situated amidst lush landscapes and gently rolling terrain, the course boasts a design that seamlessly integrates with the island's natural contours, presenting golfers with a delightful blend of strategic challenges and scenic vistas. With Norman's signature design elements, including undulating fairways, well-placed bunkers, and stunning ocean views, the Aurora International Golf Club promises an unforgettable round for players seeking both skill-testing holes and breathtaking landscapes. As one of the prime golfing destinations in the Caribbean, this course invites enthusiasts to embrace its world-class facilities and enjoy a premier golfing escapade on the picturesque island of Anguilla.</p><p>The Aurora International Golf Club on Anguilla offers a Greg Norman-designed course that harmonizes with the island's beauty, providing golfers with a challenging yet visually striking golfing experience in the heart of the Caribbean.</p>",
+        "max_width": 1440,
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "promo_2": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "SANDYLANE",
+            "image": "shopify://shop_images/1_3cc60413-80a6-4b16-8645-aa03bfb995d5.jpg",
+            "link": "https://www.sandylane.com/barbados-golf/courses/the-green-monkey",
+            "button_label": "BOOK YOUR TRIP"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "Aurora",
+            "image": "shopify://shop_images/2_3906b6e6-b604-480d-a085-9eb8b69d5cf7.jpg",
+            "link": "https://www.auroraanguilla.com/offers/",
+            "button_label": "BOOK YOUR TRIP"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "WINTER GOLF GETAWAY: WHAT TO PACK",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Prepare for a tropical golfing paradise by packing essentials tailored to the sun-kissed fairways and ocean breezes. Opt for breathable, moisture-wicking apparel, including lightweight polo shirts, comfortable golf shorts or skirts, and UV-protective attire to shield against the Caribbean sun. Don't forget a wide-brimmed hat, polarized sunglasses for clear vision, and waterproof sunscreen to stay protected while enjoying the stunning vistas. Ensure your golf bag contains the right clubs for the terrain, ample golf balls, tees, and a reliable rangefinder to navigate the challenging courses with ease. Stay hydrated with a refillable water bottle and consider packing a cooling towel to stay refreshed throughout your rounds amidst the tropical paradise.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "PACK THE ESSENTIALS",
+        "collection": "winter-golf-essentials",
+        "product_limit": 12,
+        "button_label": "DRESS FOR IT",
+        "button_link": "shopify://collections/mens-golf-clothing",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "text_2", "media_text_1", "promo_1", "text_3", "hero_2", "text_casa", "text_4", "media_text_2", "promo_2", "text_5", "products_1", "related-articles"]
+}

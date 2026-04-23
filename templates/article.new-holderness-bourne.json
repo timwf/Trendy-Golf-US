@@ -1,0 +1,182 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Untitled_design_21.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Seamless Transitions: Holderness & Bourne's SS24 Collection Unveiled",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Introducing Holderness & Bourne's Spring/Summer '24 collection, where every piece has been meticulously designed with versatility and sophistication in mind. </p><p>Picture this: a day that begins in the hustle of the office, the cadence of work setting the tone. As the sun sets, seamlessly transition from the professional rigor of the workplace to the tranquility of the golf course. Weekends become an ode to the fairway, each swing becoming a melody of style and skill. Holderness & Bourne's collection effortlessly bridges the gap between the boardroom and the green, a wardrobe that translates from long hours at the office to the serene landscapes of the golf course. </p><p>From the tailored elegance of The Bell Quarter Zip Mid Layer to the timeless comfort of The Ward Crewneck Sweater, these pieces become wardrobe heroes for your dynamic lifestyle, ensuring you stride confidently from the office to the first tee, embodying both sophistication and ease.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "KEY PIECES IN THE COLLECTION",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The Wallace Crewneck Sweater</strong><em>: A Style Revelation on the Fairway</em><br/>Debuting in Spring '24, The Wallace, a cousin to our iconic crewneck, The Ward, envelops you in the luxurious embrace of 100% Egyptian cotton. As you seamlessly transition from the office to the tee, The Wallace becomes both a shield against the evening chill and a statement of sleek style with its ribbed side panels.</p><p><strong>The Bell Quarter Zip Mid Layer:</strong><em> Elevate Your Swing with Modern Panache</em><br/>Stepping into the spotlight this spring, The Bell is a performance quarter-zip that effortlessly transcends from office finesse to golf course finesse. Unzip The Bell to reveal a sporty sophistication, echoing the versatile spirit of your swing.</p><p><strong>The Ward Crewneck Sweater: </strong><em>Timeless Comfort for Every Pursuit</em><br/>The diamond jacquard knit pattern of The Ward makes a bold statement. Crafted from premium Italian-spun Egyptian cotton, it epitomizes timeless comfort as you navigate the greens with confidence, seamlessly transitioning from fairway to everyday.</p><p><strong>The Ventura Vest Performance Lightweight Vest:</strong><em> Breathe Easy, Swing Freely</em><br/>Engineered for the warm embrace of spring, The Ventura Vest transcends utility. Layer with ease, as its ultralight perforated synthetic fabric and hidden pockets offer both style and functionality – the perfect complement to your swing on sunlit fairways.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "POLOS",
+            "image": "shopify://shop_images/1_7ae11059-2416-4507-8db1-18032449ee9b.jpg",
+            "link": "https://trendygolfusa.com/collections/mens-holderness-bourne?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Polo+Shirts&filter.v.availability=1",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "HOODIES",
+            "image": "shopify://shop_images/2_3629673a-5009-4fac-97c1-e2557a03170f.jpg",
+            "link": "https://trendygolfusa.com/collections/mens-holderness-bourne?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Hoodies&filter.v.availability=1",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "promo_2": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "THE VENTURA VEST",
+            "image": "shopify://shop_images/3.jpg",
+            "link": "https://trendygolfusa.com/products/the-ventura-vest-performance-lightweight-vest-navy-ss24",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "THE BELL QUARTER ZIP",
+            "image": "shopify://shop_images/4.jpg",
+            "link": "https://trendygolfusa.com/products/the-bell-quarter-zip-mid-layer-heathered-gray-ss24",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Holderness & Bourne's SS24 collection is not just attire; it's a narrative woven into the lifestyle of the modern man who appreciates the blend of fashion and golf. Join us on this style journey, where each piece is a statement, telling a story of sophistication, versatility, and the dynamic spirit of the game. Shop the collection below.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "HOLDERNESS & BOURNE",
+        "collection": "mens-holderness-bourne",
+        "product_limit": 12,
+        "button_label": "SHOP NEW ARRIVALS",
+        "button_link": "shopify://collections/mens-holderness-bourne",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "text_2", "promo_1", "promo_2", "text_3", "products_1", "related-articles"]
+}

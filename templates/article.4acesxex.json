@@ -1,0 +1,313 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_22.jpg",
+            "mobile_image": "shopify://shop_images/MOBILE_SHOPIFY_HERO.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Extracurricular x 4Aces Apparel Collection, Now Available on TRENDYGOLF",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>LIV Golf is changing the game, bringing an exciting, fast-paced format that's attracting new fans and redefining what it means to be part of the golf community. The LIV Tour Team Championship, set to take place at Maridoe Golf Club in Dallas from September 20-22, is the ultimate celebration of this bold new era in golf. And as always, the 4Aces Golf Club will be leading the charge—not just with their performance, but with their style.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_5ff31bff-6a88-429d-9d14-313d5b31aaba.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_2a41ddf3-b828-4856-b8a0-2f71a6460b87.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_9714feec-b358-4044-b7c1-0ec73a261610.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_0cda9452-fe62-4d1b-951d-76d8402ac162.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Extracurricular x 4Aces apparel collection, now available on TRENDYGOLF, captures the spirit of this movement. This special edition collection, designed in collaboration with the 4Aces—Dustin Johnson, Patrick Reed, Pat Perez, and Harold Varner III—combines the performance demands of golf apparel with a modern, fashion-forward aesthetic.</p><p>LIV Golf has brought an element of fun and inclusivity to the game, making it more accessible and dynamic for fans and players alike. The 4Aces epitomize this vibe, balancing competition with camaraderie, all while setting a new standard for how the game should look and feel. The Extracurricular x 4Aces collection is a reflection of that ethos. With polos, hoodies, tees, and hats designed for ultimate versatility, these pieces aren't just for the course—they're for wherever life takes you. Whether you're teeing off, hanging out with friends, or hitting the town, this collection delivers style and performance in equal measure.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_0a25ce1f-e520-438d-a742-33439d21dfc7.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Crafted with premium fabrics and standout designs, this gear not only looks good, it works just as hard as the 4Aces on tour. Expect comfortable, breathable materials that move with you, keeping you cool and confident in any situation. And with the 4Aces logo front and center, you'll be representing the best-dressed team in golf, a team that's making waves both on the leaderboard and in the fashion world.</p><p><strong>Why this collection matters: </strong>LIV Golf is shaking up a sport that's been long overdue for a refresh. It's no longer just about tradition—it's about pushing the boundaries, embracing boldness, and making golf fun again. The Extracurricular x 4Aces collection embodies this new attitude, offering a modern twist on classic golf wear. For fans of the 4Aces and LIV Golf's electric atmosphere, this collection is more than just apparel—it's a celebration of a sport that's evolving.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_86a6b33a-12eb-47e0-8174-8c24ec19f64b.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_d69c3389-bbda-49cc-aaaa-960dce6da460.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_b2a4a0d5-2a7d-492c-b318-51d0bf8e2962.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_f5f5c622-8d26-4b06-a64d-29e84cdb0e23.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Details:",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p></p><ul><li>What: Special collection of Extracurricular x 4Aces apparel</li><li>Where: LIV Tour Team Championship, Maridoe Golf Club, Dallas, Texas</li><li>When: September 20–22</li><li>Who: 4Aces Golf Club featuring Dustin Johnson, Patrick Reed, Pat Perez, and Harold Varner III</li><li>Why: Celebrating the best-dressed team in golf</li></ul><p>Don't miss the chance to shop the collection and support the 4Aces as they bring both their skills and their style to Dallas.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_23.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "EXPLORE THE COLLECTION",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This special collection includes <strong>polos, hoodies, tees, and hats</strong>, celebrating the signature style of the 4Aces. Whether you're on or off the course, these pieces are designed to keep you looking sharp and feeling comfortable.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "4ACES x EXTRACURRICULAR",
+        "collection": "mens-extracurricular-x-4-aces-golf-apparel-and-hats",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-extracurricular-x-4-aces-golf-apparel-and-hats",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "media_grid_1",
+    "text_2",
+    "hero_2",
+    "text_3",
+    "media_grid_2",
+    "text_4",
+    "hero_3",
+    "text_5",
+    "products_1",
+    "related-articles"
+  ]
+}

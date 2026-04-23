@@ -1,0 +1,251 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Untitled_design_25.jpg",
+            "mobile_image": "shopify://shop_images/Untitled_design_26.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Introducing A.PUTNAM: Elevating Women's Style On and Off the Course",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>TRENDYGOLF is delighted to announce the latest addition to its curated collection: A.PUTNAM. Founded by Ali Putnam, this brand redefines women's fashion, offering polished and sophisticated pieces that effortlessly transition from Resort to Sport. Ali's vision for A.PUTNAM was born out of a desire to provide women with timeless options that fit every aspect of their lives. The brand empowers women to move confidently from travel to the golf course to the club, all without sacrificing style or comfort. With a keen eye for detail and a commitment to honoring the tradition of golf, A.PUTNAM introduces subtle elements and modern touches that bring a fresh perspective to classic looks.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "stl_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "womens-classic-button-up-stripe-clay-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "womens-pocket-skort-bisque-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "womens-ls-polo-bright-white-bisque-ss24"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "womens-sleeveless-keyhole-top-bright-white-ss24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_24.jpg",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "About the Founder and Spring Collection",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ali Putnam, an entrepreneur and a mother of five boys, brings a unique perspective to A.PUTNAM. Her journey in creating this athstyle brand stems from recognizing the need for comfortable, versatile performance apparel that seamlessly works on the golf course while maintaining a sense of luxury and style. As a busy professional and a devoted mother, Ali appreciates garments that can adapt to the demands of her day. A.PUTNAM is her way of helping women achieve flexibility in their lifestyles.</p><p>The Spring 2024 Collection, aptly named Clay Canyon Retreat, is a testament to Ali's passion for ceramics. The collection draws inspiration from nature's simplicity, featuring a foundation in white and black with expanded desert and clay tones. A.PUTNAM's minimalist approach takes center stage, offering classic yet modern silhouettes designed to move seamlessly with women from resort to sport.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Spring 2024 Collection Highlights: Clay Canyon Retreat",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This season, A.PUTNAM presents a range of standout pieces that showcase the brand's commitment to elegance, versatility, and performance. The On Fire Dress and Coordinating Half Zip & Pocket Skort bring Jackie O-inspired details to life, offering an iconic style suitable for both the course and sophisticated events. The UPF+50 Polos and Classic Longsleeve Button Up with Knit Cuffs provide breathable, elegant protection, while the Kick Flare Pant introduces an essential pull-on style that is slimming, water and stain-resistant. The Throw Dress, designed for comfort and easy styling, adds practicality and versatility to the collection.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "DRESSES",
+            "image": "shopify://shop_images/1_09eca16b-eff3-4df1-af0b-f6df731c4128.jpg",
+            "link": "https://trendygolfusa.com/collections/a-putnam?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Dresses&filter.v.availability=1",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "LONG SLEEVES",
+            "image": "shopify://shop_images/3_2043617c-4201-409f-8c27-c1fe746b625e.jpg",
+            "link": "https://trendygolfusa.com/collections/a-putnam?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Polo+Shirts&filter.v.availability=1",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "promo_2": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "KEYHOLE TOPS",
+            "image": "shopify://shop_images/2_d9c69e5e-a54c-41bf-b6bc-616e08e34537.jpg",
+            "link": "https://trendygolfusa.com/collections/a-putnam?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Tops&filter.v.availability=1",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "SKIRTS",
+            "image": "shopify://shop_images/PROMOTION_TILES.jpg",
+            "link": "https://trendygolfusa.com/collections/a-putnam?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Skirts+%26+Skorts&filter.v.availability=1",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Spring 2024 Special Elements",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A.PUTNAM introduces two special elements to enhance the collection's versatility. The Double Knit, a weighted fabric, adds beautiful structure to styles like the Pocket Skort and On Fire Dress. Its pique texture, stretch, and eco-friendly stain/water-resistant coating bring unparalleled versatility. The introduction of Black & White as core neutrals complements the existing Navy and Cream collections, solidifying A.PUTNAM's commitment to timeless elegance.</p><p>TRENDYGOLF invites you to explore the A.PUTNAM collection, where every piece reflects the brand's commitment to empowering women with elegant, sophisticated, and versatile styles for a life full of joy, on and off the golf course.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "A. PUTNAM",
+        "collection": "a-putnam",
+        "product_limit": 12,
+        "button_label": "SHOP NEW ARRIVALS",
+        "button_link": "shopify://collections/a-putnam",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "stl_1", "text_2", "text_3", "promo_1", "promo_2", "text_4", "products_1", "related-articles"]
+}

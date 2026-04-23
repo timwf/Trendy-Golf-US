@@ -1,0 +1,282 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_9.jpg",
+            "mobile_image": "shopify://shop_images/shopify_magazine_hero_size_9.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Play Together, Stay Together: The Students SS24 Collection",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Golf is more than just a game; it's a journey—one that challenges us, frustrates us, and keeps us coming back for more. For many, it's not just about the score but about the camaraderie, the shared moments, and the endless pursuit of improvement. That's where Students comes in, a brand that understands the ups and downs of being a golfer and turns that passion into fashion.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_aa51e507-b28e-4aa1-866c-5c7ef0752010.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_34f4296b-d501-4755-92c3-9d00c83a8716.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_5c29a8ba-62d1-4105-9f60-4c3476dd9680.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_dd302183-11ad-4bc7-8892-1ab17676157f.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "A Tribute to the Struggles and Joys of the Game",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This season, Students is bringing something fresh to the fairways with their SS24 collection, now available on TRENDYGOLF. The collection, themed \"Play Together, Stay Together,\" is all about celebrating the bond that golf creates among friends, even when the competition gets fierce. It's a reminder that while the game might test your patience, it also brings people together in ways that few other sports can.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_10.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "RETRO VIBES WITH A MODERN TWIST",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The SS24 collection features a range of cool retro T-shirts, polos, and printed shorts and trousers. These pieces are not just stylish but also a statement of individuality—perfect for those who want to stand out on the course. The retro-inspired designs pay homage to the golden days of golf while infusing them with the energy and style of today's youth culture. It's a blend of nostalgia and modernity that's as unique as the golfers who wear them.</p><p><strong>For the Love of the Game</strong></p><p>Students is a brand born out of Los Angeles, California, with a mission to disrupt the traditional norms of golf apparel. They're here to inject a dose of energy, style, and realism into the game—an alternative to the stodginess often associated with golf. But it's more than just about the clothes; it's about the emotional journey that every golfer experiences. The frustrations, the joys, the determination to get better—Students captures all of it in their designs.</p><p><strong>Be a Student of the Game</strong></p><p>At the heart of Students is the belief that we are all students of the game, constantly learning and evolving. Whether you're battling a stagnant handicap or just trying to outplay your friends, the journey is what makes it worthwhile. And while the challenges are real, so are the rewards. As you don the SS24 collection, remember that every round is a lesson, every game a chance to improve. Play together, stay together—and look good while doing it.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_1b5f73b8-bb31-4e2b-b7bf-48855d8e18e3.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_da7e5274-ab7f-4272-b8f7-3ac523783168.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_84164634-5bf2-4bf6-97ad-88b07e1a60fe.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_471441de-2697-41d9-b01a-daac6fc7340c.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "EXPLORE THE COLLECTION",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The SS24 collection from Students is now available on TRENDYGOLF. Explore the range and find your new go-to pieces that will not only elevate your style but also remind you why you fell in love with the game in the first place.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "STUDENTS",
+        "collection": "mens-students-golf",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-students-golf",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "media_grid_1",
+    "text_2",
+    "hero_2",
+    "text_3",
+    "media_grid_2",
+    "text_4",
+    "products_1",
+    "related-articles"
+  ]
+}

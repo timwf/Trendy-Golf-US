@@ -1,0 +1,178 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_30.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Seamless Transitions: Holderness & Bourne's SS24 Collection Unveiled",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We're excited to announce the arrival of <strong>Manors Golf</strong> at TRENDYGOLF—a brand that perfectly blends performance with sophisticated design. Manors Golf isn't just another golf brand; it's a statement of timeless style, quality craftsmanship, and the pursuit of excellence. We are proud to offer this exclusive collection to our customers, starting with the highly anticipated <em>Drive Nowhere</em> collection.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "A Fresh Approach to Golf Apparel",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Manors Golf takes a bold step away from traditional golf fashion, embracing a minimalist yet elevated aesthetic that captures the essence of luxury both on and off the course. Designed for the modern golfer who appreciates style as much as performance, the <em>Drive Nowhere</em> collection is a nod to the brand's philosophy: golf is not just a game, it's a lifestyle.</p><p>Whether you're on the tee, at the 19th hole, or enjoying a day off, this collection reflects the brand's commitment to combining function with fashion. With subtle details, contemporary cuts, and the finest fabrics, Manors Golf is set to redefine what it means to look and feel great while playing the game we love.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Drive Nowhere Collection: Effortless Style, Unmatched Comfort",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The <em>Drive Nowhere</em> collection is designed for those who live life on their own terms, with a relaxed yet refined sense of style. The collection effortlessly combines the need for high-performance golf wear with a cool, laid-back vibe that doesn't compromise on elegance. It's the perfect balance of casual sophistication and technical apparel.</p><p>From the meticulously crafted polos to the smartly designed outerwear, each piece in the <em>Drive Nowhere</em> collection is made with performance fabrics that offer comfort, breathability, and flexibility. Whether you're playing a round of golf or simply enjoying the lifestyle, the collection ensures you look your best while moving with ease.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_4d1a6a2f-10d4-4e09-a8a3-cc64280e63ed.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_f3b08589-b4ec-41aa-9223-1febca7a01d7.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Why Manors Golf?",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At TRENDYGOLF, we are committed to curating collections that align with the highest standards of craftsmanship, style, and performance. Manors Golf fits perfectly into that vision, offering a brand that understands that great golf apparel should be as sophisticated as the game itself.</p><p>The <em>Drive Nowhere</em> collection speaks to golfers who appreciate the art of the game, the thrill of the drive, and the importance of looking good while doing it. With its minimalist approach to luxury and innovation, Manors Golf is a perfect addition to our curated selection of premium golf brands.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "MANORS GOLF",
+        "collection": "mens-manors-golf-clothing-accessories",
+        "product_limit": 12,
+        "button_label": "SHOP NEW ARRIVALS",
+        "button_link": "shopify://collections/mens-manors-golf-clothing-accessories",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "text_2", "text_3", "media_grid_1", "text_4", "products_1", "related-articles"]
+}

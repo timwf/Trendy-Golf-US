@@ -1,0 +1,202 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_6.jpg",
+            "mobile_image": "shopify://shop_images/Untitled_design_61.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Introducing Bogey Boys: A Fresh Take on Golf Fashion",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>TRENDYGOLF is pleased to introduce Bogey Boys, a revolutionary new brand founded by Grammy-winning artist Macklemore in 2021 that redefines golf apparel with a unique blend of style, innovation, and quality. Macklemore, known for his distinct style and chart-topping hits, brings his passion for creativity and fashion into the world of golf, making Bogey Boys stand out in the market by combining bold colors, eye-catching patterns, and premium materials to create pieces that are both fashionable and functional.</p><p>Bogey Boys pays homage to the fabrics, patterns, and styles that defined the '70s and '80s. It is a welcome option for many wanting to showcase their personality on and off the golf course—especially now that the sport has become cooler, more diverse, and more mainstream in recent years.</p><p>Bogey Boys is dedicated to merging the elegance of classic golf attire with the boldness of contemporary fashion, ensuring that every piece in the collection is versatile enough for the course and everyday wear. The brand's commitment to quality means that each product is meticulously crafted to offer exceptional comfort, durability, and performance, helping golfers look and feel their best.</p><p>Innovation is at the core of Bogey Boys. The brand continuously pushes the boundaries of traditional golf fashion, introducing new designs and fabrics that enhance both aesthetics and functionality. Sustainability is also a key focus, with eco-friendly materials and sustainable manufacturing processes used wherever possible.</p><p>Bogey Boys is more than just a brand; it's a statement for golfers who aren't afraid to express their individuality and who value both style and substance. Whether you're a seasoned pro or a casual player, Bogey Boys offers apparel that makes you feel confident and stylish, on and off the course.</p><p>Welcome to a new era of golf fashion with Bogey Boys, where every piece is designed to celebrate the love of the game and the uniqueness of each golfer.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "stl_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "the-icons-polo-eden-green-su24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "essential-hoodie-eden-green-2024"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "the-best-pants-cream-2024"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "royal-flush-hat-white-su24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_60.jpg",
+        "margin_bottom": "medium"
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_7.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "QUESTION AND ANSWER WITH THE TEAM AT BOGEY BOYS",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Q1: Can you tell us about the inspiration behind the creation of Bogey Boys?</strong></p><p><strong>A:</strong> The inspiration behind Bogey Boys stems from a desire to merge the worlds of golf and fashion in a way that brings a fresh, unique perspective to the sport. We wanted to create a brand that not only celebrates the game but also appeals to individuals who appreciate high-quality, stylish apparel both on and off the course.</p><p><strong>Q2: What sets Bogey Boys apart from other golf apparel brands?</strong></p><p><strong>A:</strong> Bogey Boys stands out due to our commitment to innovative design and quality. We focus on creating apparel that is not only functional for the golf course but also stylish and versatile enough for everyday wear. Our use of bold colors, unique patterns, and premium materials sets us apart in the golf apparel market.</p><p><strong>Q3: Can you describe the type of products Bogey Boys offers?</strong></p><p><strong>A:</strong> We offer a wide range of products, including polo shirts, pants, shorts, outerwear, and accessories. Each piece is designed with the golfer in mind, ensuring maximum comfort and performance. Our collections feature a mix of classic and contemporary styles, allowing golfers to express their individuality while maintaining functionality.</p><p><strong>Q4: How does Bogey Boys ensure the quality and performance of its apparel?</strong></p><p><strong>A:</strong> Quality is a top priority for us. We use premium materials and work closely with experienced manufacturers to ensure that every piece meets our high standards. Our products undergo rigorous testing to ensure they perform well under various conditions on the golf course. Additionally, we pay close attention to details like stitching, fit, and fabric durability to guarantee long-lasting wear.</p><p><strong>Q5: Sustainability is becoming increasingly important in the fashion industry. How is Bogey Boys addressing this issue?</strong></p><p><strong>A:</strong> Sustainability is a key focus for Bogey Boys. We are committed to using eco-friendly materials and sustainable manufacturing processes wherever possible. Our goal is to minimize our environmental impact while still delivering high-quality, stylish products. We are continuously exploring new ways to improve our sustainability practices and contribute positively to the environment.</p><p><strong>Q6: What role does fashion play in golf, and how is Bogey Boys contributing to this trend?</strong></p><p><strong>A:</strong> Fashion plays a significant role in golf as it allows players to express their personal style and feel confident on the course. Bogey Boys contributes to this trend by offering apparel that is both stylish and functional. Our designs are bold and unique, breaking away from traditional golf attire and providing golfers with more options to showcase their individuality.</p><p><strong>Q7: Can you share any upcoming projects or collections that Bogey Boys is working on?</strong></p><p><strong>A:</strong> We have some exciting projects in the pipeline, including collaborations with well-known designers and golfers. Our upcoming collections will feature new patterns, innovative fabrics, and enhanced performance features. We are also working on expanding our product range to include more accessories and lifestyle items, providing our customers with a complete golf wardrobe.</p><p><strong>Q8: How can customers stay updated on the latest news and releases from Bogey Boys?</strong></p><p><strong>A:</strong> Customers can stay updated by following us on our social media channels and subscribing to our newsletter. We regularly post updates, product releases, and behind-the-scenes content on our Instagram, Facebook, and Twitter accounts. Our newsletter subscribers get exclusive access to early releases, special promotions, and insider news about the brand.</p><p><strong>Q9: What message would you like to convey to your customers and the golfing community?</strong></p><p><strong>A:</strong> We want to thank our customers and the golfing community for their support and enthusiasm for Bogey Boys. Our mission is to bring a fresh, stylish perspective to golf apparel, and we are thrilled to have such a passionate and supportive community. We encourage everyone to express their individuality on and off the course, and we are committed to providing high-quality, fashionable apparel that helps them do just that.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "EXPLORE THE COLLECTION",
+            "tag": "h2",
+            "size": "h2",
+            "font": "serif"
+          }
+        }
+      },
+      "block_order": ["heading_1"],
+      "settings": {
+        "alignment": "center",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/MEMORIAL_DAY_FLASH_SALE_22.png"
+          }
+        }
+      },
+      "block_order": ["image_1"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "SHOP NOW",
+            "link": "https://trendygolfusa.com/collections/mens-bogey-boys-golf-apparel",
+            "style": "dark-grey"
+          }
+        }
+      },
+      "block_order": ["button_1"],
+      "settings": {
+        "alignment": "center",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "stl_1", "hero_2", "text_2", "text_3", "media_grid_1", "text_4", "related-articles"]
+}

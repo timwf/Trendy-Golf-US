@@ -1,0 +1,239 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Untitled_design_-_2024-02-21T210432.338.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Introducing B. Draddy: A Tale of Brotherhood and Timeless Style",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At TRENDYGOLF, we're always on the lookout for brands that embody both elegance and functionality, and we're thrilled to introduce you to our latest addition: B. Draddy. Behind this brand lies a story of brotherhood, tradition, and a commitment to providing the highest quality apparel for the modern man.</p><p>B. Draddy, which bears the name Brothers Draddy, not only represents a family legacy but also celebrates the profound bond of brotherhood itself. From the founder's experiences with his own grandfather and his brothers to witnessing the unbreakable connection among his own sons, the brand draws inspiration from the enduring strength and support found within brotherhood.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_e2996360-9a78-42ee-a542-50836c2b3021.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_35c73339-e39c-48f4-bd92-cc6d5a707f11.jpg"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This legacy of brotherhood manifests in the meticulous craftsmanship and timeless design of B. Draddy's collections. Each piece, from their iconic polos to their luxurious sweaters, is crafted with the highest quality materials, blending classic elegance with modern innovation. Organic Peruvian Pima cotton, Italian merino wool, and Scottish cashmere are just a few of the premium fabrics used, ensuring both comfort and durability.</p><p>In an exclusive interview with B. Draddy, we delved deeper into the brand's ethos and design philosophy. According to Billy Draddy, the brand's founder and third-generation sportswear expert, the goal is simple: to provide superior quality garments that stand the test of time. The Spring Collection, inspired by the vibrant colors and coastal charm of Bermuda, captures the essence of relaxed sophistication and effortless style.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Untitled_design_40.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>But what truly sets B. Draddy apart is its unwavering dedication to its customers. From the moment you slip into a B. Draddy piece, you're enveloped in comfort, confidence, and performance. Whether you're hitting the golf course, heading to the office, or enjoying a night out, B. Draddy ensures that you look and feel your best every step of the way.</p><p>As B. Draddy joins the TRENDYGOLF family, we invite you to explore their timeless collection and experience the essence of brotherhood woven into every stitch. From classic polos to versatile sweaters, B. Draddy offers the perfect blend of style and functionality for the modern man.</p><p><em><strong>Read the full interview below:<br/></strong></em></p><p><strong>TRENDGOLF: Could you share the story behind the brand's beginnings? </strong></p><p>B. Draddy looks to the past and its icons for inspiration while using modern design techniques. What started with a polo ten years ago has evolved into a full collection of luxe, lived-in essentials for the course and beyond. From organic Peruvian Pima cotton to Italian merino and Scottish cashmere, B. Draddy blends impeccable quality with incredible comfort.</p><p>Ten years ago, we wanted to make a superior golf shirt, one that performed on the course—and one you wanted to wear when not playing, too. We traded slick synthetics and sticky double-mercerized cotton for a better raw material: naturally breathable, ultra-soft, organic long-staple Peruvian Pima cotton, aka the best of the best. We kept the details and the design clean, simple, and fuss-free. You wash it, you wear it, and it just keeps getting naturally softer and better. It was the “anti-golf shirt” of its time, but it breathed, performed and was so much more comfortable than anything else out there. Not much has changed since that very first polo, and we intend to keep it that way. </p><p>Above everything, brotherhood—the bond of family—inspires all that we do. It’s a relationship that you can’t shake, even if you tried. Billy Draddy represents the third generation of Draddys working in the sportswear industry, carrying forth a legacy of excellence and a drive to innovate. Family history forms the DNA of all things B. Draddy—our collections, our ambassadors, our partnerships.</p><p><strong>TRENDYGOLF: Who is the target audience for Draddy?</strong></p><p>Our target customer embodies a classic style with timeless sensibility. He appreciates the heritage appeal of iconic pieces but infuses his look with subtle, unexpected elements. He values quality craftsmanship, and he invests in pieces that transcend seasonal trends. He is well-versed in culture, with a diverse taste in music and a passion for exploration, and his wardrobe reflects that. </p><p><strong>TRENDYGOLF: What sets your brand apart or makes it unique in the market? </strong></p><p>Our unwavering focus on premium quality and design is what sets us apart from other brands in the market. We only use the highest quality raw materials—long-staple organic Peruvian Pima cotton, Italian merino wool, long-staple Scottish cashmere. Our products are timeless, durable, and designed to last season after season, year after year. And because of our meticulous choice in fabrics, they only get better, softer, and more worn-in over time. This is anti-fast fashion at its finest.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_dda56f0b-ab5f-4809-b1e5-3f4fb419a53f.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_0f8b3bf4-766b-49e2-bcbc-fd1c16e4a156.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5.jpg"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>TRENDYGOLF: What was the inspiration behind your latest collection? </strong></p><p>Our Spring Collection was inspired by a recent trip to the southernmost point on the B. Draddy compass logo—Tucker’s Town, Bermuda. In addition to the other three points on the compass (Rye, NY, Cork, Ireland and Block Island, RI), it’s one of our absolute favorite places on the planet. Billy fell in love with Bermuda on his very first visit—the beautiful beaches, the salty Atlantic, the incredible golf, and of course the seafood. A round at the Mid Ocean Course and a ginger beer overlooking the incredible shoreline is all it takes to get you into a spring state of mind. </p><p> </p><p>Our Spring Collection pulls from Bermuda’s naturally vibrant color palette with tropical shades, faded stripes and hand-drawn prints in our supersoft organic Peruvian Pima cotton and our incredibly light, moisture-wicking tech fabrics that feel like favorites right out of the box. Whether you’re packing your carry-on for a golf trip or just refreshing your week-to-weekend wardrobe with some seasonal color, our spring collection has something for every guy, on and off the course.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Untitled_design_41.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>TRENDYGOLF: What is the core design philosophy or ethos that drives B.Draddy’s creations? </strong></p><p>At the core of our brand is a steadfast dedication to providing unparalleled quality goods that fuse timeless inspiration with state-of-the-art craftsmanship. Our focus has always been about fostering relationships—the connection between our customers and our products, and the enduring bond we share over time.</p><p>Our vision is steeped in the concept of brotherhood, symbolized by the familial ties that started our company. It's a bond that transcends, a commitment ingrained in us because they are family; they understand us better than we understand ourselves.</p><p>Our goal is to create something enduring, something that will stand the test of time.</p><p> <strong>TRENDYGOLF: What experience or emotions do you aim to evoke in customers when they engage with Draddy? </strong></p><p>Comfort, confidence and performance. </p><p>Comfort—if it’s not the most comfortable thing you’ve ever put on your body, then you shouldn’t wear it. We obsess over every detail, stitch, seam and fabric selection to ensure that all of our products are the most comfortable pieces in your closet, from everyday essentials like our boxers and tees to investment pieces like suede jackets and cashmere sweaters.</p><p>Confidence—when you’re wearing B. Draddy, you feel good because you look good. Our clothes provide you with the building blocks for a totally effortless, totally versatile wardrobe. One that works for any occasion, from the course to your commute to dinner out. Tailored to perfection, our fits are universally flattering and look great on every body type.</p><p>Performance—from our naturally breathable Peruvian Pima to our incredibly light (but not sheer) wicking jersey to our subtly textured Cool tech jersey, innovative performance is at the heart of each and every design. When a garment keeps you cool, dry and comfortable, you stay at the top of your game, whether on the golf course, in a meeting or wherever your weekends take you.</p><p> </p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "B. DRADDY",
+        "collection": "b-draddy",
+        "product_limit": 12,
+        "button_label": "SHOP THE COLLECTION",
+        "button_link": "shopify://collections/b-draddy",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "media_grid_1", "text_2", "hero_2", "text_3", "media_grid_2", "text_4", "hero_3", "text_5", "products_1", "related-articles"]
+}

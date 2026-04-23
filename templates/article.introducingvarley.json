@@ -1,0 +1,304 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_18.jpg",
+            "mobile_image": "shopify://shop_images/shopify_magazine_hero_size_18.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "INTRODUCING VARLEY",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>TRENDYGOLF is excited to announce the arrival of Varley, a contemporary fashion brand that is redefining the boundaries of style and versatility. Founded in 2015 by Lara and Ben Mead, Varley brings a fresh perspective to modern wardrobes with its thoughtfully designed collections that blend elegance with functionality.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_951862bd-32cd-4abc-b2f6-f3d2b9aa8650.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_dcf0e349-cc3f-4110-9bb7-e48839048c75.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_005cd1e2-fb63-426f-af5d-579d4e651014.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_dcf0e349-cc3f-4110-9bb7-e48839048c75.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Elevate your everyday",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Varley's debut on TrendyGolf marks the introduction of the Club collection—a standout line that embodies the brand's commitment to timeless style and considered design. This collection is the epitome of court-to-club dressing, seamlessly transitioning from athletic wear to chic everyday outfits.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_19.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "ABout the collection",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Club collection features an array of knitted layers, dresses, and skorts, each crafted in classic silhouettes that exude sophistication. Whether you're heading to the golf course, a casual outing, or simply navigating your daily activities, Varley's pieces are designed to keep you looking effortlessly stylish.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_273e7a62-245f-43c6-a4c4-1dbb7b5e6270.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7_689b51f8-5d52-4a77-89fb-772e062196ea.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6_5c8dbb0e-14c5-4a1e-bbf8-36959198b410.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/8_b8cbc6a9-0137-4b17-bf9d-856d145e7c5c.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Effortless. versatile. Easy-to-wear.",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Varley's unique approach to fashion is evident in their ability to create versatile, easy-to-wear looks that effortlessly adapt to various settings. The Club collection offers a range of options that allow you to mix and match, building a wardrobe that works as hard as you do. Each piece is thoughtfully designed to offer both form and function, ensuring that you stay comfortable and chic from one activity to the next. <br/><br/>Explore the collection below.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_20.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Varley",
+        "collection": "womens-varley-apparel",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/womens-varley-apparel",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "media_grid_1",
+    "text_2",
+    "hero_2",
+    "text_3",
+    "media_grid_2",
+    "text_4",
+    "hero_3",
+    "products_1",
+    "related-articles"
+  ]
+}

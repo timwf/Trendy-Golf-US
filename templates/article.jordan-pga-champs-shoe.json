@@ -1,0 +1,109 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Untitled_design_80.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Unveiling Nike's Exclusive Golf Shoe Collection for the PGA Championship",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As the Masters fades into memory, the anticipation for the PGA Championship builds, slated to tee off on May 16th from Louisville, Kentucky. Nike, known for its limited edition releases, has unveiled a special shoe lineup for the upcoming major, including a fresh addition: the Air Pegasus 89 G.</p><p>Drawing inspiration from Kentucky's rich bourbon heritage, the Air Pegasus 89 G \"PGA Championship\" boasts warm bourbon hues and intricate wood grain textures. From the grain-patterned Swoosh to the textured mudguards resembling freshly cut tree stumps, each detail pays homage to the state's distilling legacy. The spikeless outsole, subtly elevated for golf performance, completes the sophisticated look.</p><p>For tournament play, keep an eye out for the Air Zoom Infinity Tour 2, likely to be sported by defending champion Brooks Koepka. Crafted from breathable Flyweave material with integrated spikes and Air Zoom cushioning, it offers both comfort and traction on the course. Meanwhile, Nike's flagship golfer Rory McIlroy will showcase the Air Zoom Victory Tour 3, featuring a blend of full grain leather and faux wood accents for a timeless yet modern aesthetic. With its conventional twist spikes, this shoe promises stability and style for every swing.</p><p>Stay tuned for these exclusive releases as Nike continues to elevate golf footwear to new heights, blending innovation with tradition on the fairways of the PGA Championship.<br/><br/><strong>Available to shop on our site, May 14th at 7am PST.</strong></p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_82fc5cfa-aea2-4b1d-996f-4a41b31d495f.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_f421e52d-e6e5-42b5-8fdc-ec22bdee352a.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_f421e52d-e6e5-42b5-8fdc-ec22bdee352a.jpg"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "MORE FROM NIKE",
+        "collection": "mens-nike-golf-clothing",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-nike-golf-clothing",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "media_grid_1", "products_1", "related-articles"]
+}

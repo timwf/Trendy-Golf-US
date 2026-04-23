@@ -1,0 +1,275 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_12.jpg",
+            "mobile_image": "shopify://shop_images/shopify_magazine_hero_size_12.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Embrace Timeless Style with the Malbon x Coca-Cola Collection",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Golf and Coca-Cola might seem like an unusual pairing at first glance, but the new Malbon x Coca-Cola collection seamlessly blends these two icons into a collaboration that celebrates heritage, style, and community. This exclusive range is available at TrendyGolf, and continues to honor Coca-Cola's iconic legacy while introducing a fresh, nostalgic twist to your golfing wardrobe.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_83ed8a16-33e9-47f3-9036-99ebd1825b52.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_d35acae0-3814-493b-9bd3-617d2460a4d4.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_d35acae0-3814-493b-9bd3-617d2460a4d4.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LAUNCH_PAGE_SHOWCASE_ITEM_3cc2c857-f5ca-461d-bc23-735b67021b8c.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_13.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_527b6e9f-c1ea-4df4-9157-82bce1715306.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_ee63c8fe-77f3-4570-9437-0c07ef1fb251.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_96f7252a-95c3-43c9-8af3-5a7b02271ecf.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_70dff1e6-874a-408f-8a1b-60ea6e2c2d6b.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "KEY PIECES IN THE COLLECTION",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Spencerian Block T-Shirt</strong>: Made from soft cotton jersey, this tee features a ribbed neckline and a front chest pocket with a Coke Buckets screenprint. The Spencerian Block logo on the back and woven flag label add a touch of iconic style.<br/><br/><strong>x Coca Cola Ice Cold Hoodie:</strong> The Malbon x Coca-Cola Ice Cold Hoodie offers comfort with its 100% cotton fleece construction and self-lined hoodie. Featuring a front pocket, ribbed hem and cuffs, and unique embroidery details including the Ice Cold logo and M Script bottle cap.</p><p><strong>International Shorts</strong>: Crafted from poly-coated nylon, these shorts offer durability and comfort with an elastic waistband, hidden zippered pockets, and an all-over print. Embroidered logos enhance their sporty look.</p><p><strong>Spencerian Block Shoe Bag</strong>: Durable vinyl and velour construction with a secure zipper, inner pocket, and handle make this bag both practical and stylish. It features the Spencerian Block and Coca-Cola logos.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_14.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "EXPLORE THE COLLECTION",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Malbon x Coca-Cola collection honors Coca-Cola's iconic legacy through vintage-inspired designs and high-quality craftsmanship. Each piece blends classic elements with modern functionality, bringing a touch of nostalgia and stylish flair to your golf wardrobe. Shop now at TrendyGolf and elevate your game with this unique collaboration.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "MALBON GOLF",
+        "collection": "mens-malbon-golf",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-malbon-golf",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "media_grid_1",
+    "hero_2",
+    "media_grid_2",
+    "text_2",
+    "hero_3",
+    "text_3",
+    "products_1",
+    "related-articles"
+  ]
+}

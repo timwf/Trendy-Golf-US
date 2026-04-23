@@ -1,0 +1,115 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Untitled_design_45.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Jordan 9 \"True Red\" Golf Shoe coming 2/23/24",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Get ready to tee off in style with the highly anticipated Jordan 9 \"True Red\" coming soon to TRENDYGOLF. As we dive into the new year, Jordan Brand is giving golfers a reason to get excited by reviving one of its beloved silhouettes. The AJ9 G \"True Red\" is set to make its mark on the green, with official images dropping shortly after professional golfer Pat Perez showcased them on the course.</p><p>While the Jordan 9s have been adapted for golfing in the past, this latest version takes it up a notch. Jordan Brand has swapped out the running midsole for a design that closely resembles the iconic basketball version. Similar to the Air Jordan 6 Low G, which made a triumphant return to the golf scene last year, this iteration stays true to the classic \"True Red\" colorway, with a sleek black mudguard adding a touch of gloss. Underneath, removable spikes and a TPU traction pattern ensure you stay grounded and in control on the fairways.</p><p>Keep your eyes peeled for the release date, expected to drop in the coming weeks at a retail price of $230 USD. With both core and limited colorways on the horizon, the Jordan 9 \"True Red\" promises to elevate your golf game as the season unfolds. Stay tuned for more updates and be ready to hit the course in style.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_17491040-4c1f-4dcc-8329-22f170ba6fbb.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_4b2ba2a6-9090-435a-8f31-223368254fcd.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_f1b74466-26cc-4c5f-b2d6-3f69e5dc131b.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_02d26e4d-8df0-49e4-8770-b8dea968e810.jpg"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "MORE FROM NIKE",
+        "collection": "mens-nike-golf-clothing",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-nike-golf-clothing",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "media_grid_1", "products_1", "related-articles"]
+}

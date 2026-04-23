@@ -1,0 +1,177 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_36.jpg",
+            "mobile_image": "shopify://shop_images/Untitled_design_75.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Celebrating Style at Augusta Through the Ages",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As the first major of the year unfolds at Augusta, it's not only a revered test of golfing prowess but also a showcase of evolving fashion on the historic fairways. From the vibrant azaleas to the meticulously manicured greens, Augusta National Golf Club has been the stage for memorable style moments as much as it has been for unforgettable shots.</p><p><strong>Historical Elegance and Evolution</strong><br/>Augusta National, founded in 1933, has hosted the annual invitation-only tournament since 1934, making it a pivotal scene in golf history. Over the decades, the tournament has witnessed not just the evolution of golf but also the changing trends in golf attire. From the classic knickers and cardigans of the early 20th century to the modern, sleek, and technology-enhanced apparel of today, each era brings its flair to the fairways. Style icons like Arnold Palmer and Jack Nicklaus, with their signature looks—Palmer with his charismatic, approachable style and Nicklaus with his sunny yellow shirts—have left a lasting impact on golf fashion.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_37.jpg",
+            "mobile_image": "shopify://shop_images/shopify_magazine_hero_size_37.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>The Course Itself: A Stage for Style</strong><br/>Augusta National is known for its beauty and its brutality, a true test of skill and strategy. The course's design, with its famous Amen Corner and the challenging par-3 12th, demands precision and offers drama, setting the perfect backdrop for displaying high-stakes fashion. It's here that players often choose to debut bold styles, perhaps in hopes that a standout outfit will accompany a standout performance.</p><p><strong>Contemporary Style Influencers</strong><br/>Recently, players like Jason Day have taken golf fashion in new directions. Sporting Malbon, Day brings a fresh, streetwear-inspired look to the course, blending traditional golf aesthetics with modern urban culture. Similarly, Viktor Hovland, known for his sleek J.Lindeberg ensembles, exemplifies the fusion of performance and sleek Scandinavian design, elevating golf fashion to new heights. Joining them in setting trends, Justin Thomas in Greyson Clothiers, showcasing sophisticated yet bold designs that marry functionality with cutting-edge fashion, embodying the spirit of contemporary golf apparel.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_4271771a-14b3-4346-b275-e99f4e6c38b3.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_161ed8bb-9fcb-464b-9c73-813bd4a291cf.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_a5928d6c-5549-4e3d-9a8f-5d7d17f2f0df.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_dbbf9bf3-116c-4d2b-bf07-fa4d052b5186.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "This Year’s Apparel Drops",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As we celebrate another year of this historic tournament, let’s also look forward to the exciting new apparel making its debut:</p><p><br/><strong>Adidas Originals Drop: </strong>This collection revives classic styles with a modern twist, perfect for making a statement on or off the course.<br/><br/><a href=\"https://trendygolfusa.com/collections/adidas-golf-originals?filter.v.availability=1\" title=\"https://trendygolfusa.com/collections/adidas-golf-originals?filter.v.availability=1\">SHOP NOW</a><br/><br/><strong>Greyson \"Garden of Thieves\"</strong>: Inspired by the unpredictability of nature, Greyson’s latest offerings feature bold patterns and vibrant colors that are sure to turn heads.<br/></p><p><a href=\"https://trendygolfusa.com/collections/mens-greyson?filter.v.availability=1\" title=\"https://trendygolfusa.com/collections/mens-greyson?filter.v.availability=1\">SHOP NOW</a></p><p><strong>JL Tour Collection: </strong>J.Lindeberg’s commitment to combining high-tech materials with sleek Scandinavian design continues, providing outfits that offer both performance and style.<br/></p><p><a href=\"https://trendygolfusa.com/collections/mens-j-lindeberg?filter.v.availability=1\" title=\"https://trendygolfusa.com/collections/mens-j-lindeberg?filter.v.availability=1\">SHOP NOW</a></p><p><strong>RLX Limited Edition Drop: </strong>Tailored for the discerning golfer, RLX Ralph Lauren’s new line brings elegance and luxury to the greens of Augusta.<br/><br/><a href=\"https://trendygolfusa.com/collections/mens-ralph-lauren-clothing?filter.v.availability=1\" title=\"https://trendygolfusa.com/collections/mens-ralph-lauren-clothing?filter.v.availability=1\">SHOP NOW</a><br/><br/><strong>Nike NRG \"Pink Bloom\"</strong>: Celebrating the spirit of the season, Nike’s collection features floral designs on the Air Max Plus G and Victory Tour 4, echoing the blooming beauty of Augusta.<br/><br/><a href=\"https://trendygolfusa.com/pages/nike-golf-nrg-pink-bloom\" title=\"https://trendygolfusa.com/pages/nike-golf-nrg-pink-bloom\">BE THE FIRST TO SHOP</a></p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Inspired by Magnolia Lane",
+        "collection": "mens-magnolia-lane-inspired-apparel",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-magnolia-lane-inspired-apparel",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "hero_2", "text_2", "media_grid_1", "text_3", "products_1", "related-articles"]
+}

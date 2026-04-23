@@ -1,0 +1,163 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/3_5a7b6cf9-37ab-4699-af75-5f77306b7c7c.jpg",
+            "mobile_image": "shopify://shop_images/3_5a7b6cf9-37ab-4699-af75-5f77306b7c7c.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Future of Waterproofs: Spotlight on the Galvin Green Ames Jacket",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As the golf industry moves towards innovative and sustainable solutions, Galvin Green stands at the forefront of performance-driven design. Among their latest innovations, the <strong>Ames Jacket</strong> is leading the charge in revolutionizing waterproof outerwear, offering an unbeatable blend of style, comfort, and protection.</p><p>The Ames Jacket is not just about keeping golfers dry during unpredictable weather conditions—it's about redefining the future of waterproof gear. With a commitment to pushing the boundaries of performance apparel, Galvin Green has designed the Ames Jacket to meet the needs of modern golfers who demand both functionality and fashion-forward designs.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_21.jpg",
+            "mobile_image": "shopify://shop_images/2_1985f62c-5cc5-4e74-b60a-634ac08c8373.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "A Revolution in Waterproof Technology",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Galvin Green's <strong>Ames Jacket</strong> utilizes the most advanced waterproof technology available, combining a lightweight, breathable fabric with unbeatable protection against the elements. The jacket is part of their innovative collection aimed at delivering exceptional weatherproof gear, without compromising on comfort or flexibility.</p><p>One of the standout features of the Ames Jacket is its superior breathability. Unlike traditional waterproofs that can leave golfers feeling restricted or overheated, the Ames Jacket ensures that players remain cool and comfortable, no matter how intense the game gets. This allows for a greater range of motion and performance, critical for success on the course.</p><h3></h3>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/2_b170a229-2ad7-4ada-b8c9-bad8c8cfe951.jpg",
+            "mobile_image": "shopify://shop_images/1_6c4e5354-60d2-428b-994d-420607cd4d82.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Engineered for Performance</h3><p>Every detail of the Ames Jacket is meticulously engineered to enhance performance. The jacket’s ergonomic design ensures a perfect fit, while its lightweight construction means it can be easily packed away when the weather clears. Galvin Green’s innovative GORE-TEX technology is at the heart of the Ames Jacket, providing the ultimate in water protection while allowing the skin to breathe. It’s this level of detail that makes the Ames Jacket not just a piece of apparel, but an essential part of every golfer’s kit.</p><h3>Style Meets Functionality</h3><p>In true Galvin Green fashion, the Ames Jacket doesn’t sacrifice style for functionality. It features a sleek, modern design that pairs perfectly with the rest of the Galvin Green collection, ensuring that golfers look just as sharp on the course as they do off it. With a variety of colors and fits to choose from, the Ames Jacket is as versatile as it is practical.</p><h3>FUTURE READY INNOVATION </h3><p>As Galvin Green continues to innovate and lead the way in waterproof golf apparel, the Ames Jacket represents the brand’s commitment to staying ahead of the curve. This jacket is more than just a response to the challenges of playing in wet conditions—it’s a symbol of where the future of golf apparel is headed.</p><p>For golfers seeking the ultimate in protection, comfort, and style, the Ames Jacket is the future-proof solution they’ve been waiting for. Whether you’re facing a light drizzle or a full-blown downpour, the Ames Jacket ensures that nothing stands between you and your best game.</p><p>Discover the future of waterproofs with the <strong>Galvin Green Ames Jacket</strong>, available now at TRENDYGOLF.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "GALVIN GREEN",
+        "collection": "mens-galvin-green",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-galvin-green",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "hero_2", "text_2", "hero_3", "text_3", "products_1", "related-articles"]
+}

@@ -1,0 +1,135 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_1_09d9dd3f-4bcc-4ed3-9576-0a999f8231e0.png",
+            "mobile_image": "shopify://shop_images/shopify_magazine_hero_size_1_09d9dd3f-4bcc-4ed3-9576-0a999f8231e0.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "adidas Originals Returns to the Course",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>Where heritage meets modern performance</em></p><p>The Trefoil is back on the fairway.</p><p>Launching April 3rd, <strong>adidas Golf Originals</strong> makes its much-anticipated return with a fresh range of apparel, footwear, and accessories that fuse iconic design with modern golf performance. Available soon at <strong>TRENDYGOLF</strong>, this latest drop celebrates adidas’ rich heritage while reimagining timeless silhouettes for today’s game.</p><p>And yes—select pieces will make their way to the biggest stage in golf, worn by adidas athlete <strong>Ludvig Aberg</strong> at the first major of the year.</p><p></p><h3>Men’s Collection Highlights:</h3><ul><li> A cotton-poly sweater knit with flatknit rib detailing for a heritage-meets-modern feel.</li><li>Mercerized cotton gives this vintage silhouette a brighter, more lustrous finish.</li><li>Classic tailoring meets golf-ready functionality with subtle 3-Stripes detail.</li><li>Made with premium modal and cotton-cashmere blends, these layering pieces keep you sharp from the first tee to the clubhouse.</li><li>A must-have staple that combines comfort, class, and performance.<br/></li></ul><h3></h3><h3></h3><h3>Women’s Collection Highlights:</h3><ul><li>Raglan sleeves and cool-touch double-knit materials make this modern take an instant classic.</li><li>Contrast color tipping and clever construction (hello, side pockets) bring style and utility to one place.</li><li>Subtle 3-Stripes and a clean crewneck silhouette for elevated off-course appeal.</li><li>Ribbed V-neck, pop-color pleats, and a 3-Stripes elastic band detail bring sporty femininity to the fairway.<br/></li></ul><p><strong>Be First to Shop It.</strong><br/><br/>The adidas Golf Originals Collection will be available at TRENDYGOLF beginning April 3. Sign up now to be the first to shop—and lead the pack in luxury golf fashion.</p><p><strong>Elevate your look. Perform at your peak. Stay original.</strong></p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_69730d8b-32fe-4531-995c-7298ab6b259f.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_9fc83d59-640b-4c84-a428-03e47c6a6a71.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_8563e108-31f3-43b2-a109-c247dc7f22e2.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_dc623812-10c1-4ed2-b483-e32de0334408.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_2_d7aabf26-7d94-4fd1-90e1-96b64d7f72c5.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "adidas ORIGINALS",
+        "collection": "adidas-golf-originals",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/adidas-golf-originals",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "media_grid_1", "hero_2", "products_1", "related-articles"]
+}

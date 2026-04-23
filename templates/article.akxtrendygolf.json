@@ -1,0 +1,225 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/2_4f85b5fc-3706-4f0c-a06a-db3a3e07cceb.png",
+            "mobile_image": "shopify://shop_images/2_4f85b5fc-3706-4f0c-a06a-db3a3e07cceb.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "AK's Tribute to LA’s Iconic Public Course",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>\"I'll always remember the uneasy feeling I had, at just 7 years old, meeting strangers on the first tee at Roosevelt. That's one reason it's so special to me — every day I was accepted by three new people from all walks of life.\"<br/></em>— <em>Anthony Kim</em></p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_66ebe88a-430f-4d47-b8db-2a6b7d72afe6.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_760c6bfa-6699-4edb-99e5-812e44e76e19.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_89fd51fc-7f66-40f7-95f9-54bf9996c80c.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_c04c62c8-4e4c-4aae-8501-246ea9e5eaa6.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This Thursday October 24th, we’re excited to launch the <strong>AK Roosevelt Capsule</strong> — a limited-edition collection crafted in collaboration with Extracurricular and Anthony Kim, inspired by Los Angeles' beloved Roosevelt Golf Course. This collection isn't just about golf apparel; it's a tribute to a place that holds a special part in Anthony's journey.</p><p>For Anthony, Roosevelt is more than a golf course — it’s where he fell in love with the game. Growing up in LA, he spent countless hours playing there, soaking in the atmosphere, and finding inspiration in the people he met and the challenges he faced. What makes Roosevelt unique isn’t just the game itself, but the sense of community it fosters.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/3_2842f11d-385c-4b10-abf9-3075eb36cc1c.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Tucked away in Griffith Park</strong>, Roosevelt offers breathtaking views, including a clear sightline to the Griffith Observatory from Hole 6. It’s a place where golfers of all ages, skill levels, and backgrounds come together, embracing Roosevelt's relaxed and welcoming vibe. For Anthony, these elements made Roosevelt more than just a golf course — they made it home.</p><p>Working closely with Anthony, we designed the AK Roosevelt Capsule to reflect both his personal style and the dynamic, laid-back energy of Roosevelt Golf Course. As a nod to this cherished place, each piece in the collection is adorned with the <strong>longitude and latitude coordinates of Roosevelt Golf Course</strong> — a subtle yet meaningful tribute.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_73d77911-bd94-4046-8157-a8d60eab09be.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_df96c965-5b6b-49ff-aa53-585b70808c3d.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_8028d875-da63-4c66-b4b1-5a656d23ecfa.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_12f9bd5b-ff7e-411d-b9d9-28b1eddc695f.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The AK Roosevelt Capsule launches <strong>this Thursday</strong> and will be available for just four days. Keep an eye on your inbox for the official release, and be sure to sign up for launch notifications on each product page. Don’t miss your chance to own a piece of Anthony’s story.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/1_df0025b8-df60-4e2c-bf3a-b0e2bac5fbf8.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "media_grid_1", "text_2", "hero_2", "text_3", "media_grid_2", "text_4", "hero_3", "related-articles"]
+}

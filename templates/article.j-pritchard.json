@@ -1,0 +1,131 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/JPITCHARD__T3087_1-min_jpg.webp",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "INTRODUCING J. PRITCHARD: TRENDYGOLF'S FIRST PICKLEBALL BRAND",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We are thrilled to welcome J. Pritchard to TRENDYGOLF, marking our first venture into the dynamic world of pickleball. This exciting new brand, founded in partnership with the sport's founding family, Joel and Joan Pritchard, brings a unique blend of history, style, and performance to the fastest-growing sport in America.</p><h4><strong>The Birth of J. Pritchard</strong></h4><p>Pickleball, invented in 1965 by Joel and Joan Pritchard, has surged in popularity, capturing the hearts of millions. Despite its rapid growth, the sport has lacked a dedicated apparel brand—until now. J. Pritchard was founded by the Gables, former professional beach volleyball players who discovered pickleball and quickly became passionate about the game. Recognizing a gap in the market, they set out to create a premium clothing line that pays homage to the sport's origins.</p><h4><strong>The Collection</strong></h4><p>J. Pritchard's latest collection embodies the Bainbridge Island lifestyle, combining heritage and timeless luxury. Designed for both on-court performance and off-court social engagements, the collection includes two main lines: the ‘Athletic Club’ and the ‘Social Club.’ Each piece is crafted using the highest quality fabrics, ensuring maximum comfort, flexibility, and style.</p><p>Key features of the collection include:</p><ul><li><strong>Innovative Fabrics</strong>: Utilizing the best available materials for each intended use, the collection ensures both performance and durability.</li><li><strong>Elegant Design</strong>: The designs are timeless and classic, reflecting the brand’s ethos of ‘Play Proper.’ Colors and design details are meticulously curated to fit cohesively within the collection.</li><li><strong>Sustainability</strong>: Every item in the collection is made from sustainable and/or recycled materials, with manufacturing partners rigorously vetted to ensure the highest ethical standards.</li></ul><h4><strong>Elevating the Game</strong></h4><p>J. Pritchard is not just about clothing; it's about elevating the entire pickleball experience. The brand’s philosophy encourages players to ‘Play Proper,’ embracing the sport with style and sophistication. The logo and designs of J. Pritchard tell the story of pickleball’s rich history, resonating with players who value both their game and their attire.</p><h4><strong>The Future of J. Pritchard</strong></h4><p>Looking ahead, J. Pritchard aims to expand beyond apparel to become a full lifestyle brand. This includes developing shoes, paddles, accessories, luxury travel options, and private pickleball leagues. The brand is committed to elevating the sport and providing a comprehensive lifestyle experience for pickleball enthusiasts.</p><p>We are excited to bring J. Pritchard to TrendyGolf and invite you to explore this exceptional new brand. Experience the blend of heritage, luxury, and performance that J. Pritchard offers, and elevate your pickleball game with their premium collection. Discover the collection now available on our website and join us in welcoming J. Pritchard to the TrendyGolf family.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_20ed39b9-8997-445b-a564-fb3e0f951db3.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_8da0f7e3-2794-4ead-b344-1d63b13504ba.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_85394aae-431d-4cb4-bfe8-2765b2149089.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_ef157494-e02e-467f-bd30-c72f9582ae1b.jpg"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>TRENDYGOLF</strong>: What inspired the creation of J. Pritchard?</p><p><strong>J. Pritchard</strong>: Pickleball, the fastest-growing sport in America, has captured the hearts of millions but until recently, lacked an authentic apparel brand dedicated to the sport. That’s where J. Pritchard comes into play, founded in partnership with pickleball’s founding family, Joel and Joan Pritchard, who invented the game in 1965.</p><p>TG: Could you share the story behind the brand’s beginnings.</p><p>JP: The Gables are former professional beach volleyball players who were looking for another sport to be competitive in. After being introduced to pickleball, they fell in love with it. They started entering competitions and noticed there was no meaningful clothing brand based on pickleball. Being in the apparel industry for over 25 years, they decided to create their own collection. They researched the origins of the game and learned that it was invented by The Pritchard Family in 1965. The Gables felt that in order to have the most authentic pickleball brand in the market, it only made sense to connect the founding family about the</p><p>collection. The conversation started with a message left on one of the family members, Frank Pritchard’s home answering machine.They followed that up with a handwritten letter. Both the voicemail and the note expressed how the Gables wanted to pay homage to what Frank’s parents had started by building a premium heritage collection. Frank wanted to meet in person, so they flew to Washington State to meet him. After hitting it off, he agreed to allow the Gables to use the name in exchange for 2 promises: 1) It had to be a premium collection, and 2) his mom had to get credit for naming the sport. </p><p>TG: Who is the target audience for [Brand Name]?</p><p>JP: Aspirational, avid players who would rather play pickleball than watch. We’re for the elevated player, who likely belongs to a private club. They take pride in the sport and what they wear to play.</p><p>TG: What sets your brand apart or makes it unique in the market?</p><p>JP: J. Pritchard is not just another clothing brand; it&#39;s a heritage apparel brand that pays homage to pickleball’s history. Our logo tells the story of the founding of the sport. The brand resonates with the origins and social nature of the sport.</p><p>TG: What was the inspiration behind your latest collection?</p><p>JP: Bainbridge Island lifestyle, heritage, timeless luxury.</p><p>TG: Could you describe the key elements or themes embodied in this collection?</p><p>JP: The line is built for on the court play and off the court social engagements. This is identified as our ‘Athletic Club’, and ‘Social Club’. Both collections utilize the highest quality fabrics available for each intended use case.</p><p>TG: What is the core design philosophy or ethos that drives J. Pritchard’s Creations?</p><p>JP: Our brand ethos is ‘Play Proper’ encouraging players to elevate the game and what is worn to play. Our designs are timeless and classic.</p><p>TG: Could you walk us through the creative process behind developing a new</p><p>Collection?</p><p>JP: We source the best available fabrics and identify the best silhouettes for</p><p>either play or social engagements. Colors and design details meticulously curated to fit cohesively within the collection. We have a specific point of view around who we are and how we show up to the end consumer.</p><p>TG: How does J. Pritchard stay innovative while keeping up with industry trends?</p><p>JP: We keep a strong pulse on what’s happening in the marketplace from a design and fabrication standpoint and interpret those trends through the specific lens of our brands DNA.</p><p>TG: What values or principles does [Brand Name] prioritize in its business and designs?</p><p>JP: Sustainability, charity, engaging with local communities, and elevating the sport to play proper.</p><p>TG: Can you discuss the choice of materials used in your designs and the brand’s stance on ethical production?</p><p>JP: Sustainability is a core value of our brand. Every item we sell utilizes sustainable and/or recycled materials. Manufacturing partners are rigorously vetted to ensure the highest level of ethical standards are in place.</p><p>TG: What experience or emotions do you aim to evoke in customers when</p><p>they engage with J. Pritchard?</p><p>JP: When a customer tries our clothing for the first time, there needs to be a wow moment. Our customer is quickly enamored by our brand story, but the closer is that intangible feeling when they try our clothes. The feel and mobility of our fabrications is truly unmatched in the space.</p><p>TG: Where do you envision J. Pritchard heading in the future? Any upcoming projects or developments?</p><p>JP: We are evolving into a full lifestyle brand, not specific to apparel alone. Shoes, paddles, accessories, luxury travel, and private pickleball leagues are all items in our crosshairs.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "collection": "j-pritchard-mens-womens-apparel",
+        "product_limit": 12,
+        "button_label": "SHOP THE COLLECTION",
+        "button_link": "shopify://collections/j-pritchard-mens-womens-apparel",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "media_grid_1", "text_2", "products_1", "related-articles"]
+}

@@ -1,0 +1,334 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/1_46e1f5db-2ef1-4fab-96bb-8d3b8cb8a722.png",
+            "mobile_image": "shopify://shop_images/1_46e1f5db-2ef1-4fab-96bb-8d3b8cb8a722.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "SUMMER GOLF DESTINATIONS WORTH PACKING FOR",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Best Summer Golf Spots and the Looks to Match.</p><p>Summer is officially here and so is golf season in full swing. Whether you're staying local or chasing sunshine across state lines, we rounded up a few of our favorite golf destinations that deserve a spot on your travel radar. These courses have it all: the views, the challenge, the bragging rights, and of course, the perfect vibe for your TRENDYGOLF wardrobe.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Oregon.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Oregon_cc7d248a-6e7a-4919-b8fd-18786c97ebaa.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Bandon Dunes, Oregon",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For the purists. Windswept cliffs, rolling dunes, and the kind of dramatic coastal views that make every bogey feel poetic. Bandon is bucket-list golf that calls for layers. Think quarter zips, relaxed tailoring, and a touch of West Coast cool.</p><p><strong>What to wear</strong>: Technical pullovers, elevated rain gear, and a performance pant that moves with you in the wind.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/North_Carolina.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Pinehurst, North Carolina",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>History meets hospitality. Pinehurst isn't just a resort, it's a rite of passage. From the iconic No. 2 to the Cradle short course, it's where tradition and charm collide. Pack sharp polos, lightweight layers, and versatile pieces that go from tee box to town square.</p><p><strong>What to wear</strong>: A mix of classic Americana and updated prep, performance fabrics disguised as leisurewear.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Missouri.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Big Cedar Lodge, Missouri",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A hidden gem with major energy. Big Cedar combines resort luxury with rugged Ozark beauty. It's ideal for a buddy trip, family getaway, or solo escape that turns into your favorite new tradition.</p><p><strong>What to wear</strong>: Earth tones, athletic polos, and mid-layers with a bit of an edge. Bonus points for gear that can double as hiking fit.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/california.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/california_61c9c9a2-8bf2-4cd0-a04c-7a8c107752af.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Pebble Beach, California",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you know, you know. The views are unreal, the course is iconic, and the style stakes are high. This is the place to show up looking like you care (but make it effortless). Keep it clean, minimal, and refined.</p><p><strong>What to wear</strong>: Soft palettes, sophisticated details, and head-to-toe looks that move seamlessly from fairway to fireside cocktails.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_4": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/2_0d0fd93d-4ec5-4cd7-af0d-a5bf0d158b98.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wherever your summer takes you (whether it's the coastal breeze of Bandon Dunes, the desert sun of Scottsdale, or somewhere halfway across the globe), make sure your golf game and your wardrobe are equally dialed in. At TRENDYGOLF, we're here to make sure you're ready for every round, every destination, and every unforgettable moment along the way. From performance-driven pieces to fashion-forward fits, we've got the gear to help you look and play your best, no matter the setting.</p><p>This season, think of golf not just as a sport, but as an experience. One that deserves the right backdrop and the right style. So go ahead, book the trip, pack the polos, and chase the game wherever it leads. We'll be right here, ready to outfit you for the journey.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "media_grid_1",
+    "text_2",
+    "hero_2",
+    "text_3",
+    "hero_3",
+    "text_4",
+    "media_grid_2",
+    "text_5",
+    "hero_4",
+    "text_6",
+    "related-articles"
+  ]
+}

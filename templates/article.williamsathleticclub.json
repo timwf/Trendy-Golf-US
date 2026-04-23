@@ -1,0 +1,160 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_34.jpg",
+            "mobile_image": "shopify://shop_images/Untitled_design_73.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Williams Athletic Club",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Where classic tailoring meets modern performance—for women who move with purpose.</strong></p><p>Rooted in family legacy and reimagined for today’s hybrid lifestyle, <strong>Williams Athletic Club</strong> is redefining what it means to dress for the country club. Founded on the belief that women shouldn’t have to choose between looking stylish and feeling comfortable, the brand blends timeless fashion with technical function—so you’re always ready, no matter where the day takes you.</p><p><strong>Read on for our Q+A with the founder, Susi Proudman. <br/><br/>Q: What inspired the creation of Williams Athletic Club?</strong></p><p>A: Family is at the heart of everything we do. “William” is the middle name of every firstborn son in our family for generations—a meaningful legacy we wanted to carry forward. “Club” nods to the elevated country club lifestyle, while “Athletic” reflects what makes us different: every piece is built with technical performance in mind. Even our blazers are lined with performance fabric—so yes, you <em>could</em> play in them.</p><h3><strong>Q: How did the brand get started?</strong></h3><p>A: I grew up in a family of avid golfers, but I always felt like I was putting on a costume when I dressed for the course. Traditional golf apparel didn’t feel like me—and when women don’t feel confident in what they’re wearing, it affects how they play, how they move, and how they show up. I created Williams Athletic Club to help women feel stylish, polished, and like themselves—on and off the course.</p><h3><strong>Q: Who is the Williams Athletic Club woman?</strong></h3><p>A: She’s stylish, busy, and influential—balancing career, family, fitness, and social life without missing a beat. She needs versatile pieces that can take her from school drop-off to board meetings, workouts, and cocktails at the club. She’s confident and curious, and her wardrobe reflects that.</p><h3><strong>Q: What makes Williams Athletic Club different from other brands?</strong></h3><p>A: We lead with fashion first, then layer in performance. Many activewear brands focus on function, then try to make it stylish—we do the opposite. Our collection is elevated, timeless, and designed to build on season after season. Every detail is thoughtfully considered, from fit to fabric to versatility.</p><h3><strong>Q: What inspired the latest collection?</strong></h3><p>A: Our first collection is inspired by women who live in motion. We looked at how menswear evolved post-COVID—when business casual started blending into country club dressing—and asked, “Where’s the female version of that?” Our answer: tailored skorts, technical blazers, luxe knits, and polished silhouettes that go wherever you do.</p><h3><strong>Q: What are the key themes in this collection?</strong></h3><p>A: Sophistication. Function. Confidence. We focused on layering pieces and refined silhouettes that transition seamlessly throughout the day. Expect premium fabrics, timeless design, and subtle performance details that make a big impact.</p><h3><strong>Q: What’s your design philosophy?</strong></h3><p>A: Clean. Intentional. Timeless. Less is more. Every piece is created to be seasonless—so you can build a lasting wardrobe, not just chase trends.</p><h3><strong>Q: Can you share more about the creative process?</strong></h3><p>A: It starts with research—trends, the market, the needs of modern women. Then we build: sourcing premium fabrics, refining trims, perfecting fit and function. We iterate until every piece performs exactly as it should.</p><h3><strong>Q: How do you stay innovative in a fast-moving industry?</strong></h3><p>A: With over 30 years in fashion—including roles at Aritzia, Lululemon, and Nike—it’s in my DNA. Our team has deep experience in golf, fashion, and design. We stay curious, forward-thinking, and rooted in real-life needs—while always keeping style front and center.</p><h3><strong>Q: What values does the brand prioritize?</strong></h3><p>A:</p><p><br/> – Pieces that stand the test of time<br/></p><p><br/> – Fashion that functions<br/></p><p><br/> – Always evolving<br/></p><p><br/> – Prioritizing premium, planet-conscious materials<br/></p><p><br/> – Uplifting women through honest, intentional design<br/></p><h3><strong>Q: What is your approach to materials and production?</strong></h3><p>A: I majored in textiles, so fabric is my love language. We work with highly technical mills and blend natural fibers with performance fabrics. The result? Pieces that feel luxurious, move with you, and never compromise on style or function.</p><h3><strong>Q: What do you want women to feel when they wear Williams Athletic Club?</strong></h3><p>A: Confident. Polished. Beautiful. The way the fabric drapes, the way the silhouettes flatter—it’s all designed to help women feel their best, no matter where they’re headed.</p><h3><strong>Q: What’s next for the brand?</strong></h3><p>A: We’re just getting started. We’re focused on growing the collection, refining our designs, and exploring new collaborations that continue to push the boundaries of elevated performance fashion. The future is bright—and we’re bringing our community along every step of the way.</p><p></p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_5485055d-93ae-456a-9ee4-bb3c7d0ff080.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_6e230f9d-7d09-4b30-ab1e-ffe43da4d505.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_fbd87241-7b2f-4b67-84e9-805f05704776.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_a73de082-9bcd-4aee-b1aa-0b1bd443736c.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "A NEW STANDARD IN WOMEN'S GOLF",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Williams Athletic Club isn’t just redefining how women dress for the course—it’s reimagining what’s possible when fashion and function truly work together. With timeless silhouettes, thoughtful performance details, and a deep understanding of the modern woman’s lifestyle, every piece is designed to empower. Whether you’re hitting the fairway or heading to dinner, Williams Athletic Club ensures you feel confident, comfortable, and completely yourself. This is more than clothing—it’s a new standard for how women show up, move, and lead.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_3_d25851e5-9e72-4afd-8968-f1eefa67621f.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Williams Athletic Club",
+        "collection": "womens-williams-athletic-club-apparel",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/womens-williams-athletic-club-apparel",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "media_grid_1", "text_2", "hero_2", "products_1", "related-articles"]
+}

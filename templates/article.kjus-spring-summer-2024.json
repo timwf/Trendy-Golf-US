@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "article-template": {
@@ -25,20 +16,15 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
-            "heading": "",
-            "heading_size": "h2",
-            "heading_font": "serif",
             "media_type": "video",
             "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/943790a550654c969871268662b09934.mp4",
-            "slide_duration": 7
+            "heading": ""
           }
         }
       },
       "block_order": ["slide_1"],
       "settings": {
         "autoplay": false,
-        "show_progress": false,
         "enable_animation": true,
         "margin_bottom": "medium"
       }
@@ -56,15 +42,6 @@
       "block_order": ["text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -83,26 +60,17 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>The Pro 3L 3.0 Jacket, is a testament to KJUS's relentless pursuit of innovation and excellence. This next-generation rainwear redefines the standards of breathability, stretch, and lightweight performance, offering golfers unparalleled freedom of movement without compromising on protection from the elements.</p><p>Picture yourself on the tee box, ready to unleash a powerful drive down the fairway. With the Pro 3L 3.0 Jacket, you can swing with confidence, thanks to its full stretch body and strategically placed Hyper 3D Stretch panels. These inserts are ingeniously designed to reinforce your natural range of motion during the golf swing, ensuring that not even the rain can dampen your game.</p><p>But it's not just about mobility \u2013 KJUS has thoughtfully integrated cutting-edge technologies to enhance comfort and performance. The KJUS Rain Gutter System ingeniously directs water away during extreme downpours, while the Drawcord Waist System ensures the jacket stays out of the way during crucial shots around the green.</p><p>Moreover, the jacket boasts an array of thoughtful features, including volcanic material lined pockets to keep your hands dry and warm, an ergonomic stand-up collar with a chin guard for added protection, and a new membrane that makes it the most breathable waterproof in the range. From the first hole to the last, the Pro 3L 3.0 Jacket is your ultimate companion against the elements.</p>"
+            "text": "<p>The Pro 3L 3.0 Jacket, is a testament to KJUS's relentless pursuit of innovation and excellence. This next-generation rainwear redefines the standards of breathability, stretch, and lightweight performance, offering golfers unparalleled freedom of movement without compromising on protection from the elements.</p><p>Picture yourself on the tee box, ready to unleash a powerful drive down the fairway. With the Pro 3L 3.0 Jacket, you can swing with confidence, thanks to its full stretch body and strategically placed Hyper 3D Stretch panels. These inserts are ingeniously designed to reinforce your natural range of motion during the golf swing, ensuring that not even the rain can dampen your game.</p><p>But it's not just about mobility – KJUS has thoughtfully integrated cutting-edge technologies to enhance comfort and performance. The KJUS Rain Gutter System ingeniously directs water away during extreme downpours, while the Drawcord Waist System ensures the jacket stays out of the way during crucial shots around the green.</p><p>Moreover, the jacket boasts an array of thoughtful features, including volcanic material lined pockets to keep your hands dry and warm, an ergonomic stand-up collar with a chin guard for added protection, and a new membrane that makes it the most breathable waterproof in the range. From the first hole to the last, the Pro 3L 3.0 Jacket is your ultimate companion against the elements.</p>"
           }
         }
       },
       "block_order": ["heading_1", "text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_1": {
+    "stl_1": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -127,8 +95,7 @@
       "block_order": ["product_1", "product_2", "product_3"],
       "settings": {
         "image": "shopify://shop_images/KJUS_SS24_Golf_410.png",
-        "title": "",
-        "subtext": ""
+        "margin_bottom": "medium"
       }
     },
     "text_3": {
@@ -146,26 +113,17 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Complementing the Pro 3L 3.0 Jacket is its counterpart, the Pro 3L 3.0 Pant. Crafted with the same commitment to excellence, these trousers offer golfers a seamless blend of breathability, stretch, and lightweight protection, allowing you to move freely and perform at your best regardless of the weather conditions.</p><p>Imagine striding down the fairway, confidently tackling each shot with precision and finesse. With the Pro 3L 3.0 Pant, you can do just that, thanks to its four-way stretch technology and fully seam-sealed construction. Whether you're bending to read a putt or executing a flawless iron shot, these trousers move with you, ensuring unrestricted movement and maximum comfort throughout your round.</p><p>But the Pro 3L 3.0 Pant is more than just a functional piece of apparel \u2013 it's a stylish statement on the golf course. Featuring a snap closure waistband, back pocket with magnetic button closure, and high-side seam zips for ventilation, these trousers marry performance with style in perfect harmony. With the magnetically hidden shoe flap to prevent rain intrusion through your shoelaces, you can focus on your game without worrying about wet feet.</p>"
+            "text": "<p>Complementing the Pro 3L 3.0 Jacket is its counterpart, the Pro 3L 3.0 Pant. Crafted with the same commitment to excellence, these trousers offer golfers a seamless blend of breathability, stretch, and lightweight protection, allowing you to move freely and perform at your best regardless of the weather conditions.</p><p>Imagine striding down the fairway, confidently tackling each shot with precision and finesse. With the Pro 3L 3.0 Pant, you can do just that, thanks to its four-way stretch technology and fully seam-sealed construction. Whether you're bending to read a putt or executing a flawless iron shot, these trousers move with you, ensuring unrestricted movement and maximum comfort throughout your round.</p><p>But the Pro 3L 3.0 Pant is more than just a functional piece of apparel – it's a stylish statement on the golf course. Featuring a snap closure waistband, back pocket with magnetic button closure, and high-side seam zips for ventilation, these trousers marry performance with style in perfect harmony. With the magnetically hidden shoe flap to prevent rain intrusion through your shoelaces, you can focus on your game without worrying about wet feet.</p>"
           }
         }
       },
       "block_order": ["heading_1", "text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_2": {
+    "stl_2": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -190,8 +148,7 @@
       "block_order": ["product_1", "product_2", "product_3"],
       "settings": {
         "image": "shopify://shop_images/KJUS_SS24_Golf_378.png",
-        "title": "",
-        "subtext": ""
+        "margin_bottom": "medium"
       }
     },
     "hero_2": {
@@ -200,20 +157,15 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
-            "heading": "",
-            "heading_size": "h2",
-            "heading_font": "serif",
             "media_type": "video",
             "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/9de1c03cccf849ae9434bf324748b035.mp4",
-            "slide_duration": 7
+            "heading": ""
           }
         }
       },
       "block_order": ["slide_1"],
       "settings": {
         "autoplay": false,
-        "show_progress": false,
         "enable_animation": true,
         "margin_bottom": "medium"
       }
@@ -240,19 +192,10 @@
       "block_order": ["heading_1", "text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_3": {
+    "stl_3": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -277,8 +220,7 @@
       "block_order": ["product_1", "product_2", "product_3"],
       "settings": {
         "image": "shopify://shop_images/KJUS_SS24_Golf_399.png",
-        "title": "",
-        "subtext": ""
+        "margin_bottom": "medium"
       }
     },
     "text_5": {
@@ -303,19 +245,10 @@
       "block_order": ["heading_1", "text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_4": {
+    "stl_4": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -340,8 +273,7 @@
       "block_order": ["product_1", "product_2", "product_3"],
       "settings": {
         "image": "shopify://shop_images/KJUS_SS24_Golf_193.png",
-        "title": "",
-        "subtext": ""
+        "margin_bottom": "medium"
       }
     },
     "text_6": {
@@ -366,19 +298,10 @@
       "block_order": ["heading_1", "text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_5": {
+    "stl_5": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -403,8 +326,7 @@
       "block_order": ["product_1", "product_2", "product_3"],
       "settings": {
         "image": "shopify://shop_images/KJUS_SS24_Golf_154.png",
-        "title": "",
-        "subtext": ""
+        "margin_bottom": "medium"
       }
     },
     "text_7": {
@@ -429,19 +351,10 @@
       "block_order": ["heading_1", "text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_6": {
+    "stl_6": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -466,8 +379,7 @@
       "block_order": ["product_1", "product_2", "product_3"],
       "settings": {
         "image": "shopify://shop_images/KJUS_SS24_Golf_109.png",
-        "title": "",
-        "subtext": ""
+        "margin_bottom": "medium"
       }
     },
     "text_8": {
@@ -492,15 +404,6 @@
       "block_order": ["heading_1", "text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -510,8 +413,6 @@
         "title": "Featured products",
         "collection": "mens-kjus",
         "product_limit": 12,
-        "button_label": "",
-        "button_link": "",
         "margin_bottom": "medium"
       }
     },
@@ -529,27 +430,17 @@
           "settings": {
             "label": "SHOP KJUS",
             "link": "https://trendygolf.com/collections/mens-kjus",
-            "style": "dark-grey",
-            "has_arrow": false
+            "style": "dark-grey"
           }
         }
       },
       "block_order": ["text_1", "button_1"],
       "settings": {
         "alignment": "center",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "magazine-articles": {
+    "related-articles": {
       "type": "magazine-articles",
       "settings": {
         "blog": "magazine",
@@ -561,26 +452,5 @@
       }
     }
   },
-  "order": [
-    "article-template",
-    "hero_1",
-    "text_1",
-    "text_2",
-    "shop_the_look_1",
-    "text_3",
-    "shop_the_look_2",
-    "hero_2",
-    "text_4",
-    "shop_the_look_3",
-    "text_5",
-    "shop_the_look_4",
-    "text_6",
-    "shop_the_look_5",
-    "text_7",
-    "shop_the_look_6",
-    "text_8",
-    "products_1",
-    "text_9",
-    "magazine-articles"
-  ]
+  "order": ["article-template", "hero_1", "text_1", "text_2", "stl_1", "text_3", "stl_2", "hero_2", "text_4", "stl_3", "text_5", "stl_4", "text_6", "stl_5", "text_7", "stl_6", "text_8", "products_1", "text_9", "related-articles"]
 }

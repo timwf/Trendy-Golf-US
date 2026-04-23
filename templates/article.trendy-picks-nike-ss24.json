@@ -1,15 +1,6 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
-    "article_template": {
+    "article-template": {
       "type": "article-template",
       "settings": {
         "show_breadcrumbs": true,
@@ -25,9 +16,9 @@
         "slide_1": {
           "type": "slide",
           "settings": {
+            "media_type": "image",
             "image": "shopify://shop_images/NIKE_HERO_ae4344d8-a57f-4b09-aecb-3fcc2d37a2ca.png",
             "mobile_image": "shopify://shop_images/NIKE_HERO_MOBILE.png",
-            "media_type": "image",
             "heading": ""
           }
         }
@@ -35,7 +26,8 @@
       "block_order": ["slide_1"],
       "settings": {
         "autoplay": false,
-        "show_progress": false
+        "enable_animation": true,
+        "margin_bottom": "medium"
       }
     },
     "text_1": {
@@ -44,22 +36,13 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>As the greenery begins to flourish and the sun warms up the fairways, it\u2019s time to refresh your golfing wardrobe with the latest offerings from Nike Golf. Prepare to upgrade your next golfing fit with unparalleled sophistication and performance with the Nike Golf Spring/Summer 24 Collection. From innovative Lightweight Jackets to stylish polo shirts, each piece embodies the perfect fusion of style, functionality, and versatility.</p>"
+            "text": "<p>As the greenery begins to flourish and the sun warms up the fairways, it's time to refresh your golfing wardrobe with the latest offerings from Nike Golf. Prepare to upgrade your next golfing fit with unparalleled sophistication and performance with the Nike Golf Spring/Summer 24 Collection. From innovative Lightweight Jackets to stylish polo shirts, each piece embodies the perfect fusion of style, functionality, and versatility.</p>"
           }
         }
       },
       "block_order": ["text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -78,7 +61,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p><em>Nike Repel Tour Mix Packable Lightweight Jacket in Honeydew Green</em></p><p>Step onto the green with confidence and style in the Nike Repel Tour Mix Packable Lightweight Jacket. Available in a refreshing Honeydew Green hue, this jacket is more than just a garment; it\u2019s a symbol of sophistication and performance. Crafted with Nike\u2019s Repel Technology, it ensures you stay dry and comfortable even in unpredictable weather conditions. With features like a full-length zip, zip pockets for secure storage, and adjustable elements for a personalised fit, this jacket seamlessly combines functionality with flair.</p><p><em>Dri-FIT Unscripted Repel Anorak NGC Lightweight Jacket in Black</em></p><p>Embrace versatility with the Dri-FIT Unscripted Repel Anorak NGC Lightweight Jacket from Nike Golf. Whether you\u2019re hitting the links or heading out for a casual outing, this jacket has you covered. Designed with Nike\u2019s Dri-FIT technology, it offers quick evaporation and comfort, keeping you cool and dry throughout your day. The packable design adds convenience, while features like a zipper chin guard and mesh lining enhance breathability. Stay prepared for whatever the day brings with this stylish and functional jacket.</p><p></p><p><em>Dri-FIT ADV Tour Half Zip Mid Layer in Oil Green</em></p><p>Elevate your golf game with the Nike Tour top, a 1/2-zip layer designed for optimal performance. Made with soft, sweat-wicking fabric, this mid-layer ensures freshness throughout all 18 holes. The advanced Nike Dri-FIT ADV technology offers moisture-wicking properties, while the raglan sleeve construction and stretch-knit fabric provide lightweight warmth and breathability. Whether you\u2019re teeing off or perfecting your swing at the range, this mid-layer is a game-changer.</p><p><em>Dri-FIT Victory Half Zip Mid Layer in Black</em></p><p>Experience comfort and style like never before with the Nike Victory Mid-Layer. This relaxed fit 1/2-zip layer is a versatile companion for your golfing adventures. Featuring Nike Dri-FIT technology for quick evaporation and comfort, as well as 4-way stretch-knit fabric for enhanced swing mobility, this mid-layer is designed to keep you at the top of your game. Make a statement on the course with the Nike Victory Mid-Layer.</p>"
+            "text": "<p><em>Nike Repel Tour Mix Packable Lightweight Jacket in Honeydew Green</em></p><p>Step onto the green with confidence and style in the Nike Repel Tour Mix Packable Lightweight Jacket. Available in a refreshing Honeydew Green hue, this jacket is more than just a garment; it's a symbol of sophistication and performance. Crafted with Nike's Repel Technology, it ensures you stay dry and comfortable even in unpredictable weather conditions. With features like a full-length zip, zip pockets for secure storage, and adjustable elements for a personalised fit, this jacket seamlessly combines functionality with flair.</p><p><em>Dri-FIT Unscripted Repel Anorak NGC Lightweight Jacket in Black</em></p><p>Embrace versatility with the Dri-FIT Unscripted Repel Anorak NGC Lightweight Jacket from Nike Golf. Whether you're hitting the links or heading out for a casual outing, this jacket has you covered. Designed with Nike's Dri-FIT technology, it offers quick evaporation and comfort, keeping you cool and dry throughout your day. The packable design adds convenience, while features like a zipper chin guard and mesh lining enhance breathability. Stay prepared for whatever the day brings with this stylish and functional jacket.</p><p></p><p><em>Dri-FIT ADV Tour Half Zip Mid Layer in Oil Green</em></p><p>Elevate your golf game with the Nike Tour top, a 1/2-zip layer designed for optimal performance. Made with soft, sweat-wicking fabric, this mid-layer ensures freshness throughout all 18 holes. The advanced Nike Dri-FIT ADV technology offers moisture-wicking properties, while the raglan sleeve construction and stretch-knit fabric provide lightweight warmth and breathability. Whether you're teeing off or perfecting your swing at the range, this mid-layer is a game-changer.</p><p><em>Dri-FIT Victory Half Zip Mid Layer in Black</em></p><p>Experience comfort and style like never before with the Nike Victory Mid-Layer. This relaxed fit 1/2-zip layer is a versatile companion for your golfing adventures. Featuring Nike Dri-FIT technology for quick evaporation and comfort, as well as 4-way stretch-knit fabric for enhanced swing mobility, this mid-layer is designed to keep you at the top of your game. Make a statement on the course with the Nike Victory Mid-Layer.</p>"
           }
         },
         "button_1": {
@@ -86,27 +69,17 @@
           "settings": {
             "label": "SHOP NIKE JACKETS & MID LAYERS",
             "link": "https://trendygolf.com/collections/mens-nike?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Lightweight+Jackets&filter.p.product_type=Mid+Layers",
-            "style": "dark-grey",
-            "has_arrow": false
+            "style": "dark-grey"
           }
         }
       },
       "block_order": ["heading_1", "text_1", "button_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_1": {
+    "stl_1": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -137,10 +110,6 @@
       "block_order": ["product_1", "product_2", "product_3", "product_4"],
       "settings": {
         "image": "shopify://shop_images/STL_1.png",
-        "title": "",
-        "subtext": "",
-        "btn_text": "",
-        "btn_link": "",
         "margin_bottom": "medium"
       }
     },
@@ -159,7 +128,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p></p><p><em>Therma-FIT Full Zip Soft Fleece NGC Hoodie in Grey</em></p><p>Stay warm and stylish on and off the course with the Therma-FIT Full Zip Soft Fleece Hoodie from Nike Golf. Featuring a standard fit and soft fleece inner material, this hoodie offers both comfort and functionality. The full frontal zip allows for easy layering, while the rib-knit cuffs and waist ensure a snug fit. With practical features like front hand pockets and a zip pocket on the left arm, this hoodie is a must-have for any golfer.</p><p><em>Sportswear Club Fleece NGC Hoodie in Khaki</em></p><p>Add a touch of flair to your golf wardrobe with the Nike Sportswear Club Fleece Hoodie in Khaki. Crafted with premium cotton-blended knit and brushed-back fleece, this hoodie offers ultimate comfort and breathability. The relaxed fit and adjustable drawstring hood make it perfect for all-day wear, whether you\u2019re on the course or enjoying a casual day out.</p><p></p><p><em>Dri-FIT Tour Crew Neck Quilted Sweatshirt in Oil Green</em></p><p>Achieve peak performance with the Nike Golf Dri-FIT Tour Crew Neck Quilted Sweatshirt. Engineered for comfort and focus on the course, this sweatshirt features elastic cuffs and hem, raglan sleeve construction, and stretch-knit fabric for lightweight warmth and breathability. With Nike Dri-FIT technology ensuring quick sweat evaporation, you can stay dry and comfortable throughout your rounds.</p><p><em>Club Fleece+ Crew Neck Woven Nylon Wind Sweatshirt in Deep Jungle Green</em></p><p>Battle the elements in style with the Nike Club Fleece+ Crew Neck Woven Nylon Wind Sweatshirt. Designed with a standard fit and classic crew neck, this sweatshirt offers timeless comfort and protection. Crafted from crisp woven fabric with a mesh lining for airflow, it\u2019s both water-repellent and windproof, making it ideal for unpredictable weather conditions. Stay comfortable and stylish with this essential piece from Nike Golf.</p>"
+            "text": "<p></p><p><em>Therma-FIT Full Zip Soft Fleece NGC Hoodie in Grey</em></p><p>Stay warm and stylish on and off the course with the Therma-FIT Full Zip Soft Fleece Hoodie from Nike Golf. Featuring a standard fit and soft fleece inner material, this hoodie offers both comfort and functionality. The full frontal zip allows for easy layering, while the rib-knit cuffs and waist ensure a snug fit. With practical features like front hand pockets and a zip pocket on the left arm, this hoodie is a must-have for any golfer.</p><p><em>Sportswear Club Fleece NGC Hoodie in Khaki</em></p><p>Add a touch of flair to your golf wardrobe with the Nike Sportswear Club Fleece Hoodie in Khaki. Crafted with premium cotton-blended knit and brushed-back fleece, this hoodie offers ultimate comfort and breathability. The relaxed fit and adjustable drawstring hood make it perfect for all-day wear, whether you're on the course or enjoying a casual day out.</p><p></p><p><em>Dri-FIT Tour Crew Neck Quilted Sweatshirt in Oil Green</em></p><p>Achieve peak performance with the Nike Golf Dri-FIT Tour Crew Neck Quilted Sweatshirt. Engineered for comfort and focus on the course, this sweatshirt features elastic cuffs and hem, raglan sleeve construction, and stretch-knit fabric for lightweight warmth and breathability. With Nike Dri-FIT technology ensuring quick sweat evaporation, you can stay dry and comfortable throughout your rounds.</p><p><em>Club Fleece+ Crew Neck Woven Nylon Wind Sweatshirt in Deep Jungle Green</em></p><p>Battle the elements in style with the Nike Club Fleece+ Crew Neck Woven Nylon Wind Sweatshirt. Designed with a standard fit and classic crew neck, this sweatshirt offers timeless comfort and protection. Crafted from crisp woven fabric with a mesh lining for airflow, it's both water-repellent and windproof, making it ideal for unpredictable weather conditions. Stay comfortable and stylish with this essential piece from Nike Golf.</p>"
           }
         },
         "button_1": {
@@ -167,27 +136,17 @@
           "settings": {
             "label": "SHOP NIKE HOODIES & SWEATS",
             "link": "https://trendygolf.com/collections/mens-nike?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Hoodies&filter.p.product_type=Sweats",
-            "style": "dark-grey",
-            "has_arrow": false
+            "style": "dark-grey"
           }
         }
       },
       "block_order": ["heading_1", "text_1", "button_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_2": {
+    "stl_2": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -218,10 +177,6 @@
       "block_order": ["product_1", "product_2", "product_3", "product_4"],
       "settings": {
         "image": "shopify://shop_images/STL_2.png",
-        "title": "",
-        "subtext": "",
-        "btn_text": "",
-        "btn_link": "",
         "margin_bottom": "medium"
       }
     },
@@ -240,7 +195,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p></p><p><em>Dri-FIT Tour Solid Polo in Royal Tint Blue:</em></p><p>Elevate your golfing experience with the Nike Dri-FIT Tour Solid Polo. Designed with a 2-button placket, split side vents, and Nike Dri-FIT technology, this polo ensures optimal comfort and performance on the course. Whether you\u2019re teeing off or enjoying a leisurely round, make a statement with the Nike Dri-FIT Tour Solid Polo.</p><p><em>Dri-FIT Tour Texture Stripe Polo in Midnight Navy:</em></p><p>Make a stylish statement on the fairways with the Nike Dri-FIT Tour Texture Stripe Polo. Meticulously crafted with textured stripe design and Nike Dri-FIT technology, this polo offers unmatched comfort and sophistication. Step up your golfing attire with the Nike Dri-FIT Tour Texture Stripe Polo.</p><p><em>Dri-FIT Victory Blade Polo in White/Black:</em></p><p>Experience ultimate comfort and style with the Nike Dri-FIT Victory Blade Polo. Featuring a blade-style collar, Dri-FIT technology, and a classic fit, this polo ensures distraction-free wearing and superior performance on the course. Elevate your golf wardrobe with the Nike Dri-FIT Victory Blade Polo.</p><p><em>Dri-FIT Victory+ Colour-Blocked Polo in Honeydew Green:</em></p><p>Stay cool and comfortable on the fairway with the Nike Victory+ Colour-Blocked Polo. Crafted from breathable and sweat-wicking fabric, this polo offers superior moisture management and a relaxed fit for unrestricted movement. Make a statement with the Nike Victory+ Colour Blocked Polo.</p>"
+            "text": "<p></p><p><em>Dri-FIT Tour Solid Polo in Royal Tint Blue:</em></p><p>Elevate your golfing experience with the Nike Dri-FIT Tour Solid Polo. Designed with a 2-button placket, split side vents, and Nike Dri-FIT technology, this polo ensures optimal comfort and performance on the course. Whether you're teeing off or enjoying a leisurely round, make a statement with the Nike Dri-FIT Tour Solid Polo.</p><p><em>Dri-FIT Tour Texture Stripe Polo in Midnight Navy:</em></p><p>Make a stylish statement on the fairways with the Nike Dri-FIT Tour Texture Stripe Polo. Meticulously crafted with textured stripe design and Nike Dri-FIT technology, this polo offers unmatched comfort and sophistication. Step up your golfing attire with the Nike Dri-FIT Tour Texture Stripe Polo.</p><p><em>Dri-FIT Victory Blade Polo in White/Black:</em></p><p>Experience ultimate comfort and style with the Nike Dri-FIT Victory Blade Polo. Featuring a blade-style collar, Dri-FIT technology, and a classic fit, this polo ensures distraction-free wearing and superior performance on the course. Elevate your golf wardrobe with the Nike Dri-FIT Victory Blade Polo.</p><p><em>Dri-FIT Victory+ Colour-Blocked Polo in Honeydew Green:</em></p><p>Stay cool and comfortable on the fairway with the Nike Victory+ Colour-Blocked Polo. Crafted from breathable and sweat-wicking fabric, this polo offers superior moisture management and a relaxed fit for unrestricted movement. Make a statement with the Nike Victory+ Colour Blocked Polo.</p>"
           }
         },
         "button_1": {
@@ -248,27 +203,17 @@
           "settings": {
             "label": "SHOP NIKE POLO SHIRTS",
             "link": "https://trendygolf.com/collections/mens-tops-polo-shirts?filter.v.price.gte=&filter.v.price.lte=&filter.p.vendor=Nike",
-            "style": "dark-grey",
-            "has_arrow": false
+            "style": "dark-grey"
           }
         }
       },
       "block_order": ["heading_1", "text_1", "button_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_3": {
+    "stl_3": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -299,10 +244,6 @@
       "block_order": ["product_1", "product_2", "product_3", "product_4"],
       "settings": {
         "image": "shopify://shop_images/STL_3.png",
-        "title": "",
-        "subtext": "",
-        "btn_text": "",
-        "btn_link": "",
         "margin_bottom": "medium"
       }
     },
@@ -329,27 +270,17 @@
           "settings": {
             "label": "SHOP NIKE TROUSERS & SHORTS",
             "link": "https://trendygolf.com/collections/mens-nike?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Shorts&filter.p.product_type=Trousers",
-            "style": "dark-grey",
-            "has_arrow": false
+            "style": "dark-grey"
           }
         }
       },
       "block_order": ["heading_1", "text_1", "button_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_4": {
+    "stl_4": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -380,10 +311,6 @@
       "block_order": ["product_1", "product_2", "product_3", "product_4"],
       "settings": {
         "image": "shopify://shop_images/STL_4.png",
-        "title": "",
-        "subtext": "",
-        "btn_text": "",
-        "btn_link": "",
         "margin_bottom": "medium"
       }
     },
@@ -410,27 +337,17 @@
           "settings": {
             "label": "SHOP NIKE ACCESSORIES",
             "link": "https://trendygolf.com/search?q=Nike+accessories&options%5Bprefix%5D=last",
-            "style": "dark-grey",
-            "has_arrow": false
+            "style": "dark-grey"
           }
         }
       },
       "block_order": ["heading_1", "text_1", "button_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_5": {
+    "stl_5": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -455,10 +372,6 @@
       "block_order": ["product_1", "product_2", "product_3"],
       "settings": {
         "image": "shopify://shop_images/STL_5.png",
-        "title": "",
-        "subtext": "",
-        "btn_text": "",
-        "btn_link": "",
         "margin_bottom": "medium"
       }
     },
@@ -468,22 +381,13 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Nike Golf\u2019s Spring/Summer \u201924 Collection is a testament to the brand\u2019s commitment to innovation, style, and performance. Whether you\u2019re looking for lightweight jackets, mid-layers, hoodies, polo shirts, trousers, shorts, or accessories, this collection has something for every golfer. Available now to shop on TRENDYGOLF.COM.</p>"
+            "text": "<p>Nike Golf's Spring/Summer '24 Collection is a testament to the brand's commitment to innovation, style, and performance. Whether you're looking for lightweight jackets, mid-layers, hoodies, polo shirts, trousers, shorts, or accessories, this collection has something for every golfer. Available now to shop on TRENDYGOLF.COM.</p>"
           }
         }
       },
       "block_order": ["text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -493,9 +397,9 @@
         "slide_1": {
           "type": "slide",
           "settings": {
+            "media_type": "image",
             "image": "shopify://shop_images/BOTTOM_HERO.png",
             "mobile_image": "shopify://shop_images/NIKE_BOTTOM_IMAGE_MOBILE.png",
-            "media_type": "image",
             "heading": ""
           }
         }
@@ -503,10 +407,11 @@
       "block_order": ["slide_1"],
       "settings": {
         "autoplay": false,
-        "show_progress": false
+        "enable_animation": true,
+        "margin_bottom": "medium"
       }
     },
-    "magazine_articles": {
+    "related-articles": {
       "type": "magazine-articles",
       "settings": {
         "blog": "magazine",
@@ -518,22 +423,5 @@
       }
     }
   },
-  "order": [
-    "article_template",
-    "hero_1",
-    "text_1",
-    "text_2",
-    "shop_the_look_1",
-    "text_3",
-    "shop_the_look_2",
-    "text_4",
-    "shop_the_look_3",
-    "text_5",
-    "shop_the_look_4",
-    "text_6",
-    "shop_the_look_5",
-    "text_7",
-    "hero_2",
-    "magazine_articles"
-  ]
+  "order": ["article-template", "hero_1", "text_1", "text_2", "stl_1", "text_3", "stl_2", "text_4", "stl_3", "text_5", "stl_4", "text_6", "stl_5", "text_7", "hero_2", "related-articles"]
 }

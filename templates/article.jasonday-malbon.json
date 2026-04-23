@@ -1,0 +1,326 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/What_s_IN_4.png",
+            "mobile_image": "shopify://shop_images/What_s_IN_4.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Jason Day in Malbon: A Turning Point in Golf Style",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If there's one player redefining what it means to <em>look</em> like a modern golfer, it's Jason Day. Known for his powerful swing and major-winning pedigree, Day has always been someone you pay attention to on the leaderboard. But now, he's just as likely to make headlines for what he's wearing.</p><p>And we're here for it.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/hero_1_fd9e39e5-dbfe-45bc-8299-87606a46b2c6.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/What_s_IN_3.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "A Swing at Style: Jason Day x Malbon",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Jason Day's recent partnership with Malbon has made one thing clear: golf fashion is entering a new era and it's a little more street, a little more self-expressive, and a lot more interesting. Day's new on-course looks are far from the tucked-in, safe-zone polos of the past. Instead, we're seeing cropped silhouettes, bold graphics, and details that feel more runway than range.</p><p>It's rare for a top-tier athlete in such a tradition-heavy sport to fully lean into a fashion-forward brand. But that's exactly what Day is doing. He's not just wearing Malbon, he's embodying it. Confidently. Intentionally. With the kind of presence that makes you question why golf style has played it so safe for so long.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/What_s_IN_6.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Why It Matters",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Let's not underestimate this shift. Jason Day isn't a fringe player trying to get noticed through clothing, he's a former World No. 1, a PGA Champion, and one of the most respected guys on Tour. His decision to show up in wide-legged pants, graphic vests, and asymmetrical cuts sends a message: you can perform at the highest level and still look like <em>yourself</em>.</p><p>That's powerful. Not just for golf fashion, but for the next generation of players who want to bring their whole identity (style included) to the course.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/what_s_in_2_4bec4dfb-5777-4a0c-9c19-724f858f5e18.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/What_s_IN_7.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/What_s_IN_5.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/what_s_in_11331bcf-ddd6-4db9-81b2-82c77e212cf2.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Golf's Streetwear Crossover Is Just Beginning",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Day isn't alone in this movement, but he's arguably the most high-profile face of it right now. And let's be honest, it's long overdue. The lines between golfwear and streetwear are blurring, and brands like Malbon are leading the charge. What used to be considered \"too casual\" for the clubhouse is quickly becoming the new standard for what's fresh, relevant, and wearable both on and off the course.</p><p>Whether you're a single-digit handicap or just here for the vibe, this evolution opens the door to make golf style something <em>personal</em>, not prescriptive.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/hero_2_86c27c2a-3468-4a97-90b7-177db234e21c.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "TRENDYGOLF Has You Covered",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At TRENDYGOLF, we've always believed golf and fashion should elevate each other and Jason Day in Malbon is proof that we're headed in the right direction. If you're ready to step outside the box, rethink your fit, and bring a little edge to your next round, we've got the pieces to help you do it.</p><p>Explore the latest from <strong>Malbon</strong>, <strong>J.Lindeberg</strong>, <strong>Manors Golf</strong>, and more. Because the future of golf style? It's bold. It's curated. And it's finally interesting.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h2><strong>Shop the look. Change the game. Only at TRENDYGOLF.</strong></h2>"
+          }
+        }
+      },
+      "block_order": [
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "center",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "media_grid_1",
+    "text_2",
+    "hero_2",
+    "text_3",
+    "media_grid_2",
+    "text_4",
+    "hero_3",
+    "text_5",
+    "text_6",
+    "related-articles"
+  ]
+}

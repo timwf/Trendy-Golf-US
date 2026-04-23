@@ -1,0 +1,321 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/hero_1.png",
+            "mobile_image": "shopify://shop_images/hero_1.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Hot Takes: Golf Fashion Edition",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>What's In, What's Out, and What Always Works</em></p><p>Let's face it, golf fashion is having a moment. Scratch that, golf fashion is <em>the</em> moment. From fairway fits to post-round cocktails, the lines between sport and style have officially blurred. And as the game modernizes, so do the wardrobes of those who play it. Here are our unfiltered thoughts on what's trending, what's tired, and what will never go out of style.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/what_s_in.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/what_s_in_2.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/What_s_IN_57edee45-8f6e-4c5f-8c19-e6ed6fa808cc.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/What_s_IN_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "What's In: Minimalism with a Statement",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Today's best looks feel effortless, even if they're meticulously styled. Think tonal layers, tailored silhouettes, and subtle prints that say more with less. Brands like <strong>Malbon</strong>, <strong>Manors</strong>, and <strong>J.Lindeberg</strong> are leading the charge. They are delivering clean lines, high performance, and just the right amount of edge.</p><p>On the accessories front, we're loving performance hats with heritage flair (shoutout <strong>G/FORE</strong> and <strong>Bogey Boys</strong>) and golf bags that double as style pieces. If it looks like it could've walked off a fashion week runway <em>and</em> walked 18 holes, it's a win.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/What_s_Out.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "What's Out: Loud Logos and Try-Hard Prints",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>We'll say it: the era of neon polos and chaotic patterns is finally fading. There's a difference between standing out and screaming for attention, golf fashion is leaning into the former. If your gear still looks like a party store exploded on it, it might be time to refresh the rotation.</p><p>Equally on the way out? Sloppy silhouettes. The too-big polo, the saggy shorts, the forgotten belt, it's giving <em>1997 muni dad</em>, and not in a cool, vintage way. Today's golfer is more considered. Still casual, still comfortable, but undeniably more tailored and intentional. The goal is to look like you belong on the course <em>and</em> at an outdoor lunch spot after your round. Not like you rolled out of bed and happened to bring clubs.</p><p>TRENDYGOLF has plenty of streamlined upgrades to swap in, think crisp polos from <strong>J.Lindeberg</strong>, tapered trousers from <strong>Greyson</strong>, and structured outerwear from <strong>RLX Ralph Lauren</strong>. Your swing deserves better. So does your closet.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/timeless.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/timeless_3.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/timeless_2.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/timeless_4.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "What's Timeless: Texture, Fit, and Confidence",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A well-fitted polo. A lightweight merino sweater. Neutral trousers that pair with everything. Some things never miss.</p><p>No matter what trends come and go, the real key to great golf style is wearing clothes that feel good and move with you. Enter <strong>Greyson</strong>, <strong>RLX Ralph Lauren</strong>, and <strong>KJUS </strong>- brands that balance performance with polish. Texture (hello, pique cotton and brushed knits), versatility, and pieces that transition effortlessly from course to club are always a good idea.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/G4_HERO.webp",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "What to Shop Now at TRENDYGOLF",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Need to refresh your closet? Here are a few can't-miss picks:</p><ul><li><strong>Greyson polos</strong> for sleek prints that don't overwhelm</li><li><strong>J.Lindeberg trousers</strong> for modern tailoring with stretch</li><li><strong>Malbon headwear</strong> that adds personality without overdoing it</li><li><strong>G/FORE gloves and accessories</strong> for that elevated detail work</li></ul><p>Golf fashion is evolving and your closet should, too. Whether you're a minimalist purist or looking to turn heads on every tee box, we've got the fit for you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "media_grid_1",
+    "text_2",
+    "hero_2",
+    "text_3",
+    "media_grid_2",
+    "text_4",
+    "hero_3",
+    "text_5",
+    "related-articles"
+  ]
+}

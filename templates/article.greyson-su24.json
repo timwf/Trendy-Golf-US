@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "article-template": {
@@ -25,20 +16,15 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
-            "heading": "",
-            "heading_size": "h2",
-            "heading_font": "serif",
             "media_type": "video",
             "hosted_video_url": "https://cdn.shopify.com/videos/c/o/v/e37d84654cf24c0eb96d253a73e679ef.mp4",
-            "slide_duration": 7
+            "heading": ""
           }
         }
       },
       "block_order": ["slide_1"],
       "settings": {
         "autoplay": false,
-        "show_progress": false,
         "enable_animation": true,
         "margin_bottom": "medium"
       }
@@ -56,15 +42,6 @@
       "block_order": ["text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -85,33 +62,15 @@
           "settings": {
             "text": "<p>The Pack calls on all individuals who know when to lead the Pack, when to be a team player, and carry the passion and desire to stand up for what they believe in – built on equal parts individuality and togetherness. The juxtaposition of technical performance and refined sophistication lies at the core of the brand DNA. Through the individuality of personal expression, the singularity of the sport, and the camaraderie that it forges, Greyson strives to engage with each individual who is as passionate about what they put on as much as they are passionate about what they use it for. Greyson breaks through the traditional rulebook of golf and tennis fashion; it is a brand that extends far beyond sport. Through clothing, Greyson has found a platform to impact communities, address adversity, and create space for all people to dream.</p>"
           }
-        },
-        "button_1": {
-          "type": "button",
-          "settings": {
-            "label": "SHOP GREYSON",
-            "link": "shopify://collections/mens-greyson",
-            "style": "dark-grey",
-            "has_arrow": false
-          }
         }
       },
-      "block_order": ["heading_1", "text_1", "button_1"],
+      "block_order": ["heading_1", "text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_1": {
+    "stl_1": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -142,10 +101,6 @@
       "block_order": ["product_1", "product_2", "product_3", "product_4"],
       "settings": {
         "image": "shopify://shop_images/SHOP_THE_LOOK_6347a68c-72dd-45fb-929d-13f8df0bca7f.png",
-        "title": "",
-        "subtext": "",
-        "btn_text": "",
-        "btn_link": "",
         "margin_bottom": "medium"
       }
     },
@@ -164,22 +119,13 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Greyson Clothiers was born out of founder Charlie Schaefer's deep desire to create a brand of clothing that he would wear. Taking 13 years of design experience and the inspiration of a newly formed family of his own, Charlie set out to create a brand that would become a legacy to his children. Greyson, his first-born daughter, and Scarlett, his second-born daughter, are the inspirations for a brand that stands for something more, which can influence and change the future. Greyson is also worn by multiple PGA Tour athletes including Justin Thomas, Luke Donald, Erik Van Rooyen, Thorbjorn Olesen, Akshay Bhatia, Luke List & Sam Ryder.</p>"
+            "text": "<p>Greyson Clothiers was born out of founder Charlie Schaefer’s deep desire to create a brand of clothing that he would wear. Taking 13 years of design experience and the inspiration of a newly formed family of his own, Charlie set out to create a brand that would become a legacy to his children. Greyson, his first-born daughter, and Scarlett, his second-born daughter, are the inspirations for a brand that stands for something more, which can influence and change the future. Greyson is also worn by multiple PGA Tour athletes including Justin Thomas, Luke Donald, Erik Van Rooyen, Thorbjorn Olesen, Akshay Bhatia, Luke List & Sam Ryder.</p>"
           }
         }
       },
       "block_order": ["heading_1", "text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -196,15 +142,6 @@
       "block_order": ["text_1"],
       "settings": {
         "alignment": "center",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -234,9 +171,6 @@
       "settings": {
         "layout": "grid",
         "columns": 2,
-        "aspect_ratio": "7:9",
-        "heading_tag": "h2",
-        "heading_size": "large",
         "margin_bottom": "medium",
         "enable_animation": true
       }
@@ -263,15 +197,6 @@
       "block_order": ["heading_1", "text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -281,8 +206,6 @@
         "title": "Featured products",
         "collection": "mens-greyson",
         "product_limit": 12,
-        "button_label": "",
-        "button_link": "",
         "margin_bottom": "medium"
       }
     },
@@ -300,23 +223,13 @@
           "settings": {
             "label": "SHOP GREYSON",
             "link": "shopify://collections/mens-greyson",
-            "style": "dark-grey",
-            "has_arrow": false
+            "style": "dark-grey"
           }
         }
       },
       "block_order": ["text_1", "button_1"],
       "settings": {
         "alignment": "center",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -324,7 +237,7 @@
       "type": "magazine-articles",
       "settings": {
         "blog": "magazine",
-        "heading": "Latest Articles",
+        "heading": "Featured articles",
         "article_count": 3,
         "show_category": true,
         "enable_animation": true,
@@ -332,18 +245,5 @@
       }
     }
   },
-  "order": [
-    "article-template",
-    "hero_1",
-    "text_1",
-    "text_2",
-    "shop_the_look_1",
-    "text_3",
-    "text_4",
-    "promo_1",
-    "text_5",
-    "products_1",
-    "text_6",
-    "related-articles"
-  ]
+  "order": ["article-template", "hero_1", "text_1", "text_2", "stl_1", "text_3", "text_4", "promo_1", "text_5", "products_1", "text_6", "related-articles"]
 }

@@ -1,0 +1,202 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/HERO_482ffbf9-22ca-4de7-96e5-d925026627dd.webp",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "THE FIRST MAJOR OF THE YEAR IS HERE",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As the azaleas bloom and the world's best golfers gather in Augusta, Georgia, anticipation reaches a fever pitch for the first major championship of the year. Against the backdrop of the iconic Augusta National Golf Club, this storied event weaves together a tapestry of history, tradition, and unparalleled competition. In this comprehensive preview, we delve into the rich history of the tournament, explore the revered grounds of Augusta National, and spotlight the players poised to etch their names into golfing lore, including Tiger Woods, Rory McIlroy, and Scottie Scheffler. Join us as we embark on a journey through the hallowed fairways of Augusta, where legends are made and legacies are forged.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https://trendygolfusa.com/collections/mens-golf-clothing\" title=\"https://trendygolfusa.com/collections/mens-golf-clothing\"><strong>THE FIRST MAJOR: A TRADITION UNLIKE ANY OTHER </strong></a></p><p>Since its inception in 1934, The First Major has captivated the hearts and minds of golfers worldwide, transcending sport to become a cultural phenomenon. Founded by the legendary Bobby Jones and investment banker Clifford Roberts, this prestigious tournament is a testament to the enduring spirit of competition and sportsmanship. From the iconic Green Jacket awarded to the champion to the storied traditions of Amen Corner and the Champions Dinner, The First Major is steeped in tradition and revered for its unparalleled elegance and prestige.<br/></p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/IMAGE_1.webp",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https://trendygolfusa.com/collections/mens-golf-clothing\" title=\"https://trendygolfusa.com/collections/mens-golf-clothing\">AUGUSTA NATIONAL GOLF CLUB: A GOLFER'S PARADISE</a></p><p>Central to the mystique of the tournament is its illustrious host venue: Augusta National Golf Club. Designed by renowned architect Alister MacKenzie and golfing icon Bobby Jones, this meticulously manicured course is a masterpiece of design and natural beauty. From the undulating fairways to the treacherous bunkers and lightning-fast greens, Augusta National presents a stern test of skill and strategy for even the most seasoned professionals. Its signature landmarks, including the towering pines, blooming azaleas, and picturesque water features, create a breathtaking backdrop for golf's most storied tournament.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/IMAGE_2.webp",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><a href=\"https://trendygolfusa.com/collections/mens-golf-clothing\" target=\"_blank\" title=\"https://trendygolfusa.com/collections/mens-golf-clothing\"><strong>THE PLAYERS TO WATCH: TIGER WOODS, RORY MCILROY, SCOTTIE SCHEFFLER & JON RAHM </strong></a></p><p>As the spotlight shines brightly on Augusta National, all eyes turn to the star-studded field of competitors vying for the coveted Green Jacket. Among the contenders is golfing icon Tiger Woods, making just his second start of the year as he continues his remarkable comeback journey. Woods' presence adds an extra layer of intrigue to the tournament, as fans eagerly anticipate his performance on the grandest stage.</p><p>Another player facing immense pressure is Rory McIlroy, who seeks to etch his name in the annals of golfing history by completing a career grand slam. With victories in the U.S. Open, The Open Championship, and the PGA Championship already to his name, McIlroy's quest for First Major glory has become the defining narrative of his career. Will this finally be Rory's year to don the Green Jacket, or will the weight of expectation prove too burdensome once again?</p><p>Meanwhile, World No. 1 Scottie Scheffler enters the tournament in scintillating form, having nearly captured three consecutive victories in March. His precise ball-striking and steely nerve make him a formidable contender on any stage, and Augusta National is no exception. As he sets his sights on securing his second major championship, Scheffler poses a significant threat to the established order of the golfing world.</p><p> </p><p><a href=\"https://trendygolfusa.com/collections/mens-golf-clothing\" target=\"_blank\" title=\"https://trendygolfusa.com/collections/mens-golf-clothing\"><strong>The Liv Golf Factor: Implications for the PGA Tour</strong></a></p><p>Last year's champion, Jon Rahm, shocked the golfing world by signing with Liv Golf, a Saudi-backed league, following his victory at Augusta National. Rahm's decision raised questions about the future of the PGA Tour and the potential exodus of top stars to rival leagues. With the defending champion now playing for Liv Golf, speculation abounds regarding the fate of other big-name PGA Tour stars who may secure their first Green Jacket this year.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_4": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/IMAGE_3.webp",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As the countdown to the First Major Tournament reaches its crescendo, the stage is set for an unforgettable week of golfing drama, passion, and triumph at Augusta National Golf Club. From the storied history of The First Major to the allure of Augusta's pristine fairways and greens, this iconic event represents the pinnacle of excellence in golf. With Tiger Woods' return, Rory McIlroy's quest for the career grand slam, Scottie Scheffler's ascent, and the spectre of Liv Golf looming large, the 2024 tournament promises to be a spectacle like no other. Witness golfing excellence unfold amidst Augusta's towering pines and blooming azaleas - The First Major awaits, and the world is watching.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "collection": "inspired-by-the-first-major-of-the-year",
+        "product_limit": 12,
+        "button_label": "SHOP FIRST MAJOR ITEMS",
+        "button_link": "https://trendygolfusa.com/collections/mens-golf-clothing",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "text_2", "hero_2", "text_3", "hero_3", "text_4", "hero_4", "text_5", "products_1", "related-articles"]
+}

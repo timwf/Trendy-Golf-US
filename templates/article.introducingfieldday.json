@@ -1,0 +1,160 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_11.png",
+            "mobile_image": "shopify://shop_images/shopify_magazine_hero_size_11.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "FIELD DAY HAS ARRIVED",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>FIELD DAY HAS ARRIVED</strong></h3><p><strong>A new kind of golf brand, built for purists. Now on TRENDYGOLF.</strong></p><p>Rooted in heritage, designed with intention, and made for the modern gentleman golfer, <strong>Field Day Sporting Co.</strong> is the latest brand to join TRENDYGOLF’s curated lineup.</p><p>Founded by <strong>Patrick Keegan</strong>, Field Day is more than a brand, it’s a philosophy. Inspired by a bygone era of simplicity, elegance, and analog charm, Field Day reimagines classic menswear silhouettes with modern fabrications and refined functionality. Their ethos is simple: bring timeless style back to the course without compromising comfort, construction, or character.</p><p>What began as a general store in Keegan’s hometown of Morris, Illinois—complete with a bar, barbershop, and curated menswear—has evolved into a golf brand that taps into the feeling of simpler times. Think Blackwatch plaid, herringbone textures, and garments your grandfather would have proudly worn, updated with performance fabrics and a tailored edge. As Keegan puts it, <em>“We don’t want you to look as comfortable as you actually are.”</em></p><p>Field Day’s Spring 2025 collection offers a sharp, era-less sensibility grounded in heritage patterns and softened by spring tones (pale yellow, blush pink, and sky blue) that nod subtly to the season’s most iconic tournament in Georgia. The brand's craftsmanship is backed by ethical production in certified B-Corp factories, and its story is powered by passion, independence, and an unwavering belief in slow, meaningful growth.</p><p>For those who still believe in looking sharp on and off the course, and want to feel something while they do it.</p><p><strong>Field Day Sporting Co. is a return to form.</strong></p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_3c5a1bd9-992d-426e-85cb-1f00d3a91c4a.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_6b869a93-7657-4528-ad88-6620f68392e0.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_74e2ad08-ad40-4c1d-a8ee-ca6409662747.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_2a878b99-7bbb-4767-8c84-285624c11100.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "READ OUR Q+A BELOW",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h3><strong>Q+A WITH FOUNDER PATRICK KEEGAN</strong></h3><p><strong>What inspired the creation of Field Day Sporting Co.?</strong><br/><br/>PK: <em>Field Day in the dictionary would read, “a day devoted”, or “a day at play”—we’re tapping into this era of simpler times. The tech-free days when menswear was more prevalent in our game. When you didn’t wear specific gear for the activity, but you still looked sharp doing it.</em></p><p><strong>Could you share the story behind the brand's beginnings?</strong><br/><br/>PK: <em>Field Day was launched in November 2021 as a men’s general store in my hometown of Morris, Illinois. We curated lifestyle goods, elevated accessories, grills, e-bikes—you name it. It’s also a gathering space with a bar and barbershop. My mom calls it my Christmas list in every size.</em></p><p><em>My dad was a PGA pro in this little town for 30 years, and my mom a kindergarten teacher. Kristen and I launched the Field Day brand in 2024 because something was missing. The golf market had leaned too far into prints and polyester. I wanted tailored menswear with performance—something I could wear on course and off.</em></p><p><strong>Who is Field Day for?</strong><br/><br/>PK: <em>Guys of all ages. It’s not too fast for my dad and grandpa, but has just enough edge for a 32-year-old fashion designer to get a fit off.</em></p><p><strong>What sets Field Day apart in the golf apparel space?</strong><br/><br/>PK: <em>Heritage menswear patterns, structure, and sophistication. Spring 2025 is built around Blackwatch plaid, herringbone, and houndstooth. Menswear patterns are undefeated.</em></p><p><strong>What’s the core design philosophy?</strong><br/><br/>PK: <em>We’re creating “provisions for purists.” It’s about honoring tradition while tapping into modern tech. A lot of golf shops carry a sea of sameness—Field Day cuts through that.</em></p><p><strong>What’s the creative process like behind a collection?</strong><br/><br/>PK: <em>It’s chaotic but fulfilling. We’re a team of 5. I’m pouring drinks at our in-store bar, measuring tuxedos during wedding season, and building the brand behind the scenes. It’s a lifelong dream—so I’ve got a decade of ideas chambered.</em></p><p><strong>How do you stay innovative while still rooted in tradition?</strong><br/><br/>PK: <em>We’re reinterpreting the greatest hits. You might not look like you’re wearing performance gear, but you’ll feel it. That’s the surprise.</em></p><p><strong>What values drive the brand?</strong><br/><br/>PK: <em>We have no investors, no shareholders—just controlled growth and people we love. My sister recently joined as Director of Sales. This is personal.</em></p><p><strong>Tell us about your materials and production.</strong><br/><br/>PK: <em>We work with certified B Corp factories with ethical, sustainable practices. Our factory in Peru runs on solar, recycles water, and even offers yoga to workers. That matters.</em></p><p><strong>What experience do you want people to have with Field Day?</strong><br/><br/>PK: <em>It’s a feeling—like the golden age, the wonder years. My old boss John Ashworth used to say he sold a philosophy, not a product. I want to do the same.</em></p><p><strong>What’s next?</strong><br/><br/>PK: <em>We’re proud of our partnership with the Western Golf Association and the Evans Scholars Foundation. Our next initiative launches in July, and it’s close to the heart. We believe in doing good where we can actually see it make a difference.</em></p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_10.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "FIELD DAY",
+        "collection": "mens-field-day-golf-apparel",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-field-day-golf-apparel",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "media_grid_1", "text_2", "hero_2", "products_1", "related-articles"]
+}

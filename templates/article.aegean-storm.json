@@ -1,0 +1,112 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_4.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "COMING THIS FRIDAY, JULY 5TH: Nike Air Jordan 1 Low Golf \"Aegean Storm\"",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Summer is here, and it's the perfect time to elevate your golf game and style with the latest release from Nike. Set to release this Friday, July 5th at 7 am PST, this shoe combines iconic design with modern functionality, making it a must-have for golf enthusiasts and sneaker collectors alike.</p><h4>Striking Aegean Storm Colorway</h4><p>The \"Aegean Storm\" edition features a clean white leather base accented with vibrant blue overlays, creating a dynamic and eye-catching look. The darker blue Nike Swoosh on the sides adds a touch of contrast, while the iridescent blue Jordan Golf branding on the tongue and the classic Air Jordan Wings logo on the heels enhance the overall aesthetic.</p><h4>Designed for Performance</h4><p>While maintaining the iconic silhouette of the original Air Jordan 1 Low, this golf-specific version includes features that enhance performance on the green. The upper is crafted from premium leather for durability and a high-quality feel. The outsole is designed for superior traction, providing stability and grip during swings, ensuring you perform your best on the course.</p><h4>Versatile Style</h4><p>Despite its golf-specific enhancements, the Air Jordan 1 Low Golf \"Aegean Storm\" retains the sleek and stylish appearance of its basketball predecessor. This makes it versatile enough to wear both on and off the course, seamlessly transitioning from a day of golf to casual outings.</p><h4>Release Details</h4><p>Mark your calendars and set your alarms! The Air Jordan 1 Low Golf \"Aegean Storm\" will be available on TRENDYGOLF starting Friday, July 5th at 7 am PST. Priced at $150, this release is expected to sell out quickly, so be sure to act fast to secure your pair.</p><h4>Stay Connected</h4><p>Follow us on social media and visit our website for more details and updates on the launch. Don’t miss out on this opportunity to add a unique and high-performing piece to your collection. Join the conversation and share your thoughts on the \"Aegean Storm\" in the comments below.</p><p>Elevate your golf game and style with the Nike Air Jordan 1 Low Golf \"Aegean Storm,\" available exclusively at TRENDYGOLF.</p>"
+          }
+        },
+        "button_1": {
+          "type": "button",
+          "settings": {
+            "label": "BE THE FIRST TO KNOW",
+            "link": "https://trendygolfusa.com/pages/air-jordan-1-low-golf-aegean-storm",
+            "style": "dark-grey"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1", "button_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_83337cf1-c970-487d-8aed-13f147fe86da.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_c70c4e4b-4b61-4b3a-956f-8802a341efe6.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_95667b62-8155-49ff-a268-e41c258e4bc7.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LAUNCH_PAGE_SHOWCASE_ITEM_2.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "media_grid_1", "related-articles"]
+}

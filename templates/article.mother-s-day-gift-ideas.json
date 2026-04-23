@@ -1,0 +1,266 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_1.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "OUR TOP PICKS FOR MOM",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This Mother's Day, show Mom just how much she means to you with a gift that reflects her style and sophistication. At TRENDYGOLF, we've curated a selection of chic and elegant clothing options from top brands to help you find the perfect gift for the golf-loving mom in your life. Whether she's hitting the links or enjoying a day out, these stylish pieces are sure to make her feel special.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "THE PERFECT POLO",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Elevate Mom's golf wardrobe with a classic polo shirt. Crafted from premium fabrics and featuring timeless designs, these polos offer both comfort and style on the course.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "POLOS",
+        "collection": "womens-polo-shirts",
+        "product_limit": 12,
+        "button_label": "SHOP POLOS",
+        "button_link": "https://trendygolfusa.com/collections/womens-polo-shirts",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "DRESS IT UP",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Treat Mom to a stylish golf dress this Mother's Day. With their flattering silhouettes and modern designs, these dresses seamlessly transition from the fairway to brunch with friends.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_2": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "DRESSES",
+        "collection": "womens-dresses",
+        "product_limit": 12,
+        "button_label": "SHOP DRESSES",
+        "button_link": "https://trendygolfusa.com/collections/womens-dresses",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "A SKORT STORY",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Help Mom stay cool and comfortable on the course with a skort designed for performance without sacrificing style. Made from performance fabrics and featuring feminine details, these skorts are perfect for warm-weather rounds.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_3": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "SKORTS AND SKIRTS",
+        "collection": "womens-skirts-skorts",
+        "product_limit": 12,
+        "button_label": "SHOP SKORTS AND SKIRTS",
+        "button_link": "https://trendygolfusa.com/collections/womens-skirts-skorts",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "keep it cozy",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Keep Mom cozy and chic with a knit sweater this spring. With their luxurious textures and on-trend designs, these sweaters are perfect for layering on cooler days.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_4": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "KNITWEAR",
+        "collection": "womens-knitwear",
+        "product_limit": 12,
+        "button_label": "SHOP KNITWEAR",
+        "button_link": "https://trendygolfusa.com/collections/womens-knitwear",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "COMPLETE HER LOOK",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Add the finishing touch to Mom's golf ensemble with an accessory or two. From colorful hats to stylish belts, these accessories make a statement while providing practical functionality.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_5": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "accessories",
+        "collection": "womens-caps",
+        "product_limit": 12,
+        "button_label": "SHOP ACCESSORIES",
+        "button_link": "https://trendygolfusa.com/search?q=WOMENS+CAPS&options%5Bprefix%5D=last",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_7": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At TRENDYGOLF, we're dedicated to providing the highest quality golf fashion from leading brands like Ralph Lauren, Scarlett by Greyson, A.PUTNAM, G/FORE, Malbon, and more. With our meticulously curated selection and user-friendly online platform, discovering the ideal Mother's Day gift is effortless. Show Mom your appreciation with a gift she'll cherish from TRENDYGOLF.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "text_2", "products_1", "text_3", "products_2", "text_4", "products_3", "text_5", "products_4", "text_6", "products_5", "text_7", "related-articles"]
+}

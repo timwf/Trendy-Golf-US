@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "article-template": {
@@ -15,23 +6,7 @@
         "show_breadcrumbs": true,
         "show_date": true,
         "show_excerpt": true,
-        "show_featured_image": false,
-        "enable_animation": true
-      }
-    },
-    "text_1": {
-      "type": "content-block",
-      "settings": {
-        "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
+        "show_featured_image": true,
         "enable_animation": true
       }
     },
@@ -63,22 +38,15 @@
           }
         }
       },
-      "block_order": [
-        "product_1",
-        "product_2",
-        "product_3",
-        "product_4"
-      ],
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
       "settings": {
         "image": "shopify://shop_images/SHOP_THE_LOOK_a0bac512-6252-4808-8210-f54c73ec68be.jpg",
         "title": "BOSS GIFT GUIDE",
-        "subtext": "",
-        "btn_text": "",
         "btn_link": "shopify://collections/mens-boss",
         "margin_bottom": "medium"
       }
     },
-    "text_2": {
+    "text_1": {
       "type": "content-block",
       "blocks": {
         "text_1": {
@@ -88,20 +56,9 @@
           }
         }
       },
-      "block_order": [
-        "text_1"
-      ],
+      "block_order": ["text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -109,19 +66,13 @@
       "type": "magazine-articles",
       "settings": {
         "blog": "magazine",
-        "article_count": 3,
         "heading": "Latest Articles",
+        "article_count": 3,
         "show_category": true,
-        "margin_bottom": "large",
-        "enable_animation": true
+        "enable_animation": true,
+        "margin_bottom": "large"
       }
     }
   },
-  "order": [
-    "article-template",
-    "text_1",
-    "shop_the_look_1",
-    "text_2",
-    "related-articles"
-  ]
+  "order": ["article-template", "shop_the_look_1", "text_1", "related-articles"]
 }

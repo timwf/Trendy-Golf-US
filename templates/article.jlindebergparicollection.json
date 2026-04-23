@@ -1,0 +1,147 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Untitled_design_54.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "J.LINDEBERG PARIS OLYMPICS 2024",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As the 2024 Summer Olympic Games in Paris draw near, the spirit of competition and national pride is palpable. While athletic prowess takes center stage, style and elegance play a crucial supporting role in each country's presentation. In this vibrant context, J.Lindeberg is proud to unveil its exclusive JL Paris Collection, crafted for the USA men’s and women’s golf teams as they gear up for the Paris Olympics and look ahead to the Los Angeles games in 2028.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This collection is a testament to national pride, featuring a palette of American colors that exude a sense of championship and unity. Bold text and graphic prints of the American flag strike a balance between sophistication and simplicity, promoting the image of the USA as a winning team on the global stage. Each piece is meticulously designed with innovative 37.5™ technology, offering UV50 sun protection and high-flexibility fabrics that ensure comfort and peak performance for the athletes. The collection's ClimaCool technology is particularly advantageous, allowing golfers to maintain optimal performance in the varying temperatures of the Parisian summer.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_e9bb7b43-ec16-4db1-994c-22f198b0d183.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_cb2ac79e-4460-40ee-a2eb-05aad2468116.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_594ec3ec-1ccc-4db1-81e0-7c9a7190af5f.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_fedf7c7c-8b95-4682-838a-48dc68f08893.jpg"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>J.Lindeberg has redefined the concept of athletic uniforms with this collection, creating purpose-tailored, head-turning pieces that embody the phrase \"dressed for success.\" Set to be available for sale in early June, the JL Paris Collection will make its grand debut at the PGA Show in Orlando, where the latest advancements in golf technology, apparel, and equipment are showcased. This collection not only prepares the USA golf team to compete but also to make a stylish statement that bridges the gap between sport and fashion.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured products",
+        "collection": "mens-usa-golf-x-j-lindeberg",
+        "product_limit": 12,
+        "button_label": "SHOP THE COLLECTION",
+        "button_link": "shopify://collections/mens-usa-golf-x-j-lindeberg",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "text_2", "media_grid_1", "text_3", "products_1", "related-articles"]
+}

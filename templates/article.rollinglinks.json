@@ -1,0 +1,210 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_27.jpg",
+            "mobile_image": "shopify://shop_images/shopify_magazine_hero_size_27_4ea09f2b-ff1e-4ff4-aeea-97ac58b1dbfd.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Introducing the Rolling Links Collection by adidas: Where Skate Meets Golf",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Golf and skateboarding—two sports that, at first glance, might seem like they belong on opposite ends of the athletic spectrum. One is steeped in tradition and heritage, while the other thrives on its anti-establishment ethos and rebellious spirit. But adidas sees things differently. This season, the brand breaks down barriers and blends these contrasting worlds with the launch of the Rolling Links Collection, a unique capsule that’s set to revolutionize how we think about golf apparel.</p><p>The Rolling Links Collection by adidas is a celebration of where these popular sports intersect, seamlessly merging the structured elegance of golf with the edgy attitude of skateboarding. This special collection features a range of skate-inspired golf apparel, footwear, and accessories, all bearing the distinctive mirrored Trefoil embroidered logo—a symbol of this groundbreaking fusion.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_9a79edee-5b7d-45d9-920d-3decd5565e14.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_afa8f3af-2ae2-4a55-96c2-ca468bebe7ad.jpg"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_75dddbac-0384-48d0-b97f-47e2b4f083fe.jpg"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_7133daad-4068-4258-b74e-77321cd0d67b.jpg"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "ABOUT THE COLLECTION",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The collection’s color palette draws inspiration from the shared landscapes of these two sports, showcasing green and blue hues across key pieces. The unisex offering includes a variety of versatile tops: from classic crewneck windshirts and cozy hoodies to the timeless v-neck vest, reimagined with a modern twist. Short and long-sleeve polos, as well as a mock neck short-sleeve shirt, round out the selection, offering golfers a fresh and stylish alternative to traditional course attire.</p><p>Complementing the tops are a short and chino pant, both featuring tonal three-stripe side hem detailing that adds a subtle nod to adidas’s iconic design language. But Rolling Links doesn’t stop at apparel. The collection also introduces two innovative footwear silhouettes designed to make a statement on the green. The special edition Superstar Golf combines adidas’s iconic streetwear style with golf-specific functionality, while the sleek all-black MC Z-Traxion offers a streamlined, modern look that’s as versatile as it is performance-driven. To complete the look, a range of colored crew socks and caps provides the perfect finishing touch, allowing golfers to express their style from head to toe.</p><p></p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_28.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Available from October 4, 2024, the Rolling Links Collection is for those who refuse to be confined by conventions—whether in fashion or on the fairway. By merging the heritage of golf with the boundary-pushing ethos of skateboarding, adidas is redefining what it means to be stylish on the course. It’s not just about playing the game; it’s about owning it with confidence and creativity.</p><p></p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/5_281a8eca-8723-4315-abb8-70b4bb9bc890.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6_181ac490-4f9d-4c49-8ae6-63073e9c6a80.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/8_494202ca-93f1-42a0-bdbc-078b373267f5.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "ROLLING LINKS",
+        "collection": "rolling-links-collection-by-adidas-where-skate-meets-golf",
+        "product_limit": 12,
+        "button_label": "EXPLORE THE COLLECTION",
+        "button_link": "https://trendygolfusa.com/collections/rolling-links-collection-by-adidas-where-skate-meets-golf",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "media_grid_1", "text_2", "hero_2", "text_3", "media_grid_2", "products_1", "related-articles"]
+}

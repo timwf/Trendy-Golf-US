@@ -1,0 +1,293 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/media_da33920d-498e-4bd9-971f-46dc8dcc3f68.png",
+            "mobile_image": "shopify://shop_images/media_da33920d-498e-4bd9-971f-46dc8dcc3f68.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Open Championship: Style, Legacy, and Layers That Matter",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><em>The oldest major returns and so does the best-dressed golf of the year.</em></p><p>There's something different about The Open. It's not just the unpredictable weather, the historic links, or the fact that the entire golf world seems to pause and pay attention. It's the feeling timeless, gritty, a little romantic and, of course, the fits.</p><p>The Open Championship is where tradition meets trend. Where classic knitwear collides with performance fabrics. Where your rain gear matters as much as your approach shot. And here at TRENDYGOLF, we live for it.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/media_2_a4815cdf-9315-4f92-aa32-b25ff5894353.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/media_3_05b2482a-8913-4446-8c28-900e4b881997.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Wind, Rain, and Wardrobe Mastery",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Played on some of the most weather-beaten courses in the world, The Open is the ultimate test not just of a player's game, but of their gear. You need outerwear that holds up to 30mph winds and sideways rain. You need layers that breathe when the clouds break. And let's be honest, you still want to look good when the cameras pan your way.</p><p>That's where we come in.</p><p>Brands like <strong>KJUS </strong>and <strong>Galvin Green</strong> are made for Open conditions: waterproof, windproof, and still built to move. Pair that with <strong>J.Lindeberg's</strong> sharp layering game and a <strong>G/FORE</strong> glove or two, and you're suddenly playing (or spectating) in full Open-ready form.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/media_5_4fb8cc27-e69c-4e44-8054-f0d6aeb8a7e0.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Players. The Vibes. The Throwback Energy.",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>From Tiger's Sunday reds to Seve's navy jumper at St Andrews, The Open has given us some of golf's most iconic looks. And today's generation is holding that line, only with a twist. Players like <strong>Tommy Fleetwood</strong>, <strong>Jason Day</strong>, and <strong>Rory McIlroy</strong> are leaning into modern fits, tapered trousers, and tonal layers that feel elevated but grounded in tradition.</p><p>This is where a <strong>Greyson</strong> quarter-zip meets a tailored <strong>RLX Ralph Lauren</strong> trouser. Where a <strong>Malbon</strong> knit vest makes perfect sense in 50° Scottish wind. The Open look is heritage with edge and that's right in our wheelhouse.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/media_7_6c6caf51-f27a-477e-8806-1aa31cc0f051.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/media_6_a32ebc5e-3e78-4fe6-86a1-03e9def381f3.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "What to Wear This Weekend",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If you're tuning into The Open or playing through a breezy weekend round, it's the perfect excuse to level up your look. Start with a proper outer layer, something lightweight, waterproof, and built to move. <strong>Galvin Green</strong> and <strong>KJUS</strong> make pieces that handle the weather without killing your swing. Underneath, layer up with a sharp quarter-zip or sweater from <strong>Greyson</strong>, <strong>RLX</strong>, or <strong>J.Lindeberg</strong>. They keep you warm without the bulk and look good whether you're walking the back nine or grabbing coffee after.</p><p>From there, it's all in the details. A clean <strong>G/FORE</strong> cap or a retro-inspired knit from <strong>Malbon</strong> brings just the right energy. For bottoms, you can't go wrong with <strong>J.Lindeberg's</strong> tailored trousers or something more laid-back from <strong>Manors Golf, </strong>comfortable enough for the course, polished enough for whatever's next. And hey, if you've been waiting for the right moment to wear that tartan layer? This is it. The Open isn't just a tournament, it's a whole vibe. Dress accordingly.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/media_4_e23e31e0-4857-4536-abbc-506dcdd151ac.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Takeaway?",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The Open isn't just a major. It's a mood. A reminder that golf doesn't always need sunshine or 72 degrees. Sometimes, the most compelling stories and the best fits come with a little wind in your face.</p><p>Shop the looks and build a wardrobe that plays just as hard when conditions turn.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "media_grid_1",
+    "text_2",
+    "hero_2",
+    "text_3",
+    "media_grid_2",
+    "text_4",
+    "hero_3",
+    "text_5",
+    "related-articles"
+  ]
+}

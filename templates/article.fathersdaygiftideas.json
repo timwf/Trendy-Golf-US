@@ -1,0 +1,302 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_2.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "OUR FAVORITE PICKS FOR DAD",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Father's Day is right around the corner, and we’ve curated the ultimate gift guide to help you find the perfect present for the special dad in your life. Whether he’s a golf enthusiast or just loves stylish and comfortable apparel, we’ve got you covered with fantastic options at every price point.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "GIFTS UNDER $300",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For those looking to splurge a little, consider high-performance golf shoes that offer both comfort and style on the course, making them a perfect gift for the avid golfer. Another excellent choice is a sleek and stylish jacket, versatile enough for early morning rounds or a casual day out. A timeless sweater also makes a wonderful gift, providing both warmth and an iconic, classic look that any dad would appreciate.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "FATHER'S DAY GIFTS UNDER $300",
+        "collection": "fathers-day-gifts-under-300",
+        "product_limit": 12,
+        "button_label": "SHOP OUR TOP PICKS",
+        "button_link": "https://trendygolfusa.com/collections/gifts-for-him",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "GIFTS UNDER $200",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>If your budget is slightly lower, you can’t go wrong with performance polos. These high-quality, breathable shirts are ideal for a day on the course or a casual outing. Luxurious knits are another great option, offering comfort and style that are perfect for layering. For the golfing dad, a stylish golf bag that combines functionality with fashion would make an impressive gift.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_2": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "GIFTS UNDER $200",
+        "collection": "fathers-day-gifts-under-200",
+        "product_limit": 12,
+        "button_label": "SHOP OUR TOP PICKS",
+        "button_link": "https://trendygolfusa.com/collections/gifts-for-him",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "GIFTS UNDER $100",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For those seeking budget-friendly options, stylish hats are a practical and fashionable choice, perfect for keeping dad looking sharp on and off the course. Premium golf gloves, known for their excellent grip and comfort, are sure to be appreciated. Additionally, comfortable socks that provide durability and style make for a thoughtful and practical gift that dad can use every day.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_3": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "GITFS UNDER $100",
+        "collection": "fathers-day-gifts-under-100",
+        "product_limit": 12,
+        "button_label": "SHOP OUR TOP PICKS",
+        "button_link": "https://trendygolfusa.com/collections/gifts-for-him",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "POLO PICKS FOR DAD",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>When it comes to polo shirts, a classic performance polo combines timeless style with modern performance, making it a must-have for any dad. A sleek stripe polo, featuring a stylish design and premium fabric, is perfect for the fashionable dad who likes to make a statement. Another excellent choice is a comfortable golf polo, known for its quality and comfort, which is a great addition to any golf wardrobe.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_4": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "POLOS",
+        "collection": "mens-polo-shirts",
+        "product_limit": 12,
+        "button_label": "SHOP POLOS",
+        "button_link": "https://trendygolfusa.com/collections/mens-polo-shirts?filter.v.availability=1",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "ACCESSORIES FOR ON AND OFF THE GOLF COURSE",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Accessories are always a hit, and durable gloves that enhance grip and performance on the course are no exception. A sophisticated belt can add a touch of elegance to any golf outfit, making it a great gift. For sunny days on the course, a protective golf cap not only offers practicality but also adds a stylish touch.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_5": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "accessories",
+        "collection": "mens-caps",
+        "product_limit": 12,
+        "button_label": "SHOP ACCESSORIES",
+        "button_link": "https://trendygolfusa.com/collections/mens-new-in?filter.v.price.gte=&filter.v.price.lte=&filter.p.product_type=Accessories&filter.p.product_type=Bags&filter.p.product_type=Belts&filter.p.product_type=Bucket+Hats&filter.p.product_type=Caps&filter.p.product_type=Eyewear&filter.p.product_type=Golf+Bags&filter.p.product_type=Golf+Balls&filter.p.product_type=Golf+Gloves&filter.p.product_type=Golf+Shoes&filter.p.product_type=Headcovers&filter.v.availability=1",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_7": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "SHORTS FOR SUMMER",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Comfortable and adaptable, versatile performance shorts are perfect for both the golf course and casual wear. High-tech shorts made with performance fabric offer style and functionality, ideal for the active dad. Casual shorts, suitable for both on and off the course, provide a great blend of comfort and style, making them an excellent gift choice.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_6": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "SHORTS",
+        "collection": "mens-shorts",
+        "product_limit": 12,
+        "button_label": "SHOP SHORTS FOR DAD",
+        "button_link": "https://trendygolfusa.com/collections/mens-shorts?filter.v.availability=1",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_8": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>This Father’s Day, show dad how much he means to you with a thoughtful gift from our curated selection. With options to suit every budget and style, you’re sure to find something he’ll love and cherish. Happy Father’s Day!</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "text_2", "products_1", "text_3", "products_2", "text_4", "products_3", "text_5", "products_4", "text_6", "products_5", "text_7", "products_6", "text_8", "related-articles"]
+}

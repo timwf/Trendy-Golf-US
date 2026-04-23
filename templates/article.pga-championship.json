@@ -1,0 +1,70 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Untitled_design_86.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The PGA Championship: Everything You Need to Know",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The PGA Championship, hosted by the Professional Golfers' Association of America, is one of golf's four major championships, alongside the U.S. Open, Masters Tournament, and Open Championship. Each year, 156 professional golfers compete for the prestigious Wanamaker Trophy. Here's what you need to know about the PGA Championship.</p><h3>What Does the PGA Championship Winner Get?</h3><p>The winner of the PGA Championship enjoys several rewards:</p><ul><li>A grand prize of $1.98 million, which is 18% of the $11 million PGA purse.</li><li>A 5-year membership to the PGA Tour.</li><li>A 7-year membership to the European Tour.</li><li>Possession of the Wanamaker Trophy for one year.</li></ul><h3>Who Is the Wanamaker Trophy Named After?</h3><p>The trophy is named after Rodman Wanamaker, who founded the PGA Championship in 1916. At a time when golf wasn't highly regarded, Wanamaker sought to elevate the sport by creating a platform for professional golfers and offered $2,500 as the grand prize. Today, the prize has grown significantly, with winners taking home nearly $2 million.</p><h3>Why Was the PGA Championship Moved from August to May?</h3><p>Traditionally held between July and August since 1953, the championship moved to May starting in 2019. This shift was prompted by the reintroduction of golf in the July-August Olympics in 2016, which disrupted the traditional schedule. Moving the PGA Championship to May boosted global interest and participation in the sport.</p><h3>Interesting PGA Championship Facts</h3><ul><li>The championship features 156 professional golfers each year.</li><li>The top 65 players receive payouts from an $11 million purse.</li><li>Gene Sarazen became the youngest winner in 1922 at age 20.</li><li>Phil Mickelson became the oldest winner in 2021 at age 50.</li><li>The 27-pound Wanamaker Trophy has gone missing before.</li></ul>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "related-articles"]
+}

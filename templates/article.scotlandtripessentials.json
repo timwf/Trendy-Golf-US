@@ -1,0 +1,249 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_3_058a26bd-9968-4ca6-9e5c-b6ce9ab5facc.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "What to Pack for a Scotland Golf Trip",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Planning a golf trip to Scotland? The home of golf is known for its stunning courses and unpredictable weather. Whether you're teeing off at St. Andrews or exploring the Highlands, it's crucial to be prepared for all conditions. Packing the right gear is essential to staying dry, warm, and comfortable throughout your rounds. Here’s a guide to the must-have items to pack for your Scotland golf adventure, with a focus on the latest arrivals from Galvin Green.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Stay Dry and Comfortable on the Course",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Waterproofs</h4><p>When golfing in Scotland, waterproof gear is non-negotiable. Scotland’s weather can change in an instant, with rain showers often making an unexpected appearance. A high-quality waterproof jacket is essential. Galvin Green offers top-tier waterproofs that combine breathability with complete protection from the elements. Look for jackets made from GORE-TEX fabric, known for its durability and ability to keep you dry without overheating. Pair the jacket with waterproof trousers for full coverage, ensuring you stay comfortable and focused, regardless of the weather.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_4_7eb53b6e-db2f-475b-981b-8104f81aa88e.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Layers</h4><p>Layering is key to adapting to Scotland’s varying temperatures. Mornings can be chilly, and the wind can pick up quickly, especially on coastal courses. Mid-layers from Galvin Green are designed to provide warmth without bulk, allowing for ease of movement during your swing. Opt for lightweight, insulating layers that you can easily remove or add as the day progresses. A versatile layering system ensures that you’re prepared for whatever the Scottish weather throws your way.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_2_543c9ed6-bd13-4e76-a60b-cacb9f3fd880.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Base Layers</h4><p>A solid base layer is the foundation of any effective golf outfit, particularly in cooler climates like Scotland. Galvin Green’s base layers are crafted from moisture-wicking fabrics that keep sweat away from the body, ensuring you stay dry and warm from the inside out. Look for options that offer a snug fit without restricting movement. A well-chosen base layer can make all the difference in maintaining comfort during a long day on the course.</p><p></p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Polos</h4><p>Even in Scotland, there will be days when the sun breaks through, and the weather is mild. For those occasions, a high-performance polo is a must. Galvin Green’s polos are designed with breathable, quick-drying fabrics that provide comfort while still looking sharp. These polos are perfect for layering under a jacket or mid-layer and can be worn on their own when the weather allows. Choose styles that offer UV protection for added peace of mind during sunnier rounds.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_c85963f7-4b79-4b10-9222-4b6e7e3ae17a.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_d238e894-07e2-49ff-807c-478285df3184.jpg"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<h4>Trousers</h4><p>Golf trousers need to balance comfort, flexibility, and protection against the elements. Galvin Green’s trousers are tailored with performance in mind, offering a range of styles that include water-repellent and windproof options. These trousers are designed to move with you, providing comfort throughout your round while ensuring you stay dry so you can focus on your swing.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_4": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_1_d561bd27-9b6a-40ae-95a9-5d0525685d0b.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "GALVIN GREEN",
+        "collection": "mens-galvin-green",
+        "product_limit": 12,
+        "button_label": "SHOP NEW ARRIVALS",
+        "button_link": "shopify://collections/mens-galvin-green",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "text_2", "hero_2", "text_3", "hero_3", "text_4", "text_5", "media_grid_1", "text_6", "hero_4", "products_1", "related-articles"]
+}

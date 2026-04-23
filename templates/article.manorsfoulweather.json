@@ -16,20 +16,16 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
-            "heading": "",
-            "heading_size": "h2",
-            "heading_font": "serif",
             "media_type": "image",
-            "image": "shopify://shop_images/Manors-DESK_44814034-f946-491c-a2b0-ad111aa64470.webp",
-            "slide_duration": 7
+            "image": "shopify://shop_images/Manors-DESK_44814034-f946-491c-a2b0-ad111aa64470.jpg",
+            "mobile_image": "shopify://shop_images/MANORS-MOB_4382f532-2da8-43a4-a23b-bce9d1dbfff1.jpg",
+            "heading": ""
           }
         }
       },
       "block_order": ["slide_1"],
       "settings": {
         "autoplay": false,
-        "show_progress": false,
         "enable_animation": true,
         "margin_bottom": "medium"
       }
@@ -40,7 +36,7 @@
         "heading_1": {
           "type": "heading",
           "settings": {
-            "text": "WINTER IS COMING: MANORS FOUL WEATHER",
+            "text": "WINTER IS COMING: MANORS FOUL WEATHER COLLECTION",
             "tag": "h2",
             "size": "h3",
             "font": "serif"
@@ -49,22 +45,13 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Golf has never been a game dictated by perfect conditions. True players know that wind, rain, and cold are simply part of the story. What matters is not avoiding the elements, but moving through them with ease. That is the spirit behind the new Manors Foul Weather Collection, launching September 9, 2025.</p><p>Built with advanced weather-resistant fabrics and a sharp design sensibility, the collection redefines foul-weather gear. Think lightweight jackets cut with clean tailoring, waterproof trousers that move with you rather than against you, and layers designed to keep warmth in while keeping rain firmly out. These are not overbuilt shells or clunky outerwear, they're modern essentials that preserve the rhythm of your game, no matter what the skies decide.</p><p>Manors has always championed the blend of heritage and modernity, and this collection sits squarely in that philosophy. Inspired by the tradition of classic rainwear, yet elevated with contemporary performance details, these pieces look as good walking off the 18th as they do walking through the city.</p><p>Because the truth is, golf doesn't pause for a drizzle, or for a downpour. And neither should you.</p>"
+            "text": "<p>Golf has never been a game dictated by perfect conditions. True players know that wind, rain, and cold are simply part of the story. What matters is not avoiding the elements, but moving through them with ease. That is the spirit behind the new Manors Foul Weather Collection, launching September 9, 2025.</p><p>Built with advanced weather-resistant fabrics and a sharp design sensibility, the collection redefines foul-weather gear. Think lightweight jackets cut with clean tailoring, waterproof trousers that move with you rather than against you, and layers designed to keep warmth in while keeping rain firmly out. These are not overbuilt shells or clunky outerwear, they’re modern essentials that preserve the rhythm of your game, no matter what the skies decide.</p><p>Manors has always championed the blend of heritage and modernity, and this collection sits squarely in that philosophy. Inspired by the tradition of classic rainwear, yet elevated with contemporary performance details, these pieces look as good walking off the 18th as they do walking through the city.</p><p>Because the truth is, golf doesn’t pause for a drizzle, or for a downpour. And neither should you.</p>"
           }
         }
       },
       "block_order": ["heading_1", "text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -72,10 +59,10 @@
       "type": "featured-collection",
       "settings": {
         "title": "MANORS",
-        "collection": "mens-manors-golf",
+        "collection": "mens-manors-golf-clothing-accessories",
         "product_limit": 12,
         "button_label": "SHOP NOW",
-        "button_link": "shopify://collections/mens-manors-golf",
+        "button_link": "shopify://collections/mens-manors-golf-clothing-accessories",
         "margin_bottom": "medium"
       }
     },

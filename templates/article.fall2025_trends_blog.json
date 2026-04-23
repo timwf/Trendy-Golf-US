@@ -1,0 +1,321 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/RLX_2.png",
+            "mobile_image": "shopify://shop_images/RLX_2.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Fall 2025 Golf Trends You'll Actually Want to Wear",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fall golf isn't just about swapping short sleeves for sweaters, it's about making your style work harder. This season, the fairway fits are bolder, smarter, and way more wearable off the course. From the color everyone's talking about to retro pieces with major personality, TRENDYGOLF has the trends (and the outfits) to keep your game and your look sharp all season long.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/RLX_4.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Malbon.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Malbon_2.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/fall__shopify.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Olive Green Everything",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fall 2025 has spoken, and the verdict is in... olive green is the shade of the season. It's rich without being flashy, earthy without being dull, and it pairs with just about everything. Whether you're going full tonal or letting olive be the anchor to a bolder piece, this color screams fall energy. We're obsessed with how it looks layered on the course: think the Greyson Sequoia Full-Zip Hybrid Jacket in Forest over the Manors Golf Merino Wool Polo. The look is sharp, minimal effort, and perfect for transitioning from a chilly morning round to a casual afternoon in the big city.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/RLX_3.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Retro Revival",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Golf fashion is having a nostalgic moment, and the '80s and '90s are making a serious comeback. Varsity sweaters, bold stripes, and vintage-inspired polos are everywhere. It's about channeling that old-school country club vibe, but with fabrics and fits that actually make sense in 2025. Ralph Lauren Golf nails it with throwback polos that feel straight out of a vintage locker room, while Adidas Golf Originals gives the look a streetwear twist. Pair a Ralph Lauren stripe knit with the RLX Tailored Fit Trouser for a refined yet casual vibe, then finish with G/FORE's Gallivanter shoes for the perfect blend of classic and contemporary. Bonus points if you add a cap with a retro logo.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Malbon_3.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/10_5f971327-1445-4e5f-9a2e-d1ed10762b7b.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/9_bb36bf4b-76cd-4bdf-903c-14415c3a0e35.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Malbon_4.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Technical Layers with Streetwear Edge",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fall golf means layering, but the key this season is mixing high-performance pieces with off-course wearability. We're talking water-resistant vests that look just as good over a hoodie as they do with a performance polo, jogger-style trousers you could wear to brunch, and lightweight outerwear that's more street style than sportswear. J.Lindeberg is leading the charge here, delivering sleek jackets like the Aerial Hybrid Vest that packs warmth without bulk. Style it over a TravisMathew performance hoodie and Malbon Utility Pants, then add a pair of G/FORE MG4+ shoes to tie it all together. The end result? A look that works for an 8 AM tee time and an 8 PM dinner reservation.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/RLX.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Takeaway",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Fall 2025 golf style is all about versatility, personality, and layering that works on and off the course. Olive green sets the tone for the season, retro details bring in the personality, and technical pieces make sure you're as comfortable as you are stylish. At TRENDYGOLF, we got every piece you need to nail these trends without overthinking it. Whether you're stepping up your course fits or just want gear that works with your day-to-day wardrobe, the site's got you covered. Now go layer up, mix it up, and play it cool this fall.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "media_grid_1",
+    "text_2",
+    "hero_2",
+    "text_3",
+    "media_grid_2",
+    "text_4",
+    "hero_3",
+    "text_5",
+    "related-articles"
+  ]
+}

@@ -1,0 +1,307 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/9.png",
+            "mobile_image": "shopify://shop_images/9.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Oakmont's Legacy: The Course That Defines Champions",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The U.S. Open returns to Oakmont Country Club this June and if history is any guide, the week will be less about who goes low and more about who survives.</p><p>Tucked just outside Pittsburgh, Oakmont doesn't look intimidating at first glance. No dramatic water carries, no sweeping vistas. But ask any pro who's played it, and you'll hear the same thing: it's a nightmare. A beautiful, historic, perfectly maintained nightmare.</p><p>This year marks Oakmont's tenth U.S. Open, a record. There's a reason the USGA keeps coming back. This place doesn't just identify champions. It builds them.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/8_eb9bc0d7-98a4-4d26-bb32-d4b5cb361806.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_b50fc92b-98be-4d6d-9e63-9693bb45911a.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "A Course Built to Break You",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Oakmont was designed in 1903 by Henry Fownes, who had no background in course architecture but a clear vision: golf should be hard. That vision has never changed.</p><p>The greens are some of the fastest in the world, often stimping at 14 or higher. The rough is thick and unforgiving. And then there's the Church Pews bunker, a 100-yard stretch of sand and grass mounds that's humbled some of the game's best.</p><p>There's no trickery at Oakmont. Just precision, patience, and pressure. Miss by a little, and you're scrambling. Miss by a lot, and you're out of the tournament.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/10.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Moments That Made It Legendary",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>A young Jack Nicklaus won his first major here in 1962, beating hometown hero Arnold Palmer in an 18-hole playoff. He was 22. That win launched a career and a rivalry that would define an era.</p><p>In 1973, Johnny Miller showed up on Sunday and shot a 63. With blades. From back then until now, no one's matched the mix of skill and guts he displayed that day. It's still one of the greatest rounds ever played.</p><p>Then came Ángel Cabrera in 2007, holding off Tiger, Jim Furyk, and the field with a score of +5. That's Oakmont. Some courses reward you for taking chances. Oakmont punishes you for daring.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/7_72aa5a32-b405-43e9-a377-ceba41a77460.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_cb8e9a57-3d95-4d30-9c4a-2ac34731285f.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/6_d5a47525-5f55-454b-9146-fa3b1d5e9f2a.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_894af285-c4fe-4112-9fe6-80d5dfc26ae9.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Why Oakmont Still Matters",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The modern game is faster, louder, and more forgiving. Drivers are lighter. Balls fly straighter. But Oakmont hasn't budged. That's why it still matters.</p><p>This year's setup will be brutal. As it should be. Narrow fairways, thick rough, rock-hard greens. Players will have to hit fairways and lag putts. Bomb-and-gouge doesn't work here. Oakmont reminds you that golf, at its core, is a game of control.</p><p>It's a test of nerve as much as talent. And that's what makes it compelling.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/11.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "A Stage Fit for a Major",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Not every course can carry a U.S. Open. Oakmont can. It doesn't just challenge players, it changes them. There's no faking it here. If you win at Oakmont, you've earned every bit of it.</p><p>When the first tee shot goes up on Thursday, everything tightens: the atmosphere, the margins, the field itself. By Sunday, someone will stand above the rest not because they played perfect golf, but because they held it together when everything tried to fall apart.</p><p>That's the Oakmont effect. And that's why it still defines champions.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "media_grid_1",
+    "text_2",
+    "hero_2",
+    "text_3",
+    "media_grid_2",
+    "text_4",
+    "hero_3",
+    "text_5",
+    "related-articles"
+  ]
+}

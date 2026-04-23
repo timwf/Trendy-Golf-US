@@ -1,0 +1,362 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Hero_1_161ab7f7-1000-4bba-81ef-e433c4c13858.png",
+            "mobile_image": "shopify://shop_images/Hero_1_161ab7f7-1000-4bba-81ef-e433c4c13858.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Golf Style Icons: Past vs. Present",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>From Arnie's Cardigans to Jason Day in Cropped Pants, How Golf Fashion Evolved Without Losing Its Swagger</strong></p><p>Let's be honest, golf has always had a style game. It's just... changed a lot. In the golden era of the sport, players like Arnold Palmer and Seve Ballesteros stepped onto the course with elegance that felt effortless. Their looks were polished, classic, and, for the time, incredibly cool. Fast-forward to today, and you've got players like Jason Day and Erik van Rooyen taking risks and rewriting the dress code entirely. Different eras, same energy.</p><p>So, what happens when you stack the legends against the disruptors? You get a story of tradition, rebellion, and really good knitwear.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Arnold_Palmer_3.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Arnold_Palmer_4.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Arnold Palmer: The King of Clean",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Arnie wasn't flashy but he knew how to dress. Think crisp polos, perfectly tailored cardigans, and those timeless pleated slacks. It wasn't about trend, it was about trust. His clothes said, \"I've been here before,\" and his swing usually confirmed it.</p><p>Palmer didn't need to overdo it, he let fit and polish do the talking. Today, you'll find echoes of his understated style in brands like <strong>RLX Ralph Lauren</strong> and <strong>KJUS</strong>, where modern fabrics meet timeless silhouettes.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Seve_Ballesteros_3.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Seve_Ballesteros_2.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Seve_Ballesteros.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Seve_Ballesteros_4.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2",
+        "image_3",
+        "image_4"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Seve Ballesteros: Flair Without the Noise",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Seve's style lived in the details. A navy sweater with white piping. A shirt collar popped just slightly out of a V-neck. He didn't chase flash, but he understood presence. His European roots brought a tailored edge to American fairways.</p><p>If Seve were playing today, there's a good chance he'd be wearing <strong>Greyson</strong> or <strong>J.Lindeberg. </strong>This are brands that build their aesthetic around elevated simplicity and movement-conscious design.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/hero_1_fd9e39e5-dbfe-45bc-8299-87606a46b2c6.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Jason Day: Golf's Style Renaissance Man",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Now we flip the script. Jason Day in <strong>Malbon</strong>? That's not just an outfit, it's a statement. Cropped, tailored pants. Asymmetric quarter-zips. Wide-legged trousers. Day has gone from traditional Nike fits to fashion-forward looks that belong on the runway <em>and</em> the leaderboard.</p><p>His partnership with Malbon isn't just a rebrand, it's a signal that golf fashion is becoming a platform for expression, not just uniformity. The man makes a vest over a graphic tee look country club approved.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_3": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Erik_van_Rooyen_3.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Erik_van_Rooyen.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Erik van Rooyen: The Rockstar Golfer",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Erik van Rooyen has singlehandedly made joggers, facial hair, and untucked shirts look respectable on Tour. His look says \"musician accidentally joined a PGA event,\" and we mean that in the best way possible. He blends edge with performance and pulls it off.</p><p>If Arnie was the prototype, Erik is the remix. You'll catch him in <strong>Bogey Boys</strong>, <strong>G/FORE</strong>, and anything that blurs the line between streetwear and sport.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_3": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Hero2_1.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "So... Who Wins?",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>That's the trick. You don't have to choose.</p><p>The past gave us polish. The present gave us personality. Together, they've shaped a new kind of golf style, one that still respects the game but isn't afraid to challenge what it <em>should</em> look like.</p><p>At TRENDYGOLF, we live for that evolution. Whether you're channeling Arnie's clean classics or leaning into Jason Day's cropped chaos, we've got the brands and pieces to help you find your lane and swing in it confidently.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "media_grid_1",
+    "text_2",
+    "media_grid_2",
+    "text_3",
+    "hero_2",
+    "text_4",
+    "media_grid_3",
+    "text_5",
+    "hero_3",
+    "text_6",
+    "related-articles"
+  ]
+}

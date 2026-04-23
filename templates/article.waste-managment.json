@@ -1,0 +1,257 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Untitled_design_36.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "IN THE DESERT: WASTE MANAGEMENT PHOENIX OPEN",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Get ready to witness one of the most anticipated events in golf as the Waste Management Phoenix Open swings into action from February 8th to 11th! Held at the renowned TPC Scottsdale, this tournament isn't just about golf – it's a four-day celebration of sport, entertainment, and unrivaled fun.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "stl_1": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "x-ptc-floral-polo-deep-navy-regal-blue-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "x-ptc-cargo-pants-deep-navy-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "x-ptc-range-print-shorts-deep-navy-white-glow-ss24"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "x-ptc-open-collar-print-polo-regal-blue-ss24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_35.jpg",
+        "title": "PUMA X PTC",
+        "subtext": "EXPLORE THE COLLECTION",
+        "btn_text": "SHOP NOW",
+        "btn_link": "shopify://collections/mens-puma-clothing",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "The Famous 16th Hole: Where Golf Meets Entertainment",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>At the heart of the Waste Management Phoenix Open lies the legendary 16th hole at TPC Scottsdale, affectionately known as \"The Coliseum.\" This par-3 masterpiece transforms into a pulsating amphitheater of excitement, where thousands of fans create an electrifying atmosphere unlike any other in golf. From creative costumes to thunderous cheers, spectators add an extra layer of energy to the tournament, making every shot an unforgettable moment.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "More Than Just Golf: A Festival Atmosphere",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>What sets the Waste Management Phoenix Open apart is its unique blend of golf and entertainment. As players navigate the challenging course, spectators indulge in a festival-like experience filled with live music, delicious food, and interactive activities. Whether you're lounging in the beer gardens, exploring the vendor booths, or cheering on your favorite players, there's a vibrant energy that permeates every corner of the event.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "\"WASTED WEEKEND\" : WHERE FUN TAKES CENTER STAGE",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>While the Waste Management Phoenix Open is undoubtedly a world-class golf tournament, it's the emphasis on fun and camaraderie that truly sets it apart. Here, golf enthusiasts and casual fans alike come together to enjoy the sport in a relaxed and festive environment. From the rowdy cheers at the 16th hole to the lively post-round celebrations, this event exemplifies the spirit of golf as a game meant to be enjoyed by all.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "stl_2": {
+      "type": "shop-the-look",
+      "blocks": {
+        "product_1": {
+          "type": "product",
+          "settings": {
+            "product": "beer-happy-cap-black-ss24"
+          }
+        },
+        "product_2": {
+          "type": "product",
+          "settings": {
+            "product": "tourist-season-polo-black-ss24"
+          }
+        },
+        "product_3": {
+          "type": "product",
+          "settings": {
+            "product": "beer-happy-tee-laurel-ss24"
+          }
+        },
+        "product_4": {
+          "type": "product",
+          "settings": {
+            "product": "warmer-tides-ls-tee-arona-ss24"
+          }
+        }
+      },
+      "block_order": ["product_1", "product_2", "product_3", "product_4"],
+      "settings": {
+        "image": "shopify://shop_images/Untitled_design_37.jpg",
+        "title": "TRAVIS MATHEW",
+        "subtext": "WASTED WEEKEND",
+        "btn_text": "SHOP TRAVIS MATHEW",
+        "btn_link": "shopify://collections/mens-travis-mathew",
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Collaborations Launching During the Event",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>In conjunction with the Waste Management Phoenix Open, two exciting collaborations are set to debut during the tournament. PUMA is unveiling the highly anticipated PUMA x PTC collection, featuring stylish and performance-driven apparel and accessories designed for the modern golfer. Created by Kygo and Rickie Fowler, this collection is casual meets performance, and perfect for on the golf course and off. Additionally, Travis Mathew is introducing its \"Wasted\" collection, offering a range of trendy and relaxed apparel perfect for both on and off the course. With these exclusive launches, attendees can elevate their style while embracing the spirit of the tournament.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "PUMA X PALM TREE CREW",
+        "collection": "mens-puma-clothing",
+        "product_limit": 12,
+        "button_label": "SHOP THE COLLECTION",
+        "button_link": "shopify://collections/mens-puma-clothing",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "stl_1", "text_2", "text_3", "text_4", "stl_2", "text_5", "products_1", "related-articles"]
+}

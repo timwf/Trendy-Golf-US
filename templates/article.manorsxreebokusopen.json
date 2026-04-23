@@ -1,0 +1,115 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_12.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "No Thanks, I’ll Walk: The REEBOK x MANORS Collection Has Landed at TRENDYGOLF",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><br/><em>Exclusive in the U.S. only at TRENDYGOLF</em></p><p>Before there were golf carts and GPS yardages… there was the walk. The long, quiet, mindful trek between shots that let you see the game, and the land, as it was meant to be seen. The newest collaboration from REEBOK and MANORS brings that spirit back to center stage.</p><p>Introducing <em>No Thanks, I’ll Walk,</em> a campaign and collection rooted in golf’s raw origins, designed for the modern player who values substance over spectacle.</p><h3>A Nod to Simpler Times</h3><p>There was a time when golf was wild and unpolished. Played between sea and civilization. No scorecards, no dress codes, no distractions. Just the wind at your back, the ground beneath your feet, and the game ahead of you. This collection recaptures that ethos with a fresh take on heritage.</p><h3>Walk the Walk</h3><p>At the heart of the collaboration is the reimagined Reebok OG Pump Golf Shoe hand-crafted for performance, built to move, and ready to walk for hundreds more years. Alongside it is a full range of apparel, lifestyle footwear, and accessories that fuse Reebok’s sport heritage with MANORS’ contemporary edge.</p><p>Think '90s streetwear meets traditional links style technical materials for on-course performance, classic colorways inspired by Reebok archives and coastal fairways, and everyday silhouettes that transition effortlessly from tee time to city time.</p><h3>Product Spotlight: Club C Revenge</h3><p>Once a tennis icon, now a course-ready statement. The Club C Revenge stays true to its minimalist DNA while adding golf-ready updates: a molded sock liner, MANORS detailing throughout, and a subtle homage to the GB flag, a quiet salute to those who walked the course long before us. Available in rich burgundy and navy, it walks the line between sport legacy and lifestyle staple.</p><h3>For the Golfer Who…</h3><p>Carries their own bag.<br/><br/>Knows when to laugh at a bad shot.<br/><br/>Lets faster groups through.<br/><br/>Believes silence on the course is sacred, but so is a well-timed cheer.<br/><br/>And when offered a cart on a perfect day? Says: <em>No thanks, I’ll walk.</em></p><h3>Only at TRENDYGOLF</h3><p>As the exclusive U.S. retail partner for REEBOK x MANORS, we’re proud to bring this collection stateside. It’s more than gear, it’s a statement about how you choose to show up. For the game, for the walk, and for the story it continues to tell.</p><p>Explore the collection. Lace up. Leave the cart behind.</p><p><strong>Shop the REEBOK x MANORS Collection →</strong></p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Varley Apparel",
+        "collection": "mens-manors-x-reebok-golf-capsule",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-manors-x-reebok-golf-capsule",
+        "margin_bottom": "medium"
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_d68244ef-e5d2-493b-99b6-8b64c3b0819a.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_11d81b0e-963c-483e-8886-5ad75d820858.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LAUNCH_PAGE_SHOWCASE_ITEM.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_d34b0a40-592c-423d-bdce-2ca1b7451fc3.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "products_1", "media_grid_1", "related-articles"]
+}

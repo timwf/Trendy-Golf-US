@@ -1,0 +1,115 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_38.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Zero Restriction Has Landed",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Meet Zero Restriction: Built to Perform, Designed to Move</strong></p><p>A name that’s been whispered by serious players for decades is finally making its way to TRENDYGOLF. Introducing <em>Zero Restriction, </em>the latest addition to our brand lineup and a trusted innovator in golf outerwear and performance apparel.</p><p>For over 30 years, Zero Restriction has led the charge in motion-tuned design. Long before “technical apparel” became a buzzword, they were quietly engineering waterproofs for the elements, layers that moved like a second skin, and silhouettes that looked just as at home on the course as they did at the office or the gym.</p><p>This isn’t just gear, it’s gear with purpose. Zero Restriction was born to handle unpredictable weather and high-stakes moments. Their signature waterproof jackets are fully seam-sealed and crafted with multi-layered coated fabrics, built to keep you dry through the downpour without sacrificing breathability or comfort. Add to that their windproof collection, lightweight, sleek, and structured to cut through gusts with ease, and you’ve got apparel ready for any forecast.</p><p>But what really sets the brand apart is their commitment to movement. “Motion tuned” is a design philosophy. Every layer is strategically engineered for mobility: think enhanced flexibility, ergonomic paneling, and a fit that works <em>with</em> your swing, not against it.</p><p>Whether you’re heading to an early tee time, commuting to work, or training indoors, Zero Restriction gives you freedom without compromise. Durable, adaptable, and undeniably refined, this is gear for those who don’t slow down just because the weather turns.<br/><br/><strong>Available now on TRENDYGOLF.</strong></p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_f3465bd0-dcd6-4b05-aa32-dcde6c6e73a6.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LAUNCH_PAGE_SHOWCASE_ITEM_4.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_ec593ef4-b66e-4c38-907f-3c7c54b51866.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/LAUNCH_PAGE_SHOWCASE_ITEM_3.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "ZERO RESTRICTION",
+        "collection": "mens-zero-restriction-apparel",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-zero-restriction-apparel",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "media_grid_1", "products_1", "related-articles"]
+}

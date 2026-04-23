@@ -1,0 +1,228 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_31.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Malbon Golf: Redefining Golf Fashion with the Matisse Cardigan",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As spring and summer approach, it's time to refresh your wardrobe with pieces that combine comfort, style, and versatility. One such piece is the Matisse Cardigan from Malbon Golf. Designed to be the perfect layering piece for transitional weather, this cardigan strikes the ideal balance between warmth and breathability. Made from a premium blend of 50% wool and 50% acrylic, the Matisse Cardigan offers a soft, cozy feel without compromising on comfort or performance. The rib-knit placket, cuffs, and waistband give it a snug, tailored fit, ensuring you stay comfortable and stylish whether you're on the golf course or out for casual wear.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "fc_1": {
+      "type": "featured-collections",
+      "blocks": {
+        "collection_1": {
+          "type": "collection",
+          "settings": {
+            "collection": "mens-malbon-golf-the-last-frontier-1",
+            "collection_image": "shopify://shop_images/MAL-CAR-MOB.jpg"
+          }
+        }
+      },
+      "block_order": ["collection_1"],
+      "settings": {
+        "btn_text": "SHOP MALBON",
+        "btn_link": "shopify://collections/mens-malbon-golf-the-last-frontier-1",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_074e76cc-29a8-4bde-b775-aa16345ff43a.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_3eb5a9ad-c722-4d4d-96e4-cf7cefa25972.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_e3924e35-d176-48ee-b627-d5ce5e4caf3f.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_08ecf2ef-9b05-4a9c-aaa2-ca5bd6511726.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Jason Day's Bold Fashion Choices with Malbon Golf",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Over the past couple of years, PGA Tour star Jason Day has become as well-known for his fashion sense as for his impressive performance on the golf course. After parting ways with Nike, Day signed a partnership with Malbon Golf in 2024, and it's safe to say that the collaboration has completely redefined his style on the tour.</p><p>Gone are the days of slim slacks and traditional polos. Instead, Day has embraced a bold, fresh approach to golf fashion, introducing sweater vests, parachute pants, and seersucker button-up shirts to the course. Day's willingness to take risks with his wardrobe has certainly captured the attention of golf fans everywhere, and his partnership with Malbon has allowed him to push the boundaries of what's traditionally acceptable in the world of golf attire.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_32.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Jason Day at the 2024 Farmers Insurance Open: A Standout Moment",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>One of Day's most recent fashion moments came at the 2024 Farmers Insurance Open at Torrey Pines. On Saturday, in the final round of the tournament, Day went viral for his fashion choice: a cream cardigan featuring a golf swing pattern. The sweater not only turned heads for its unique design, but it also demonstrated Day's commitment to introducing stylish pieces like the Matisse Cardigan into the world of professional golf.</p><p>In fact, Day's outfit was so eye-catching that it had fans buzzing on Golf Twitter. While it may be considered tame compared to other fashion-forward moments in the world today, Day's choice stood out in the more conservative golf community. As Stephen Malbon, founder of Malbon Golf, pointed out, Day was wearing his own Malbon collection throughout the tournament, further solidifying his role as a trendsetter in golf fashion.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Pushing the Limits of Golf Fashion",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>What's truly remarkable is Day's ability to challenge the traditional golf uniform without sacrificing style or performance. During practice rounds, Day rocked a full-on sweatsuit—a look that, while unusual for a prestigious course like Torrey Pines, was executed with a certain level of effortless cool. And, of course, the Matisse Cardigan is a perfect example of the bold fashion choices Day has embraced with Malbon Golf.</p><p>His success with these style risks has garnered him a lot of attention—both positive and negative. But Day isn't just wearing bold pieces for the sake of shock value; he's wearing them because he enjoys challenging the status quo. Fans are responding positively, celebrating his willingness to take risks and push the boundaries of golf fashion.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "MALBON GOLF",
+        "collection": "mens-malbon-golf-the-last-frontier-1",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-malbon-golf-the-last-frontier-1",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "fc_1", "media_grid_1", "text_2", "hero_2", "text_3", "text_4", "products_1", "related-articles"]
+}

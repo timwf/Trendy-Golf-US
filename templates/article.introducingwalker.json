@@ -1,0 +1,319 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/media_44993090-f6e2-481d-a9b6-7c1841bff498.png",
+            "mobile_image": "shopify://shop_images/media_44993090-f6e2-481d-a9b6-7c1841bff498.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Introducing WALKER GOLF THINGS",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Three years ago, four friends from across the globe set out to make something different. What began as plans for a skate brand shifted into something bigger—something rooted in golf, but infused with the energy of surf, skate, and street culture.</p><p>Walker Golf launched out of Australia's Gold Coast, founded on one simple idea: golf clothes that look good, feel good, and work wherever your day takes you. From the course, to the skatepark, to the pub, this is performance gear without the performance complex.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "testim_1": {
+      "type": "testimonial",
+      "settings": {
+        "testimonial_text": "<p>\"We were always kind of playing golf, talking golf, but also working in and around the skate industry,\" says co-founder Jack. \"It just felt like the right time to do something in this space, with our background.\"</p>",
+        "text_alignment": "left",
+        "max_width": 1440,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>And what a background it is. With deep experience at brands like Adidas, Volcom, and Nike, the Walker crew didn't come to play small. What they've built is a brand that blends technical function with relaxed Australian cool - always clean, never boring.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_adf4ba15-f865-4532-91d5-55b45424721b.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_f63b1e45-7814-4708-bc54-7d82881c9c9d.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_241ddefb-56e7-44af-a508-18a0b3264f60.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_f63b1e45-7814-4708-bc54-7d82881c9c9d.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "DESIGNED TO LIVE IN",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The design philosophy is straightforward: gear you can wear on the course, and straight to the bar after. It's laid-back but refined, subtle but styled. A touch of stretch here, a technical fabric there. Classic silhouettes with performance details built in.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "testim_2": {
+      "type": "testimonial",
+      "settings": {
+        "testimonial_text": "<p>\"You can walk onto a country club and not get in trouble,\" Jack says. \"Then go to the pub, or go skate, and still be wearing the same thing.\"</p>",
+        "text_alignment": "left",
+        "max_width": 1440,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_4": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>The line includes everything from lightweight polos and overshirts to performance shorts and laid-back layering pieces. It's technical enough to play in, but cool enough to wear anywhere.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/media_2_15142dbd-b42a-4d50-b1c2-f11db3e783d9.png",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_5": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "A Brand Built on Mateship",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>More than a brand, Walker is a lifestyle. One built on community, culture, and a deep love of the game.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "testim_3": {
+      "type": "testimonial",
+      "settings": {
+        "testimonial_text": "<p>\"We've done collaborations with people we actually hang with - like Evan Mock,\" Jack says. \"We just wanted to do fun things with our friends. That's how this all started.\"</p>",
+        "text_alignment": "left",
+        "max_width": 1440,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_6": {
+      "type": "content-block",
+      "blocks": {
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Even their kookaburra logo has a story, borrowed from Jack's grandfather's WWII regiment, and now passed down as the family emblem. \"It's personal. It means something,\" Jack said.</p><p>And that's really what Walker Golf is all about: doing something you love, with the people you love, and doing it well.</p>"
+          }
+        }
+      },
+      "block_order": ["text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "media_grid_2": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/4_a0c9b0f6-7207-49d0-ab90-c44e6b01b9c1.png"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/3_a487e122-4354-4331-9ce9-e6a8024e1ec7.png"
+          }
+        },
+        "image_3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/2_2f9385bc-64d8-4441-9eac-f2f4696fb631.png"
+          }
+        },
+        "image_4": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/1_1439c93c-ce66-4471-b42e-a9266fccfcfe.png"
+          }
+        }
+      },
+      "block_order": ["image_1", "image_2", "image_3", "image_4"],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "text_7": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Quick Q&A with Jack from Walker Golf",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>Q: What makes Walker Golf different from other brands out there?</strong><br/><br/><strong>Jack:</strong> \"We have deep roots in both skate and golf, and that balance shows up in everything we do. Plus, we just really care about this. We've been playing our whole lives.\"</p><p><strong>Q: How would you describe your target customer?</strong><br/><br/><strong>Jack:</strong> \"Honestly? We don't really have one. We're just making what we love and hoping others are stoked on it too. That said, if we had to pick, it's probably a mid-30s Aussie dad who plays twice a week.\"</p><p><strong>Q: Any musical influences in the brand?</strong><br/><br/><strong>Jack:</strong> \"Yeah we've got friends in bands like Tame Impala and Skegss. A lot of our shoots and trips are just hanging out with our mates and making cool stuff together.\"</p><p><strong>Q: Favorite place to play golf?</strong><br/><br/><strong>Jack:</strong> \"The west side of Oahu. It's kind of a dream. Surf in the morning, golf in the afternoon.\"</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "WALKER GOLF THINGS",
+        "collection": "mens-new-in",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/mens-new-in",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "testim_1", "text_2", "media_grid_1", "text_3", "testim_2", "text_4", "hero_2", "text_5", "testim_3", "text_6", "media_grid_2", "text_7", "products_1", "related-articles"]
+}

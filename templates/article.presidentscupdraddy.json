@@ -1,0 +1,173 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_25.jpg",
+            "mobile_image": "shopify://shop_images/MOBILE_SHOPIFY_HERO_2.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "B. Draddy: The Official Outfitter of the 2024 Presidents Cup",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>As the world's top golfers prepare to tee off at the 2024 Presidents Cup, they'll be doing so in style, courtesy of B. Draddy. This year, B. Draddy has been named the Official Apparel Provider for both the U.S. and International Teams, a prestigious honor that highlights the brand's commitment to quality, performance, and timeless style.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "A Legacy of Excellence",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Held at the historic Royal Montreal Golf Club from September 24-29, 2024, the Presidents Cup brings together the best players from around the globe for a week of intense competition. And when it comes to their apparel, both teams are turning to B. Draddy to meet their needs. Known for their attention to detail and dedication to craftsmanship, B. Draddy has created exclusive uniforms that combine classic designs with modern performance features—ensuring players, caddies, and staff look and feel their best both on and off the course.</p><p>\"We are thrilled to have the opportunity to outfit both the U.S. and International Teams,\" said Chad Delp, President & CEO of Summit Golf Brands. \"It's an honor to see our products on the world's best players as they compete on such a prestigious stage.\"</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "text_3": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Dressing the Best in Golf",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>For seven days of competition and events, B. Draddy will provide the teams with a range of apparel, including collared polos, golf sweaters, tailored pants, and outerwear. Each piece is meticulously designed with the Presidents Cup logo and team emblems, reflecting the event's spirit of unity and competition. Whether it's a lightweight polo for sunny rounds or a durable jacket for unpredictable weather, B. Draddy's collection is crafted to perform under any conditions.<br/><br/><strong>BRINGING THE PRESIDENTS CUP TO YOU</strong></p><p>Fans can now bring a piece of the Presidents Cup home with them. B. Draddy's exclusive collection, featuring pieces inspired by the team uniforms, is available for purchase on Bdraddy.com, PresidentsCup.com, and at the official tournament Fan Shop. Whether you're on the course or off, you can enjoy the same level of quality and style as the players themselves.</p><h3>Get Inspired to Play</h3><p>As the players gear up to compete on one of golf's biggest stages, you too can elevate your game with B. Draddy's premium apparel. Explore the collection today and experience the perfect blend of heritage, innovation, and style that will leave a lasting impression on and off the course.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_1",
+        "text_1"
+      ],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/shopify_magazine_hero_size_26.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "B. DRADDY",
+        "collection": "b-draddy",
+        "product_limit": 12,
+        "button_label": "SHOP NOW",
+        "button_link": "shopify://collections/b-draddy",
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": [
+    "article-template",
+    "hero_1",
+    "text_1",
+    "text_2",
+    "text_3",
+    "hero_2",
+    "products_1",
+    "related-articles"
+  ]
+}

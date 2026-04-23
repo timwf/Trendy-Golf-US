@@ -1,0 +1,153 @@
+{
+  "sections": {
+    "article-template": {
+      "type": "article-template",
+      "settings": {
+        "show_breadcrumbs": true,
+        "show_date": true,
+        "show_excerpt": true,
+        "show_featured_image": false,
+        "enable_animation": true
+      }
+    },
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Untitled_design_68.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_1": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "Introducing the Fusion of Style and Mindfulness: Quiet Golf x Puma Collaboration",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Quiet Golf, the contemporary sportswear brand renowned for its mindful approach to the game, has joined forces with Puma Golf to unveil an exceptional collaboration. Born from the sun-kissed shores of Southern California, Quiet Golf doesn't just represent a brand—it signifies a lifestyle, an ethos, a state of mind. And now, in partnership with Puma Golf, they're bringing this philosophy to life in an exciting new collection.</p><p>At the heart of Quiet Golf lies a profound understanding of the word \"quiet.\" It's not merely about silence; it's about a way of thinking, a mindset that transcends the traditional boundaries of golf apparel. With each piece meticulously crafted to embody this philosophy, Quiet Golf redefines what it means to dress for the game.</p><p>Now, with the Quiet Golf x Puma collaboration, this philosophy meets performance-driven design in an unprecedented fusion of style and functionality. Combining Quiet Golf's unique approach with Puma Golf's expertise, the collection strikes the perfect balance between form and function.</p><p>From sleek polos to innovative outerwear, each garment in the Quiet Golf x Puma collection reflects a commitment to quality, comfort, and mindfulness. Whether you're on the fairway or off, these pieces are designed to empower you to express yourself with confidence and style.</p><p>Experience the synergy of style and mindfulness with Quiet Golf x Puma, now available to shop.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "media_type": "image",
+            "image": "shopify://shop_images/Untitled_design_69.jpg",
+            "heading": ""
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "text_2": {
+      "type": "content-block",
+      "blocks": {
+        "heading_1": {
+          "type": "heading",
+          "settings": {
+            "text": "read our Q+A with the founders below",
+            "tag": "h2",
+            "size": "h3",
+            "font": "serif"
+          }
+        },
+        "text_1": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>TRENDYGOLF</strong>: What inspired the creation of Quiet Golf, and how did the brand come about?<br/><strong>QUIET GOLF</strong>: The creation of the brand was inspired by us 3 founders finding a love for the game at some of the busiest times of our lives. We felt golf was a great natural escape from all of the noise in life and wanted to shed light on this as a brand. To quiet the noise and get out into nature. The brand started very quickly and organically. All three Co founders, Raul, Christion, and Diego, were starting to golf around the same time and naturally wanted to curate their own brands. Raul and Diego were starting a little side project in the golf space at the same time as Christion without knowing it. Soon after a couple of meetings at the range, they decided to join forces and go in on their like minded concepts and form one brand together.</p><p><strong>TRENDYGOLF</strong>: Who is the target audience for Quiet Golf, and what sets the brand apart in the golf space?<br/><strong>QUIET GOLF</strong>: The target audience for Quiet Golf would be the golfer who is looking to refine and minimize their wardrobe. QG aims to be there for you when you’re tired of looking at all the loud prints and color ways in the golf space. From the beginner golfer to pro level golfer, Quiet Golf is for those who are enjoying their game and the style they are wearing during their round. What sets QG apart in the golf space is the feeling we evoke as a brand. Golf itself is all about pre round rituals, pre shot routines, and post round lifestyle. Quiet Golf tries to highlight all of that as being just as important as the actual round itself. We're showcasing the mental health and self-talk about the game as well as all of the inspiration we draw from the courses themselves. Whether it's the weather that day or the architecture of the clubhouse and course layout. We're inspired by it all and showcasing that in each collection.</p><p><strong>TRENDYGOLF:</strong> Can you tell us about the inspiration behind the latest collection with Puma?<br/><strong>QUIET GOLF</strong>: The inspiration behind the latest collection with PUMA was the collaboration itself. The fact that a “bigger” player in the space was willing to take a leap into it with such a younger brand was a big part of it. We then rolled up our sleeves and thought about what PUMA hasn’t really done yet. We dug into our course inspiration and color ways that we think could be seen more in the game and on the tour. More muted and earthy tones to calm the mind and blend into the course while playing.</p><p><strong>TRENDYGOLF</strong>: How does Quiet Golf stay innovative, and what values does the brand prioritize?<br/><strong>QUIET GOLF</strong>: QG stays innovative by doing what we do best, move quietly. Like walking 18 holes with no phone in your pocket, we simply observe, enjoy, and embrace the round, in golf, in design, and in life. This keeps us undistracted from the noise happening around us in the space and lets us focus on us and our core customers, that all translates to our collections. Our values we prioritize would be staying true to the game of golf itself. As mentioned, we’re not trying to change the game or make it something else, we’re putting on our contemporary lenses and seeing aspects of the sport through those lenses. We’ll always design based on the round of golf itself and make sure you can take what you wore or felt on the course away with you into your life. As far as materials used in our collections, we try and stay more on the natural side. A lot of golf apparel requires stretch and breathability for the game so we're always researching the best fit for that. We’re implementing more thoughtful decisions on what fabrics we start to use in future seasons. We try and incorporate recycled poly when poly blends are needed and try to keep an eye on the supply chain as best as we can to make sure we don’t over produce and create waste. QG tries to evoke a sense of relief when customers engage with us. Whether you come across our social channels or walk into our shop. We’re trying to be the pause in all the noise, most of our content is highlighting the sounds and visuals of golf, it’s as simple as that. We want you to enjoy the game and look great playing it, but not overthink things during your round and in life. There is a lot of exciting moves happening with the brand, there are some we can’t talk about but we definitely want to move more into the green grass space. We think there is a lot of loud silence to be made in the space by showcasing the mental side of the game as we do. All in all excited to be here.</p>"
+          }
+        }
+      },
+      "block_order": ["heading_1", "text_1"],
+      "settings": {
+        "alignment": "left",
+        "enable_animation": true
+      }
+    },
+    "promo_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/1_d87f0536-321a-4ada-8e4d-b181afe5c27d.jpg",
+            "link": "shopify://collections/mens-puma-golf-quiet-golf-club-mens-exclusive-capsule",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/1_096f8fe6-94ee-4de8-8af6-239b18f3d2af.jpg",
+            "link": "shopify://collections/mens-puma-golf-quiet-golf-club-mens-exclusive-capsule",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "products_1": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "SHOP THE COLLECTION",
+        "collection": "mens-puma-golf-quiet-golf-club-mens-exclusive-capsule",
+        "product_limit": 12,
+        "margin_bottom": "medium"
+      }
+    },
+    "related-articles": {
+      "type": "magazine-articles",
+      "settings": {
+        "blog": "magazine",
+        "heading": "Latest Articles",
+        "article_count": 3,
+        "show_category": true,
+        "enable_animation": true,
+        "margin_bottom": "large"
+      }
+    }
+  },
+  "order": ["article-template", "hero_1", "text_1", "hero_2", "text_2", "promo_1", "products_1", "related-articles"]
+}

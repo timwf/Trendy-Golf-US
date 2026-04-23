@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "article-template": {
@@ -35,7 +26,8 @@
       "block_order": ["slide_1"],
       "settings": {
         "autoplay": false,
-        "show_progress": false
+        "enable_animation": true,
+        "margin_bottom": "medium"
       }
     },
     "text_1": {
@@ -44,22 +36,13 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Welcome to TRENDYGOLF\u2019s exclusive guide to mastering your style game this First Major season! As the golf world gears up for one of the most prestigious tournaments of the year, it\u2019s time to elevate your wardrobe with top brands - including Nike, Puma, J.Lindeberg, Under Armour, and Original Penguin. Our experts have curated the perfect guide, showcasing each brand\u2019s top offerings, featuring everything from polos and trousers to caps and golf shoes, ensuring you\u2019re dressed to impress on and off the fairway.</p>"
+            "text": "<p>Welcome to TRENDYGOLF's exclusive guide to mastering your style game this First Major season! As the golf world gears up for one of the most prestigious tournaments of the year, it's time to elevate your wardrobe with top brands - including Nike, Puma, J.Lindeberg, Under Armour, and Original Penguin. Our experts have curated the perfect guide, showcasing each brand's top offerings, featuring everything from polos and trousers to caps and golf shoes, ensuring you're dressed to impress on and off the fairway.</p>"
           }
         }
       },
       "block_order": ["text_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -78,7 +61,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Step onto the green with confidence in Nike\u2019s cutting-edge attire. As the brand favoured by pros worldwide, Nike\u2019s Augusta collection boasts an array of performance-driven pieces designed to elevate your game. Start with Nike\u2019s innovative golf shoes, engineered for optimal traction and stability on any terrain. Whether you prefer spiked or spikeless options, Nike has you covered.</p><p>Pair your footwear with Nike\u2019s signature golf trousers, crafted from lightweight, stretchy fabrics for unrestricted movement throughout your swing. Complete the look with Nike\u2019s stylish polo shirts, featuring moisture-wicking technology to keep you cool and dry under pressure. Top it off with a Nike cap - designed for comfort and breathability on the course. You\u2019ll feel ready to celebrate the First Major in style with Nike.</p>"
+            "text": "<p>Step onto the green with confidence in Nike's cutting-edge attire. As the brand favoured by pros worldwide, Nike's Augusta collection boasts an array of performance-driven pieces designed to elevate your game. Start with Nike's innovative golf shoes, engineered for optimal traction and stability on any terrain. Whether you prefer spiked or spikeless options, Nike has you covered.</p><p>Pair your footwear with Nike's signature golf trousers, crafted from lightweight, stretchy fabrics for unrestricted movement throughout your swing. Complete the look with Nike's stylish polo shirts, featuring moisture-wicking technology to keep you cool and dry under pressure. Top it off with a Nike cap - designed for comfort and breathability on the course. You'll feel ready to celebrate the First Major in style with Nike.</p>"
           }
         },
         "button_1": {
@@ -86,27 +69,17 @@
           "settings": {
             "label": "SHOP NIKE SCRIPTING",
             "link": "https://trendygolf.com/pages/nike-scripting-the-first-major",
-            "style": "dark-grey",
-            "has_arrow": false
+            "style": "dark-grey"
           }
         }
       },
       "block_order": ["heading_1", "text_1", "button_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_1": {
+    "stl_1": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -137,10 +110,6 @@
       "block_order": ["product_1", "product_2", "product_3", "product_4"],
       "settings": {
         "image": "shopify://shop_images/NIKE.png",
-        "title": "",
-        "subtext": "",
-        "btn_text": "",
-        "btn_link": "",
         "margin_bottom": "medium"
       }
     },
@@ -159,7 +128,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Add a pop of personality to your First Major ensemble with Puma\u2019s bold and vibrant designs. Stand out from the crowd in their eye-catching polo shirts, featuring modern patterns and striking colour combinations. Crafted from highly breathable fabrics, Puma\u2019s polos offer style and performance on the fairway.</p><p>Pair your polo with Puma\u2019s sleek golf trousers - designed for maximum flexibility and comfort throughout your round. Complete the look with a Puma cap, showcasing the brand\u2019s iconic logo for a touch of athletic flair. Step into Puma\u2019s high-performance golf shoes, featuring responsive cushioning and durable traction for unmatched comfort and stability. With Puma, you\u2019ll make a statement on and off the course.</p>"
+            "text": "<p>Add a pop of personality to your First Major ensemble with Puma's bold and vibrant designs. Stand out from the crowd in their eye-catching polo shirts, featuring modern patterns and striking colour combinations. Crafted from highly breathable fabrics, Puma's polos offer style and performance on the fairway.</p><p>Pair your polo with Puma's sleek golf trousers - designed for maximum flexibility and comfort throughout your round. Complete the look with a Puma cap, showcasing the brand's iconic logo for a touch of athletic flair. Step into Puma's high-performance golf shoes, featuring responsive cushioning and durable traction for unmatched comfort and stability. With Puma, you'll make a statement on and off the course.</p>"
           }
         },
         "button_1": {
@@ -167,27 +136,17 @@
           "settings": {
             "label": "SHOP PUMA SCRIPTING",
             "link": "https://trendygolf.com/pages/puma-first-major-scripting",
-            "style": "dark-grey",
-            "has_arrow": false
+            "style": "dark-grey"
           }
         }
       },
       "block_order": ["heading_1", "text_1", "button_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_2": {
+    "stl_2": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -218,10 +177,6 @@
       "block_order": ["product_1", "product_2", "product_3", "product_4"],
       "settings": {
         "image": "shopify://shop_images/RICKIE.png",
-        "title": "",
-        "subtext": "",
-        "btn_text": "",
-        "btn_link": "",
         "margin_bottom": "medium"
       }
     },
@@ -240,7 +195,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>For those who appreciate understated sophistication, J.Lindeberg delivers with their classic yet contemporary First Major collection. Elevate your style with J.Lindeberg\u2019s impeccably tailored polo shirts, crafted from luxurious fabrics for a refined look and feel. Add a layer of warmth with J.Lindeberg\u2019s stylish mid-layers, perfect for those early morning tee times.</p><p>Pair your top with J.Lindeberg\u2019s tailored golf trousers, designed for the modern golfer who values performance and aesthetics. Step into J.Lindeberg\u2019s premium golf shoes, featuring sleek silhouettes and superior craftsmanship for unparalleled comfort and support. With J.Lindeberg, you\u2019ll exude timeless charm and sophistication on the fairways.</p>"
+            "text": "<p>For those who appreciate understated sophistication, J.Lindeberg delivers with their classic yet contemporary First Major collection. Elevate your style with J.Lindeberg's impeccably tailored polo shirts, crafted from luxurious fabrics for a refined look and feel. Add a layer of warmth with J.Lindeberg's stylish mid-layers, perfect for those early morning tee times.</p><p>Pair your top with J.Lindeberg's tailored golf trousers, designed for the modern golfer who values performance and aesthetics. Step into J.Lindeberg's premium golf shoes, featuring sleek silhouettes and superior craftsmanship for unparalleled comfort and support. With J.Lindeberg, you'll exude timeless charm and sophistication on the fairways.</p>"
           }
         },
         "button_1": {
@@ -248,27 +203,17 @@
           "settings": {
             "label": "SHOP J.LINDEBERG SCRIPTING",
             "link": "https://trendygolf.com/pages/j-lindeberg-scripting-the-first-major",
-            "style": "dark-grey",
-            "has_arrow": false
+            "style": "dark-grey"
           }
         }
       },
       "block_order": ["heading_1", "text_1", "button_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_3": {
+    "stl_3": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -299,10 +244,6 @@
       "block_order": ["product_1", "product_2", "product_3", "product_4"],
       "settings": {
         "image": "shopify://shop_images/viktor_themasters_2x3_213fa1a2-b4f6-4567-8b33-72ecb0bdf0d7.png",
-        "title": "",
-        "subtext": "",
-        "btn_text": "",
-        "btn_link": "",
         "margin_bottom": "medium"
       }
     },
@@ -321,7 +262,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Dominate the greens in Under Armour\u2019s performance-driven attire. Start with their versatile hoodies, perfect for layering on cooler days or early morning rounds. Crafted from lightweight, breathable fabrics, Under Armour\u2019s hoodies offer superior comfort and warmth without sacrificing mobility.</p><p>Pair your hoodie with Under Armour\u2019s sleek polo shirts, featuring sweat-wicking technology to keep you dry and comfortable throughout your round. Complete the look with Under Armour\u2019s high-performance golf shoes, engineered for stability and traction on any terrain. With Under Armour, you\u2019ll feel unstoppable on the course, ready to tackle any challenge that comes your way.</p>"
+            "text": "<p>Dominate the greens in Under Armour's performance-driven attire. Start with their versatile hoodies, perfect for layering on cooler days or early morning rounds. Crafted from lightweight, breathable fabrics, Under Armour's hoodies offer superior comfort and warmth without sacrificing mobility.</p><p>Pair your hoodie with Under Armour's sleek polo shirts, featuring sweat-wicking technology to keep you dry and comfortable throughout your round. Complete the look with Under Armour's high-performance golf shoes, engineered for stability and traction on any terrain. With Under Armour, you'll feel unstoppable on the course, ready to tackle any challenge that comes your way.</p>"
           }
         },
         "button_1": {
@@ -329,27 +270,17 @@
           "settings": {
             "label": "SHOP UNDER ARMOUR",
             "link": "https://trendygolf.com/collections/mens-under-armour",
-            "style": "dark-grey",
-            "has_arrow": false
+            "style": "dark-grey"
           }
         }
       },
       "block_order": ["heading_1", "text_1", "button_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_4": {
+    "stl_4": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -380,10 +311,6 @@
       "block_order": ["product_1", "product_2", "product_3", "product_4"],
       "settings": {
         "image": "shopify://shop_images/230913_SS24_GLF_PatronsCollection_Studio_RM_Shot01_0046_SCRN.png",
-        "title": "",
-        "subtext": "",
-        "btn_text": "",
-        "btn_link": "",
         "margin_bottom": "medium"
       }
     },
@@ -402,7 +329,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Add a touch of nostalgia to your Augusta ensemble with Original Penguin\u2019s retro-inspired designs. Channelling the spirit of classic golf style, Original Penguin\u2019s polo shirts feature timeless patterns and playful accents that pay homage to the sport\u2019s rich heritage. Layer up with Original Penguin\u2019s stylish mid-layers, perfect for transitioning between the course and clubhouse.</p><p>Pair your top with Original Penguin\u2019s tailored trousers, crafted from premium fabrics for a comfortable fit and classic look. With Original Penguin, you\u2019ll capture the essence of golf\u2019s golden era while making a statement that\u2019s all your own.</p>"
+            "text": "<p>Add a touch of nostalgia to your Augusta ensemble with Original Penguin's retro-inspired designs. Channelling the spirit of classic golf style, Original Penguin's polo shirts feature timeless patterns and playful accents that pay homage to the sport's rich heritage. Layer up with Original Penguin's stylish mid-layers, perfect for transitioning between the course and clubhouse.</p><p>Pair your top with Original Penguin's tailored trousers, crafted from premium fabrics for a comfortable fit and classic look. With Original Penguin, you'll capture the essence of golf's golden era while making a statement that's all your own.</p>"
           }
         },
         "button_1": {
@@ -410,27 +337,17 @@
           "settings": {
             "label": "SHOP PENGUIN SCRIPTING",
             "link": "https://trendygolf.com/pages/original-penguin-first-major-scripting",
-            "style": "dark-grey",
-            "has_arrow": false
+            "style": "dark-grey"
           }
         }
       },
       "block_order": ["heading_1", "text_1", "button_1"],
       "settings": {
         "alignment": "left",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
-    "shop_the_look_5": {
+    "stl_5": {
       "type": "shop-the-look",
       "blocks": {
         "product_1": {
@@ -455,10 +372,6 @@
       "block_order": ["product_1", "product_2", "product_3"],
       "settings": {
         "image": "shopify://shop_images/OGP_CamSmith_ajneste_385-scaled.png",
-        "title": "",
-        "subtext": "",
-        "btn_text": "",
-        "btn_link": "",
         "margin_bottom": "medium"
       }
     },
@@ -468,7 +381,7 @@
         "text_1": {
           "type": "text",
           "settings": {
-            "text": "<p>Celebrate the First Major in style with TRENDYGOLF\u2019s curated selection of top brands and premium apparel. Whether you\u2019re teeing off at your local course or watching the tournament from home, let your outfit reflect the excitement and prestige of this iconic event. With our comprehensive outfit guide, you\u2019ll be ready to tee off in style and make a statement both on and off the course. Shop now on TRENDYGOLF.COM.</p>"
+            "text": "<p>Celebrate the First Major in style with TRENDYGOLF's curated selection of top brands and premium apparel. Whether you're teeing off at your local course or watching the tournament from home, let your outfit reflect the excitement and prestige of this iconic event. With our comprehensive outfit guide, you'll be ready to tee off in style and make a statement both on and off the course. Shop now on TRENDYGOLF.COM.</p>"
           }
         },
         "button_1": {
@@ -476,23 +389,13 @@
           "settings": {
             "label": "SHOP FIRST MAJOR APPAREL",
             "link": "https://trendygolf.com/collections/mens-the-first-major?_pos=1&_psq=First+Major&_ss=e&_v=1.0",
-            "style": "dark-grey",
-            "has_arrow": false
+            "style": "dark-grey"
           }
         }
       },
       "block_order": ["text_1", "button_1"],
       "settings": {
         "alignment": "center",
-        "background_color": "transparent",
-        "margin_top_desktop": "none",
-        "margin_bottom_desktop": "14",
-        "padding_top_desktop": "none",
-        "padding_bottom_desktop": "none",
-        "margin_top_mobile": "none",
-        "margin_bottom_mobile": "8",
-        "padding_top_mobile": "none",
-        "padding_bottom_mobile": "none",
         "enable_animation": true
       }
     },
@@ -500,7 +403,7 @@
       "type": "magazine-articles",
       "settings": {
         "blog": "magazine",
-        "heading": "Latest Articles",
+        "heading": "Featured articles",
         "article_count": 3,
         "show_category": true,
         "enable_animation": true,
@@ -508,21 +411,5 @@
       }
     }
   },
-  "order": [
-    "article-template",
-    "hero_1",
-    "text_1",
-    "text_2",
-    "shop_the_look_1",
-    "text_3",
-    "shop_the_look_2",
-    "text_4",
-    "shop_the_look_3",
-    "text_5",
-    "shop_the_look_4",
-    "text_6",
-    "shop_the_look_5",
-    "text_7",
-    "related-articles"
-  ]
+  "order": ["article-template", "hero_1", "text_1", "text_2", "stl_1", "text_3", "stl_2", "text_4", "stl_3", "text_5", "stl_4", "text_6", "stl_5", "text_7", "related-articles"]
 }
