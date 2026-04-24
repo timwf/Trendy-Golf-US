@@ -53,6 +53,7 @@
         "column_WrGyWA": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/01-premium-brands.jpg",
             "image_alt": "",
             "title": "Premium Brands Like No Members",
             "description": "Stylish, high-performance apparel for work and leisure."
@@ -61,6 +62,7 @@
         "column_t3ieYt": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/02-custom-logo-application.jpg",
             "image_alt": "",
             "title": "Custom Logo Application",
             "description": "Discreet and professional branding options."
@@ -69,6 +71,7 @@
         "column_cdLEfM": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/03-embroidery-printing.jpg",
             "image_alt": "",
             "title": "Embroidery & Printing",
             "description": "Quality craftsmanship tailored to your needs."
@@ -77,6 +80,7 @@
         "column_DYEqYc": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/04-flexible-order-sizes.jpg",
             "image_alt": "",
             "title": "Flexible Order Sizes",
             "description": "Suitable for small teams and large corporate orders."
@@ -85,6 +89,7 @@
         "column_TYzytf": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/05-fast-turnaround-times.jpg",
             "image_alt": "",
             "title": "Fast Turnaround Times",
             "description": "Quick and reliable service."
@@ -93,6 +98,7 @@
         "column_Vy44Ah": {
           "type": "column",
           "settings": {
+            "image": "shopify://shop_images/06-dedicated-support.jpg",
             "image_alt": "",
             "title": "Dedicated Support",
             "description": "A team to assist with product selection and customisation."
