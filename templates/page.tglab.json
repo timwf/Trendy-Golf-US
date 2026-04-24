@@ -362,6 +362,7 @@
         "success_message": "Our buying team will review your submission and be in touch if there’s a fit.",
         "success_button_label": "Back to home",
         "success_button_link": "/",
+        "background_image": "shopify://shop_images/background_7db76e79-abf0-40ef-b15a-e86a70d7a7b1.jpg",
         "enable_animation": true,
         "margin_bottom": "none"
       }
