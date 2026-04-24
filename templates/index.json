@@ -381,6 +381,7 @@
         "grid_item_01": {
           "type": "grid_item",
           "settings": {
+            "image": "shopify://shop_images/01-j-lindeberg-clothing.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -389,6 +390,7 @@
         "grid_item_02": {
           "type": "grid_item",
           "settings": {
+            "image": "shopify://shop_images/02-nike-golf-shoes.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -397,6 +399,7 @@
         "grid_item_03": {
           "type": "grid_item",
           "settings": {
+            "image": "shopify://shop_images/03-adidas-mens-shoes.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -405,6 +408,7 @@
         "grid_item_04": {
           "type": "grid_item",
           "settings": {
+            "image": "shopify://shop_images/04-trendygolf-clothing.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -413,6 +417,7 @@
         "grid_item_05": {
           "type": "grid_item",
           "settings": {
+            "image": "shopify://shop_images/05-trendygolf-clothing.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -421,6 +426,7 @@
         "grid_item_06": {
           "type": "grid_item",
           "settings": {
+            "image": "shopify://shop_images/06-adidas-golf-originals.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -429,6 +435,7 @@
         "grid_item_07": {
           "type": "grid_item",
           "settings": {
+            "image": "shopify://shop_images/07-puma-golf-clothing.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -437,6 +444,7 @@
         "grid_item_08": {
           "type": "grid_item",
           "settings": {
+            "image": "shopify://shop_images/08-trendygolf-clothing.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -445,6 +453,7 @@
         "grid_item_09": {
           "type": "grid_item",
           "settings": {
+            "image": "shopify://shop_images/09-adidas-golf-clothing-women.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -453,6 +462,7 @@
         "grid_item_10": {
           "type": "grid_item",
           "settings": {
+            "image": "shopify://shop_images/10-head-golf-clothing-women.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -461,6 +471,7 @@
         "grid_item_11": {
           "type": "grid_item",
           "settings": {
+            "image": "shopify://shop_images/11-manors-golf-clothing.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -469,6 +480,7 @@
         "grid_item_12": {
           "type": "grid_item",
           "settings": {
+            "image": "shopify://shop_images/12-trendygolf-shoes.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
