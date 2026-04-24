@@ -336,7 +336,7 @@
             "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "image",
-            "image": "shopify://shop_images/mobile.jpg",
+            "image": "shopify://shop_images/desktop.jpg",
             "mobile_image": "shopify://shop_images/mobile_48c21449-faf9-43e5-bcb8-2b1e1e10da8a.jpg",
             "video_url": "",
             "video_url_mobile": "",
