@@ -234,6 +234,7 @@
         "success_message": "We respond swiftly to inquiries Monday to Friday 8:00am - 4:30pm PDT.",
         "success_button_label": "Back to home",
         "success_button_link": "/",
+        "background_image": "shopify://shop_images/background.jpg",
         "enable_animation": true,
         "margin_bottom": "none"
       }
