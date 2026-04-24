@@ -6,6 +6,13 @@
 {{ 'splide.min.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'splide.min.js' | asset_url }}" defer></script>
 
+{%- comment -%} Hide Swym wishlist heart buttons that auto-inject over result cards {%- endcomment -%}
+<style>
+  [data-sf-grid] .swym-wishlist-collections-v2-container,
+  [data-sf-grid] .swym-wishlist-collections-v2,
+  [data-sf-grid] .swym-add-to-wishlist-view-product { display: none !important; }
+</style>
+
 <div class="relative h-dvh overflow-hidden" data-sf-root data-hero>
   {%- comment -%} Slide 0 — Intro {%- endcomment -%}
   <div class="absolute inset-0 z-1 flex min-h-dvh items-center justify-center text-center text-white transition-all duration-500 ease-in-out translate-y-2 opacity-0 pointer-events-none" data-sf-slide="intro">
