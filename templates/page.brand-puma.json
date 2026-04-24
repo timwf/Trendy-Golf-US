@@ -17,12 +17,16 @@
           "settings": {
             "content_alignment": "bottom",
             "subheading": "Explore our range",
+            "heading_first": false,
             "heading": "Puma",
             "heading_size": "h2",
+            "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "video",
             "video_url": "https://vimeo.com/1166078330",
             "video_url_mobile": "https://vimeo.com/1166078275",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
             "slide_duration": 7,
             "button_label": "Shop Now",
             "button_link": "/collections/mens-puma",
@@ -30,11 +34,14 @@
           }
         }
       },
-      "block_order": ["slide_1"],
+      "block_order": [
+        "slide_1"
+      ],
       "settings": {
         "autoplay": false,
         "show_progress": false,
         "enable_animation": true,
+        "aria_label": "Hero slideshow",
         "margin_bottom": "medium"
       }
     },
@@ -50,7 +57,9 @@
           "mattr-bushland-polo-warm-white-silver-sky"
         ],
         "tab_2_label": "",
-        "tab_3_label": ""
+        "tab_2_products": [],
+        "tab_3_label": "",
+        "tab_3_products": []
       }
     },
     "banner_cards_1": {
@@ -60,7 +69,7 @@
           "type": "card",
           "settings": {
             "heading": "Shop All",
-            "image": "",
+            "image": "shopify://shop_images/card-1-shop-all_d6dad369-e848-45f8-9f41-aa52973fc6b7.jpg",
             "link": "/collections/mens-puma",
             "button_label": "Shop Now"
           }
@@ -69,7 +78,7 @@
           "type": "card",
           "settings": {
             "heading": "Tops",
-            "image": "",
+            "image": "shopify://shop_images/card-2-tops_0b1c2d08-7d9b-422a-87d9-49811c0defe2.jpg",
             "link": "/collections/mens-puma",
             "button_label": "Shop Now"
           }
@@ -78,13 +87,17 @@
           "type": "card",
           "settings": {
             "heading": "Outerwear",
-            "image": "",
+            "image": "shopify://shop_images/card-3-outerwear_38a48c2d-65db-41ce-9295-df5a404da52b.jpg",
             "link": "/collections/mens-puma",
             "button_label": "Shop Now"
           }
         }
       },
-      "block_order": ["card_1", "card_2", "card_3"],
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
       "settings": {
         "layout": "grid",
         "columns": 3,
@@ -96,5 +109,9 @@
       }
     }
   },
-  "order": ["hero_1", "product_carousel_1", "banner_cards_1"]
+  "order": [
+    "hero_1",
+    "product_carousel_1",
+    "banner_cards_1"
+  ]
 }
