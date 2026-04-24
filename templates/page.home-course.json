@@ -23,8 +23,7 @@
             "use_as_page_h1": true,
             "heading_font": "serif",
             "media_type": "image",
-            "image": "",
-            "mobile_image": "",
+            "image": "shopify://shop_images/desktop_2a341416-7252-408e-aff3-86334986444f.jpg",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
@@ -140,131 +139,227 @@
       "blocks": {
         "logo_rlx": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "RLX", "link": "" }
+          "settings": {
+            "alt_text": "RLX",
+            "link": ""
+          }
         },
         "logo_manors": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Manors", "link": "" }
+          "settings": {
+            "alt_text": "Manors",
+            "link": ""
+          }
         },
         "logo_adidas": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Adidas", "link": "" }
+          "settings": {
+            "alt_text": "Adidas",
+            "link": ""
+          }
         },
         "logo_malbon": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Malbon", "link": "" }
+          "settings": {
+            "alt_text": "Malbon",
+            "link": ""
+          }
         },
         "logo_jlindeberg": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "J.Lindeberg", "link": "" }
+          "settings": {
+            "alt_text": "J.Lindeberg",
+            "link": ""
+          }
         },
         "logo_adidas_originals": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "adidas Golf Originals", "link": "" }
+          "settings": {
+            "alt_text": "adidas Golf Originals",
+            "link": ""
+          }
         },
         "logo_bogey_boys": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Bogey Boys", "link": "" }
+          "settings": {
+            "alt_text": "Bogey Boys",
+            "link": ""
+          }
         },
         "logo_blue_tees": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Blue Tees Golf", "link": "" }
+          "settings": {
+            "alt_text": "Blue Tees Golf",
+            "link": ""
+          }
         },
         "logo_boss": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "BOSS", "link": "" }
+          "settings": {
+            "alt_text": "BOSS",
+            "link": ""
+          }
         },
         "logo_cole_hann": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Cole Haan", "link": "" }
+          "settings": {
+            "alt_text": "Cole Haan",
+            "link": ""
+          }
         },
         "logo_extracurricular": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Extracurricular", "link": "" }
+          "settings": {
+            "alt_text": "Extracurricular",
+            "link": ""
+          }
         },
         "logo_footjoy": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "FootJoy", "link": "" }
+          "settings": {
+            "alt_text": "FootJoy",
+            "link": ""
+          }
         },
         "logo_gfore": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "G/FORE", "link": "" }
+          "settings": {
+            "alt_text": "G/FORE",
+            "link": ""
+          }
         },
         "logo_galvin_green": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Galvin Green", "link": "" }
+          "settings": {
+            "alt_text": "Galvin Green",
+            "link": ""
+          }
         },
         "logo_goatlane": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "GOATLANE", "link": "" }
+          "settings": {
+            "alt_text": "GOATLANE",
+            "link": ""
+          }
         },
         "logo_greyson": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Greyson", "link": "" }
+          "settings": {
+            "alt_text": "Greyson",
+            "link": ""
+          }
         },
         "logo_jones_bags": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Jones Golf Bags", "link": "" }
+          "settings": {
+            "alt_text": "Jones Golf Bags",
+            "link": ""
+          }
         },
         "logo_jordan": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Jordan", "link": "" }
+          "settings": {
+            "alt_text": "Jordan",
+            "link": ""
+          }
         },
         "logo_kjus": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "KJUS", "link": "" }
+          "settings": {
+            "alt_text": "KJUS",
+            "link": ""
+          }
         },
         "logo_new_balance": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "New Balance", "link": "" }
+          "settings": {
+            "alt_text": "New Balance",
+            "link": ""
+          }
         },
         "logo_nike": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Nike", "link": "" }
+          "settings": {
+            "alt_text": "Nike",
+            "link": ""
+          }
         },
         "logo_no_member": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "No Member", "link": "" }
+          "settings": {
+            "alt_text": "No Member",
+            "link": ""
+          }
         },
         "logo_3puttround": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "3 Putt Round", "link": "" }
+          "settings": {
+            "alt_text": "3 Putt Round",
+            "link": ""
+          }
         },
         "logo_peter_millar": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Peter Millar", "link": "" }
+          "settings": {
+            "alt_text": "Peter Millar",
+            "link": ""
+          }
         },
         "logo_puma": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Puma", "link": "" }
+          "settings": {
+            "alt_text": "Puma",
+            "link": ""
+          }
         },
         "logo_reflo": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Reflo", "link": "" }
+          "settings": {
+            "alt_text": "Reflo",
+            "link": ""
+          }
         },
         "logo_solex": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Solex", "link": "" }
+          "settings": {
+            "alt_text": "Solex",
+            "link": ""
+          }
         },
         "logo_sounders": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Sounders Golf", "link": "" }
+          "settings": {
+            "alt_text": "Sounders Golf",
+            "link": ""
+          }
         },
         "logo_under_armour": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Under Armour", "link": "" }
+          "settings": {
+            "alt_text": "Under Armour",
+            "link": ""
+          }
         },
         "logo_vessel": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Vessel", "link": "" }
+          "settings": {
+            "alt_text": "Vessel",
+            "link": ""
+          }
         },
         "logo_walkergolf": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Walker Golf Things", "link": "" }
+          "settings": {
+            "alt_text": "Walker Golf Things",
+            "link": ""
+          }
         },
         "logo_wolsey": {
           "type": "logo",
-          "settings": { "image": "", "alt_text": "Wolsey", "link": "" }
+          "settings": {
+            "alt_text": "Wolsey",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -308,10 +403,9 @@
     "homecourse-space": {
       "type": "fifty-fifty",
       "settings": {
-        "image": "",
         "image_alt": "The Home Course interior",
         "heading": "A Space Designed for Golf, Style & Community",
-        "body": "<p>Located inside a premium barbershop in Solana Beach, The Home Course is more than a retail space — it’s a community hub for golf culture, lifestyle, and design. Discover the latest collections and collaborations from leading brands shaping the modern game:</p><p><strong>Apparel & Accessories:</strong><br>Malbon, G/FORE, J.Lindeberg, Kjus, Peter Millar, adidas, and more — curated to blend performance with everyday wear.</p><p><strong>Lifestyle & Atmosphere:</strong><br>Shop, connect, and unwind in a unique environment that fuses golf retail with the relaxed California spirit.</p>",
+        "body": "<p>Located inside a premium barbershop in Solana Beach, The Home Course is more than a retail space — it’s a community hub for golf culture, lifestyle, and design. Discover the latest collections and collaborations from leading brands shaping the modern game:</p><p><strong>Apparel & Accessories:</strong><br/>Malbon, G/FORE, J.Lindeberg, Kjus, Peter Millar, adidas, and more — curated to blend performance with everyday wear.</p><p><strong>Lifestyle & Atmosphere:</strong><br/>Shop, connect, and unwind in a unique environment that fuses golf retail with the relaxed California spirit.</p>",
         "layout": "image-left",
         "cta_label": "",
         "cta_link": "",
@@ -332,7 +426,7 @@
     "homecourse-personalized": {
       "type": "fifty-fifty",
       "settings": {
-        "image": "",
+        "image": "shopify://shop_images/image.jpg",
         "image_alt": "Personalized shopping at The Home Course",
         "heading": "A Personalized Shopping Experience",
         "body": "<p>At TRENDYGOLF Home Course we go beyond retail—we offer a truly personalized shopping experience, ensuring you have access to the best products and services:</p><ul><li>✔ <strong>Personal Shopping</strong> – Available in-store or by appointment outside regular hours</li><li>✔ <strong>One-on-One Fitting & Styling</strong> – Expert advice tailored to your needs</li><li>✔ <strong>Virtual Shopping</strong> – Connect with us remotely for product recommendations</li><li>✔ <strong>In-Office & In-Home Shopping</strong> – Bringing the boutique experience to you</li></ul>",
