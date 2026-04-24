@@ -105,16 +105,17 @@
           "type": "card",
           "settings": {
             "heading": "Canary Wharf",
-            "link": "/flagship-stores/canary-wharf",
-            "button_label": "EXPLORE"
+            "link": "",
+            "button_label": ""
           }
         },
         "manchester": {
           "type": "card",
           "settings": {
             "heading": "Manchester",
-            "link": "/flagship-stores/manchester",
-            "button_label": "EXPLORE"
+            "image": "shopify://shop_images/manchester.jpg",
+            "link": "",
+            "button_label": ""
           }
         }
       },
