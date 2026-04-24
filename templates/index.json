@@ -25,7 +25,6 @@
             "media_type": "video",
             "video_url": "https://vimeo.com/1167321685",
             "video_url_mobile": "https://vimeo.com/1166715062",
-            "hosted_video_mobile": "",
             "hosted_video_url": "",
             "hosted_video_url_mobile": "",
             "slide_duration": 7,
@@ -47,7 +46,6 @@
             "media_type": "video",
             "video_url": "https://vimeo.com/1165318867",
             "video_url_mobile": "",
-            "hosted_video_mobile": "",
             "hosted_video_url": "",
             "hosted_video_url_mobile": "",
             "slide_duration": 7,
@@ -142,7 +140,7 @@
           "type": "card",
           "settings": {
             "heading": "Men",
-            "image": "shopify://shop_images/banner-men.jpg",
+            "image": "shopify://shop_images/men-ralph-lauren.jpg",
             "link": "shopify://collections/mens-golf-clothing",
             "button_label": "SHOP NOW"
           }
@@ -151,7 +149,7 @@
           "type": "card",
           "settings": {
             "heading": "Women",
-            "image": "shopify://shop_images/banner-women.jpg",
+            "image": "shopify://shop_images/women-ralph-lauren.jpg",
             "link": "shopify://collections/womens-clothing",
             "button_label": "SHOP NOW"
           }
@@ -247,7 +245,7 @@
           "type": "card",
           "settings": {
             "heading": "Shop All",
-            "image": "shopify://shop_images/apc-shop-all.jpg",
+            "image": "shopify://shop_images/01-apc-clothing-men-women.jpg",
             "link": "shopify://collections/all-items",
             "button_label": "SHOP NOW"
           }
@@ -256,7 +254,7 @@
           "type": "card",
           "settings": {
             "heading": "Mens Trousers",
-            "image": "shopify://shop_images/apc-mens-trousers.jpg",
+            "image": "shopify://shop_images/02-latest-footwear.jpg",
             "link": "shopify://collections/mens-golf-pants",
             "button_label": "SHOP NOW"
           }
@@ -265,7 +263,7 @@
           "type": "card",
           "settings": {
             "heading": "Footwear",
-            "image": "shopify://shop_images/apc-footwear.jpg",
+            "image": "shopify://shop_images/03-adidas-mens-shoes.jpg",
             "link": "shopify://collections/mens-golf-shoes",
             "button_label": "SHOP NOW"
           }
@@ -338,8 +336,6 @@
             "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "image",
-            "image": "shopify://shop_images/tgcc-desktop.jpg",
-            "mobile_image": "shopify://shop_images/tgcc-mobile.jpg",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
@@ -384,7 +380,6 @@
         "grid_item_01": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-01-jlindeberg.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -393,7 +388,6 @@
         "grid_item_02": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-02-nike-shoes.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -402,7 +396,6 @@
         "grid_item_03": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-03-head-headwear.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -411,7 +404,6 @@
         "grid_item_04": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-04-trendygolf-clothing.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -420,7 +412,6 @@
         "grid_item_05": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-05-trendygolf-clothing.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -429,7 +420,6 @@
         "grid_item_06": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-06-adidas-originals.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -438,7 +428,6 @@
         "grid_item_07": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-07-puma.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -447,7 +436,6 @@
         "grid_item_08": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-08-trendygolf-clothing.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -456,7 +444,6 @@
         "grid_item_09": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-09-adidas-womens.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -465,7 +452,6 @@
         "grid_item_10": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-10-head-womens.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -474,7 +460,6 @@
         "grid_item_11": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-11-manors.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
@@ -483,7 +468,6 @@
         "grid_item_12": {
           "type": "grid_item",
           "settings": {
-            "image": "shopify://shop_images/social-12-trendygolf-shoes.jpg",
             "image_alt": "",
             "link": "",
             "link_icon": "instagram"
