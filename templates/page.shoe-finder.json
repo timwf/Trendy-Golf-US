@@ -32,8 +32,10 @@
           "settings": {
             "question": "Do you prefer spiked or spikeless shoes?",
             "answer_1_label": "Spiked, for maximum traction",
+            "answer_1_image": "shopify://shop_images/spiked.jpg",
             "answer_1_tag": "Cleated",
             "answer_2_label": "Normal, for softer courses",
+            "answer_2_image": "shopify://shop_images/spikeless.png",
             "answer_2_tag": "Spikeless",
             "answer_3_label": "",
             "answer_3_tag": "",
@@ -45,8 +47,10 @@
           "settings": {
             "question": "Which shoe style appeals to you most?",
             "answer_1_label": "Classic, traditional leather",
+            "answer_1_image": "shopify://shop_images/classic.jpg",
             "answer_1_tag": "Classic",
             "answer_2_label": "Modern, athletic sneaker style",
+            "answer_2_image": "shopify://shop_images/modern.jpg",
             "answer_2_tag": "Modern",
             "answer_3_label": "",
             "answer_3_tag": "",
