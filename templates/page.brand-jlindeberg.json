@@ -17,12 +17,16 @@
           "settings": {
             "content_alignment": "bottom",
             "subheading": "Explore our range",
+            "heading_first": false,
             "heading": "J.LINDEBERG",
             "heading_size": "h2",
+            "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "video",
             "video_url": "https://vimeo.com/1165318867",
             "video_url_mobile": "https://vimeo.com/1165318888",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
             "slide_duration": 7,
             "button_label": "Shop Now",
             "button_link": "/collections/mens-jlindeberg",
@@ -30,11 +34,14 @@
           }
         }
       },
-      "block_order": ["slide_1"],
+      "block_order": [
+        "slide_1"
+      ],
       "settings": {
         "autoplay": false,
         "show_progress": false,
         "enable_animation": true,
+        "aria_label": "Hero slideshow",
         "margin_bottom": "medium"
       }
     },
@@ -50,7 +57,9 @@
           "trond-pique-polo-jl-navy"
         ],
         "tab_2_label": "",
-        "tab_3_label": ""
+        "tab_2_products": [],
+        "tab_3_label": "",
+        "tab_3_products": []
       }
     },
     "banner_cards_1": {
@@ -60,7 +69,7 @@
           "type": "card",
           "settings": {
             "heading": "Shop All",
-            "image": "",
+            "image": "shopify://shop_images/card-1-shop-all_11abad17-9d4b-4ac4-b37f-4e48bf4bd355.jpg",
             "link": "/collections/mens-jlindeberg",
             "button_label": "Shop Now"
           }
@@ -69,7 +78,7 @@
           "type": "card",
           "settings": {
             "heading": "Jackets",
-            "image": "",
+            "image": "shopify://shop_images/card-2-jackets.jpg",
             "link": "/collections/j-lindeberg-mid-layers",
             "button_label": "Shop Now"
           }
@@ -78,13 +87,17 @@
           "type": "card",
           "settings": {
             "heading": "Footwear",
-            "image": "",
+            "image": "shopify://shop_images/card-3-footwear.jpg",
             "link": "/collections/mens-j-lindeberg-designer-golf-shoes-selection",
             "button_label": "Shop Now"
           }
         }
       },
-      "block_order": ["card_1", "card_2", "card_3"],
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
       "settings": {
         "layout": "grid",
         "columns": 3,
@@ -96,5 +109,9 @@
       }
     }
   },
-  "order": ["hero_1", "product_carousel_1", "banner_cards_1"]
+  "order": [
+    "hero_1",
+    "product_carousel_1",
+    "banner_cards_1"
+  ]
 }
