@@ -6,11 +6,14 @@
 {{ 'splide.min.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'splide.min.js' | asset_url }}" defer></script>
 
-{%- comment -%} Hide Swym wishlist heart buttons that auto-inject over result cards {%- endcomment -%}
+{%- comment -%} Hide Swym wishlist heart buttons that auto-inject on the shoe finder grid and detail modal {%- endcomment -%}
 <style>
   [data-sf-grid] .swym-wishlist-collections-v2-container,
   [data-sf-grid] .swym-wishlist-collections-v2,
-  [data-sf-grid] .swym-add-to-wishlist-view-product { display: none !important; }
+  [data-sf-grid] .swym-add-to-wishlist-view-product,
+  [data-shoe-detail] .swym-wishlist-collections-v2-container,
+  [data-shoe-detail] .swym-wishlist-collections-v2,
+  [data-shoe-detail] .swym-add-to-wishlist-view-product { display: none !important; }
 </style>
 
 <div class="relative h-dvh overflow-hidden" data-sf-root data-hero>
