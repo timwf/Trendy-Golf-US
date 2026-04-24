@@ -17,8 +17,10 @@
           "settings": {
             "content_alignment": "bottom",
             "subheading": "NEW BRAND",
+            "heading_first": false,
             "heading": "APC",
             "heading_size": "h2",
+            "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "video",
             "video_url": "https://vimeo.com/1165417144",
@@ -50,7 +52,7 @@
           "type": "card",
           "settings": {
             "heading": "New In Puma",
-            "image": "shopify://shop_images/trendy-brands-feature-puma.jpg",
+            "image": "shopify://shop_images/puma_ada93b22-2e78-4366-a9f6-7362f0a78807.jpg",
             "link": "shopify://pages/brand-puma",
             "button_label": "Shop Now"
           }
@@ -59,7 +61,7 @@
           "type": "card",
           "settings": {
             "heading": "New Nike Golf",
-            "image": "shopify://shop_images/trendy-brands-feature-nike.jpg",
+            "image": "shopify://shop_images/nike_560990b3-9ae2-4a73-a5c4-8cb93cebbd1f.jpg",
             "link": "shopify://pages/brand-nike",
             "button_label": "Shop Now"
           }
@@ -68,7 +70,7 @@
           "type": "card",
           "settings": {
             "heading": "J.LINDEBERG Collection",
-            "image": "shopify://shop_images/trendy-brands-feature-jlindeberg.jpg",
+            "image": "shopify://shop_images/jlindeberg_f611e268-03bb-41e3-b1b4-6a5293a2b519.jpg",
             "link": "shopify://pages/brand-jlindeberg",
             "button_label": "Shop Now"
           }
