@@ -336,6 +336,7 @@
             "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "image",
+            "image": "shopify://shop_images/fallback.png",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
