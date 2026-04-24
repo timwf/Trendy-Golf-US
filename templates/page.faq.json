@@ -17,12 +17,14 @@
           "settings": {
             "content_alignment": "bottom",
             "subheading": "Browse our help topics below to find the answers you're looking for.",
+            "heading_first": false,
             "heading": "Help Centre",
             "heading_size": "h2",
+            "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "image",
-            "image": "",
-            "mobile_image": "",
+            "image": "shopify://shop_images/desktop_75dcaf1a-ef85-43fe-ac1c-f3e9b1c54cb5.jpg",
+            "mobile_image": "shopify://shop_images/mobile_3182171c-a983-42c5-aa89-396b391586e7.jpg",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
@@ -56,7 +58,8 @@
             "description": "See our delivery information.",
             "link": "/pages/delivery",
             "link_label": "Learn More",
-            "show_arrow": false
+            "show_arrow": false,
+            "show_social_channels": false
           }
         },
         "returns": {
@@ -67,7 +70,8 @@
             "description": "See our information on returns and exchanges.",
             "link": "/pages/returns-and-exchanges",
             "link_label": "Learn More",
-            "show_arrow": true
+            "show_arrow": true,
+            "show_social_channels": false
           }
         },
         "careers": {
@@ -78,7 +82,8 @@
             "description": "See our information on careers.",
             "link": "/pages/careers",
             "link_label": "Learn More",
-            "show_arrow": true
+            "show_arrow": true,
+            "show_social_channels": false
           }
         },
         "tgcc": {
@@ -89,7 +94,8 @@
             "description": "Discover the exclusive benefits of TRENDYGOLF Country Club",
             "link": "/pages/rewards",
             "link_label": "Learn More",
-            "show_arrow": true
+            "show_arrow": true,
+            "show_social_channels": false
           }
         }
       },
@@ -220,6 +226,7 @@
         "heading_size": "h3",
         "heading_font": "serif",
         "subheading": "",
+        "show_brand": false,
         "show_phone": true,
         "show_order_number": true,
         "submit_label": "Send message",
@@ -227,7 +234,6 @@
         "success_message": "We respond swiftly to inquiries Monday to Friday 8:00am - 4:30pm PDT.",
         "success_button_label": "Back to home",
         "success_button_link": "/",
-        "background_image": "",
         "enable_animation": true,
         "margin_bottom": "none"
       }
