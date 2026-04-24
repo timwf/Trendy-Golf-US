@@ -129,111 +129,7 @@
     "logo-marquee": {
       "type": "logo-marquee",
       "blocks": {
-        "logo_1": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/02-manors.png",
-            "alt_text": "Manors",
-            "link": ""
-          }
-        },
-        "logo_2": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/09-goatlane.png",
-            "alt_text": "GOATLANE",
-            "link": ""
-          }
-        },
-        "logo_3": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/06-boss.png",
-            "alt_text": "BOSS",
-            "link": ""
-          }
-        },
-        "logo_4": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/07-footjoy.png",
-            "alt_text": "FootJoy",
-            "link": ""
-          }
-        },
-        "logo_9ppWqk": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/15-puma.png",
-            "alt_text": "Puma",
-            "link": ""
-          }
-        },
-        "logo_5": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/12-nike.png",
-            "alt_text": "Nike",
-            "link": ""
-          }
-        },
-        "logo_CNMhKC": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/14-peter-millar.png",
-            "alt_text": "Peter Millar",
-            "link": ""
-          }
-        },
-        "logo_6": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/10-jordan.png",
-            "alt_text": "Jordan",
-            "link": ""
-          }
-        },
-        "logo_LGbQnG": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/03-adidas.png",
-            "alt_text": "adidas",
-            "link": ""
-          }
-        },
-        "logo_R3C8kt": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/11-kjus.png",
-            "alt_text": "KJUS",
-            "link": ""
-          }
-        },
-        "logo_KB9pEN": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/08-g-fore.png",
-            "alt_text": "G/FORE",
-            "link": ""
-          }
-        },
-        "logo_F4cy8A": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/05-j-lindeberg.png",
-            "alt_text": "J.Lindeberg",
-            "link": ""
-          }
-        },
-        "logo_nyqP8i": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/18-wolsey.png",
-            "alt_text": "Wolsey",
-            "link": ""
-          }
-        },
-        "logo_kxETxf": {
+        "logo_rlx": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/01-rlx.png",
@@ -241,7 +137,23 @@
             "link": ""
           }
         },
-        "logo_MmVF3r": {
+        "logo_manors": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/02-manors.png",
+            "alt_text": "Manors",
+            "link": ""
+          }
+        },
+        "logo_adidas": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/03-adidas.png",
+            "alt_text": "Adidas",
+            "link": ""
+          }
+        },
+        "logo_malbon": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/04-malbon.png",
@@ -249,7 +161,119 @@
             "link": ""
           }
         },
-        "logo_NgJEGV": {
+        "logo_jlindeberg": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/05-j-lindeberg.png",
+            "alt_text": "J.Lindeberg",
+            "link": ""
+          }
+        },
+        "logo_boss": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/06-boss.png",
+            "alt_text": "BOSS",
+            "link": ""
+          }
+        },
+        "logo_CtkCQQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/17-walker-golf-things.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_TGbQaK": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/20-head.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_footjoy": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/07-footjoy.png",
+            "alt_text": "FootJoy",
+            "link": ""
+          }
+        },
+        "logo_NzKbGd": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/04-malbon.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_gfore": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/08-g-fore.png",
+            "alt_text": "G/FORE",
+            "link": ""
+          }
+        },
+        "logo_goatlane": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/09-goatlane.png",
+            "alt_text": "GOATLANE",
+            "link": ""
+          }
+        },
+        "logo_jordan": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/10-jordan.png",
+            "alt_text": "Jordan",
+            "link": ""
+          }
+        },
+        "logo_kjus": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/11-kjus.png",
+            "alt_text": "KJUS",
+            "link": ""
+          }
+        },
+        "logo_nike": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/12-nike.png",
+            "alt_text": "Nike",
+            "link": ""
+          }
+        },
+        "logo_3puttround": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/13-3-putt-round.png",
+            "alt_text": "3 Putt Round",
+            "link": ""
+          }
+        },
+        "logo_petermillar": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/14-peter-millar.png",
+            "alt_text": "Peter Millar",
+            "link": ""
+          }
+        },
+        "logo_puma": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/15-puma.png",
+            "alt_text": "Puma",
+            "link": ""
+          }
+        },
+        "logo_vessel": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/16-vessel.png",
@@ -257,51 +281,45 @@
             "link": ""
           }
         },
-        "logo_NX7zJL": {
+        "logo_wolsey": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/18-wolsey.png",
+            "alt_text": "Wolsey",
+            "link": ""
+          }
+        },
+        "logo_apc": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/19-apc.png",
-            "alt_text": "",
-            "link": ""
-          }
-        },
-        "logo_gL67PU": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/17-walker-golf-things.png",
-            "alt_text": "Walker Golf Things",
-            "link": ""
-          }
-        },
-        "logo_tpgmR7": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/13-3-putt-round.png",
-            "alt_text": "3 Putt Round",
+            "alt_text": "A.P.C.",
             "link": ""
           }
         }
       },
       "block_order": [
-        "logo_1",
-        "logo_2",
-        "logo_3",
-        "logo_4",
-        "logo_9ppWqk",
-        "logo_5",
-        "logo_CNMhKC",
-        "logo_6",
-        "logo_LGbQnG",
-        "logo_R3C8kt",
-        "logo_KB9pEN",
-        "logo_F4cy8A",
-        "logo_nyqP8i",
-        "logo_kxETxf",
-        "logo_MmVF3r",
-        "logo_NgJEGV",
-        "logo_NX7zJL",
-        "logo_gL67PU",
-        "logo_tpgmR7"
+        "logo_rlx",
+        "logo_manors",
+        "logo_adidas",
+        "logo_malbon",
+        "logo_jlindeberg",
+        "logo_boss",
+        "logo_CtkCQQ",
+        "logo_TGbQaK",
+        "logo_footjoy",
+        "logo_NzKbGd",
+        "logo_gfore",
+        "logo_goatlane",
+        "logo_jordan",
+        "logo_kjus",
+        "logo_nike",
+        "logo_3puttround",
+        "logo_petermillar",
+        "logo_puma",
+        "logo_vessel",
+        "logo_wolsey",
+        "logo_apc"
       ],
       "settings": {
         "margin_bottom": "small"

@@ -177,27 +177,6 @@
             "link": ""
           }
         },
-        "logo_adidas_originals": {
-          "type": "logo",
-          "settings": {
-            "alt_text": "adidas Golf Originals",
-            "link": ""
-          }
-        },
-        "logo_bogey_boys": {
-          "type": "logo",
-          "settings": {
-            "alt_text": "Bogey Boys",
-            "link": ""
-          }
-        },
-        "logo_blue_tees": {
-          "type": "logo",
-          "settings": {
-            "alt_text": "Blue Tees Golf",
-            "link": ""
-          }
-        },
         "logo_boss": {
           "type": "logo",
           "settings": {
@@ -206,17 +185,19 @@
             "link": ""
           }
         },
-        "logo_cole_hann": {
+        "logo_CtkCQQ": {
           "type": "logo",
           "settings": {
-            "alt_text": "Cole Haan",
+            "image": "shopify://shop_images/17-walker-golf-things.png",
+            "alt_text": "",
             "link": ""
           }
         },
-        "logo_extracurricular": {
+        "logo_TGbQaK": {
           "type": "logo",
           "settings": {
-            "alt_text": "Extracurricular",
+            "image": "shopify://shop_images/20-head.png",
+            "alt_text": "",
             "link": ""
           }
         },
@@ -228,6 +209,14 @@
             "link": ""
           }
         },
+        "logo_NzKbGd": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/04-malbon.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
         "logo_gfore": {
           "type": "logo",
           "settings": {
@@ -236,32 +225,11 @@
             "link": ""
           }
         },
-        "logo_galvin_green": {
-          "type": "logo",
-          "settings": {
-            "alt_text": "Galvin Green",
-            "link": ""
-          }
-        },
         "logo_goatlane": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/09-goatlane.png",
             "alt_text": "GOATLANE",
-            "link": ""
-          }
-        },
-        "logo_greyson": {
-          "type": "logo",
-          "settings": {
-            "alt_text": "Greyson",
-            "link": ""
-          }
-        },
-        "logo_jones_bags": {
-          "type": "logo",
-          "settings": {
-            "alt_text": "Jones Golf Bags",
             "link": ""
           }
         },
@@ -281,25 +249,11 @@
             "link": ""
           }
         },
-        "logo_new_balance": {
-          "type": "logo",
-          "settings": {
-            "alt_text": "New Balance",
-            "link": ""
-          }
-        },
         "logo_nike": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/12-nike.png",
             "alt_text": "Nike",
-            "link": ""
-          }
-        },
-        "logo_no_member": {
-          "type": "logo",
-          "settings": {
-            "alt_text": "No Member",
             "link": ""
           }
         },
@@ -311,7 +265,7 @@
             "link": ""
           }
         },
-        "logo_peter_millar": {
+        "logo_petermillar": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/14-peter-millar.png",
@@ -327,47 +281,11 @@
             "link": ""
           }
         },
-        "logo_reflo": {
-          "type": "logo",
-          "settings": {
-            "alt_text": "Reflo",
-            "link": ""
-          }
-        },
-        "logo_solex": {
-          "type": "logo",
-          "settings": {
-            "alt_text": "Solex",
-            "link": ""
-          }
-        },
-        "logo_sounders": {
-          "type": "logo",
-          "settings": {
-            "alt_text": "Sounders Golf",
-            "link": ""
-          }
-        },
-        "logo_under_armour": {
-          "type": "logo",
-          "settings": {
-            "alt_text": "Under Armour",
-            "link": ""
-          }
-        },
         "logo_vessel": {
           "type": "logo",
           "settings": {
             "image": "shopify://shop_images/16-vessel.png",
             "alt_text": "Vessel",
-            "link": ""
-          }
-        },
-        "logo_walkergolf": {
-          "type": "logo",
-          "settings": {
-            "image": "shopify://shop_images/17-walker-golf-things.png",
-            "alt_text": "Walker Golf Things",
             "link": ""
           }
         },
@@ -378,6 +296,14 @@
             "alt_text": "Wolsey",
             "link": ""
           }
+        },
+        "logo_apc": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/19-apc.png",
+            "alt_text": "A.P.C.",
+            "link": ""
+          }
         }
       },
       "block_order": [
@@ -386,36 +312,25 @@
         "logo_adidas",
         "logo_malbon",
         "logo_jlindeberg",
-        "logo_adidas_originals",
-        "logo_bogey_boys",
-        "logo_blue_tees",
         "logo_boss",
-        "logo_cole_hann",
-        "logo_extracurricular",
+        "logo_CtkCQQ",
+        "logo_TGbQaK",
         "logo_footjoy",
+        "logo_NzKbGd",
         "logo_gfore",
-        "logo_galvin_green",
         "logo_goatlane",
-        "logo_greyson",
-        "logo_jones_bags",
         "logo_jordan",
         "logo_kjus",
-        "logo_new_balance",
         "logo_nike",
-        "logo_no_member",
         "logo_3puttround",
-        "logo_peter_millar",
+        "logo_petermillar",
         "logo_puma",
-        "logo_reflo",
-        "logo_solex",
-        "logo_sounders",
-        "logo_under_armour",
         "logo_vessel",
-        "logo_walkergolf",
-        "logo_wolsey"
+        "logo_wolsey",
+        "logo_apc"
       ],
       "settings": {
-        "margin_bottom": "medium"
+        "margin_bottom": "small"
       }
     },
     "homecourse-space": {
