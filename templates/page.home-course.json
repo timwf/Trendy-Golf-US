@@ -140,6 +140,7 @@
         "logo_rlx": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/01-rlx.png",
             "alt_text": "RLX",
             "link": ""
           }
@@ -147,6 +148,7 @@
         "logo_manors": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/02-manors.png",
             "alt_text": "Manors",
             "link": ""
           }
@@ -154,6 +156,7 @@
         "logo_adidas": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/03-adidas.png",
             "alt_text": "Adidas",
             "link": ""
           }
@@ -161,6 +164,7 @@
         "logo_malbon": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/04-malbon.png",
             "alt_text": "Malbon",
             "link": ""
           }
@@ -168,6 +172,7 @@
         "logo_jlindeberg": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/05-j-lindeberg.png",
             "alt_text": "J.Lindeberg",
             "link": ""
           }
@@ -196,6 +201,7 @@
         "logo_boss": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/06-boss.png",
             "alt_text": "BOSS",
             "link": ""
           }
@@ -217,6 +223,7 @@
         "logo_footjoy": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/07-footjoy.png",
             "alt_text": "FootJoy",
             "link": ""
           }
@@ -224,6 +231,7 @@
         "logo_gfore": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/08-g-fore.png",
             "alt_text": "G/FORE",
             "link": ""
           }
@@ -238,6 +246,7 @@
         "logo_goatlane": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/09-goatlane.png",
             "alt_text": "GOATLANE",
             "link": ""
           }
@@ -259,6 +268,7 @@
         "logo_jordan": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/10-jordan.png",
             "alt_text": "Jordan",
             "link": ""
           }
@@ -266,6 +276,7 @@
         "logo_kjus": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/11-kjus.png",
             "alt_text": "KJUS",
             "link": ""
           }
@@ -280,6 +291,7 @@
         "logo_nike": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/12-nike.png",
             "alt_text": "Nike",
             "link": ""
           }
@@ -294,6 +306,7 @@
         "logo_3puttround": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/13-3-putt-round.png",
             "alt_text": "3 Putt Round",
             "link": ""
           }
@@ -301,6 +314,7 @@
         "logo_peter_millar": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/14-peter-millar.png",
             "alt_text": "Peter Millar",
             "link": ""
           }
@@ -308,6 +322,7 @@
         "logo_puma": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/15-puma.png",
             "alt_text": "Puma",
             "link": ""
           }
@@ -343,6 +358,7 @@
         "logo_vessel": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/16-vessel.png",
             "alt_text": "Vessel",
             "link": ""
           }
@@ -350,6 +366,7 @@
         "logo_walkergolf": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/17-walker-golf-things.png",
             "alt_text": "Walker Golf Things",
             "link": ""
           }
@@ -357,6 +374,7 @@
         "logo_wolsey": {
           "type": "logo",
           "settings": {
+            "image": "shopify://shop_images/18-wolsey.png",
             "alt_text": "Wolsey",
             "link": ""
           }
