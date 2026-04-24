@@ -23,8 +23,8 @@
             "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "image",
-            "image": "",
-            "mobile_image": "",
+            "image": "shopify://shop_images/desktop_b0cf4578-ba6c-4b47-bf36-9b0c5a0da448.jpg",
+            "mobile_image": "shopify://shop_images/mobile_68b59979-7cb6-4496-9b01-160ca94bf433.jpg",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
@@ -53,7 +53,6 @@
         "column_WrGyWA": {
           "type": "column",
           "settings": {
-            "image": "",
             "image_alt": "",
             "title": "Premium Brands Like No Members",
             "description": "Stylish, high-performance apparel for work and leisure."
@@ -62,7 +61,6 @@
         "column_t3ieYt": {
           "type": "column",
           "settings": {
-            "image": "",
             "image_alt": "",
             "title": "Custom Logo Application",
             "description": "Discreet and professional branding options."
@@ -71,7 +69,6 @@
         "column_cdLEfM": {
           "type": "column",
           "settings": {
-            "image": "",
             "image_alt": "",
             "title": "Embroidery & Printing",
             "description": "Quality craftsmanship tailored to your needs."
@@ -80,7 +77,6 @@
         "column_DYEqYc": {
           "type": "column",
           "settings": {
-            "image": "",
             "image_alt": "",
             "title": "Flexible Order Sizes",
             "description": "Suitable for small teams and large corporate orders."
@@ -89,7 +85,6 @@
         "column_TYzytf": {
           "type": "column",
           "settings": {
-            "image": "",
             "image_alt": "",
             "title": "Fast Turnaround Times",
             "description": "Quick and reliable service."
@@ -98,7 +93,6 @@
         "column_Vy44Ah": {
           "type": "column",
           "settings": {
-            "image": "",
             "image_alt": "",
             "title": "Dedicated Support",
             "description": "A team to assist with product selection and customisation."
@@ -229,7 +223,6 @@
         "success_message": "Our Corporate Orders Team will be in touch soon.",
         "success_button_label": "Back to home",
         "success_button_link": "/",
-        "background_image": "",
         "enable_animation": true,
         "margin_bottom": "none"
       }
