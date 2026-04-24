@@ -17,11 +17,13 @@
           "settings": {
             "content_alignment": "bottom",
             "subheading": "Partner with TRENDYGOLF today.",
+            "heading_first": false,
             "heading": "TGLAB",
             "heading_size": "h2",
+            "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "image",
-            "image": "",
+            "image": "shopify://shop_images/desktop_24e46add-a201-47db-8336-c5273e45a264.jpg",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
@@ -101,7 +103,7 @@
         "logo_rlx": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/10-jordan.png",
             "alt_text": "RLX",
             "link": ""
           }
@@ -109,7 +111,7 @@
         "logo_manors": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/11-kjus.png",
             "alt_text": "Manors",
             "link": ""
           }
@@ -117,7 +119,7 @@
         "logo_adidas": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/03-adidas.png",
             "alt_text": "Adidas",
             "link": ""
           }
@@ -125,7 +127,7 @@
         "logo_malbon": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/13-3-putt-round.png",
             "alt_text": "Malbon",
             "link": ""
           }
@@ -133,7 +135,7 @@
         "logo_jlindeberg": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/18-wolsey.png",
             "alt_text": "J.Lindeberg",
             "link": ""
           }
@@ -141,23 +143,47 @@
         "logo_boss": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/09-goatlane.png",
             "alt_text": "BOSS",
+            "link": ""
+          }
+        },
+        "logo_CtkCQQ": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/06-boss.png",
+            "alt_text": "",
+            "link": ""
+          }
+        },
+        "logo_TGbQaK": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/02-manors.png",
+            "alt_text": "",
             "link": ""
           }
         },
         "logo_footjoy": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/02-manors.png",
             "alt_text": "FootJoy",
+            "link": ""
+          }
+        },
+        "logo_NzKbGd": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/04-malbon.png",
+            "alt_text": "",
             "link": ""
           }
         },
         "logo_gfore": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/05-j-lindeberg.png",
             "alt_text": "G/FORE",
             "link": ""
           }
@@ -165,7 +191,7 @@
         "logo_goatlane": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/19-apc.png",
             "alt_text": "GOATLANE",
             "link": ""
           }
@@ -173,7 +199,7 @@
         "logo_jordan": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/07-footjoy.png",
             "alt_text": "Jordan",
             "link": ""
           }
@@ -181,7 +207,7 @@
         "logo_kjus": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/16-vessel.png",
             "alt_text": "KJUS",
             "link": ""
           }
@@ -189,7 +215,7 @@
         "logo_nike": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/12-nike.png",
             "alt_text": "Nike",
             "link": ""
           }
@@ -197,7 +223,7 @@
         "logo_3puttround": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/15-puma.png",
             "alt_text": "3 Putt Round",
             "link": ""
           }
@@ -205,7 +231,7 @@
         "logo_petermillar": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/20-head.png",
             "alt_text": "Peter Millar",
             "link": ""
           }
@@ -213,7 +239,7 @@
         "logo_puma": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/01-rlx.png",
             "alt_text": "Puma",
             "link": ""
           }
@@ -221,23 +247,15 @@
         "logo_vessel": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/17-walker-golf-things.png",
             "alt_text": "Vessel",
-            "link": ""
-          }
-        },
-        "logo_walkergolf": {
-          "type": "logo",
-          "settings": {
-            "image": "",
-            "alt_text": "Walker Golf Things",
             "link": ""
           }
         },
         "logo_wolsey": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/08-g-fore.png",
             "alt_text": "Wolsey",
             "link": ""
           }
@@ -245,16 +263,8 @@
         "logo_apc": {
           "type": "logo",
           "settings": {
-            "image": "",
+            "image": "shopify://shop_images/14-peter-millar.png",
             "alt_text": "A.P.C.",
-            "link": ""
-          }
-        },
-        "logo_head": {
-          "type": "logo",
-          "settings": {
-            "image": "",
-            "alt_text": "Head",
             "link": ""
           }
         }
@@ -266,7 +276,10 @@
         "logo_malbon",
         "logo_jlindeberg",
         "logo_boss",
+        "logo_CtkCQQ",
+        "logo_TGbQaK",
         "logo_footjoy",
+        "logo_NzKbGd",
         "logo_gfore",
         "logo_goatlane",
         "logo_jordan",
@@ -276,10 +289,8 @@
         "logo_petermillar",
         "logo_puma",
         "logo_vessel",
-        "logo_walkergolf",
         "logo_wolsey",
-        "logo_apc",
-        "logo_head"
+        "logo_apc"
       ],
       "settings": {
         "margin_bottom": "small"
@@ -351,7 +362,6 @@
         "success_message": "Our buying team will review your submission and be in touch if there’s a fit.",
         "success_button_label": "Back to home",
         "success_button_link": "/",
-        "background_image": "",
         "enable_animation": true,
         "margin_bottom": "none"
       }
