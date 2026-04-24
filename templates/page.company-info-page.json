@@ -23,8 +23,8 @@
             "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "image",
-            "image": "",
-            "mobile_image": "",
+            "image": "shopify://shop_images/desktop_d6d8965f-e57b-4598-8005-bec1a0177d3b.jpg",
+            "mobile_image": "shopify://shop_images/mobile_029a9b27-450d-4f2c-9be9-bc27a10e3d4f.jpg",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
@@ -105,7 +105,6 @@
           "type": "card",
           "settings": {
             "heading": "Canary Wharf",
-            "image": "",
             "link": "/flagship-stores/canary-wharf",
             "button_label": "EXPLORE"
           }
@@ -114,7 +113,6 @@
           "type": "card",
           "settings": {
             "heading": "Manchester",
-            "image": "",
             "link": "/flagship-stores/manchester",
             "button_label": "EXPLORE"
           }
@@ -140,7 +138,6 @@
         "grid_item_01": {
           "type": "grid_item",
           "settings": {
-            "image": "",
             "image_alt": "J. Lindeberg Clothing",
             "link": "",
             "link_icon": "instagram"
@@ -149,7 +146,6 @@
         "grid_item_02": {
           "type": "grid_item",
           "settings": {
-            "image": "",
             "image_alt": "Nike Golf Shoes",
             "link": "",
             "link_icon": "instagram"
@@ -158,7 +154,6 @@
         "grid_item_03": {
           "type": "grid_item",
           "settings": {
-            "image": "",
             "image_alt": "Head Golf Headwear",
             "link": "",
             "link_icon": "instagram"
@@ -167,7 +162,6 @@
         "grid_item_04": {
           "type": "grid_item",
           "settings": {
-            "image": "",
             "image_alt": "TRENDYGOLF Clothing",
             "link": "",
             "link_icon": "instagram"
@@ -176,7 +170,6 @@
         "grid_item_05": {
           "type": "grid_item",
           "settings": {
-            "image": "",
             "image_alt": "TRENDYGOLF Clothing",
             "link": "",
             "link_icon": "instagram"
@@ -185,7 +178,6 @@
         "grid_item_06": {
           "type": "grid_item",
           "settings": {
-            "image": "",
             "image_alt": "adidas Golf Originals",
             "link": "",
             "link_icon": "instagram"
@@ -194,7 +186,6 @@
         "grid_item_07": {
           "type": "grid_item",
           "settings": {
-            "image": "",
             "image_alt": "Puma Golf Clothing",
             "link": "",
             "link_icon": "instagram"
@@ -203,7 +194,6 @@
         "grid_item_08": {
           "type": "grid_item",
           "settings": {
-            "image": "",
             "image_alt": "TRENDYGOLF Clothing",
             "link": "",
             "link_icon": "instagram"
@@ -212,7 +202,6 @@
         "grid_item_09": {
           "type": "grid_item",
           "settings": {
-            "image": "",
             "image_alt": "adidas Golf Clothing Women",
             "link": "",
             "link_icon": "instagram"
@@ -221,7 +210,6 @@
         "grid_item_10": {
           "type": "grid_item",
           "settings": {
-            "image": "",
             "image_alt": "Head Golf Clothing Women",
             "link": "",
             "link_icon": "instagram"
@@ -230,7 +218,6 @@
         "grid_item_11": {
           "type": "grid_item",
           "settings": {
-            "image": "",
             "image_alt": "Manors Golf Clothing",
             "link": "",
             "link_icon": "instagram"
@@ -239,7 +226,6 @@
         "grid_item_12": {
           "type": "grid_item",
           "settings": {
-            "image": "",
             "image_alt": "TRENDYGOLF Shoes",
             "link": "",
             "link_icon": "instagram"
