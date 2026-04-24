@@ -17,12 +17,16 @@
           "settings": {
             "content_alignment": "bottom",
             "subheading": "Explore our range from Head.",
+            "heading_first": false,
             "heading": "Head",
             "heading_size": "h2",
+            "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "video",
             "video_url": "https://vimeo.com/1163702339",
             "video_url_mobile": "https://vimeo.com/1164050600",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
             "slide_duration": 5,
             "button_label": "Shop Now",
             "button_link": "",
@@ -30,11 +34,14 @@
           }
         }
       },
-      "block_order": ["slide_1"],
+      "block_order": [
+        "slide_1"
+      ],
       "settings": {
         "autoplay": false,
         "show_progress": false,
         "enable_animation": true,
+        "aria_label": "Hero slideshow",
         "margin_bottom": "medium"
       }
     },
@@ -50,7 +57,9 @@
           "mg4-o2-camo-golf-shoes-nimbus"
         ],
         "tab_2_label": "",
-        "tab_3_label": ""
+        "tab_2_products": [],
+        "tab_3_label": "",
+        "tab_3_products": []
       }
     },
     "banner_cards_1": {
@@ -60,7 +69,7 @@
           "type": "card",
           "settings": {
             "heading": "Shop All",
-            "image": "",
+            "image": "shopify://shop_images/card-1-shop-all.jpg",
             "link": "",
             "button_label": "Shop Now"
           }
@@ -69,7 +78,7 @@
           "type": "card",
           "settings": {
             "heading": "Tops",
-            "image": "",
+            "image": "shopify://shop_images/card-2-tops.jpg",
             "link": "",
             "button_label": "Shop Now"
           }
@@ -78,13 +87,17 @@
           "type": "card",
           "settings": {
             "heading": "Outerwear",
-            "image": "",
+            "image": "shopify://shop_images/card-3-outerwear.jpg",
             "link": "",
             "button_label": "Shop Now"
           }
         }
       },
-      "block_order": ["card_1", "card_2", "card_3"],
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
       "settings": {
         "layout": "grid",
         "columns": 3,
@@ -96,5 +109,9 @@
       }
     }
   },
-  "order": ["hero_1", "product_carousel_1", "banner_cards_1"]
+  "order": [
+    "hero_1",
+    "product_carousel_1",
+    "banner_cards_1"
+  ]
 }
