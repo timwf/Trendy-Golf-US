@@ -223,6 +223,7 @@
         "success_message": "Our Corporate Orders Team will be in touch soon.",
         "success_button_label": "Back to home",
         "success_button_link": "/",
+        "background_image": "shopify://shop_images/background.jpg",
         "enable_animation": true,
         "margin_bottom": "none"
       }
