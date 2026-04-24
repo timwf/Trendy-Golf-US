@@ -5,7 +5,7 @@
 -%}
 
 {%- paginate collection.products by products_per_page -%}
-<main class="py-10" id="collection-section" data-section-id="{{ section.id }}" data-collection-url="{{ collection.url }}">
+<main class="py-10" id="collection-section" data-section-id="{{ section.id }}" data-collection-url="{{ collection.url }}" data-loaded-pages="1">
   <div class="container-wide">
 
     {%- comment -%} Title + description {%- endcomment -%}
@@ -270,6 +270,9 @@
           /* Update URL without reload */
           history.pushState(null, '', url);
 
+          /* Grid was replaced with a fresh page 1 — reset the loaded-pages counter */
+          section.dataset.loadedPages = '1';
+
           /* Scroll to top of grid on filter/sort change */
           if (grid) window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
 
@@ -406,7 +409,9 @@
             btn.parentElement.remove();
           }
 
-          history.replaceState(null, '', nextUrl);
+          var prevLoaded = parseInt(section.dataset.loadedPages || '1', 10);
+          section.dataset.loadedPages = String(prevLoaded + 1);
+
           reinitSwym();
         })
         .catch(function() {
@@ -418,6 +423,99 @@
     /* ---- Browser back/forward ---- */
     window.addEventListener('popstate', function() {
       fetchSection(window.location.href);
+    });
+
+    /* ---- Scroll restore when returning from a PDP ---- */
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+
+    function plpStateKey() {
+      return 'plp-state:' + window.location.pathname + window.location.search;
+    }
+
+    window.addEventListener('pagehide', function() {
+      var loadedPages = parseInt(section.dataset.loadedPages || '1', 10);
+      if (loadedPages <= 1) {
+        try { sessionStorage.removeItem(plpStateKey()); } catch (_) {}
+        return;
+      }
+      try {
+        sessionStorage.setItem(plpStateKey(), JSON.stringify({
+          loadedPages: loadedPages,
+          scrollY: window.scrollY || window.pageYOffset || 0
+        }));
+      } catch (_) {}
+    });
+
+    function rehydrateLoadedPages(targetPages, scrollY) {
+      var grid = document.getElementById('collection-product-grid');
+      if (!grid) { window.scrollTo(0, scrollY); return; }
+      grid.style.opacity = '0.5';
+
+      var page = 2;
+      function loadNext() {
+        if (page > targetPages) {
+          grid.style.opacity = '';
+          section.dataset.loadedPages = String(targetPages);
+          window.scrollTo(0, scrollY);
+          reinitSwym();
+          return;
+        }
+        var u = new URL(window.location.href);
+        u.searchParams.set('page', page);
+        var pageUrl = u.pathname + u.search;
+        var sep = pageUrl.indexOf('?') !== -1 ? '&' : '?';
+        fetch(pageUrl + sep + 'sections=' + sectionId)
+          .then(function(r) { return r.json(); })
+          .then(function(json) {
+            var html = json[sectionId];
+            if (!html) { grid.style.opacity = ''; return; }
+            var doc = new DOMParser().parseFromString(html, 'text/html');
+            var newGrid = doc.getElementById('collection-product-grid');
+            var curGrid = document.getElementById('collection-product-grid');
+            if (newGrid && curGrid) {
+              while (newGrid.firstChild) {
+                curGrid.appendChild(newGrid.firstChild);
+              }
+            }
+            var newLM = doc.getElementById('load-more-container');
+            var curLM = document.getElementById('load-more-container');
+            if (newLM) {
+              if (curLM) { curLM.replaceWith(newLM); }
+              else if (curGrid) { curGrid.insertAdjacentElement('afterend', newLM); }
+            } else if (curLM) {
+              curLM.remove();
+            }
+            page++;
+            loadNext();
+          })
+          .catch(function() {
+            grid.style.opacity = '';
+          });
+      }
+      loadNext();
+    }
+
+    window.addEventListener('pageshow', function() {
+      var raw;
+      try { raw = sessionStorage.getItem(plpStateKey()); } catch (_) { return; }
+      if (!raw) return;
+      var state;
+      try { state = JSON.parse(raw); } catch (_) { return; }
+      try { sessionStorage.removeItem(plpStateKey()); } catch (_) {}
+
+      var savedPages = parseInt(state.loadedPages, 10) || 1;
+      var savedY = parseInt(state.scrollY, 10) || 0;
+      if (savedPages <= 1) return;
+
+      var currentPages = parseInt(section.dataset.loadedPages || '1', 10);
+      if (currentPages >= savedPages) {
+        /* bfcache: DOM already has the appended pages */
+        window.scrollTo(0, savedY);
+        return;
+      }
+      rehydrateLoadedPages(savedPages, savedY);
     });
   })();
 {% endjavascript %}
