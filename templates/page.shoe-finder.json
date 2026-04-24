@@ -32,10 +32,10 @@
           "settings": {
             "question": "What type of course do you usually play on?",
             "answer_1_label": "Dry, firm course",
-            "answer_1_image": "",
+            "answer_1_image": "shopify://shop_images/dry-firm-course.png",
             "answer_1_tag": "dry-course",
             "answer_2_label": "Wet or soft turf course",
-            "answer_2_image": "",
+            "answer_2_image": "shopify://shop_images/wet-soft-turf-course.png",
             "answer_2_tag": "soft-course",
             "answer_3_label": "",
             "answer_3_tag": "",
