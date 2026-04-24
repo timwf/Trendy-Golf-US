@@ -57,7 +57,8 @@
             "description": "Monday - Friday\n08:00 AM - 04:30 PM\nPDT",
             "link": "tel:+14242903101",
             "link_label": "424-290-3101",
-            "show_arrow": true
+            "show_arrow": true,
+            "show_social_channels": false
           }
         },
         "email-us": {
@@ -68,7 +69,8 @@
             "description": "",
             "link": "mailto:info@trendygolf.com",
             "link_label": "info@trendygolf.com",
-            "show_arrow": true
+            "show_arrow": true,
+            "show_social_channels": false
           }
         },
         "find-us": {
@@ -79,7 +81,8 @@
             "description": "120 Standard St,\nEl Segundo, CA 90245,\nUnited States",
             "link": "",
             "link_label": "",
-            "show_arrow": true
+            "show_arrow": true,
+            "show_social_channels": false
           }
         },
         "connect": {
@@ -114,6 +117,7 @@
         "heading_size": "h3",
         "heading_font": "none",
         "subheading": "If you would like to get in touch, please use the form below.",
+        "show_brand": false,
         "show_phone": true,
         "show_order_number": true,
         "submit_label": "Send message",
@@ -121,7 +125,7 @@
         "success_message": "We respond swiftly to inquiries Monday to Friday 8:00am - 4:30pm PDT.",
         "success_button_label": "Back to home",
         "success_button_link": "/",
-        "background_image": "",
+        "background_image": "shopify://shop_images/background.jpg",
         "enable_animation": true,
         "margin_bottom": "none"
       }
