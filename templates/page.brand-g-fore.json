@@ -17,12 +17,17 @@
           "settings": {
             "content_alignment": "bottom",
             "subheading": "Shop the latest from G/FORE Mens.",
+            "heading_first": false,
             "heading": "G/FORE",
             "heading_size": "h2",
+            "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "image",
-            "image": "",
-            "mobile_image": "",
+            "image": "shopify://shop_images/desktop_67b1a440-1788-40ee-afe7-4991c0c49e42.jpg",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
             "slide_duration": 3,
             "button_label": "Shop Now",
             "button_link": "/collections/mens-g-fore",
@@ -30,11 +35,14 @@
           }
         }
       },
-      "block_order": ["slide_1"],
+      "block_order": [
+        "slide_1"
+      ],
       "settings": {
         "autoplay": false,
         "show_progress": false,
         "enable_animation": true,
+        "aria_label": "Hero slideshow",
         "margin_bottom": "medium"
       }
     },
@@ -45,7 +53,7 @@
           "type": "card",
           "settings": {
             "heading": "Mens",
-            "image": "",
+            "image": "shopify://shop_images/card-1-mens.jpg",
             "link": "/collections/mens-g-fore",
             "button_label": "SHOP NOW"
           }
@@ -54,13 +62,16 @@
           "type": "card",
           "settings": {
             "heading": "Womens",
-            "image": "",
+            "image": "shopify://shop_images/card-2-womens.jpg",
             "link": "/collections/womens-g-fore",
             "button_label": "SHOP NOW"
           }
         }
       },
-      "block_order": ["card_1", "card_2"],
+      "block_order": [
+        "card_1",
+        "card_2"
+      ],
       "settings": {
         "layout": "grid",
         "columns": 2,
@@ -103,12 +114,18 @@
           "settings": {
             "content_alignment": "bottom",
             "subheading": "TRENDYGOLF x G/FORE",
+            "heading_first": false,
             "heading": "",
             "heading_size": "h3",
+            "use_as_page_h1": false,
             "heading_font": "sans",
             "media_type": "image",
-            "image": "",
-            "mobile_image": "",
+            "image": "shopify://shop_images/desktop_bdb8db8d-4c5d-448a-bbaf-f316fad2e36f.jpg",
+            "mobile_image": "shopify://shop_images/mobile_12870419-9e8b-4b73-bdbe-267116bfe926.jpg",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
             "slide_duration": 3,
             "button_label": "SHOP NOW",
             "button_link": "",
@@ -116,11 +133,14 @@
           }
         }
       },
-      "block_order": ["slide_1"],
+      "block_order": [
+        "slide_1"
+      ],
       "settings": {
         "autoplay": false,
         "show_progress": false,
         "enable_animation": true,
+        "aria_label": "Hero slideshow",
         "margin_bottom": "medium"
       }
     },
@@ -131,7 +151,7 @@
           "type": "card",
           "settings": {
             "heading": "Mens Footwear",
-            "image": "",
+            "image": "shopify://shop_images/card-1-mens-footwear.jpg",
             "link": "/collections/mens-g-fore-golf-shoes",
             "button_label": "Shop Now"
           }
@@ -140,13 +160,16 @@
           "type": "card",
           "settings": {
             "heading": "Womens Footwear",
-            "image": "",
+            "image": "shopify://shop_images/card-2-womens-footwear.jpg",
             "link": "/collections/womens-g-fore-golf-shoes",
             "button_label": "Shop Now"
           }
         }
       },
-      "block_order": ["card_1", "card_2"],
+      "block_order": [
+        "card_1",
+        "card_2"
+      ],
       "settings": {
         "layout": "grid",
         "columns": 2,
@@ -158,5 +181,11 @@
       }
     }
   },
-  "order": ["hero_1", "banner_cards_1", "product_carousel_1", "hero_2", "banner_cards_2"]
+  "order": [
+    "hero_1",
+    "banner_cards_1",
+    "product_carousel_1",
+    "hero_2",
+    "banner_cards_2"
+  ]
 }
