@@ -23,8 +23,6 @@
             "media_type": "video",
             "video_url": "https://vimeo.com/1167775799",
             "video_url_mobile": "https://vimeo.com/1168157794",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
             "slide_duration": 16,
             "button_label": "Shop Now",
             "button_link": "/collections/mens-manors-golf",
@@ -32,14 +30,11 @@
           }
         }
       },
-      "block_order": [
-        "slide_1"
-      ],
+      "block_order": ["slide_1"],
       "settings": {
         "autoplay": false,
         "show_progress": false,
         "enable_animation": true,
-        "aria_label": "Hero slideshow",
         "margin_bottom": "medium"
       }
     },
@@ -47,21 +42,30 @@
       "type": "product-carousel-tabs",
       "settings": {
         "title": "New In Manors",
-        "tab_1_label": "Men",
+        "tab_1_label": "Polos",
         "tab_1_products": [
-          "ranger-golf-jacket-pine-green",
-          "tour-mid-layer-dark-olive",
-          "frontier-tailored-shirt-dune",
-          "ranger-golf-jacket-dune",
-          "course-mock-neck-polo-black",
-          "course-mock-neck-polo-dune",
-          "recycled-greenskeeper-shorts-black",
-          "gailes-windbreaker-dune"
+          "course-polo-woodland",
+          "lightweight-polo-yellow",
+          "hybrid-fleece-mid-layer-olive",
+          "logo-t-shirt-white",
+          "ranger-shooter-ss-shirt-pine-green"
         ],
-        "tab_2_label": "",
-        "tab_2_products": [],
-        "tab_3_label": "",
-        "tab_3_products": []
+        "tab_2_label": "Jackets & Mid-Layers",
+        "tab_2_products": [
+          "hybrid-fleece-mid-layer-olive",
+          "course-quarter-zip-mid-layer-sand",
+          "gailes-windbreaker-jacket-dune",
+          "x-reebok-organic-course-pullover-atlantic-blue",
+          "ranger-shooter-ss-shirt-dune"
+        ],
+        "tab_3_label": "Trousers",
+        "tab_3_products": [
+          "track-bottom-greige",
+          "greenskeeper-chino-shorts-olive",
+          "x-reebok-straight-leg-trousers-birch",
+          "flattering-high-waist-trousers-black",
+          "lightweight-course-trousers-green"
+        ]
       }
     },
     "media_grid_1": {
@@ -69,17 +73,18 @@
       "blocks": {
         "image_1": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": ""
+          }
         },
         "image_2": {
           "type": "image",
-          "settings": {}
+          "settings": {
+            "image": ""
+          }
         }
       },
-      "block_order": [
-        "image_1",
-        "image_2"
-      ],
+      "block_order": ["image_1", "image_2"],
       "settings": {
         "margin_bottom": "medium",
         "enable_animation": true
@@ -92,7 +97,7 @@
           "type": "card",
           "settings": {
             "heading": "Shop All",
-            "image": "shopify://shop_images/01-shop-all_ad32c7b4-a274-40ab-86cb-c1605051f94e.jpg",
+            "image": "",
             "link": "/collections/mens-manors-golf",
             "button_label": "Shop Now"
           }
@@ -101,8 +106,8 @@
           "type": "card",
           "settings": {
             "heading": "Tops",
-            "image": "shopify://shop_images/02-tops_491d9bae-7425-4cc9-9851-6f25cd4d1096.jpg",
-            "link": "/collections/mens-manors-golf-polo-shirts",
+            "image": "",
+            "link": "/collections/mens-manors-golf",
             "button_label": "Shop Now"
           }
         },
@@ -110,17 +115,13 @@
           "type": "card",
           "settings": {
             "heading": "Waterproofs",
-            "image": "shopify://shop_images/03-waterproofs.jpg",
-            "link": "/collections/mens-manors-golf-waterproofs",
+            "image": "",
+            "link": "/collections/mens-manors-golf",
             "button_label": "Shop Now"
           }
         }
       },
-      "block_order": [
-        "card_1",
-        "card_2",
-        "card_3"
-      ],
+      "block_order": ["card_1", "card_2", "card_3"],
       "settings": {
         "layout": "grid",
         "columns": 3,
@@ -132,10 +133,5 @@
       }
     }
   },
-  "order": [
-    "hero_1",
-    "product_carousel_1",
-    "media_grid_1",
-    "banner_cards_1"
-  ]
+  "order": ["hero_1", "product_carousel_1", "media_grid_1", "banner_cards_1"]
 }

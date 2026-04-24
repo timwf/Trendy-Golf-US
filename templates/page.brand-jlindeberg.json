@@ -23,8 +23,6 @@
             "media_type": "video",
             "video_url": "https://vimeo.com/1165318867",
             "video_url_mobile": "https://vimeo.com/1165318888",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
             "slide_duration": 7,
             "button_label": "Shop Now",
             "button_link": "/collections/mens-jlindeberg",
@@ -32,14 +30,11 @@
           }
         }
       },
-      "block_order": [
-        "slide_1"
-      ],
+      "block_order": ["slide_1"],
       "settings": {
         "autoplay": false,
         "show_progress": false,
         "enable_animation": true,
-        "aria_label": "Hero slideshow",
         "margin_bottom": "medium"
       }
     },
@@ -47,7 +42,7 @@
       "type": "product-carousel-tabs",
       "settings": {
         "title": "New In J.LINDEBERG",
-        "tab_1_label": "Men",
+        "tab_1_label": "",
         "tab_1_products": [
           "thorn-hood-knit-hybrid-jacket-black",
           "oden-light-down-jacket-jl-navy",
@@ -55,9 +50,7 @@
           "trond-pique-polo-jl-navy"
         ],
         "tab_2_label": "",
-        "tab_2_products": [],
-        "tab_3_label": "",
-        "tab_3_products": []
+        "tab_3_label": ""
       }
     },
     "banner_cards_1": {
@@ -67,7 +60,7 @@
           "type": "card",
           "settings": {
             "heading": "Shop All",
-            "image": "shopify://shop_images/01-shop-all_ad3ecbd1-6511-41d8-92b4-b9b52d124648.jpg",
+            "image": "",
             "link": "/collections/mens-jlindeberg",
             "button_label": "Shop Now"
           }
@@ -76,8 +69,8 @@
           "type": "card",
           "settings": {
             "heading": "Jackets",
-            "image": "shopify://shop_images/02-jackets.jpg",
-            "link": "/collections/mens-jlindeberg-jackets",
+            "image": "",
+            "link": "/collections/j-lindeberg-mid-layers",
             "button_label": "Shop Now"
           }
         },
@@ -85,17 +78,13 @@
           "type": "card",
           "settings": {
             "heading": "Footwear",
-            "image": "shopify://shop_images/03-footwear_1a658550-5efb-436b-b17b-cf600861833b.jpg",
+            "image": "",
             "link": "/collections/mens-j-lindeberg-designer-golf-shoes-selection",
             "button_label": "Shop Now"
           }
         }
       },
-      "block_order": [
-        "card_1",
-        "card_2",
-        "card_3"
-      ],
+      "block_order": ["card_1", "card_2", "card_3"],
       "settings": {
         "layout": "grid",
         "columns": 3,
@@ -107,9 +96,5 @@
       }
     }
   },
-  "order": [
-    "hero_1",
-    "product_carousel_1",
-    "banner_cards_1"
-  ]
+  "order": ["hero_1", "product_carousel_1", "banner_cards_1"]
 }

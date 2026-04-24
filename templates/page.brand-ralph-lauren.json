@@ -25,7 +25,7 @@
             "video_url_mobile": "https://vimeo.com/1168551962",
             "slide_duration": 12,
             "button_label": "Shop Now",
-            "button_link": "/collections/ralph-lauren-clothing-accessories",
+            "button_link": "/collections/mens-ralph-lauren",
             "button_style": "white"
           }
         }
@@ -42,12 +42,12 @@
       "type": "product-carousel-tabs",
       "settings": {
         "title": "New In Ralph Lauren",
-        "tab_1_label": "Men",
+        "tab_1_label": "Mens",
         "tab_1_products": [
-          "rlx-tailored-fit-kinetic-tech-jersey-moss-agate",
-          "rlx-big-fit-performance-argyle-sweater-vest-argyle-multi",
-          "rlx-packable-ss-half-zip-pullover-jacket-polo-black",
-          "rlx-tailored-fit-airflow-polo-refined-navy-skull-and-clubs"
+          "tech-hooded-pullover-twilight-camo",
+          "3-gs-tech-jersey-polo-lava",
+          "x-trendygolf-limited-edition-all-day-polo-twilight",
+          "mg4-o2-camo-golf-shoes-nimbus"
         ],
         "tab_2_label": "",
         "tab_3_label": ""
@@ -59,8 +59,9 @@
         "card_1": {
           "type": "card",
           "settings": {
-            "heading": "Polo Shirts",
-            "link": "/collections/mens-ralph-lauren-polo-shirts",
+            "heading": "Tops",
+            "image": "",
+            "link": "/collections/mens-ralph-lauren",
             "button_label": "Shop Now"
           }
         },
@@ -68,6 +69,7 @@
           "type": "card",
           "settings": {
             "heading": "Shop All",
+            "image": "",
             "link": "/collections/mens-ralph-lauren",
             "button_label": "Shop Now"
           }
@@ -76,7 +78,8 @@
           "type": "card",
           "settings": {
             "heading": "Outerwear",
-            "link": "/collections/ralph-lauren-jackets",
+            "image": "",
+            "link": "/collections/mens-ralph-lauren",
             "button_label": "Shop Now"
           }
         }

@@ -16,69 +16,90 @@
           "type": "slide",
           "settings": {
             "content_alignment": "bottom",
-            "subheading": "Launching soon…",
+            "subheading": "Explore our range from APC",
             "heading": "APC",
             "heading_size": "h2",
             "heading_font": "serif",
             "media_type": "video",
             "video_url": "https://vimeo.com/1165417144",
             "video_url_mobile": "https://vimeo.com/1164445041",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
             "slide_duration": 20,
-            "button_label": "",
+            "button_label": "Shop Now",
             "button_link": "",
             "button_style": "white"
           }
         }
       },
-      "block_order": [
-        "slide_1"
-      ],
+      "block_order": ["slide_1"],
       "settings": {
         "autoplay": false,
         "show_progress": false,
         "enable_animation": true,
-        "aria_label": "Hero slideshow",
         "margin_bottom": "medium"
+      }
+    },
+    "product_carousel_1": {
+      "type": "product-carousel-tabs",
+      "settings": {
+        "title": "New In APC",
+        "tab_1_label": "Polos",
+        "tab_1_products": [
+          "course-polo-woodland",
+          "lightweight-polo-yellow",
+          "hybrid-fleece-mid-layer-olive",
+          "logo-t-shirt-white",
+          "ranger-shooter-ss-shirt-pine-green"
+        ],
+        "tab_2_label": "Jackets & Mid-Layers",
+        "tab_2_products": [
+          "hybrid-fleece-mid-layer-olive",
+          "course-quarter-zip-mid-layer-sand",
+          "gailes-windbreaker-jacket-dune",
+          "x-reebok-organic-course-pullover-atlantic-blue",
+          "ranger-shooter-ss-shirt-dune"
+        ],
+        "tab_3_label": "Trousers",
+        "tab_3_products": [
+          "track-bottom-greige",
+          "greenskeeper-chino-shorts-olive",
+          "x-reebok-straight-leg-trousers-birch",
+          "flattering-high-waist-trousers-black",
+          "lightweight-course-trousers-green"
+        ]
       }
     },
     "banner_cards_1": {
       "type": "banner-cards",
       "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "Shop All",
+            "image": "",
+            "link": "",
+            "button_label": "Shop Now"
+          }
+        },
         "card_2": {
           "type": "card",
           "settings": {
-            "heading": "",
-            "image": "shopify://shop_images/01-card.jpg",
+            "heading": "Tops",
+            "image": "",
             "link": "",
-            "button_label": ""
+            "button_label": "Shop Now"
           }
         },
         "card_3": {
           "type": "card",
           "settings": {
-            "heading": "",
-            "image": "shopify://shop_images/02-card.jpg",
+            "heading": "Accessories",
+            "image": "",
             "link": "",
-            "button_label": ""
-          }
-        },
-        "card_qgjnNQ": {
-          "type": "card",
-          "settings": {
-            "heading": "",
-            "image": "shopify://shop_images/03-card.jpg",
-            "link": "",
-            "button_label": ""
+            "button_label": "Shop Now"
           }
         }
       },
-      "block_order": [
-        "card_2",
-        "card_3",
-        "card_qgjnNQ"
-      ],
+      "block_order": ["card_1", "card_2", "card_3"],
       "settings": {
         "layout": "grid",
         "columns": 3,
@@ -90,8 +111,5 @@
       }
     }
   },
-  "order": [
-    "hero_1",
-    "banner_cards_1"
-  ]
+  "order": ["hero_1", "product_carousel_1", "banner_cards_1"]
 }

@@ -23,8 +23,6 @@
             "media_type": "video",
             "video_url": "https://vimeo.com/1166078330",
             "video_url_mobile": "https://vimeo.com/1166078275",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
             "slide_duration": 7,
             "button_label": "Shop Now",
             "button_link": "/collections/mens-puma",
@@ -32,14 +30,11 @@
           }
         }
       },
-      "block_order": [
-        "slide_1"
-      ],
+      "block_order": ["slide_1"],
       "settings": {
         "autoplay": false,
         "show_progress": false,
         "enable_animation": true,
-        "aria_label": "Hero slideshow",
         "margin_bottom": "medium"
       }
     },
@@ -47,17 +42,15 @@
       "type": "product-carousel-tabs",
       "settings": {
         "title": "New In Puma",
-        "tab_1_label": "Men",
+        "tab_1_label": "Mens",
         "tab_1_products": [
-          "x-rc-polo-warm-white-desert-dust",
-          "x-rc-polo-zen-blue-deep-navy",
-          "heritage-p-tech-cap-warm-white-melon-glow",
-          "x-rc-hoodie-deep-navy"
+          "lightweight-quarter-zip-mid-layer-black-sky",
+          "pure-solid-polo-intense-red",
+          "x-ap-floral-polo-cold-green",
+          "mattr-bushland-polo-warm-white-silver-sky"
         ],
         "tab_2_label": "",
-        "tab_2_products": [],
-        "tab_3_label": "",
-        "tab_3_products": []
+        "tab_3_label": ""
       }
     },
     "banner_cards_1": {
@@ -67,8 +60,8 @@
           "type": "card",
           "settings": {
             "heading": "Shop All",
-            "image": "shopify://shop_images/01-shop-all_5b2f6b9a-3768-496e-bde5-12b8d7e8d155.jpg",
-            "link": "/collections/puma-clothing-accessories",
+            "image": "",
+            "link": "/collections/mens-puma",
             "button_label": "Shop Now"
           }
         },
@@ -76,8 +69,8 @@
           "type": "card",
           "settings": {
             "heading": "Tops",
-            "image": "shopify://shop_images/02-tops_3a2fd55e-da20-4a62-93dc-546e14f99f3a.jpg",
-            "link": "/collections/puma-polo-shirts",
+            "image": "",
+            "link": "/collections/mens-puma",
             "button_label": "Shop Now"
           }
         },
@@ -85,17 +78,13 @@
           "type": "card",
           "settings": {
             "heading": "Outerwear",
-            "image": "shopify://shop_images/03-outerwear_4a5505d5-20b7-443c-99a9-4562d46cc465.jpg",
-            "link": "/collections/puma-mens-jackets",
+            "image": "",
+            "link": "/collections/mens-puma",
             "button_label": "Shop Now"
           }
         }
       },
-      "block_order": [
-        "card_1",
-        "card_2",
-        "card_3"
-      ],
+      "block_order": ["card_1", "card_2", "card_3"],
       "settings": {
         "layout": "grid",
         "columns": 3,
@@ -107,9 +96,5 @@
       }
     }
   },
-  "order": [
-    "hero_1",
-    "product_carousel_1",
-    "banner_cards_1"
-  ]
+  "order": ["hero_1", "product_carousel_1", "banner_cards_1"]
 }

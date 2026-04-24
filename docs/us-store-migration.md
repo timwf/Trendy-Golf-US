@@ -71,12 +71,7 @@ Current state: all 50 UK custom article templates removed from `templates/`; `ar
 
 ### 4. Brand Page Migration
 
-Same process as UK (see `docs/brand-migration.md`):
-
-- Scrape US staging site brand pages
-- Check which brands have landings vs direct-to-collection
-- Build `page.brand-*.json` templates with ported content
-- US may have different brand availability
+See **`docs/us-brand-migration.md`** for the full US plan — 9 templates total (1 A-Z listing + 8 bespoke brand landings: apc, g-fore, head, jlindeberg, manors, nike, puma, ralph-lauren), scraped from US staging into `_reference/scraped/brands/`. All required sections already exist; scope is overwriting 9 of the 10 UK-forked templates in place + deleting 1 (`page.brand-adidas-golf-origina.json`, no US landing). UK reference at `docs/brand-migration.md` (conceptual pattern only).
 
 ### 5. Page Template Content Updates
 

@@ -16,17 +16,17 @@
           "type": "slide",
           "settings": {
             "content_alignment": "bottom",
-            "subheading": "",
-            "heading": "Brands",
+            "subheading": "NEW BRAND",
+            "heading": "APC",
             "heading_size": "h2",
             "heading_font": "serif",
             "media_type": "video",
-            "video_url": "https://vimeo.com/1164444995",
-            "video_url_mobile": "",
+            "video_url": "https://vimeo.com/1165417144",
+            "video_url_mobile": "https://vimeo.com/1164445041",
             "hosted_video_url": "",
             "hosted_video_url_mobile": "",
-            "slide_duration": 7,
-            "button_label": "",
+            "slide_duration": 3,
+            "button_label": "VIEW BRAND",
             "button_link": "",
             "button_style": "white"
           }
@@ -68,7 +68,7 @@
           "type": "card",
           "settings": {
             "heading": "J.LINDEBERG Collection",
-            "image": "shopify://shop_images/trendy-brands-feature-puma.jpg",
+            "image": "shopify://shop_images/trendy-brands-feature-jlindeberg.jpg",
             "link": "shopify://pages/brand-jlindeberg",
             "button_label": "Shop Now"
           }

@@ -16,61 +16,26 @@
           "type": "slide",
           "settings": {
             "content_alignment": "bottom",
-            "subheading": "Shop the latest from G/FORE",
+            "subheading": "Shop the latest from G/FORE Mens.",
             "heading": "G/FORE",
             "heading_size": "h2",
             "heading_font": "serif",
-            "media_type": "video",
-            "video_url": "https://vimeo.com/1166096687",
-            "video_url_mobile": "https://vimeo.com/1166096720",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
-            "slide_duration": 10,
+            "media_type": "image",
+            "image": "",
+            "mobile_image": "",
+            "slide_duration": 3,
             "button_label": "Shop Now",
             "button_link": "/collections/mens-g-fore",
             "button_style": "white"
           }
         }
       },
-      "block_order": [
-        "slide_1"
-      ],
+      "block_order": ["slide_1"],
       "settings": {
         "autoplay": false,
         "show_progress": false,
         "enable_animation": true,
-        "aria_label": "Hero slideshow",
-        "margin_bottom": "small"
-      }
-    },
-    "product_carousel_1": {
-      "type": "product-carousel-tabs",
-      "settings": {
-        "title": "New In G/FORE",
-        "tab_1_label": "Mens",
-        "tab_1_products": [
-          "g-112-camo-heel-hybrid-spikeless-golf-shoe-snow-nimbus",
-          "g-112-hybrid-spikeless-golf-shoe-nimbus-shocking-orange",
-          "brushed-back-tech-quarter-zip-pullover-twilight-camo",
-          "luxe-mid-quarter-zip-snow",
-          "luxe-mid-quarter-zip-twilight",
-          "mg4-o2-g-lock-gradient-midsole-perforated-spikeless-golf-shoe-snow",
-          "gallivanter-g-lock-camo-sole-spiked-golf-shoe-snow-charcoal",
-          "mg4-o2-camo-golf-shoes-nimbus"
-        ],
-        "tab_2_label": "Womens",
-        "tab_2_products": [
-          "love-golf-low-profile-hat-clover",
-          "graphic-floral-print-tech-jersey-skort-clover",
-          "circle-gs-banded-visor-twilight",
-          "mg4-o2-embossed-spikeless-golf-shoe-snow",
-          "paneled-waterproof-hooded-jacket-dark-clover",
-          "tech-pique-contrast-panel-quarter-zip-polo-twilight",
-          "pointelle-g-crewneck-sweater-twilight",
-          "signature-left-hand-golf-glove-blossom"
-        ],
-        "tab_3_label": "",
-        "tab_3_products": []
+        "margin_bottom": "medium"
       }
     },
     "banner_cards_1": {
@@ -79,39 +44,112 @@
         "card_1": {
           "type": "card",
           "settings": {
-            "heading": "Shop All",
-            "image": "shopify://shop_images/01-shop-all_798d84a8-3f66-4088-8723-1170cd6a8a10.jpg",
-            "link": "/collections/shop-all-g-fore",
+            "heading": "Mens",
+            "image": "",
+            "link": "/collections/mens-g-fore",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "Womens",
+            "image": "",
+            "link": "/collections/womens-g-fore",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": ["card_1", "card_2"],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "small",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "product_carousel_1": {
+      "type": "product-carousel-tabs",
+      "settings": {
+        "title": "New In G/FORE",
+        "tab_1_label": "Mens",
+        "tab_1_products": [
+          "ryder-cup-triple-g-tech-jersey-polo-twilight",
+          "3-gs-tech-jersey-polo-lava",
+          "circle-gs-tech-jersey-polo-knockout-pink-ss25",
+          "x-trendygolf-limited-edition-all-day-polo-twilight",
+          "circle-gs-tech-jersey-polo-twilight-ss25"
+        ],
+        "tab_2_label": "Womens",
+        "tab_2_products": [
+          "womens-happy-gs-merino-wool-sweater-knockout-pink-ss25",
+          "icon-embroidered-tech-pique-ls-polo-snow",
+          "womens-silky-tech-nylon-skirt-twilight-aw24",
+          "womens-g-18-tpu-golf-shoes-blush-ss25",
+          "womens-g-18-tpu-golf-shoes-snow-multi-ss25"
+        ],
+        "tab_3_label": "",
+        "tab_3_products": []
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "content_alignment": "bottom",
+            "subheading": "TRENDYGOLF x G/FORE",
+            "heading": "",
+            "heading_size": "h3",
+            "heading_font": "sans",
+            "media_type": "image",
+            "image": "",
+            "mobile_image": "",
+            "slide_duration": 3,
+            "button_label": "SHOP NOW",
+            "button_link": "",
+            "button_style": "transparent"
+          }
+        }
+      },
+      "block_order": ["slide_1"],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "margin_bottom": "medium"
+      }
+    },
+    "banner_cards_2": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "Mens Footwear",
+            "image": "",
+            "link": "/collections/mens-g-fore-golf-shoes",
             "button_label": "Shop Now"
           }
         },
         "card_2": {
           "type": "card",
           "settings": {
-            "heading": "Trousers",
-            "image": "shopify://shop_images/02-trousers_d6070940-270f-4569-9574-1393719456e8.jpg",
-            "link": "/collections/g-fore-trousers",
-            "button_label": "Shop Now"
-          }
-        },
-        "card_3": {
-          "type": "card",
-          "settings": {
-            "heading": "Footwear",
-            "image": "shopify://shop_images/03-footwear_785c5276-9726-4acc-a723-366c2eecced1.jpg",
-            "link": "/collections/g-fore-golf-shoes",
+            "heading": "Womens Footwear",
+            "image": "",
+            "link": "/collections/womens-g-fore-golf-shoes",
             "button_label": "Shop Now"
           }
         }
       },
-      "block_order": [
-        "card_1",
-        "card_2",
-        "card_3"
-      ],
+      "block_order": ["card_1", "card_2"],
       "settings": {
         "layout": "grid",
-        "columns": 3,
+        "columns": 2,
         "aspect_ratio": "7:9",
         "heading_tag": "h2",
         "heading_size": "small",
@@ -120,9 +158,5 @@
       }
     }
   },
-  "order": [
-    "hero_1",
-    "product_carousel_1",
-    "banner_cards_1"
-  ]
+  "order": ["hero_1", "banner_cards_1", "product_carousel_1", "hero_2", "banner_cards_2"]
 }
