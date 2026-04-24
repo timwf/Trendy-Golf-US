@@ -17,12 +17,16 @@
           "settings": {
             "content_alignment": "bottom",
             "subheading": "Shop the latest from Manors.",
+            "heading_first": false,
             "heading": "Manors",
             "heading_size": "h2",
+            "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "video",
             "video_url": "https://vimeo.com/1167775799",
             "video_url_mobile": "https://vimeo.com/1168157794",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
             "slide_duration": 16,
             "button_label": "Shop Now",
             "button_link": "/collections/mens-manors-golf",
@@ -30,11 +34,14 @@
           }
         }
       },
-      "block_order": ["slide_1"],
+      "block_order": [
+        "slide_1"
+      ],
       "settings": {
         "autoplay": false,
         "show_progress": false,
         "enable_animation": true,
+        "aria_label": "Hero slideshow",
         "margin_bottom": "medium"
       }
     },
@@ -74,17 +81,20 @@
         "image_1": {
           "type": "image",
           "settings": {
-            "image": ""
+            "image": "shopify://shop_images/image-1.jpg"
           }
         },
         "image_2": {
           "type": "image",
           "settings": {
-            "image": ""
+            "image": "shopify://shop_images/image-2.jpg"
           }
         }
       },
-      "block_order": ["image_1", "image_2"],
+      "block_order": [
+        "image_1",
+        "image_2"
+      ],
       "settings": {
         "margin_bottom": "medium",
         "enable_animation": true
@@ -97,7 +107,7 @@
           "type": "card",
           "settings": {
             "heading": "Shop All",
-            "image": "",
+            "image": "shopify://shop_images/card-1-shop-all_51d8ba0c-9f66-48a3-b9b2-34d3afdb8485.jpg",
             "link": "/collections/mens-manors-golf",
             "button_label": "Shop Now"
           }
@@ -106,7 +116,7 @@
           "type": "card",
           "settings": {
             "heading": "Tops",
-            "image": "",
+            "image": "shopify://shop_images/card-2-tops_da065b7e-0591-4850-bf5f-f928181267b9.jpg",
             "link": "/collections/mens-manors-golf",
             "button_label": "Shop Now"
           }
@@ -115,13 +125,17 @@
           "type": "card",
           "settings": {
             "heading": "Waterproofs",
-            "image": "",
+            "image": "shopify://shop_images/card-3-waterproofs.jpg",
             "link": "/collections/mens-manors-golf",
             "button_label": "Shop Now"
           }
         }
       },
-      "block_order": ["card_1", "card_2", "card_3"],
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
       "settings": {
         "layout": "grid",
         "columns": 3,
@@ -133,5 +147,10 @@
       }
     }
   },
-  "order": ["hero_1", "product_carousel_1", "media_grid_1", "banner_cards_1"]
+  "order": [
+    "hero_1",
+    "product_carousel_1",
+    "media_grid_1",
+    "banner_cards_1"
+  ]
 }
