@@ -75,6 +75,10 @@
           "label": "Copyright text",
           "info": "Leave blank for automatic © [year] [shop name]"
         },
+        "logo": {
+          "label": "Brand wordmark image",
+          "info": "Upload to replace the built-in TRENDY GOLF® SVG wordmark. Leave blank to use the default."
+        },
         "show_logo": {
           "label": "Show brand wordmark"
         },

@@ -27,7 +27,7 @@
 {%- liquid
   assign input_id = id | default: name
   assign input_type = type | default: 'text'
-  assign base_input_class = 'block w-full appearance-none border border-taupe-600 bg-white px-4 py-3 read-only:cursor-not-allowed read-only:bg-taupe-300 read-only:text-taupe-600 focus:outline-none placeholder:text-taupe-600'
+  assign base_input_class = 'block w-full appearance-none rounded-[5px] border border-taupe-600 bg-white px-4 py-3 read-only:cursor-not-allowed read-only:bg-taupe-300 read-only:text-taupe-600 focus:outline-none placeholder:text-taupe-600'
   if input_class
     assign full_input_class = base_input_class | append: ' ' | append: input_class
   else

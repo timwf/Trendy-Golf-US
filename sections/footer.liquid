@@ -1,5 +1,5 @@
 <footer class="pb-10 pt-12" role="contentinfo">
-  <div class="container">
+  <div class="container-wide">
     <hr class="mb-12 border-t border-taupe-900">
   </div>
   <div class="container mb-14">
@@ -101,6 +101,9 @@
   {%- comment -%} Brand wordmark {%- endcomment -%}
   {%- if section.settings.show_logo -%}
     <div class="container-wide mb-14">
+      {%- if section.settings.logo != blank -%}
+        {{ section.settings.logo | image_url: width: 2000 | image_tag: class: 'block w-full h-auto', loading: 'lazy', alt: shop.name }}
+      {%- else -%}
       <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1465 159" fill="none" aria-label="{{ shop.name }}">
         <g clip-path="url(#footer-logo-clip)">
           <path d="M45.7009 41.415H0.5V3.94678H134.897V41.415H89.4548V155.645H45.7009V41.415Z" fill="#234A31"/>
@@ -121,6 +124,7 @@
           </clipPath>
         </defs>
       </svg>
+      {%- endif -%}
     </div>
   {%- endif -%}
 
@@ -231,6 +235,12 @@
       "id": "copyright_text",
       "label": "t:sections.footer.settings.copyright_text.label",
       "info": "t:sections.footer.settings.copyright_text.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "t:sections.footer.settings.logo.label",
+      "info": "t:sections.footer.settings.logo.info"
     },
     {
       "type": "checkbox",
