@@ -244,10 +244,10 @@
       if (timer) clearTimeout(timer);
 
       /* Reset classes */
-      el.classList.remove('bg-clubhouse-green-600', 'bg-red-500', 'bg-taupe-400');
+      el.classList.remove('bg-taupe-900', 'bg-red-500', 'bg-taupe-400');
 
       if (type === 'success') {
-        el.classList.add('bg-clubhouse-green-600');
+        el.classList.add('bg-taupe-900');
         iconEl.innerHTML = checkSvg;
       } else if (type === 'error') {
         el.classList.add('bg-red-500');

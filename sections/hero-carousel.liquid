@@ -84,7 +84,29 @@
             data-slide-index="{{ forloop.index0 }}"
             {{ block.shopify_attributes }}>
 
-            {%- comment -%} Poster layer — always visible beneath video {%- endcomment -%}
+            {%- comment -%} Poster layer — always visible beneath video.
+              Three image slots (desktop / tablet / mobile) — desktop image's
+              visibility shrinks as tablet/mobile images are added so only one
+              poster ever paints per breakpoint. {%- endcomment -%}
+            {%- liquid
+              assign has_mobile_img = false
+              assign has_tablet_img = false
+              if block.settings.mobile_image != blank
+                assign has_mobile_img = true
+              endif
+              if block.settings.tablet_image != blank
+                assign has_tablet_img = true
+              endif
+
+              assign desktop_img_class = 'absolute inset-0 size-full object-cover'
+              if has_mobile_img and has_tablet_img
+                assign desktop_img_class = 'absolute inset-0 size-full object-cover hidden lg:block'
+              elsif has_mobile_img
+                assign desktop_img_class = 'absolute inset-0 size-full object-cover hidden md:block'
+              elsif has_tablet_img
+                assign desktop_img_class = 'absolute inset-0 size-full object-cover md:hidden lg:block'
+              endif
+            -%}
             {%- if block.settings.image != blank -%}
               <img
                 src="{{ block.settings.image | image_url: width: 1920 }}"
@@ -94,14 +116,29 @@
                         {{ block.settings.image | image_url: width: 1920 }} 1920w"
                 sizes="100vw"
                 alt="{{ block.settings.heading | escape }}"
-                class="absolute inset-0 size-full object-cover{% if block.settings.mobile_image != blank %} hidden md:block{% endif %}"
+                class="{{ desktop_img_class }}"
                 width="1920"
                 height="1080"
                 loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
                 fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}">
             {%- endif -%}
 
-            {%- if block.settings.mobile_image != blank -%}
+            {%- if has_tablet_img -%}
+              <img
+                src="{{ block.settings.tablet_image | image_url: width: 1440 }}"
+                srcset="{{ block.settings.tablet_image | image_url: width: 750 }} 750w,
+                        {{ block.settings.tablet_image | image_url: width: 1080 }} 1080w,
+                        {{ block.settings.tablet_image | image_url: width: 1440 }} 1440w"
+                sizes="100vw"
+                alt="{{ block.settings.heading | escape }}"
+                class="absolute inset-0 size-full object-cover hidden md:block lg:hidden"
+                width="{{ block.settings.tablet_image.width }}"
+                height="{{ block.settings.tablet_image.height }}"
+                loading="{% if forloop.first %}eager{% else %}lazy{% endif %}"
+                fetchpriority="{% if forloop.first %}high{% else %}auto{% endif %}">
+            {%- endif -%}
+
+            {%- if has_mobile_img -%}
               <img
                 src="{{ block.settings.mobile_image | image_url: width: 750 }}"
                 srcset="{{ block.settings.mobile_image | image_url: width: 375 }} 375w,
@@ -161,19 +198,77 @@
               endif
             -%}
 
+            {%- comment -%} 9-position alignment — desktop + mobile independent.
+              Values: top|middle|bottom — left|center|right.
+              Mobile classes apply <1024px (covers tablet too); desktop uses lg: prefix. {%- endcomment -%}
             {%- liquid
-              assign align_class = 'justify-end'
-              if block.settings.content_alignment == 'top'
-                assign align_class = 'justify-start'
-              elsif block.settings.content_alignment == 'centre'
-                assign align_class = 'justify-center'
-              endif
+              assign mobile_align = block.settings.mobile_alignment | default: 'bottom-center'
+              assign desktop_align = block.settings.desktop_alignment | default: 'bottom-center'
+
+              assign mobile_parts = mobile_align | split: '-'
+              assign mobile_v = mobile_parts[0]
+              assign mobile_h = mobile_parts[1]
+              assign desktop_parts = desktop_align | split: '-'
+              assign desktop_v = desktop_parts[0]
+              assign desktop_h = desktop_parts[1]
+
+              case mobile_v
+                when 'top'
+                  assign m_justify = 'justify-start'
+                when 'middle'
+                  assign m_justify = 'justify-center'
+                else
+                  assign m_justify = 'justify-end'
+              endcase
+              case mobile_h
+                when 'left'
+                  assign m_items = 'items-start'
+                  assign m_text = 'text-left'
+                  assign m_margin = 'ml-0'
+                  assign m_btn = 'justify-start'
+                when 'right'
+                  assign m_items = 'items-end'
+                  assign m_text = 'text-right'
+                  assign m_margin = 'mr-0'
+                  assign m_btn = 'justify-end'
+                else
+                  assign m_items = 'items-center'
+                  assign m_text = 'text-center'
+                  assign m_margin = ''
+                  assign m_btn = 'justify-center'
+              endcase
+
+              case desktop_v
+                when 'top'
+                  assign d_justify = 'lg:justify-start'
+                when 'middle'
+                  assign d_justify = 'lg:justify-center'
+                else
+                  assign d_justify = 'lg:justify-end'
+              endcase
+              case desktop_h
+                when 'left'
+                  assign d_items = 'lg:items-start'
+                  assign d_text = 'lg:text-left'
+                  assign d_margin = 'lg:ml-0 lg:mr-auto'
+                  assign d_btn = 'lg:justify-start'
+                when 'right'
+                  assign d_items = 'lg:items-end'
+                  assign d_text = 'lg:text-right'
+                  assign d_margin = 'lg:mr-0 lg:ml-auto'
+                  assign d_btn = 'lg:justify-end'
+                else
+                  assign d_items = 'lg:items-center'
+                  assign d_text = 'lg:text-center'
+                  assign d_margin = 'lg:ml-auto lg:mr-auto'
+                  assign d_btn = 'lg:justify-center'
+              endcase
             -%}
             <div
-              class="absolute left-0 top-0 z-2 flex size-full flex-col items-center py-12 lg:py-14 xl:py-16 3xl:py-28 {{ align_class }}">
+              class="absolute left-0 top-0 z-2 flex size-full flex-col py-12 lg:py-14 xl:py-16 3xl:py-28 {{ m_justify }} {{ m_items }} {{ d_justify }} {{ d_items }}">
               <div
                 {% if section.settings.enable_animation %}data-inview="false"{% else %}data-inview="true"{% endif %}
-                class="group-inview group/blocks container-narrow text-center text-white">
+                class="group-inview group/blocks container-narrow text-white {{ m_text }} {{ d_text }} {{ m_margin }} {{ d_margin }}">
 
                 <div class="mb-8 opacity-0 -translate-y-14 transition-all duration-1000 ease animation-group group-data-[inview=true]/blocks:opacity-100 group-data-[inview=true]/blocks:translate-y-0">
                   {%- capture slide_heading -%}
@@ -218,7 +313,7 @@
                         assign btn_class = 'flex items-center gap-2 text-center text-sm tracking-wider transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 uppercase text-white'
                     endcase
                   -%}
-                  <div class="flex justify-center delay-300 opacity-0 translate-y-14 transition-all duration-1000 ease animation-group group-data-[inview=true]/blocks:opacity-100 group-data-[inview=true]/blocks:translate-y-0">
+                  <div class="flex {{ m_btn }} {{ d_btn }} delay-300 opacity-0 translate-y-14 transition-all duration-1000 ease animation-group group-data-[inview=true]/blocks:opacity-100 group-data-[inview=true]/blocks:translate-y-0">
                     <a
                       href="{{ block.settings.button_link }}"
                       class="{{ btn_class }}">
@@ -636,14 +731,39 @@
       "settings": [
         {
           "type": "select",
-          "id": "content_alignment",
-          "label": "Content alignment",
+          "id": "desktop_alignment",
+          "label": "Desktop content position",
+          "info": "Position of the heading / subheading / button on desktop (≥1024px).",
           "options": [
-            { "value": "top", "label": "Top" },
-            { "value": "centre", "label": "Centre" },
-            { "value": "bottom", "label": "Bottom" }
+            { "value": "top-left",      "label": "Top left" },
+            { "value": "top-center",    "label": "Top centre" },
+            { "value": "top-right",     "label": "Top right" },
+            { "value": "middle-left",   "label": "Middle left" },
+            { "value": "middle-center", "label": "Middle centre" },
+            { "value": "middle-right",  "label": "Middle right" },
+            { "value": "bottom-left",   "label": "Bottom left" },
+            { "value": "bottom-center", "label": "Bottom centre" },
+            { "value": "bottom-right",  "label": "Bottom right" }
           ],
-          "default": "bottom"
+          "default": "bottom-center"
+        },
+        {
+          "type": "select",
+          "id": "mobile_alignment",
+          "label": "Mobile / tablet content position",
+          "info": "Position on mobile and tablet (<1024px).",
+          "options": [
+            { "value": "top-left",      "label": "Top left" },
+            { "value": "top-center",    "label": "Top centre" },
+            { "value": "top-right",     "label": "Top right" },
+            { "value": "middle-left",   "label": "Middle left" },
+            { "value": "middle-center", "label": "Middle centre" },
+            { "value": "middle-right",  "label": "Middle right" },
+            { "value": "bottom-left",   "label": "Bottom left" },
+            { "value": "bottom-center", "label": "Bottom centre" },
+            { "value": "bottom-right",  "label": "Bottom right" }
+          ],
+          "default": "bottom-center"
         },
         {
           "type": "text",
@@ -707,6 +827,12 @@
           "id": "image",
           "label": "t:sections.hero_carousel.blocks.slide.settings.image.label",
           "info": "For video slides: shown instantly while the video loads. If blank, the Vimeo thumbnail is fetched and used as a fallback."
+        },
+        {
+          "type": "image_picker",
+          "id": "tablet_image",
+          "label": "Tablet image",
+          "info": "Optional. Shown between 768px and 1023px (tablet aspect 11:9). Falls back to desktop image if blank."
         },
         {
           "type": "image_picker",
