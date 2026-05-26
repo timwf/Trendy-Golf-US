@@ -1,0 +1,120 @@
+{%- comment -%}
+  Standalone PDP accordions strip — full-width below the image grid.
+  Optional alternative to the in-right-column accordion blocks on
+  product-template. Add this section under the product template in the
+  theme editor if you'd rather keep the accordions below the images
+  (original layout). When using this section, you'll typically remove the
+  Description / Features & benefits / Delivery & returns accordion blocks
+  from the product-template section to avoid duplicates.
+{%- endcomment -%}
+
+<div class="mb-10" id="product-accordions-below">
+  <div class="container-narrow">
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+
+        {%- when 'description' -%}
+          {%- if product.description != blank -%}
+            <div data-accordion {{ block.shopify_attributes }}>
+              <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
+                <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ 'sections.product.description_heading' | t }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 flex-none transition-transform" data-accordion-icon aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                </svg>
+              </button>
+              <div class="overflow-hidden" style="height:0" data-accordion-panel>
+                <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
+                  {{ product.description }}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+
+        {%- when 'features' -%}
+          {%- if product.metafields.custom.features_and_benefits != blank -%}
+            <div data-accordion id="features-accordion-below" {{ block.shopify_attributes }}>
+              <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
+                <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ 'sections.product.features_heading' | t }}</span>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 flex-none transition-transform" data-accordion-icon aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                </svg>
+              </button>
+              <div class="overflow-hidden" style="height:0" data-accordion-panel>
+                <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
+                  {%- assign features_raw = product.metafields.custom.features_and_benefits | split: '*' -%}
+                  {%- for feature in features_raw -%}
+                    {%- assign feature_trimmed = feature | strip -%}
+                    {%- if feature_trimmed != blank -%}
+                      {%- assign parts = feature_trimmed | split: '–' -%}
+                      <p>
+                        <span class="font-bold">{{ parts[0] | strip }}</span>
+                        {%- if parts.size > 1 -%}
+                          <br>
+                          {%- for part in parts -%}
+                            {%- if forloop.first -%}{%- continue -%}{%- endif -%}
+                            {%- unless forloop.index == 1 -%}–{% endunless %}{{ part | strip }}
+                          {%- endfor -%}
+                        {%- endif -%}
+                      </p>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+
+        {%- when 'delivery_returns' -%}
+          <div data-accordion {{ block.shopify_attributes }}>
+            <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
+              <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ 'sections.product.delivery_heading' | t }}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 flex-none transition-transform" data-accordion-icon aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+              </svg>
+            </button>
+            <div class="overflow-hidden" style="height:0" data-accordion-panel>
+              <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
+                {{ section.settings.delivery_returns_content }}
+              </div>
+            </div>
+          </div>
+
+      {%- endcase -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "PDP accordions strip",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Full-width accordion strip rendered below the product image grid. Add this if you'd rather keep Description / Features & benefits / Delivery & returns under the images instead of inside the right-column blocks on the product template. Remove the matching accordion blocks from the product template to avoid duplicates."
+    },
+    {
+      "type": "richtext",
+      "id": "delivery_returns_content",
+      "label": "Delivery & returns content",
+      "default": "<p>Free UK standard delivery on orders over £100.</p><p>Express delivery available. See our full delivery and returns policy for details.</p>"
+    }
+  ],
+  "blocks": [
+    { "type": "description", "name": "Description", "limit": 1 },
+    { "type": "features", "name": "Features & benefits", "limit": 1 },
+    { "type": "delivery_returns", "name": "Delivery & returns", "limit": 1 }
+  ],
+  "presets": [
+    {
+      "name": "PDP accordions strip",
+      "blocks": [
+        { "type": "description" },
+        { "type": "features" },
+        { "type": "delivery_returns" }
+      ]
+    }
+  ],
+  "enabled_on": {
+    "templates": ["product"]
+  }
+}
+{% endschema %}

@@ -76,172 +76,228 @@
 
     {%- comment -%} ---- RIGHT: Product info (sticky on desktop) ---- {%- endcomment -%}
     <div class="max-w-xl px-6">
-      <div class="md:sticky md:top-0 md:flex md:h-[calc(100vh-64px)] md:flex-col md:justify-center">
+      <div class="md:sticky md:top-0 md:flex md:min-h-[calc(100vh-64px)] md:flex-col md:justify-center">
 
-        {%- comment -%} Brand name {%- endcomment -%}
-        {%- if product.vendor != blank -%}
-          <p class="mb-5 text-sm uppercase text-taupe-700">{{ product.vendor }}</p>
-        {%- endif -%}
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
 
-        {%- comment -%} Product title {%- endcomment -%}
-        <h1 class="mb-3 font-sans text-xl lg:text-2xl">{{ display_name }}</h1>
-
-        {%- comment -%} Price {%- endcomment -%}
-        <div class="mb-6" data-product-price>
-          {%- if current_variant.compare_at_price > current_variant.price -%}
-            <span class="mb-0 text-xl">
-              <span class="font-semibold text-red-600">{{ current_variant.price | money }}</span>
-              <s class="ml-2 text-base text-taupe-700">{{ current_variant.compare_at_price | money }}</s>
-            </span>
-          {%- else -%}
-            <span class="mb-0 text-xl"><span class="font-semibold">{{ current_variant.price | money }}</span></span>
-          {%- endif -%}
-        </div>
-
-        {%- comment -%} Reviews rating — custom Lipscore API client (hidden until data loads) {%- endcomment -%}
-        <div class="mb-6 hidden" data-reviews-rating>
-          <button type="button" class="flex items-center justify-center gap-2" data-reviews-open aria-label="Open reviews">
-            {%- render 'icon', icon: 'star-solid', icon_class: 'size-5' -%}
-            <span class="pt-0.5 text-sm"><span data-reviews-avg></span> <span class="text-taupe-700">(<span data-reviews-count></span>)</span></span>
-          </button>
-        </div>
-
-        {%- comment -%} Content flex reorder: selectors first on mobile, description first on desktop {%- endcomment -%}
-        <div class="flex flex-col">
-
-          {%- comment -%} === Selectors + button (order-2 on desktop) === {%- endcomment -%}
-          <div class="mb-6 md:order-2">
-
-            {%- comment -%} Colour label + swatches {%- endcomment -%}
-            {%- assign colour_name = product.metafields.custom.color -%}
-            {%- if colour_name != blank -%}
-              <div class="mb-5">
-                <p class="mb-2 text-xs lg:text-sm"><span class="text-taupe-700">{{ 'sections.product.colour_label' | t }}</span> {{ colour_name }}</p>
-                <div class="flex gap-2">
-                  {%- assign first_collection = product.collections.first -%}
-                  {%- if first_collection -%}
-                    {%- for sibling in first_collection.products -%}
-                      {%- assign sibling_name = sibling.metafields.custom.product_display_name | default: sibling.title -%}
-                      {%- if sibling_name == display_name -%}
-                        {%- assign is_active = false -%}
-                        {%- if sibling.id == product.id -%}
-                          {%- assign is_active = true -%}
-                        {%- endif -%}
-                        {%- render 'colour-swatch',
-                          url: sibling.url,
-                          colour: sibling.metafields.custom.swatch_colour,
-                          colour_secondary: sibling.metafields.custom.swatch_colour_secondary,
-                          name: sibling.metafields.custom.color,
-                          active: is_active
-                        -%}
-                      {%- endif -%}
-                    {%- endfor -%}
-                  {%- endif -%}
-                </div>
+            {%- when 'title' -%}
+              <div {{ block.shopify_attributes }}>
+                {%- if product.vendor != blank -%}
+                  <p class="mb-5 text-sm uppercase text-taupe-700">{{ product.vendor }}</p>
+                {%- endif -%}
+                <h1 class="mb-3 font-sans text-xl lg:text-2xl">{{ display_name }}</h1>
               </div>
-            {%- endif -%}
 
-            {%- comment -%} Product form {%- endcomment -%}
-            {%- form 'product', product, id: 'product-form', data-product-form: '' -%}
-              <input type="hidden" name="id" value="{{ current_variant.id }}" data-variant-id>
+            {%- when 'price' -%}
+              <div class="mb-6" data-product-price {{ block.shopify_attributes }}>
+                {%- if current_variant.compare_at_price > current_variant.price -%}
+                  <span class="mb-0 text-xl">
+                    <span class="font-semibold text-red-600">{{ current_variant.price | money }}</span>
+                    <s class="ml-2 text-base text-taupe-700">{{ current_variant.compare_at_price | money }}</s>
+                  </span>
+                {%- else -%}
+                  <span class="mb-0 text-xl"><span class="font-semibold">{{ current_variant.price | money }}</span></span>
+                {%- endif -%}
+              </div>
 
-              {%- comment -%} Size selector {%- endcomment -%}
-              {%- if product.has_only_default_variant == false -%}
-                <div class="mb-5">
-                  <label class="mb-2 flex items-end justify-between text-sm">
-                    <span>{{ 'sections.product.size_label' | t }}</span>
-                    {%- if section.settings.enable_size_guide -%}
-                      <button type="button" class="text-sm font-bold text-taupe-900 hover:text-taupe-700" data-size-guide-btn>
-                        {{ 'sections.product.size_guide' | t }}
-                      </button>
-                    {%- endif -%}
-                  </label>
-                  <div class="relative">
-                    <select
-                      data-variant-select
-                      class="block w-full appearance-none border border-taupe-600 bg-taupe-100 px-4 py-3 focus:outline-none"
-                    >
-                      {%- for variant in product.variants -%}
-                        <option
-                          value="{{ variant.id }}"
-                          data-price="{{ variant.price | money }}"
-                          data-compare-price="{{ variant.compare_at_price | money }}"
-                          data-has-compare="{{ variant.compare_at_price | default: 0 }}"
-                          data-available="{{ variant.available }}"
-                          data-option-value="{{ variant.title | escape }}"
-                          {% if variant == current_variant %}selected{% endif %}
-                          {% unless variant.available %}disabled{% endunless %}
-                        >
-                          {{ variant.title }}{% unless variant.available %} — {{ 'sections.product.sold_out' | t }}{% endunless %}
-                        </option>
+            {%- when 'reviews_stars' -%}
+              <div class="mb-6 hidden" data-reviews-rating {{ block.shopify_attributes }}>
+                <button type="button" class="flex items-center justify-center gap-2" data-reviews-open aria-label="Open reviews">
+                  {%- render 'icon', icon: 'star-solid', icon_class: 'size-5' -%}
+                  <span class="pt-0.5 text-sm"><span data-reviews-avg></span> <span class="text-taupe-700">(<span data-reviews-count></span>)</span></span>
+                </button>
+              </div>
+
+            {%- when 'short_description' -%}
+              {%- if product.description != blank -%}
+                <div class="mb-4" {{ block.shopify_attributes }}>
+                  <p class="mb-2 text-sm">{{ product.description | strip_html | truncatewords: 30 }}</p>
+                </div>
+              {%- endif -%}
+
+            {%- when 'colour_swatches' -%}
+              {%- assign colour_name = product.metafields.custom.color -%}
+              {%- if colour_name != blank -%}
+                <div class="mb-5" {{ block.shopify_attributes }}>
+                  <p class="mb-2 text-xs lg:text-sm"><span class="text-taupe-700">{{ 'sections.product.colour_label' | t }}</span> {{ colour_name }}</p>
+                  <div class="flex gap-2">
+                    {%- assign first_collection = product.collections.first -%}
+                    {%- if first_collection -%}
+                      {%- for sibling in first_collection.products -%}
+                        {%- assign sibling_name = sibling.metafields.custom.product_display_name | default: sibling.title -%}
+                        {%- if sibling_name == display_name -%}
+                          {%- assign is_active = false -%}
+                          {%- if sibling.id == product.id -%}
+                            {%- assign is_active = true -%}
+                          {%- endif -%}
+                          {%- render 'colour-swatch',
+                            url: sibling.url,
+                            colour: sibling.metafields.custom.swatch_colour,
+                            colour_secondary: sibling.metafields.custom.swatch_colour_secondary,
+                            name: sibling.metafields.custom.color,
+                            active: is_active
+                          -%}
+                        {%- endif -%}
                       {%- endfor -%}
-                    </select>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2" aria-hidden="true">
-                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
-                    </svg>
+                    {%- endif -%}
                   </div>
                 </div>
               {%- endif -%}
 
-              {%- comment -%} Add to basket button + wishlist {%- endcomment -%}
-              <div class="mb-5 flex w-full gap-4">
-                <div class="flex-1">
-                  <button
-                    type="submit"
-                    data-add-to-cart
-                    class="flex w-full items-center justify-center gap-2 bg-taupe-900 px-4 py-3 text-center text-sm uppercase tracking-wider text-white transition-all enabled:hover:bg-taupe-600 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 lg:px-10"
-                    {% unless current_variant.available %}disabled{% endunless %}
-                  >
-                    {%- if current_variant.available -%}
-                      {{ 'sections.product.add_to_basket' | t }}
-                    {%- else -%}
-                      {{ 'sections.product.sold_out' | t }}
-                    {%- endif -%}
-                  </button>
+            {%- when 'size_and_buy' -%}
+              <div {{ block.shopify_attributes }}>
+                {%- form 'product', product, id: 'product-form', data-product-form: '' -%}
+                  <input type="hidden" name="id" value="{{ current_variant.id }}" data-variant-id>
+
+                  {%- if product.has_only_default_variant == false -%}
+                    <div class="mb-5">
+                      <label class="mb-2 flex items-end justify-between text-sm">
+                        <span>{{ 'sections.product.size_label' | t }}</span>
+                        {%- if section.settings.enable_size_guide -%}
+                          <button type="button" class="text-sm font-bold text-taupe-900 hover:text-taupe-700" data-size-guide-btn>
+                            {{ 'sections.product.size_guide' | t }}
+                          </button>
+                        {%- endif -%}
+                      </label>
+                      <div class="relative">
+                        <select
+                          data-variant-select
+                          class="block w-full appearance-none border border-taupe-600 bg-taupe-100 px-4 py-3 focus:outline-none"
+                        >
+                          {%- for variant in product.variants -%}
+                            <option
+                              value="{{ variant.id }}"
+                              data-price="{{ variant.price | money }}"
+                              data-compare-price="{{ variant.compare_at_price | money }}"
+                              data-has-compare="{{ variant.compare_at_price | default: 0 }}"
+                              data-available="{{ variant.available }}"
+                              data-option-value="{{ variant.title | escape }}"
+                              {% if variant == current_variant %}selected{% endif %}
+                              {% unless variant.available %}disabled{% endunless %}
+                            >
+                              {{ variant.title }}{% unless variant.available %} — {{ 'sections.product.sold_out' | t }}{% endunless %}
+                            </option>
+                          {%- endfor -%}
+                        </select>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2" aria-hidden="true">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                        </svg>
+                      </div>
+                    </div>
+                  {%- endif -%}
+
+                  <div class="mb-5 flex w-full gap-4">
+                    <div class="flex-1">
+                      <button
+                        type="submit"
+                        data-add-to-cart
+                        class="flex w-full items-center justify-center gap-2 bg-taupe-900 px-4 py-3 text-center text-sm uppercase tracking-wider text-white transition-all enabled:hover:bg-taupe-600 disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 lg:px-10"
+                        {% unless current_variant.available %}disabled{% endunless %}
+                      >
+                        {%- if current_variant.available -%}
+                          {{ 'sections.product.add_to_basket' | t }}
+                        {%- else -%}
+                          {{ 'sections.product.sold_out' | t }}
+                        {%- endif -%}
+                      </button>
+                    </div>
+                    <button
+                      type="button"
+                      class="swym-button swym-add-to-wishlist-view-product product_{{ product.id }} flex items-center justify-center px-5 py-3"
+                      style="border: 1px solid #b9b5aa !important; width: 42px;"
+                      data-swaction="addToWishlist"
+                      data-with-epi="true"
+                      data-product-id="{{ product.id | json }}"
+                      data-variant-id="{{ current_variant.id }}"
+                      data-product-url="{{ shop.url }}{{ product.url }}"
+                      aria-label="Add to wishlist"
+                    ></button>
+                  </div>
+                {%- endform -%}
+              </div>
+
+            {%- when 'tgcc_rewards' -%}
+              <div class="mb-4 flex items-center gap-2 bg-taupe-900 p-4 text-sm text-white" {{ block.shopify_attributes }}>
+                {%- render 'icon', icon: 'trophy', size: 'size-5' -%}
+                <p class="mb-0">Register at checkout to unlock <b>TGCC Rewards</b> — earn points with every purchase.</p>
+              </div>
+
+            {%- when 'delivery_countdown' -%}
+              {%- if section.settings.enable_delivery_estimate -%}
+                <div class="mb-4 flex gap-2 hidden" data-delivery-estimate {{ block.shopify_attributes }}>
+                  {%- render 'icon', icon: 'truck', size: 'size-5', class: 'flex-none text-taupe-700' -%}
+                  <p class="mb-0 text-sm" aria-live="polite">Get it by <span class="font-bold">tomorrow</span> if you order within&nbsp;<span class="font-bold text-clubhouse-green-600" data-delivery-countdown></span></p>
                 </div>
-                <button
-                  type="button"
-                  class="swym-button swym-add-to-wishlist-view-product product_{{ product.id }} flex items-center justify-center px-5 py-3"
-                  style="border: 1px solid #b9b5aa !important; width: 42px;"
-                  data-swaction="addToWishlist"
-                  data-with-epi="true"
-                  data-product-id="{{ product.id | json }}"
-                  data-variant-id="{{ current_variant.id }}"
-                  data-product-url="{{ shop.url }}{{ product.url }}"
-                  aria-label="Add to wishlist"
-                ></button>
-              </div>
-            {%- endform -%}
-
-            {%- comment -%} TGCC rewards banner {%- endcomment -%}
-            <div class="mb-4 flex items-center gap-2 bg-taupe-900 p-4 text-sm text-white">
-              {%- render 'icon', icon: 'trophy', size: 'size-5' -%}
-              <p class="mb-0">Register at checkout to unlock <b>TGCC Rewards</b> — earn points with every purchase.</p>
-            </div>
-
-            {%- comment -%} Delivery estimate (dynamic countdown) {%- endcomment -%}
-            {%- if section.settings.enable_delivery_estimate -%}
-              <div class="flex gap-2 hidden" data-delivery-estimate>
-                {%- render 'icon', icon: 'truck', size: 'size-5', class: 'flex-none text-taupe-700' -%}
-                <p class="mb-0 text-sm" aria-live="polite">Get it by <span class="font-bold">tomorrow</span> if you order within&nbsp;<span class="font-bold text-clubhouse-green-600" data-delivery-countdown></span></p>
-              </div>
-            {%- endif -%}
-
-          </div>
-
-          {%- comment -%} === Description excerpt (order-1 on desktop) === {%- endcomment -%}
-          <div class="md:order-1">
-            <div class="mb-4">
-              {%- if product.description != blank -%}
-                <p class="mb-2 text-sm">{{ product.description | strip_html | truncatewords: 30 }}</p>
               {%- endif -%}
-              <button type="button" class="hidden cursor-pointer items-center hover:text-taupe-700 md:flex" data-scroll-to-features>
-                {{ 'sections.product.features_heading' | t }}
-              </button>
-            </div>
-          </div>
 
-        </div>
+            {%- when 'description_accordion' -%}
+              {%- if product.description != blank -%}
+                <div data-accordion {{ block.shopify_attributes }}>
+                  <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
+                    <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ 'sections.product.description_heading' | t }}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 flex-none transition-transform" data-accordion-icon aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                    </svg>
+                  </button>
+                  <div class="overflow-hidden" style="height:0" data-accordion-panel>
+                    <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
+                      {{ product.description }}
+                    </div>
+                  </div>
+                </div>
+              {%- endif -%}
+
+            {%- when 'features_accordion' -%}
+              {%- if product.metafields.custom.features_and_benefits != blank -%}
+                <div data-accordion id="features-accordion" {{ block.shopify_attributes }}>
+                  <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
+                    <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ 'sections.product.features_heading' | t }}</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 flex-none transition-transform" data-accordion-icon aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                    </svg>
+                  </button>
+                  <div class="overflow-hidden" style="height:0" data-accordion-panel>
+                    <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
+                      {%- assign features_raw = product.metafields.custom.features_and_benefits | split: '*' -%}
+                      {%- for feature in features_raw -%}
+                        {%- assign feature_trimmed = feature | strip -%}
+                        {%- if feature_trimmed != blank -%}
+                          {%- assign parts = feature_trimmed | split: '–' -%}
+                          <p>
+                            <span class="font-bold">{{ parts[0] | strip }}</span>
+                            {%- if parts.size > 1 -%}
+                              <br>
+                              {%- for part in parts -%}
+                                {%- if forloop.first -%}{%- continue -%}{%- endif -%}
+                                {%- unless forloop.index == 1 -%}–{% endunless %}{{ part | strip }}
+                              {%- endfor -%}
+                            {%- endif -%}
+                          </p>
+                        {%- endif -%}
+                      {%- endfor -%}
+                    </div>
+                  </div>
+                </div>
+              {%- endif -%}
+
+            {%- when 'returns_accordion' -%}
+              <div data-accordion {{ block.shopify_attributes }}>
+                <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
+                  <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ 'sections.product.delivery_heading' | t }}</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 flex-none transition-transform" data-accordion-icon aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                  </svg>
+                </button>
+                <div class="overflow-hidden" style="height:0" data-accordion-panel>
+                  <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
+                    {{ section.settings.delivery_returns_content }}
+                  </div>
+                </div>
+              </div>
+
+          {%- endcase -%}
+        {%- endfor -%}
 
         {%- comment -%} Scroll progress indicator (desktop only) {%- endcomment -%}
         <div class="hidden h-32 w-1 lg:block absolute left-0 top-1/2 -translate-x-10 -translate-y-1/2" data-scroll-indicator>
@@ -257,86 +313,6 @@
       </div>
     </div>
 
-  </div>
-
-  {%- comment -%} ====== Accordion section ====== {%- endcomment -%}
-  {%- comment -%}
-    Scrape wraps accordions + Explore More in `mb-14 flex flex-col gap-10`.
-    Our Explore More lives in a separate section, so we replicate that spacing
-    by matching `gap-10` here (mb-10 → 40px to Explore More) and putting
-    `mb-14` on the Explore More section root (56px below the carousel).
-  {%- endcomment -%}
-  <div class="mb-10">
-  <div class="container-narrow" id="product-accordions">
-    {%- comment -%} Description accordion {%- endcomment -%}
-    {%- if product.description != blank -%}
-      <div data-accordion>
-        <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
-          <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ 'sections.product.description_heading' | t }}</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 flex-none transition-transform" data-accordion-icon aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
-          </svg>
-        </button>
-        <div class="overflow-hidden" style="height:0" data-accordion-panel>
-          <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
-            {{ product.description }}
-          </div>
-        </div>
-      </div>
-    {%- endif -%}
-
-    {%- comment -%} Features & Benefits accordion {%- endcomment -%}
-    {%- if product.metafields.custom.features_and_benefits != blank -%}
-      <div data-accordion id="features-accordion">
-        <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
-          <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ 'sections.product.features_heading' | t }}</span>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 flex-none transition-transform" data-accordion-icon aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
-          </svg>
-        </button>
-        <div class="overflow-hidden" style="height:0" data-accordion-panel>
-          <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
-            {%- assign features_raw = product.metafields.custom.features_and_benefits | split: '*' -%}
-            {%- for feature in features_raw -%}
-              {%- assign feature_trimmed = feature | strip -%}
-              {%- if feature_trimmed != blank -%}
-                {%- assign parts = feature_trimmed | split: '–' -%}
-                <p>
-                  <span class="font-bold">{{ parts[0] | strip }}</span>
-                  {%- if parts.size > 1 -%}
-                    <br>
-                    {%- for part in parts -%}
-                      {%- if forloop.first -%}{%- continue -%}{%- endif -%}
-                      {%- unless forloop.index == 1 -%}–{% endunless %}{{ part | strip }}
-                    {%- endfor -%}
-                  {%- endif -%}
-                </p>
-              {%- endif -%}
-            {%- endfor -%}
-          </div>
-        </div>
-      </div>
-    {%- endif -%}
-
-    {%- comment -%} Delivery & Returns accordion {%- endcomment -%}
-    <div data-accordion>
-      <button type="button" class="flex w-full items-center justify-between border-b border-taupe-400 py-6 text-left transition-all" data-accordion-btn>
-        <span class="flex-1 pr-3 text-xl font-semibold" data-accordion-title>{{ 'sections.product.delivery_heading' | t }}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 flex-none transition-transform" data-accordion-icon aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
-        </svg>
-      </button>
-      <div class="overflow-hidden" style="height:0" data-accordion-panel>
-        <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
-          {%- if section.settings.delivery_returns_content != blank -%}
-            {{ section.settings.delivery_returns_content }}
-          {%- else -%}
-            {{ 'sections.product.delivery_returns_content' | t }}
-          {%- endif -%}
-        </div>
-      </div>
-    </div>
-  </div>
   </div>
 
   {%- comment -%} Size guide modal {%- endcomment -%}
@@ -526,23 +502,6 @@
       });
     });
 
-    var scrollBtn = document.querySelector('[data-scroll-to-features]');
-    if (scrollBtn) {
-      scrollBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        var target = document.getElementById('features-accordion');
-        var container = document.getElementById('product-accordions');
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          var panel = target.querySelector('[data-accordion-panel]');
-          if (panel && (panel.style.height === '0px' || panel.style.height === '0')) {
-            target.querySelector('[data-accordion-btn]').click();
-          }
-        } else if (container) {
-          container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      });
-    }
 
     // AJAX add to cart
     if (productForm) {
@@ -1016,8 +975,22 @@
     {
       "type": "richtext",
       "id": "delivery_returns_content",
-      "label": "t:sections.product.settings.delivery_returns_content.label"
+      "label": "t:sections.product.settings.delivery_returns_content.label",
+      "default": "<p>Free UK standard delivery on orders over £100.</p><p>Express delivery available. See our full delivery and returns policy for details.</p>"
     }
+  ],
+  "blocks": [
+    { "type": "title", "name": "Title", "limit": 1 },
+    { "type": "reviews_stars", "name": "Reviews stars", "limit": 1 },
+    { "type": "price", "name": "Price", "limit": 1 },
+    { "type": "short_description", "name": "Short description", "limit": 1 },
+    { "type": "colour_swatches", "name": "Colour swatches", "limit": 1 },
+    { "type": "size_and_buy", "name": "Size & buy button", "limit": 1 },
+    { "type": "tgcc_rewards", "name": "TGCC Rewards banner", "limit": 1 },
+    { "type": "delivery_countdown", "name": "Delivery countdown", "limit": 1 },
+    { "type": "description_accordion", "name": "Description", "limit": 1 },
+    { "type": "features_accordion", "name": "Features & benefits", "limit": 1 },
+    { "type": "returns_accordion", "name": "Delivery & returns", "limit": 1 }
   ]
 }
 {% endschema %}
