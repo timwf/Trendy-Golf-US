@@ -101,3 +101,21 @@
     display: none !important;
   }
 }
+
+/* Swym Wishlist Plus — override app's default sans with Playfair on its
+   UI containers only (the app also drops state classes onto <body>, so a
+   broad [class*="swym-"] selector would cascade site-wide).
+   Lives outside @layer base because the descendant `*` selectors confuse
+   Tailwind's nested-CSS parser and get silently dropped. */
+.swym-ui-component,
+.swym-ui-component *,
+.swym-wishlist-collections-v2-container,
+.swym-wishlist-collections-v2-container *,
+.swym-add-to-wishlist-modal,
+.swym-add-to-wishlist-modal *,
+.swym-modal,
+.swym-modal *,
+.swym-inject,
+.swym-inject * {
+  font-family: "Playfair Display", ui-serif, system-ui, serif !important;
+}
