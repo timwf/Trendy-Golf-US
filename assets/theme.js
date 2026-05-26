@@ -852,6 +852,7 @@
       var cfg = window.exploreMoreConfig || {};
       if (cfg.isGiftCard) return hide();
       if (!cfg.rebuyApiKey) return hide();
+      if (!cfg.rebuyRecommendationsId) return hide();
       if (!cfg.productId || !/^\d+$/.test(String(cfg.productId))) return hide();
 
       skeleton = root.querySelector('[data-explore-skeleton]');
@@ -877,13 +878,20 @@
     }
 
     function fetchSimilar(cfg) {
+      // Rebuy Custom Data Source endpoint — applies the rules configured in
+      // Rebuy admin (gender, complementing categories, exclusions, etc).
+      // This is what the legacy theme's "You may also like" widget calls under
+      // the hood; calling it directly lets us keep our own carousel design
+      // while getting the same rule-filtered rec set as the live storefront.
       var params = new URLSearchParams({
         key: cfg.rebuyApiKey,
         shopify_product_ids: String(cfg.productId),
-        limit: '8'
+        limit: '8',
+        product_groups: 'yes'
       });
       if (cfg.countryCode) params.set('country_code', cfg.countryCode);
-      var url = 'https://rebuyengine.com/api/v1/products/similar_products?' + params.toString();
+      var url = 'https://rebuyengine.com/api/v1/custom/id/' +
+        encodeURIComponent(cfg.rebuyRecommendationsId) + '?' + params.toString();
 
       return fetch(url, { headers: { Accept: 'application/json' } })
         .then(function (r) { return r.ok ? r.json() : null; })

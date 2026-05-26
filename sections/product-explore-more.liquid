@@ -16,6 +16,7 @@
   window.exploreMoreConfig = {
     productId: {{ product.id | json }},
     rebuyApiKey: {{ settings.rebuy_api_key | json }},
+    rebuyRecommendationsId: {{ section.settings.rebuy_recommendations_id | json }},
     isGiftCard: {{ is_gift_card | json }},
     countryCode: {{ localization.country.iso_code | default: 'GB' | json }},
     rootUrl: {{ routes.root_url | json }}
@@ -65,7 +66,14 @@
   "settings": [
     {
       "type": "paragraph",
-      "content": "Pulls similar products from Rebuy and renders them in a carousel below the product accordions. API key is configured under Theme settings → Rebuy."
+      "content": "Pulls recommended products from Rebuy and renders them in a carousel below the product accordions. The Rebuy API key is configured under Theme settings → Rebuy."
+    },
+    {
+      "type": "text",
+      "id": "rebuy_recommendations_id",
+      "label": "Rebuy recommendations ID",
+      "default": "151895",
+      "info": "ID of the Rebuy Custom Data Source (Rebuy admin → Data Sources) that drives the recommendations. UK default is 151895 — matches the live store's 'You may also like' widget. US needs its own ID."
     }
   ]
 }
