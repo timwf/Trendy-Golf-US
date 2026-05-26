@@ -82,11 +82,12 @@
           {%- case block.type -%}
 
             {%- when 'title' -%}
+              {%- assign title_font_class = block.settings.font_style | default: 'sans' | prepend: 'font-' -%}
               <div {{ block.shopify_attributes }}>
                 {%- if product.vendor != blank -%}
-                  <p class="mb-5 text-sm uppercase text-taupe-700">{{ product.vendor }}</p>
+                  <p class="mb-5 text-sm uppercase text-taupe-700 {{ title_font_class }}">{{ product.vendor }}</p>
                 {%- endif -%}
-                <h1 class="mb-3 font-sans text-xl lg:text-2xl">{{ display_name }}</h1>
+                <h1 class="mb-3 {{ title_font_class }} text-xl lg:text-2xl">{{ display_name }}</h1>
               </div>
 
             {%- when 'price' -%}
@@ -989,7 +990,24 @@
     }
   ],
   "blocks": [
-    { "type": "title", "name": "Title", "limit": 1 },
+    {
+      "type": "title",
+      "name": "Title",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "select",
+          "id": "font_style",
+          "label": "Font",
+          "info": "Applies to both the brand name and the product title underneath it.",
+          "options": [
+            { "value": "sans", "label": "Default sans (Oxygen)" },
+            { "value": "serif", "label": "Playfair Display" }
+          ],
+          "default": "sans"
+        }
+      ]
+    },
     { "type": "reviews_stars", "name": "Reviews stars", "limit": 1 },
     { "type": "price", "name": "Price", "limit": 1 },
     { "type": "short_description", "name": "Short description", "limit": 1 },
