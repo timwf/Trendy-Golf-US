@@ -122,11 +122,20 @@
                 <div class="mb-5" {{ block.shopify_attributes }}>
                   <p class="mb-2 text-xs lg:text-sm"><span class="text-taupe-700">{{ 'sections.product.colour_label' | t }}</span> {{ colour_name }}</p>
                   <div class="flex gap-2">
-                    {%- assign first_collection = product.collections.first -%}
-                    {%- if first_collection -%}
-                      {%- for sibling in first_collection.products -%}
+                    {%- comment -%}
+                      Iterate every collection the product is in, deduping siblings by id.
+                      Resilient to whichever collection happens to be `collections.first`.
+                    {%- endcomment -%}
+                    {%- assign seen_sibling_ids = '' -%}
+                    {%- for sibling_collection in product.collections -%}
+                      {%- for sibling in sibling_collection.products -%}
+                        {%- assign sibling_id_key = '|' | append: sibling.id | append: '|' -%}
+                        {%- if seen_sibling_ids contains sibling_id_key -%}
+                          {%- continue -%}
+                        {%- endif -%}
                         {%- assign sibling_name = sibling.metafields.custom.product_display_name | default: sibling.title -%}
                         {%- if sibling_name == display_name -%}
+                          {%- assign seen_sibling_ids = seen_sibling_ids | append: sibling_id_key -%}
                           {%- assign is_active = false -%}
                           {%- if sibling.id == product.id -%}
                             {%- assign is_active = true -%}
@@ -140,7 +149,7 @@
                           -%}
                         {%- endif -%}
                       {%- endfor -%}
-                    {%- endif -%}
+                    {%- endfor -%}
                   </div>
                 </div>
               {%- endif -%}

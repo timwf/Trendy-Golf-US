@@ -99,12 +99,17 @@
               {%- if sibling.id == product.id -%}
                 {%- assign is_active = true -%}
               {%- endif -%}
+              {%- assign sibling_hover_image = '' -%}
+              {%- if sibling.images.first -%}
+                {%- assign sibling_hover_image = sibling.images.first | image_url: width: 800 -%}
+              {%- endif -%}
               {%- render 'colour-swatch',
                 url: sibling.url,
                 colour: sibling.metafields.custom.swatch_colour,
                 colour_secondary: sibling.metafields.custom.swatch_colour_secondary,
                 name: sibling.metafields.custom.color,
-                active: is_active
+                active: is_active,
+                hover_image: sibling_hover_image
               -%}
             {%- endif -%}
           {%- endfor -%}

@@ -984,4 +984,55 @@
 
   ExploreMore.init();
   window.exploreMore = ExploreMore;
+
+  /* ------------------------------------------------
+   * Product-card swatch hover image swap (Matt item 14)
+   * Hovering a sibling-colour swatch on a card swaps the tile's images
+   * to that sibling's primary image. Restores on mouseleave.
+   * Delegated off document so re-rendered grids (load-more) work too.
+   * ---------------------------------------------- */
+  function getCardImages(swatchEl) {
+    var card = swatchEl.closest('[data-product-card]');
+    if (!card) return null;
+    var imgs = card.querySelectorAll('a > img');
+    if (!imgs.length) return null;
+    return imgs;
+  }
+
+  function swapCardImagesTo(swatchEl, newSrc) {
+    var imgs = getCardImages(swatchEl);
+    if (!imgs) return;
+    for (var i = 0; i < imgs.length; i++) {
+      var img = imgs[i];
+      if (!img.dataset.originalSrc) img.dataset.originalSrc = img.getAttribute('src') || '';
+      if (!img.dataset.originalSrcset) img.dataset.originalSrcset = img.getAttribute('srcset') || '';
+      img.setAttribute('src', newSrc);
+      img.removeAttribute('srcset');
+    }
+  }
+
+  function restoreCardImages(swatchEl) {
+    var imgs = getCardImages(swatchEl);
+    if (!imgs) return;
+    for (var i = 0; i < imgs.length; i++) {
+      var img = imgs[i];
+      if (img.dataset.originalSrc) img.setAttribute('src', img.dataset.originalSrc);
+      if (img.dataset.originalSrcset) img.setAttribute('srcset', img.dataset.originalSrcset);
+    }
+  }
+
+  document.addEventListener('mouseenter', function (e) {
+    var target = e.target;
+    if (!target || target.nodeType !== 1) return;
+    if (!target.matches || !target.matches('a[data-swatch-hover-image]')) return;
+    var src = target.getAttribute('data-swatch-hover-image');
+    if (src) swapCardImagesTo(target, src);
+  }, true);
+
+  document.addEventListener('mouseleave', function (e) {
+    var target = e.target;
+    if (!target || target.nodeType !== 1) return;
+    if (!target.matches || !target.matches('a[data-swatch-hover-image]')) return;
+    restoreCardImages(target);
+  }, true);
 })();

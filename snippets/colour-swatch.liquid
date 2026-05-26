@@ -8,12 +8,13 @@
   @param {string} [name] - Colour name for accessibility (sr-only label)
   @param {boolean} [active] - Whether this swatch is the currently displayed product
   @param {boolean} [small] - Render smaller size (mobile)
+  @param {string} [hover_image] - Sibling's primary image URL; swapped into the card image on hover (only acts inside a product card)
 
   @example
   {% render 'colour-swatch', url: product.url, colour: '#000000', name: 'Black', active: true %}
 {% enddoc %}
 
-<a href="{{ url }}" class="inline-block">
+<a href="{{ url }}" class="inline-block"{% if hover_image != blank %} data-swatch-hover-image="{{ hover_image }}"{% endif %}>
   <div class="flex items-center justify-center rounded-full border {% if active %}border-taupe-900{% else %}border-transparent{% endif %} {% if small %}size-5{% else %}size-7{% endif %}">
     <div class="relative overflow-hidden rounded-full {% if small %}size-4{% else %}size-5{% endif %}">
       {%- if colour != blank -%}
