@@ -4,10 +4,10 @@
 
 @layer base {
   :root {
-    --sb-thumb: #3D7250;
-    --sb-thumb-hover: #3D7250;
-    --sb-thumb-active: #234A31;
-    --sb-track: #E4EEE8;
+    --sb-thumb: #35342F;
+    --sb-thumb-hover: #35342F;
+    --sb-thumb-active: #1F1E1A;
+    --sb-track: #E5E5E5;
   }
 
   html,
@@ -73,7 +73,7 @@
     li { @apply text-sm; }
   }
 
-  /* Custom scrollbar — clubhouse green branding */
+  /* Custom scrollbar — dark tone, matched to PDP buttons */
   * {
     scrollbar-width: thin;
     scrollbar-color: var(--sb-thumb) var(--sb-track);
