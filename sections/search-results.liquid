@@ -65,6 +65,11 @@
     {%- assign seen_display_names = '' -%}
     <div id="search-product-grid" class="mb-6 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
       {%- for product in search.results -%}
+        {%- comment -%} Hide OOS products from search results (an in-stock colourway sibling is promoted by the dedup below) {%- endcomment -%}
+        {%- unless product.available -%}
+          {%- continue -%}
+        {%- endunless -%}
+
         {%- assign display_name = product.metafields.custom.product_display_name | default: product.title -%}
 
         {%- if seen_display_names contains display_name -%}

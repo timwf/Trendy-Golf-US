@@ -82,6 +82,11 @@
     {%- assign seen_display_names = '' -%}
     <div id="collection-product-grid" class="mb-6 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
       {%- for product in collection.products -%}
+        {%- comment -%} Hide OOS products from the grid (an in-stock colourway sibling is promoted by the dedup below) {%- endcomment -%}
+        {%- unless product.available -%}
+          {%- continue -%}
+        {%- endunless -%}
+
         {%- assign display_name = product.metafields.custom.product_display_name | default: product.title -%}
 
         {%- comment -%} Skip if we already rendered a card for this display name {%- endcomment -%}
