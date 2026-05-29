@@ -165,7 +165,7 @@
                       <label class="mb-2 flex items-end justify-between text-sm">
                         <span>{{ 'sections.product.size_label' | t }}</span>
                         {%- if section.settings.enable_size_guide -%}
-                          <button type="button" class="text-sm font-bold text-taupe-900 hover:text-taupe-700" data-size-guide-btn>
+                          <button type="button" class="hidden text-sm font-bold text-taupe-900 hover:text-taupe-700" data-size-guide-btn>
                             {{ 'sections.product.size_guide' | t }}
                           </button>
                         {%- endif -%}
@@ -344,7 +344,7 @@
   {%- comment -%} Kiwi Sizing URL data for JS {%- endcomment -%}
   <script data-kiwi-json type="application/json">
     {
-      "shop": "trendy-golf-uk.myshopify.com",
+      "shop": "trendygolfusa.myshopify.com",
       "source": "trendygolf",
       "productId": "{{ product.id | remove: 'gid://shopify/Product/' }}",
       "vendor": {{ product.vendor | json }},
@@ -574,6 +574,27 @@
         params.set('tags', kiwiData.tags.map(encodeURIComponent).join(','));
       }
       var kiwiUrl = 'https://app.kiwisizing.com/size?' + params.toString();
+
+      // Only reveal the size-guide button if Kiwi actually has a chart for this product.
+      // Kiwi returns an empty body (HTTP 200, 0 bytes) when no chart rule matches its
+      // vendor/type/tags; a real chart is non-empty HTML. Probing the same URL the iframe
+      // would load keeps this in sync with Kiwi automatically — no theme change needed when
+      // TG adds or removes a chart. Result cached per product for the session.
+      (function revealIfChartExists() {
+        var cacheKey = 'kiwi_chart_' + kiwiData.productId;
+        var cached = null;
+        try { cached = sessionStorage.getItem(cacheKey); } catch (e) {}
+        if (cached === '1') { openBtn.classList.remove('hidden'); return; }
+        if (cached === '0') { return; }
+        fetch(kiwiUrl)
+          .then(function(res) { return res.text(); })
+          .then(function(html) {
+            var hasChart = !!(html && html.trim().length);
+            try { sessionStorage.setItem(cacheKey, hasChart ? '1' : '0'); } catch (e) {}
+            if (hasChart) openBtn.classList.remove('hidden');
+          })
+          .catch(function() { openBtn.classList.remove('hidden'); }); // fail open on network error
+      })();
 
       function openModal() {
         if (iframe && !iframe.src) iframe.src = kiwiUrl;
