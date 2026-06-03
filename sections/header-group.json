@@ -28,7 +28,8 @@
         "mega_menu_image_TyiPwm": {
           "type": "mega_menu_image",
           "settings": {
-            "menu_item_title": "Golf Bags & Accessories",
+            "menu_item_title": "Men",
+            "image": "shopify://shop_images/6fd20142-1562-4292-b84d-df9b2520c7de.jpg",
             "heading": "Golf bags test",
             "link": "shopify://collections/mens-bags",
             "link_text": "Shop now"
@@ -54,21 +55,10 @@
         },
         "mega_menu_image_c6yePa": {
           "type": "mega_menu_image",
-          "disabled": true,
           "settings": {
             "menu_item_title": "Clothing",
             "heading": "",
             "link": "",
-            "link_text": "Shop now"
-          }
-        },
-        "mega_menu_image_qC4dkC": {
-          "type": "mega_menu_image",
-          "disabled": true,
-          "settings": {
-            "menu_item_title": "New In",
-            "heading": "Heading",
-            "link": "#",
             "link_text": "Shop now"
           }
         }
@@ -77,8 +67,7 @@
         "mega_menu_image_TyiPwm",
         "mega_menu_image_RWHhdd",
         "mega_menu_image_wkMG4V",
-        "mega_menu_image_c6yePa",
-        "mega_menu_image_qC4dkC"
+        "mega_menu_image_c6yePa"
       ],
       "settings": {
         "logo": "shopify://shop_images/TRENDYGOLF_2.png",

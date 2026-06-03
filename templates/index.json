@@ -15,7 +15,8 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "",
             "heading_first": false,
             "heading": "Probably the best golf apparel and footwear in the world",
@@ -36,7 +37,8 @@
         "slide_jlindeberg": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "New In",
             "heading_first": false,
             "heading": "J.LINDEBERG",
@@ -57,7 +59,8 @@
         "slide_ralph_lauren": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "Shop the latest",
             "heading_first": false,
             "heading": "Ralph Lauren",
@@ -78,7 +81,8 @@
         "slide_payntr": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "Shop the latest",
             "heading_first": false,
             "heading": "PAYNTR",
@@ -99,7 +103,8 @@
         "slide_gfore": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "Shop the latest",
             "heading_first": false,
             "heading": "G/FORE",
@@ -207,7 +212,8 @@
         "slide_apc": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "",
             "heading_first": false,
             "heading": "APC",
@@ -291,7 +297,8 @@
         "slide_shoes": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "The best shoes for every player, course, and condition featuring the latest styles from all the top footwear brands.",
             "heading_first": false,
             "heading": "Find your perfect golf shoe.",
@@ -328,7 +335,8 @@
         "slide_tgcc": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "The world's leading online golf club. Join TGCC today and experience rewards that truly hit different.",
             "heading_first": false,
             "heading": "",
@@ -363,6 +371,7 @@
     },
     "magazine_articles_wQRhf7": {
       "type": "magazine-articles",
+      "disabled": true,
       "name": "Magazine articles",
       "settings": {
         "blog": "magazine",
