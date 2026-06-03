@@ -79,6 +79,7 @@
         "q3",
         "q4"
       ],
+      "disabled": true,
       "settings": {
         "background_image": "shopify://shop_images/background.png",
         "heading": "Find your perfect golf shoe.",

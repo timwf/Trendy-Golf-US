@@ -34,6 +34,15 @@
             "link_text": "Shop now"
           }
         },
+        "mega_menu_image_RWHhdd": {
+          "type": "mega_menu_image",
+          "settings": {
+            "menu_item_title": "",
+            "heading": "",
+            "link": "",
+            "link_text": "Shop now"
+          }
+        },
         "mega_menu_image_wkMG4V": {
           "type": "mega_menu_image",
           "settings": {
@@ -45,6 +54,7 @@
         },
         "mega_menu_image_c6yePa": {
           "type": "mega_menu_image",
+          "disabled": true,
           "settings": {
             "menu_item_title": "Clothing",
             "heading": "",
@@ -54,6 +64,7 @@
         },
         "mega_menu_image_qC4dkC": {
           "type": "mega_menu_image",
+          "disabled": true,
           "settings": {
             "menu_item_title": "New In",
             "heading": "Heading",
@@ -64,6 +75,7 @@
       },
       "block_order": [
         "mega_menu_image_TyiPwm",
+        "mega_menu_image_RWHhdd",
         "mega_menu_image_wkMG4V",
         "mega_menu_image_c6yePa",
         "mega_menu_image_qC4dkC"
