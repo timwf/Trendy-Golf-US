@@ -259,9 +259,9 @@
         "card_apc_trousers": {
           "type": "card",
           "settings": {
-            "heading": "Mens Trousers",
+            "heading": "G/FORE",
             "image": "shopify://shop_images/02-latest-footwear.jpg",
-            "link": "shopify://collections/mens-golf-pants",
+            "link": "shopify://pages/g-fore",
             "button_label": "SHOP NOW"
           }
         },
