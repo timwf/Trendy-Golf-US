@@ -83,7 +83,7 @@
           "type": "card",
           "settings": {
             "heading": "Shop All",
-            "image": "shopify://shop_images/10f74f18-5f05-4b11-8fbd-e6c529ca1fe6_700x_59203f17-780a-48ea-97cf-7c52323b823f.webp",
+            "image": "shopify://shop_images/44a55ee2-c8db-4e98-9ff9-008fb1b93325.png",
             "link": "",
             "button_label": "Shop Now"
           }
@@ -92,7 +92,7 @@
           "type": "card",
           "settings": {
             "heading": "Womens",
-            "image": "shopify://shop_images/Untitled-1_b9cef733-4c2f-4090-87e6-d8e5f1e74730.png",
+            "image": "shopify://shop_images/A.P.C._GOLF_26SS_9.jpg",
             "link": "",
             "button_label": "Shop Now"
           }
@@ -101,6 +101,7 @@
           "type": "card",
           "settings": {
             "heading": "Accessories",
+            "image": "shopify://shop_images/A.P.C._GOLF_26SS_13_1.jpg",
             "link": "",
             "button_label": "Shop Now"
           }
