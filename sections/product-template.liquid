@@ -181,6 +181,7 @@
                               data-price="{{ variant.price | money }}"
                               data-compare-price="{{ variant.compare_at_price | money }}"
                               data-has-compare="{{ variant.compare_at_price | default: 0 }}"
+                              data-price-cents="{{ variant.price }}"
                               data-available="{{ variant.available }}"
                               data-option-value="{{ variant.title | escape }}"
                               {% if variant == current_variant %}selected{% endif %}
@@ -434,7 +435,7 @@
         var available = opt.dataset.available === 'true';
 
         if (priceEl) {
-          if (hasCompare > 0 && hasCompare > parseInt(opt.value, 10)) {
+          if (hasCompare > 0 && hasCompare > parseInt(opt.dataset.priceCents, 10)) {
             priceEl.innerHTML = '<span class="mb-0 text-xl"><span class="font-semibold text-red-600">' + price + '</span><s class="ml-2 text-base text-taupe-700">' + comparePrice + '</s></span>';
           } else {
             priceEl.innerHTML = '<span class="mb-0 text-xl"><span class="font-semibold">' + price + '</span></span>';
