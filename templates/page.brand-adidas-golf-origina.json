@@ -15,10 +15,13 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "Explore our range from adidas Golf Originals.",
+            "heading_first": false,
             "heading": "adidas Golf Originals",
             "heading_size": "h2",
+            "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "video",
             "video_url": "https://vimeo.com/1164350529",
@@ -47,19 +50,26 @@
       "type": "product-carousel-tabs",
       "settings": {
         "title": "New In adidas Originals",
-        "tab_1_label": "Men",
+        "tab_1_label": "Mens",
         "tab_1_products": [
-          "originals-3-stripe-quarter-zip-chalk-white-dusky-orange",
-          "originals-cashmere-sweater-clear-pink",
-          "originals-carry-golf-bag-brown-white",
-          "originals-trousers-clear-pink",
-          "campus-00s-spikeless-golf-shoes-grey-footwear-white-off-white",
-          "originals-cashmere-sweater-night-indigo",
-          "originals-twistweave-shorts-chalk-white",
-          "gazelle-spikeless-golf-shoes-ice-tangerine-clear-pink-footwear-white"
+          "originals-golf-carry-bag-night-indigo",
+          "originals-cashmere-vest-bluebird-3",
+          "gazelle-spikeless-golf-shoes-night-indigo-clear-mint-footwear-white-2",
+          "originals-pocket-polo-clear-mint-1",
+          "originals-all-over-shorts-night-indigo-chalk-white",
+          "originals-archive-stripe-polo-night-indigo"
         ],
-        "tab_2_label": "",
-        "tab_2_products": [],
+        "tab_2_label": "Womens",
+        "tab_2_products": [
+          "womens-originals-all-over-skort-clear-mint-chalk-white",
+          "womens-gazelle-spikeless-golf-shoes-chalk-white-footwear-white-clear-mint",
+          "womens-originals-solid-polo-clear-pink-3",
+          "womens-originals-dress-chalk-white",
+          "womens-gazelle-spikeless-golf-shoes-bliss-lilac-chalk-white-bluebird",
+          "womens-originals-dress-night-indigo",
+          "womens-originals-3-stripe-polo-night-indigo",
+          "womens-originals-knee-socks-clear-pink"
+        ],
         "tab_3_label": "",
         "tab_3_products": []
       }
@@ -71,7 +81,6 @@
           "type": "card",
           "settings": {
             "heading": "Shop All",
-            "image": "shopify://shop_images/01-shop-all.jpg",
             "link": "/collections/adidas-golf-originals",
             "button_label": "Shop Now"
           }
@@ -80,7 +89,6 @@
           "type": "card",
           "settings": {
             "heading": "Trousers",
-            "image": "shopify://shop_images/02-trousers.jpg",
             "link": "/collections/adidas-golf-originals?filter.p.product_type=Joggers&filter.p.product_type=Trousers",
             "button_label": "Shop Now"
           }
@@ -89,7 +97,6 @@
           "type": "card",
           "settings": {
             "heading": "Footwear",
-            "image": "shopify://shop_images/03-footwear.jpg",
             "link": "/collections/adidas-golf-originals-golf-shoes",
             "button_label": "Shop Now"
           }
