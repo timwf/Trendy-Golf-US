@@ -227,7 +227,7 @@
             "hosted_video_url_mobile": "",
             "slide_duration": 7,
             "button_label": "Shop Now",
-            "button_link": "shopify://collections/mens-a-p-c-golf-apparel",
+            "button_link": "shopify://pages/apc",
             "button_style": "transparent"
           }
         }
