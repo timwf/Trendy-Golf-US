@@ -15,7 +15,8 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "Shop the latest from Manors.",
             "heading_first": false,
             "heading": "Manors",
@@ -49,55 +50,12 @@
       "type": "product-carousel-tabs",
       "settings": {
         "title": "New In Manors",
-        "tab_1_label": "Polos",
-        "tab_1_products": [
-          "course-polo-woodland",
-          "lightweight-polo-yellow",
-          "hybrid-fleece-mid-layer-olive",
-          "logo-t-shirt-white",
-          "ranger-shooter-ss-shirt-pine-green"
-        ],
+        "tab_1_label": "Mens",
+        "tab_1_products": [],
         "tab_2_label": "Jackets & Mid-Layers",
-        "tab_2_products": [
-          "hybrid-fleece-mid-layer-olive",
-          "course-quarter-zip-mid-layer-sand",
-          "gailes-windbreaker-jacket-dune",
-          "x-reebok-organic-course-pullover-atlantic-blue",
-          "ranger-shooter-ss-shirt-dune"
-        ],
-        "tab_3_label": "Trousers",
-        "tab_3_products": [
-          "track-bottom-greige",
-          "greenskeeper-chino-shorts-olive",
-          "x-reebok-straight-leg-trousers-birch",
-          "flattering-high-waist-trousers-black",
-          "lightweight-course-trousers-green"
-        ]
-      }
-    },
-    "media_grid_1": {
-      "type": "media-grid",
-      "blocks": {
-        "image_1": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/image-1.jpg"
-          }
-        },
-        "image_2": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/image-2.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "image_1",
-        "image_2"
-      ],
-      "settings": {
-        "margin_bottom": "medium",
-        "enable_animation": true
+        "tab_2_products": [],
+        "tab_3_label": "",
+        "tab_3_products": []
       }
     },
     "banner_cards_1": {
@@ -145,12 +103,37 @@
         "margin_bottom": "medium",
         "enable_animation": true
       }
+    },
+    "media_grid_1": {
+      "type": "media-grid",
+      "blocks": {
+        "image_1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-1.jpg"
+          }
+        },
+        "image_2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/image-2.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_1",
+        "image_2"
+      ],
+      "settings": {
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
     }
   },
   "order": [
     "hero_1",
     "product_carousel_1",
-    "media_grid_1",
-    "banner_cards_1"
+    "banner_cards_1",
+    "media_grid_1"
   ]
 }
