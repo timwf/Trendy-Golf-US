@@ -250,9 +250,9 @@
         "card_apc_all": {
           "type": "card",
           "settings": {
-            "heading": "Shop All",
+            "heading": "A.P.C",
             "image": "shopify://shop_images/01-apc-clothing-men-women.jpg",
-            "link": "shopify://collections/all-items",
+            "link": "shopify://pages/apc",
             "button_label": "SHOP NOW"
           }
         },
