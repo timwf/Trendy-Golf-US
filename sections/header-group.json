@@ -38,9 +38,10 @@
         "mega_menu_image_RWHhdd": {
           "type": "mega_menu_image",
           "settings": {
-            "menu_item_title": "",
-            "heading": "",
-            "link": "",
+            "menu_item_title": "Women",
+            "image": "shopify://shop_images/75f65f4e-c52e-4537-a69f-fe70e7fa4ef8.webp",
+            "heading": "Valentina Court Dress",
+            "link": "https://trendygolfusa.com/products/womens-valentina-court-33-inch-dress-blue-nights",
             "link_text": "Shop now"
           }
         },
