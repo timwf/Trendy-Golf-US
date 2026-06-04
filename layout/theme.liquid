@@ -223,6 +223,65 @@
     </script>
   {%- endif -%}
 
+  {%- comment -%}
+    Journey-aware breadcrumb stash signal — read by assets/breadcrumb.js.
+    Marks the current page as a stashable "where you came from" surface when
+    it's a brand landing page, a collection page, or a search results page.
+    Brand detection uses page.template_suffix (e.g. brand-ralph-lauren), not
+    handle pattern matching — a brand-guidelines editorial page would never
+    use a brand-* template, so this scopes cleanly.
+  {%- endcomment -%}
+  {%- liquid
+    assign bc_meta_kind = ''
+    assign bc_meta_title = ''
+    assign bc_meta_url = ''
+    assign bc_meta_query = ''
+
+    if template.name == 'page' and page.template_suffix != blank
+      assign bc_suffix_head = page.template_suffix | slice: 0, 6
+      if bc_suffix_head == 'brand-'
+        assign bc_meta_kind = 'brand'
+        assign bc_meta_title = page.title
+        comment
+          Admin convention names brand pages "Brand Ralph Lauren" etc.
+          for internal organisation; the customer-facing brand name is
+          just "Ralph Lauren". Strip the "Brand " prefix at stash time so
+          the breadcrumb shows the brand name AND the PDP vendor match
+          (edge case 3) compares cleanly.
+        endcomment
+        assign bc_title_prefix = bc_meta_title | slice: 0, 6
+        if bc_title_prefix == 'Brand '
+          assign bc_meta_title = bc_meta_title | slice: 6, 9999
+        endif
+        assign bc_meta_url = page.url
+      endif
+    elsif template.name == 'collection' and collection
+      assign bc_meta_kind = 'collection'
+      assign bc_meta_title = collection.title
+      assign bc_meta_url = collection.url
+    elsif template.name == 'search' and search.performed
+      assign bc_meta_kind = 'search'
+      assign bc_meta_title = search.terms
+      assign bc_meta_query = search.terms
+      if search.terms != blank
+        assign bc_terms_encoded = search.terms | url_encode
+        assign bc_meta_url = routes.search_url | append: '?q=' | append: bc_terms_encoded
+      else
+        assign bc_meta_url = routes.search_url
+      endif
+    endif
+  -%}
+  {%- if bc_meta_kind != blank -%}
+    <div
+      hidden
+      data-breadcrumb-page-meta
+      data-kind="{{ bc_meta_kind }}"
+      data-title="{{ bc_meta_title | escape }}"
+      data-url="{{ bc_meta_url | escape }}"
+      data-query="{{ bc_meta_query | escape }}"
+    ></div>
+  {%- endif -%}
+
   {% sections 'header-group' %}
 
   <main id="main-content" role="main" class="min-h-[50vh]">
@@ -245,5 +304,6 @@
   {% render 'rewards-modal' %}
 
   <script src="{{ 'theme.js' | asset_url }}" defer></script>
+  <script src="{{ 'breadcrumb.js' | asset_url }}" defer></script>
 </body>
 </html>

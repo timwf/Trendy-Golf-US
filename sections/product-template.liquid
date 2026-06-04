@@ -78,6 +78,9 @@
     <div class="max-w-xl px-6">
       <div class="md:sticky md:top-0 md:pt-4">
 
+        {%- comment -%} Journey-aware breadcrumb (canonical: Home > [first collection] > Product) {%- endcomment -%}
+        {%- render 'breadcrumb', kind: 'product', product: product -%}
+
         {%- for block in section.blocks -%}
           {%- case block.type -%}
 

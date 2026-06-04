@@ -1,0 +1,52 @@
+{% doc %}
+  Renders a journey-aware breadcrumb trail above the H1 (collection) or above
+  the vendor line (product). Server-side render is the canonical hierarchy
+  (Home > collection, or Home > first collection > product). assets/breadcrumb.js
+  swaps the middle slot post-load when a fresh "where you came from" stash is
+  available (brand, collection, or search-results page visited in the last
+  30 min). See the card scope doc for the full rule set + edge cases.
+
+  @param {string} kind - "collection" or "product"
+  @param {object} [collection] - The current collection (when kind == "collection")
+  @param {object} [product] - The current product (when kind == "product")
+
+  @example
+  {% render 'breadcrumb', kind: 'collection', collection: collection %}
+  {% render 'breadcrumb', kind: 'product', product: product %}
+{% enddoc %}
+
+{%- liquid
+  assign bc_current = ''
+  assign bc_first_collection = null
+  assign bc_vendor = ''
+
+  if kind == 'collection' and collection
+    assign bc_current = collection.title
+  elsif kind == 'product' and product
+    assign bc_current = product.metafields.custom.product_display_name | default: product.title
+    assign bc_first_collection = product.collections.first
+    assign bc_vendor = product.vendor
+  endif
+-%}
+
+{%- if bc_current != blank -%}
+  <nav
+    aria-label="Breadcrumb"
+    class="mb-4 flex min-w-0 flex-nowrap items-center gap-2 text-sm text-taupe-700"
+    data-breadcrumb
+    data-breadcrumb-page-kind="{{ kind }}"
+    data-breadcrumb-page-vendor="{{ bc_vendor | escape }}"
+  >
+    <a href="{{ routes.root_url }}" class="flex-none transition-colors hover:text-taupe-900">Home</a>
+    <span class="flex-none" data-breadcrumb-chevron aria-hidden="true">{%- render 'icon', icon: 'chevron-right', size: 'size-3' -%}</span>
+
+    <span class="contents" data-breadcrumb-middle-slot>
+      {%- if kind == 'product' and bc_first_collection -%}
+        <a href="{{ bc_first_collection.url }}" class="flex-none transition-colors hover:text-taupe-900">{{ bc_first_collection.title }}</a>
+        <span class="flex-none" aria-hidden="true">{%- render 'icon', icon: 'chevron-right', size: 'size-3' -%}</span>
+      {%- endif -%}
+    </span>
+
+    <span class="min-w-0 truncate text-taupe-900" data-breadcrumb-current>{{ bc_current }}</span>
+  </nav>
+{%- endif -%}

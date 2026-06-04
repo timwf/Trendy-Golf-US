@@ -8,6 +8,9 @@
 <main class="py-10" id="collection-section" data-section-id="{{ section.id }}" data-collection-url="{{ collection.url }}" data-loaded-pages="1">
   <div class="container-wide">
 
+    {%- comment -%} Journey-aware breadcrumb (canonical: Home > Collection) {%- endcomment -%}
+    {%- render 'breadcrumb', kind: 'collection', collection: collection -%}
+
     {%- comment -%} Title + description {%- endcomment -%}
     <div class="mb-10 grid grid-cols-1 lg:grid-cols-6">
       <div class="lg:col-span-4">
