@@ -154,7 +154,7 @@
           "type": "card",
           "settings": {
             "heading": "Women",
-            "image": "shopify://shop_images/women-ralph-lauren.jpg",
+            "image": "shopify://shop_images/fd9a54f0-ebff-4df9-9f9c-aef4e60e51cb_700x_c9f62509-c160-4a83-8ace-05024d50bc8c.webp",
             "link": "shopify://collections/womens-clothing",
             "button_label": "SHOP NOW"
           }
@@ -169,7 +169,7 @@
         "layout": "grid",
         "columns": 2,
         "aspect_ratio": "square",
-        "heading_tag": "h2",
+        "heading_tag": "h3",
         "heading_size": "large",
         "margin_bottom": "medium",
         "enable_animation": true
