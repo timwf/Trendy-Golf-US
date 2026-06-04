@@ -15,14 +15,19 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "Explore our range from APC",
+            "heading_first": false,
             "heading": "APC",
             "heading_size": "h2",
+            "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "video",
             "video_url": "https://vimeo.com/1165417144",
             "video_url_mobile": "https://vimeo.com/1164445041",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
             "slide_duration": 20,
             "button_label": "Shop Now",
             "button_link": "",
@@ -30,11 +35,14 @@
           }
         }
       },
-      "block_order": ["slide_1"],
+      "block_order": [
+        "slide_1"
+      ],
       "settings": {
         "autoplay": false,
         "show_progress": false,
         "enable_animation": true,
+        "aria_label": "Hero slideshow",
         "margin_bottom": "medium"
       }
     },
@@ -42,30 +50,24 @@
       "type": "product-carousel-tabs",
       "settings": {
         "title": "New In APC",
-        "tab_1_label": "Polos",
+        "tab_1_label": "Mens",
         "tab_1_products": [
-          "course-polo-woodland",
-          "lightweight-polo-yellow",
-          "hybrid-fleece-mid-layer-olive",
-          "logo-t-shirt-white",
-          "ranger-shooter-ss-shirt-pine-green"
+          "solene-round-polo-shirt-marine",
+          "jean-short-pants-grey",
+          "sylvie-polo-shirt-blue",
+          "hugoweight-short-pants-marine-1",
+          "victor-windbreaker-jacket-white",
+          "noa-knit-polo-white-1",
+          "lenny-polo-shirt-green",
+          "adrien-woven-polo-shirt-fab-pale-pink"
         ],
         "tab_2_label": "Jackets & Mid-Layers",
         "tab_2_products": [
           "hybrid-fleece-mid-layer-olive",
-          "course-quarter-zip-mid-layer-sand",
-          "gailes-windbreaker-jacket-dune",
-          "x-reebok-organic-course-pullover-atlantic-blue",
-          "ranger-shooter-ss-shirt-dune"
+          "x-reebok-organic-course-pullover-atlantic-blue"
         ],
-        "tab_3_label": "Trousers",
-        "tab_3_products": [
-          "track-bottom-greige",
-          "greenskeeper-chino-shorts-olive",
-          "x-reebok-straight-leg-trousers-birch",
-          "flattering-high-waist-trousers-black",
-          "lightweight-course-trousers-green"
-        ]
+        "tab_3_label": "",
+        "tab_3_products": []
       }
     },
     "banner_cards_1": {
@@ -75,7 +77,6 @@
           "type": "card",
           "settings": {
             "heading": "Shop All",
-            "image": "",
             "link": "",
             "button_label": "Shop Now"
           }
@@ -84,7 +85,6 @@
           "type": "card",
           "settings": {
             "heading": "Tops",
-            "image": "",
             "link": "",
             "button_label": "Shop Now"
           }
@@ -93,13 +93,16 @@
           "type": "card",
           "settings": {
             "heading": "Accessories",
-            "image": "",
             "link": "",
             "button_label": "Shop Now"
           }
         }
       },
-      "block_order": ["card_1", "card_2", "card_3"],
+      "block_order": [
+        "card_1",
+        "card_2",
+        "card_3"
+      ],
       "settings": {
         "layout": "grid",
         "columns": 3,
@@ -111,5 +114,9 @@
       }
     }
   },
-  "order": ["hero_1", "product_carousel_1", "banner_cards_1"]
+  "order": [
+    "hero_1",
+    "product_carousel_1",
+    "banner_cards_1"
+  ]
 }
