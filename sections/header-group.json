@@ -58,9 +58,10 @@
         "mega_menu_image_c6yePa": {
           "type": "mega_menu_image",
           "settings": {
-            "menu_item_title": "Clothing",
-            "heading": "",
-            "link": "",
+            "menu_item_title": "Accessories",
+            "image": "shopify://shop_images/DSCF4562.jpg",
+            "heading": "Yellow Lobster Headcover",
+            "link": "https://trendygolfusa.com/products/t-street-1w-driver-headcover-newport-white",
             "link_text": "Shop now"
           }
         }
