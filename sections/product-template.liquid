@@ -276,7 +276,7 @@
                         {%- if feature_trimmed != blank -%}
                           {%- assign parts = feature_trimmed | split: '–' -%}
                           <p>
-                            <span class="font-bold">{{ parts[0] | strip }}</span>
+                            {{ parts[0] | strip }}
                             {%- if parts.size > 1 -%}
                               <br>
                               {%- for part in parts -%}
