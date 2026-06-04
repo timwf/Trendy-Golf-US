@@ -81,8 +81,18 @@
         "card_1": {
           "type": "card",
           "settings": {
-            "heading": "Shop All",
+            "heading": "Mens",
+            "image": "shopify://shop_images/2ede1de8-5565-4153-8402-937e8248df3e_700x_185cfceb-0cfe-4da2-88a0-d1321c76ca50.webp",
             "link": "/collections/adidas-golf-originals",
+            "button_label": "Shop Now"
+          }
+        },
+        "card_3": {
+          "type": "card",
+          "settings": {
+            "heading": "Footwear",
+            "image": "shopify://shop_images/03-adidas-mens-shoes.jpg",
+            "link": "https://trendygolfusa.com/collections/mens-adidas-golf-originals-shoes?filter.v.availability=1",
             "button_label": "Shop Now"
           }
         },
@@ -94,20 +104,12 @@
             "link": "https://trendygolfusa.com/collections/adidas-golf-originals-womens-collection?filter.v.availability=1&sort_by=created-descending&page=1",
             "button_label": "Shop Now"
           }
-        },
-        "card_3": {
-          "type": "card",
-          "settings": {
-            "heading": "Footwear",
-            "link": "/collections/adidas-golf-originals-golf-shoes",
-            "button_label": "Shop Now"
-          }
         }
       },
       "block_order": [
         "card_1",
-        "card_2",
-        "card_3"
+        "card_3",
+        "card_2"
       ],
       "settings": {
         "layout": "grid",
