@@ -15,7 +15,8 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "Shop the latest from G/FORE Mens.",
             "heading_first": false,
             "heading": "G/FORE",
@@ -46,6 +47,36 @@
         "margin_bottom": "medium"
       }
     },
+    "product_carousel_1": {
+      "type": "product-carousel-tabs",
+      "settings": {
+        "title": "New In G/FORE",
+        "tab_1_label": "Mens",
+        "tab_1_products": [
+          "all-play-stripe-polo-canary",
+          "hydrangea-print-tech-jersey-polo-canary",
+          "tripe-gs-tech-jersey-polo-snow-cenote",
+          "tech-tour-4-way-stretch-shorts-cenote",
+          "scribble-tech-jersey-polo-cenote",
+          "essential-performance-pique-polo-knockout-pink-1",
+          "skull-tees-shooie-putter-cover-snow-multi",
+          "o2-g-lock-golf-shoes-snow-twilight"
+        ],
+        "tab_2_label": "Womens",
+        "tab_2_products": [
+          "tech-nylon-rib-polo-azul",
+          "3d-tulip-hem-tech-pique-skort-snow-1",
+          "signature-left-hand-golf-glove-clover-1",
+          "knockout-a-line-skort-clover",
+          "cooling-sun-sleeves-knockout-pink",
+          "womens-paneled-stripe-tech-pique-sl-polo-knockout-pink",
+          "circle-gs-banded-visor-twilight-1",
+          "womens-pray-for-birdies-crew-socks-knockout-pink-ss25"
+        ],
+        "tab_3_label": "",
+        "tab_3_products": []
+      }
+    },
     "banner_cards_1": {
       "type": "banner-cards",
       "blocks": {
@@ -53,7 +84,7 @@
           "type": "card",
           "settings": {
             "heading": "Mens",
-            "image": "shopify://shop_images/card-1-mens.jpg",
+            "image": "shopify://shop_images/4d5f84ff-5143-4f33-b9aa-341d089242f2_1520x_1289e960-6ace-4faa-89fc-65ed81158cd9.webp",
             "link": "/collections/mens-g-fore",
             "button_label": "SHOP NOW"
           }
@@ -62,7 +93,7 @@
           "type": "card",
           "settings": {
             "heading": "Womens",
-            "image": "shopify://shop_images/card-2-womens.jpg",
+            "image": "shopify://shop_images/7b8eb3a8-795e-43e8-ad48-6f1b81886891_1520x_04496a26-ca2d-4b94-9dc1-e8873ea4e909.webp",
             "link": "/collections/womens-g-fore",
             "button_label": "SHOP NOW"
           }
@@ -82,60 +113,8 @@
         "enable_animation": true
       }
     },
-    "product_carousel_1": {
-      "type": "product-carousel-tabs",
-      "settings": {
-        "title": "New In G/FORE",
-        "tab_1_label": "Mens",
-        "tab_1_products": [
-          "ryder-cup-triple-g-tech-jersey-polo-twilight",
-          "3-gs-tech-jersey-polo-lava",
-          "circle-gs-tech-jersey-polo-knockout-pink-ss25",
-          "x-trendygolf-limited-edition-all-day-polo-twilight",
-          "circle-gs-tech-jersey-polo-twilight-ss25"
-        ],
-        "tab_2_label": "Womens",
-        "tab_2_products": [
-          "womens-happy-gs-merino-wool-sweater-knockout-pink-ss25",
-          "icon-embroidered-tech-pique-ls-polo-snow",
-          "womens-silky-tech-nylon-skirt-twilight-aw24",
-          "womens-g-18-tpu-golf-shoes-blush-ss25",
-          "womens-g-18-tpu-golf-shoes-snow-multi-ss25"
-        ],
-        "tab_3_label": "",
-        "tab_3_products": []
-      }
-    },
     "hero_2": {
       "type": "hero-carousel",
-      "blocks": {
-        "slide_1": {
-          "type": "slide",
-          "settings": {
-            "content_alignment": "bottom",
-            "subheading": "TRENDYGOLF x G/FORE",
-            "heading_first": false,
-            "heading": "",
-            "heading_size": "h3",
-            "use_as_page_h1": false,
-            "heading_font": "sans",
-            "media_type": "image",
-            "image": "shopify://shop_images/desktop_bdb8db8d-4c5d-448a-bbaf-f316fad2e36f.jpg",
-            "mobile_image": "shopify://shop_images/mobile_12870419-9e8b-4b73-bdbe-267116bfe926.jpg",
-            "video_url": "",
-            "video_url_mobile": "",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
-            "slide_duration": 3,
-            "button_label": "SHOP NOW",
-            "button_link": "",
-            "button_style": "transparent"
-          }
-        }
-      },
-      "block_order": [
-        "slide_1"
-      ],
       "settings": {
         "autoplay": false,
         "show_progress": false,
@@ -183,8 +162,8 @@
   },
   "order": [
     "hero_1",
-    "banner_cards_1",
     "product_carousel_1",
+    "banner_cards_1",
     "hero_2",
     "banner_cards_2"
   ]
