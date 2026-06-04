@@ -173,31 +173,61 @@
                           </button>
                         {%- endif -%}
                       </label>
-                      <div class="relative">
-                        <select
-                          data-variant-select
-                          class="block w-full appearance-none border border-taupe-600 bg-taupe-100 px-4 py-3 focus:outline-none"
-                        >
+                      {%- if block.settings.selector_style == 'buttons' -%}
+                        <div data-variant-buttons class="flex flex-wrap gap-2">
                           {%- for variant in product.variants -%}
-                            <option
-                              value="{{ variant.id }}"
-                              data-price="{{ variant.price | money }}"
-                              data-compare-price="{{ variant.compare_at_price | money }}"
-                              data-has-compare="{{ variant.compare_at_price | default: 0 }}"
-                              data-price-cents="{{ variant.price }}"
-                              data-available="{{ variant.available }}"
-                              data-option-value="{{ variant.title | escape }}"
-                              {% if variant == current_variant %}selected{% endif %}
-                              {% unless variant.available %}disabled{% endunless %}
-                            >
-                              {{ variant.title }}{% unless variant.available %} — {{ 'sections.product.sold_out' | t }}{% endunless %}
-                            </option>
+                            <div class="relative">
+                              <input
+                                type="radio"
+                                name="size-option"
+                                id="size-option-{{ variant.id }}"
+                                value="{{ variant.id }}"
+                                class="peer absolute left-0 top-0 size-full cursor-pointer opacity-0 disabled:cursor-not-allowed"
+                                data-price="{{ variant.price | money }}"
+                                data-compare-price="{{ variant.compare_at_price | money }}"
+                                data-has-compare="{{ variant.compare_at_price | default: 0 }}"
+                                data-price-cents="{{ variant.price }}"
+                                data-available="{{ variant.available }}"
+                                data-option-value="{{ variant.title | escape }}"
+                                {% if variant == current_variant %}checked{% endif %}
+                                {% unless variant.available %}disabled{% endunless %}
+                              >
+                              <label
+                                for="size-option-{{ variant.id }}"
+                                class="block min-w-12 cursor-pointer border border-taupe-600 bg-taupe-100 px-4 py-2 text-center text-sm transition-all peer-checked:border-taupe-900 peer-checked:bg-taupe-900 peer-checked:text-white peer-disabled:cursor-not-allowed peer-disabled:line-through peer-disabled:opacity-60"
+                              >
+                                {{ variant.title }}
+                              </label>
+                            </div>
                           {%- endfor -%}
-                        </select>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2" aria-hidden="true">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
-                        </svg>
-                      </div>
+                        </div>
+                      {%- else -%}
+                        <div class="relative">
+                          <select
+                            data-variant-select
+                            class="block w-full appearance-none border border-taupe-600 bg-taupe-100 px-4 py-3 focus:outline-none"
+                          >
+                            {%- for variant in product.variants -%}
+                              <option
+                                value="{{ variant.id }}"
+                                data-price="{{ variant.price | money }}"
+                                data-compare-price="{{ variant.compare_at_price | money }}"
+                                data-has-compare="{{ variant.compare_at_price | default: 0 }}"
+                                data-price-cents="{{ variant.price }}"
+                                data-available="{{ variant.available }}"
+                                data-option-value="{{ variant.title | escape }}"
+                                {% if variant == current_variant %}selected{% endif %}
+                                {% unless variant.available %}disabled{% endunless %}
+                              >
+                                {{ variant.title }}{% unless variant.available %} — {{ 'sections.product.sold_out' | t }}{% endunless %}
+                              </option>
+                            {%- endfor -%}
+                          </select>
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="pointer-events-none absolute right-3 top-1/2 size-4 -translate-y-1/2" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5"/>
+                          </svg>
+                        </div>
+                      {%- endif -%}
                     </div>
                   {%- endif -%}
 
@@ -410,26 +440,48 @@
     }
 
     var select = document.querySelector('[data-variant-select]');
+    var buttons = document.querySelector('[data-variant-buttons]');
     var priceEl = document.querySelector('[data-product-price]');
     var addBtn = document.querySelector('[data-add-to-cart]');
     var variantInput = document.querySelector('[data-variant-id]');
     var productForm = document.querySelector('[data-product-form]');
 
-    if (select) {
+    if (select || buttons) {
       var params = new URLSearchParams(window.location.search);
       var sizeParam = params.get('option|Size');
+
+      // Per-option lookup that accepts either a <select>'s <option> or a
+      // radio <input> — both render paths expose the same data-* attributes.
+      function getSelectedOption() {
+        if (select) return select.options[select.selectedIndex] || null;
+        if (buttons) return buttons.querySelector('input[type="radio"]:checked') || null;
+        return null;
+      }
+
+      // Pre-select from URL param — mirrors the dropdown's existing pre-selection
+      // for the buttons render path.
       if (sizeParam) {
-        var options = select.querySelectorAll('option');
-        for (var i = 0; i < options.length; i++) {
-          if (options[i].dataset.optionValue === sizeParam && options[i].dataset.available === 'true') {
-            select.value = options[i].value;
-            break;
+        if (select) {
+          var options = select.querySelectorAll('option');
+          for (var i = 0; i < options.length; i++) {
+            if (options[i].dataset.optionValue === sizeParam && options[i].dataset.available === 'true') {
+              select.value = options[i].value;
+              break;
+            }
+          }
+        } else if (buttons) {
+          var radios = buttons.querySelectorAll('input[type="radio"]');
+          for (var j = 0; j < radios.length; j++) {
+            if (radios[j].dataset.optionValue === sizeParam && radios[j].dataset.available === 'true') {
+              radios[j].checked = true;
+              break;
+            }
           }
         }
       }
 
       function updateVariantUI() {
-        var opt = select.options[select.selectedIndex];
+        var opt = getSelectedOption();
         if (!opt) return;
 
         var price = opt.dataset.price;
@@ -459,7 +511,18 @@
         history.replaceState(null, '', url.toString());
       }
 
-      select.addEventListener('change', updateVariantUI);
+      // Two entry points into one shared closure: <select> change for the
+      // dropdown render path, radio change inside [data-variant-buttons] for
+      // the buttons render path. Only one of select/buttons exists at a time
+      // (block schema branches on selector_style) but binding both is safe.
+      if (select) select.addEventListener('change', updateVariantUI);
+      if (buttons) {
+        buttons.addEventListener('change', function (e) {
+          if (e.target && e.target.matches('input[type="radio"]')) {
+            updateVariantUI();
+          }
+        });
+      }
       if (sizeParam) updateVariantUI();
     }
 
@@ -1037,7 +1100,24 @@
     { "type": "price", "name": "Price", "limit": 1 },
     { "type": "short_description", "name": "Short description", "limit": 1 },
     { "type": "colour_swatches", "name": "Colour swatches", "limit": 1 },
-    { "type": "size_and_buy", "name": "Size & buy button", "limit": 1 },
+    {
+      "type": "size_and_buy",
+      "name": "Size & buy button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "radio",
+          "id": "selector_style",
+          "label": "Size selector style",
+          "info": "Switch the size picker on the PDP between a dropdown and a row of outlined buttons.",
+          "options": [
+            { "value": "dropdown", "label": "Dropdown" },
+            { "value": "buttons", "label": "Outline buttons" }
+          ],
+          "default": "dropdown"
+        }
+      ]
+    },
     { "type": "tgcc_rewards", "name": "TGCC Rewards banner", "limit": 1 },
     { "type": "delivery_countdown", "name": "Delivery countdown", "limit": 1 },
     { "type": "description_accordion", "name": "Description", "limit": 1 },
