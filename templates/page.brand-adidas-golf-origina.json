@@ -24,8 +24,9 @@
             "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "video",
-            "video_url": "https://vimeo.com/1164350529",
-            "video_url_mobile": "https://vimeo.com/1164350563",
+            "image": "shopify://shop_images/adidas-Originals-_Mens_-2.jpg",
+            "video_url": "",
+            "video_url_mobile": "",
             "hosted_video_url": "",
             "hosted_video_url_mobile": "",
             "slide_duration": 6,
@@ -88,8 +89,9 @@
         "card_2": {
           "type": "card",
           "settings": {
-            "heading": "Trousers",
-            "link": "/collections/adidas-golf-originals?filter.p.product_type=Joggers&filter.p.product_type=Trousers",
+            "heading": "Womens",
+            "image": "shopify://shop_images/adidas-Originals-_Womens_-Mobile.jpg",
+            "link": "https://trendygolfusa.com/collections/adidas-golf-originals-womens-collection?filter.v.availability=1&sort_by=created-descending&page=1",
             "button_label": "Shop Now"
           }
         },
