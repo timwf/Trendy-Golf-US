@@ -1,0 +1,170 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_1": {
+      "type": "hero-carousel",
+      "blocks": {
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
+            "subheading": "Shop the latest from G/FORE Mens.",
+            "heading_first": false,
+            "heading": "G/FORE",
+            "heading_size": "h2",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "image",
+            "image": "shopify://shop_images/desktop_67b1a440-1788-40ee-afe7-4991c0c49e42.jpg",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 3,
+            "button_label": "Shop Now",
+            "button_link": "/collections/mens-g-fore",
+            "button_style": "white"
+          }
+        }
+      },
+      "block_order": [
+        "slide_1"
+      ],
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "aria_label": "Hero slideshow",
+        "margin_bottom": "medium"
+      }
+    },
+    "product_carousel_1": {
+      "type": "product-carousel-tabs",
+      "settings": {
+        "title": "New In G/FORE",
+        "tab_1_label": "Mens",
+        "tab_1_products": [
+          "all-play-stripe-polo-canary",
+          "hydrangea-print-tech-jersey-polo-canary",
+          "tripe-gs-tech-jersey-polo-snow-cenote",
+          "tech-tour-4-way-stretch-shorts-cenote",
+          "scribble-tech-jersey-polo-cenote",
+          "essential-performance-pique-polo-knockout-pink-1",
+          "skull-tees-shooie-putter-cover-snow-multi",
+          "o2-g-lock-golf-shoes-snow-twilight"
+        ],
+        "tab_2_label": "Womens",
+        "tab_2_products": [
+          "tech-nylon-rib-polo-azul",
+          "3d-tulip-hem-tech-pique-skort-snow-1",
+          "signature-left-hand-golf-glove-clover-1",
+          "knockout-a-line-skort-clover",
+          "cooling-sun-sleeves-knockout-pink",
+          "womens-paneled-stripe-tech-pique-sl-polo-knockout-pink",
+          "circle-gs-banded-visor-twilight-1",
+          "womens-pray-for-birdies-crew-socks-knockout-pink-ss25"
+        ],
+        "tab_3_label": "",
+        "tab_3_products": []
+      }
+    },
+    "banner_cards_1": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "Mens",
+            "image": "shopify://shop_images/4d5f84ff-5143-4f33-b9aa-341d089242f2_1520x_1289e960-6ace-4faa-89fc-65ed81158cd9.webp",
+            "link": "/collections/mens-g-fore",
+            "button_label": "SHOP NOW"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "Womens",
+            "image": "shopify://shop_images/7b8eb3a8-795e-43e8-ad48-6f1b81886891_1520x_04496a26-ca2d-4b94-9dc1-e8873ea4e909.webp",
+            "link": "/collections/womens-g-fore",
+            "button_label": "SHOP NOW"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2"
+      ],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "small",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "aria_label": "Hero slideshow",
+        "margin_bottom": "medium"
+      }
+    },
+    "banner_cards_2": {
+      "type": "banner-cards",
+      "blocks": {
+        "card_1": {
+          "type": "card",
+          "settings": {
+            "heading": "Mens Footwear",
+            "image": "shopify://shop_images/card-1-mens-footwear.jpg",
+            "link": "/collections/mens-g-fore-golf-shoes",
+            "button_label": "Shop Now"
+          }
+        },
+        "card_2": {
+          "type": "card",
+          "settings": {
+            "heading": "Womens Footwear",
+            "image": "shopify://shop_images/card-2-womens-footwear.jpg",
+            "link": "/collections/womens-g-fore-golf-shoes",
+            "button_label": "Shop Now"
+          }
+        }
+      },
+      "block_order": [
+        "card_1",
+        "card_2"
+      ],
+      "settings": {
+        "layout": "grid",
+        "columns": 2,
+        "aspect_ratio": "7:9",
+        "heading_tag": "h2",
+        "heading_size": "small",
+        "margin_bottom": "medium",
+        "enable_animation": true
+      }
+    }
+  },
+  "order": [
+    "hero_1",
+    "product_carousel_1",
+    "banner_cards_1",
+    "hero_2",
+    "banner_cards_2"
+  ]
+}
