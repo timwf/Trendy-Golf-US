@@ -311,7 +311,7 @@
             "hosted_video_url_mobile": "",
             "slide_duration": 9,
             "button_label": "Shop Now",
-            "button_link": "shopify://pages/shoe-finder",
+            "button_link": "shopify://pages/shoe-selection-page",
             "button_style": "text"
           }
         }
