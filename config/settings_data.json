@@ -17,6 +17,7 @@
     "social_twitter": "https://twitter.com/TRENDYGOLF",
     "gtm_id": "GTM-5G4N4PSK",
     "rebuy_api_key": "5e2cd85271b6bdfa21deb252d37a9e19e2865844",
+    "password_overlay_enabled": false,
     "sections": {
       "cart-drawer": {
         "type": "cart-drawer",
