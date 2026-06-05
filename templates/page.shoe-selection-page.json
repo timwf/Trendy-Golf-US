@@ -40,82 +40,6 @@
         "enable_animation": true
       }
     },
-    "banner_cards_1": {
-      "type": "banner-cards",
-      "blocks": {
-        "card_1": {
-          "type": "card",
-          "settings": {
-            "heading": "Mens",
-            "image": "shopify://shop_images/4d5f84ff-5143-4f33-b9aa-341d089242f2_1520x_1289e960-6ace-4faa-89fc-65ed81158cd9.webp",
-            "link": "/collections/mens-g-fore",
-            "button_label": "SHOP NOW"
-          }
-        },
-        "card_2": {
-          "type": "card",
-          "settings": {
-            "heading": "Womens",
-            "image": "shopify://shop_images/7b8eb3a8-795e-43e8-ad48-6f1b81886891_1520x_04496a26-ca2d-4b94-9dc1-e8873ea4e909.webp",
-            "link": "/collections/womens-g-fore",
-            "button_label": "SHOP NOW"
-          }
-        }
-      },
-      "block_order": [
-        "card_1",
-        "card_2"
-      ],
-      "settings": {
-        "layout": "grid",
-        "columns": 2,
-        "aspect_ratio": "7:9",
-        "heading_tag": "h2",
-        "heading_size": "small",
-        "margin_bottom": "medium",
-        "enable_animation": true
-      }
-    },
-    "product_carousel_1": {
-      "type": "product-carousel-tabs",
-      "settings": {
-        "title": "New In G/FORE",
-        "tab_1_label": "Mens",
-        "tab_1_products": [
-          "all-play-stripe-polo-canary",
-          "hydrangea-print-tech-jersey-polo-canary",
-          "tripe-gs-tech-jersey-polo-snow-cenote",
-          "tech-tour-4-way-stretch-shorts-cenote",
-          "scribble-tech-jersey-polo-cenote",
-          "essential-performance-pique-polo-knockout-pink-1",
-          "skull-tees-shooie-putter-cover-snow-multi",
-          "o2-g-lock-golf-shoes-snow-twilight"
-        ],
-        "tab_2_label": "Womens",
-        "tab_2_products": [
-          "tech-nylon-rib-polo-azul",
-          "3d-tulip-hem-tech-pique-skort-snow-1",
-          "signature-left-hand-golf-glove-clover-1",
-          "knockout-a-line-skort-clover",
-          "cooling-sun-sleeves-knockout-pink",
-          "womens-paneled-stripe-tech-pique-sl-polo-knockout-pink",
-          "circle-gs-banded-visor-twilight-1",
-          "womens-pray-for-birdies-crew-socks-knockout-pink-ss25"
-        ],
-        "tab_3_label": "",
-        "tab_3_products": []
-      }
-    },
-    "hero_2": {
-      "type": "hero-carousel",
-      "settings": {
-        "autoplay": false,
-        "show_progress": false,
-        "enable_animation": true,
-        "aria_label": "Hero slideshow",
-        "margin_bottom": "medium"
-      }
-    },
     "banner_cards_2": {
       "type": "banner-cards",
       "blocks": {
@@ -151,13 +75,52 @@
         "margin_bottom": "medium",
         "enable_animation": true
       }
+    },
+    "product_carousel_1": {
+      "type": "product-carousel-tabs",
+      "settings": {
+        "title": "New In Golf Shoes",
+        "tab_1_label": "Mens",
+        "tab_1_products": [
+          "all-play-stripe-polo-canary",
+          "hydrangea-print-tech-jersey-polo-canary",
+          "tripe-gs-tech-jersey-polo-snow-cenote",
+          "tech-tour-4-way-stretch-shorts-cenote",
+          "scribble-tech-jersey-polo-cenote",
+          "essential-performance-pique-polo-knockout-pink-1",
+          "skull-tees-shooie-putter-cover-snow-multi",
+          "o2-g-lock-golf-shoes-snow-twilight"
+        ],
+        "tab_2_label": "Womens",
+        "tab_2_products": [
+          "tech-nylon-rib-polo-azul",
+          "3d-tulip-hem-tech-pique-skort-snow-1",
+          "signature-left-hand-golf-glove-clover-1",
+          "knockout-a-line-skort-clover",
+          "cooling-sun-sleeves-knockout-pink",
+          "womens-paneled-stripe-tech-pique-sl-polo-knockout-pink",
+          "circle-gs-banded-visor-twilight-1",
+          "womens-pray-for-birdies-crew-socks-knockout-pink-ss25"
+        ],
+        "tab_3_label": "",
+        "tab_3_products": []
+      }
+    },
+    "hero_2": {
+      "type": "hero-carousel",
+      "settings": {
+        "autoplay": false,
+        "show_progress": false,
+        "enable_animation": true,
+        "aria_label": "Hero slideshow",
+        "margin_bottom": "medium"
+      }
     }
   },
   "order": [
     "content_block_xThVp3",
-    "banner_cards_1",
+    "banner_cards_2",
     "product_carousel_1",
-    "hero_2",
-    "banner_cards_2"
+    "hero_2"
   ]
 }
