@@ -1,0 +1,72 @@
+{% doc %}
+  Renders the predictive search dropdown shell, mounted directly under the
+  search input row inside [data-search-overlay]. Products column on desktop
+  with an optional articles column when the toggle is on; stacked on mobile
+  (2-col product grid then articles below). All result rows are populated by
+  the inline JS in sections/header.liquid via /search/suggest.json + Section
+  Rendering API.
+
+  @param {section} section - The header section, used to read predictive
+    visibility toggles for show/hide of columns.
+
+  @example
+  {% render 'predictive-search-dropdown', section: section %}
+{% enddoc %}
+
+{%- liquid
+  assign show_products = section.settings.predictive_show_products
+  assign show_articles = section.settings.predictive_show_articles
+-%}
+
+<div
+  class="predictive-search-dropdown hidden w-full bg-white"
+  data-predictive-dropdown
+  data-show-products="{{ show_products }}"
+  data-show-articles="{{ show_articles }}"
+  hidden
+>
+  <div class="container-wide py-6">
+    {%- comment -%} Empty / hint state shown when no toggles return results {%- endcomment -%}
+    <div class="hidden py-6 text-center text-sm text-taupe-700" data-predictive-empty>
+      {{ 'general.search.no_predictive_results' | t }}
+    </div>
+
+    {%- comment -%} Loading state {%- endcomment -%}
+    <div class="hidden py-6 text-center text-sm text-taupe-700" data-predictive-loading>
+      {{ 'general.search.predictive_loading' | t }}
+    </div>
+
+    {%- comment -%} Results layout — flex row on desktop, stacked on mobile {%- endcomment -%}
+    <div class="flex flex-col gap-8 md:flex-row md:items-start md:gap-10" data-predictive-results>
+      {%- if show_products -%}
+        <div class="predictive-col-products flex-1 md:flex-[2]" data-predictive-col-products hidden>
+          <h3 class="mb-4 text-xs font-semibold uppercase tracking-wider text-taupe-700">
+            {{ 'general.search.predictive_products_heading' | t }}
+          </h3>
+          <div
+            class="grid grid-cols-3 gap-4 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6"
+            data-predictive-products
+          ></div>
+        </div>
+      {%- endif -%}
+
+      {%- if show_articles -%}
+        <div class="predictive-col-articles md:flex-1" data-predictive-col-articles hidden>
+          <h3 class="mb-4 text-xs font-semibold uppercase tracking-wider text-taupe-700">
+            {{ 'general.search.predictive_articles_heading' | t }}
+          </h3>
+          <ul class="flex flex-col gap-3" data-predictive-articles></ul>
+        </div>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Footer link — 'View all results for "{q}"' → /search?q=...&type=product {%- endcomment -%}
+    <div class="mt-6 hidden border-t border-taupe-300 pt-4 text-center" data-predictive-footer>
+      <a
+        href="{{ routes.search_url }}"
+        class="text-sm font-semibold text-clubhouse-green-600 underline-offset-4 hover:underline"
+        data-predictive-view-all
+      ></a>
+    </div>
+  </div>
+</div>

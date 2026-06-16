@@ -20,7 +20,12 @@
     "search": {
       "title": "Search",
       "placeholder": "Search products...",
-      "submit": "Submit search"
+      "submit": "Submit search",
+      "view_all_results": "View all results for \"{{ query }}\"",
+      "no_predictive_results": "No results — try a different search term.",
+      "predictive_loading": "Searching…",
+      "predictive_products_heading": "Products",
+      "predictive_articles_heading": "Magazine"
     }
   },
   "products": {
@@ -92,6 +97,7 @@
       "title": "Search results for:",
       "title_empty": "Search products",
       "no_results": "No products found for your selection",
+      "no_results_body": "Try a different search term or browse our recommendations below.",
       "previous": "Previous page",
       "next": "Next page"
     },

@@ -12,6 +12,7 @@
   data-section-id="{{ section.id }}"
   data-search-url="{{ routes.search_url }}"
   data-search-terms="{{ search_terms | escape }}"
+  data-has-results="{% if search.performed and search.results_count > 0 %}true{% else %}false{% endif %}"
 >
   <div class="container-wide">
 
@@ -134,7 +135,14 @@
 
     {%- comment -%} Empty state {%- endcomment -%}
     {%- if search.performed and search.results_count == 0 -%}
-      <p data-search-empty class="py-16 text-center text-lg text-taupe-700">{{ 'sections.search.no_results' | t }}</p>
+      <div data-search-empty class="py-16 text-center">
+        <h2 class="mb-4 font-serif text-3xl lg:text-4xl">
+          {{ 'sections.search.no_results' | t: terms: search_terms }}
+        </h2>
+        <p class="mx-auto max-w-lg text-base text-taupe-700">
+          {{ 'sections.search.no_results_body' | t }}
+        </p>
+      </div>
     {%- endif -%}
 
     {%- comment -%} Chevron pagination (prev / next) — matches source site {%- endcomment -%}
@@ -203,6 +211,17 @@
           if (!html) return;
 
           var doc = new DOMParser().parseFromString(html, 'text/html');
+
+          /* Mirror data-has-results from the newly-fetched outer main onto the
+             live section so the search-recommendations observer can flip its
+             heading. The Section Rendering API only swaps inner children
+             below, so without this the attribute would stay stale and the
+             "no results" heading would never appear after an AJAX filter
+             narrowed the page to zero. */
+          var newMain = doc.getElementById('search-section');
+          if (newMain && newMain.dataset.hasResults != null) {
+            section.dataset.hasResults = newMain.dataset.hasResults;
+          }
 
           var newGrid = doc.getElementById('search-product-grid');
           var curGrid = document.getElementById('search-product-grid');

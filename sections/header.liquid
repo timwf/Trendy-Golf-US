@@ -2,13 +2,13 @@
   class="site-header z-10 h-[64px] lg:h-[74px]"
   data-header
 >
-  {%- comment -%} Search overlay {%- endcomment -%}
+  {%- comment -%} Search overlay — input row + predictive dropdown {%- endcomment -%}
   <div
     id="search-overlay"
-    class="absolute left-0 top-0 z-[2] size-full -translate-y-full transition-all duration-500"
+    class="search-overlay absolute left-0 top-0 z-[2] w-full -translate-y-full overflow-hidden bg-white transition-transform duration-500"
     data-search-overlay
   >
-    <form class="flex size-full items-center bg-white" action="{{ routes.search_url }}" method="get" role="search">
+    <form class="flex h-[64px] w-full items-center bg-white lg:h-[74px]" action="{{ routes.search_url }}" method="get" role="search">
       <input type="hidden" name="type" value="product">
       <div class="container flex items-center justify-between gap-5">
         <button type="submit" aria-label="{{ 'general.search.submit' | t }}">
@@ -18,17 +18,26 @@
           type="search"
           name="q"
           placeholder="{{ 'general.search.placeholder' | t }}"
-          class="flex-1 text-xl focus:outline-none"
+          class="flex-1 text-xl focus:outline-none appearance-none bg-transparent"
           autocomplete="off"
           autocorrect="off"
           autocapitalize="none"
           spellcheck="false"
+          data-search-input
         >
         <button type="button" data-search-close aria-label="{{ 'general.accessibility.close' | t }}">
           {% render 'icon', icon: 'x-mark', size: 'size-6' %}
         </button>
       </div>
     </form>
+
+    {%- comment -%} Predictive results panel — scrolls internally when open {%- endcomment -%}
+    <div
+      class="search-overlay__results hidden overflow-y-auto bg-white"
+      data-search-results-panel
+    >
+      {% render 'predictive-search-dropdown', section: section %}
+    </div>
   </div>
 
   <div
@@ -275,7 +284,319 @@
   data-mobile-nav-overlay
 ></div>
 
+{%- comment -%} Predictive search config — read by the inline JS below {%- endcomment -%}
+<script>
+  window.predictiveSearchConfig = {
+    showProducts: {{ section.settings.predictive_show_products | json }},
+    showArticles: {{ section.settings.predictive_show_articles | json }},
+    articlesLimit: {{ section.settings.predictive_articles_limit | default: 4 | json }},
+    searchUrl: {{ routes.search_url | json }},
+    predictiveSearchUrl: {{ routes.predictive_search_url | json }},
+    rootUrl: {{ routes.root_url | json }},
+    viewAllLabel: {{ 'general.search.view_all_results' | t: query: '__QUERY__' | json }}
+  };
+</script>
+
+<script>
+  (function () {
+    var cfg = window.predictiveSearchConfig || {};
+    var overlay = document.querySelector('[data-search-overlay]');
+    if (!overlay) return;
+    var input = overlay.querySelector('[data-search-input]');
+    var panel = overlay.querySelector('[data-search-results-panel]');
+    var dropdown = overlay.querySelector('[data-predictive-dropdown]');
+    if (!input || !panel || !dropdown) return;
+
+    var productsCol = dropdown.querySelector('[data-predictive-col-products]');
+    var articlesCol = dropdown.querySelector('[data-predictive-col-articles]');
+    var productsGrid = dropdown.querySelector('[data-predictive-products]');
+    var articlesList = dropdown.querySelector('[data-predictive-articles]');
+    var emptyEl = dropdown.querySelector('[data-predictive-empty]');
+    var loadingEl = dropdown.querySelector('[data-predictive-loading]');
+    var resultsEl = dropdown.querySelector('[data-predictive-results]');
+    var footerEl = dropdown.querySelector('[data-predictive-footer]');
+    var viewAllLink = dropdown.querySelector('[data-predictive-view-all]');
+
+    var debounceTimer = null;
+    var inflightAbort = null;
+
+    /* Responsive column ramp — single row of cards across breakpoints.
+     * Must mirror the Tailwind grid classes in snippets/predictive-search-dropdown.liquid:
+     *   grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6
+     * Rendered card count = column count so the grid never wraps. */
+    var mqMd = window.matchMedia('(min-width: 768px)');
+    var mqLg = window.matchMedia('(min-width: 1024px)');
+    var mqXl = window.matchMedia('(min-width: 1280px)');
+
+    function escAttr(str) {
+      return String(str == null ? '' : str)
+        .replace(/&/g, '&amp;').replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    function escHtml(str) {
+      return String(str == null ? '' : str)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    }
+
+    /* Shopify's `t` filter HTML-escapes embedded characters (e.g. " → &quot;).
+     * The translated label is later set as textContent — so decode entities first. */
+    function decodeEntities(str) {
+      var tmp = document.createElement('textarea');
+      tmp.innerHTML = String(str == null ? '' : str);
+      return tmp.value;
+    }
+
+    function getEnabledTypes() {
+      var types = [];
+      if (cfg.showProducts) types.push('product');
+      if (cfg.showArticles) types.push('article');
+      return types;
+    }
+
+    function getProductLimit() {
+      if (mqXl.matches) return 6;
+      if (mqLg.matches) return 5;
+      if (mqMd.matches) return 4;
+      return 3;
+    }
+
+    function getLimitForType(t) {
+      if (t === 'product') return getProductLimit();
+      if (t === 'article') return cfg.articlesLimit;
+      return 4;
+    }
+
+    function showDropdown() {
+      dropdown.hidden = false;
+      dropdown.classList.remove('hidden');
+      panel.classList.remove('hidden');
+      overlay.setAttribute('data-predictive-open', 'true');
+    }
+
+    function hideDropdown() {
+      dropdown.hidden = true;
+      dropdown.classList.add('hidden');
+      panel.classList.add('hidden');
+      overlay.removeAttribute('data-predictive-open');
+    }
+
+    function showLoading() {
+      loadingEl.classList.remove('hidden');
+      resultsEl.classList.add('hidden');
+      footerEl.classList.add('hidden');
+      emptyEl.classList.add('hidden');
+    }
+
+    function showEmpty() {
+      loadingEl.classList.add('hidden');
+      resultsEl.classList.add('hidden');
+      footerEl.classList.add('hidden');
+      emptyEl.classList.remove('hidden');
+    }
+
+    function showResults() {
+      loadingEl.classList.add('hidden');
+      resultsEl.classList.remove('hidden');
+      footerEl.classList.remove('hidden');
+      emptyEl.classList.add('hidden');
+    }
+
+    function renderArticleRows(articles) {
+      if (!articlesList) return;
+      articlesList.innerHTML = articles.map(function (a) {
+        var url = a.url || '#';
+        var title = escHtml(a.title || '');
+        var summary = escHtml((a.summary_html || a.summary || '').replace(/<[^>]+>/g, '').slice(0, 90));
+        var imgSrc = (a.image && (typeof a.image === 'string' ? a.image : a.image.src)) || '';
+        var imgHtml = imgSrc ?
+          '<img src="' + escAttr(imgSrc) + '" alt="' + escAttr(title) + '" class="size-12 shrink-0 object-cover" loading="lazy" />' : '';
+        return '<li>' +
+          '<a class="flex items-start gap-3 hover:text-clubhouse-green-600" href="' + escAttr(url) + '">' +
+            imgHtml +
+            '<span class="flex flex-col">' +
+              '<span class="mb-0 text-sm font-semibold">' + title + '</span>' +
+              (summary ? '<span class="mb-0 text-xs text-taupe-700">' + summary + '</span>' : '') +
+            '</span>' +
+          '</a>' +
+        '</li>';
+      }).join('');
+    }
+
+    function fetchProductCards(products, signal) {
+      if (!productsGrid) return Promise.resolve([]);
+      var rootUrl = cfg.rootUrl || '/';
+      return Promise.all(products.map(function (prod) {
+        var handle = prod.handle;
+        if (!handle) return Promise.resolve(null);
+        var url = rootUrl + 'products/' + encodeURIComponent(handle) + '?section_id=product-card-renderer';
+        return fetch(url, { credentials: 'same-origin', signal: signal })
+          .then(function (r) { return r.ok ? r.text() : ''; })
+          .then(function (html) {
+            if (!html) return null;
+            var tmp = document.createElement('div');
+            tmp.innerHTML = html.trim();
+            var wrapper = tmp.querySelector('#shopify-section-product-card-renderer') || tmp.firstElementChild;
+            return wrapper ? wrapper.innerHTML : null;
+          })
+          .catch(function () { return null; });
+      })).then(function (results) { return results.filter(Boolean); });
+    }
+
+    function clearResults() {
+      if (productsGrid) productsGrid.innerHTML = '';
+      if (articlesList) articlesList.innerHTML = '';
+      if (productsCol) productsCol.hidden = true;
+      if (articlesCol) articlesCol.hidden = true;
+    }
+
+    function performSearch(query) {
+      var types = getEnabledTypes();
+      if (!types.length) { showEmpty(); return; }
+
+      if (inflightAbort) { try { inflightAbort.abort(); } catch (e) {} }
+      var controller = ('AbortController' in window) ? new AbortController() : null;
+      inflightAbort = controller;
+
+      clearResults();
+      showLoading();
+
+      var params = new URLSearchParams();
+      params.set('q', query);
+      params.set('resources[type]', types.join(','));
+      params.set('resources[limit]', String(Math.max(
+        getProductLimit(), cfg.articlesLimit
+      )));
+      params.set('resources[options][unavailable_products]', 'hide');
+
+      var url = (cfg.predictiveSearchUrl || '/search/suggest') + '.json?' + params.toString();
+
+      fetch(url, {
+        credentials: 'same-origin',
+        headers: { 'Accept': 'application/json' },
+        signal: controller ? controller.signal : undefined
+      })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (json) {
+          if (!json) { showEmpty(); return; }
+          var resources = (json.resources && json.resources.results) || {};
+          var products = (resources.products || []).slice(0, getLimitForType('product'));
+          var articles = (resources.articles || []).slice(0, getLimitForType('article'));
+
+          var anything = false;
+
+          if (cfg.showProducts && products.length) {
+            anything = true;
+            productsCol.hidden = false;
+            return fetchProductCards(products, controller ? controller.signal : undefined).then(function (cards) {
+              productsGrid.innerHTML = cards.map(function (html) {
+                return '<div>' + html + '</div>';
+              }).join('');
+              return { articles: articles };
+            });
+          }
+          return { articles: articles };
+        })
+        .then(function (rest) {
+          if (!rest) return;
+          if (cfg.showArticles && rest.articles && rest.articles.length) {
+            articlesCol.hidden = false;
+            renderArticleRows(rest.articles);
+          }
+
+          var anyVisible = (productsCol && !productsCol.hidden) ||
+                           (articlesCol && !articlesCol.hidden);
+          if (anyVisible) {
+            showResults();
+            var encoded = encodeURIComponent(input.value);
+            var href = (cfg.searchUrl || '/search') + '?q=' + encoded + '&type=product';
+            viewAllLink.setAttribute('href', href);
+            var label = decodeEntities(cfg.viewAllLabel || 'View all results for "__QUERY__"');
+            viewAllLink.textContent = label.replace('__QUERY__', input.value);
+          } else {
+            showEmpty();
+          }
+        })
+        .catch(function (err) {
+          if (err && err.name === 'AbortError') return;
+          showEmpty();
+        });
+    }
+
+    input.addEventListener('input', function () {
+      var q = (input.value || '').trim();
+      if (debounceTimer) clearTimeout(debounceTimer);
+      if (!q) {
+        if (inflightAbort) { try { inflightAbort.abort(); } catch (e) {} }
+        clearResults();
+        hideDropdown();
+        return;
+      }
+      showDropdown();
+      debounceTimer = setTimeout(function () { performSearch(q); }, 200);
+    });
+
+    /* Close dropdown when overlay closes (existing closeSearch in theme.js fires on click/esc) */
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('[data-search-close]')) {
+        if (inflightAbort) { try { inflightAbort.abort(); } catch (e2) {} }
+        clearResults();
+        hideDropdown();
+        input.value = '';
+      }
+    });
+
+    /* Outside-click closes dropdown */
+    document.addEventListener('click', function (e) {
+      if (!overlay.contains(e.target) && !e.target.closest('[data-search-open]')) {
+        if (!dropdown.hidden) {
+          clearResults();
+          hideDropdown();
+        }
+      }
+    });
+
+    /* Recompute product limit when viewport crosses any of the breakpoints
+     * the grid ramp uses (md / lg / xl). The rendered card count is derived
+     * from viewport, so a crossing changes the result set and the grid would
+     * either wrap or under-fill without a re-fetch. */
+    function onBreakpointChange() {
+      var q = (input.value || '').trim();
+      if (q && !dropdown.hidden) performSearch(q);
+    }
+    [mqMd, mqLg, mqXl].forEach(function (mq) {
+      if (mq.addEventListener) {
+        mq.addEventListener('change', onBreakpointChange);
+      } else if (mq.addListener) {
+        /* Safari < 14 legacy API */
+        mq.addListener(onBreakpointChange);
+      }
+    });
+  })();
+</script>
+
 {% stylesheet %}
+  /* iOS Safari paints `<input type="search">` with a tinted rounded background
+   * and a native clear button. Tailwind's `appearance-none` strips the rounded
+   * chrome on the input itself; this rule strips the WebKit pseudo-element
+   * clear button so the [data-search-close] x-icon stays the only clear UI. */
+  [data-search-input]::-webkit-search-cancel-button,
+  [data-search-input]::-webkit-search-decoration {
+    -webkit-appearance: none;
+    display: none;
+  }
+
+  /* Search overlay — input row by default, expands when predictive panel opens */
+  .search-overlay { max-height: 74px; transition: max-height 300ms cubic-bezier(0.4, 0, 0.2, 1), transform 500ms; }
+  @media (max-width: 767px) {
+    .search-overlay { max-height: 100dvh; height: 100dvh; }
+    .search-overlay .search-overlay__results { max-height: calc(100dvh - 64px); }
+  }
+  @media (min-width: 768px) {
+    .search-overlay[data-predictive-open="true"] { max-height: 80vh; }
+    .search-overlay__results { max-height: calc(80vh - 74px); }
+  }
+
   /* Default: relative position, solid colors */
   .site-header { position: relative; }
   .site-header .header-inner {
@@ -380,6 +701,32 @@
       "id": "other_region_url",
       "label": "t:sections.header.settings.other_region_url.label",
       "info": "t:sections.header.settings.other_region_url.info"
+    },
+    {
+      "type": "header",
+      "content": "Predictive search"
+    },
+    {
+      "type": "checkbox",
+      "id": "predictive_show_products",
+      "label": "Show products",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "predictive_show_articles",
+      "label": "Show magazine articles",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "predictive_articles_limit",
+      "label": "Articles limit",
+      "min": 2,
+      "max": 6,
+      "step": 1,
+      "default": 4,
+      "visible_if": "{{ section.settings.predictive_show_articles }}"
     }
   ],
   "blocks": [
