@@ -406,6 +406,29 @@
       var newItems = tmp.querySelector('[data-cart-items]');
       if (newItems && itemsContainer) itemsContainer.innerHTML = newItems.innerHTML;
 
+      /* Update free-shipping bar in place — preserve element identity so CSS transition
+         animates from current width to new width, not from 0. */
+      var newBar = tmp.querySelector('[data-free-shipping-bar]');
+      var existingBar = drawer.querySelector('[data-free-shipping-bar]');
+      if (existingBar && newBar) {
+        var newFill = newBar.querySelector('[data-free-shipping-fill]');
+        var existingFill = existingBar.querySelector('[data-free-shipping-fill]');
+        if (newFill && existingFill) {
+          existingFill.style.width = newFill.style.width;
+        }
+        var newPb = newBar.querySelector('[role="progressbar"]');
+        var existingPb = existingBar.querySelector('[role="progressbar"]');
+        if (newPb && existingPb) {
+          existingPb.setAttribute('aria-valuenow', newPb.getAttribute('aria-valuenow') || '0');
+        }
+        var newMsg = newBar.querySelector('[data-free-shipping-message]');
+        var existingMsg = existingBar.querySelector('[data-free-shipping-message]');
+        if (newMsg && existingMsg) {
+          existingMsg.innerHTML = newMsg.innerHTML;
+        }
+        existingBar.hidden = newBar.hidden;
+      }
+
       /* Swap footer */
       var newFooter = tmp.querySelector('[data-cart-footer]');
       if (newFooter && footer) {
