@@ -42,22 +42,24 @@
               <div class="overflow-hidden" style="height:0" data-accordion-panel>
                 <div class="border-b border-taupe-400 py-6 [&_p:last-of-type]:mb-0">
                   {%- assign features_raw = product.metafields.custom.features_and_benefits | split: '*' -%}
-                  {%- for feature in features_raw -%}
-                    {%- assign feature_trimmed = feature | strip -%}
-                    {%- if feature_trimmed != blank -%}
-                      {%- assign parts = feature_trimmed | split: '–' -%}
-                      <p>
-                        <span class="font-bold">{{ parts[0] | strip }}</span>
-                        {%- if parts.size > 1 -%}
-                          <br>
-                          {%- for part in parts -%}
-                            {%- if forloop.first -%}{%- continue -%}{%- endif -%}
-                            {%- unless forloop.index == 1 -%}–{% endunless %}{{ part | strip }}
-                          {%- endfor -%}
-                        {%- endif -%}
-                      </p>
-                    {%- endif -%}
-                  {%- endfor -%}
+                  <ul class="list-disc pl-5 space-y-2">
+                    {%- for feature in features_raw -%}
+                      {%- assign feature_trimmed = feature | strip -%}
+                      {%- if feature_trimmed != blank -%}
+                        {%- assign parts = feature_trimmed | split: '–' -%}
+                        <li>
+                          <span class="font-bold">{{ parts[0] | strip }}</span>
+                          {%- if parts.size > 1 -%}
+                            <br>
+                            {%- for part in parts -%}
+                              {%- if forloop.first -%}{%- continue -%}{%- endif -%}
+                              {%- unless forloop.index == 1 -%}–{% endunless %}{{ part | strip }}
+                            {%- endfor -%}
+                          {%- endif -%}
+                        </li>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </ul>
                 </div>
               </div>
             </div>
