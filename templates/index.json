@@ -363,6 +363,7 @@
       "block_order": [
         "slide_tgcc"
       ],
+      "disabled": true,
       "name": "t:sections.hero_carousel.presets.name",
       "settings": {
         "autoplay": true,
