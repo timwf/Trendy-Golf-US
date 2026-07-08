@@ -62,7 +62,7 @@
         "slide_ralph_lauren": {
           "type": "slide",
           "settings": {
-            "desktop_alignment": "middle-center",
+            "desktop_alignment": "middle-left",
             "mobile_alignment": "bottom-center",
             "subheading": "LIGHTWEIGHT PERFORMANCE",
             "heading_first": true,
