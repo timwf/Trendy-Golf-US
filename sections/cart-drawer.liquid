@@ -89,7 +89,7 @@
         <ul class="mb-10">
           {%- for item in cart.items -%}
             <li class="mb-6 border-b border-taupe-400 pb-6 last:mb-0 last:border-0 last:pb-0">
-              {% render 'cart-line-item', item: item %}
+              {% render 'cart-line-item', item: item, mobile_always: true %}
             </li>
           {%- endfor -%}
         </ul>

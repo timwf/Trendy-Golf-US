@@ -2,6 +2,7 @@
   Renders a single cart line item with image, title, variant, quantity picker, price, and remove button.
 
   @param {line_item} item - The cart line item object
+  @param {boolean} [mobile_always] - Keep the compact mobile image size at all breakpoints (used in the narrow cart drawer). Omit on the full-width cart page so the image scales up on desktop.
 
   @example
   {% render 'cart-line-item', item: line_item %}
@@ -20,14 +21,14 @@
   <div>
     <a href="{{ item.product.url }}">
       {%- if item.image -%}
-        <img src="{{ item.image | image_url: width: 160 }}"
+        <img src="{{ item.image | image_url: width: 320 }}"
           alt="{{ item.image.alt | escape }}"
-          class="h-28 w-20 object-cover"
+          class="h-28 w-20 object-cover{% unless mobile_always %} md:h-52 md:w-40{% endunless %}"
           width="80"
           height="112"
           loading="lazy" />
       {%- else -%}
-        <div class="h-28 w-20 bg-taupe-300"></div>
+        <div class="h-28 w-20 bg-taupe-300{% unless mobile_always %} md:h-52 md:w-40{% endunless %}"></div>
       {%- endif -%}
     </a>
   </div>

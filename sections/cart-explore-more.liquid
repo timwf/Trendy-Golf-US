@@ -1,0 +1,83 @@
+{%- comment -%}
+  Cart — Explore More. Rebuy *trending* products carousel, loaded client-side.
+  Mirrors `cart.tsx` (Explore More block) + `useTrendingProducts.ts` + `getTrendingProducts.ts` + `productCarousel.tsx`.
+
+  Shares the theme.js `ExploreMore` module and DOM contract (`[data-explore-more]`,
+  `[data-explore-list]`, skeleton / loaded states) with the PDP `product-explore-more`
+  section. The only difference is the data source: this one sets `source: 'trending'`
+  so the module calls Rebuy's trending_products endpoint instead of a custom data source.
+  Product cards are fetched per handle via the Section Rendering API so they use
+  `snippets/product-card.liquid` (real Shopify product data).
+{%- endcomment -%}
+
+<script>
+  window.exploreMoreConfig = {
+    source: 'trending',
+    rebuyApiKey: {{ settings.rebuy_api_key | json }},
+    limit: {{ section.settings.limit | default: 8 | json }},
+    countryCode: {{ localization.country.iso_code | default: 'US' | json }},
+    rootUrl: {{ routes.root_url | json }}
+  };
+</script>
+
+<div
+  id="explore-more"
+  class="mb-14 overflow-hidden"
+  data-explore-more>
+  <div class="container">
+    <h2 class="mb-8 text-center font-serif text-3xl lg:text-4xl">Explore More</h2>
+
+    {%- comment -%} Loading skeleton — replaced by JS once Rebuy + card fetches resolve {%- endcomment -%}
+    <div class="grid grid-cols-2 gap-4 md:grid-cols-4" data-explore-skeleton>
+      <div class="h-48 animate-pulse bg-black/10"></div>
+      <div class="h-48 animate-pulse bg-black/10"></div>
+      <div class="h-48 animate-pulse bg-black/10 hidden md:block"></div>
+      <div class="h-48 animate-pulse bg-black/10 hidden md:block"></div>
+    </div>
+
+    {%- comment -%} Loaded state — hidden until populated {%- endcomment -%}
+    <div data-explore-loaded hidden>
+      <div data-inview="false" class="group/blocks">
+        <div class="splide relative" data-explore-splide>
+          <div class="splide__track overflow-visible xl:overflow-hidden xl:py-1">
+            <ul class="splide__list" data-explore-list></ul>
+          </div>
+          <div class="splide__arrows flex justify-center pt-6 md:absolute md:right-0 md:top-0 md:-translate-y-full md:pb-3 md:pt-0">
+            <button type="button" aria-label="Previous" class="splide__arrow splide__arrow--prev bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50">
+              {% render 'icon', icon: 'chevron-left', size: 'size-6' %}
+            </button>
+            <button type="button" aria-label="Next" class="splide__arrow splide__arrow--next bg-taupe-300 p-3 transition-all duration-300 disabled:bg-transparent disabled:opacity-50">
+              {% render 'icon', icon: 'chevron-right', size: 'size-6' %}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cart — Explore More",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Pulls trending products from Rebuy and renders them in a carousel below the cart. The Rebuy API key is configured under Theme settings → Rebuy. Hides itself automatically if Rebuy returns nothing."
+    },
+    {
+      "type": "range",
+      "id": "limit",
+      "label": "Number of products",
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cart — Explore More"
+    }
+  ]
+}
+{% endschema %}

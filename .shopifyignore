@@ -7,6 +7,7 @@ PROJECT.md
 .gitignore
 .shopifyignore
 .claude/
+.playwright-mcp/
 node_modules/
 tailwind.config.js
 package.json

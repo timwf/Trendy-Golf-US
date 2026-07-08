@@ -777,6 +777,135 @@
   window.cartDrawer = CartDrawer;
 
   /* ------------------------------------------------
+   * Main cart page — quantity + remove for /cart
+   * The CartDrawer handlers above are scoped to [data-cart-drawer] and
+   * re-render only the drawer section, so the full cart page needs its own
+   * delegated handlers that mutate the cart and re-render `main-cart` via the
+   * Section Rendering API. Mirrors `useCartLineItems.ts` from the reference.
+   * ---------------------------------------------- */
+  var MainCart = (function () {
+    var cfg = window.cartDrawerConfig || {};
+    var rootUrl = cfg.rootUrl || '/';
+    var root;
+
+    function init() {
+      root = document.querySelector('[data-main-cart]');
+      if (!root) return;
+
+      root.addEventListener('click', function (e) {
+        var minusBtn = e.target.closest('[data-quantity-minus]');
+        var plusBtn = e.target.closest('[data-quantity-plus]');
+        var removeBtn = e.target.closest('[data-line-remove]');
+
+        if (minusBtn) {
+          e.preventDefault();
+          var mKey = minusBtn.getAttribute('data-line-key');
+          var mInput = root.querySelector('[data-quantity-input][data-line-key="' + mKey + '"]');
+          var mCurrent = mInput ? (parseInt(mInput.value, 10) || 1) : 1;
+          if (mCurrent > 1) updateItem(mKey, mCurrent - 1);
+        } else if (plusBtn) {
+          e.preventDefault();
+          var pKey = plusBtn.getAttribute('data-line-key');
+          var pInput = root.querySelector('[data-quantity-input][data-line-key="' + pKey + '"]');
+          var pCurrent = pInput ? (parseInt(pInput.value, 10) || 1) : 1;
+          updateItem(pKey, pCurrent + 1);
+        } else if (removeBtn) {
+          e.preventDefault();
+          updateItem(removeBtn.getAttribute('data-line-remove'), 0);
+        }
+      });
+
+      root.addEventListener('change', function (e) {
+        var input = e.target.closest('[data-quantity-input]');
+        if (!input) return;
+        var val = parseInt(input.value, 10);
+        var key = input.getAttribute('data-line-key');
+        if (isNaN(val) || val < 1) { refresh(); return; }
+        updateItem(key, val);
+      });
+    }
+
+    function setLineLoading(key, loading) {
+      var line = root.querySelector('[data-line-key="' + key + '"]');
+      var spinner = root.querySelector('[data-line-spinner="' + key + '"]');
+      if (line) {
+        line.classList.toggle('pointer-events-none', loading);
+        line.classList.toggle('opacity-50', loading);
+      }
+      if (spinner) spinner.classList.toggle('hidden', !loading);
+    }
+
+    function updateItem(key, quantity) {
+      setLineLoading(key, true);
+      return fetch(rootUrl + 'cart/change.js', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({ id: key, quantity: quantity, sections: 'main-cart' }),
+        credentials: 'same-origin'
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data.status && data.status !== 200) {
+            /* 422 = inventory exceeded — Shopify still adjusts to max available */
+            if (typeof Toast !== 'undefined') Toast.show(data.description || data.message || 'Could not update quantity', 'error');
+            refresh();
+            return;
+          }
+          if (data.sections && data.sections['main-cart']) {
+            swap(data.sections['main-cart']);
+          } else {
+            refresh();
+          }
+          syncCart(data.item_count);
+        })
+        .catch(function (err) {
+          console.error('Cart update failed:', err);
+          setLineLoading(key, false);
+        });
+    }
+
+    function refresh() {
+      return fetch(rootUrl + '?sections=main-cart', { credentials: 'same-origin' })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (data['main-cart']) {
+            swap(data['main-cart']);
+            syncCart();
+          }
+        })
+        .catch(function () {});
+    }
+
+    function swap(html) {
+      if (!root) return;
+      var tmp = document.createElement('div');
+      tmp.innerHTML = html;
+      var fresh = tmp.querySelector('[data-main-cart]') || tmp.firstElementChild;
+      if (fresh) root.innerHTML = fresh.innerHTML;
+    }
+
+    /* Keep the header count badges + drawer in sync after a page-side mutation */
+    function syncCart(count) {
+      if (count != null) {
+        var c = String(count);
+        document.querySelectorAll('[data-cart-count]').forEach(function (badge) {
+          badge.textContent = c;
+          badge.hidden = c === '0' || c === '';
+        });
+        document.dispatchEvent(new CustomEvent('cart:changed', { detail: { count: c } }));
+      }
+      if (window.cartDrawer && typeof window.cartDrawer.refreshDrawer === 'function') {
+        window.cartDrawer.refreshDrawer();
+      }
+    }
+
+    return { init: init };
+  })();
+
+  MainCart.init();
+  window.mainCart = MainCart;
+
+  /* ------------------------------------------------
    * Rewards (Upzelo / TGCC) — delegated triggers
    * Buttons may live inside re-rendered sections (cart drawer),
    * so use document-level delegation rather than direct binding.
@@ -875,8 +1004,13 @@
       var cfg = window.exploreMoreConfig || {};
       if (cfg.isGiftCard) return hide();
       if (!cfg.rebuyApiKey) return hide();
-      if (!cfg.rebuyRecommendationsId) return hide();
-      if (!cfg.productId || !/^\d+$/.test(String(cfg.productId))) return hide();
+
+      var isTrending = cfg.source === 'trending';
+      if (!isTrending) {
+        /* Similar-products (PDP) mode needs a recommendations data source + product id */
+        if (!cfg.rebuyRecommendationsId) return hide();
+        if (!cfg.productId || !/^\d+$/.test(String(cfg.productId))) return hide();
+      }
 
       skeleton = root.querySelector('[data-explore-skeleton]');
       loaded = root.querySelector('[data-explore-loaded]');
@@ -885,7 +1019,8 @@
       inviewEl = root.querySelector('[data-inview]');
       if (!list || !splideEl || !loaded) return hide();
 
-      fetchSimilar(cfg)
+      var fetchHandles = isTrending ? fetchTrending(cfg) : fetchSimilar(cfg);
+      fetchHandles
         .then(function (handles) {
           if (!handles.length) return hide();
           return renderCards(handles, cfg).then(function (cardsHtml) {
@@ -898,6 +1033,27 @@
           console.error('[ExploreMore] fetch failed', err);
           hide();
         });
+    }
+
+    function fetchTrending(cfg) {
+      // Rebuy trending_products endpoint — mirrors getTrendingProducts.ts.
+      // Used by the cart page's Explore More (no product context; store-wide trending).
+      var params = new URLSearchParams({
+        key: cfg.rebuyApiKey,
+        limit: String(cfg.limit || 8)
+      });
+      if (cfg.countryCode) params.set('country_code', cfg.countryCode);
+      var url = 'https://rebuyengine.com/api/v1/products/trending_products?' + params.toString();
+
+      return fetch(url, { headers: { Accept: 'application/json' } })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (json) {
+          var data = json && Array.isArray(json.data) ? json.data : [];
+          return data
+            .map(function (p) { return p && p.handle; })
+            .filter(Boolean);
+        })
+        .catch(function () { return []; });
     }
 
     function fetchSimilar(cfg) {

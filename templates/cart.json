@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main-cart": {
+      "type": "main-cart",
+      "settings": {}
+    },
+    "explore-more": {
+      "type": "cart-explore-more",
+      "settings": {
+        "limit": 8
+      }
+    }
+  },
+  "order": ["main-cart", "explore-more"]
+}

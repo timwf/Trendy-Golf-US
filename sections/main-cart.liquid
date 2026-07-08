@@ -1,0 +1,103 @@
+{%- comment -%}
+  Full-page cart. Mirrors `_reference/repo/app/components/pages/cart.tsx`.
+  Building blocks reused from the theme:
+    - snippets/cart-line-item.liquid (image, title, variant, quantity picker, price, remove)
+    - snippets/rewards-modal.liquid trigger (data-rewards-modal-open) — modal is rendered globally in layout/theme.liquid
+    - assets/theme.js CartDrawer handles the AJAX line mutations (delegated off document)
+  The "Explore More" Rebuy trending carousel is a sibling section (cart-explore-more) added in templates/cart.json.
+{%- endcomment -%}
+
+<div class="container py-10" data-main-cart>
+  {%- comment -%} Header {%- endcomment -%}
+  <div class="mb-8 flex items-center justify-between border-b border-taupe-400 pb-6">
+    <h1 class="mb-0 font-serif text-3xl lg:text-4xl">Your Cart</h1>
+    <div>
+      <a href="{{ routes.root_url }}" class="font-bold">Continue Shopping</a>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 gap-10 md:grid-cols-6{% if cart.item_count > 0 %} mb-20{% endif %}">
+    {%- comment -%} Line items {%- endcomment -%}
+    <div class="md:col-span-3 lg:col-span-4">
+      {%- if cart.item_count > 0 -%}
+        <ul>
+          {%- for item in cart.items -%}
+            <li class="mb-6 border-b border-taupe-400 pb-6 last:mb-0 last:border-0 last:pb-0">
+              {% render 'cart-line-item', item: item %}
+            </li>
+          {%- endfor -%}
+        </ul>
+      {%- else -%}
+        <p>Your basket is empty.</p>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} Summary {%- endcomment -%}
+    <div class="md:col-span-3 lg:col-span-2">
+      {%- if cart.item_count > 0 -%}
+        <div class="bg-taupe-300 p-6">
+          <h2 class="font-sans font-bold text-base lg:text-lg">Summary</h2>
+          <div class="mb-6 grid gap-2">
+            <p class="mb-0 flex justify-between">
+              <span>Subtotal ({{ cart.item_count }} items)</span>
+              <span>{{ cart.items_subtotal_price | money }}</span>
+            </p>
+            <p class="mb-0 flex justify-between">
+              <span>Shipping</span>
+              <span>Calculated at Checkout</span>
+            </p>
+          </div>
+          <hr class="mb-6 border-taupe-400" />
+          <div class="mb-6">
+            <p class="mb-0 flex justify-between text-lg font-bold">
+              <span>Total</span>
+              <span>{{ cart.items_subtotal_price | money }}</span>
+            </p>
+          </div>
+
+          {%- comment -%} Rewards — logged out {%- endcomment -%}
+          {%- unless customer -%}
+            <div class="mb-4 flex items-center gap-2 bg-clubhouse-green-600 p-4 text-sm text-white">
+              {% render 'icon', icon: 'trophy', size: 'size-5', class: 'min-w-5' %}
+              <span class="inline [&_*]:mb-0">
+                <b>Register</b> at checkout to unlock <b>TGCC Rewards</b> with your purchase.
+                <button type="button" class="inline font-bold underline" data-rewards-modal-open>Learn more</button>
+              </span>
+            </div>
+          {%- endunless -%}
+
+          {%- comment -%} Rewards — logged in {%- endcomment -%}
+          {%- if customer -%}
+            <button type="button" class="mb-4 flex w-full items-center gap-3 border border-taupe-600 p-4 text-left text-sm hover:border-taupe-900" data-upzelo-toggle>
+              {% render 'icon', icon: 'trophy', size: 'size-5', class: 'min-w-5 shrink-0' %}
+              <span><b>TGCC Rewards</b> — View your points &amp; rewards</span>
+            </button>
+          {%- endif -%}
+
+          {%- comment -%} Checkout — mirrors Button style=dark-grey (buttonClasses) {%- endcomment -%}
+          <a href="{{ routes.root_url }}checkout"
+            class="flex items-center gap-2 text-center text-sm tracking-wider transition-all disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 uppercase justify-center px-4 py-3 lg:px-10 min-w-40 bg-taupe-900 text-white enabled:hover:bg-taupe-600">
+            <span>Checkout</span>
+          </a>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cart page",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "Full cart page. The 'Explore More' recommendations carousel below is the separate 'Cart — Explore More' section."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cart page"
+    }
+  ]
+}
+{% endschema %}
