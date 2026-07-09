@@ -605,31 +605,12 @@
   }
   .site-header .header-logo--light { display: none; }
 
-  /* Hero page (first section in <main> has [data-hero]) — absolute overlay */
-  body:has(#main-content > .shopify-section:first-child [data-hero]) .site-header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-  }
-
-  /* Hero page, not scrolled, not mega-active — transparent state */
-  body:has(#main-content > .shopify-section:first-child [data-hero]) .site-header:not(.header--solid):not(.header--mega-active) .header-inner {
-    background-color: transparent;
-    color: var(--header-transparent-text);
-  }
-
-  /* Hero page transparent — logo swap to light version */
-  body:has(#main-content > .shopify-section:first-child [data-hero]) .site-header:not(.header--solid):not(.header--mega-active) .header-logo--dark:not(.header-logo--force-white) {
-    display: none;
-  }
-  body:has(#main-content > .shopify-section:first-child [data-hero]) .site-header:not(.header--solid):not(.header--mega-active) .header-logo--light {
-    display: block;
-    filter: brightness(0) invert(1);
-  }
-  body:has(#main-content > .shopify-section:first-child [data-hero]) .site-header:not(.header--solid):not(.header--mega-active) .header-logo--dark.header-logo--force-white {
-    filter: brightness(0) invert(1);
-  }
+  /* Item 1 — hero pages now render the header FULLY SOLID from the top.
+     The old transparent/white-logo overlay state dropped the logo + menu on
+     light banner slides, so hero pages fall through to the default solid bar
+     above (cream bg, dark nav text, green TG logo) — identical to every other
+     page. The [data-hero] hook is kept so this is a one-block revert if the
+     transparent hero header is ever wanted back. */
 
   /* Mega-active nav links match solid text colour */
   .site-header.header--mega-active .nav-link {
