@@ -2,8 +2,33 @@
   <div class="container-wide">
     <hr class="mb-12 border-t border-taupe-900">
   </div>
+  {%- comment -%} Count the columns that will actually render (Contact is always shown) so the
+      grid stays evenly spaced when a nav menu is left blank, instead of leaving a dead column. {%- endcomment -%}
+  {%- liquid
+    assign footer_col_count = 1
+    if section.settings.menu_1 != blank
+      assign footer_col_count = footer_col_count | plus: 1
+    endif
+    if section.settings.menu_2 != blank
+      assign footer_col_count = footer_col_count | plus: 1
+    endif
+    if section.settings.menu_3 != blank
+      assign footer_col_count = footer_col_count | plus: 1
+    endif
+
+    case footer_col_count
+      when 4
+        assign footer_grid_class = 'md:grid-cols-2 xl:grid-cols-4'
+      when 3
+        assign footer_grid_class = 'md:grid-cols-2 xl:grid-cols-3'
+      when 2
+        assign footer_grid_class = 'md:grid-cols-2'
+      else
+        assign footer_grid_class = ''
+    endcase
+  -%}
   <div class="container mb-14">
-    <div class="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
+    <div class="grid grid-cols-1 gap-10 {{ footer_grid_class }}">
 
       {%- comment -%} Contact column {%- endcomment -%}
       <div class="text-center">
