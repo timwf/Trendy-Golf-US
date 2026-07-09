@@ -15,7 +15,8 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "Explore our range",
             "heading_first": false,
             "heading": "Ralph Lauren",
@@ -48,16 +49,21 @@
     "product_carousel_1": {
       "type": "product-carousel-tabs",
       "settings": {
-        "title": "New In Ralph Lauren",
-        "tab_1_label": "Mens",
+        "title": "Ralph Lauren",
+        "tab_1_label": "Men's",
         "tab_1_products": [
-          "tech-hooded-pullover-twilight-camo",
-          "3-gs-tech-jersey-polo-lava",
-          "x-trendygolf-limited-edition-all-day-polo-twilight",
-          "mg4-o2-camo-golf-shoes-nimbus"
+          "rlx-performance-pique-polo-ceramic-white-2",
+          "rlx-eight-inch-tailored-fit-performance-shorts-refined-navy",
+          "rlx-tailored-fit-performance-pique-refined-navy-multi",
+          "rlx-8-inch-tailored-fit-stretch-shorts-perfect-gray"
         ],
-        "tab_2_label": "",
-        "tab_2_products": [],
+        "tab_2_label": "Women's",
+        "tab_2_products": [
+          "rlx-womens-active-cable-knit-polo-blue-mist-ceramic-white-multi",
+          "rlx-womens-a-line-mesh-sweater-skirt-refined-navy-white-splash",
+          "rlx-womens-cotton-blend-sweater-polo-light-pink-white-splash",
+          "rlx-womens-cable-motif-a-line-skort-ceramic-white-refined-navy-multi"
+        ],
         "tab_3_label": "",
         "tab_3_products": []
       }
