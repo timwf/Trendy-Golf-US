@@ -83,6 +83,22 @@
 
     {%- comment -%} Centre: desktop nav {%- endcomment -%}
     {%- assign main_menu = section.settings.menu -%}
+
+    {%- comment -%}
+      Item 3 — highlighted nav item(s). Build a |-delimited, lower-cased haystack of
+      the customizer titles (comma-separated) so each top-level link can test itself
+      with a single `contains`. Matched links get an inline colour (default red) that
+      wins over the hover / mega-active nav rules. Used by both the desktop nav below
+      and the mobile drawer further down.
+    {%- endcomment -%}
+    {%- assign hl_color = section.settings.highlight_nav_color -%}
+    {%- assign hl_hay = '|' -%}
+    {%- assign hl_tokens = section.settings.highlight_nav_title | default: '' | downcase | split: ',' -%}
+    {%- for hl_t in hl_tokens -%}
+      {%- assign hl_t = hl_t | strip -%}
+      {%- if hl_t != '' -%}{%- assign hl_hay = hl_hay | append: hl_t | append: '|' -%}{%- endif -%}
+    {%- endfor -%}
+
     <nav class="hidden items-center justify-between xl:block" aria-label="{{ 'sections.header.main_nav' | t }}">
       <ul class="flex">
         {%- for link in main_menu.links -%}
@@ -91,10 +107,16 @@
             {%- assign has_children = true -%}
           {%- endif -%}
 
+          {%- comment -%} Item 3 — does this top-level link match a highlighted title? {%- endcomment -%}
+          {%- assign link_key = link.title | downcase | strip | prepend: '|' | append: '|' -%}
+          {%- assign is_hl = false -%}
+          {%- if hl_hay != '|' and hl_hay contains link_key -%}{%- assign is_hl = true -%}{%- endif -%}
+
           <li class="{% if has_children %}group/grandparent{% endif %}">
             <a
               href="{{ link.url }}"
               class="nav-link transition-colors inline-block border-b border-transparent px-5 py-6 {% if has_children %}group-hover/grandparent:border-clubhouse-green-600 group-hover/grandparent:text-clubhouse-green-600{% else %}hover:text-clubhouse-green-600{% endif %}"
+              {% if is_hl and hl_color != blank %}style="color: {{ hl_color }};"{% endif %}
               {% if link.current %}aria-current="page"{% endif %}
             >
               {{ link.title }}
@@ -206,9 +228,13 @@
   <div class="relative h-full w-full flex-1 bg-white">
     <ul class="h-full w-full overflow-y-auto py-6 gap-6 flex flex-col">
       {%- for link in main_menu.links -%}
+        {%- comment -%} Item 3 — highlight matched top-level link in the mobile drawer too {%- endcomment -%}
+        {%- assign link_key = link.title | downcase | strip | prepend: '|' | append: '|' -%}
+        {%- assign is_hl = false -%}
+        {%- if hl_hay != '|' and hl_hay contains link_key -%}{%- assign is_hl = true -%}{%- endif -%}
         <li>
           <div class="flex justify-between w-full px-6">
-            <a href="{{ link.url }}" {% if link.current %}aria-current="page"{% endif %}>
+            <a href="{{ link.url }}" {% if is_hl and hl_color != blank %}style="color: {{ hl_color }};"{% endif %} {% if link.current %}aria-current="page"{% endif %}>
               <span><span>{{ link.title }}</span></span>
             </a>
             {%- if link.links.size > 0 -%}
@@ -661,6 +687,22 @@
       "id": "solid_text_color",
       "default": "#35342f",
       "label": "t:sections.header.settings.solid_text_color.label"
+    },
+    {
+      "type": "header",
+      "content": "Highlighted nav item"
+    },
+    {
+      "type": "text",
+      "id": "highlight_nav_title",
+      "label": "Menu item to highlight",
+      "info": "Type the exact top-level menu item to recolour, e.g. Summer Sale. Separate several with commas. Leave blank for none."
+    },
+    {
+      "type": "color",
+      "id": "highlight_nav_color",
+      "default": "#cc0000",
+      "label": "Highlight colour"
     },
     {
       "type": "header",
