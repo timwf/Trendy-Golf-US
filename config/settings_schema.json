@@ -8,6 +8,18 @@
     "theme_support_url": "https://github.com/trendygolf"
   },
   {
+    "name": "Product lists",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "colourway_own_tile",
+        "label": "Show each colourway as its own tile",
+        "info": "On: every colourway product gets its own tile on collection and search pages, still with the colour swatches on hover. Off: colourways sharing a display name are grouped into a single tile.",
+        "default": true
+      }
+    ]
+  },
+  {
     "name": "Colours",
     "settings": [
       {

@@ -82,6 +82,10 @@
     </div>
 
     {%- comment -%} Product grid with colour grouping {%- endcomment -%}
+    {%- comment -%} Item 4 — when settings.colourway_own_tile is on, every colourway product
+      renders its own tile (still carrying the full sibling swatch cluster). When off,
+      colourways sharing a display name collapse into a single tile (legacy behaviour). {%- endcomment -%}
+    {%- assign colourway_own_tile = settings.colourway_own_tile -%}
     {%- assign seen_display_names = '' -%}
     <div id="collection-product-grid" class="mb-6 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
       {%- for product in collection.products -%}
@@ -92,11 +96,13 @@
 
         {%- assign display_name = product.metafields.custom.product_display_name | default: product.title -%}
 
-        {%- comment -%} Skip if we already rendered a card for this display name {%- endcomment -%}
-        {%- if seen_display_names contains display_name -%}
-          {%- continue -%}
-        {%- endif -%}
-        {%- assign seen_display_names = seen_display_names | append: '|||' | append: display_name -%}
+        {%- comment -%} Collapse colourways to one tile only when the toggle is off {%- endcomment -%}
+        {%- unless colourway_own_tile -%}
+          {%- if seen_display_names contains display_name -%}
+            {%- continue -%}
+          {%- endif -%}
+          {%- assign seen_display_names = seen_display_names | append: '|||' | append: display_name -%}
+        {%- endunless -%}
 
         {%- comment -%} Build swatch HTML for all siblings {%- endcomment -%}
         {%- capture swatch_html -%}
