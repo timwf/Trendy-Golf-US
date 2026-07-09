@@ -1,22 +1,49 @@
 {%- liquid
   assign title = section.settings.title
+  assign max_products = section.settings.max_products | default: 8
 
   comment
-    Build an array of populated tabs (label + products present).
-    Liquid doesn't have push, so we build comma-delimited index strings.
+    Item 2 — a tab is "populated" if it has a label AND either a hand-picked
+    product list OR a collection override. When a collection is set it overrides
+    the product list (see the render loop below). Liquid has no push, so tab
+    indexes are built as a comma-delimited string.
   endcomment
-  assign tab_indexes = ''
+  assign t1_has = false
+  if section.settings.tab_1_label != blank
+    if section.settings.tab_1_collection != blank
+      assign t1_has = true
+    elsif section.settings.tab_1_products.count > 0
+      assign t1_has = true
+    endif
+  endif
+  assign t2_has = false
+  if section.settings.tab_2_label != blank
+    if section.settings.tab_2_collection != blank
+      assign t2_has = true
+    elsif section.settings.tab_2_products.count > 0
+      assign t2_has = true
+    endif
+  endif
+  assign t3_has = false
+  if section.settings.tab_3_label != blank
+    if section.settings.tab_3_collection != blank
+      assign t3_has = true
+    elsif section.settings.tab_3_products.count > 0
+      assign t3_has = true
+    endif
+  endif
 
-  if section.settings.tab_1_products.count > 0 and section.settings.tab_1_label != blank
+  assign tab_indexes = ''
+  if t1_has
     assign tab_indexes = tab_indexes | append: '1'
   endif
-  if section.settings.tab_2_products.count > 0 and section.settings.tab_2_label != blank
+  if t2_has
     if tab_indexes != ''
       assign tab_indexes = tab_indexes | append: ','
     endif
     assign tab_indexes = tab_indexes | append: '2'
   endif
-  if section.settings.tab_3_products.count > 0 and section.settings.tab_3_label != blank
+  if t3_has
     if tab_indexes != ''
       assign tab_indexes = tab_indexes | append: ','
     endif
@@ -69,13 +96,20 @@
 
       {%- for tab_index in tabs -%}
         {%- liquid
+          comment
+            Item 2 — resolve this tab's source. A collection override wins over the
+            hand-picked product list; when set we show its first `max_products`.
+          endcomment
           case tab_index
             when '1'
-              assign products = section.settings.tab_1_products
+              assign tab_products = section.settings.tab_1_products
+              assign tab_collection = section.settings.tab_1_collection
             when '2'
-              assign products = section.settings.tab_2_products
+              assign tab_products = section.settings.tab_2_products
+              assign tab_collection = section.settings.tab_2_collection
             when '3'
-              assign products = section.settings.tab_3_products
+              assign tab_products = section.settings.tab_3_products
+              assign tab_collection = section.settings.tab_3_collection
           endcase
         -%}
         <div
@@ -87,13 +121,23 @@
             <div class="splide" data-splide-el>
               <div class="splide__track overflow-visible xl:overflow-hidden xl:py-1">
                 <ul class="splide__list">
-                  {%- for product in products -%}
-                    <li class="splide__slide">
-                      <div data-measure class="inline-block w-full h-full">
-                        {%- render 'product-card', product: product -%}
-                      </div>
-                    </li>
-                  {%- endfor -%}
+                  {%- if tab_collection != blank -%}
+                    {%- for product in tab_collection.products limit: max_products -%}
+                      <li class="splide__slide">
+                        <div data-measure class="inline-block w-full h-full">
+                          {%- render 'product-card', product: product -%}
+                        </div>
+                      </li>
+                    {%- endfor -%}
+                  {%- else -%}
+                    {%- for product in tab_products -%}
+                      <li class="splide__slide">
+                        <div data-measure class="inline-block w-full h-full">
+                          {%- render 'product-card', product: product -%}
+                        </div>
+                      </li>
+                    {%- endfor -%}
+                  {%- endif -%}
                 </ul>
               </div>
 
@@ -107,6 +151,19 @@
               </div>
             </div>
           </div>
+
+          {%- comment -%} Item 2 — "View all" collection link, centred below the row. Only when
+            the toggle is on AND this tab has a collection set. {%- endcomment -%}
+          {%- if section.settings.show_collection_links and tab_collection != blank -%}
+            <div class="mt-8 flex justify-center lg:mt-10">
+              <a
+                href="{{ tab_collection.url }}"
+                class="inline-flex items-center justify-center border border-taupe-900 px-10 py-3 text-sm uppercase tracking-wider transition-all hover:bg-taupe-900 hover:text-white"
+              >
+                {{ section.settings.collection_link_label | default: 'View all' }}
+              </a>
+            </div>
+          {%- endif -%}
         </div>
       {%- endfor -%}
 
@@ -242,6 +299,37 @@
       "default": "This Seasons Highlights"
     },
     {
+      "type": "header",
+      "content": "Collection links"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_collection_links",
+      "label": "Show \"View all\" collection button",
+      "info": "Adds a button under a tab that links to that tab's collection. Only appears on tabs that have a Collection override set below.",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "collection_link_label",
+      "label": "Button label",
+      "default": "View all"
+    },
+    {
+      "type": "range",
+      "id": "max_products",
+      "label": "Max products per collection tab",
+      "info": "How many products to show when a tab uses a Collection override.",
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Tab 1"
+    },
+    {
       "type": "text",
       "id": "tab_1_label",
       "label": "t:sections.product_carousel_tabs.settings.tab_1_label.label",
@@ -252,6 +340,16 @@
       "id": "tab_1_products",
       "label": "t:sections.product_carousel_tabs.settings.tab_1_products.label",
       "limit": 25
+    },
+    {
+      "type": "collection",
+      "id": "tab_1_collection",
+      "label": "Collection override",
+      "info": "If set, overrides the products above and shows this collection's first products instead."
+    },
+    {
+      "type": "header",
+      "content": "Tab 2"
     },
     {
       "type": "text",
@@ -266,6 +364,16 @@
       "limit": 25
     },
     {
+      "type": "collection",
+      "id": "tab_2_collection",
+      "label": "Collection override",
+      "info": "If set, overrides the products above and shows this collection's first products instead."
+    },
+    {
+      "type": "header",
+      "content": "Tab 3"
+    },
+    {
       "type": "text",
       "id": "tab_3_label",
       "label": "t:sections.product_carousel_tabs.settings.tab_3_label.label"
@@ -275,6 +383,12 @@
       "id": "tab_3_products",
       "label": "t:sections.product_carousel_tabs.settings.tab_3_products.label",
       "limit": 25
+    },
+    {
+      "type": "collection",
+      "id": "tab_3_collection",
+      "label": "Collection override",
+      "info": "If set, overrides the products above and shows this collection's first products instead."
     }
   ],
   "presets": [
