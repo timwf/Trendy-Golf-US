@@ -15,14 +15,18 @@
     "social_instagram": "https://www.instagram.com/trendygolf/",
     "social_facebook": "https://www.facebook.com/trendygolf/",
     "social_twitter": "https://twitter.com/TRENDYGOLF",
-    "gtm_id": "GTM-5G4N4PSK",
+    "gtm_id": "",
     "rebuy_api_key": "5e2cd85271b6bdfa21deb252d37a9e19e2865844",
     "password_overlay_enabled": false,
     "sections": {
       "cart-drawer": {
         "type": "cart-drawer",
         "settings": {
-          "fallback_collection": ""
+          "fallback_collection": "",
+          "enable_free_shipping_bar": true,
+          "free_shipping_threshold": 100,
+          "message_below_threshold": "Add {remaining} for free shipping",
+          "message_threshold_met": "You've unlocked free shipping!"
         }
       }
     },
