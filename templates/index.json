@@ -188,7 +188,10 @@
       "type": "product-carousel-tabs",
       "name": "t:sections.product_carousel_tabs.presets.name",
       "settings": {
-        "title": "This Seasons Highlights",
+        "title": "New In",
+        "show_collection_links": true,
+        "collection_link_label": "View all",
+        "max_products": 8,
         "tab_1_label": "Men",
         "tab_1_products": [
           "dri-fit-fairway-fresh-loose-polo-university-red-midnight-navy",
@@ -199,13 +202,16 @@
           "playa-ss-windshirt-cream",
           "ventura-camp-shirt-white"
         ],
+        "tab_1_collection": "mens-new-in",
         "tab_2_label": "Women",
         "tab_2_products": [
           "womens-tegan-performance-tank-white",
           "ignes-knit-vest-green"
         ],
+        "tab_2_collection": "womens-new-in",
         "tab_3_label": "",
-        "tab_3_products": []
+        "tab_3_products": [],
+        "tab_3_collection": "womens-new-in"
       }
     },
     "hero_carousel_apc": {
