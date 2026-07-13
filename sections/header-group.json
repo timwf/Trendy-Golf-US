@@ -78,8 +78,13 @@
         "transparent_text_color": "#ffffff",
         "solid_bg_color": "#f6f5f2",
         "solid_text_color": "#35342f",
+        "highlight_nav_title": "All Sale",
+        "highlight_nav_color": "#cc0000",
         "current_region": "US",
-        "other_region_url": "https://trendygolf.com/"
+        "other_region_url": "https://trendygolf.com/",
+        "predictive_show_products": true,
+        "predictive_show_articles": false,
+        "predictive_articles_limit": 4
       }
     }
   },
