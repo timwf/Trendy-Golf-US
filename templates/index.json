@@ -147,6 +147,18 @@
         "margin_bottom": "medium"
       }
     },
+    "announcement_bar_XrL77q": {
+      "type": "announcement-bar",
+      "disabled": true,
+      "name": "t:sections.announcement_bar.name",
+      "settings": {
+        "text": "DELIVERY DELAY: All orders of the FootJoy Premiere Packard Harris Tweed may take up to 10-days to be delivered.We apologise for any inconvenience this may cause.",
+        "link": "",
+        "link_text": "",
+        "background_color": "#060606",
+        "text_color": "#FA0404"
+      }
+    },
     "banner_cards_Kx8Dxd": {
       "type": "banner-cards",
       "blocks": {
@@ -531,6 +543,7 @@
   },
   "order": [
     "hero_carousel",
+    "announcement_bar_XrL77q",
     "banner_cards_Kx8Dxd",
     "product_carousel_tabs_yxrJ4K",
     "hero_carousel_apc",
