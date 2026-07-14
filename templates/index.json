@@ -15,6 +15,7 @@
         "slide_payntr": {
           "type": "slide",
           "name": "WAREHOUSE SALE",
+          "disabled": true,
           "settings": {
             "desktop_alignment": "middle-center",
             "mobile_alignment": "middle-center",
