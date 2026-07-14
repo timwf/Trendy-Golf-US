@@ -15,6 +15,7 @@
         "slide_jlindeberg": {
           "type": "slide",
           "name": "New In Nike",
+          "disabled": true,
           "settings": {
             "desktop_alignment": "bottom-center",
             "mobile_alignment": "bottom-center",
@@ -163,6 +164,7 @@
       "block_order": [
         "heading_fKRyyw"
       ],
+      "disabled": true,
       "name": "t:sections.content_block.presets.name",
       "settings": {
         "alignment": "center",
