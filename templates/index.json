@@ -12,28 +12,6 @@
     "hero_carousel": {
       "type": "hero-carousel",
       "blocks": {
-        "slide_1": {
-          "type": "slide",
-          "settings": {
-            "desktop_alignment": "bottom-center",
-            "mobile_alignment": "bottom-center",
-            "subheading": "",
-            "heading_first": false,
-            "heading": "Probably the best golf apparel and footwear in the world",
-            "heading_size": "h1",
-            "use_as_page_h1": true,
-            "heading_font": "serif",
-            "media_type": "video",
-            "video_url": "https://vimeo.com/1167321685",
-            "video_url_mobile": "https://vimeo.com/1166715062",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
-            "slide_duration": 7,
-            "button_label": "Shop now",
-            "button_link": "shopify://collections/mens-golf-clothing",
-            "button_style": "white"
-          }
-        },
         "slide_payntr": {
           "type": "slide",
           "name": "Summer Sale",
@@ -56,6 +34,28 @@
             "slide_duration": 17,
             "button_label": "Shop now",
             "button_link": "shopify://collections/summer-sale",
+            "button_style": "white"
+          }
+        },
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
+            "subheading": "",
+            "heading_first": false,
+            "heading": "Probably the best golf apparel and footwear in the world",
+            "heading_size": "h1",
+            "use_as_page_h1": true,
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1167321685",
+            "video_url_mobile": "https://vimeo.com/1166715062",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 7,
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/mens-golf-clothing",
             "button_style": "white"
           }
         },
@@ -133,8 +133,8 @@
         }
       },
       "block_order": [
-        "slide_1",
         "slide_payntr",
+        "slide_1",
         "slide_jlindeberg",
         "slide_ralph_lauren",
         "slide_gfore"
