@@ -12,6 +12,31 @@
     "hero_carousel": {
       "type": "hero-carousel",
       "blocks": {
+        "slide_jlindeberg": {
+          "type": "slide",
+          "name": "New In Nike",
+          "settings": {
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
+            "subheading": "FOOTJOY x HARRIS TWEED",
+            "heading_first": true,
+            "heading": "LEGENDS SERIES III",
+            "heading_size": "h1",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "image": "shopify://shop_images/FJ-Banner.jpg",
+            "mobile_image": "shopify://shop_images/FJ-Banner-Mobile.jpg",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 7,
+            "button_label": "Shop now",
+            "button_link": "shopify://products/premiere-series-packard-golf-shoes-harris-tweed",
+            "button_style": "transparent"
+          }
+        },
         "slide_payntr": {
           "type": "slide",
           "name": "Summer Sale",
@@ -37,53 +62,6 @@
             "button_style": "white"
           }
         },
-        "slide_1": {
-          "type": "slide",
-          "settings": {
-            "desktop_alignment": "bottom-center",
-            "mobile_alignment": "bottom-center",
-            "subheading": "",
-            "heading_first": false,
-            "heading": "Probably the best golf apparel and footwear in the world",
-            "heading_size": "h1",
-            "use_as_page_h1": true,
-            "heading_font": "serif",
-            "media_type": "video",
-            "video_url": "https://vimeo.com/1167321685",
-            "video_url_mobile": "https://vimeo.com/1166715062",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
-            "slide_duration": 7,
-            "button_label": "Shop now",
-            "button_link": "shopify://collections/mens-golf-clothing",
-            "button_style": "white"
-          }
-        },
-        "slide_jlindeberg": {
-          "type": "slide",
-          "name": "New In Nike",
-          "settings": {
-            "desktop_alignment": "bottom-center",
-            "mobile_alignment": "bottom-center",
-            "subheading": "NIKE",
-            "heading_first": false,
-            "heading": "NEW IN",
-            "heading_size": "h1",
-            "use_as_page_h1": false,
-            "heading_font": "serif",
-            "media_type": "video",
-            "image": "shopify://shop_images/Nike-Blueprint-_-Pegasus.jpg",
-            "mobile_image": "shopify://shop_images/New-In-Nike-US-Mobile-Blank_e09ab5b1-9ed8-44da-b513-a1e8758122ba.jpg",
-            "video_url": "",
-            "video_url_mobile": "",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
-            "slide_duration": 7,
-            "button_label": "Shop now",
-            "button_link": "shopify://collections/mens-nike-golf-shoes",
-            "button_style": "white"
-          }
-        },
         "slide_ralph_lauren": {
           "type": "slide",
           "settings": {
@@ -105,6 +83,28 @@
             "slide_duration": 10,
             "button_label": "Shop now",
             "button_link": "shopify://collections/womens-peter-millar",
+            "button_style": "white"
+          }
+        },
+        "slide_1": {
+          "type": "slide",
+          "settings": {
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
+            "subheading": "",
+            "heading_first": false,
+            "heading": "Probably the best golf apparel and footwear in the world",
+            "heading_size": "h1",
+            "use_as_page_h1": true,
+            "heading_font": "serif",
+            "media_type": "video",
+            "video_url": "https://vimeo.com/1167321685",
+            "video_url_mobile": "https://vimeo.com/1166715062",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 7,
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/mens-golf-clothing",
             "button_style": "white"
           }
         },
@@ -133,10 +133,10 @@
         }
       },
       "block_order": [
-        "slide_payntr",
-        "slide_1",
         "slide_jlindeberg",
+        "slide_payntr",
         "slide_ralph_lauren",
+        "slide_1",
         "slide_gfore"
       ],
       "settings": {
@@ -145,6 +145,37 @@
         "enable_animation": true,
         "aria_label": "Hero slideshow",
         "margin_bottom": "medium"
+      }
+    },
+    "content_block_H86kUw": {
+      "type": "content-block",
+      "blocks": {
+        "heading_fKRyyw": {
+          "type": "heading",
+          "settings": {
+            "text": "DELIVERY DELAY: All orders of the FootJoy Premiere Packard Harris Tweed may take up to 10 days to be delivered. We apologise for any inconvenience this may cause.",
+            "tag": "h2",
+            "size": "h4",
+            "font": "serif"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fKRyyw"
+      ],
+      "name": "t:sections.content_block.presets.name",
+      "settings": {
+        "alignment": "center",
+        "background_color": "transparent",
+        "margin_top_desktop": "none",
+        "margin_bottom_desktop": "14",
+        "padding_top_desktop": "none",
+        "padding_bottom_desktop": "none",
+        "margin_top_mobile": "none",
+        "margin_bottom_mobile": "8",
+        "padding_top_mobile": "none",
+        "padding_bottom_mobile": "none",
+        "enable_animation": true
       }
     },
     "announcement_bar_XrL77q": {
@@ -156,7 +187,7 @@
         "link": "",
         "link_text": "",
         "background_color": "#060606",
-        "text_color": "#FA0404"
+        "text_color": "#fa0404"
       }
     },
     "banner_cards_Kx8Dxd": {
@@ -543,6 +574,7 @@
   },
   "order": [
     "hero_carousel",
+    "content_block_H86kUw",
     "announcement_bar_XrL77q",
     "banner_cards_Kx8Dxd",
     "product_carousel_tabs_yxrJ4K",
