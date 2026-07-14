@@ -19,7 +19,7 @@
             "desktop_alignment": "middle-center",
             "mobile_alignment": "middle-center",
             "subheading": "Summer Sale",
-            "heading_first": false,
+            "heading_first": true,
             "heading": "Up to 50% off",
             "heading_size": "h1",
             "use_as_page_h1": false,
