@@ -15,6 +15,7 @@
         "slide_jlindeberg": {
           "type": "slide",
           "name": "New In FootJoy",
+          "disabled": true,
           "settings": {
             "desktop_alignment": "bottom-center",
             "mobile_alignment": "bottom-center",
