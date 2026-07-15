@@ -15,7 +15,6 @@
         "slide_jlindeberg": {
           "type": "slide",
           "name": "New In FootJoy",
-          "disabled": true,
           "settings": {
             "desktop_alignment": "bottom-center",
             "mobile_alignment": "bottom-center",
@@ -34,7 +33,7 @@
             "hosted_video_url_mobile": "",
             "slide_duration": 7,
             "button_label": "Shop now",
-            "button_link": "shopify://products/premiere-series-packard-golf-shoes-harris-tweed",
+            "button_link": "shopify://products/premiere-series-packard-spiked-golf-shoes-white-navy",
             "button_style": "transparent"
           }
         },
