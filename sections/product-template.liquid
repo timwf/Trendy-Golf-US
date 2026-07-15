@@ -120,6 +120,13 @@
                 </div>
               {%- endif -%}
 
+            {%- when 'rich_text' -%}
+              {%- if block.settings.text != blank -%}
+                <div class="rte mb-6 text-sm [&_p]:m-0 [&_p+p]:mt-4 [&>*:last-child]:mb-0" {{ block.shopify_attributes }}>
+                  {{ block.settings.text }}
+                </div>
+              {%- endif -%}
+
             {%- when 'colour_swatches' -%}
               {%- assign colour_name = product.metafields.custom.color -%}
               {%- if colour_name != blank -%}
@@ -1101,6 +1108,18 @@
     { "type": "reviews_stars", "name": "Reviews stars", "limit": 1 },
     { "type": "price", "name": "Price", "limit": 1 },
     { "type": "short_description", "name": "Short description", "limit": 1 },
+    {
+      "type": "rich_text",
+      "name": "Rich text",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text",
+          "default": "<p>Add a delivery note or any other message here.</p>"
+        }
+      ]
+    },
     { "type": "colour_swatches", "name": "Colour swatches", "limit": 1 },
     {
       "type": "size_and_buy",
