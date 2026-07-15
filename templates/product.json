@@ -18,6 +18,12 @@
             "font_style": "sans"
           }
         },
+        "rich_text_JbraKB": {
+          "type": "rich_text",
+          "settings": {
+            "text": "<p><strong>DELIVERY DELAY: This product has an extended delivery time of up to 10 days</strong></p>"
+          }
+        },
         "price_J77nNj": {
           "type": "price",
           "settings": {}
@@ -28,7 +34,9 @@
         },
         "size_and_buy_QgbbXD": {
           "type": "size_and_buy",
-          "settings": {}
+          "settings": {
+            "selector_style": "dropdown"
+          }
         },
         "tgcc_rewards_4nWKV8": {
           "type": "tgcc_rewards",
@@ -53,6 +61,7 @@
       },
       "block_order": [
         "title_Nnn88e",
+        "rich_text_JbraKB",
         "price_J77nNj",
         "colour_swatches_jNbbGx",
         "size_and_buy_QgbbXD",
