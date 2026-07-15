@@ -14,8 +14,7 @@
       "blocks": {
         "slide_jlindeberg": {
           "type": "slide",
-          "name": "New In Nike",
-          "disabled": true,
+          "name": "New In FootJoy",
           "settings": {
             "desktop_alignment": "bottom-center",
             "mobile_alignment": "bottom-center",
