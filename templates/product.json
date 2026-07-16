@@ -20,6 +20,7 @@
         },
         "rich_text_JbraKB": {
           "type": "rich_text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>DELIVERY DELAY: This product has an extended delivery time of up to 10 days</strong></p>"
           }
