@@ -76,7 +76,7 @@
         "enable_delivery_estimate": true,
         "delivery_region": "US",
         "delivery_cutoff_hour": 16,
-        "delivery_returns_content": "<p>Free UK standard delivery on orders over £100.</p><p>Express delivery available. See our full delivery and returns policy for details.</p>"
+        "delivery_returns_content": "<p>Free standard delivery on orders over $150.</p><p>Express delivery available. See our full delivery and returns policy for details.</p>"
       }
     },
     "explore-more": {
