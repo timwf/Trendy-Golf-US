@@ -12,6 +12,32 @@
     "hero_carousel": {
       "type": "hero-carousel",
       "blocks": {
+        "slide_gfore": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
+            "subheading": "NEW IN",
+            "heading_first": false,
+            "heading": "VICTORY 4",
+            "heading_size": "h1",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "image": "shopify://shop_images/Nike-NRG-launch-_UK-Open.jpg",
+            "tablet_image": "shopify://shop_images/Nike-NRG-launch-_UK-Open_-Tablet.jpg",
+            "mobile_image": "shopify://shop_images/Nike-NRG-launch-_UK-Open_-Mobile.jpg",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 10,
+            "button_label": "Shop now",
+            "button_link": "shopify://pages/brand-g-fore",
+            "button_style": "transparent"
+          }
+        },
         "slide_jlindeberg": {
           "type": "slide",
           "name": "New In FootJoy",
@@ -107,37 +133,14 @@
             "button_link": "shopify://collections/mens-golf-clothing",
             "button_style": "white"
           }
-        },
-        "slide_gfore": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "desktop_alignment": "bottom-center",
-            "mobile_alignment": "bottom-center",
-            "subheading": "Shop the latest",
-            "heading_first": false,
-            "heading": "G/FORE",
-            "heading_size": "h1",
-            "use_as_page_h1": false,
-            "heading_font": "serif",
-            "media_type": "video",
-            "video_url": "https://vimeo.com/1166096687",
-            "video_url_mobile": "https://vimeo.com/1166096720",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
-            "slide_duration": 10,
-            "button_label": "Shop now",
-            "button_link": "shopify://pages/brand-g-fore",
-            "button_style": "white"
-          }
         }
       },
       "block_order": [
+        "slide_gfore",
         "slide_jlindeberg",
         "slide_payntr",
         "slide_ralph_lauren",
-        "slide_1",
-        "slide_gfore"
+        "slide_1"
       ],
       "settings": {
         "autoplay": true,
