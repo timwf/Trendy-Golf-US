@@ -1,0 +1,93 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "product-template",
+      "blocks": {
+        "title_Nnn88e": {
+          "type": "title",
+          "settings": {
+            "font_style": "sans"
+          }
+        },
+        "rich_text_JbraKB": {
+          "type": "rich_text",
+          "settings": {
+            "text": "<p><strong>DELIVERY DELAY: This product has an extended delivery time of up to 10 days</strong></p>"
+          }
+        },
+        "price_J77nNj": {
+          "type": "price",
+          "settings": {}
+        },
+        "colour_swatches_jNbbGx": {
+          "type": "colour_swatches",
+          "settings": {}
+        },
+        "size_and_buy_QgbbXD": {
+          "type": "size_and_buy",
+          "settings": {
+            "selector_style": "dropdown"
+          }
+        },
+        "tgcc_rewards_4nWKV8": {
+          "type": "tgcc_rewards",
+          "settings": {}
+        },
+        "delivery_countdown_cHqgd9": {
+          "type": "delivery_countdown",
+          "settings": {}
+        },
+        "features_accordion_UFTKWR": {
+          "type": "features_accordion",
+          "settings": {}
+        },
+        "description_accordion_FRVP8Y": {
+          "type": "description_accordion",
+          "settings": {}
+        },
+        "returns_accordion_bWKz6z": {
+          "type": "returns_accordion",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "title_Nnn88e",
+        "rich_text_JbraKB",
+        "price_J77nNj",
+        "colour_swatches_jNbbGx",
+        "size_and_buy_QgbbXD",
+        "tgcc_rewards_4nWKV8",
+        "delivery_countdown_cHqgd9",
+        "features_accordion_UFTKWR",
+        "description_accordion_FRVP8Y",
+        "returns_accordion_bWKz6z"
+      ],
+      "settings": {
+        "enable_size_guide": true,
+        "enable_delivery_estimate": true,
+        "delivery_region": "US",
+        "delivery_cutoff_hour": 16,
+        "delivery_returns_content": "<p>Free standard delivery on orders over $150.</p><p>Express delivery available. See our full delivery and returns policy for details.</p>"
+      }
+    },
+    "explore-more": {
+      "type": "product-explore-more",
+      "settings": {
+        "rebuy_recommendations_id": "151895"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "explore-more"
+  ]
+}
