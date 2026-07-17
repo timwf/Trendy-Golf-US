@@ -140,13 +140,25 @@
     "settings": [
       {
         "type": "paragraph",
-        "content": "Used by the cart drawer upsells and the product page 'Explore More' carousel. Without a key, cart drawer falls back to Shopify recommendations and Explore More hides."
+        "content": "Used by the cart drawer upsells and the product page 'Explore More' carousel. Without a key, cart drawer and Explore More (on Auto) fall back to Shopify's native recommendations."
       },
       {
         "type": "text",
         "id": "rebuy_api_key",
         "label": "Rebuy API key",
         "info": "Public storefront key from the Rebuy dashboard. Used client-side."
+      },
+      {
+        "type": "select",
+        "id": "recommendations_source",
+        "label": "Recommendations source",
+        "options": [
+          { "value": "auto", "label": "Auto (Rebuy if available, else Shopify)" },
+          { "value": "rebuy", "label": "Rebuy" },
+          { "value": "shopify", "label": "Shopify recommendations" }
+        ],
+        "default": "shopify",
+        "info": "Controls the product-page 'Explore More' carousel. Auto uses Rebuy when a key is set and it returns results, otherwise falls back to Shopify's native related-products. This store has no Rebuy account, so the default is Shopify — switch to Auto/Rebuy if a US Rebuy key is added later."
       }
     ]
   },

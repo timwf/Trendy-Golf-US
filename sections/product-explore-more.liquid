@@ -15,6 +15,7 @@
 <script>
   window.exploreMoreConfig = {
     productId: {{ product.id | json }},
+    recSource: {{ settings.recommendations_source | default: 'auto' | json }},
     rebuyApiKey: {{ settings.rebuy_api_key | json }},
     rebuyRecommendationsId: {{ section.settings.rebuy_recommendations_id | json }},
     isGiftCard: {{ is_gift_card | json }},
@@ -66,7 +67,7 @@
   "settings": [
     {
       "type": "paragraph",
-      "content": "Pulls recommended products from Rebuy and renders them in a carousel below the product accordions. The Rebuy API key is configured under Theme settings → Rebuy."
+      "content": "Recommended-products carousel below the product accordions. Source (Rebuy / Shopify native / Auto) and the Rebuy API key are configured under Theme settings → Rebuy. The Rebuy recommendations ID below is only used when the source resolves to Rebuy."
     },
     {
       "type": "text",

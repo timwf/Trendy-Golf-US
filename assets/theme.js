@@ -1003,12 +1003,15 @@
 
       var cfg = window.exploreMoreConfig || {};
       if (cfg.isGiftCard) return hide();
-      if (!cfg.rebuyApiKey) return hide();
 
       var isTrending = cfg.source === 'trending';
-      if (!isTrending) {
-        /* Similar-products (PDP) mode needs a recommendations data source + product id */
-        if (!cfg.rebuyRecommendationsId) return hide();
+      if (isTrending) {
+        /* Cart trending mode is Rebuy-only */
+        if (!cfg.rebuyApiKey) return hide();
+      } else {
+        /* PDP similar-products mode works with Rebuy OR Shopify native — both
+           need the product id. Which source runs is resolved in fetchSimilar()
+           from the store's `recSource` setting (auto / rebuy / shopify). */
         if (!cfg.productId || !/^\d+$/.test(String(cfg.productId))) return hide();
       }
 
@@ -1056,7 +1059,56 @@
         .catch(function () { return []; });
     }
 
+    // Resolve which recommendation source drives the PDP carousel, per the
+    // store's `recSource` setting (Theme settings → Rebuy → Recommendations
+    // source): 'auto' | 'rebuy' | 'shopify'.
+    //  - shopify           → Shopify native related-products.
+    //  - auto, no Rebuy cfg → Shopify native (this is how the US store, with no
+    //                         Rebuy key, resolves without any per-store config).
+    //  - rebuy, no cfg      → nothing (section hides).
+    //  - rebuy / auto + cfg → Rebuy; on 'auto', an empty Rebuy result falls
+    //                         back to Shopify native.
     function fetchSimilar(cfg) {
+      var src = cfg.recSource || 'auto';
+      var canRebuy = !!cfg.rebuyApiKey && !!cfg.rebuyRecommendationsId;
+
+      if (src === 'shopify' || (src === 'auto' && !canRebuy)) {
+        return fetchShopifyRelated(cfg);
+      }
+      if (!canRebuy) return Promise.resolve([]);
+
+      return fetchRebuySimilar(cfg).then(function (handles) {
+        if (handles.length || src === 'rebuy') return handles;
+        return fetchShopifyRelated(cfg);
+      });
+    }
+
+    function fetchShopifyRelated(cfg) {
+      // Shopify's native product recommendations (intent=related) — the same
+      // endpoint the cart drawer upsell falls back to. Returns full product
+      // objects; we keep only handles so renderCards() can reuse the Section
+      // Rendering API path. Does not honour Rebuy admin rules (gender,
+      // complementing categories, exclusions) — Shopify's own algorithm.
+      var root = cfg.rootUrl || '/';
+      var params = new URLSearchParams({
+        product_id: String(cfg.productId),
+        limit: '8',
+        intent: 'related'
+      });
+      var url = root + 'recommendations/products.json?' + params.toString();
+
+      return fetch(url, { credentials: 'same-origin', headers: { Accept: 'application/json' } })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (json) {
+          var data = json && Array.isArray(json.products) ? json.products : [];
+          return data
+            .map(function (p) { return p && p.handle; })
+            .filter(Boolean);
+        })
+        .catch(function () { return []; });
+    }
+
+    function fetchRebuySimilar(cfg) {
       // Rebuy Custom Data Source endpoint — applies the rules configured in
       // Rebuy admin (gender, complementing categories, exclusions, etc).
       // This is what the legacy theme's "You may also like" widget calls under
