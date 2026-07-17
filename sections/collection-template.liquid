@@ -11,24 +11,9 @@
     {%- comment -%} Journey-aware breadcrumb (canonical: Home > Collection) {%- endcomment -%}
     {%- render 'breadcrumb', kind: 'collection', collection: collection -%}
 
-    {%- comment -%} Title + description {%- endcomment -%}
-    <div class="mb-10 grid grid-cols-1 lg:grid-cols-6">
-      <div class="lg:col-span-4">
-        <h1 class="font-serif text-4xl lg:text-5xl">{{ collection.title }}</h1>
-      </div>
-      {%- if collection.description != blank -%}
-        <div class="lg:col-span-2">
-          {%- comment -%}
-            Collection descriptions on the live store contain legacy markup
-            (h5 "Shop By Style" headings, .size-button links, inline <style> blocks).
-            Only output the first <p>…</p> to match the source design.
-          {%- endcomment -%}
-          {%- assign desc_parts = collection.description | split: '</p>' -%}
-          {%- if desc_parts.size > 0 -%}
-            <p>{{ desc_parts[0] | remove: '<p>' | strip_html | strip }}</p>
-          {%- endif -%}
-        </div>
-      {%- endif -%}
+    {%- comment -%} Title (collection description / SEO copy now renders at the bottom of the page) {%- endcomment -%}
+    <div class="mb-10">
+      <h1 class="font-serif text-4xl lg:text-5xl">{{ collection.title }}</h1>
     </div>
 
     {%- comment -%} Quick links (subcategory pills) {%- endcomment -%}
@@ -186,6 +171,49 @@
       </div>
     {%- endif -%}
     <noscript>{{ paginate | default_pagination }}</noscript>
+
+    {%- comment -%}
+      SEO copy — the collection description, moved from the top of the page to the
+      bottom (SEO request, 2026-07-17). Full text, not truncated. Legacy descriptions
+      carry a "Shop By" nav widget (heading + .size-button links + an inline <style>
+      block) plus the odd Google-paste artifact; strip those so only the prose renders.
+      The new theme already replaces that nav with the quick-link pills near the top.
+    {%- endcomment -%}
+    {%- liquid
+      # Strip legacy widget markup so only prose renders. Order matters.
+      assign seo_desc = collection.description | replace: '<meta charset="utf-8">', '' | replace: '<!---->', ''
+      # Remove the inline <style> block, keeping prose on both sides (some
+      # descriptions put the style block before the prose). NB Liquid's `split`
+      # drops trailing empty strings, so when </style> is at the very end the
+      # "after" part is actually the pre-style content and still holds <style —
+      # detect that and treat it as empty.
+      if seo_desc contains '<style'
+        assign seo_before = seo_desc | split: '<style' | first
+        assign seo_after = ''
+        if seo_desc contains '</style>'
+          assign seo_after = seo_desc | split: '</style>' | last
+          if seo_after contains '<style'
+            assign seo_after = ''
+          endif
+        endif
+        assign seo_desc = seo_before | append: seo_after
+      endif
+      # Cut the "Shop By" nav (heading + centred size-button cluster) off the end.
+      assign seo_desc = seo_desc | split: '<h3' | first | split: '<h4' | first | split: '<h5' | first
+      assign seo_desc = seo_desc | split: '<p style="text-align: center' | first | split: '<div style="text-align: center' | first
+      assign seo_desc = seo_desc | split: '<p style="text-align:center' | first | split: '<div style="text-align:center' | first
+      assign seo_desc_text = seo_desc | strip_html | strip
+    -%}
+    {%- if seo_desc_text != blank -%}
+      <div class="mt-12 border-t border-taupe-300 pt-10">
+        <div class="max-w-5xl">
+          <h2 class="mb-4 font-serif text-2xl lg:text-3xl">About {{ collection.title }}</h2>
+          <div class="rte text-sm text-taupe-700 [&_p]:m-0 [&_p+p]:mt-4">
+            {{ seo_desc }}
+          </div>
+        </div>
+      </div>
+    {%- endif -%}
 
   </div>
 </main>
