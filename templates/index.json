@@ -12,53 +12,29 @@
     "hero_carousel": {
       "type": "hero-carousel",
       "blocks": {
-        "slide_gfore": {
+        "slide_payntr": {
           "type": "slide",
+          "name": "Summer Sale",
           "settings": {
-            "desktop_alignment": "bottom-left",
-            "mobile_alignment": "bottom-center",
-            "subheading": "NEW IN",
-            "heading_first": false,
-            "heading": "VICTORY TOUR 4",
-            "heading_size": "h2",
-            "use_as_page_h1": false,
-            "heading_font": "serif",
-            "media_type": "video",
-            "image": "shopify://shop_images/Nike-NRG-Hero-21x9_089600f3-5a57-449c-8010-628aa7e744b2.jpg",
-            "mobile_image": "shopify://shop_images/Nike-NRG-Hero-21x9_089600f3-5a57-449c-8010-628aa7e744b2-Mobile.jpg",
-            "video_url": "",
-            "video_url_mobile": "",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
-            "slide_duration": 10,
-            "button_label": "Shop now",
-            "button_link": "https://trendygolfusa.com/products/victory-tour-4-nrg-oc26-spiked-golf-shoes-white-black-metallic-silver",
-            "button_style": "transparent"
-          }
-        },
-        "slide_xwzUGq": {
-          "type": "slide",
-          "name": "Victory Pro",
-          "settings": {
-            "desktop_alignment": "middle-left",
-            "mobile_alignment": "bottom-center",
-            "subheading": "NEW IN",
-            "heading_first": false,
-            "heading": "VICTORY PRO",
+            "desktop_alignment": "middle-center",
+            "mobile_alignment": "middle-center",
+            "subheading": "Summer Sale",
+            "heading_first": true,
+            "heading": "Up to 50% off",
             "heading_size": "h1",
             "use_as_page_h1": false,
             "heading_font": "serif",
             "media_type": "video",
-            "image": "shopify://shop_images/Nike-Open-Shoe-1.jpg",
-            "mobile_image": "shopify://shop_images/Nike-Open-Shoe-1-Mobile2_60993039-f2f9-4397-bf24-d72dc6c8ef7b.jpg",
+            "image": "shopify://shop_images/Summer-Sale.jpg",
+            "mobile_image": "shopify://shop_images/Summer-Sale-Mobile.jpg",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
             "hosted_video_url_mobile": "",
-            "slide_duration": 10,
+            "slide_duration": 17,
             "button_label": "Shop now",
-            "button_link": "https://trendygolfusa.com/products/victory-pro-4-nrg-oc26-spiked-golf-shoes-white-black-metallic-silver",
-            "button_style": "transparent"
+            "button_link": "shopify://collections/summer-sale",
+            "button_style": "white"
           }
         },
         "slide_jlindeberg": {
@@ -86,31 +62,6 @@
             "button_style": "transparent"
           }
         },
-        "slide_payntr": {
-          "type": "slide",
-          "name": "Summer Sale",
-          "settings": {
-            "desktop_alignment": "middle-center",
-            "mobile_alignment": "middle-center",
-            "subheading": "Summer Sale",
-            "heading_first": true,
-            "heading": "Up to 50% off",
-            "heading_size": "h1",
-            "use_as_page_h1": false,
-            "heading_font": "serif",
-            "media_type": "video",
-            "image": "shopify://shop_images/Summer-Sale.jpg",
-            "mobile_image": "shopify://shop_images/Summer-Sale-Mobile.jpg",
-            "video_url": "",
-            "video_url_mobile": "",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
-            "slide_duration": 17,
-            "button_label": "Shop now",
-            "button_link": "shopify://collections/summer-sale",
-            "button_style": "white"
-          }
-        },
         "slide_ralph_lauren": {
           "type": "slide",
           "settings": {
@@ -133,6 +84,57 @@
             "button_label": "Shop now",
             "button_link": "shopify://collections/womens-peter-millar",
             "button_style": "white"
+          }
+        },
+        "slide_gfore": {
+          "type": "slide",
+          "disabled": true,
+          "settings": {
+            "desktop_alignment": "bottom-left",
+            "mobile_alignment": "bottom-center",
+            "subheading": "NEW IN",
+            "heading_first": false,
+            "heading": "VICTORY TOUR 4",
+            "heading_size": "h2",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "image": "shopify://shop_images/Nike-NRG-Hero-21x9_089600f3-5a57-449c-8010-628aa7e744b2.jpg",
+            "mobile_image": "shopify://shop_images/Nike-NRG-Hero-21x9_089600f3-5a57-449c-8010-628aa7e744b2-Mobile.jpg",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 10,
+            "button_label": "Shop now",
+            "button_link": "https://trendygolfusa.com/products/victory-tour-4-nrg-oc26-spiked-golf-shoes-white-black-metallic-silver",
+            "button_style": "transparent"
+          }
+        },
+        "slide_xwzUGq": {
+          "type": "slide",
+          "name": "Victory Pro",
+          "disabled": true,
+          "settings": {
+            "desktop_alignment": "middle-left",
+            "mobile_alignment": "bottom-center",
+            "subheading": "NEW IN",
+            "heading_first": false,
+            "heading": "VICTORY PRO",
+            "heading_size": "h1",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "image": "shopify://shop_images/Nike-Open-Shoe-1.jpg",
+            "mobile_image": "shopify://shop_images/Nike-Open-Shoe-1-Mobile2_60993039-f2f9-4397-bf24-d72dc6c8ef7b.jpg",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 10,
+            "button_label": "Shop now",
+            "button_link": "https://trendygolfusa.com/products/victory-pro-4-nrg-oc26-spiked-golf-shoes-white-black-metallic-silver",
+            "button_style": "transparent"
           }
         },
         "slide_1": {
@@ -159,11 +161,11 @@
         }
       },
       "block_order": [
+        "slide_payntr",
+        "slide_jlindeberg",
+        "slide_ralph_lauren",
         "slide_gfore",
         "slide_xwzUGq",
-        "slide_jlindeberg",
-        "slide_payntr",
-        "slide_ralph_lauren",
         "slide_1"
       ],
       "settings": {
@@ -171,7 +173,11 @@
         "show_progress": true,
         "enable_animation": true,
         "aria_label": "Hero slideshow",
-        "margin_bottom": "medium"
+        "margin_bottom": "medium",
+        "mobile_height_mode": "default",
+        "mobile_height": 150,
+        "desktop_height_mode": "default",
+        "desktop_height": 56
       }
     },
     "announcement_bar_XrL77q": {
@@ -288,7 +294,11 @@
         "show_progress": true,
         "enable_animation": true,
         "aria_label": "Hero slideshow",
-        "margin_bottom": "medium"
+        "margin_bottom": "medium",
+        "mobile_height_mode": "default",
+        "mobile_height": 150,
+        "desktop_height_mode": "default",
+        "desktop_height": 56
       }
     },
     "banner_cards_apc": {
@@ -373,7 +383,11 @@
         "show_progress": true,
         "enable_animation": true,
         "aria_label": "Hero slideshow",
-        "margin_bottom": "none"
+        "margin_bottom": "none",
+        "mobile_height_mode": "default",
+        "mobile_height": 150,
+        "desktop_height_mode": "default",
+        "desktop_height": 56
       }
     },
     "hero_carousel_tgcc": {
@@ -415,7 +429,11 @@
         "show_progress": true,
         "enable_animation": true,
         "aria_label": "Hero slideshow",
-        "margin_bottom": "medium"
+        "margin_bottom": "medium",
+        "mobile_height_mode": "default",
+        "mobile_height": 150,
+        "desktop_height_mode": "default",
+        "desktop_height": 56
       }
     },
     "magazine_articles_wQRhf7": {
