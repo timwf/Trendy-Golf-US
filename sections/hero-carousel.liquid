@@ -43,7 +43,46 @@
     when 'large'
       assign margin_class = 'mb-14 lg:mb-20'
   endcase
+
+  assign mobile_custom_height = false
+  if section.settings.mobile_height_mode == 'custom'
+    assign mobile_custom_height = true
+  endif
+
+  assign desktop_custom_height = false
+  if section.settings.desktop_height_mode == 'custom'
+    assign desktop_custom_height = true
+  endif
 -%}
+
+{%- comment -%}
+  Custom slide heights — expressed in vw so the ratio is fixed and the banner
+  scales with the viewport width. Overrides the default utility classes on the
+  slide (mobile 100svh / desktop 16:9) via id specificity. Tablet (768–1023px)
+  always keeps its 11:9 ratio.
+{%- endcomment -%}
+{%- if mobile_custom_height or desktop_custom_height -%}
+  {%- style -%}
+    {%- if mobile_custom_height -%}
+      @media (max-width: 767px) {
+        #hero-carousel-{{ section.id }} .splide__slide {
+          height: {{ section.settings.mobile_height }}vw;
+          max-height: none;
+          aspect-ratio: auto;
+        }
+      }
+    {%- endif -%}
+    {%- if desktop_custom_height -%}
+      @media (min-width: 1024px) {
+        #hero-carousel-{{ section.id }} .splide__slide {
+          height: {{ section.settings.desktop_height }}vw;
+          max-height: none;
+          aspect-ratio: auto;
+        }
+      }
+    {%- endif -%}
+  {%- endstyle -%}
+{%- endif -%}
 
 <section class="page-block relative {{ margin_class }} bg-transparent" data-hero-carousel-section data-hero id="hero-carousel-{{ section.id }}">
   <div class="relative" data-pagination-hide="false" data-pagination-dark="false">
@@ -722,6 +761,56 @@
         { "value": "large", "label": "t:sections.hero_carousel.settings.margin_bottom.options.large" }
       ],
       "default": "medium"
+    },
+    {
+      "type": "header",
+      "content": "Banner height"
+    },
+    {
+      "type": "select",
+      "id": "mobile_height_mode",
+      "label": "Mobile height",
+      "info": "Applies below 768px. Tablet (768–1023px) always uses an 11:9 ratio.",
+      "options": [
+        { "value": "default", "label": "Default (full screen)" },
+        { "value": "custom", "label": "Custom ratio" }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "range",
+      "id": "mobile_height",
+      "label": "Mobile height ratio",
+      "info": "Height as a percentage of the screen width, so the ratio stays the same on every phone. 150 ≈ 2:3.",
+      "min": 80,
+      "max": 220,
+      "step": 2,
+      "unit": "vw",
+      "default": 150,
+      "visible_if": "{{ section.settings.mobile_height_mode == 'custom' }}"
+    },
+    {
+      "type": "select",
+      "id": "desktop_height_mode",
+      "label": "Desktop height",
+      "info": "Applies from 1024px up.",
+      "options": [
+        { "value": "default", "label": "Default (16:9)" },
+        { "value": "custom", "label": "Custom ratio" }
+      ],
+      "default": "default"
+    },
+    {
+      "type": "range",
+      "id": "desktop_height",
+      "label": "Desktop height ratio",
+      "info": "Height as a percentage of the screen width, so the ratio stays the same on every screen. 56 matches the default 16:9.",
+      "min": 20,
+      "max": 90,
+      "step": 1,
+      "unit": "vw",
+      "default": 56,
+      "visible_if": "{{ section.settings.desktop_height_mode == 'custom' }}"
     }
   ],
   "blocks": [
