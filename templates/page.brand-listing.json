@@ -43,7 +43,11 @@
         "show_progress": false,
         "enable_animation": true,
         "aria_label": "Brands hero",
-        "margin_bottom": "medium"
+        "margin_bottom": "medium",
+        "mobile_height_mode": "default",
+        "mobile_height": 150,
+        "desktop_height_mode": "default",
+        "desktop_height": 56
       }
     },
     "feature-cards": {
@@ -54,7 +58,7 @@
           "settings": {
             "heading": "New In Puma",
             "image": "shopify://shop_images/puma_ada93b22-2e78-4366-a9f6-7362f0a78807.jpg",
-            "link": "shopify://pages/brand-puma",
+            "link": "shopify://collections/mens-puma-clothing",
             "button_label": "Shop Now"
           }
         },
