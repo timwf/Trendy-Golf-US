@@ -17,19 +17,22 @@
           "settings": {
             "desktop_alignment": "bottom-center",
             "mobile_alignment": "bottom-center",
-            "subheading": "Featured Brand",
+            "subheading": "",
             "heading_first": false,
-            "heading": "Ralph Lauren",
+            "heading": "Brands",
             "heading_size": "h2",
             "use_as_page_h1": false,
             "heading_font": "serif",
-            "media_type": "video",
-            "video_url": "https://vimeo.com/1165392387",
-            "video_url_mobile": "https://vimeo.com/1168551962",
+            "media_type": "image",
+            "image": "shopify://shop_images/Brand-Page-Banner.jpg",
+            "tablet_image": "shopify://shop_images/Brand-Page-Banner-Tablet.jpg",
+            "mobile_image": "shopify://shop_images/Brand-Page-Banner-Mobile.jpg",
+            "video_url": "",
+            "video_url_mobile": "",
             "hosted_video_url": "",
             "hosted_video_url_mobile": "",
             "slide_duration": 3,
-            "button_label": "VIEW BRAND",
+            "button_label": "",
             "button_link": "shopify://pages/ralph-lauren",
             "button_style": "white"
           }
@@ -65,7 +68,7 @@
         "card-2": {
           "type": "card",
           "settings": {
-            "heading": "New Nike Golf",
+            "heading": "Nike",
             "image": "shopify://shop_images/nike_560990b3-9ae2-4a73-a5c4-8cb93cebbd1f.jpg",
             "link": "shopify://collections/mens-nike-golf-clothing",
             "button_label": "Shop Now"
@@ -74,9 +77,9 @@
         "card-3": {
           "type": "card",
           "settings": {
-            "heading": "J.LINDEBERG Collection",
-            "image": "shopify://shop_images/jlindeberg_f611e268-03bb-41e3-b1b4-6a5293a2b519.jpg",
-            "link": "shopify://collections/j-lindeberg-clothing-accessories",
+            "heading": "adidas",
+            "image": "shopify://shop_images/06-adidas-golf-originals.jpg",
+            "link": "shopify://collections/adidas-golf-originals",
             "button_label": "Shop Now"
           }
         }
