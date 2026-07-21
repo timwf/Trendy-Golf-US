@@ -56,7 +56,7 @@
         "card-1": {
           "type": "card",
           "settings": {
-            "heading": "New In Puma",
+            "heading": "Puma",
             "image": "shopify://shop_images/puma_ada93b22-2e78-4366-a9f6-7362f0a78807.jpg",
             "link": "shopify://collections/mens-puma-clothing",
             "button_label": "Shop Now"
