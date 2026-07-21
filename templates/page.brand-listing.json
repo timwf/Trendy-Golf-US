@@ -67,7 +67,7 @@
           "settings": {
             "heading": "New Nike Golf",
             "image": "shopify://shop_images/nike_560990b3-9ae2-4a73-a5c4-8cb93cebbd1f.jpg",
-            "link": "shopify://pages/brand-nike",
+            "link": "shopify://collections/mens-nike-golf-clothing",
             "button_label": "Shop Now"
           }
         },
@@ -76,7 +76,7 @@
           "settings": {
             "heading": "J.LINDEBERG Collection",
             "image": "shopify://shop_images/jlindeberg_f611e268-03bb-41e3-b1b4-6a5293a2b519.jpg",
-            "link": "shopify://pages/brand-jlindeberg",
+            "link": "shopify://collections/j-lindeberg-clothing-accessories",
             "button_label": "Shop Now"
           }
         }
