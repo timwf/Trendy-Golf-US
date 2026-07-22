@@ -36,7 +36,7 @@
         "size_and_buy_QgbbXD": {
           "type": "size_and_buy",
           "settings": {
-            "selector_style": "dropdown"
+            "selector_style": "buttons"
           }
         },
         "tgcc_rewards_4nWKV8": {
