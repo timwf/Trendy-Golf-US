@@ -12,6 +12,32 @@
     "hero_carousel": {
       "type": "hero-carousel",
       "blocks": {
+        "slide_payntr": {
+          "type": "slide",
+          "name": "End of Season Sale",
+          "settings": {
+            "desktop_alignment": "middle-center",
+            "mobile_alignment": "middle-center",
+            "subheading": "40% off selected lines! Enter  code SALE40 at checkout.",
+            "heading_first": true,
+            "heading": "End of Season Sale",
+            "heading_size": "h1",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "image": "shopify://shop_images/trendygolf-banner-desktop-1920x600.jpg",
+            "tablet_image": "shopify://shop_images/trendygolf-banner-tablet-1024x400.jpg",
+            "mobile_image": "shopify://shop_images/trendygolf-banner-mobile-750x1000_342d88e1-7537-4418-a762-8db958d1e535.jpg",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 17,
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/end-of-season-sale",
+            "button_style": "white"
+          }
+        },
         "slide_jlindeberg": {
           "type": "slide",
           "name": "New In FootJoy",
@@ -112,33 +138,6 @@
             "button_style": "transparent"
           }
         },
-        "slide_payntr": {
-          "type": "slide",
-          "name": "Summer Sale",
-          "disabled": true,
-          "settings": {
-            "desktop_alignment": "middle-center",
-            "mobile_alignment": "middle-center",
-            "subheading": "40% off selected lines! Enter  code SALE40 at checkout.",
-            "heading_first": true,
-            "heading": "End of Season Sale",
-            "heading_size": "h1",
-            "use_as_page_h1": false,
-            "heading_font": "serif",
-            "media_type": "video",
-            "image": "shopify://shop_images/trendygolf-banner-desktop-1920x600.jpg",
-            "tablet_image": "shopify://shop_images/trendygolf-banner-tablet-1024x400.jpg",
-            "mobile_image": "shopify://shop_images/trendygolf-banner-mobile-750x1000_342d88e1-7537-4418-a762-8db958d1e535.jpg",
-            "video_url": "",
-            "video_url_mobile": "",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
-            "slide_duration": 17,
-            "button_label": "Shop now",
-            "button_link": "shopify://collections/end-of-season-sale",
-            "button_style": "white"
-          }
-        },
         "slide_1": {
           "type": "slide",
           "settings": {
@@ -163,11 +162,11 @@
         }
       },
       "block_order": [
+        "slide_payntr",
         "slide_jlindeberg",
         "slide_ralph_lauren",
         "slide_gfore",
         "slide_xwzUGq",
-        "slide_payntr",
         "slide_1"
       ],
       "settings": {
