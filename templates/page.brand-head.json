@@ -76,38 +76,38 @@
     "banner_cards_1": {
       "type": "banner-cards",
       "blocks": {
-        "card_1": {
+        "card_3": {
           "type": "card",
           "settings": {
-            "heading": "Shop All",
-            "image": "shopify://shop_images/card-1-shop-all.jpg",
-            "link": "",
+            "heading": "Men's",
+            "image": "shopify://shop_images/card-3-outerwear.jpg",
+            "link": "shopify://collections/mens-head-golf-apparel",
             "button_label": "Shop Now"
           }
         },
         "card_2": {
           "type": "card",
           "settings": {
-            "heading": "Tops",
+            "heading": "Accessories",
             "image": "shopify://shop_images/card-2-tops.jpg",
             "link": "",
             "button_label": "Shop Now"
           }
         },
-        "card_3": {
+        "card_1": {
           "type": "card",
           "settings": {
-            "heading": "Outerwear",
-            "image": "shopify://shop_images/card-3-outerwear.jpg",
-            "link": "",
+            "heading": "Women's",
+            "image": "shopify://shop_images/card-1-shop-all.jpg",
+            "link": "shopify://collections/womens-head-golf-apparel",
             "button_label": "Shop Now"
           }
         }
       },
       "block_order": [
-        "card_1",
+        "card_3",
         "card_2",
-        "card_3"
+        "card_1"
       ],
       "settings": {
         "layout": "grid",
