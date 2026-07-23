@@ -90,7 +90,7 @@
           "settings": {
             "heading": "Accessories",
             "image": "shopify://shop_images/card-2-tops.jpg",
-            "link": "",
+            "link": "shopify://collections/head-golf-accessories",
             "button_label": "Shop Now"
           }
         },
