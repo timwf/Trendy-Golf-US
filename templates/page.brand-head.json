@@ -15,7 +15,8 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "Explore our range from Head.",
             "heading_first": false,
             "heading": "Head",
@@ -42,24 +43,34 @@
         "show_progress": false,
         "enable_animation": true,
         "aria_label": "Hero slideshow",
-        "margin_bottom": "medium"
+        "margin_bottom": "medium",
+        "mobile_height_mode": "default",
+        "mobile_height": 150,
+        "desktop_height_mode": "default",
+        "desktop_height": 56
       }
     },
     "product_carousel_1": {
       "type": "product-carousel-tabs",
       "settings": {
         "title": "New In Head",
-        "tab_1_label": "Mens",
+        "show_collection_links": true,
+        "collection_link_label": "View all",
+        "max_products": 8,
+        "tab_1_label": "Men",
         "tab_1_products": [
           "tech-hooded-pullover-twilight-camo",
           "3-gs-tech-jersey-polo-lava",
           "x-trendygolf-limited-edition-all-day-polo-twilight",
           "mg4-o2-camo-golf-shoes-nimbus"
         ],
-        "tab_2_label": "",
+        "tab_1_collection": "mens-head-golf-apparel",
+        "tab_2_label": "Women",
         "tab_2_products": [],
+        "tab_2_collection": "womens-head-golf-apparel",
         "tab_3_label": "",
-        "tab_3_products": []
+        "tab_3_products": [],
+        "tab_3_collection": ""
       }
     },
     "banner_cards_1": {
