@@ -308,9 +308,9 @@
         "card_apc_all": {
           "type": "card",
           "settings": {
-            "heading": "A.P.C",
-            "image": "shopify://shop_images/01-apc-clothing-men-women.jpg",
-            "link": "shopify://pages/apc",
+            "heading": "HEAD",
+            "image": "shopify://shop_images/250620_HEADGOLF_SS26_JIngvarsson_11_072.jpg",
+            "link": "shopify://pages/head",
             "button_label": "SHOP NOW"
           }
         },
