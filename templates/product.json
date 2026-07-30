@@ -43,8 +43,15 @@
           "type": "tgcc_rewards",
           "settings": {}
         },
+        "rich_text_Ryf9xF": {
+          "type": "rich_text",
+          "settings": {
+            "text": "<p><strong>Warehouse Update: </strong>Orders placed from July 29th will be dispatched from August 17th as we relocate our warehouse. Thanks for your patience.</p>"
+          }
+        },
         "delivery_countdown_cHqgd9": {
           "type": "delivery_countdown",
+          "disabled": true,
           "settings": {}
         },
         "features_accordion_UFTKWR": {
@@ -67,6 +74,7 @@
         "colour_swatches_jNbbGx",
         "size_and_buy_QgbbXD",
         "tgcc_rewards_4nWKV8",
+        "rich_text_Ryf9xF",
         "delivery_countdown_cHqgd9",
         "features_accordion_UFTKWR",
         "description_accordion_FRVP8Y",
