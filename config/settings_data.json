@@ -24,7 +24,7 @@
         "settings": {
           "fallback_collection": "",
           "enable_free_shipping_bar": true,
-          "free_shipping_threshold": 100,
+          "free_shipping_threshold": 150,
           "message_below_threshold": "Add {remaining} for free shipping",
           "message_threshold_met": "You've unlocked free shipping!"
         }
