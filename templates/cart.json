@@ -18,7 +18,30 @@
       "settings": {
         "limit": 8
       }
+    },
+    "1785406911a328b130": {
+      "type": "apps",
+      "blocks": {
+        "rebuy_personalization_engine_rebuy_widget_VaLRjz": {
+          "type": "shopify://apps/rebuy-personalization-engine/blocks/rebuy-widget/a26ae9b9-933b-40bf-bbc6-bf1220bbc4dc",
+          "settings": {
+            "enabled": true,
+            "id": "",
+            "product_id_enabled": true,
+            "collection_id_enabled": false
+          }
+        }
+      },
+      "block_order": [
+        "rebuy_personalization_engine_rebuy_widget_VaLRjz"
+      ],
+      "disabled": true,
+      "settings": {}
     }
   },
-  "order": ["main-cart", "explore-more"]
+  "order": [
+    "main-cart",
+    "explore-more",
+    "1785406911a328b130"
+  ]
 }
