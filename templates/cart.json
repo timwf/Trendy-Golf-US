@@ -15,7 +15,6 @@
     },
     "explore-more": {
       "type": "cart-explore-more",
-      "disabled": true,
       "settings": {
         "limit": 8
       }
@@ -36,6 +35,7 @@
       "block_order": [
         "rebuy_personalization_engine_rebuy_widget_VaLRjz"
       ],
+      "disabled": true,
       "settings": {}
     }
   },
