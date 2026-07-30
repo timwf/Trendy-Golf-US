@@ -16,8 +16,8 @@
     "social_facebook": "https://www.facebook.com/trendygolf/",
     "social_twitter": "https://twitter.com/TRENDYGOLF",
     "gtm_id": "",
-    "rebuy_api_key": "dcc30d2a71dd80cb9676dc5185661179639475e6",
-    "recommendations_source": "rebuy",
+    "rebuy_api_key": "",
+    "recommendations_source": "shopify",
     "password_overlay_enabled": false,
     "sections": {
       "cart-drawer": {
