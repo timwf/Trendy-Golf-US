@@ -120,8 +120,9 @@
             <ul class="splide__list" data-cart-upsell-list>
               {%- comment -%}
                 Initial render: use curated fallback collection from section settings.
-                JS will replace with Rebuy trending products, falling back to
-                Shopify Recommendations API if Rebuy is unavailable.
+                JS will replace with Rebuy cart-aware recommendations (trending
+                when the cart is empty), falling back to Shopify Recommendations
+                API if Rebuy is unavailable.
               {%- endcomment -%}
               {%- if section.settings.fallback_collection != blank -%}
                 {%- for product in section.settings.fallback_collection.products limit: 6 -%}

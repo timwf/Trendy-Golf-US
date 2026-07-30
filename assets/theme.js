@@ -576,10 +576,26 @@
     }
 
     function fetchRebuy(apiKey) {
-      var url = 'https://rebuyengine.com/api/v1/products/trending_products?key=' + encodeURIComponent(apiKey) + '&limit=6&filter_oos=yes';
-      return fetch(url)
+      /* Cart-aware recs — seed Rebuy with the cart's product ids so it
+         recommends complementary items. Empty cart falls back to trending.
+         Rebuy doesn't exclude the seed products itself, so filter them out. */
+      return fetch(rootUrl + 'cart.js', { credentials: 'same-origin' })
         .then(function (r) { return r.json(); })
-        .then(function (data) { return data.data || []; });
+        .then(function (cart) {
+          var ids = [];
+          (cart.items || []).forEach(function (item) {
+            if (ids.indexOf(item.product_id) === -1) ids.push(item.product_id);
+          });
+          var endpoint = ids.length
+            ? 'recommended?key=' + encodeURIComponent(apiKey) + '&shopify_product_ids=' + ids.join(',')
+            : 'trending_products?key=' + encodeURIComponent(apiKey);
+          var url = 'https://rebuyengine.com/api/v1/products/' + endpoint + '&limit=6&filter_oos=yes';
+          return fetch(url)
+            .then(function (r) { return r.json(); })
+            .then(function (data) {
+              return (data.data || []).filter(function (p) { return ids.indexOf(p.id) === -1; });
+            });
+        });
     }
 
     function fetchShopifyRecommendations() {
