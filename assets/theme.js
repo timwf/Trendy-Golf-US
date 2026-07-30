@@ -576,7 +576,7 @@
     }
 
     function fetchRebuy(apiKey) {
-      var url = 'https://rebuyengine.com/api/v1/products/trending_products?key=' + encodeURIComponent(apiKey) + '&limit=6';
+      var url = 'https://rebuyengine.com/api/v1/products/trending_products?key=' + encodeURIComponent(apiKey) + '&limit=6&filter_oos=yes';
       return fetch(url)
         .then(function (r) { return r.json(); })
         .then(function (data) { return data.data || []; });
@@ -1043,7 +1043,8 @@
       // Used by the cart page's Explore More (no product context; store-wide trending).
       var params = new URLSearchParams({
         key: cfg.rebuyApiKey,
-        limit: String(cfg.limit || 8)
+        limit: String(cfg.limit || 8),
+        filter_oos: 'yes'
       });
       if (cfg.countryCode) params.set('country_code', cfg.countryCode);
       var url = 'https://rebuyengine.com/api/v1/products/trending_products?' + params.toString();
