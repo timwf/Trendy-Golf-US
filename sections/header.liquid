@@ -601,7 +601,60 @@
   })();
 </script>
 
+<script>
+  /* Sticky header group — the countdown bar + header stick to the top as one
+   * stack; scrolling down slides the stack away, scrolling up brings it back.
+   * Offsets are measured at runtime so the stack self-adjusts whichever
+   * sections are present (countdown bar live/expired, announcement bar
+   * enabled/disabled). */
+  (function () {
+    var groups = Array.prototype.slice.call(document.querySelectorAll('.shopify-section-group-header-group'));
+    if (!groups.length) return;
+
+    var stackH = 0;
+
+    function layout() {
+      var top = 0;
+      var z = 30;
+      groups.forEach(function (g) {
+        var h = g.offsetHeight;
+        g.style.position = 'sticky';
+        g.style.zIndex = z--;
+        if (!h) { g.style.top = '0px'; return; }
+        g.style.top = top + 'px';
+        g.style.setProperty('--sticky-top', top + 'px');
+        top += h;
+      });
+      stackH = top;
+    }
+
+    layout();
+    window.addEventListener('resize', layout, { passive: true });
+
+    var lastY = window.scrollY;
+    function setHidden(hidden) {
+      groups.forEach(function (g) { g.classList.toggle('header-group--hidden', hidden); });
+    }
+    window.addEventListener('scroll', function () {
+      var y = window.scrollY;
+      if (y <= stackH) {
+        setHidden(false);
+      } else if (y > lastY + 2) {
+        setHidden(true);
+      } else if (y < lastY - 2) {
+        setHidden(false);
+      }
+      lastY = y;
+    }, { passive: true });
+  })();
+</script>
+
 {% stylesheet %}
+  /* Sticky header group — each section slides up by its own height plus its
+   * offset within the stack, so the whole group hides/reveals as one unit. */
+  .shopify-section-group-header-group { transition: transform 300ms ease; }
+  .header-group--hidden { transform: translateY(calc(-100% - var(--sticky-top, 0px))); }
+
   /* iOS Safari paints `<input type="search">` with a tinted rounded background
    * and a native clear button. Tailwind's `appearance-none` strips the rounded
    * chrome on the input itself; this rule strips the WebKit pseudo-element
