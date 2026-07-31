@@ -22,6 +22,22 @@
         "text_color": "#ffffff"
       }
     },
+    "countdown_bar_BqjBPj": {
+      "type": "countdown-bar",
+      "name": "Countdown bar",
+      "settings": {
+        "end_date": "2026-08-21",
+        "text": "Sale ends in",
+        "link": "",
+        "link_text": "",
+        "show_days": true,
+        "show_hours": true,
+        "show_minutes": true,
+        "show_seconds": true,
+        "background_color": "#35342f",
+        "text_color": "#ffffff"
+      }
+    },
     "header": {
       "type": "header",
       "blocks": {
@@ -90,6 +106,7 @@
   },
   "order": [
     "announcement-bar",
+    "countdown_bar_BqjBPj",
     "header"
   ]
 }
