@@ -22,6 +22,23 @@
         "text_color": "#ffffff"
       }
     },
+    "countdown_bar_CCDXTH": {
+      "type": "countdown-bar",
+      "disabled": true,
+      "name": "Countdown bar",
+      "settings": {
+        "end_date": "2026-08-10",
+        "text": "Sale ends in",
+        "link": "",
+        "link_text": "",
+        "show_days": true,
+        "show_hours": true,
+        "show_minutes": true,
+        "show_seconds": true,
+        "background_color": "#FFFFFF",
+        "text_color": "#000000"
+      }
+    },
     "header": {
       "type": "header",
       "blocks": {
@@ -90,6 +107,7 @@
   },
   "order": [
     "announcement-bar",
+    "countdown_bar_CCDXTH",
     "header"
   ]
 }
