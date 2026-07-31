@@ -24,6 +24,7 @@
     },
     "countdown_bar_BqjBPj": {
       "type": "countdown-bar",
+      "disabled": true,
       "name": "Countdown bar",
       "settings": {
         "end_date": "2026-08-21",
