@@ -14,7 +14,7 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "settings": {
-        "text": "Warehouse Update: Orders placed from 29 July will be dispatched from 17 August as we relocate our warehouse.",
+        "text": "Warehouse Update: Orders placed from July 29th will be dispatched from August 17th as we relocate our warehouse.",
         "link": "",
         "link_text": "",
         "background_color": "#35342f",
