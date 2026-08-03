@@ -13,9 +13,8 @@
   "sections": {
     "announcement-bar": {
       "type": "announcement-bar",
-      "disabled": true,
       "settings": {
-        "text": "Free UK delivery on orders over £150",
+        "text": "Warehouse Update: Orders placed from 29 July will be dispatched from 17 August as we relocate our warehouse.",
         "link": "",
         "link_text": "",
         "background_color": "#35342f",
@@ -35,7 +34,7 @@
         "show_hours": true,
         "show_minutes": true,
         "show_seconds": true,
-        "background_color": "#FFFFFF",
+        "background_color": "#ffffff",
         "text_color": "#000000"
       }
     },
