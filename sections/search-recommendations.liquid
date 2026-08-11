@@ -142,11 +142,19 @@
       });
     }
 
+    /* With no tiles to show (no Rebuy config, empty response, or fetch
+       failure, and no server-rendered fallback), hide the whole section so
+       the page doesn't end on a bare heading above the footer. */
+    function hideIfEmpty() {
+      if (grid.children.length === 0) root.hidden = true;
+    }
+
     /* ---- Rebuy upgrade — only if both keys are set ---- */
     if (!cfg.rebuyApiKey || !cfg.rebuyRecommendationsId) {
       /* No Rebuy → fallback grid (or empty) is the final state. Drop the
          skeleton so it doesn't sit above the fallback tiles. */
       hideSkeleton();
+      hideIfEmpty();
       return;
     }
 
@@ -155,6 +163,7 @@
         if (!products.length) {
           /* Rebuy returned nothing — keep server-rendered fallback (if any). */
           hideSkeleton();
+          hideIfEmpty();
           return;
         }
         grid.innerHTML = products.map(buildTile).join('');
@@ -164,6 +173,7 @@
         console.error('[SearchRecommendations] fetch failed', err);
         /* Keep server-rendered fallback in place; drop the skeleton. */
         hideSkeleton();
+        hideIfEmpty();
       });
 
     function fetchRebuyProducts(cfg) {

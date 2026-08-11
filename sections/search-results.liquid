@@ -203,6 +203,35 @@
       return u;
     }
 
+    /* Trim partial bottom row, mirrors collection-template's trimPartialRow.
+       The OOS skip and colour-sibling dedupe run after pagination, so a page
+       of 24 can render fewer cards and leave the bottom row short while later
+       pages still exist. Hide trailing cards so the visible count is a
+       multiple of 4 whenever a next page exists; the final page (next arrow
+       disabled) shows its partial row in full rather than hiding products
+       with no later page to appear on. */
+    function trimPartialRow() {
+      var grid = document.getElementById('search-product-grid');
+      if (!grid) return;
+      var pag = document.getElementById('search-pagination');
+      var links = pag ? pag.querySelectorAll('a') : [];
+      var next = links.length ? links[links.length - 1] : null;
+      var hasMore = next && next.getAttribute('aria-disabled') !== 'true';
+      var cards = Array.prototype.slice.call(grid.children);
+      var total = cards.length;
+      var target = hasMore ? Math.floor(total / 4) * 4 : total;
+      if (target === 0) target = total;
+      for (var i = 0; i < cards.length; i++) {
+        if (i < target) {
+          cards[i].removeAttribute('data-row-trimmed');
+          cards[i].style.removeProperty('display');
+        } else {
+          cards[i].setAttribute('data-row-trimmed', '');
+          cards[i].style.display = 'none';
+        }
+      }
+    }
+
     /* ---- Section Rendering API fetch ---- */
     function fetchSection(url) {
       var grid = document.getElementById('search-product-grid');
@@ -268,6 +297,8 @@
 
           history.pushState(null, '', url);
           if (grid) window.scrollTo({ top: section.offsetTop, behavior: 'smooth' });
+
+          trimPartialRow();
         })
         .catch(function() {
           if (grid) grid.style.opacity = '';
@@ -370,6 +401,8 @@
     window.addEventListener('popstate', function() {
       fetchSection(window.location.href);
     });
+
+    trimPartialRow();
   })();
 {% endjavascript %}
 
