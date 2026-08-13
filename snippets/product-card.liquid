@@ -15,9 +15,24 @@
   assign colour_name = product.metafields.custom.color
   assign primary_image = product.images[0]
   assign hover_image = product.images[1]
+
+  # Stock shape, published on the card so client-rendered carousels (Explore More)
+  # can filter on it without a second product fetch. See ExploreMore in theme.js.
+  assign variants_total = product.variants.size
+  assign variants_available = 0
+  for card_variant in product.variants
+    if card_variant.available
+      assign variants_available = variants_available | plus: 1
+    endif
+  endfor
 -%}
 
-<div class="h-full" data-product-card>
+<div
+  class="h-full"
+  data-product-card
+  data-available="{{ product.available }}"
+  data-variants-available="{{ variants_available }}"
+  data-variants-total="{{ variants_total }}">
   {%- comment -%} Image container with hover swap and desktop swatches {%- endcomment -%}
   <div class="group relative mb-4 aspect-[9/12] overflow-hidden md:mb-5">
     <a class="absolute left-0 top-0 z-[1] block size-full" href="{{ product.url }}">

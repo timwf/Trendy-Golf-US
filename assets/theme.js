@@ -1038,13 +1038,21 @@
       inviewEl = root.querySelector('[data-inview]');
       if (!list || !splideEl || !loaded) return hide();
 
+      /* How many cards we want on screen. Where the source allows it we ask for
+         more than this (see overfetch()) so the stock filter below has slack and
+         still leaves a full row. */
+      var target = isTrending ? (cfg.limit || 8) : 8;
+
       var fetchHandles = isTrending ? fetchTrending(cfg) : fetchSimilar(cfg);
       fetchHandles
         .then(function (handles) {
           if (!handles.length) return hide();
           return renderCards(handles, cfg).then(function (cardsHtml) {
-            if (!cardsHtml.length) return hide();
-            mountCarousel(cardsHtml);
+            var kept = cardsHtml.filter(function (card) {
+              return passesStockFilter(card, cfg);
+            }).slice(0, target);
+            if (!kept.length) return hide();
+            mountCarousel(kept);
             observeInView();
           });
         })
@@ -1054,9 +1062,24 @@
         });
     }
 
+    /* Ask the source for more than we need, but only when the stock threshold is
+     * high enough to actually drop anything. At the default of 1 nothing extra is
+     * requested, so page weight and speed are unchanged from before the filter
+     * existed — the cost is only paid once a merchandiser opts into it. */
+    function overfetch(cfg, target, max) {
+      var min = parseInt(cfg.minSizesInStock, 10);
+      if (!min || min < 2) return target;
+      return Math.min(target * 2, max);
+    }
+
     function fetchTrending(cfg) {
       // Rebuy trending_products endpoint — mirrors getTrendingProducts.ts.
       // Used by the cart page's Explore More (no product context; store-wide trending).
+      /* Deliberately NOT over-fetched. Rebuy's trending endpoint degrades badly
+         when a raised limit is combined with filter_oos: measured 3.6s at
+         limit=8 vs 44.6s at limit=10. So the cart carousel may render fewer than
+         `limit` tiles once the stock threshold is raised, which is a far better
+         outcome than a carousel that takes most of a minute to appear. */
       var params = new URLSearchParams({
         key: cfg.rebuyApiKey,
         limit: String(cfg.limit || 8),
@@ -1109,7 +1132,7 @@
       var root = cfg.rootUrl || '/';
       var params = new URLSearchParams({
         product_id: String(cfg.productId),
-        limit: '8',
+        limit: String(overfetch(cfg, 8, 10)), /* 10 is the API max */
         intent: 'related'
       });
       var url = root + 'recommendations/products.json?' + params.toString();
@@ -1134,7 +1157,7 @@
       var params = new URLSearchParams({
         key: cfg.rebuyApiKey,
         shopify_product_ids: String(cfg.productId),
-        limit: '8',
+        limit: String(overfetch(cfg, 8, 16)),
         product_groups: 'yes'
       });
       if (cfg.countryCode) params.set('country_code', cfg.countryCode);
@@ -1160,12 +1183,47 @@
           .then(function (r) { return r.ok ? r.text() : ''; })
           .then(function (html) {
             var cardHtml = extractCardHtml(html);
-            return cardHtml ? { handle: handle, html: cardHtml } : null;
+            if (!cardHtml) return null;
+            return { handle: handle, html: cardHtml, stock: readStock(cardHtml) };
           })
           .catch(function () { return null; });
       })).then(function (results) {
         return results.filter(Boolean);
       });
+    }
+
+    /* `snippets/product-card.liquid` publishes the product's stock shape on the
+     * card wrapper. Reading it here means the filter works identically whichever
+     * source produced the handle (Rebuy or Shopify native), with no second fetch. */
+    function readStock(cardHtml) {
+      var tmp = document.createElement('div');
+      tmp.innerHTML = cardHtml;
+      var card = tmp.querySelector('[data-product-card]');
+      if (!card) return null;
+      return {
+        available: card.getAttribute('data-available') === 'true',
+        variantsAvailable: parseInt(card.getAttribute('data-variants-available'), 10),
+        variantsTotal: parseInt(card.getAttribute('data-variants-total'), 10)
+      };
+    }
+
+    /* Drop anything sold out, plus anything below the store's "minimum sizes in
+     * stock" threshold (Theme settings → Product recommendations). Products sold
+     * in a single size — caps, socks, gloves, accessories — are exempt from the
+     * threshold, otherwise raising it would wipe out every one-size product.
+     * A card we can't read stock off is kept, so a markup change degrades to
+     * today's behaviour rather than emptying the carousel. */
+    function passesStockFilter(card, cfg) {
+      var stock = card.stock;
+      if (!stock) return true;
+      if (!stock.available) return false;
+
+      var min = parseInt(cfg.minSizesInStock, 10);
+      if (!min || min < 2) return true;
+      if (!stock.variantsTotal || stock.variantsTotal < 2) return true;
+      if (isNaN(stock.variantsAvailable)) return true;
+
+      return stock.variantsAvailable >= min;
     }
 
     /* Section Rendering API returns a wrapping <div id="shopify-section-product-card-renderer">.

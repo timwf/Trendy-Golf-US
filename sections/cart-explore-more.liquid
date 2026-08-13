@@ -16,6 +16,7 @@
     rebuyApiKey: {{ settings.rebuy_api_key | json }},
     limit: {{ section.settings.limit | default: 8 | json }},
     countryCode: {{ localization.country.iso_code | default: 'US' | json }},
+    minSizesInStock: {{ settings.recommendations_min_sizes | default: 1 | json }},
     rootUrl: {{ routes.root_url | json }}
   };
 </script>

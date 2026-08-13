@@ -163,6 +163,25 @@
     ]
   },
   {
+    "name": "Product recommendations",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Stock filter for the 'Explore More' carousels on the product page and the cart page. Applies whichever recommendations source is in use (Rebuy or Shopify)."
+      },
+      {
+        "type": "range",
+        "id": "recommendations_min_sizes",
+        "label": "Minimum sizes in stock",
+        "min": 1,
+        "max": 6,
+        "step": 1,
+        "default": 1,
+        "info": "Hides recommended products with fewer than this many sizes still in stock. At 1, only fully sold-out products are hidden. Raise it to stop nearly-sold-through products being recommended. Products sold in a single size (caps, socks, gloves, accessories) are never hidden by this."
+      }
+    ]
+  },
+  {
     "name": "Rewards (TGCC / Upzelo)",
     "settings": [
       {

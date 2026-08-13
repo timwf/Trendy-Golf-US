@@ -20,6 +20,7 @@
     rebuyRecommendationsId: {{ section.settings.rebuy_recommendations_id | json }},
     isGiftCard: {{ is_gift_card | json }},
     countryCode: {{ localization.country.iso_code | default: 'GB' | json }},
+    minSizesInStock: {{ settings.recommendations_min_sizes | default: 1 | json }},
     rootUrl: {{ routes.root_url | json }}
   };
 </script>
