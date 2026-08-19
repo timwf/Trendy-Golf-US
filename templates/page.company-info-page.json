@@ -15,7 +15,8 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "TRENDYGOLF is dedicated to revolutionising the way golf enthusiasts approach the game. We blend cutting-edge fashion with functionality, offering our customers the best of both worlds. Our mission is to create a community where golf and fashion intersect seamlessly.",
             "heading_first": false,
             "heading": "About us",
@@ -44,7 +45,11 @@
         "show_progress": false,
         "enable_animation": true,
         "aria_label": "About Us hero",
-        "margin_bottom": "large"
+        "margin_bottom": "large",
+        "mobile_height_mode": "default",
+        "mobile_height": 150,
+        "desktop_height_mode": "default",
+        "desktop_height": 56
       }
     },
     "about-copy": {
@@ -95,41 +100,6 @@
         "margin_bottom_mobile": "20",
         "padding_top_mobile": "none",
         "padding_bottom_mobile": "none",
-        "enable_animation": true
-      }
-    },
-    "about-stores": {
-      "type": "banner-cards",
-      "blocks": {
-        "canary-wharf": {
-          "type": "card",
-          "settings": {
-            "heading": "Canary Wharf",
-            "link": "",
-            "button_label": ""
-          }
-        },
-        "manchester": {
-          "type": "card",
-          "settings": {
-            "heading": "Manchester",
-            "image": "shopify://shop_images/manchester.jpg",
-            "link": "",
-            "button_label": ""
-          }
-        }
-      },
-      "block_order": [
-        "canary-wharf",
-        "manchester"
-      ],
-      "settings": {
-        "layout": "grid",
-        "columns": 2,
-        "aspect_ratio": "square",
-        "heading_tag": "h3",
-        "heading_size": "large",
-        "margin_bottom": "medium",
         "enable_animation": true
       }
     },
@@ -270,7 +240,6 @@
   "order": [
     "about-hero",
     "about-copy",
-    "about-stores",
     "about-social-grid"
   ]
 }
