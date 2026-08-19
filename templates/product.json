@@ -52,6 +52,7 @@
         },
         "delivery_countdown_cHqgd9": {
           "type": "delivery_countdown",
+          "disabled": true,
           "settings": {}
         },
         "features_accordion_UFTKWR": {
