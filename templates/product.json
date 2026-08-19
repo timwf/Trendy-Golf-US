@@ -45,13 +45,13 @@
         },
         "rich_text_Ryf9xF": {
           "type": "rich_text",
+          "disabled": true,
           "settings": {
             "text": "<p><strong>Warehouse Update: </strong>Orders placed from July 29th will be dispatched from August 17th as we relocate our warehouse. Thanks for your patience.</p>"
           }
         },
         "delivery_countdown_cHqgd9": {
           "type": "delivery_countdown",
-          "disabled": true,
           "settings": {}
         },
         "features_accordion_UFTKWR": {
