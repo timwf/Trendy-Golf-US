@@ -15,7 +15,8 @@
         "slide-1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "Browse our help topics below to find the answers you're looking for.",
             "heading_first": false,
             "heading": "Help Centre",
@@ -44,7 +45,11 @@
         "show_progress": false,
         "enable_animation": true,
         "aria_label": "Help Centre hero",
-        "margin_bottom": "none"
+        "margin_bottom": "none",
+        "mobile_height_mode": "default",
+        "mobile_height": 150,
+        "desktop_height_mode": "default",
+        "desktop_height": 56
       }
     },
     "icon-grid": {
@@ -68,7 +73,7 @@
             "icon": "arrow-uturn-left",
             "title": "Returns",
             "description": "See our information on returns and exchanges.",
-            "link": "/pages/returns-and-exchanges",
+            "link": "shopify://policies/refund-policy",
             "link_label": "Learn More",
             "show_arrow": true,
             "show_social_channels": false
