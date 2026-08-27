@@ -54,9 +54,9 @@
           "settings": {
             "icon": "phone",
             "title": "Call Us",
-            "description": "Monday - Friday\n08:00 AM - 04:30 PM\nPDT",
-            "link": "tel:+14242903101",
-            "link_label": "424-290-3101",
+            "description": "Monday - Friday\n08:00 AM - 04:30 PM PDT\n\n561-941-GOLF (4653)",
+            "link": "",
+            "link_label": "",
             "show_arrow": true,
             "show_social_channels": false
           }
@@ -75,6 +75,7 @@
         },
         "find-us": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "icon": "map-pin",
             "title": "Find Us At",
