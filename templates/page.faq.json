@@ -168,7 +168,7 @@
           "settings": {
             "category_title": "Order & Shipping",
             "question": "Do I have to pay to return an item?",
-            "answer": "<p>If your order was over £100 you can return your order for free. Within your parcel is a Royal Mail Track 24 label. This is a pre-paid returns label to send your items back to us.</p>"
+            "answer": "<p>Yes. There is a $8.99 return fee applied when you return an item.</p>"
           }
         },
         "cat-returns": {
