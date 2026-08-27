@@ -182,7 +182,7 @@
           "settings": {
             "category_title": "Returns",
             "question": "How do I return an item?",
-            "answer": "<p>UK Customers</p><p>Order over £100?</p><p>If your order was over £100 you can return your order for free. Within your parcel is a Royal Mail Track 24 label. This is a pre-paid returns label to send your items back to us. To make your return please:</p><p>1. Package your items up ensuring all tags are attached and the items are in their original condition</p><p>2. Complete the Returns Form which is within your parcel and include this within the package</p><p>3. Stick the Royal Mail Track 24 label to the front of your package</p><p>4. Take this to your local Post Office and obtain proof of posting at the time of sending - please keep hold of the proof of posting until your return has been processed</p>"
+            "answer": "<p>Visit: <a href=\"https://returns.trendygolfusa.com/\" target=\"_blank\"><strong>returns.trendygolfusa.com</strong></a></p><p>From there, you can:<br/>FedEx return label (or use your own courier)<br/><br/>QR code for printer-free drop-off at FedEx</p><p>Don't forget to include a note with your <strong>order number</strong>, the <strong>items returned</strong>, and your <strong>return preference</strong> (refund or store credit).</p>"
           }
         },
         "faq-returns-free-shipping": {
