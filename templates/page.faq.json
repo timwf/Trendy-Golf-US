@@ -73,7 +73,7 @@
             "icon": "arrow-uturn-left",
             "title": "Returns",
             "description": "See our information on returns and exchanges.",
-            "link": "shopify://policies/refund-policy",
+            "link": "/pages/return-exchanges",
             "link_label": "Learn More",
             "show_arrow": true,
             "show_social_channels": false
