@@ -15,7 +15,8 @@
         "slide_1": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "At TRENDYGOLF, we believe in combining passion for the game with a love for fashion. If you're driven, innovative, and have an eye for style, you might just be the perfect fit for our team. Explore the opportunities below and find your next career move with us.",
             "heading_first": true,
             "heading": "Do you have what it takes to work at TRENDYGOLF?",
@@ -44,7 +45,11 @@
         "show_progress": false,
         "enable_animation": true,
         "aria_label": "Careers hero",
-        "margin_bottom": "large"
+        "margin_bottom": "large",
+        "mobile_height_mode": "default",
+        "mobile_height": 150,
+        "desktop_height_mode": "default",
+        "desktop_height": 56
       }
     },
     "careers-mission": {
@@ -177,7 +182,7 @@
         "para_5": {
           "type": "text",
           "settings": {
-            "text": "<p>It's all about confidence and with <a href=\"https://trendygolf.com/\">TRENDYGOLF</a> as your personal tailor, you'll at least look good whilst on the course.</p>"
+            "text": "<p>It's all about confidence and with TRENDYGOLF as your personal tailor, you'll at least look good whilst on the course.</p>"
           }
         }
       },
