@@ -147,6 +147,14 @@
             "title": "Order & Shipping"
           }
         },
+        "faq-returns-free-shipping": {
+          "type": "faq",
+          "settings": {
+            "category_title": "Returns",
+            "question": "Do you offer free shipping?",
+            "answer": "<p>Free FedEx Delivery on all orders $200.00 and over to the United States (Mainland) *Additional charges may apply for shoes and bags.</p><p>Please note that surcharges may be incurred on <strong>heavy items such as shoes, travel bags, and other oversized items</strong>. This charge will be added to your shipping cost upon checkout.</p>"
+          }
+        },
         "faq-order-shipping-tracking": {
           "type": "faq",
           "settings": {
@@ -185,14 +193,6 @@
             "answer": "<p>Visit: <a href=\"https://returns.trendygolfusa.com/\" target=\"_blank\"><strong>returns.trendygolfusa.com</strong></a></p><p>From there, you can:<br/>FedEx return label (or use your own courier)<br/>QR code for printer-free drop-off at FedEx</p><p>Don't forget to include a note with your <strong>order number</strong>, the <strong>items returned</strong>, and your <strong>return preference</strong> (refund or store credit).</p>"
           }
         },
-        "faq-returns-free-shipping": {
-          "type": "faq",
-          "settings": {
-            "category_title": "Returns",
-            "question": "Do you offer free shipping?",
-            "answer": "<p>Free FedEx Delivery on all orders $200.00 and over to the United States (Mainland) *Additional charges may apply for shoes and bags.</p><p>Please note that surcharges may be incurred on <strong>heavy items such as shoes, travel bags, and other oversized items</strong>. This charge will be added to your shipping cost upon checkout.</p>"
-          }
-        },
         "faq-returns-no-confirmation": {
           "type": "faq",
           "settings": {
@@ -207,12 +207,12 @@
         "faq-general-brands",
         "faq-general-contact",
         "cat-order-shipping",
+        "faq-returns-free-shipping",
         "faq-order-shipping-tracking",
         "faq-order-shipping-changes",
         "faq-order-shipping-return-pay",
         "cat-returns",
         "faq-returns-how-to",
-        "faq-returns-free-shipping",
         "faq-returns-no-confirmation"
       ],
       "settings": {
