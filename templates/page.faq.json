@@ -190,7 +190,7 @@
           "settings": {
             "category_title": "Returns",
             "question": "Do you offer free shipping?",
-            "answer": "<p>Free FedEx Delivery on all orders $150.00 and over to the United States (Mainland) *Additional charges may apply for shoes and bags.</p><p>Please note that surcharges may be incurred on <strong>heavy items such as shoes, travel bags, and other oversized items</strong>. This charge will be added to your shipping cost upon checkout.</p>"
+            "answer": "<p>Free FedEx Delivery on all orders $200.00 and over to the United States (Mainland) *Additional charges may apply for shoes and bags.</p><p>Please note that surcharges may be incurred on <strong>heavy items such as shoes, travel bags, and other oversized items</strong>. This charge will be added to your shipping cost upon checkout.</p>"
           }
         },
         "faq-returns-no-confirmation": {
