@@ -15,7 +15,8 @@
         "slide": {
           "type": "slide",
           "settings": {
-            "content_alignment": "bottom",
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "",
             "heading_first": false,
             "heading": "",
@@ -44,7 +45,11 @@
         "show_progress": false,
         "enable_animation": true,
         "aria_label": "Rewards hero",
-        "margin_bottom": "medium"
+        "margin_bottom": "medium",
+        "mobile_height_mode": "default",
+        "mobile_height": 150,
+        "desktop_height_mode": "default",
+        "desktop_height": 56
       }
     },
     "intro": {
@@ -237,6 +242,7 @@
         },
         "row-competitions": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "label": "Monthly competitions & prize draws",
             "tier_1": false,
@@ -257,6 +263,7 @@
         },
         "row-gift": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "label": "Free TGCC Gift",
             "tier_1": false,
@@ -267,6 +274,7 @@
         },
         "row-personal-shopping": {
           "type": "row",
+          "disabled": true,
           "settings": {
             "label": "Personal Shopping Access",
             "tier_1": false,
