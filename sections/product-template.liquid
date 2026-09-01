@@ -88,7 +88,8 @@
               {%- assign title_font_class = block.settings.font_style | default: 'sans' | prepend: 'font-' -%}
               <div {{ block.shopify_attributes }}>
                 {%- if product.vendor != blank -%}
-                  <p class="mb-5 text-sm uppercase text-taupe-700 {{ title_font_class }}">{{ product.vendor }}</p>
+                  {%- capture brand_url -%}{%- render 'brand-url', vendor: product.vendor -%}{%- endcapture -%}
+                  <p class="mb-5 text-sm uppercase text-taupe-700 {{ title_font_class }}"><a href="{{ brand_url }}" class="hover:underline">{{ product.vendor }}</a></p>
                 {%- endif -%}
                 <h1 class="mb-3 {{ title_font_class }} text-xl lg:text-2xl">{{ display_name }}</h1>
               </div>

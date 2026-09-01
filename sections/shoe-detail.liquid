@@ -243,7 +243,8 @@
 
     {%- comment -%} Brand name {%- endcomment -%}
     {%- if product.vendor != blank -%}
-      <h4 class="mb-5 text-sm uppercase text-taupe-700">{{ product.vendor }}</h4>
+      {%- capture brand_url -%}{%- render 'brand-url', vendor: product.vendor -%}{%- endcapture -%}
+      <h4 class="mb-5 text-sm uppercase text-taupe-700"><a href="{{ brand_url }}" class="hover:underline">{{ product.vendor }}</a></h4>
     {%- endif -%}
 
     {%- comment -%} Product title {%- endcomment -%}

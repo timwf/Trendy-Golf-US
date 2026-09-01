@@ -1,0 +1,25 @@
+{%- comment -%}
+  Resolve the URL for a vendor's brand page.
+
+  Matches the vendor against the brand metaobject (case-insensitive on
+  brand_name) and outputs the linked brand page URL (brand_page_shopify).
+  Falls back to the automatic vendor collection when no metaobject entry
+  or brand page exists.
+
+  @param {string} vendor - product.vendor
+{%- endcomment -%}
+{%- liquid
+  assign target_url = blank
+  assign vendor_key = vendor | downcase | strip
+  for brand in metaobjects.brand.values
+    assign brand_key = brand.brand_name | downcase | strip
+    if brand_key == vendor_key
+      assign target_url = brand.brand_page_shopify.value.url
+      break
+    endif
+  endfor
+  if target_url == blank
+    assign target_url = vendor | url_for_vendor
+  endif
+  echo target_url
+-%}
