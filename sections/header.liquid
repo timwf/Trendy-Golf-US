@@ -102,6 +102,8 @@
     <nav class="hidden items-center justify-between xl:block" aria-label="{{ 'sections.header.main_nav' | t }}">
       <ul class="flex">
         {%- for link in main_menu.links -%}
+          {%- comment -%} Hide leaf collection links whose collection is empty (item 25). {%- endcomment -%}
+          {%- if link.type == 'collection_link' and link.links.size == 0 and link.object.all_products_count == 0 -%}{%- continue -%}{%- endif -%}
           {%- assign has_children = false -%}
           {%- if link.links.size > 0 -%}
             {%- assign has_children = true -%}
@@ -144,7 +146,7 @@
       <button
         data-search-open
         aria-label="{{ 'general.search.title' | t }}"
-        class="hidden md:block"
+        class="block"
       >
         {% render 'icon', icon: 'magnifying-glass', size: 'size-5' %}
       </button>
@@ -228,6 +230,8 @@
   <div class="relative h-full w-full flex-1 bg-white">
     <ul class="h-full w-full overflow-y-auto py-6 gap-6 flex flex-col">
       {%- for link in main_menu.links -%}
+        {%- comment -%} Hide leaf collection links whose collection is empty (item 25). {%- endcomment -%}
+        {%- if link.type == 'collection_link' and link.links.size == 0 and link.object.all_products_count == 0 -%}{%- continue -%}{%- endif -%}
         {%- comment -%} Item 3 — highlight matched top-level link in the mobile drawer too {%- endcomment -%}
         {%- assign link_key = link.title | downcase | strip | prepend: '|' | append: '|' -%}
         {%- assign is_hl = false -%}
@@ -257,6 +261,8 @@
             >
               <ul class="h-full w-full overflow-y-auto py-6 gap-6 flex flex-col">
                 {%- for child_link in link.links -%}
+                  {%- comment -%} Hide leaf collection links whose collection is empty (item 25). {%- endcomment -%}
+                  {%- if child_link.type == 'collection_link' and child_link.links.size == 0 and child_link.object.all_products_count == 0 -%}{%- continue -%}{%- endif -%}
                   <li>
                     <div class="flex justify-between w-full px-6">
                       <a href="{{ child_link.url }}" {% if child_link.current %}aria-current="page"{% endif %}>
@@ -282,6 +288,8 @@
                       >
                         <ul class="h-full w-full overflow-y-auto py-6 gap-6 flex flex-col">
                           {%- for grandchild_link in child_link.links -%}
+                            {%- comment -%} Hide leaf collection links whose collection is empty (item 25). {%- endcomment -%}
+                            {%- if grandchild_link.type == 'collection_link' and grandchild_link.links.size == 0 and grandchild_link.object.all_products_count == 0 -%}{%- continue -%}{%- endif -%}
                             <li>
                               <div class="w-full px-6">
                                 <a href="{{ grandchild_link.url }}" {% if grandchild_link.current %}aria-current="page"{% endif %}>
