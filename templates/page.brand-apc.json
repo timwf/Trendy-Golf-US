@@ -30,7 +30,7 @@
             "hosted_video_url_mobile": "",
             "slide_duration": 20,
             "button_label": "Shop Now",
-            "button_link": "",
+            "button_link": "shopify://collections/mens-a-p-c-golf-apparel",
             "button_style": "white"
           }
         }
@@ -43,13 +43,20 @@
         "show_progress": false,
         "enable_animation": true,
         "aria_label": "Hero slideshow",
-        "margin_bottom": "medium"
+        "margin_bottom": "medium",
+        "mobile_height_mode": "default",
+        "mobile_height": 150,
+        "desktop_height_mode": "default",
+        "desktop_height": 56
       }
     },
     "product_carousel_1": {
       "type": "product-carousel-tabs",
       "settings": {
         "title": "New In APC",
+        "show_collection_links": true,
+        "collection_link_label": "View all",
+        "max_products": 8,
         "tab_1_label": "Mens",
         "tab_1_products": [
           "solene-round-polo-shirt-marine",
@@ -61,6 +68,7 @@
           "lenny-polo-shirt-green",
           "adrien-woven-polo-shirt-fab-pale-pink"
         ],
+        "tab_1_collection": "",
         "tab_2_label": "Womens",
         "tab_2_products": [
           "murielle-vest-marine-1",
@@ -72,8 +80,10 @@
           "ignes-knit-vest-green",
           "aude-pleated-skirt-white"
         ],
+        "tab_2_collection": "",
         "tab_3_label": "",
-        "tab_3_products": []
+        "tab_3_products": [],
+        "tab_3_collection": ""
       }
     },
     "banner_cards_1": {
