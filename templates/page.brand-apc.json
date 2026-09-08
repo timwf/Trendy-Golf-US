@@ -94,7 +94,7 @@
           "settings": {
             "heading": "Shop All",
             "image": "shopify://shop_images/44a55ee2-c8db-4e98-9ff9-008fb1b93325.png",
-            "link": "",
+            "link": "shopify://collections/mens-a-p-c-golf-apparel",
             "button_label": "Shop Now"
           }
         },
