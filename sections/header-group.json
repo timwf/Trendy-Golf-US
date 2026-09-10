@@ -11,16 +11,6 @@
   "type": "header",
   "name": "Header group",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "settings": {
-        "text": "Warehouse Update: We’ve moved to our new warehouse! Orders will be dispatched as usual.",
-        "link": "",
-        "link_text": "",
-        "background_color": "#35342f",
-        "text_color": "#ffffff"
-      }
-    },
     "countdown_bar_CCDXTH": {
       "type": "countdown-bar",
       "disabled": true,
@@ -94,7 +84,7 @@
         "transparent_text_color": "#ffffff",
         "solid_bg_color": "#f6f5f2",
         "solid_text_color": "#35342f",
-        "highlight_nav_title": "End of Season Sale",
+        "highlight_nav_title": "Outlet",
         "highlight_nav_color": "#cc0000",
         "current_region": "US",
         "other_region_url": "https://trendygolf.com/",
@@ -105,7 +95,6 @@
     }
   },
   "order": [
-    "announcement-bar",
     "countdown_bar_CCDXTH",
     "header"
   ]
