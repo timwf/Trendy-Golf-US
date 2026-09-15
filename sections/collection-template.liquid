@@ -72,12 +72,53 @@
       colourways sharing a display name collapse into a single tile (legacy behaviour). {%- endcomment -%}
     {%- assign colourway_own_tile = settings.colourway_own_tile -%}
     {%- assign seen_display_names = '' -%}
+
+    {%- comment -%}
+      Shopify's native size filter (filter.v.option.size) matches any product that
+      carries the selected size as a variant option, in stock or not, so a product
+      sold out in that size still appears. Collect the actively-selected size values
+      once, then in the loop below skip any product with no in-stock variant in those
+      sizes. Uneven grids from these skips are handled by trimPartialRow(), exactly as
+      for the existing product.available skip.
+    {%- endcomment -%}
+    {%- assign active_sizes = '' -%}
+    {%- for size_filter in collection.filters -%}
+      {%- if size_filter.param_name contains 'option.size' -%}
+        {%- for size_value in size_filter.active_values -%}
+          {%- assign active_sizes = active_sizes | append: '|||' | append: size_value.value | append: '|||' -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endfor -%}
+
+    {%- assign any_rendered = false -%}
     <div id="collection-product-grid" class="mb-6 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
       {%- for product in collection.products -%}
         {%- comment -%} Hide OOS products from the grid (an in-stock colourway sibling is promoted by the dedup below) {%- endcomment -%}
         {%- unless product.available -%}
           {%- continue -%}
         {%- endunless -%}
+
+        {%- comment -%} Skip products whose actively-filtered size(s) are out of stock {%- endcomment -%}
+        {%- if active_sizes != blank -%}
+          {%- assign size_in_stock = false -%}
+          {%- for variant in product.variants -%}
+            {%- if variant.available -%}
+              {%- for variant_option in variant.options -%}
+                {%- assign size_needle = '|||' | append: variant_option | append: '|||' -%}
+                {%- if active_sizes contains size_needle -%}
+                  {%- assign size_in_stock = true -%}
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+            {%- if size_in_stock -%}
+              {%- break -%}
+            {%- endif -%}
+          {%- endfor -%}
+          {%- unless size_in_stock -%}
+            {%- continue -%}
+          {%- endunless -%}
+        {%- endif -%}
 
         {%- assign display_name = product.metafields.custom.product_display_name | default: product.title -%}
 
@@ -148,11 +189,28 @@
         {%- else -%}
           {%- render 'product-card', product: product -%}
         {%- endif -%}
+        {%- assign any_rendered = true -%}
       {%- endfor -%}
     </div>
 
-    {%- comment -%} Empty state {%- endcomment -%}
-    {%- if collection.products.size == 0 -%}
+    {%- comment -%}
+      Empty state. Fires when the collection is genuinely empty, and also when the
+      size skip above removed every product on the page and there is no further page
+      to load (a direct link to a size that is sold out throughout) — otherwise the
+      grid would sit blank with no message.
+    {%- endcomment -%}
+    {%- liquid
+      assign show_empty = false
+      if collection.products.size == 0
+        assign show_empty = true
+      endif
+      unless any_rendered
+        unless paginate.next
+          assign show_empty = true
+        endunless
+      endunless
+    -%}
+    {%- if show_empty -%}
       <p data-collection-empty class="py-16 text-center text-lg text-taupe-700">{{ 'sections.collection.no_products' | t }}</p>
     {%- endif -%}
 

@@ -19,6 +19,39 @@
   assign sidebar_form_id = form_id | default: 'CollectionFiltersForm'
 -%}
 
+{%- comment -%}
+  Size filter, in-stock pruning. The native Size filter lists every size any product
+  in the collection carries, sold out or not, so shoppers hit dead-end sizes (a size
+  that shows "No products found"). Build the set of sizes that have at least one
+  in-stock product by looping the collection's variants, then drop sold-out sizes
+  from the Size filter below (a currently-selected value always stays, via value.active).
+
+  Liquid hands the theme at most 250 products per render. If the collection has more
+  than that (e.g. the 700+ Outlet), the set would be incomplete and could hide a size
+  that is genuinely in stock, so we only prune when the whole collection fits in one
+  pass. Larger collections keep the native list and rely on the grid filter + empty
+  state instead.
+{%- endcomment -%}
+{%- assign instock_sizes = '' -%}
+{%- assign prune_sizes = false -%}
+{%- if collection and collection.all_products_count <= 250 -%}
+  {%- assign prune_sizes = true -%}
+  {%- paginate collection.products by 250 -%}
+    {%- for instock_product in collection.products -%}
+      {%- for instock_variant in instock_product.variants -%}
+        {%- if instock_variant.available -%}
+          {%- for instock_option in instock_variant.options -%}
+            {%- assign instock_key = '|||' | append: instock_option | append: '|||' -%}
+            {%- unless instock_sizes contains instock_key -%}
+              {%- assign instock_sizes = instock_sizes | append: instock_key -%}
+            {%- endunless -%}
+          {%- endfor -%}
+        {%- endif -%}
+      {%- endfor -%}
+    {%- endfor -%}
+  {%- endpaginate -%}
+{%- endif -%}
+
 {%- comment -%} Backdrop overlay {%- endcomment -%}
 <div
   data-filter-backdrop
@@ -112,6 +145,13 @@
                   {%- for value in filter.values -%}
                     {%- if value.count == 0 -%}
                       {%- continue -%}
+                    {%- endif -%}
+                    {%- comment -%} Drop sold-out sizes (keep any active selection); only when the whole collection fit in one pass {%- endcomment -%}
+                    {%- if is_size and prune_sizes and value.active == false -%}
+                      {%- assign size_value_key = '|||' | append: value.value | append: '|||' -%}
+                      {%- unless instock_sizes contains size_value_key -%}
+                        {%- continue -%}
+                      {%- endunless -%}
                     {%- endif -%}
                     <li>
                       {%- if is_colour -%}
