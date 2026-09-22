@@ -66,7 +66,7 @@
     {%- comment -%} Item 4 — see collection-template: toggle governs colourway tiles site-wide {%- endcomment -%}
     {%- assign colourway_own_tile = settings.colourway_own_tile -%}
     {%- assign seen_display_names = '' -%}
-    <div id="search-product-grid" class="mb-6 grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
+    <div id="search-product-grid" class="mb-6 grid grid-cols-2 gap-5 md:grid-cols-2 xl:grid-cols-4">
       {%- for product in search.results -%}
         {%- comment -%} Hide OOS products from search results (an in-stock colourway sibling is promoted by the dedup below) {%- endcomment -%}
         {%- unless product.available -%}
