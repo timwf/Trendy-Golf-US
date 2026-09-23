@@ -235,7 +235,7 @@
       "type": "product-carousel-tabs",
       "name": "t:sections.product_carousel_tabs.presets.name",
       "settings": {
-        "title": "New In",
+        "title": "Golf Shoes",
         "show_collection_links": true,
         "collection_link_label": "View all",
         "max_products": 8,
@@ -249,7 +249,7 @@
           "playa-ss-windshirt-cream",
           "ventura-camp-shirt-white"
         ],
-        "tab_1_collection": "mens-new-in-1",
+        "tab_1_collection": "mens-golf-shoes",
         "tab_2_label": "Women",
         "tab_2_products": [
           "womens-tegan-performance-tank-white",
@@ -290,6 +290,7 @@
       "block_order": [
         "slide_apc"
       ],
+      "disabled": true,
       "name": "t:sections.hero_carousel.presets.name",
       "settings": {
         "autoplay": true,
@@ -379,6 +380,7 @@
       "block_order": [
         "slide_shoes"
       ],
+      "disabled": true,
       "name": "t:sections.hero_carousel.presets.name",
       "settings": {
         "autoplay": true,
