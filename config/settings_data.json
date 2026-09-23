@@ -17,8 +17,8 @@
     "social_twitter": "https://twitter.com/TRENDYGOLF",
     "gtm_id": "",
     "favicon": "shopify://shop_images/Trendyfav_96x96_490bace3-1dcc-4d13-a1d5-fce480962998.png",
-    "rebuy_api_key": "",
-    "recommendations_source": "shopify",
+    "rebuy_api_key": "dcc30d2a71dd80cb9676dc5185661179639475e6",
+    "recommendations_source": "auto",
     "password_overlay_enabled": false,
     "sections": {
       "cart-drawer": {
