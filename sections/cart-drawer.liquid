@@ -33,10 +33,10 @@
 
     {%- comment -%} Free shipping progress bar {%- endcomment -%}
     {%- assign show_bar = false -%}
-    {%- if section.settings.enable_free_shipping_bar and section.settings.free_shipping_threshold > 0 -%}
+    {%- if settings.free_shipping_bar_enabled and settings.free_shipping_threshold > 0 -%}
       {%- assign show_bar = true -%}
     {%- endif -%}
-    {%- assign threshold_cents = section.settings.free_shipping_threshold | times: 100 -%}
+    {%- assign threshold_cents = settings.free_shipping_threshold | times: 100 -%}
     {%- assign remaining_cents = threshold_cents | minus: cart.total_price -%}
     {%- if remaining_cents < 0 -%}{%- assign remaining_cents = 0 -%}{%- endif -%}
     {%- assign percent = 0 -%}
@@ -60,7 +60,7 @@
         {%- endif -%}
       </p>
       <div class="h-1.5 w-full overflow-hidden bg-taupe-400" role="progressbar" aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="Free shipping progress">
-        <div class="h-full bg-black transition-all duration-500 ease-out" style="width: {{ percent }}%" data-free-shipping-fill></div>
+        <div class="h-full bg-clubhouse-green-900 transition-all duration-500 ease-out" style="width: {{ percent }}%" data-free-shipping-fill></div>
       </div>
     </div>
 
@@ -189,18 +189,8 @@
       "content": "Free shipping progress bar"
     },
     {
-      "type": "checkbox",
-      "id": "enable_free_shipping_bar",
-      "label": "Enable free shipping bar",
-      "default": true
-    },
-    {
-      "type": "number",
-      "id": "free_shipping_threshold",
-      "label": "Threshold (whole units of store currency)",
-      "info": "e.g. 100 = £100 on the UK store, $100 on the US store. Set to 0 to hide the bar.",
-      "default": 100,
-      "visible_if": "{{ section.settings.enable_free_shipping_bar }}"
+      "type": "paragraph",
+      "content": "Turn the bar on or off and set the threshold under Theme settings → Free delivery bar — one value shared with the main cart page. The wording below applies to this slide-out cart only."
     },
     {
       "type": "text",
@@ -208,14 +198,14 @@
       "label": "Message before threshold",
       "info": "Use {remaining} as a placeholder for the remaining amount (e.g. 'Add {remaining} for free shipping'). Or use it for non-shipping promos: 'Add {remaining} for a free golf glove'.",
       "default": "Add {remaining} for free shipping",
-      "visible_if": "{{ section.settings.enable_free_shipping_bar }}"
+      "visible_if": "{{ settings.free_shipping_bar_enabled }}"
     },
     {
       "type": "text",
       "id": "message_threshold_met",
       "label": "Message when threshold met",
       "default": "You've unlocked free shipping!",
-      "visible_if": "{{ section.settings.enable_free_shipping_bar }}"
+      "visible_if": "{{ settings.free_shipping_bar_enabled }}"
     }
   ],
   "default": {

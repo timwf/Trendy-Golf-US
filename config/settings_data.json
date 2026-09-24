@@ -20,13 +20,13 @@
     "rebuy_api_key": "dcc30d2a71dd80cb9676dc5185661179639475e6",
     "recommendations_source": "auto",
     "password_overlay_enabled": false,
+    "free_shipping_bar_enabled": true,
+    "free_shipping_threshold": 200,
     "sections": {
       "cart-drawer": {
         "type": "cart-drawer",
         "settings": {
           "fallback_collection": "",
-          "enable_free_shipping_bar": true,
-          "free_shipping_threshold": 150,
           "message_below_threshold": "Add {remaining} for free shipping",
           "message_threshold_met": "You've unlocked free shipping!"
         }

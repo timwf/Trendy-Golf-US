@@ -35,6 +35,43 @@
     {%- comment -%} Summary {%- endcomment -%}
     <div class="md:col-span-3 lg:col-span-2">
       {%- if cart.item_count > 0 -%}
+        {%- comment -%}
+          Free delivery progress bar — mirrors the slide-out cart bar in
+          sections/cart-drawer.liquid. Threshold + on/off come from Theme
+          settings (shared with the drawer); the wording is per-section.
+        {%- endcomment -%}
+        {%- assign show_bar = false -%}
+        {%- if settings.free_shipping_bar_enabled and settings.free_shipping_threshold > 0 -%}
+          {%- assign show_bar = true -%}
+        {%- endif -%}
+        {%- assign threshold_cents = settings.free_shipping_threshold | times: 100 -%}
+        {%- assign remaining_cents = threshold_cents | minus: cart.total_price -%}
+        {%- if remaining_cents < 0 -%}{%- assign remaining_cents = 0 -%}{%- endif -%}
+        {%- assign percent = 0 -%}
+        {%- if threshold_cents > 0 -%}
+          {%- assign percent = cart.total_price | times: 100 | divided_by: threshold_cents -%}
+          {%- if percent > 100 -%}{%- assign percent = 100 -%}{%- endif -%}
+        {%- endif -%}
+        {%- assign threshold_met = false -%}
+        {%- if cart.total_price >= threshold_cents -%}{%- assign threshold_met = true -%}{%- endif -%}
+        {%- assign remaining_formatted = remaining_cents | money -%}
+        {%- assign lbrace = "{" -%}
+        {%- assign rbrace = "}" -%}
+        {%- assign remaining_token = lbrace | append: "remaining" | append: rbrace -%}
+
+        <div class="mb-6" data-free-shipping-bar {% unless show_bar %}hidden{% endunless %}>
+          <p class="mb-2 text-center text-sm font-bold" data-free-shipping-message>
+            {%- if threshold_met -%}
+              {{ section.settings.message_threshold_met }}
+            {%- else -%}
+              {{ section.settings.message_below_threshold | replace: remaining_token, remaining_formatted }}
+            {%- endif -%}
+          </p>
+          <div class="h-1.5 w-full overflow-hidden bg-taupe-400" role="progressbar" aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="Free delivery progress">
+            <div class="h-full bg-clubhouse-green-900 transition-all duration-500 ease-out" style="width: {{ percent }}%" data-free-shipping-fill></div>
+          </div>
+        </div>
+
         <div class="bg-taupe-300 p-6">
           <h2 class="font-sans font-bold text-base lg:text-lg">Summary</h2>
           <div class="mb-6 grid gap-2">
@@ -57,7 +94,7 @@
 
           {%- comment -%} Rewards — logged out {%- endcomment -%}
           {%- unless customer -%}
-            <div class="mb-4 flex items-center gap-2 bg-clubhouse-green-600 p-4 text-sm text-white">
+            <div class="mb-4 flex items-center gap-2 bg-clubhouse-green-900 p-4 text-sm text-white">
               {% render 'icon', icon: 'trophy', size: 'size-5', class: 'min-w-5' %}
               <span class="inline [&_*]:mb-0">
                 <b>Register</b> at checkout to unlock <b>TGCC Rewards</b> with your purchase.
@@ -92,6 +129,29 @@
     {
       "type": "paragraph",
       "content": "Full cart page. The 'Explore More' recommendations carousel below is the separate 'Cart — Explore More' section."
+    },
+    {
+      "type": "header",
+      "content": "Free delivery progress bar"
+    },
+    {
+      "type": "paragraph",
+      "content": "Turn the bar on or off and set the threshold under Theme settings → Free delivery bar — one value shared with the slide-out cart. The wording below applies to this cart page only."
+    },
+    {
+      "type": "text",
+      "id": "message_below_threshold",
+      "label": "Message before threshold",
+      "info": "Use {remaining} as a placeholder for the remaining amount.",
+      "default": "Spend {remaining} more to qualify for free delivery",
+      "visible_if": "{{ settings.free_shipping_bar_enabled }}"
+    },
+    {
+      "type": "text",
+      "id": "message_threshold_met",
+      "label": "Message when threshold met",
+      "default": "You've qualified for free delivery",
+      "visible_if": "{{ settings.free_shipping_bar_enabled }}"
     }
   ],
   "presets": [

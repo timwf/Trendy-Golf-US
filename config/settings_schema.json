@@ -20,6 +20,28 @@
     ]
   },
   {
+    "name": "Free delivery bar",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Controls the free delivery progress bar in both the slide-out cart and on the main cart page. Set the threshold once here and both places use it."
+      },
+      {
+        "type": "checkbox",
+        "id": "free_shipping_bar_enabled",
+        "label": "Show free delivery bar",
+        "default": true
+      },
+      {
+        "type": "number",
+        "id": "free_shipping_threshold",
+        "label": "Free delivery threshold (whole units of store currency)",
+        "info": "e.g. 200 = $200 on the US store. Must match the free-shipping rate in Settings \u2192 Shipping and delivery. Set to 0 to hide the bar. The wording shown in each place is set on its own section (Cart drawer / Cart page).",
+        "default": 200
+      }
+    ]
+  },
+  {
     "name": "Colours",
     "settings": [
       {
