@@ -28,8 +28,8 @@
         "type": "cart-drawer",
         "settings": {
           "fallback_collection": "",
-          "message_below_threshold": "Add {remaining} for free shipping",
-          "message_threshold_met": "You've unlocked free shipping!"
+          "message_below_threshold": "Spend {remaining} more to qualify for free delivery",
+          "message_threshold_met": "You've qualified for free delivery"
         }
       }
     },

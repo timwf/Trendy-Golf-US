@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    {%- comment -%} Free shipping progress bar {%- endcomment -%}
+    {%- comment -%} Free delivery progress bar {%- endcomment -%}
     {%- assign show_bar = false -%}
     {%- if settings.free_shipping_bar_enabled and settings.free_shipping_threshold > 0 -%}
       {%- assign show_bar = true -%}
@@ -71,7 +71,7 @@
           {{ section.settings.message_below_threshold | replace: remaining_token, remaining_formatted }}
         {%- endif -%}
       </p>
-      <div class="h-1.5 w-full overflow-hidden bg-taupe-400" role="progressbar" aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="Free shipping progress">
+      <div class="h-1.5 w-full overflow-hidden bg-taupe-400" role="progressbar" aria-valuenow="{{ percent }}" aria-valuemin="0" aria-valuemax="100" aria-label="Free delivery progress">
         <div class="h-full bg-clubhouse-green-900 transition-all duration-500 ease-out" style="width: {{ percent }}%" data-free-shipping-fill></div>
       </div>
     </div>
@@ -198,7 +198,7 @@
     },
     {
       "type": "header",
-      "content": "Free shipping progress bar"
+      "content": "Free delivery bar"
     },
     {
       "type": "paragraph",
@@ -208,15 +208,15 @@
       "type": "text",
       "id": "message_below_threshold",
       "label": "Message before threshold",
-      "info": "Use {remaining} as a placeholder for the remaining amount (e.g. 'Add {remaining} for free shipping'). Or use it for non-shipping promos: 'Add {remaining} for a free golf glove'.",
-      "default": "Add {remaining} for free shipping",
+      "info": "Use {remaining} as a placeholder for the remaining amount (e.g. 'Spend {remaining} more to qualify for free delivery'). Or use it for non-delivery promos: 'Spend {remaining} more for a free golf glove'.",
+      "default": "Spend {remaining} more to qualify for free delivery",
       "visible_if": "{{ settings.free_shipping_bar_enabled }}"
     },
     {
       "type": "text",
       "id": "message_threshold_met",
       "label": "Message when threshold met",
-      "default": "You've unlocked free shipping!",
+      "default": "You've qualified for free delivery",
       "visible_if": "{{ settings.free_shipping_bar_enabled }}"
     }
   ],
