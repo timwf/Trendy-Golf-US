@@ -22,6 +22,7 @@
     "password_overlay_enabled": false,
     "free_shipping_bar_enabled": true,
     "free_shipping_threshold": 200,
+    "free_shipping_bar_countries": "US",
     "sections": {
       "cart-drawer": {
         "type": "cart-drawer",

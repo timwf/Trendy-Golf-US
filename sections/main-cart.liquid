@@ -43,6 +43,18 @@
         {%- assign show_bar = false -%}
         {%- if settings.free_shipping_bar_enabled and settings.free_shipping_threshold > 0 -%}
           {%- assign show_bar = true -%}
+          {%- comment -%}
+            Only offer the bar where free delivery actually exists. Keys on the
+            country the shopper is browsing in, so it works whether or not that
+            country has its own Shopify market. Blank setting = show everywhere.
+          {%- endcomment -%}
+          {%- assign bar_countries = settings.free_shipping_bar_countries | strip -%}
+          {%- if bar_countries != blank -%}
+            {%- assign bar_country_list = bar_countries | upcase | replace: ' ', '' | split: ',' -%}
+            {%- unless bar_country_list contains localization.country.iso_code -%}
+              {%- assign show_bar = false -%}
+            {%- endunless -%}
+          {%- endif -%}
         {%- endif -%}
         {%- assign threshold_cents = settings.free_shipping_threshold | times: 100 -%}
         {%- assign remaining_cents = threshold_cents | minus: cart.total_price -%}

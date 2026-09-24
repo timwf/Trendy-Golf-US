@@ -38,6 +38,13 @@
         "label": "Free delivery threshold (whole units of store currency)",
         "info": "e.g. 200 = $200 on the US store. Must match the free-shipping rate in Settings \u2192 Shipping and delivery. Set to 0 to hide the bar. The wording shown in each place is set on its own section (Cart drawer / Cart page).",
         "default": 200
+      },
+      {
+        "type": "text",
+        "id": "free_shipping_bar_countries",
+        "label": "Only show in these countries",
+        "info": "Comma-separated ISO country codes, e.g. US. The bar then only shows to shoppers browsing in those countries, so it is never promised somewhere free delivery is not actually offered. On this store free shipping exists in the United States zone only; UK, EU, Canada and International orders are charged a live FedEx rate at any cart value.",
+        "default": "US"
       }
     ]
   },
