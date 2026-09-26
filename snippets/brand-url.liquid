@@ -1,25 +1,132 @@
 {%- comment -%}
-  Resolve the URL for a vendor's brand page.
+  Resolve the best destination URL for a product's brand.
 
-  Matches the vendor against the brand metaobject (case-insensitive on
-  brand_name) and outputs the linked brand page URL (brand_page_shopify).
-  Falls back to the automatic vendor collection when no metaobject entry
-  or brand page exists.
+  Resolution order:
+    1. Gendered brand collection, chosen from the product's Men / Women tag
+    2. Unified brand collection
+    3. Bespoke brand page (brand metaobject -> brand_page_shopify)
+    4. Shopify's automatic vendor collection (always resolves, never 404s)
 
-  @param {string} vendor - product.vendor
+  Collection handles are read from the brand metaobject first
+  (mens_collection / womens_collection / brand_collection). When those fields
+  are empty the brand_map below is used, so the mapping can migrate into the
+  metaobject one brand at a time without touching this file.
+
+  Any collection that currently holds zero products is skipped at render time,
+  from the metaobject and the map alike, so an emptied collection degrades to
+  the next step instead of becoming a soft 404.
+
+  @param {object} product - preferred; required for gender resolution
+  @param {string} vendor  - optional; used when no product is in scope
 {%- endcomment -%}
+
 {%- liquid
-  assign target_url = blank
-  assign vendor_key = vendor | downcase | strip
+  assign brand_vendor = vendor
+  if product != blank and product.vendor != blank
+    assign brand_vendor = product.vendor
+  endif
+  assign vendor_key = brand_vendor | downcase | strip
+
+  comment
+    Gender from tags. 'women' is tested first and breaks, because the string
+    'womens' also contains 'mens' and would otherwise match the men's branch.
+  endcomment
+  assign gender = ''
+  if product != blank
+    for tag in product.tags
+      assign tag_key = tag | downcase | strip
+      if tag_key contains 'women'
+        assign gender = 'w'
+        break
+      elsif tag_key contains 'men'
+        assign gender = 'm'
+      endif
+    endfor
+  endif
+
+  comment -- brand metaobject entry --
+  endcomment
+  assign brand_entry = blank
   for brand in metaobjects.brand.values
     assign brand_key = brand.brand_name | downcase | strip
     if brand_key == vendor_key
-      assign target_url = brand.brand_page_shopify.value.url
+      assign brand_entry = brand
       break
     endif
   endfor
-  if target_url == blank
-    assign target_url = vendor | url_for_vendor
+
+  assign col_mens = blank
+  assign col_womens = blank
+  assign col_unified = blank
+
+  if brand_entry != blank
+    assign mo_mens = brand_entry.mens_collection.value
+    assign mo_womens = brand_entry.womens_collection.value
+    assign mo_unified = brand_entry.brand_collection.value
+    if mo_mens != blank and mo_mens.products_count > 0
+      assign col_mens = mo_mens.url
+    endif
+    if mo_womens != blank and mo_womens.products_count > 0
+      assign col_womens = mo_womens.url
+    endif
+    if mo_unified != blank and mo_unified.products_count > 0
+      assign col_unified = mo_unified.url
+    endif
   endif
+
+  comment -- fallback map: vendor^mens^womens^unified, rows joined by ~, '-' means none --
+  endcomment
+  assign brand_map = 'j.lindeberg^mens-j-lindeberg^womens-j-lindeberg^-~malbon^mens-malbon-golf^womens-malbon-golf-apparel^-~g/fore^mens-g-fore^womens-g-fore^g-fore-golf-apparel-shoes~adidas golf originals^-^adidas-golf-originals-womens-collection^adidas-golf-originals~ralph lauren^mens-ralph-lauren-clothing^womens-ralph-lauren^rlx-ralph-lauren-clothing~travismathew^mens-travis-mathew^womens-travis-mathew-clothing^-~nike^-^-^nike-clothing-accessories~peter millar^mens-peter-millar^womens-peter-millar^-~footjoy^mens-footjoy^womens-footjoy^-~tilley^-^-^womens-tilley-golf-apparel~greyson^mens-greyson^womens-scarlett-by-greyson^greyson-full-price~students golf^-^-^mens-students-golf~puma^-^-^puma-golf-clothing~holderness & bourne^-^-^mens-holderness-bourne~head^mens-head-golf-apparel^womens-head-golf-apparel^-~kjus^mens-kjus-clothing^womens-kjus^-~adidas^mens-adidas-golf^womens-adidas^-~manors^-^-^mens-manors-golf-clothing-accessories~bogner^mens-bogner^womens-bogner^-~jordan golf^-^-^mens-jordan-golf-shoes~melin^-^-^mens-melin~varley^-^-^womens-varley-apparel~a. putnam^-^-^a-putnam~walker golf things^-^-^mens-walker-golf-things-golf-apparel~a.p.c. golf^mens-a-p-c-golf-apparel^womens-a-p-c-golf-apparel^-~lohla sport^-^-^lohla-sport~zero restriction^mens-zero-restriction-apparel^womens-zero-restriction-apparel^-~williams athletic club^-^-^womens-williams-athletic-club-apparel~boss^-^-^mens-boss~jones golf bags^-^-^jones-golf-bags~field day sporting co.^-^-^mens-field-day-golf-apparel~new balance^-^-^new-balance-golf-1~yellow lobster^-^-^yellow-lobster-golf-headcovers~rhone^-^-^womens-rhone-golf-apparel~payntr^-^-^mens-payntr-golf-shoes~pringle^-^-^mens-pringle-of-scotland~lusso^-^-^lusso~foray golf^-^-^womens-foray-golf~goatlane^-^-^mens-goatlane-golf-sneakers~3 putt round^-^-^3-putt-round~true linkswear^-^-^true-linkswear'
+
+  if col_mens == blank and col_womens == blank and col_unified == blank
+    assign map_rows = brand_map | split: '~'
+    for map_row in map_rows
+      assign cells = map_row | strip | split: '^'
+      if cells[0] == vendor_key
+        assign map_mens = collections[cells[1]]
+        assign map_womens = collections[cells[2]]
+        assign map_unified = collections[cells[3]]
+        if cells[1] != '-' and map_mens.products_count > 0
+          assign col_mens = map_mens.url
+        endif
+        if cells[2] != '-' and map_womens.products_count > 0
+          assign col_womens = map_womens.url
+        endif
+        if cells[3] != '-' and map_unified.products_count > 0
+          assign col_unified = map_unified.url
+        endif
+        break
+      endif
+    endfor
+  endif
+
+  comment -- resolve in priority order --
+  endcomment
+  assign target_url = blank
+
+  if gender == 'w' and col_womens != blank
+    assign target_url = col_womens
+  elsif gender == 'm' and col_mens != blank
+    assign target_url = col_mens
+  endif
+
+  if target_url == blank and col_unified != blank
+    assign target_url = col_unified
+  endif
+
+  if target_url == blank and brand_entry != blank
+    assign target_url = brand_entry.brand_page_shopify.value.url
+  endif
+
+  comment
+    Last resort. Keep the sort_by parameter: robots.txt disallows
+    /collections/*sort_by*, so this keeps the dead-end vendor URL out of
+    crawling exactly as the old product-card link did. Dropping it would
+    expose a thin, crawlable vendor page.
+  endcomment
+  if target_url == blank
+    assign target_url = brand_vendor | url_for_vendor | sort_by: 'created-descending'
+  endif
+
   echo target_url
 -%}

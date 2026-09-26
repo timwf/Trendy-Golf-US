@@ -98,7 +98,7 @@
   <div class="mb-2 flex flex-col gap-1 px-3 text-center">
     {%- if product.vendor != blank -%}
       <p class="mb-0 text-xs font-semibold tracking-wider text-taupe-700 md:text-sm">
-        <a href="{{ product.vendor | url_for_vendor }}">{{ product.vendor }}</a>
+        <a href="{%- render 'brand-url', product: product -%}">{{ product.vendor }}</a>
       </p>
     {%- endif -%}
     <p class="mb-0 text-base">
