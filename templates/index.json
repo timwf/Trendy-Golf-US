@@ -67,6 +67,7 @@
         },
         "slide_ralph_lauren": {
           "type": "slide",
+          "name": "Ralph Lauren",
           "settings": {
             "desktop_alignment": "middle-left",
             "mobile_alignment": "middle-center",
@@ -227,7 +228,7 @@
           "type": "card",
           "settings": {
             "heading": "Men",
-            "image": "shopify://shop_images/a718fd1d-80b3-4544-8e16-51207d4fdfb3.jpg",
+            "image": "shopify://shop_images/ChatGPT_Image_Sep_28_2026_09_29_03_AM.png",
             "link": "shopify://collections/mens-golf-clothing",
             "button_label": "SHOP NOW"
           }
@@ -236,7 +237,7 @@
           "type": "card",
           "settings": {
             "heading": "Women",
-            "image": "shopify://shop_images/250708_VARLEY_C126_CLUB_SH04_032_1.jpg",
+            "image": "shopify://shop_images/ChatGPT_Image_Sep_28_2026_09_47_11_AM.png",
             "link": "shopify://collections/womens-clothing",
             "button_label": "SHOP NOW"
           }
