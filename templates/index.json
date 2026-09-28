@@ -70,7 +70,7 @@
           "name": "Ralph Lauren",
           "settings": {
             "desktop_alignment": "middle-left",
-            "mobile_alignment": "middle-center",
+            "mobile_alignment": "bottom-center",
             "subheading": "NEW SEASON",
             "heading_first": true,
             "heading": "RALPH LAUREN",
