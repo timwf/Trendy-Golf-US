@@ -63,6 +63,7 @@
         },
         "mega_menu_image_c6yePa": {
           "type": "mega_menu_image",
+          "disabled": true,
           "settings": {
             "menu_item_title": "Accessories",
             "image": "shopify://shop_images/DSCF4562.jpg",
