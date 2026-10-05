@@ -65,6 +65,31 @@
             "button_style": "transparent"
           }
         },
+        "slide_gfore": {
+          "type": "slide",
+          "settings": {
+            "desktop_alignment": "middle-right",
+            "mobile_alignment": "bottom-center",
+            "subheading": "FALL ESSENTIALS",
+            "heading_first": false,
+            "heading": "ZERO RESTRICTION",
+            "heading_size": "h2",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "image": "shopify://shop_images/Modern_Teal_and_Forest_Green_Outerwear_Duo_1.png",
+            "tablet_image": "shopify://shop_images/Teal_and_Forest_Green_Outdoor_Jackets.png",
+            "mobile_image": "shopify://shop_images/Coordinated_Green_Outdoor_Jacket_Portrait.png",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 10,
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/zero-restriction-apparel",
+            "button_style": "white"
+          }
+        },
         "slide_ralph_lauren": {
           "type": "slide",
           "name": "Ralph Lauren",
@@ -112,31 +137,6 @@
             "button_label": "",
             "button_link": "",
             "button_style": "white"
-          }
-        },
-        "slide_gfore": {
-          "type": "slide",
-          "disabled": true,
-          "settings": {
-            "desktop_alignment": "bottom-left",
-            "mobile_alignment": "bottom-center",
-            "subheading": "NEW IN",
-            "heading_first": false,
-            "heading": "VICTORY TOUR 4",
-            "heading_size": "h2",
-            "use_as_page_h1": false,
-            "heading_font": "serif",
-            "media_type": "video",
-            "image": "shopify://shop_images/Nike-NRG-Hero-21x9_089600f3-5a57-449c-8010-628aa7e744b2.jpg",
-            "mobile_image": "shopify://shop_images/Nike-NRG-Hero-21x9_089600f3-5a57-449c-8010-628aa7e744b2-Mobile.jpg",
-            "video_url": "",
-            "video_url_mobile": "",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
-            "slide_duration": 10,
-            "button_label": "Shop now",
-            "button_link": "https://trendygolfusa.com/products/victory-tour-4-nrg-oc26-spiked-golf-shoes-white-black-metallic-silver",
-            "button_style": "transparent"
           }
         },
         "slide_xwzUGq": {
@@ -191,9 +191,9 @@
       "block_order": [
         "slide_payntr",
         "slide_jlindeberg",
+        "slide_gfore",
         "slide_ralph_lauren",
         "slide_jVxeAc",
-        "slide_gfore",
         "slide_xwzUGq",
         "slide_1"
       ],
