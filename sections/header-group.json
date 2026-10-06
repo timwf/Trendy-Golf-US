@@ -28,6 +28,17 @@
         "text_color": "#000000"
       }
     },
+    "announcement_bar_R4qkHW": {
+      "type": "announcement-bar",
+      "name": "t:sections.announcement_bar.name",
+      "settings": {
+        "text": "Free Shipping on all orders over $140",
+        "link": "",
+        "link_text": "",
+        "background_color": "#35342f",
+        "text_color": "#ffffff"
+      }
+    },
     "header": {
       "type": "header",
       "blocks": {
@@ -96,6 +107,7 @@
   },
   "order": [
     "countdown_bar_CCDXTH",
+    "announcement_bar_R4qkHW",
     "header"
   ]
 }
