@@ -9,6 +9,9 @@
  */
 {
   "current": {
+    "free_shipping_bar_enabled": true,
+    "free_shipping_threshold": 140,
+    "free_shipping_bar_countries": "US",
     "color_primary": "#2C2C2C",
     "color_background": "#F5F0EB",
     "color_accent": "#4A7C59",
@@ -20,9 +23,6 @@
     "rebuy_api_key": "dcc30d2a71dd80cb9676dc5185661179639475e6",
     "recommendations_source": "auto",
     "password_overlay_enabled": false,
-    "free_shipping_bar_enabled": true,
-    "free_shipping_threshold": 200,
-    "free_shipping_bar_countries": "US",
     "sections": {
       "cart-drawer": {
         "type": "cart-drawer",
