@@ -114,10 +114,7 @@
     {%- endif -%}
 
     <div class="mb-12 flex">
-      {% render 'form-button',
-        label: 'Start a Return',
-        href: returns_base | append: '/?order=' | append: order.id | append: '&zip=' | append: shipping.zip
-      %}
+      {% render 'form-button', label: 'Start a Return', href: returns_base, append: shipping.zip %}
     </div>
 
     <div class="bg-taupe-300 p-6 mb-6">
@@ -244,3 +241,18 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {% render 'form-button',
+            label: 'Start a Return',
+            href: returns_base | append: '/?order=' | append: order.id | append: '&zip=' | append: shipping.zip
+          %}
+  to: "{% render 'form-button', label: 'Start a Return', href: returns_base, append:
+    shipping.zip %}"
+  position: 3303..3396
+{% endcomment %}

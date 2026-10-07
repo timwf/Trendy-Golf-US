@@ -57,9 +57,9 @@
       <div class="flex flex-col items-center justify-center gap-2">
         <div class="flex-1 text-center">
           {%- if tier_title == 'Bronze' -%}
-            {% render 'icon', icon: 'tier-trophy', size: 'size-12', class: tier_text_class | append: ' mx-auto mb-2' %}
+            {% render 'icon', icon: 'tier-trophy', size: 'size-12', class: tier_text_class, append: ' mx-auto mb-2' %}
           {%- else -%}
-            {% render 'icon', icon: 'tier-star', size: 'size-12', class: tier_text_class | append: ' mx-auto mb-2' %}
+            {% render 'icon', icon: 'tier-star', size: 'size-12', class: tier_text_class, append: ' mx-auto mb-2' %}
           {%- endif -%}
           <span class="text-center text-lg font-bold md:text-xl {{ tier_text_class }}">{{ tier_title }}</span>
         </div>
@@ -133,3 +133,20 @@
 </section>
 
 <script src="{{ 'customer-rewards.js' | asset_url }}" defer></script>
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: "{% render 'icon', icon: 'tier-trophy', size: 'size-12', class: tier_text_class
+    | append: ' mx-auto mb-2' %}"
+  to: "{% render 'icon', icon: 'tier-trophy', size: 'size-12', class: tier_text_class,
+    append: ' mx-auto mb-2' %}"
+  position: 2167..2273
+- from: "{% render 'icon', icon: 'tier-star', size: 'size-12', class: tier_text_class
+    | append: ' mx-auto mb-2' %}"
+  to: "{% render 'icon', icon: 'tier-star', size: 'size-12', class: tier_text_class,
+    append: ' mx-auto mb-2' %}"
+  position: 2309..2413
+{% endcomment %}

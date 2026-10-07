@@ -16,69 +16,22 @@
 
   <div class="mb-6 grid grid-cols-1 gap-4 lg:grid-cols-2">
     <div class="col-span-1">
-      {% render 'form-input',
-        name: 'address[first_name]',
-        id: form_id | append: '_first_name',
-        label: 'First name',
-        placeholder: 'Enter your first name',
-        value: address.first_name,
-        autocomplete: 'given-name',
-        required: true
-      %}
+      {% render 'form-input', name: 'address[first_name]', id: form_id, append: '_first_name', label: 'First name', placeholder: 'Enter your first name', value: address.first_name, autocomplete: 'given-name', required: true %}
     </div>
     <div class="col-span-1">
-      {% render 'form-input',
-        name: 'address[last_name]',
-        id: form_id | append: '_last_name',
-        label: 'Last name',
-        placeholder: 'Enter your surname',
-        value: address.last_name,
-        autocomplete: 'family-name',
-        required: true
-      %}
+      {% render 'form-input', name: 'address[last_name]', id: form_id, append: '_last_name', label: 'Last name', placeholder: 'Enter your surname', value: address.last_name, autocomplete: 'family-name', required: true %}
     </div>
     <div class="col-span-1">
-      {% render 'form-input',
-        name: 'address[address1]',
-        id: form_id | append: '_address1',
-        label: 'Address line 1',
-        placeholder: 'Enter address line',
-        value: address.address1,
-        autocomplete: 'address-line1',
-        required: true
-      %}
+      {% render 'form-input', name: 'address[address1]', id: form_id, append: '_address1', label: 'Address line 1', placeholder: 'Enter address line', value: address.address1, autocomplete: 'address-line1', required: true %}
     </div>
     <div class="col-span-1">
-      {% render 'form-input',
-        name: 'address[address2]',
-        id: form_id | append: '_address2',
-        label: 'Address line 2',
-        placeholder: 'Enter address line',
-        value: address.address2,
-        autocomplete: 'address-line2'
-      %}
+      {% render 'form-input', name: 'address[address2]', id: form_id, append: '_address2', label: 'Address line 2', placeholder: 'Enter address line', value: address.address2, autocomplete: 'address-line2' %}
     </div>
     <div class="col-span-1">
-      {% render 'form-input',
-        name: 'address[city]',
-        id: form_id | append: '_city',
-        label: 'Town / City',
-        placeholder: 'Enter town/city',
-        value: address.city,
-        autocomplete: 'address-level2',
-        required: true
-      %}
+      {% render 'form-input', name: 'address[city]', id: form_id, append: '_city', label: 'Town / City', placeholder: 'Enter town/city', value: address.city, autocomplete: 'address-level2', required: true %}
     </div>
     <div class="col-span-1">
-      {% render 'form-input',
-        name: 'address[zip]',
-        id: form_id | append: '_zip',
-        label: 'Zip / Postcode',
-        placeholder: 'Enter postal code',
-        value: address.zip,
-        autocomplete: 'postal-code',
-        required: true
-      %}
+      {% render 'form-input', name: 'address[zip]', id: form_id, append: '_zip', label: 'Zip / Postcode', placeholder: 'Enter postal code', value: address.zip, autocomplete: 'postal-code', required: true %}
     </div>
     <div class="col-span-1">
       <label for="{{ form_id }}_country" class="mb-2 flex items-end justify-between text-sm">
@@ -118,16 +71,7 @@
       </div>
     </div>
     <div class="col-span-1">
-      {% render 'form-input',
-        name: 'address[phone]',
-        id: form_id | append: '_phone',
-        label: 'Phone number',
-        type: 'tel',
-        placeholder: 'Enter your phone number',
-        value: address.phone,
-        autocomplete: 'tel',
-        required: true
-      %}
+      {% render 'form-input', name: 'address[phone]', id: form_id, append: '_phone', label: 'Phone number', type: 'tel', placeholder: 'Enter your phone number', value: address.phone, autocomplete: 'tel', required: true %}
     </div>
   </div>
 
@@ -139,3 +83,108 @@
     {%- endif -%}
   </div>
 {%- endform -%}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {% render 'form-input',
+            name: 'address[first_name]',
+            id: form_id | append: '_first_name',
+            label: 'First name',
+            placeholder: 'Enter your first name',
+            value: address.first_name,
+            autocomplete: 'given-name',
+            required: true
+          %}
+  to: "{% render 'form-input', name: 'address[first_name]', id: form_id, append: '_first_name',
+    label: 'First name', placeholder: 'Enter your first name', value: address.first_name,
+    autocomplete: 'given-name', required: true %}"
+  position: 739..959
+- from: |-
+    {% render 'form-input',
+            name: 'address[last_name]',
+            id: form_id | append: '_last_name',
+            label: 'Last name',
+            placeholder: 'Enter your surname',
+            value: address.last_name,
+            autocomplete: 'family-name',
+            required: true
+          %}
+  to: "{% render 'form-input', name: 'address[last_name]', id: form_id, append: '_last_name',
+    label: 'Last name', placeholder: 'Enter your surname', value: address.last_name,
+    autocomplete: 'family-name', required: true %}"
+  position: 1006..1220
+- from: |-
+    {% render 'form-input',
+            name: 'address[address1]',
+            id: form_id | append: '_address1',
+            label: 'Address line 1',
+            placeholder: 'Enter address line',
+            value: address.address1,
+            autocomplete: 'address-line1',
+            required: true
+          %}
+  to: "{% render 'form-input', name: 'address[address1]', id: form_id, append: '_address1',
+    label: 'Address line 1', placeholder: 'Enter address line', value: address.address1,
+    autocomplete: 'address-line1', required: true %}"
+  position: 1267..1485
+- from: |-
+    {% render 'form-input',
+            name: 'address[address2]',
+            id: form_id | append: '_address2',
+            label: 'Address line 2',
+            placeholder: 'Enter address line',
+            value: address.address2,
+            autocomplete: 'address-line2'
+          %}
+  to: "{% render 'form-input', name: 'address[address2]', id: form_id, append: '_address2',
+    label: 'Address line 2', placeholder: 'Enter address line', value: address.address2,
+    autocomplete: 'address-line2' %}"
+  position: 1532..1734
+- from: |-
+    {% render 'form-input',
+            name: 'address[city]',
+            id: form_id | append: '_city',
+            label: 'Town / City',
+            placeholder: 'Enter town/city',
+            value: address.city,
+            autocomplete: 'address-level2',
+            required: true
+          %}
+  to: "{% render 'form-input', name: 'address[city]', id: form_id, append: '_city',
+    label: 'Town / City', placeholder: 'Enter town/city', value: address.city, autocomplete:
+    'address-level2', required: true %}"
+  position: 1781..1982
+- from: |-
+    {% render 'form-input',
+            name: 'address[zip]',
+            id: form_id | append: '_zip',
+            label: 'Zip / Postcode',
+            placeholder: 'Enter postal code',
+            value: address.zip,
+            autocomplete: 'postal-code',
+            required: true
+          %}
+  to: "{% render 'form-input', name: 'address[zip]', id: form_id, append: '_zip',
+    label: 'Zip / Postcode', placeholder: 'Enter postal code', value: address.zip,
+    autocomplete: 'postal-code', required: true %}"
+  position: 2029..2229
+- from: |-
+    {% render 'form-input',
+            name: 'address[phone]',
+            id: form_id | append: '_phone',
+            label: 'Phone number',
+            type: 'tel',
+            placeholder: 'Enter your phone number',
+            value: address.phone,
+            autocomplete: 'tel',
+            required: true
+          %}
+  to: "{% render 'form-input', name: 'address[phone]', id: form_id, append: '_phone',
+    label: 'Phone number', type: 'tel', placeholder: 'Enter your phone number', value:
+    address.phone, autocomplete: 'tel', required: true %}"
+  position: 3816..4031
+{% endcomment %}

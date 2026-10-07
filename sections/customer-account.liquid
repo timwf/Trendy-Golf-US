@@ -5,10 +5,7 @@
 
 {%- if customer -%}
   <div class="container grid gap-5 py-10 lg:grid-cols-10 lg:gap-10">
-    {% render 'account-sidebar',
-      active: 'account',
-      returns_url: section.settings.returns_url | default: 'https://returns.trendygolf.com'
-    %}
+    {% render 'account-sidebar', active: 'account', returns_url: section.settings.returns_url, default: 'https://returns.trendygolf.com' %}
 
     <main class="col-span-1 lg:col-span-7 2xl:col-span-8">
       <section data-account-panel="account">
@@ -233,3 +230,18 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {% render 'account-sidebar',
+          active: 'account',
+          returns_url: section.settings.returns_url | default: 'https://returns.trendygolf.com'
+        %}
+  to: "{% render 'account-sidebar', active: 'account', returns_url: section.settings.returns_url,
+    default: 'https://returns.trendygolf.com' %}"
+  position: 265..400
+{% endcomment %}

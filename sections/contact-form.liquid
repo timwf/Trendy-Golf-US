@@ -46,10 +46,7 @@
               {%- endif -%}
               {%- if section.settings.success_button_label != blank -%}
                 <div class="flex justify-center">
-                  {% render 'form-button',
-                    label: section.settings.success_button_label,
-                    href: section.settings.success_button_link | default: '/'
-                  %}
+                  {% render 'form-button', label: section.settings.success_button_label, href: section.settings.success_button_link, default: '/' %}
                 </div>
               {%- endif -%}
             </div>
@@ -77,57 +74,20 @@
             {%- endif -%}
 
             <div class="mb-5 grid grid-cols-1 gap-4">
-              {% render 'form-input',
-                id: 'contact-name-' | append: section.id,
-                name: 'contact[name]',
-                label: 'Name',
-                type: 'text',
-                placeholder: 'Enter your name',
-                autocomplete: 'name',
-                required: true
-              %}
+              {% render 'form-input', id: 'contact-name-', append: section.id, name: 'contact[name]', label: 'Name', type: 'text', placeholder: 'Enter your name', autocomplete: 'name', required: true %}
 
-              {% render 'form-input',
-                id: 'contact-email-' | append: section.id,
-                name: 'contact[email]',
-                label: 'Email',
-                type: 'email',
-                placeholder: 'Enter your email address',
-                autocomplete: 'email',
-                required: true
-              %}
+              {% render 'form-input', id: 'contact-email-', append: section.id, name: 'contact[email]', label: 'Email', type: 'email', placeholder: 'Enter your email address', autocomplete: 'email', required: true %}
 
               {%- if section.settings.show_brand -%}
-                {% render 'form-input',
-                  id: 'contact-brand-' | append: section.id,
-                  name: 'contact[company]',
-                  label: 'Brand name',
-                  type: 'text',
-                  placeholder: 'Enter your brand name',
-                  autocomplete: 'organization'
-                %}
+                {% render 'form-input', id: 'contact-brand-', append: section.id, name: 'contact[company]', label: 'Brand name', type: 'text', placeholder: 'Enter your brand name', autocomplete: 'organization' %}
               {%- endif -%}
 
               {%- if section.settings.show_phone -%}
-                {% render 'form-input',
-                  id: 'contact-phone-' | append: section.id,
-                  name: 'contact[phone]',
-                  label: 'Phone number',
-                  type: 'tel',
-                  placeholder: 'Enter your phone number',
-                  autocomplete: 'off'
-                %}
+                {% render 'form-input', id: 'contact-phone-', append: section.id, name: 'contact[phone]', label: 'Phone number', type: 'tel', placeholder: 'Enter your phone number', autocomplete: 'off' %}
               {%- endif -%}
 
               {%- if section.settings.show_order_number -%}
-                {% render 'form-input',
-                  id: 'contact-order-' | append: section.id,
-                  name: 'contact[order_number]',
-                  label: 'Order number',
-                  type: 'text',
-                  placeholder: 'Enter your order number',
-                  autocomplete: 'off'
-                %}
+                {% render 'form-input', id: 'contact-order-', append: section.id, name: 'contact[order_number]', label: 'Order number', type: 'text', placeholder: 'Enter your order number', autocomplete: 'off' %}
               {%- endif -%}
 
               {%- assign message_id = 'contact-message-' | append: section.id -%}
@@ -148,12 +108,7 @@
             </div>
 
             <div class="mt-6 flex justify-center">
-              {% render 'form-button',
-                label: section.settings.submit_label | default: 'Send message',
-                type: 'submit',
-                disabled: true,
-                id: 'contact-submit-' | append: section.id
-              %}
+              {% render 'form-button', label: section.settings.submit_label, default: 'Send message', type: 'submit', disabled: true, id: 'contact-submit-', append: section.id %}
             </div>
           {%- endif -%}
         {%- endform -%}
@@ -354,3 +309,96 @@
   ]
 }
 {% endschema %}
+{% comment %}
+
+This file has been rewritten to preserve the original behavior.
+
+---
+Changes:
+- from: |-
+    {% render 'form-button',
+                        label: section.settings.success_button_label,
+                        href: section.settings.success_button_link | default: '/'
+                      %}
+  to: "{% render 'form-button', label: section.settings.success_button_label, href:
+    section.settings.success_button_link, default: '/' %}"
+  position: 1767..1897
+- from: |-
+    {% render 'form-input',
+                    id: 'contact-name-' | append: section.id,
+                    name: 'contact[name]',
+                    label: 'Name',
+                    type: 'text',
+                    placeholder: 'Enter your name',
+                    autocomplete: 'name',
+                    required: true
+                  %}
+  to: "{% render 'form-input', id: 'contact-name-', append: section.id, name: 'contact[name]',
+    label: 'Name', type: 'text', placeholder: 'Enter your name', autocomplete: 'name',
+    required: true %}"
+  position: 3157..3345
+- from: |-
+    {% render 'form-input',
+                    id: 'contact-email-' | append: section.id,
+                    name: 'contact[email]',
+                    label: 'Email',
+                    type: 'email',
+                    placeholder: 'Enter your email address',
+                    autocomplete: 'email',
+                    required: true
+                  %}
+  to: "{% render 'form-input', id: 'contact-email-', append: section.id, name: 'contact[email]',
+    label: 'Email', type: 'email', placeholder: 'Enter your email address', autocomplete:
+    'email', required: true %}"
+  position: 3361..3563
+- from: |-
+    {% render 'form-input',
+                      id: 'contact-brand-' | append: section.id,
+                      name: 'contact[company]',
+                      label: 'Brand name',
+                      type: 'text',
+                      placeholder: 'Enter your brand name',
+                      autocomplete: 'organization'
+                    %}
+  to: "{% render 'form-input', id: 'contact-brand-', append: section.id, name: 'contact[company]',
+    label: 'Brand name', type: 'text', placeholder: 'Enter your brand name', autocomplete:
+    'organization' %}"
+  position: 3634..3830
+- from: |-
+    {% render 'form-input',
+                      id: 'contact-phone-' | append: section.id,
+                      name: 'contact[phone]',
+                      label: 'Phone number',
+                      type: 'tel',
+                      placeholder: 'Enter your phone number',
+                      autocomplete: 'off'
+                    %}
+  to: "{% render 'form-input', id: 'contact-phone-', append: section.id, name: 'contact[phone]',
+    label: 'Phone number', type: 'tel', placeholder: 'Enter your phone number', autocomplete:
+    'off' %}"
+  position: 3929..4117
+- from: |-
+    {% render 'form-input',
+                      id: 'contact-order-' | append: section.id,
+                      name: 'contact[order_number]',
+                      label: 'Order number',
+                      type: 'text',
+                      placeholder: 'Enter your order number',
+                      autocomplete: 'off'
+                    %}
+  to: "{% render 'form-input', id: 'contact-order-', append: section.id, name: 'contact[order_number]',
+    label: 'Order number', type: 'text', placeholder: 'Enter your order number', autocomplete:
+    'off' %}"
+  position: 4223..4419
+- from: |-
+    {% render 'form-button',
+                    label: section.settings.submit_label | default: 'Send message',
+                    type: 'submit',
+                    disabled: true,
+                    id: 'contact-submit-' | append: section.id
+                  %}
+  to: "{% render 'form-button', label: section.settings.submit_label, default: 'Send
+    message', type: 'submit', disabled: true, id: 'contact-submit-', append: section.id
+    %}"
+  position: 5318..5482
+{% endcomment %}
