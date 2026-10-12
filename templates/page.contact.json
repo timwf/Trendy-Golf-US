@@ -68,7 +68,7 @@
             "title": "Email Us",
             "description": "",
             "link": "mailto:hello@trendygolf.com",
-            "link_label": "info@trendygolf.com",
+            "link_label": "hello@trendygolf.com",
             "show_arrow": true,
             "show_social_channels": false
           }
