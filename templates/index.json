@@ -337,27 +337,27 @@
         "card_apc_all": {
           "type": "card",
           "settings": {
-            "heading": "HEAD",
-            "image": "shopify://shop_images/250620_HEADGOLF_SS26_JIngvarsson_11_072.jpg",
-            "link": "shopify://pages/head",
+            "heading": "Knitwear",
+            "image": "shopify://shop_images/Minimalist_RLX_Beanie_Studio_Portrait.png",
+            "link": "shopify://collections/mens-knitwear",
             "button_label": "SHOP NOW"
           }
         },
         "card_apc_trousers": {
           "type": "card",
           "settings": {
-            "heading": "G/FORE",
-            "image": "shopify://shop_images/GMR000031_SNO_1.avif",
-            "link": "shopify://pages/g-fore",
+            "heading": "Mid-Layers",
+            "image": "shopify://shop_images/green_quarter_zip_3x4_no_crop.png",
+            "link": "shopify://collections/mens-mid-layers",
             "button_label": "SHOP NOW"
           }
         },
         "card_apc_footwear": {
           "type": "card",
           "settings": {
-            "heading": "adidas Golf Originals",
-            "image": "shopify://shop_images/03-adidas-mens-shoes.jpg",
-            "link": "shopify://pages/brand-adidas-golf-original",
+            "heading": "Polo Shirts",
+            "image": "shopify://shop_images/adidaspolo.webp",
+            "link": "shopify://collections/mens-polo-shirts",
             "button_label": "SHOP NOW"
           }
         }
