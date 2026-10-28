@@ -39,6 +39,32 @@
             "button_style": "white"
           }
         },
+        "slide_ralph_lauren": {
+          "type": "slide",
+          "name": "Ralph Lauren",
+          "settings": {
+            "desktop_alignment": "middle-left",
+            "mobile_alignment": "bottom-center",
+            "subheading": "NEW SEASON",
+            "heading_first": true,
+            "heading": "RALPH LAUREN",
+            "heading_size": "h1",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "image": "shopify://shop_images/ChatGPT_Image_Sep_28_2026_08_59_08_AM.png",
+            "tablet_image": "shopify://shop_images/ChatGPT_Image_Sep_28_2026_09_01_22_AM.png",
+            "mobile_image": "shopify://shop_images/ChatGPT_Image_Sep_28_2026_09_01_28_AM.png",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 10,
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/rlx-ralph-lauren-clothing",
+            "button_style": "white"
+          }
+        },
         "slide_jlindeberg": {
           "type": "slide",
           "name": "adidas Originals",
@@ -87,32 +113,6 @@
             "slide_duration": 10,
             "button_label": "Shop now",
             "button_link": "shopify://collections/zero-restriction-apparel",
-            "button_style": "white"
-          }
-        },
-        "slide_ralph_lauren": {
-          "type": "slide",
-          "name": "Ralph Lauren",
-          "settings": {
-            "desktop_alignment": "middle-left",
-            "mobile_alignment": "bottom-center",
-            "subheading": "NEW SEASON",
-            "heading_first": true,
-            "heading": "RALPH LAUREN",
-            "heading_size": "h1",
-            "use_as_page_h1": false,
-            "heading_font": "serif",
-            "media_type": "video",
-            "image": "shopify://shop_images/ChatGPT_Image_Sep_28_2026_08_59_08_AM.png",
-            "tablet_image": "shopify://shop_images/ChatGPT_Image_Sep_28_2026_09_01_22_AM.png",
-            "mobile_image": "shopify://shop_images/ChatGPT_Image_Sep_28_2026_09_01_28_AM.png",
-            "video_url": "",
-            "video_url_mobile": "",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
-            "slide_duration": 10,
-            "button_label": "Shop now",
-            "button_link": "shopify://collections/rlx-ralph-lauren-clothing",
             "button_style": "white"
           }
         },
@@ -190,9 +190,9 @@
       },
       "block_order": [
         "slide_payntr",
+        "slide_ralph_lauren",
         "slide_jlindeberg",
         "slide_gfore",
-        "slide_ralph_lauren",
         "slide_jVxeAc",
         "slide_xwzUGq",
         "slide_1"
