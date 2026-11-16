@@ -167,6 +167,7 @@
         },
         "slide_1": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "desktop_alignment": "bottom-center",
             "mobile_alignment": "bottom-center",
