@@ -141,8 +141,7 @@
         },
         "slide_xwzUGq": {
           "type": "slide",
-          "name": "Victory Pro",
-          "disabled": true,
+          "name": "Black Friday Sale",
           "settings": {
             "desktop_alignment": "bottom-center",
             "mobile_alignment": "bottom-center",
@@ -155,7 +154,7 @@
             "media_type": "video",
             "image": "shopify://shop_images/Black_Friday_Golf_Sale_Banner_4.png",
             "tablet_image": "shopify://shop_images/Black_Friday_Golf_Sale.png",
-            "mobile_image": "shopify://shop_images/Black_Friday_Golf_Course_Sale_Banner.png",
+            "mobile_image": "shopify://shop_images/Black_Friday_Golf_Sale_Poster.png",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
