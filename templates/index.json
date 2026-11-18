@@ -142,6 +142,7 @@
         "slide_xwzUGq": {
           "type": "slide",
           "name": "Black Friday Sale",
+          "disabled": true,
           "settings": {
             "desktop_alignment": "bottom-center",
             "mobile_alignment": "bottom-center",
