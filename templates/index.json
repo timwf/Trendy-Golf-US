@@ -68,6 +68,7 @@
         "slide_ralph_lauren": {
           "type": "slide",
           "name": "Ralph Lauren",
+          "disabled": true,
           "settings": {
             "desktop_alignment": "middle-left",
             "mobile_alignment": "bottom-center",
@@ -94,6 +95,7 @@
         "slide_jlindeberg": {
           "type": "slide",
           "name": "adidas Originals",
+          "disabled": true,
           "settings": {
             "desktop_alignment": "bottom-center",
             "mobile_alignment": "bottom-center",
@@ -119,6 +121,7 @@
         },
         "slide_gfore": {
           "type": "slide",
+          "disabled": true,
           "settings": {
             "desktop_alignment": "middle-right",
             "mobile_alignment": "bottom-center",
