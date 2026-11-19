@@ -39,6 +39,32 @@
             "button_style": "white"
           }
         },
+        "slide_xwzUGq": {
+          "type": "slide",
+          "name": "Black Friday Sale",
+          "settings": {
+            "desktop_alignment": "bottom-center",
+            "mobile_alignment": "bottom-center",
+            "subheading": "",
+            "heading_first": false,
+            "heading": "",
+            "heading_size": "h1",
+            "use_as_page_h1": false,
+            "heading_font": "serif",
+            "media_type": "video",
+            "image": "shopify://shop_images/Black_Friday_-_DESKTOP.png",
+            "tablet_image": "shopify://shop_images/Black_Friday_-_TABLET.png",
+            "mobile_image": "shopify://shop_images/Black_Friday_-_MOBILE.png",
+            "video_url": "",
+            "video_url_mobile": "",
+            "hosted_video_url": "",
+            "hosted_video_url_mobile": "",
+            "slide_duration": 10,
+            "button_label": "Shop now",
+            "button_link": "shopify://collections/black-friday-shop-all",
+            "button_style": "transparent"
+          }
+        },
         "slide_ralph_lauren": {
           "type": "slide",
           "name": "Ralph Lauren",
@@ -139,33 +165,6 @@
             "button_style": "white"
           }
         },
-        "slide_xwzUGq": {
-          "type": "slide",
-          "name": "Black Friday Sale",
-          "disabled": true,
-          "settings": {
-            "desktop_alignment": "bottom-center",
-            "mobile_alignment": "bottom-center",
-            "subheading": "",
-            "heading_first": false,
-            "heading": "",
-            "heading_size": "h1",
-            "use_as_page_h1": false,
-            "heading_font": "serif",
-            "media_type": "video",
-            "image": "shopify://shop_images/Black_Friday_-_DESKTOP.png",
-            "tablet_image": "shopify://shop_images/Black_Friday_-_TABLET.png",
-            "mobile_image": "shopify://shop_images/Black_Friday_-_MOBILE.png",
-            "video_url": "",
-            "video_url_mobile": "",
-            "hosted_video_url": "",
-            "hosted_video_url_mobile": "",
-            "slide_duration": 10,
-            "button_label": "Shop now",
-            "button_link": "shopify://collections/black-friday-shop-all",
-            "button_style": "transparent"
-          }
-        },
         "slide_1": {
           "type": "slide",
           "disabled": true,
@@ -192,11 +191,11 @@
       },
       "block_order": [
         "slide_payntr",
+        "slide_xwzUGq",
         "slide_ralph_lauren",
         "slide_jlindeberg",
         "slide_gfore",
         "slide_jVxeAc",
-        "slide_xwzUGq",
         "slide_1"
       ],
       "settings": {
