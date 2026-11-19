@@ -32,8 +32,8 @@
       "type": "announcement-bar",
       "name": "t:sections.announcement_bar.name",
       "settings": {
-        "text": "Free Shipping On All Orders Over $140",
-        "link": "",
+        "text": "Black Friday Sale Now Live | Free Shipping On All Orders Over $140",
+        "link": "shopify://collections/black-friday-shop-all",
         "link_text": "",
         "background_color": "#35342f",
         "text_color": "#ffffff"
