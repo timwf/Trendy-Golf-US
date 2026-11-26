@@ -1,0 +1,49 @@
+{% doc %}
+  Footer email sign-up. Creates/updates a Shopify customer with email marketing consent
+  (contact[email] on the customer form) and tags them so sign-ups can be segmented.
+
+  @param {object} section - The footer section (reads newsletter_* settings)
+{% enddoc %}
+<div class="container">
+  <div id="FooterNewsletter" class="mx-auto max-w-2xl text-center">
+    {%- if section.settings.newsletter_heading != blank -%}
+      <h2 id="FooterNewsletterHeading" class="mb-3 font-serif text-2xl lg:text-3xl">{{ section.settings.newsletter_heading }}</h2>
+    {%- endif -%}
+    {%- if section.settings.newsletter_text != blank -%}
+      <div class="mb-6 text-sm">{{ section.settings.newsletter_text }}</div>
+    {%- endif -%}
+
+    {%- form 'customer', id: 'FooterNewsletterForm', class: 'mx-auto max-w-lg' -%}
+      <input type="hidden" name="contact[tags]" value="newsletter,footer-signup">
+      {%- if form.posted_successfully? -%}
+        <div class="border border-clubhouse-green-600 bg-clubhouse-green-200 p-3 text-sm" role="status">
+          {{ section.settings.newsletter_success }}
+        </div>
+      {%- else -%}
+        {%- if form.errors -%}
+          <div id="FooterNewsletterError" class="mb-4 border border-red-600 bg-red-100 p-3 text-sm text-red-700" role="alert">
+            {{ form.errors | default_errors }}
+          </div>
+        {%- endif -%}
+        <div class="flex flex-col gap-3 md:flex-row md:items-start">
+          {% render 'form-input',
+            name: 'contact[email]',
+            id: 'FooterNewsletterEmail',
+            type: 'email',
+            label: 'Email address',
+            hide_label: true,
+            placeholder: 'Enter your email address',
+            autocomplete: 'email',
+            required: true,
+            wrapper_class: 'flex-1 text-left'
+          %}
+          {% render 'form-button', label: section.settings.newsletter_button, type: 'submit', class: 'shrink-0', aria_label: section.settings.newsletter_button %}
+        </div>
+      {%- endif -%}
+    {%- endform -%}
+
+    {%- if section.settings.newsletter_disclaimer != blank -%}
+      <div class="mt-3 text-xs text-taupe-700">{{ section.settings.newsletter_disclaimer }}</div>
+    {%- endif -%}
+  </div>
+</div>
