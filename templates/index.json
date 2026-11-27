@@ -51,18 +51,18 @@
             "heading_size": "h1",
             "use_as_page_h1": false,
             "heading_font": "serif",
-            "media_type": "video",
-            "image": "shopify://shop_images/Black_Friday_DESKTOP_-_NEW.png",
-            "tablet_image": "shopify://shop_images/Black_Friday_TABLET_-_NEW.png",
-            "mobile_image": "shopify://shop_images/Black_Friday_SALE_-_NEW.png",
+            "media_type": "image",
+            "image": "shopify://shop_images/Black_Friday_Golf_Sale_on_Grayscale_Fairways_1.png",
+            "tablet_image": "shopify://shop_images/Black_Friday_Golf_Sale_Banner_9.png",
+            "mobile_image": "shopify://shop_images/Black_Friday_Golf_Sale_Poster_2_8349faf6-a2fc-4f41-829a-49ca27df0a9c.png",
             "video_url": "",
             "video_url_mobile": "",
             "hosted_video_url": "",
             "hosted_video_url_mobile": "",
             "slide_duration": 10,
-            "button_label": "Shop now",
+            "button_label": "SHOP BLACK FRIDAY",
             "button_link": "shopify://collections/black-friday-shop-all",
-            "button_style": "transparent"
+            "button_style": "white"
           }
         },
         "slide_ralph_lauren": {
